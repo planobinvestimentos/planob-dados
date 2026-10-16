@@ -70,7 +70,7 @@ export function lerFundamentos({ dre, bpp, capital, fca, dfc = [], precos = {}, 
   };
   const ult = ultimo(dre), lpa = new Map(), ref = new Map();
   const lpaAnt = new Map();
-  const classeDe = (ds) => { const n = norm(ds); return n === 'ON' ? 'ON' : /^PN/.test(n) ? 'PN' : ''; };
+  const classeDe = (ds) => { const n = norm(ds); return n === 'ON' || /ORDINARI/.test(n) ? 'ON' : /^PN/.test(n) || /PREFEREN/.test(n) ? 'PN' : ''; };
   const melhor = (mapa, chave, classe, v, val) => {
     const o = mapa.get(chave) || {}, ant = o[classe];
     if (!ant || v > ant.v || (v === ant.v && (val !== 0 || ant.val === 0))) o[classe] = { v, val };
@@ -79,8 +79,9 @@ export function lerFundamentos({ dre, bpp, capital, fca, dfc = [], precos = {}, 
   const lpaV = new Map(), lpaAntV = new Map();
   dre.forEach((r) => {
     const c = r.CD_CONTA || '';
-    if (!/^3\.99\.01\.\d{2}$/.test(c)) return; // só o lucro BÁSICO por ação, por classe
-    const classe = classeDe(r.DS_CONTA), val = num(r.VL_CONTA);
+    if (!/^3\.99\.01(\.\d{2})?$/.test(c)) return; // só o lucro BÁSICO por ação, por classe (ou o total, como reserva)
+    const classe = c === '3.99.01' ? 'GERAL' : classeDe(r.DS_CONTA), val = num(r.VL_CONTA);
+    if (classe === 'GERAL' && !val) return;
     if (!classe || !Number.isFinite(val)) return;
     const v = (r.DT_REFER || '') + '|' + String(r.VERSAO || '0').padStart(3, '0');
     const ordem = norm(r.ORDEM_EXERC);
@@ -105,21 +106,23 @@ export function lerFundamentos({ dre, bpp, capital, fca, dfc = [], precos = {}, 
     pl.set(r.CNPJ_CIA, o); plV.set(r.CNPJ_CIA, ov);
   });
   /* dividendos e JCP pagos no último exercício (demonstração do fluxo de caixa, grupo 6.03), valor total da empresa */
-  const ultD = ultimo(dfc), divPago = new Map(), divLinhas = new Map();
+  const divV = new Map(), divLinhas = new Map(), divPago = new Map();
   dfc.forEach((r) => {
     if (norm(r.ORDEM_EXERC) !== 'ULTIMO') return;
-    const v = (r.DT_REFER || '') + '|' + String(r.VERSAO || '0').padStart(3, '0');
-    if (!ultD.has(r.CNPJ_CIA) || ultD.get(r.CNPJ_CIA).v !== v) return;
-    if (!/^6\.\d{2}\./.test(r.CD_CONTA || '') || !/DIVIDENDO|JUROS SOBRE O CAPITAL|JCP/.test(norm(r.DS_CONTA))) return;
-    if (/RECEB/.test(norm(r.DS_CONTA))) return;
+    const ds = norm(r.DS_CONTA);
+    if (!/^6\.03\./.test(r.CD_CONTA || '') || !/DIVIDENDO|JUROS SOBRE O CAPITAL|JCP/.test(ds)) return;
+    if (/RECEB|NAO CONTROLADOR|MINORITAR/.test(ds)) return;
     const val = num(r.VL_CONTA) * escala(r.ESCALA_MOEDA); if (!Number.isFinite(val)) return;
-    const m = divLinhas.get(r.CNPJ_CIA) || new Map(); m.set(r.CD_CONTA, Math.abs(val)); divLinhas.set(r.CNPJ_CIA, m);
+    const v = (r.DT_REFER || '') + '|' + String(r.VERSAO || '0').padStart(3, '0'), t = r._T === 'con' ? 'con' : 'ind', k = r.CNPJ_CIA + '|' + t;
+    if (!divV.has(k) || divV.get(k) < v) { divV.set(k, v); divLinhas.set(k, new Map()); }
+    if (divV.get(k) === v) divLinhas.get(k).set(r.CD_CONTA, Math.abs(val));
   });
-  /* se a conta-mãe e as contas-filhas citam dividendos, vale só a conta-mãe (senão soma em dobro) */
-  divLinhas.forEach((m, cnpj) => {
-    let soma = 0;
-    m.forEach((val, cod) => { const mae = [...m.keys()].some((o) => o !== cod && cod.startsWith(o + '.')); if (!mae) soma += val; });
-    divPago.set(cnpj, soma);
+  const cnpjsDiv = new Set([...divLinhas.keys()].map((k) => k.split('|')[0]));
+  cnpjsDiv.forEach((cnpj) => {
+    const m = divLinhas.get(cnpj + '|con') || divLinhas.get(cnpj + '|ind'); if (!m) return;
+    let soma = 0; const lista = [];
+    m.forEach((val, cod) => { const mae = [...m.keys()].some((o) => o !== cod && cod.startsWith(o + '.')); if (!mae) { soma += val; lista.push([cod, val]); } });
+    divPago.set(cnpj, soma); divLinhas.set(cnpj, new Map(lista));
   });
   const acoes = new Map(), ultC = ultimo(capital);
   capital.forEach((r) => {
@@ -145,10 +148,12 @@ export function lerFundamentos({ dre, bpp, capital, fca, dfc = [], precos = {}, 
   const itens = {};
   Object.keys(out).forEach((tk) => {
     const { cnpj, classe } = out[tk], l = lpa.get(cnpj), p = pl.get(cnpj), n = acoes.get(cnpj);
-    if (debug && debug.tickers && debug.tickers.includes(tk)) debug[tk] = { cnpj, classe, lpa: l, lpaVersoes: lpaV.get(cnpj), pl: p, acoes: n, divPago: divPago.get(cnpj), divLinhas: [...(divLinhas.get(cnpj) || [])], preco: precos[tk] };
+    if (debug && debug.tickers && debug.tickers.includes(tk)) debug[tk] = { cnpj, classe, lpa: l, lpaVersoes: lpaV.get(cnpj), pl: p, acoes: n, divPago: divPago.get(cnpj), divLinhas: [...(divLinhas.get(cnpj) || [])], lpaGeral: (lpaV.get(cnpj) || {}).GERAL, preco: precos[tk] };
     if (!l && !(p && n)) return;
     const item = {}, la = lpaAnt.get(cnpj);
-    const lv = l ? (l[classe] != null ? l[classe] : (l.ON != null ? l.ON : l.PN)) : null;
+    const ov = lpaV.get(cnpj) || {};
+    const lvC = ov[classe] || ov.ON || ov.PN, lvG = ov.GERAL;
+    const lv = lvG && (!lvC || lvG.v > lvC.v) ? lvG.val : (lvC ? lvC.val : null);
     if (lv != null && Number.isFinite(lv)) item.lpa = Math.round(lv * 10000) / 10000;
     /* a CVM informa a quantidade de ações às vezes em unidades e às vezes em milhares: escolhe a escala que dá um P/VP plausível */
     let vpaV = null, nn = n;

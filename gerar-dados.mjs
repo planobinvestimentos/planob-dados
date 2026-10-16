@@ -56,7 +56,8 @@ async function fund() {
   const dre = juntar(dfp, /DRE_ind_/i).concat(juntar(dfp, /DRE_con_/i)), bpp = juntar(dfp, /BPP_ind_/i).concat(juntar(dfp, /BPP_con_/i)), capital = juntar(dfp, /composicao_capital/i);
   const fcaL = juntar(fca, /valor_mobiliario/i);
   console.log('linhas:', { dre: dre.length, bpp: bpp.length, capital: capital.length, fca: fcaL.length });
-  const dfc = juntar(dfp, /DFC_MD_ind_/i).concat(juntar(dfp, /DFC_MI_ind_/i), juntar(dfp, /DFC_MD_con_/i), juntar(dfp, /DFC_MI_con_/i));
+  const marca = (l, tipo) => l.map((r) => Object.assign(r, { _T: tipo }));
+  const dfc = marca(juntar(dfp, /DFC_MD_ind_/i).concat(juntar(dfp, /DFC_MI_ind_/i)), 'ind').concat(marca(juntar(dfp, /DFC_MD_con_/i).concat(juntar(dfp, /DFC_MI_con_/i)), 'con'));
   /* diagnóstico: amostra bruta de algumas empresas, para conferir escalas e códigos de conta */
   try {
     const diag = {}, norm2 = (x) => String(x || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toUpperCase();
