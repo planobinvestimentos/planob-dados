@@ -58,7 +58,7 @@ const num = (s) => { s = String(s).trim(); const v = parseFloat(s.includes(',') 
 const escala = (e) => (/MIL/.test(norm(e)) ? 1000 : 1);
 
 /* devolve {TK: {lpa, vpa, ref}} a partir dos CSV da CVM (DFP: DRE, BPP, composição do capital; FCA: valores mobiliários) */
-export function lerFundamentos({ dre, bpp, capital, fca, dfc = [], precos = {} }) {
+export function lerFundamentos({ dre, bpp, capital, fca, dfc = [], precos = {}, debug = null }) {
   // mais recente por empresa
   const ultimo = (linhas) => {
     const m = new Map();
@@ -145,6 +145,7 @@ export function lerFundamentos({ dre, bpp, capital, fca, dfc = [], precos = {} }
   const itens = {};
   Object.keys(out).forEach((tk) => {
     const { cnpj, classe } = out[tk], l = lpa.get(cnpj), p = pl.get(cnpj), n = acoes.get(cnpj);
+    if (debug && debug.tickers && debug.tickers.includes(tk)) debug[tk] = { cnpj, classe, lpa: l, lpaVersoes: lpaV.get(cnpj), pl: p, acoes: n, divPago: divPago.get(cnpj), divLinhas: [...(divLinhas.get(cnpj) || [])], preco: precos[tk] };
     if (!l && !(p && n)) return;
     const item = {}, la = lpaAnt.get(cnpj);
     const lv = l ? (l[classe] != null ? l[classe] : (l.ON != null ? l.ON : l.PN)) : null;
