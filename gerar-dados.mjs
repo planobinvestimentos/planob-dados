@@ -57,6 +57,23 @@ async function fund() {
   const fcaL = juntar(fca, /valor_mobiliario/i);
   console.log('linhas:', { dre: dre.length, bpp: bpp.length, capital: capital.length, fca: fcaL.length });
   const dfc = juntar(dfp, /DFC_MD_ind_/i).concat(juntar(dfp, /DFC_MI_ind_/i), juntar(dfp, /DFC_MD_con_/i), juntar(dfp, /DFC_MI_con_/i));
+  /* diagnóstico: amostra bruta de algumas empresas, para conferir escalas e códigos de conta */
+  try {
+    const diag = {};
+    for (const tk of ['VALE3', 'ITUB4', 'BBAS3', 'CMIG4', 'ABEV3', 'PETR4']) {
+      const f = fcaL.find((r) => String(r.CODIGO_NEGOCIACAO || '').includes(tk));
+      if (!f) { diag[tk] = 'sem FCA'; continue; }
+      const c = f.CNPJ_COMPANHIA || f.CNPJ_CIA;
+      const pega = (l, fn) => l.filter((r) => r.CNPJ_CIA === c && fn(r)).slice(-8).map((r) => ({ d: r.DT_REFER, v: r.VERSAO, o: r.ORDEM_EXERC, c: r.CD_CONTA, n: r.DS_CONTA, e: r.ESCALA_MOEDA, m: r.MOEDA, x: r.VL_CONTA }));
+      diag[tk] = {
+        cnpj: c,
+        lpa: pega(dre, (r) => /^3\.99/.test(r.CD_CONTA)),
+        pl: pega(bpp, (r) => r.CD_CONTA === '2.03' || r.CD_CONTA === '2.03.09'),
+        capital: capital.filter((r) => r.CNPJ_CIA === c).slice(-3),
+      };
+    }
+    fs.writeFileSync(path.join(SAIDA, 'diagnostico.json'), JSON.stringify(diag, null, 1));
+  } catch (e) { console.warn('diagnóstico falhou:', e.message); }
   const itens = lerFundamentos({ dre, bpp, capital, fca: fcaL, dfc });
   const n = Object.keys(itens).length;
   if (n < 50) throw new Error('poucos ativos com fundamentos (' + n + '): confira os nomes das colunas da CVM');
