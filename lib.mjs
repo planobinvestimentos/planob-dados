@@ -31,7 +31,7 @@ export function lerCotahist(texto) {
     if (linha.length < 217 || linha.slice(0, 2) !== '01') continue;
     if (linha.slice(24, 27) !== '010') continue;                 // só mercado à vista, lote padrão
     const tk = linha.slice(12, 24).trim();
-    if (!/^[A-Z]{4}\d{1,2}$/.test(tk)) continue;
+    if (!/^[A-Z][A-Z0-9]{3}\d{1,2}$/.test(tk)) continue;
     const fator = parseInt(linha.slice(210, 217), 10) || 1;
     const p = parseInt(linha.slice(108, 121), 10) / 100 / fator;
     if (!(p > 0)) continue;
@@ -71,45 +71,55 @@ export function lerFundamentos({ dre, bpp, capital, fca, dfc = [], precos = {} }
   const ult = ultimo(dre), lpa = new Map(), ref = new Map();
   const lpaAnt = new Map();
   const classeDe = (ds) => { const n = norm(ds); return n === 'ON' ? 'ON' : /^PN/.test(n) ? 'PN' : ''; };
+  const melhor = (mapa, chave, classe, v, val) => {
+    const o = mapa.get(chave) || {}, ant = o[classe];
+    if (!ant || v > ant.v || (v === ant.v && (val !== 0 || ant.val === 0))) o[classe] = { v, val };
+    mapa.set(chave, o);
+  };
+  const lpaV = new Map(), lpaAntV = new Map();
   dre.forEach((r) => {
     const c = r.CD_CONTA || '';
     if (!/^3\.99\.01\.\d{2}$/.test(c)) return; // só o lucro BÁSICO por ação, por classe
     const classe = classeDe(r.DS_CONTA), val = num(r.VL_CONTA);
     if (!classe || !Number.isFinite(val)) return;
-    if (norm(r.ORDEM_EXERC) === 'PENULTIMO') {
-      const o = lpaAnt.get(r.CNPJ_CIA) || {}; if (o[classe] == null) o[classe] = val; lpaAnt.set(r.CNPJ_CIA, o);
-      return;
-    }
-    if (norm(r.ORDEM_EXERC) !== 'ULTIMO') return;
     const v = (r.DT_REFER || '') + '|' + String(r.VERSAO || '0').padStart(3, '0');
-    if (!ult.has(r.CNPJ_CIA) || ult.get(r.CNPJ_CIA).v !== v) return;
-    const o = lpa.get(r.CNPJ_CIA) || {};
-    if (o[classe] == null) o[classe] = val;
-    lpa.set(r.CNPJ_CIA, o); ref.set(r.CNPJ_CIA, r.DT_REFER);
+    const ordem = norm(r.ORDEM_EXERC);
+    if (ordem === 'PENULTIMO') { melhor(lpaAntV, r.CNPJ_CIA, classe, v, val); return; }
+    if (ordem !== 'ULTIMO') return;
+    melhor(lpaV, r.CNPJ_CIA, classe, v, val);
+    if (!ref.has(r.CNPJ_CIA) || ref.get(r.CNPJ_CIA) < r.DT_REFER) ref.set(r.CNPJ_CIA, r.DT_REFER);
   });
-  const ultB = ultimo(bpp), pl = new Map();
+  const plano = (m) => { const out = new Map(); m.forEach((o, k) => { const x = {}; Object.keys(o).forEach((c) => { x[c] = o[c].val; }); out.set(k, x); }); return out; };
+  plano(lpaV).forEach((v, k) => lpa.set(k, v));
+  plano(lpaAntV).forEach((v, k) => lpaAnt.set(k, v));
+  const pl = new Map(), plV = new Map();
   bpp.forEach((r) => {
     if (norm(r.ORDEM_EXERC) !== 'ULTIMO') return;
     const v = (r.DT_REFER || '') + '|' + String(r.VERSAO || '0').padStart(3, '0');
-    if (!ultB.has(r.CNPJ_CIA) || ultB.get(r.CNPJ_CIA).v !== v) return;
     const c = r.CD_CONTA || '', val = num(r.VL_CONTA) * escala(r.ESCALA_MOEDA);
     if (!Number.isFinite(val)) return;
-    const o = pl.get(r.CNPJ_CIA) || {};
-    const ds = norm(r.DS_CONTA);
-    if (/^2\.\d{2}$/.test(c) && /^PATRIMONIO LIQUIDO/.test(ds)) o.total = val;
-    if (/^2\.\d{2}\.\d{2}$/.test(c) && /NAO CONTROLADOR/.test(ds)) o.nc = val;
-    pl.set(r.CNPJ_CIA, o);
+    const ds = norm(r.DS_CONTA), o = pl.get(r.CNPJ_CIA) || {}, ov = plV.get(r.CNPJ_CIA) || {};
+    const grava = (campo) => { if (ov[campo] == null || v >= ov[campo]) { o[campo] = val; ov[campo] = v; } };
+    if (/^2\.\d{2}$/.test(c) && /^PATRIMONIO LIQUIDO/.test(ds)) grava('total');
+    if (/^2\.\d{2}\.\d{2}$/.test(c) && /NAO CONTROLADOR/.test(ds)) grava('nc');
+    pl.set(r.CNPJ_CIA, o); plV.set(r.CNPJ_CIA, ov);
   });
   /* dividendos e JCP pagos no último exercício (demonstração do fluxo de caixa, grupo 6.03), valor total da empresa */
-  const ultD = ultimo(dfc), divPago = new Map();
+  const ultD = ultimo(dfc), divPago = new Map(), divLinhas = new Map();
   dfc.forEach((r) => {
     if (norm(r.ORDEM_EXERC) !== 'ULTIMO') return;
     const v = (r.DT_REFER || '') + '|' + String(r.VERSAO || '0').padStart(3, '0');
     if (!ultD.has(r.CNPJ_CIA) || ultD.get(r.CNPJ_CIA).v !== v) return;
-    if (!/^6\.03\./.test(r.CD_CONTA || '') || !/DIVIDENDO|JUROS SOBRE O CAPITAL|JCP/.test(norm(r.DS_CONTA))) return;
+    if (!/^6\.\d{2}\./.test(r.CD_CONTA || '') || !/DIVIDENDO|JUROS SOBRE O CAPITAL|JCP/.test(norm(r.DS_CONTA))) return;
     if (/RECEB/.test(norm(r.DS_CONTA))) return;
     const val = num(r.VL_CONTA) * escala(r.ESCALA_MOEDA); if (!Number.isFinite(val)) return;
-    divPago.set(r.CNPJ_CIA, (divPago.get(r.CNPJ_CIA) || 0) + Math.abs(val));
+    const m = divLinhas.get(r.CNPJ_CIA) || new Map(); m.set(r.CD_CONTA, Math.abs(val)); divLinhas.set(r.CNPJ_CIA, m);
+  });
+  /* se a conta-mãe e as contas-filhas citam dividendos, vale só a conta-mãe (senão soma em dobro) */
+  divLinhas.forEach((m, cnpj) => {
+    let soma = 0;
+    m.forEach((val, cod) => { const mae = [...m.keys()].some((o) => o !== cod && cod.startsWith(o + '.')); if (!mae) soma += val; });
+    divPago.set(cnpj, soma);
   });
   const acoes = new Map(), ultC = ultimo(capital);
   capital.forEach((r) => {
@@ -127,7 +137,7 @@ export function lerFundamentos({ dre, bpp, capital, fca, dfc = [], precos = {} }
     const classe = /ORDIN/.test(tipo) ? 'ON' : /PREFER/.test(tipo) ? 'PN' : '';
     if (!classe) return;
     const dt = achar(r, /^DATA_REFERENCIA$/) + '|' + String(achar(r, /^VERSAO$/) || '0').padStart(3, '0');
-    (cod.match(/[A-Z]{4}\d{1,2}/g) || []).forEach((tk) => {
+    (cod.match(/[A-Z][A-Z0-9]{3}\d{1,2}/g) || []).forEach((tk) => {
       const k = cnpj + '|' + tk;
       if (!vistos.has(k) || vistos.get(k) < dt) { vistos.set(k, dt); out[tk] = { cnpj, classe }; }
     });
