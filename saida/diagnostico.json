@@ -1,197 +1,4 @@
 {
- "VALE3": {
-  "cnpj": "33.592.510/0001-54",
-  "lpa": [
-   {
-    "d": "2024-12-31",
-    "v": "3",
-    "o": "PENÚLTIMO",
-    "c": "3.99.01.02",
-    "n": "ON",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "9.1500000000"
-   },
-   {
-    "d": "2024-12-31",
-    "v": "3",
-    "o": "ÚLTIMO",
-    "c": "3.99.01.02",
-    "n": "ON",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "7.3900000000"
-   },
-   {
-    "d": "2024-12-31",
-    "v": "3",
-    "o": "PENÚLTIMO",
-    "c": "3.99.02",
-    "n": "Lucro Diluído por Ação",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "0.0000000000"
-   },
-   {
-    "d": "2024-12-31",
-    "v": "3",
-    "o": "ÚLTIMO",
-    "c": "3.99.02",
-    "n": "Lucro Diluído por Ação",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "0.0000000000"
-   },
-   {
-    "d": "2024-12-31",
-    "v": "3",
-    "o": "PENÚLTIMO",
-    "c": "3.99.02.01",
-    "n": "PNA",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "0.0000000000"
-   },
-   {
-    "d": "2024-12-31",
-    "v": "3",
-    "o": "ÚLTIMO",
-    "c": "3.99.02.01",
-    "n": "PNA",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "0.0000000000"
-   },
-   {
-    "d": "2024-12-31",
-    "v": "3",
-    "o": "PENÚLTIMO",
-    "c": "3.99.02.02",
-    "n": "ON",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "9.1500000000"
-   },
-   {
-    "d": "2024-12-31",
-    "v": "3",
-    "o": "ÚLTIMO",
-    "c": "3.99.02.02",
-    "n": "ON",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "7.3800000000"
-   }
-  ],
-  "pl": [
-   {
-    "d": "2025-12-31",
-    "v": "2",
-    "o": "PENÚLTIMO",
-    "c": "2.03",
-    "n": "Patrimônio Líquido Consolidado",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "213720000.0000000000"
-   },
-   {
-    "d": "2025-12-31",
-    "v": "2",
-    "o": "ÚLTIMO",
-    "c": "2.03",
-    "n": "Patrimônio Líquido Consolidado",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "188926000.0000000000"
-   },
-   {
-    "d": "2025-12-31",
-    "v": "2",
-    "o": "PENÚLTIMO",
-    "c": "2.03.09",
-    "n": "Participação dos Acionistas Não Controladores",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "6948000.0000000000"
-   },
-   {
-    "d": "2025-12-31",
-    "v": "2",
-    "o": "ÚLTIMO",
-    "c": "2.03.09",
-    "n": "Participação dos Acionistas Não Controladores",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "4627000.0000000000"
-   },
-   {
-    "d": "2024-12-31",
-    "v": "3",
-    "o": "PENÚLTIMO",
-    "c": "2.03",
-    "n": "Patrimônio Líquido Consolidado",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "198325000.0000000000"
-   },
-   {
-    "d": "2024-12-31",
-    "v": "3",
-    "o": "ÚLTIMO",
-    "c": "2.03",
-    "n": "Patrimônio Líquido Consolidado",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "213720000.0000000000"
-   },
-   {
-    "d": "2024-12-31",
-    "v": "3",
-    "o": "PENÚLTIMO",
-    "c": "2.03.09",
-    "n": "Participação dos Acionistas Não Controladores",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "7360000.0000000000"
-   },
-   {
-    "d": "2024-12-31",
-    "v": "3",
-    "o": "ÚLTIMO",
-    "c": "2.03.09",
-    "n": "Participação dos Acionistas Não Controladores",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "6948000.0000000000"
-   }
-  ],
-  "capital": [
-   {
-    "CNPJ_CIA": "33.592.510/0001-54",
-    "DT_REFER": "2025-12-31",
-    "VERSAO": "2",
-    "DENOM_CIA": "VALE S.A.",
-    "QT_ACAO_ORDIN_CAP_INTEGR": "4539007",
-    "QT_ACAO_PREF_CAP_INTEGR": "0",
-    "QT_ACAO_TOTAL_CAP_INTEGR": "4539007",
-    "QT_ACAO_ORDIN_TESOURO": "270228",
-    "QT_ACAO_PREF_TESOURO": "0",
-    "QT_ACAO_TOTAL_TESOURO": "270228"
-   },
-   {
-    "CNPJ_CIA": "33.592.510/0001-54",
-    "DT_REFER": "2024-12-31",
-    "VERSAO": "3",
-    "DENOM_CIA": "VALE S.A.",
-    "QT_ACAO_ORDIN_CAP_INTEGR": "4539008",
-    "QT_ACAO_PREF_CAP_INTEGR": "0",
-    "QT_ACAO_TOTAL_CAP_INTEGR": "4539008",
-    "QT_ACAO_ORDIN_TESOURO": "270288",
-    "QT_ACAO_PREF_TESOURO": "0",
-    "QT_ACAO_TOTAL_TESOURO": "270288"
-   }
-  ]
- },
  "ITUB4": {
   "cnpj": "60.872.504/0001-23",
   "lpa": [
@@ -382,6 +189,395 @@
     "QT_ACAO_ORDIN_TESOURO": "0",
     "QT_ACAO_PREF_TESOURO": "28031",
     "QT_ACAO_TOTAL_TESOURO": "28031"
+   }
+  ],
+  "dfc": [
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.05",
+    "n": "Dividendos e Juros sobre o Capital Próprio Pagos",
+    "e": "MIL",
+    "x": "-10348000.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.05",
+    "n": "Dividendos e Juros sobre o Capital Próprio Pagos",
+    "e": "MIL",
+    "x": "-21314000.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "2",
+    "c": "6.03.07",
+    "n": "Dividendos / Juros sobre o Capital Próprio Pagos a Acionistas não Controladores",
+    "e": "MIL",
+    "x": "-589000.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "2",
+    "c": "6.03.07",
+    "n": "Dividendos / Juros sobre o Capital Próprio Pagos a Acionistas não Controladores",
+    "e": "MIL",
+    "x": "-633000.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "2",
+    "c": "6.03.08",
+    "n": "Dividendos / Juros sobre o Capital Próprio Pagos",
+    "e": "MIL",
+    "x": "-21314000.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "2",
+    "c": "6.03.08",
+    "n": "Dividendos / Juros sobre o Capital Próprio Pagos",
+    "e": "MIL",
+    "x": "-48299000.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.02.01",
+    "n": "Dividendos / Juros sobre o Capital Próprio Recebidos de Investimentos em Coligadas e Entidades Contr",
+    "e": "MIL",
+    "x": "583000.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.02.01",
+    "n": "Dividendos / Juros sobre o Capital Próprio Recebidos de Investimentos em Coligadas e Entidades Contr",
+    "e": "MIL",
+    "x": "450000.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.07",
+    "n": "Dividendos e Juros sobre o Capital Próprio Pagos a Acionistas não Controladores",
+    "e": "MIL",
+    "x": "-366000.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.07",
+    "n": "Dividendos e Juros sobre o Capital Próprio Pagos a Acionistas não Controladores",
+    "e": "MIL",
+    "x": "-589000.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.08",
+    "n": "Dividendos e Juros sobre o Capital Próprio Pagos",
+    "e": "MIL",
+    "x": "-10348000.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.08",
+    "n": "Dividendos e Juros sobre o Capital Próprio Pagos",
+    "e": "MIL",
+    "x": "-21314000.0000000000"
+   }
+  ]
+ },
+ "BBSE3": {
+  "cnpj": "17.344.597/0001-94",
+  "lpa": [
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.01",
+    "n": "Lucro Básico por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.01",
+    "n": "Lucro Básico por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.01.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "3.9900000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.01.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "4.4600000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02",
+    "n": "Lucro Diluído por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.02",
+    "n": "Lucro Diluído por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "3.9900000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.02.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "4.4600000000"
+   }
+  ],
+  "pl": [
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "9695421.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "10384393.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "9816482.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "9695421.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   }
+  ],
+  "capital": [
+   {
+    "CNPJ_CIA": "17.344.597/0001-94",
+    "DT_REFER": "2025-12-31",
+    "VERSAO": "1",
+    "DENOM_CIA": "BB SEGURIDADE PARTICIPAÇÕES S.A.",
+    "QT_ACAO_ORDIN_CAP_INTEGR": "2000000000",
+    "QT_ACAO_PREF_CAP_INTEGR": "0",
+    "QT_ACAO_TOTAL_CAP_INTEGR": "2000000000",
+    "QT_ACAO_ORDIN_TESOURO": "58785091",
+    "QT_ACAO_PREF_TESOURO": "0",
+    "QT_ACAO_TOTAL_TESOURO": "58785091"
+   },
+   {
+    "CNPJ_CIA": "17.344.597/0001-94",
+    "DT_REFER": "2024-12-31",
+    "VERSAO": "1",
+    "DENOM_CIA": "BB SEGURIDADE PARTICIPAÇÕES S.A.",
+    "QT_ACAO_ORDIN_CAP_INTEGR": "2000000000",
+    "QT_ACAO_PREF_CAP_INTEGR": "0",
+    "QT_ACAO_TOTAL_CAP_INTEGR": "2000000000",
+    "QT_ACAO_ORDIN_TESOURO": "58813981",
+    "QT_ACAO_PREF_TESOURO": "0",
+    "QT_ACAO_TOTAL_TESOURO": "58813981"
+   }
+  ],
+  "dfc": [
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.01.01.03",
+    "n": "Despesa financeira de atualização monetária de dividendos",
+    "e": "MIL",
+    "x": "38377.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.01.01.03",
+    "n": "Despesa financeira de atualização monetária de dividendos",
+    "e": "MIL",
+    "x": "92851.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.02.01",
+    "n": "Dividendos recebidos",
+    "e": "MIL",
+    "x": "5173629.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.02.01",
+    "n": "Dividendos recebidos",
+    "e": "MIL",
+    "x": "5482469.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.01",
+    "n": "Dividendos pagos",
+    "e": "MIL",
+    "x": "-5193340.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.01",
+    "n": "Dividendos pagos",
+    "e": "MIL",
+    "x": "-8273740.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.01.01.03",
+    "n": "Despesa financeira de atualização monetária de dividendos",
+    "e": "MIL",
+    "x": "77280.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.01.01.03",
+    "n": "Despesa financeira de atualização monetária de dividendos",
+    "e": "MIL",
+    "x": "38377.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.02.01",
+    "n": "Dividendos recebidos",
+    "e": "MIL",
+    "x": "3650067.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.02.01",
+    "n": "Dividendos recebidos",
+    "e": "MIL",
+    "x": "5173629.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.01",
+    "n": "Dividendos pagos",
+    "e": "MIL",
+    "x": "-6960998.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.01",
+    "n": "Dividendos pagos",
+    "e": "MIL",
+    "x": "-5193340.0000000000"
    }
   ]
  },
@@ -576,6 +772,395 @@
     "QT_ACAO_PREF_TESOURO": "0",
     "QT_ACAO_TOTAL_TESOURO": "22786568"
    }
+  ],
+  "dfc": [
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.02.11",
+    "n": "Dividendos e juros sobre capital próprio recebidos",
+    "e": "MIL",
+    "x": "7294472.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.02.11",
+    "n": "Dividendos e juros sobre capital próprio recebidos",
+    "e": "MIL",
+    "x": "8369146.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Dividendos ou juros sobre o capital próprio pagos aos acionistas controladores",
+    "e": "MIL",
+    "x": "-14824290.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Dividendos ou juros sobre o capital próprio pagos aos acionistas controladores",
+    "e": "MIL",
+    "x": "-6680889.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.05",
+    "n": "Dividendos ou juros sobre o capital próprio pagos aos acionistas não controladores",
+    "e": "MIL",
+    "x": "-1739256.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.05",
+    "n": "Dividendos ou juros sobre o capital próprio pagos aos acionistas não controladores",
+    "e": "MIL",
+    "x": "-2694118.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.02.11",
+    "n": "Dividendos e juros sobre capital próprio recebidos",
+    "e": "MIL",
+    "x": "5251011.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.02.11",
+    "n": "Dividendos e juros sobre capital próprio recebidos",
+    "e": "MIL",
+    "x": "7294472.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Dividendos ou juros sobre o capital próprio pagos aos acionistas controladores",
+    "e": "MIL",
+    "x": "-12956523.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Dividendos ou juros sobre o capital próprio pagos aos acionistas controladores",
+    "e": "MIL",
+    "x": "-14824290.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.05",
+    "n": "Dividendos ou juros sobre o capital próprio pagos aos acionistas não controladores",
+    "e": "MIL",
+    "x": "-2401800.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.05",
+    "n": "Dividendos ou juros sobre o capital próprio pagos aos acionistas não controladores",
+    "e": "MIL",
+    "x": "-1739256.0000000000"
+   }
+  ]
+ },
+ "WEGE3": {
+  "cnpj": "84.429.695/0001-11",
+  "lpa": [
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.01",
+    "n": "Lucro Básico por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.01",
+    "n": "Lucro Básico por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.01.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "1.3660800000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.01.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "1.4402600000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02",
+    "n": "Lucro Diluído por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.02",
+    "n": "Lucro Diluído por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "1.3657700000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.02.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "1.4399400000"
+   }
+  ],
+  "pl": [
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "23125217.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "18553364.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "920996.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "1136179.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "17854776.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "23125217.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "512691.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "920996.0000000000"
+   }
+  ],
+  "capital": [
+   {
+    "CNPJ_CIA": "84.429.695/0001-11",
+    "DT_REFER": "2025-12-31",
+    "VERSAO": "1",
+    "DENOM_CIA": "WEG S.A.",
+    "QT_ACAO_ORDIN_CAP_INTEGR": "4197317998",
+    "QT_ACAO_PREF_CAP_INTEGR": "0",
+    "QT_ACAO_TOTAL_CAP_INTEGR": "4197317998",
+    "QT_ACAO_ORDIN_TESOURO": "1622025",
+    "QT_ACAO_PREF_TESOURO": "0",
+    "QT_ACAO_TOTAL_TESOURO": "1622025"
+   },
+   {
+    "CNPJ_CIA": "84.429.695/0001-11",
+    "DT_REFER": "2024-12-31",
+    "VERSAO": "1",
+    "DENOM_CIA": "WEG S.A.",
+    "QT_ACAO_ORDIN_CAP_INTEGR": "4197317998",
+    "QT_ACAO_PREF_CAP_INTEGR": "0",
+    "QT_ACAO_TOTAL_CAP_INTEGR": "4197317998",
+    "QT_ACAO_ORDIN_TESOURO": "1780620",
+    "QT_ACAO_PREF_TESOURO": "0",
+    "QT_ACAO_TOTAL_TESOURO": "1780620"
+   }
+  ],
+  "dfc": [
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.02.02",
+    "n": "Recebimento de Dividendos/Juros s/ Capital Próprio",
+    "e": "MIL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.02.02",
+    "n": "Recebimento de Dividendos/Juros s/ Capital Próprio",
+    "e": "MIL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.01",
+    "n": "Pgto de Dividendos/Juros s/ Capital Próprio",
+    "e": "MIL",
+    "x": "-2459420.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.01",
+    "n": "Pgto de Dividendos/Juros s/ Capital Próprio",
+    "e": "MIL",
+    "x": "-2938119.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.01.02.11",
+    "n": "Recebimento de dividendos / juros sobre capital próprio",
+    "e": "MIL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.01.02.11",
+    "n": "Recebimento de dividendos / juros sobre capital próprio",
+    "e": "MIL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Pgto de Dividendos/Juros s/ Capital Próprio",
+    "e": "MIL",
+    "x": "-2934611.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Pgto de Dividendos/Juros s/ Capital Próprio",
+    "e": "MIL",
+    "x": "-5384769.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.01.02.11",
+    "n": "Recebimento de dividendos / juros sobre capital próprio",
+    "e": "MIL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.01.02.11",
+    "n": "Recebimento de dividendos / juros sobre capital próprio",
+    "e": "MIL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Pgto de Dividendos/Juros s/ Capital Próprio",
+    "e": "MIL",
+    "x": "-2308620.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Pgto de Dividendos/Juros s/ Capital Próprio",
+    "e": "MIL",
+    "x": "-2934611.0000000000"
+   }
   ]
  },
  "CMIG4": {
@@ -769,54 +1354,132 @@
     "QT_ACAO_PREF_TESOURO": "0",
     "QT_ACAO_TOTAL_TESOURO": "1100"
    }
+  ],
+  "dfc": [
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.01.02.04",
+    "n": "Dividendos recebidos",
+    "e": "MIL",
+    "x": "2363697.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.01.02.04",
+    "n": "Dividendos recebidos",
+    "e": "MIL",
+    "x": "4237628.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.02",
+    "n": "Juros sobre o Capital Próprio e Dividendos",
+    "e": "MIL",
+    "x": "-1820225.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.02",
+    "n": "Juros sobre o Capital Próprio e Dividendos",
+    "e": "MIL",
+    "x": "-4292192.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.01.03.06",
+    "n": "Dividendos e JCP recebidos",
+    "e": "MIL",
+    "x": "349534.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.01.03.06",
+    "n": "Dividendos e JCP recebidos",
+    "e": "MIL",
+    "x": "269052.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.03",
+    "n": "Juros sobre o Capital Próprio e Dividendos",
+    "e": "MIL",
+    "x": "-4294458.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.03",
+    "n": "Juros sobre o Capital Próprio e Dividendos",
+    "e": "MIL",
+    "x": "-3968306.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.01.02.16",
+    "n": "Dividendos e JCP recebidos",
+    "e": "MIL",
+    "x": "592368.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.01.02.16",
+    "n": "Dividendos e JCP recebidos",
+    "e": "MIL",
+    "x": "349534.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.03",
+    "n": "Juros sobre o Capital Próprio e Dividendos",
+    "e": "MIL",
+    "x": "-1823019.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.03",
+    "n": "Juros sobre o Capital Próprio e Dividendos",
+    "e": "MIL",
+    "x": "-4294458.0000000000"
+   }
   ]
  },
- "ABEV3": {
-  "cnpj": "07.526.557/0001-00",
+ "VALE3": {
+  "cnpj": "33.592.510/0001-54",
   "lpa": [
    {
     "d": "2024-12-31",
-    "v": "1",
+    "v": "3",
     "o": "PENÚLTIMO",
-    "c": "3.99.01",
-    "n": "Lucro Básico por Ação",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "0.0000000000"
-   },
-   {
-    "d": "2024-12-31",
-    "v": "1",
-    "o": "ÚLTIMO",
-    "c": "3.99.01",
-    "n": "Lucro Básico por Ação",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "0.0000000000"
-   },
-   {
-    "d": "2024-12-31",
-    "v": "1",
-    "o": "PENÚLTIMO",
-    "c": "3.99.01.01",
+    "c": "3.99.01.02",
     "n": "ON",
     "e": "MIL",
     "m": "REAL",
-    "x": "0.9210600000"
+    "x": "9.1500000000"
    },
    {
     "d": "2024-12-31",
-    "v": "1",
+    "v": "3",
     "o": "ÚLTIMO",
-    "c": "3.99.01.01",
+    "c": "3.99.01.02",
     "n": "ON",
     "e": "MIL",
     "m": "REAL",
-    "x": "0.9175500000"
+    "x": "7.3900000000"
    },
    {
     "d": "2024-12-31",
-    "v": "1",
+    "v": "3",
     "o": "PENÚLTIMO",
     "c": "3.99.02",
     "n": "Lucro Diluído por Ação",
@@ -826,7 +1489,7 @@
    },
    {
     "d": "2024-12-31",
-    "v": "1",
+    "v": "3",
     "o": "ÚLTIMO",
     "c": "3.99.02",
     "n": "Lucro Diluído por Ação",
@@ -836,324 +1499,249 @@
    },
    {
     "d": "2024-12-31",
-    "v": "1",
+    "v": "3",
     "o": "PENÚLTIMO",
     "c": "3.99.02.01",
-    "n": "ON",
+    "n": "PNA",
     "e": "MIL",
     "m": "REAL",
-    "x": "0.9156100000"
+    "x": "0.0000000000"
    },
    {
     "d": "2024-12-31",
-    "v": "1",
+    "v": "3",
     "o": "ÚLTIMO",
     "c": "3.99.02.01",
+    "n": "PNA",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "3",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02.02",
     "n": "ON",
     "e": "MIL",
     "m": "REAL",
-    "x": "0.9129000000"
+    "x": "9.1500000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "3",
+    "o": "ÚLTIMO",
+    "c": "3.99.02.02",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "7.3800000000"
    }
   ],
   "pl": [
    {
     "d": "2025-12-31",
-    "v": "1",
+    "v": "2",
     "o": "PENÚLTIMO",
     "c": "2.03",
     "n": "Patrimônio Líquido Consolidado",
     "e": "MIL",
     "m": "REAL",
-    "x": "99580514.0000000000"
+    "x": "213720000.0000000000"
    },
    {
     "d": "2025-12-31",
-    "v": "1",
+    "v": "2",
     "o": "ÚLTIMO",
     "c": "2.03",
     "n": "Patrimônio Líquido Consolidado",
     "e": "MIL",
     "m": "REAL",
-    "x": "88774781.0000000000"
+    "x": "188926000.0000000000"
    },
    {
     "d": "2025-12-31",
-    "v": "1",
+    "v": "2",
     "o": "PENÚLTIMO",
     "c": "2.03.09",
     "n": "Participação dos Acionistas Não Controladores",
     "e": "MIL",
     "m": "REAL",
-    "x": "938375.0000000000"
+    "x": "6948000.0000000000"
    },
    {
     "d": "2025-12-31",
-    "v": "1",
+    "v": "2",
     "o": "ÚLTIMO",
     "c": "2.03.09",
     "n": "Participação dos Acionistas Não Controladores",
     "e": "MIL",
     "m": "REAL",
-    "x": "860742.0000000000"
+    "x": "4627000.0000000000"
    },
    {
     "d": "2024-12-31",
-    "v": "1",
+    "v": "3",
     "o": "PENÚLTIMO",
     "c": "2.03",
     "n": "Patrimônio Líquido Consolidado",
     "e": "MIL",
     "m": "REAL",
-    "x": "80143802.0000000000"
+    "x": "198325000.0000000000"
    },
    {
     "d": "2024-12-31",
-    "v": "1",
+    "v": "3",
     "o": "ÚLTIMO",
     "c": "2.03",
     "n": "Patrimônio Líquido Consolidado",
     "e": "MIL",
     "m": "REAL",
-    "x": "99580514.0000000000"
+    "x": "213720000.0000000000"
    },
    {
     "d": "2024-12-31",
-    "v": "1",
+    "v": "3",
     "o": "PENÚLTIMO",
     "c": "2.03.09",
     "n": "Participação dos Acionistas Não Controladores",
     "e": "MIL",
     "m": "REAL",
-    "x": "1174512.0000000000"
+    "x": "7360000.0000000000"
    },
    {
     "d": "2024-12-31",
-    "v": "1",
+    "v": "3",
     "o": "ÚLTIMO",
     "c": "2.03.09",
     "n": "Participação dos Acionistas Não Controladores",
     "e": "MIL",
     "m": "REAL",
-    "x": "938375.0000000000"
+    "x": "6948000.0000000000"
    }
   ],
   "capital": [
    {
-    "CNPJ_CIA": "07.526.557/0001-00",
+    "CNPJ_CIA": "33.592.510/0001-54",
     "DT_REFER": "2025-12-31",
-    "VERSAO": "1",
-    "DENOM_CIA": "AMBEV S.A.",
-    "QT_ACAO_ORDIN_CAP_INTEGR": "15761639",
+    "VERSAO": "2",
+    "DENOM_CIA": "VALE S.A.",
+    "QT_ACAO_ORDIN_CAP_INTEGR": "4539007",
     "QT_ACAO_PREF_CAP_INTEGR": "0",
-    "QT_ACAO_TOTAL_CAP_INTEGR": "15761639",
-    "QT_ACAO_ORDIN_TESOURO": "145113",
+    "QT_ACAO_TOTAL_CAP_INTEGR": "4539007",
+    "QT_ACAO_ORDIN_TESOURO": "270228",
     "QT_ACAO_PREF_TESOURO": "0",
-    "QT_ACAO_TOTAL_TESOURO": "145113"
+    "QT_ACAO_TOTAL_TESOURO": "270228"
    },
    {
-    "CNPJ_CIA": "07.526.557/0001-00",
+    "CNPJ_CIA": "33.592.510/0001-54",
     "DT_REFER": "2024-12-31",
-    "VERSAO": "1",
-    "DENOM_CIA": "AMBEV S.A.",
-    "QT_ACAO_ORDIN_CAP_INTEGR": "15757657",
+    "VERSAO": "3",
+    "DENOM_CIA": "VALE S.A.",
+    "QT_ACAO_ORDIN_CAP_INTEGR": "4539008",
     "QT_ACAO_PREF_CAP_INTEGR": "0",
-    "QT_ACAO_TOTAL_CAP_INTEGR": "15757657",
-    "QT_ACAO_ORDIN_TESOURO": "29807",
+    "QT_ACAO_TOTAL_CAP_INTEGR": "4539008",
+    "QT_ACAO_ORDIN_TESOURO": "270288",
     "QT_ACAO_PREF_TESOURO": "0",
-    "QT_ACAO_TOTAL_TESOURO": "29807"
+    "QT_ACAO_TOTAL_TESOURO": "270288"
    }
-  ]
- },
- "PETR4": {
-  "cnpj": "33.000.167/0001-01",
-  "lpa": [
+  ],
+  "dfc": [
    {
-    "d": "2024-12-31",
-    "v": "1",
-    "o": "PENÚLTIMO",
-    "c": "3.99.01.02",
-    "n": "PN",
+    "d": "2025-12-31",
+    "v": "2",
+    "c": "6.01.03.01",
+    "n": "Dividendos e juros sobre capital próprio recebidos de controladas",
     "e": "MIL",
-    "m": "REAL",
-    "x": "9.5700000000"
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "2",
+    "c": "6.01.03.01",
+    "n": "Dividendos e juros sobre capital próprio recebidos de controladas",
+    "e": "MIL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "2",
+    "c": "6.02.08",
+    "n": "Dividendos/JCP Recebidos",
+    "e": "MIL",
+    "x": "446000.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "2",
+    "c": "6.02.08",
+    "n": "Dividendos/JCP Recebidos",
+    "e": "MIL",
+    "x": "1719000.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "2",
+    "c": "6.03.04",
+    "n": "Dividendos/JCP Pagos a Acionistas",
+    "e": "MIL",
+    "x": "-20663000.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "2",
+    "c": "6.03.04",
+    "n": "Dividendos/JCP Pagos a Acionistas",
+    "e": "MIL",
+    "x": "-19971000.0000000000"
    },
    {
     "d": "2024-12-31",
-    "v": "1",
-    "o": "ÚLTIMO",
-    "c": "3.99.01.02",
-    "n": "PN",
+    "v": "3",
+    "c": "6.01.03.01",
+    "n": "Dividendos e juros sobre capital próprio recebidos de controladas",
     "e": "MIL",
-    "m": "REAL",
-    "x": "2.8400000000"
-   },
-   {
-    "d": "2024-12-31",
-    "v": "1",
-    "o": "PENÚLTIMO",
-    "c": "3.99.02",
-    "n": "Lucro Diluído por Ação",
-    "e": "MIL",
-    "m": "REAL",
     "x": "0.0000000000"
    },
    {
     "d": "2024-12-31",
-    "v": "1",
-    "o": "ÚLTIMO",
-    "c": "3.99.02",
-    "n": "Lucro Diluído por Ação",
+    "v": "3",
+    "c": "6.01.03.01",
+    "n": "Dividendos e juros sobre capital próprio recebidos de controladas",
     "e": "MIL",
-    "m": "REAL",
     "x": "0.0000000000"
    },
    {
     "d": "2024-12-31",
-    "v": "1",
-    "o": "PENÚLTIMO",
-    "c": "3.99.02.01",
-    "n": "ON",
+    "v": "3",
+    "c": "6.02.08",
+    "n": "Dividendos/JCP Recebidos",
     "e": "MIL",
-    "m": "REAL",
-    "x": "9.5700000000"
+    "x": "1010000.0000000000"
    },
    {
     "d": "2024-12-31",
-    "v": "1",
-    "o": "ÚLTIMO",
-    "c": "3.99.02.01",
-    "n": "ON",
+    "v": "3",
+    "c": "6.02.08",
+    "n": "Dividendos/JCP Recebidos",
     "e": "MIL",
-    "m": "REAL",
-    "x": "2.8400000000"
+    "x": "446000.0000000000"
    },
    {
     "d": "2024-12-31",
-    "v": "1",
-    "o": "PENÚLTIMO",
-    "c": "3.99.02.02",
-    "n": "PN",
+    "v": "3",
+    "c": "6.03.04",
+    "n": "Dividendos/JCP Pagos a Acionistas",
     "e": "MIL",
-    "m": "REAL",
-    "x": "9.5700000000"
+    "x": "-27967000.0000000000"
    },
    {
     "d": "2024-12-31",
-    "v": "1",
-    "o": "ÚLTIMO",
-    "c": "3.99.02.02",
-    "n": "PN",
+    "v": "3",
+    "c": "6.03.04",
+    "n": "Dividendos/JCP Pagos a Acionistas",
     "e": "MIL",
-    "m": "REAL",
-    "x": "2.8400000000"
-   }
-  ],
-  "pl": [
-   {
-    "d": "2025-12-31",
-    "v": "1",
-    "o": "PENÚLTIMO",
-    "c": "2.03",
-    "n": "Patrimônio Líquido Consolidado",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "367514000.0000000000"
-   },
-   {
-    "d": "2025-12-31",
-    "v": "1",
-    "o": "ÚLTIMO",
-    "c": "2.03",
-    "n": "Patrimônio Líquido Consolidado",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "417587000.0000000000"
-   },
-   {
-    "d": "2025-12-31",
-    "v": "1",
-    "o": "PENÚLTIMO",
-    "c": "2.03.09",
-    "n": "Participação dos Acionistas Não Controladores",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "1508000.0000000000"
-   },
-   {
-    "d": "2025-12-31",
-    "v": "1",
-    "o": "ÚLTIMO",
-    "c": "2.03.09",
-    "n": "Participação dos Acionistas Não Controladores",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "1801000.0000000000"
-   },
-   {
-    "d": "2024-12-31",
-    "v": "1",
-    "o": "PENÚLTIMO",
-    "c": "2.03",
-    "n": "Patrimônio Líquido Consolidado",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "382340000.0000000000"
-   },
-   {
-    "d": "2024-12-31",
-    "v": "1",
-    "o": "ÚLTIMO",
-    "c": "2.03",
-    "n": "Patrimônio Líquido Consolidado",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "367514000.0000000000"
-   },
-   {
-    "d": "2024-12-31",
-    "v": "1",
-    "o": "PENÚLTIMO",
-    "c": "2.03.09",
-    "n": "Participação dos Acionistas Não Controladores",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "1899000.0000000000"
-   },
-   {
-    "d": "2024-12-31",
-    "v": "1",
-    "o": "ÚLTIMO",
-    "c": "2.03.09",
-    "n": "Participação dos Acionistas Não Controladores",
-    "e": "MIL",
-    "m": "REAL",
-    "x": "1508000.0000000000"
-   }
-  ],
-  "capital": [
-   {
-    "CNPJ_CIA": "33.000.167/0001-01",
-    "DT_REFER": "2025-12-31",
-    "VERSAO": "1",
-    "DENOM_CIA": "PETROLEO BRASILEIRO S.A. PETROBRAS",
-    "QT_ACAO_ORDIN_CAP_INTEGR": "7442231382",
-    "QT_ACAO_PREF_CAP_INTEGR": "5446501379",
-    "QT_ACAO_TOTAL_CAP_INTEGR": "12888732761",
-    "QT_ACAO_ORDIN_TESOURO": "0",
-    "QT_ACAO_PREF_TESOURO": "0",
-    "QT_ACAO_TOTAL_TESOURO": "0"
-   },
-   {
-    "CNPJ_CIA": "33.000.167/0001-01",
-    "DT_REFER": "2024-12-31",
-    "VERSAO": "1",
-    "DENOM_CIA": "PETROLEO BRASILEIRO S.A. PETROBRAS",
-    "QT_ACAO_ORDIN_CAP_INTEGR": "7442454142",
-    "QT_ACAO_PREF_CAP_INTEGR": "5602042788",
-    "QT_ACAO_TOTAL_CAP_INTEGR": "13044496930",
-    "QT_ACAO_ORDIN_TESOURO": "222760",
-    "QT_ACAO_PREF_TESOURO": "155541409",
-    "QT_ACAO_TOTAL_TESOURO": "155764169"
+    "x": "-20663000.0000000000"
    }
   ]
  }
