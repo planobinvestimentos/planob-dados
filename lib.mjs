@@ -58,7 +58,7 @@ const num = (s) => { s = String(s).trim(); const v = parseFloat(s.includes(',') 
 const escala = (e) => (/MIL/.test(norm(e)) ? 1000 : 1);
 
 /* devolve {TK: {lpa, vpa, ref}} a partir dos CSV da CVM (DFP: DRE, BPP, composição do capital; FCA: valores mobiliários) */
-export function lerFundamentos({ dre, bpp, capital, fca, dfc = [] }) {
+export function lerFundamentos({ dre, bpp, capital, fca, dfc = [], precos = {} }) {
   // mais recente por empresa
   const ultimo = (linhas) => {
     const m = new Map();
@@ -70,21 +70,22 @@ export function lerFundamentos({ dre, bpp, capital, fca, dfc = [] }) {
   };
   const ult = ultimo(dre), lpa = new Map(), ref = new Map();
   const lpaAnt = new Map();
+  const classeDe = (ds) => { const n = norm(ds); return n === 'ON' ? 'ON' : /^PN/.test(n) ? 'PN' : ''; };
   dre.forEach((r) => {
+    const c = r.CD_CONTA || '';
+    if (!/^3\.99\.01\.\d{2}$/.test(c)) return; // só o lucro BÁSICO por ação, por classe
+    const classe = classeDe(r.DS_CONTA), val = num(r.VL_CONTA);
+    if (!classe || !Number.isFinite(val)) return;
     if (norm(r.ORDEM_EXERC) === 'PENULTIMO') {
-      const c = r.CD_CONTA || '', val = num(r.VL_CONTA);
-      if ((c === '3.99.01.01' || c === '3.99.01.02') && Number.isFinite(val)) { const o = lpaAnt.get(r.CNPJ_CIA) || {}; o[c === '3.99.01.01' ? 'ON' : 'PN'] = val; lpaAnt.set(r.CNPJ_CIA, o); }
+      const o = lpaAnt.get(r.CNPJ_CIA) || {}; if (o[classe] == null) o[classe] = val; lpaAnt.set(r.CNPJ_CIA, o);
       return;
     }
     if (norm(r.ORDEM_EXERC) !== 'ULTIMO') return;
     const v = (r.DT_REFER || '') + '|' + String(r.VERSAO || '0').padStart(3, '0');
     if (!ult.has(r.CNPJ_CIA) || ult.get(r.CNPJ_CIA).v !== v) return;
-    const c = r.CD_CONTA || '';
-    if (c !== '3.99.01.01' && c !== '3.99.01.02' && c !== '3.99.01') return;
-    const val = num(r.VL_CONTA); if (!Number.isFinite(val)) return;
     const o = lpa.get(r.CNPJ_CIA) || {};
-    const classe = c === '3.99.01.01' ? 'ON' : c === '3.99.01.02' ? 'PN' : 'ON';
-    o[classe] = val; lpa.set(r.CNPJ_CIA, o); ref.set(r.CNPJ_CIA, r.DT_REFER);
+    if (o[classe] == null) o[classe] = val;
+    lpa.set(r.CNPJ_CIA, o); ref.set(r.CNPJ_CIA, r.DT_REFER);
   });
   const ultB = ultimo(bpp), pl = new Map();
   bpp.forEach((r) => {
@@ -94,8 +95,9 @@ export function lerFundamentos({ dre, bpp, capital, fca, dfc = [] }) {
     const c = r.CD_CONTA || '', val = num(r.VL_CONTA) * escala(r.ESCALA_MOEDA);
     if (!Number.isFinite(val)) return;
     const o = pl.get(r.CNPJ_CIA) || {};
-    if (c === '2.03') o.total = val;
-    if (c === '2.03.09') o.nc = val;
+    const ds = norm(r.DS_CONTA);
+    if (/^2\.\d{2}$/.test(c) && /^PATRIMONIO LIQUIDO/.test(ds)) o.total = val;
+    if (/^2\.\d{2}\.\d{2}$/.test(c) && /NAO CONTROLADOR/.test(ds)) o.nc = val;
     pl.set(r.CNPJ_CIA, o);
   });
   /* dividendos e JCP pagos no último exercício (demonstração do fluxo de caixa, grupo 6.03), valor total da empresa */
@@ -137,8 +139,18 @@ export function lerFundamentos({ dre, bpp, capital, fca, dfc = [] }) {
     const item = {}, la = lpaAnt.get(cnpj);
     const lv = l ? (l[classe] != null ? l[classe] : (l.ON != null ? l.ON : l.PN)) : null;
     if (lv != null && Number.isFinite(lv)) item.lpa = Math.round(lv * 10000) / 10000;
-    if (p && p.total != null && n > 0) { const base = p.total - (p.nc || 0); if (base > 0) item.vpa = Math.round(base / n * 10000) / 10000; }
-    if (n > 0 && divPago.get(cnpj) > 0) item.dpa = Math.round(divPago.get(cnpj) / n * 10000) / 10000;
+    /* a CVM informa a quantidade de ações às vezes em unidades e às vezes em milhares: escolhe a escala que dá um P/VP plausível */
+    let vpaV = null, nn = n;
+    if (p && p.total != null && n > 0) {
+      const base = p.total - (p.nc || 0), preco = precos[tk];
+      if (base > 0) {
+        for (const f of [1, 1000]) {
+          const v = base / (n * f), ok = preco > 0 ? (preco / v >= 0.05 && preco / v <= 40) : (item.lpa != null && Math.abs(item.lpa / v) >= 0.003 && Math.abs(item.lpa / v) <= 1.5);
+          if (ok) { vpaV = v; nn = n * f; break; }
+        }
+      }
+    }
+    if (vpaV != null) { item.vpa = Math.round(vpaV * 10000) / 10000; if (divPago.get(cnpj) > 0) item.dpa = Math.round(divPago.get(cnpj) / nn * 10000) / 10000; }
     if (item.lpa > 0 && la) { const lp = la[classe] != null ? la[classe] : (la.ON != null ? la.ON : la.PN); if (lp > 0) { const g = (item.lpa / lp - 1) * 100; item.cresc = Math.round(Math.min(15, Math.max(0, g)) * 10) / 10; } }
     if (item.lpa != null || item.vpa != null) { item.ref = ref.get(cnpj) || ''; itens[tk] = item; }
   });

@@ -74,7 +74,9 @@ async function fund() {
     }
     fs.writeFileSync(path.join(SAIDA, 'diagnostico.json'), JSON.stringify(diag, null, 1));
   } catch (e) { console.warn('diagnóstico falhou:', e.message); }
-  const itens = lerFundamentos({ dre, bpp, capital, fca: fcaL, dfc });
+  let precos = {};
+  try { precos = JSON.parse(fs.readFileSync(path.join(SAIDA, 'd1.json'), 'utf8')).p || {}; } catch (e) { console.warn('sem d1.json para conferir a escala; usando o lucro por ação'); }
+  const itens = lerFundamentos({ dre, bpp, capital, fca: fcaL, dfc, precos });
   const n = Object.keys(itens).length;
   if (n < 50) throw new Error('poucos ativos com fundamentos (' + n + '): confira os nomes das colunas da CVM');
   fs.writeFileSync(path.join(SAIDA, 'fundamentos.json'), JSON.stringify({ gerado: new Date().toISOString().slice(0, 10), fonte: 'CVM, dados abertos (DFP e FCA)', itens }));
