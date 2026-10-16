@@ -1,0 +1,1160 @@
+{
+ "VALE3": {
+  "cnpj": "33.592.510/0001-54",
+  "lpa": [
+   {
+    "d": "2024-12-31",
+    "v": "3",
+    "o": "PENÚLTIMO",
+    "c": "3.99.01.02",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "9.1500000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "3",
+    "o": "ÚLTIMO",
+    "c": "3.99.01.02",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "7.3900000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "3",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02",
+    "n": "Lucro Diluído por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "3",
+    "o": "ÚLTIMO",
+    "c": "3.99.02",
+    "n": "Lucro Diluído por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "3",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02.01",
+    "n": "PNA",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "3",
+    "o": "ÚLTIMO",
+    "c": "3.99.02.01",
+    "n": "PNA",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "3",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02.02",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "9.1500000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "3",
+    "o": "ÚLTIMO",
+    "c": "3.99.02.02",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "7.3800000000"
+   }
+  ],
+  "pl": [
+   {
+    "d": "2025-12-31",
+    "v": "2",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "213720000.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "2",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "188926000.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "2",
+    "o": "PENÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "6948000.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "2",
+    "o": "ÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "4627000.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "3",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "198325000.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "3",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "213720000.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "3",
+    "o": "PENÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "7360000.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "3",
+    "o": "ÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "6948000.0000000000"
+   }
+  ],
+  "capital": [
+   {
+    "CNPJ_CIA": "33.592.510/0001-54",
+    "DT_REFER": "2025-12-31",
+    "VERSAO": "2",
+    "DENOM_CIA": "VALE S.A.",
+    "QT_ACAO_ORDIN_CAP_INTEGR": "4539007",
+    "QT_ACAO_PREF_CAP_INTEGR": "0",
+    "QT_ACAO_TOTAL_CAP_INTEGR": "4539007",
+    "QT_ACAO_ORDIN_TESOURO": "270228",
+    "QT_ACAO_PREF_TESOURO": "0",
+    "QT_ACAO_TOTAL_TESOURO": "270228"
+   },
+   {
+    "CNPJ_CIA": "33.592.510/0001-54",
+    "DT_REFER": "2024-12-31",
+    "VERSAO": "3",
+    "DENOM_CIA": "VALE S.A.",
+    "QT_ACAO_ORDIN_CAP_INTEGR": "4539008",
+    "QT_ACAO_PREF_CAP_INTEGR": "0",
+    "QT_ACAO_TOTAL_CAP_INTEGR": "4539008",
+    "QT_ACAO_ORDIN_TESOURO": "270288",
+    "QT_ACAO_PREF_TESOURO": "0",
+    "QT_ACAO_TOTAL_TESOURO": "270288"
+   }
+  ]
+ },
+ "ITUB4": {
+  "cnpj": "60.872.504/0001-23",
+  "lpa": [
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.01.02",
+    "n": "PN",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "3.3800000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.01.02",
+    "n": "PN",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "4.2000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02",
+    "n": "Lucro Diluído por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "6.7200000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.02",
+    "n": "Lucro Diluído por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "8.3200000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "3.3600000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.02.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "4.1600000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02.02",
+    "n": "PN",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "3.3600000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.02.02",
+    "n": "PN",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "4.1600000000"
+   }
+  ],
+  "pl": [
+   {
+    "d": "2025-12-31",
+    "v": "2",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Resultados de Exercícios Futuros",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "2",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Resultados de Exercícios Futuros",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Resultados de Exercícios Futuros",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Resultados de Exercícios Futuros",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "2",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Passivos Financeiros ao Custo Amortizado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "2148776000.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "2",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Passivos Financeiros ao Custo Amortizado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "2350901000.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Passivos Financeiros ao Custo Amortizado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "1944162000.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Passivos Financeiros ao Custo Amortizado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "2148776000.0000000000"
+   }
+  ],
+  "capital": [
+   {
+    "CNPJ_CIA": "60.872.504/0001-23",
+    "DT_REFER": "2025-12-31",
+    "VERSAO": "2",
+    "DENOM_CIA": "ITAU UNIBANCO HOLDING S.A.",
+    "QT_ACAO_ORDIN_CAP_INTEGR": "5617743",
+    "QT_ACAO_PREF_CAP_INTEGR": "5409126",
+    "QT_ACAO_TOTAL_CAP_INTEGR": "11026869",
+    "QT_ACAO_ORDIN_TESOURO": "0",
+    "QT_ACAO_PREF_TESOURO": "345",
+    "QT_ACAO_TOTAL_TESOURO": "345"
+   },
+   {
+    "CNPJ_CIA": "60.872.504/0001-23",
+    "DT_REFER": "2024-12-31",
+    "VERSAO": "1",
+    "DENOM_CIA": "ITAU UNIBANCO HOLDING S.A.",
+    "QT_ACAO_ORDIN_CAP_INTEGR": "4958290",
+    "QT_ACAO_PREF_CAP_INTEGR": "4817814",
+    "QT_ACAO_TOTAL_CAP_INTEGR": "9776104",
+    "QT_ACAO_ORDIN_TESOURO": "0",
+    "QT_ACAO_PREF_TESOURO": "28031",
+    "QT_ACAO_TOTAL_TESOURO": "28031"
+   }
+  ]
+ },
+ "BBAS3": {
+  "cnpj": "00.000.000/0001-91",
+  "lpa": [
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.01",
+    "n": "Lucro Básico por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "5.2300000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.01",
+    "n": "Lucro Básico por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "4.6200000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.01.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "5.2300000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.01.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "4.6200000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02",
+    "n": "Lucro Diluído por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "5.2300000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.02",
+    "n": "Lucro Diluído por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "4.6200000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "5.2300000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.02.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "4.6200000000"
+   }
+  ],
+  "pl": [
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Provisões",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Provisões",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "36837908.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Provisões",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "25869509.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Provisões",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "30445153.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Provisões",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "33943520.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Provisões",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "38689885.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Provisões",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "21787037.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Provisões",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "26099013.0000000000"
+   }
+  ],
+  "capital": [
+   {
+    "CNPJ_CIA": "00.000.000/0001-91",
+    "DT_REFER": "2025-12-31",
+    "VERSAO": "1",
+    "DENOM_CIA": "BCO BRASIL S.A.",
+    "QT_ACAO_ORDIN_CAP_INTEGR": "5730834040",
+    "QT_ACAO_PREF_CAP_INTEGR": "0",
+    "QT_ACAO_TOTAL_CAP_INTEGR": "5730834040",
+    "QT_ACAO_ORDIN_TESOURO": "22370399",
+    "QT_ACAO_PREF_TESOURO": "0",
+    "QT_ACAO_TOTAL_TESOURO": "22370399"
+   },
+   {
+    "CNPJ_CIA": "00.000.000/0001-91",
+    "DT_REFER": "2024-12-31",
+    "VERSAO": "1",
+    "DENOM_CIA": "BCO BRASIL S.A.",
+    "QT_ACAO_ORDIN_CAP_INTEGR": "5730834040",
+    "QT_ACAO_PREF_CAP_INTEGR": "0",
+    "QT_ACAO_TOTAL_CAP_INTEGR": "5730834040",
+    "QT_ACAO_ORDIN_TESOURO": "22786568",
+    "QT_ACAO_PREF_TESOURO": "0",
+    "QT_ACAO_TOTAL_TESOURO": "22786568"
+   }
+  ]
+ },
+ "CMIG4": {
+  "cnpj": "17.155.730/0001-64",
+  "lpa": [
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.01.02",
+    "n": "PN",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "2.0100000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.01.02",
+    "n": "PN",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "2.4900000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02",
+    "n": "Lucro Diluído por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.02",
+    "n": "Lucro Diluído por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "2.0100000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.02.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "2.4900000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02.02",
+    "n": "PN",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "2.0100000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.02.02",
+    "n": "PN",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "2.4900000000"
+   }
+  ],
+  "pl": [
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "27383079.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "28581703.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "5293.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "5323.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "24655193.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "27383079.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "5958.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "5293.0000000000"
+   }
+  ],
+  "capital": [
+   {
+    "CNPJ_CIA": "17.155.730/0001-64",
+    "DT_REFER": "2025-12-31",
+    "VERSAO": "1",
+    "DENOM_CIA": "CIA ENERGETICA DE MINAS GERAIS - CEMIG",
+    "QT_ACAO_ORDIN_CAP_INTEGR": "956602",
+    "QT_ACAO_PREF_CAP_INTEGR": "1905180",
+    "QT_ACAO_TOTAL_CAP_INTEGR": "2861782",
+    "QT_ACAO_ORDIN_TESOURO": "0",
+    "QT_ACAO_PREF_TESOURO": "1100",
+    "QT_ACAO_TOTAL_TESOURO": "1100"
+   },
+   {
+    "CNPJ_CIA": "17.155.730/0001-64",
+    "DT_REFER": "2024-12-31",
+    "VERSAO": "1",
+    "DENOM_CIA": "CIA ENERGETICA DE MINAS GERAIS - CEMIG",
+    "QT_ACAO_ORDIN_CAP_INTEGR": "956602",
+    "QT_ACAO_PREF_CAP_INTEGR": "1905180",
+    "QT_ACAO_TOTAL_CAP_INTEGR": "2861782",
+    "QT_ACAO_ORDIN_TESOURO": "1100",
+    "QT_ACAO_PREF_TESOURO": "0",
+    "QT_ACAO_TOTAL_TESOURO": "1100"
+   }
+  ]
+ },
+ "ABEV3": {
+  "cnpj": "07.526.557/0001-00",
+  "lpa": [
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.01",
+    "n": "Lucro Básico por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.01",
+    "n": "Lucro Básico por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.01.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.9210600000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.01.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.9175500000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02",
+    "n": "Lucro Diluído por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.02",
+    "n": "Lucro Diluído por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.9156100000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.02.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.9129000000"
+   }
+  ],
+  "pl": [
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "99580514.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "88774781.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "938375.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "860742.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "80143802.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "99580514.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "1174512.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "938375.0000000000"
+   }
+  ],
+  "capital": [
+   {
+    "CNPJ_CIA": "07.526.557/0001-00",
+    "DT_REFER": "2025-12-31",
+    "VERSAO": "1",
+    "DENOM_CIA": "AMBEV S.A.",
+    "QT_ACAO_ORDIN_CAP_INTEGR": "15761639",
+    "QT_ACAO_PREF_CAP_INTEGR": "0",
+    "QT_ACAO_TOTAL_CAP_INTEGR": "15761639",
+    "QT_ACAO_ORDIN_TESOURO": "145113",
+    "QT_ACAO_PREF_TESOURO": "0",
+    "QT_ACAO_TOTAL_TESOURO": "145113"
+   },
+   {
+    "CNPJ_CIA": "07.526.557/0001-00",
+    "DT_REFER": "2024-12-31",
+    "VERSAO": "1",
+    "DENOM_CIA": "AMBEV S.A.",
+    "QT_ACAO_ORDIN_CAP_INTEGR": "15757657",
+    "QT_ACAO_PREF_CAP_INTEGR": "0",
+    "QT_ACAO_TOTAL_CAP_INTEGR": "15757657",
+    "QT_ACAO_ORDIN_TESOURO": "29807",
+    "QT_ACAO_PREF_TESOURO": "0",
+    "QT_ACAO_TOTAL_TESOURO": "29807"
+   }
+  ]
+ },
+ "PETR4": {
+  "cnpj": "33.000.167/0001-01",
+  "lpa": [
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.01.02",
+    "n": "PN",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "9.5700000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.01.02",
+    "n": "PN",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "2.8400000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02",
+    "n": "Lucro Diluído por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.02",
+    "n": "Lucro Diluído por Ação",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "0.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "9.5700000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.02.01",
+    "n": "ON",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "2.8400000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "3.99.02.02",
+    "n": "PN",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "9.5700000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "3.99.02.02",
+    "n": "PN",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "2.8400000000"
+   }
+  ],
+  "pl": [
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "367514000.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "417587000.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "1508000.0000000000"
+   },
+   {
+    "d": "2025-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "1801000.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "382340000.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03",
+    "n": "Patrimônio Líquido Consolidado",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "367514000.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "PENÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "1899000.0000000000"
+   },
+   {
+    "d": "2024-12-31",
+    "v": "1",
+    "o": "ÚLTIMO",
+    "c": "2.03.09",
+    "n": "Participação dos Acionistas Não Controladores",
+    "e": "MIL",
+    "m": "REAL",
+    "x": "1508000.0000000000"
+   }
+  ],
+  "capital": [
+   {
+    "CNPJ_CIA": "33.000.167/0001-01",
+    "DT_REFER": "2025-12-31",
+    "VERSAO": "1",
+    "DENOM_CIA": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+    "QT_ACAO_ORDIN_CAP_INTEGR": "7442231382",
+    "QT_ACAO_PREF_CAP_INTEGR": "5446501379",
+    "QT_ACAO_TOTAL_CAP_INTEGR": "12888732761",
+    "QT_ACAO_ORDIN_TESOURO": "0",
+    "QT_ACAO_PREF_TESOURO": "0",
+    "QT_ACAO_TOTAL_TESOURO": "0"
+   },
+   {
+    "CNPJ_CIA": "33.000.167/0001-01",
+    "DT_REFER": "2024-12-31",
+    "VERSAO": "1",
+    "DENOM_CIA": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+    "QT_ACAO_ORDIN_CAP_INTEGR": "7442454142",
+    "QT_ACAO_PREF_CAP_INTEGR": "5602042788",
+    "QT_ACAO_TOTAL_CAP_INTEGR": "13044496930",
+    "QT_ACAO_ORDIN_TESOURO": "222760",
+    "QT_ACAO_PREF_TESOURO": "155541409",
+    "QT_ACAO_TOTAL_TESOURO": "155764169"
+   }
+  ]
+ }
+}
