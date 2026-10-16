@@ -1,0 +1,29 @@
+# Atualiza sozinho os dados gratuitos do site e salva em dados/saida/.
+# O site lê esses arquivos direto do GitHub.
+name: Atualizar dados (B3 e CVM)
+on:
+  schedule:
+    - cron: '30 1 * * 2-6'   # fechamento do dia anterior, de terça a sábado (22h30 em Brasília)
+    - cron: '0 6 * * 1'      # LPA e VPA da CVM, às segundas
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Gerar arquivos
+        run: |
+          if [ "${{ github.event.schedule }}" = "0 6 * * 1" ]; then node gerar-dados.mjs fund
+          elif [ -z "${{ github.event.schedule }}" ]; then node gerar-dados.mjs tudo
+          else node gerar-dados.mjs d1; fi
+      - name: Salvar
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida
+          git diff --cached --quiet || git commit -m "Atualiza dados (B3 e CVM)"
+          git push
