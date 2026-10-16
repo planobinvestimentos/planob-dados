@@ -32,6 +32,120 @@
    "v": "2024-12-31|001",
    "val": 4.62
   },
+  "dfcBruto": [
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.07",
+    "n": "Efeito líquido na alienação de ações em tesouraria",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.08",
+    "n": "Caixa pago aos acionistas não controladores na redução de capital da BB Seguridade",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.09",
+    "n": "Transações patrimoniais com proprietários",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.10",
+    "n": "Variação de participação de acionistas não controladores",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.01",
+    "n": "Liquidação de passivos de longo prazo",
+    "x": "-11071945.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.02",
+    "n": "Juros de instrumento elegível a capital principal pagos",
+    "x": "-212616.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.03",
+    "n": "Liquidação de arrendamentos",
+    "x": "-1038927.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Dividendos ou juros sobre o capital próprio pagos aos acionistas controladores",
+    "x": "-14824290.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.05",
+    "n": "Dividendos ou juros sobre o capital próprio pagos aos acionistas não controladores",
+    "x": "-1739256.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.06",
+    "n": "Captação de passivos de longo prazo",
+    "x": "7525800.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.07",
+    "n": "Efeito líquido na alienação de ações em tesouraria",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.08",
+    "n": "Caixa pago aos acionistas não controladores na redução de capital da BB Seguridade",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.09",
+    "n": "Transações patrimoniais com proprietários",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.10",
+    "n": "Variação de participação de acionistas não controladores",
+    "x": "0.0000000000"
+   }
+  ],
   "preco": 23.76
  },
  "CMIG4": {
@@ -63,6 +177,120 @@
     3968306000
    ]
   ],
+  "dfcBruto": [
+   {
+    "t": "ind",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.05",
+    "n": "Pagamentos de empréstimos e debêntures",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "ind",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.06",
+    "n": "Arrendamentos pagos",
+    "x": "-246.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.01",
+    "n": "Empréstimos obtidos e captação de debêntures, líquidas",
+    "x": "9336811.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.02",
+    "n": "Pagamentos de debêntures",
+    "x": "-2697201.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.03",
+    "n": "Juros sobre o Capital Próprio e Dividendos",
+    "x": "-3968306.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Reembolso de Ações por Dissidência de Acionistas",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.05",
+    "n": "Aumento de capital",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.06",
+    "n": "Arrendamentos pagos",
+    "x": "-81512.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.01",
+    "n": "Financiamentos e Debêntures Obtidos",
+    "x": "4582208.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.02",
+    "n": "Pagamentos de empréstimos e debêntures",
+    "x": "-2974871.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.03",
+    "n": "Juros sobre o Capital Próprio e Dividendos",
+    "x": "-4294458.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Reembolso de Ações por Dissidência de Acionistas",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.05",
+    "n": "Aumento de Capital",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.06",
+    "n": "Arrendamentos pagos",
+    "x": "-72339.0000000000"
+   }
+  ],
   "preco": 11.76
  },
  "BBSE3": {
@@ -88,6 +316,120 @@
     "6.03.01",
     8273740000
    ]
+  ],
+  "dfcBruto": [
+   {
+    "t": "ind",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.03",
+    "n": "Aquisição de ações em tesouraria",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "ind",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Alienação de ações em tesouraria",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "ind",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.01",
+    "n": "Dividendos pagos",
+    "x": "-5193340.0000000000"
+   },
+   {
+    "t": "ind",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.02",
+    "n": "Recompra de ações",
+    "x": "-1166630.0000000000"
+   },
+   {
+    "t": "ind",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.03",
+    "n": "Aquisição de ações em tesouraria",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "ind",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Alienação de ações em tesouraria",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.01",
+    "n": "Dividendos pagos",
+    "x": "-8273740.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.02",
+    "n": "Recompra de ações",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.03",
+    "n": "Aquisição de ações em tesouraria",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Alienação de ações em tesouraria",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.01",
+    "n": "Dividendos pagos",
+    "x": "-5193340.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.02",
+    "n": "Recompra de ações",
+    "x": "-1166630.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.03",
+    "n": "Aquisição de ações em tesouraria",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Alienação de ações em tesouraria",
+    "x": "0.0000000000"
+   }
   ],
   "preco": 41.57
  },
@@ -129,6 +471,120 @@
    "v": "2025-12-31|002",
    "val": 8.1
   },
+  "dfcBruto": [
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "2",
+    "c": "6.03.03",
+    "n": "Variação da Participação de Acionistas não Controladores",
+    "x": "22000.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "2",
+    "c": "6.03.04",
+    "n": "Aquisições de Ações em Tesouraria",
+    "x": "-3085000.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "2",
+    "c": "6.03.05",
+    "n": "Resultado da Entrega de Ações em Tesouraria",
+    "x": "947000.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "2",
+    "c": "6.03.06",
+    "n": "Cisão Parcial",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "2",
+    "c": "6.03.07",
+    "n": "Dividendos / Juros sobre o Capital Próprio Pagos a Acionistas não Controladores",
+    "x": "-633000.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "2",
+    "c": "6.03.08",
+    "n": "Dividendos / Juros sobre o Capital Próprio Pagos",
+    "x": "-48299000.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.01",
+    "n": "Captação de Obrigações por Dívida Subordinada",
+    "x": "7860000.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.02",
+    "n": "Resgate de Obrigações por Dívida Subordinada",
+    "x": "-7519000.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.03",
+    "n": "Variação da Participação de Acionistas não Controladores",
+    "x": "867000.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Aquisições de Ações em Tesouraria",
+    "x": "-1775000.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.05",
+    "n": "Resultado da Entrega de Ações em Tesouraria",
+    "x": "772000.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.06",
+    "n": "Cisão Parcial",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.07",
+    "n": "Dividendos e Juros sobre o Capital Próprio Pagos a Acionistas não Controladores",
+    "x": "-589000.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.08",
+    "n": "Dividendos e Juros sobre o Capital Próprio Pagos",
+    "x": "-21314000.0000000000"
+   }
+  ],
   "preco": 48.35
  },
  "WEGE3": {
@@ -154,6 +610,120 @@
     "6.03.04",
     5384769000
    ]
+  ],
+  "dfcBruto": [
+   {
+    "t": "ind",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.03",
+    "n": "Aquisição de ações em tesouraria",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "ind",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Liquidação de ações em tesouraria",
+    "x": "8143.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.01",
+    "n": "Captação de empréstimos e financiamentos obtidos",
+    "x": "6248313.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.02",
+    "n": "Pagamento de empréstimos e financiamentos",
+    "x": "-5230662.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.03",
+    "n": "Juros pagos sobre empréstimos e financimamentos",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Pgto de Dividendos/Juros s/ Capital Próprio",
+    "x": "-5384769.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.05",
+    "n": "Aquisição de ações em tesouraria",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2025-12-31",
+    "v": "1",
+    "c": "6.03.06",
+    "n": "Liquidação de ações em tesouraria",
+    "x": "4261.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.01",
+    "n": "Captação de empréstimos e financiamentos obtidos",
+    "x": "4331232.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.02",
+    "n": "Pagamento de empréstimos e financiamentos",
+    "x": "-4168962.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.03",
+    "n": "Juros pagos sobre empréstimos e financimamentos",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.04",
+    "n": "Pgto de Dividendos/Juros s/ Capital Próprio",
+    "x": "-2934611.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.05",
+    "n": "Aquisição de ações em tesouraria",
+    "x": "0.0000000000"
+   },
+   {
+    "t": "con",
+    "d": "2024-12-31",
+    "v": "1",
+    "c": "6.03.06",
+    "n": "Liquidação de ações em tesouraria",
+    "x": "8143.0000000000"
+   }
   ],
   "preco": 49.09
  }
