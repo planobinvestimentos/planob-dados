@@ -110,7 +110,7 @@ export function lerFundamentos({ dre, bpp, capital, fca, dfc = [], precos = {}, 
   dfc.forEach((r) => {
     if (norm(r.ORDEM_EXERC) !== 'ULTIMO') return;
     const ds = norm(r.DS_CONTA);
-    if (!/^6\.03\./.test(r.CD_CONTA || '') || !/DIVIDENDO|JUROS SOBRE O CAPITAL|JCP/.test(ds)) return;
+    if (!/^6\.03\./.test(r.CD_CONTA || '') || !/DIVIDENDO|JUROS SOBRE (O )?CAPITAL|JCP|PROVENTO/.test(ds)) return;
     if (/RECEB|NAO CONTROLADOR|MINORITAR/.test(ds)) return;
     const val = num(r.VL_CONTA) * escala(r.ESCALA_MOEDA); if (!Number.isFinite(val)) return;
     const v = (r.DT_REFER || '') + '|' + String(r.VERSAO || '0').padStart(3, '0'), t = r._T === 'con' ? 'con' : 'ind', k = r.CNPJ_CIA + '|' + t;
@@ -121,7 +121,12 @@ export function lerFundamentos({ dre, bpp, capital, fca, dfc = [], precos = {}, 
   cnpjsDiv.forEach((cnpj) => {
     const m = divLinhas.get(cnpj + '|con') || divLinhas.get(cnpj + '|ind'); if (!m) return;
     let soma = 0; const lista = [];
-    m.forEach((val, cod) => { const mae = [...m.keys()].some((o) => o !== cod && cod.startsWith(o + '.')); if (!mae) { soma += val; lista.push([cod, val]); } });
+    m.forEach((val, cod) => {
+      const mae = [...m.keys()].some((o) => o !== cod && cod.startsWith(o + '.'));
+      /* a mesma linha costuma aparecer duas vezes com códigos diferentes e valor igual (ou quase): conta uma vez */
+      const repetida = lista.some(([, v]) => Math.abs(v - val) <= 0.01 * Math.max(v, val));
+      if (!mae && !repetida) { soma += val; lista.push([cod, val]); }
+    });
     divPago.set(cnpj, soma); divLinhas.set(cnpj, new Map(lista));
   });
   const acoes = new Map(), ultC = ultimo(capital);
@@ -148,7 +153,7 @@ export function lerFundamentos({ dre, bpp, capital, fca, dfc = [], precos = {}, 
   const itens = {};
   Object.keys(out).forEach((tk) => {
     const { cnpj, classe } = out[tk], l = lpa.get(cnpj), p = pl.get(cnpj), n = acoes.get(cnpj);
-    if (debug && debug.tickers && debug.tickers.includes(tk)) debug[tk] = { cnpj, classe, lpa: l, lpaVersoes: lpaV.get(cnpj), pl: p, acoes: n, divPago: divPago.get(cnpj), divLinhas: [...(divLinhas.get(cnpj) || [])], lpaGeral: (lpaV.get(cnpj) || {}).GERAL, preco: precos[tk] };
+    if (debug && debug.tickers && debug.tickers.includes(tk)) debug[tk] = { cnpj, classe, lpa: l, lpaVersoes: lpaV.get(cnpj), pl: p, acoes: n, divPago: divPago.get(cnpj), divLinhas: [...(divLinhas.get(cnpj) || [])], lpaGeral: (lpaV.get(cnpj) || {}).GERAL, dfcBruto: dfc.filter((r) => r.CNPJ_CIA === cnpj && /^6\.03\./.test(r.CD_CONTA || '') && norm(r.ORDEM_EXERC) === 'ULTIMO').slice(-14).map((r) => ({ t: r._T, d: r.DT_REFER, v: r.VERSAO, c: r.CD_CONTA, n: r.DS_CONTA, x: r.VL_CONTA })), preco: precos[tk] };
     if (!l && !(p && n)) return;
     const item = {}, la = lpaAnt.get(cnpj);
     const ov = lpaV.get(cnpj) || {};
