@@ -87,7 +87,24 @@ async function fund() {
   console.log('fundamentos ok:', n, 'ativos');
 }
 
+async function bcb() {
+  /* Selic meta (série 432) e CDI anualizado (série 4389) do Banco Central, usados pelo comparador de renda fixa */
+  const ult = async (serie) => {
+    const r = await fetch('https://api.bcb.gov.br/dados/serie/bcdata.sgs.' + serie + '/dados/ultimos/1?formato=json', { headers: UA, signal: AbortSignal.timeout(60000) });
+    if (!r.ok) throw new Error(r.status + ' série ' + serie);
+    const j = await r.json(), x = Array.isArray(j) ? j[0] : null;
+    const m = x && String(x.data).match(/^(\d{2})\/(\d{2})\/(\d{4})$/), v = x && parseFloat(String(x.valor).replace(',', '.'));
+    if (!m || !(v > 0 && v < 60)) throw new Error('resposta inesperada da série ' + serie);
+    return { data: m[3] + '-' + m[2] + '-' + m[1], valor: v };
+  };
+  const [selic, cdi] = await Promise.all([ult(432), ult(4389)]);
+  fs.writeFileSync(path.join(SAIDA, 'bcb.json'), JSON.stringify({ gerado: new Date().toISOString().slice(0, 10), data: cdi.data, selic: selic.valor, selicData: selic.data, cdi: cdi.valor, fonte: 'Banco Central do Brasil (SGS 432 e 4389)' }));
+  console.log('bcb ok: Selic', selic.valor, 'CDI', cdi.valor, cdi.data);
+}
+
 let falhou = false;
 if (modo === 'd1' || modo === 'tudo') await d1().catch((e) => { console.error('ERRO d1:', e.message); falhou = true; });
+/* o Banco Central falhar não deve impedir a atualização dos outros dados */
+if (modo === 'd1' || modo === 'tudo' || modo === 'bcb') await bcb().catch((e) => { console.warn('aviso bcb:', e.message); });
 if (modo === 'fund' || modo === 'tudo') await fund().catch((e) => { console.error('ERRO fundamentos:', e.message); falhou = true; });
 process.exit(falhou ? 1 : 0);
