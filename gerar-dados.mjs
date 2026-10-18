@@ -1,11 +1,12 @@
 /* Gera dois arquivos pequenos que o site lê direto, sem servidor:
      saida/d1.json           fechamento do dia anterior (B3, dados de D-1 liberados sem custo)
      saida/fundamentos.json  LPA e VPA do último balanço anual (CVM, dados abertos)
-   Uso:  node dados/gerar-dados.mjs [d1|fund|tudo]      (Node 18 ou mais novo) */
+     saida/bolsa.json        5 maiores altas e quedas de ações, FIIs de tijolo, FIIs de papel e ETFs (B3, último pregão)
+   Uso:  node dados/gerar-dados.mjs [d1|fund|bolsa|bolsa-hoje|bcb|tudo]      (Node 18 ou mais novo) */
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { lerZip, lerCotahist, urlCotahistDia, lerCsv, lerFundamentos } from './lib.mjs';
+import { lerZip, lerCotahist, lerCotahistBolsa, urlCotahistDia, lerCsv, lerFundamentos } from './lib.mjs';
 
 const SAIDA = path.join(path.dirname(fileURLToPath(import.meta.url)), 'saida');
 fs.mkdirSync(SAIDA, { recursive: true });
@@ -35,6 +36,62 @@ async function d1() {
     } catch (e) { console.warn('sem arquivo:', e.message); }
   }
   throw new Error('nenhum arquivo de fechamento encontrado nos últimos 10 dias');
+}
+
+/* ---------- maiores altas e quedas (último pregão x pregão anterior) ---------- */
+async function bolsa(hojeBR = false) {
+  let listas = {};
+  try { listas = JSON.parse(fs.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), 'listas-bolsa.json'), 'utf8')); }
+  catch (e) { throw new Error('não consegui ler listas-bolsa.json: ' + e.message); }
+  const conj = (a) => new Set((a || []).map((x) => String(x).trim().toUpperCase()));
+  const tijolo = conj(listas.fiisTijolo), papel = conj(listas.fiisPapel), etfs = conj(listas.etfs);
+  const f = Object.assign({ minVolumeAcoes: 3000000, minVolumeFiis: 400000, minVolumeEtfs: 400000, minNegocios: 100, variacaoMaxima: 40, quantos: 5 }, listas.filtros || {});
+
+  /* acha os dois últimos pregões disponíveis (o mais recente e o anterior) */
+  /* modo normal: começa no dia anterior (UTC). modo "hoje": começa no dia de hoje em Brasília (UTC-3), usado no aviso das 19h */
+  const hoje = hojeBR ? (process.env.DATA_TESTE ? new Date(process.env.DATA_TESTE + 'T15:00:00Z') : new Date(Date.now() - 3 * 3600 * 1000)) : new Date(), dias = [];
+  for (let i = hojeBR ? 0 : 1; i <= 14 && dias.length < 2; i++) {
+    const d = new Date(Date.UTC(hoje.getUTCFullYear(), hoje.getUTCMonth(), hoje.getUTCDate() - i));
+    if ([0, 6].includes(d.getUTCDay())) continue;
+    try {
+      const zip = lerZip(await baixar(urlCotahistDia(d))), arq = [...zip.keys()][0];
+      const r = lerCotahistBolsa(zip.get(arq).toString('latin1'));
+      if (Object.keys(r.itens).length < 100) { console.warn('bolsa: poucos ativos em', r.data); continue; }
+      dias.push(r);
+    } catch (e) { /* feriado ou arquivo ainda não publicado: tenta o dia anterior */ }
+  }
+  if (dias.length < 2) throw new Error('bolsa: não achei dois pregões consecutivos nos últimos 14 dias');
+  const [hojeD, antesD] = dias;
+
+  const monta = (filtro, minVol) => {
+    const lista = [];
+    for (const [tk, a] of Object.entries(hojeD.itens)) {
+      const b = antesD.itens[tk];
+      if (!b || !filtro(tk, a)) continue;
+      if (a.vol < minVol || a.neg < f.minNegocios) continue;
+      const v = (a.c / b.c - 1) * 100;
+      if (!isFinite(v) || Math.abs(v) > f.variacaoMaxima) { if (isFinite(v)) console.warn('bolsa: ignorado por variação extrema (possível desdobramento ou evento):', tk, v.toFixed(1) + '%'); continue; }
+      lista.push({ t: tk, n: a.nome, p: a.c, v: Math.round(v * 100) / 100 });
+    }
+    const alt = [...lista].sort((x, y) => y.v - x.v).filter((x) => x.v > 0).slice(0, f.quantos);
+    const que = [...lista].sort((x, y) => x.v - y.v).filter((x) => x.v < 0).slice(0, f.quantos);
+    return { altas: alt, quedas: que, universo: lista.length };
+  };
+  const ehBdr = (a) => /^DR/.test(a.esp);
+  const saida = {
+    data: hojeD.data, ref: antesD.data, fonte: 'B3, cotações históricas',
+    acoes: monta((tk, a) => a.bdi === '02' && !ehBdr(a) && !tijolo.has(tk) && !papel.has(tk) && !etfs.has(tk), f.minVolumeAcoes),
+    etfs: monta((tk) => etfs.has(tk), f.minVolumeEtfs),
+    fiisTijolo: monta((tk) => tijolo.has(tk), f.minVolumeFiis),
+    fiisPapel: monta((tk) => papel.has(tk), f.minVolumeFiis),
+  };
+  /* referência do Ibovespa: o ETF BOVA11 (o índice em si não vem nesse arquivo) */
+  const bv = hojeD.itens.BOVA11, bva = antesD.itens.BOVA11;
+  if (bv && bva) saida.ibov = { t: 'BOVA11', p: bv.c, v: Math.round((bv.c / bva.c - 1) * 10000) / 100 };
+  fs.writeFileSync(path.join(SAIDA, 'bolsa.json'), JSON.stringify(saida));
+  console.log('bolsa ok:', saida.data, 'x', saida.ref, '| universo ações', saida.acoes.universo, 'etfs', saida.etfs.universo, 'tijolo', saida.fiisTijolo.universo, 'papel', saida.fiisPapel.universo);
+  /* avisa se alguma lista ficou vazia (sinal de lista desatualizada ou filtro muito alto) */
+  for (const k of ['acoes', 'etfs', 'fiisTijolo', 'fiisPapel']) if (!saida[k].altas.length && !saida[k].quedas.length) console.warn('aviso bolsa: nenhum ativo em', k);
 }
 
 async function fund() {
@@ -107,7 +164,7 @@ async function bcb() {
     for (let t = 0; t < 2; t++) {
       for (const f of fontes) {
         try {
-          const r = await fetch(f.url, { headers: Object.assign({ Accept: 'application/json' }, UA), signal: AbortSignal.timeout(20000) });
+          const r = await fetch(f.url, { headers: Object.assign({ Accept: 'application/json' }, UA), signal: AbortSignal.timeout(10000) });
           const txt = await r.text();
           let j = null; try { j = JSON.parse(txt); } catch (e) { /* não é JSON */ }
           const ok = r.ok && ler(j, f.conv);
@@ -115,7 +172,7 @@ async function bcb() {
           erro = f.nome + ': HTTP ' + r.status + ' ' + txt.slice(0, 100).replace(/\s+/g, ' ');
         } catch (e) { erro = f.nome + ': ' + e.message; }
       }
-      if (t < 1) await espera(3000);
+      if (t < 1) await espera(1000);
     }
     throw new Error(erro);
   };
@@ -130,5 +187,8 @@ let falhou = false;
 if (modo === 'd1' || modo === 'tudo') await d1().catch((e) => { console.error('ERRO d1:', e.message); falhou = true; });
 /* o Banco Central falhar não deve impedir a atualização dos outros dados */
 if (modo === 'd1' || modo === 'tudo' || modo === 'bcb') await bcb().catch((e) => { console.warn('aviso bcb:', e.message); });
+/* idem para o ranking da bolsa */
+if (modo === 'bolsa-hoje') await bolsa(true).catch((e) => { console.warn('aviso bolsa:', e.message); });
+if (modo === 'd1' || modo === 'tudo' || modo === 'bolsa') await bolsa().catch((e) => { console.warn('aviso bolsa:', e.message); });
 if (modo === 'fund' || modo === 'tudo') await fund().catch((e) => { console.error('ERRO fundamentos:', e.message); falhou = true; });
 process.exit(falhou ? 1 : 0);

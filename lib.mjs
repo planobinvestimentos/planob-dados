@@ -41,6 +41,31 @@ export function lerCotahist(texto) {
   }
   return { data, precos };
 }
+/* versão completa para o ranking de altas e quedas: fechamento, volume financeiro, negócios, tipo (BDI) e espécie */
+export function lerCotahistBolsa(texto) {
+  const itens = {};
+  let data = '';
+  for (const linha of texto.split('\n')) {
+    if (linha.length < 217 || linha.slice(0, 2) !== '01') continue;
+    if (linha.slice(24, 27) !== '010') continue;                 // só mercado à vista, lote padrão
+    const tk = linha.slice(12, 24).trim();
+    if (!/^[A-Z][A-Z0-9]{3}\d{1,2}$/.test(tk)) continue;
+    const fator = parseInt(linha.slice(210, 217), 10) || 1;
+    const c = parseInt(linha.slice(108, 121), 10) / 100 / fator;
+    if (!(c > 0)) continue;
+    const d = linha.slice(2, 10);
+    if (/^\d{8}$/.test(d)) data = d.slice(0, 4) + '-' + d.slice(4, 6) + '-' + d.slice(6, 8);
+    itens[tk] = {
+      c: Math.round(c * 10000) / 10000,
+      vol: (parseInt(linha.slice(170, 188), 10) || 0) / 100,      // volume financeiro do dia, em R$
+      neg: parseInt(linha.slice(147, 152), 10) || 0,               // número de negócios
+      bdi: linha.slice(10, 12),
+      esp: linha.slice(39, 49).trim(),
+      nome: linha.slice(27, 39).trim(),
+    };
+  }
+  return { data, itens };
+}
 export function urlCotahistDia(d) {
   const dd = String(d.getUTCDate()).padStart(2, '0'), mm = String(d.getUTCMonth() + 1).padStart(2, '0');
   return (process.env.COTAHIST_BASE || 'https://bvmf.bmfbovespa.com.br/InstDados/SerHist/') + 'COTAHIST_D' + dd + mm + d.getUTCFullYear() + '.ZIP';
