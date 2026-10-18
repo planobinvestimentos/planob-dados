@@ -88,39 +88,42 @@ async function fund() {
 }
 
 async function bcb() {
-  /* Selic meta (série 432) e CDI anualizado (série 4389) do Banco Central, usados pelo comparador de renda fixa */
-  const dd = (d) => String(d.getUTCDate()).padStart(2, '0') + '/' + String(d.getUTCMonth() + 1).padStart(2, '0') + '/' + d.getUTCFullYear();
+  /* Selic meta e CDI anualizado do Banco Central (SGS), usados pelo comparador de renda fixa.
+     A API do Banco Central às vezes responde erro (500) ou uma página HTML de forma passageira;
+     por isso cada taxa tem mais de uma série/forma de consulta e várias tentativas. */
   const espera = (ms) => new Promise((r) => setTimeout(r, ms));
-  const ler = (j) => {
+  const SGS = (serie, n) => 'https://api.bcb.gov.br/dados/serie/bcdata.sgs.' + serie + '/dados/ultimos/' + n + '?formato=json';
+  const ler = (j, conv) => {
     const x = Array.isArray(j) && j.length ? j[j.length - 1] : null;
-    const m = x && String(x.data).match(/^(\d{2})\/(\d{2})\/(\d{4})$/), v = x && parseFloat(String(x.valor).replace(',', '.'));
+    const m = x && String(x.data).match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+    let v = x && parseFloat(String(x.valor).replace(',', '.'));
+    if (m && v > 0 && conv) v = conv(v);
     if (!m || !(v > 0 && v < 60)) return null;
-    return { data: m[3] + '-' + m[2] + '-' + m[1], valor: v };
+    return { data: m[3] + '-' + m[2] + '-' + m[1], valor: Math.round(v * 100) / 100 };
   };
-  const ult = async (serie) => {
-    const base = 'https://api.bcb.gov.br/dados/serie/bcdata.sgs.' + serie + '/dados';
-    const hoje = new Date(), ini = new Date(Date.UTC(hoje.getUTCFullYear(), hoje.getUTCMonth(), hoje.getUTCDate() - 45));
-    /* duas formas de consulta, com novas tentativas: a API do Banco Central às vezes responde erro 500 de forma passageira */
-    const urls = [base + '/ultimos/1?formato=json', base + '?formato=json&dataInicial=' + dd(ini) + '&dataFinal=' + dd(hoje)];
-    let ultimoErro = 'sem resposta';
-    for (let t = 0; t < 3; t++) {
-      for (const u of urls) {
+  const anual = (d) => (Math.pow(1 + d / 100, 252) - 1) * 100; /* CDI diário (% ao dia) para % ao ano, base 252 */
+  const buscar = async (fontes) => {
+    let erro = 'sem resposta';
+    for (let t = 0; t < 2; t++) {
+      for (const f of fontes) {
         try {
-          const r = await fetch(u, { headers: Object.assign({ Accept: 'application/json' }, UA), signal: AbortSignal.timeout(60000) });
+          const r = await fetch(f.url, { headers: Object.assign({ Accept: 'application/json' }, UA), signal: AbortSignal.timeout(20000) });
           const txt = await r.text();
           let j = null; try { j = JSON.parse(txt); } catch (e) { /* não é JSON */ }
-          const ok = r.ok && ler(j);
-          if (ok) return ok;
-          ultimoErro = 'HTTP ' + r.status + ' ' + txt.slice(0, 120).replace(/\s+/g, ' ');
-        } catch (e) { ultimoErro = e.message; }
+          const ok = r.ok && ler(j, f.conv);
+          if (ok) return Object.assign(ok, { fonte: f.nome });
+          erro = f.nome + ': HTTP ' + r.status + ' ' + txt.slice(0, 100).replace(/\s+/g, ' ');
+        } catch (e) { erro = f.nome + ': ' + e.message; }
       }
-      if (t < 2) await espera(4000);
+      if (t < 1) await espera(3000);
     }
-    throw new Error('série ' + serie + ': ' + ultimoErro);
+    throw new Error(erro);
   };
-  const [selic, cdi] = await Promise.all([ult(432), ult(4389)]);
-  fs.writeFileSync(path.join(SAIDA, 'bcb.json'), JSON.stringify({ gerado: new Date().toISOString().slice(0, 10), data: cdi.data, selic: selic.valor, selicData: selic.data, cdi: cdi.valor, fonte: 'Banco Central do Brasil (SGS 432 e 4389)' }));
-  console.log('bcb ok: Selic', selic.valor, 'CDI', cdi.valor, cdi.data);
+  const selic = await buscar([{ nome: 'Selic meta (432)', url: SGS(432, 1) }, { nome: 'Selic meta (432)', url: SGS(432, 5) }]);
+  const cdi = await buscar([{ nome: 'CDI (4389)', url: SGS(4389, 1) }, { nome: 'CDI (4389)', url: SGS(4389, 5) }, { nome: 'Selic anualizada (1178)', url: SGS(1178, 5) }, { nome: 'CDI diário (12)', url: SGS(12, 5), conv: anual }]);
+  /* a série 432 pode trazer datas futuras (a meta já decidida pelo Copom): a data da taxa é a do CDI */
+  fs.writeFileSync(path.join(SAIDA, 'bcb.json'), JSON.stringify({ gerado: new Date().toISOString().slice(0, 10), data: cdi.data, selic: selic.valor, selicData: selic.data, cdi: cdi.valor, fonte: 'Banco Central do Brasil (SGS: ' + selic.fonte + '; ' + cdi.fonte + ')' }));
+  console.log('bcb ok: Selic', selic.valor, 'CDI', cdi.valor, cdi.data, '(' + cdi.fonte + ')');
 }
 
 let falhou = false;
