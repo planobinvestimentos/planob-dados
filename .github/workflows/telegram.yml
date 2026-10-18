@@ -1,0 +1,49 @@
+# Aviso diário no Telegram: fechamento da bolsa + dólar + Bitcoin (19h, horário de Brasília).
+# Roda três vezes por dia: se a B3 ainda não liberou os dados às 19h, completa mais tarde.
+# Precisa dos segredos TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID (Settings > Secrets and variables > Actions).
+name: Aviso diário no Telegram
+on:
+  schedule:
+    - cron: '0 22 * * *'     # 19h em Brasília
+    - cron: '0 0 * * *'      # 21h em Brasília (completa a bolsa, se a B3 liberou depois)
+    - cron: '45 1 * * *'     # 22h45 em Brasília (última tentativa do dia)
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: 'Só mostrar a mensagem no log, sem enviar'
+        type: boolean
+        default: false
+      forcar:
+        description: 'Enviar mesmo que hoje já tenha sido enviado'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: planob-dados
+  cancel-in-progress: false
+jobs:
+  avisar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Atualizar o fechamento de hoje
+        run: node gerar-dados.mjs bolsa-hoje
+      - name: Enviar ao Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TESTE: ${{ inputs.teste && '1' || '' }}
+          FORCAR: ${{ inputs.forcar && '1' || '' }}
+        run: node telegram.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida
+          git diff --cached --quiet || git commit -m "Aviso diário: atualiza fechamento e estado do envio"
+          git pull --rebase
+          git push
