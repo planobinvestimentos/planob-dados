@@ -57,17 +57,39 @@ function blocoBolsa(b) {
   const gs = [grupo('AÇÕES', b.acoes, 5), grupo('FIIs DE TIJOLO', b.fiisTijolo, 3), grupo('FIIs DE PAPEL', b.fiisPapel, 3), grupo('ETFs', b.etfs, 3)].filter(Boolean);
   return (partes.length ? partes.join('\n') + '\n\n' : '') + gs.join('\n\n');
 }
+const dorme = (ms) => new Promise((r) => setTimeout(r, ms));
+/* tenta de novo uma vez se o serviço pedir calma (HTTP 429) ou falhar */
+async function pegarComRetry(url) {
+  try { return await pegar(url); } catch (e) { await dorme(3000); return pegar(url); }
+}
+/* dólar: 1) AwesomeAPI  2) dólar calculado pelo preço do Bitcoin (BRL ÷ USD)  3) open.er-api.com (atualiza 1x ao dia) */
+async function dolar(btc) {
+  try {
+    const u = (await pegarComRetry(AWESOME)).USDBRL;
+    const v = parseFloat(u.bid), p = parseFloat(u.pctChange);
+    if (v > 0) return { v, p: isFinite(p) ? p : null, fonte: 'awesomeapi' };
+  } catch (e) { console.warn('aviso dólar (AwesomeAPI):', e.message); }
+  if (btc && btc.brl > 0 && btc.usd > 0) {
+    const v = btc.brl / btc.usd;
+    if (v > 2 && v < 20) { console.warn('aviso: dólar calculado pelo Bitcoin.'); return { v, p: null, fonte: 'bitcoin' }; }
+  }
+  try {
+    const j = await pegar(process.env.ER_URL || 'https://open.er-api.com/v6/latest/USD');
+    const v = j && j.rates && j.rates.BRL;
+    if (v > 0) { console.warn('aviso: dólar da open.er-api.'); return { v, p: null, fonte: 'er-api' }; }
+  } catch (e) { console.warn('aviso dólar (open.er-api):', e.message); }
+  return null;
+}
 async function blocoMercado() {
   const l = [];
+  let btc = null;
   try {
-    const j = await pegar(AWESOME), u = j.USDBRL;
-    const v = parseFloat(u.bid), p = parseFloat(u.pctChange);
-    if (v > 0) l.push('💵 Dólar: ' + brl(v) + (isFinite(p) ? ' (' + pct(p) + ')' : ''));
-  } catch (e) { console.warn('aviso dólar:', e.message); }
-  try {
-    const j = await pegar(GECKO), b = j.bitcoin;
-    if (b && b.brl > 0) l.push('₿ Bitcoin: ' + brl(b.brl, 0) + ' (US$ ' + num(b.usd, 0) + ')' + (isFinite(b.brl_24h_change) ? ' · 24h: ' + pct(b.brl_24h_change) : ''));
+    const j = await pegarComRetry(GECKO);
+    if (j.bitcoin && j.bitcoin.brl > 0) btc = j.bitcoin;
   } catch (e) { console.warn('aviso bitcoin:', e.message); }
+  const d = await dolar(btc);
+  if (d) l.push('💵 Dólar: ' + brl(d.v) + (d.p !== null ? ' (' + pct(d.p) + ')' : ''));
+  if (btc) l.push('₿ Bitcoin: ' + brl(btc.brl, 0) + ' (US$ ' + num(btc.usd, 0) + ')' + (isFinite(btc.brl_24h_change) ? ' · 24h: ' + pct(btc.brl_24h_change) : ''));
   return l;
 }
 const RODAPE = 'Conteúdo educacional. Não é recomendação de investimento.';
