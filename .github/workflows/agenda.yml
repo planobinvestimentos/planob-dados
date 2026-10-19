@@ -1,0 +1,57 @@
+# Agenda da semana no Telegram (segunda-feira, 7h de Brasília):
+#   eventos importantes de segunda a sexta (Copom, Fed, Boletim Focus, IPCA, PIB, payroll, CPI etc.).
+# Tenta 7h, 7h30 e 8h; só a primeira que funcionar envia, sem repetir no dia.
+# Para a agenda do dia (terça a sexta), rode à mão escolhendo modo = hoje.
+# Precisa dos segredos TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID; ANTHROPIC_API_KEY é opcional (traduz títulos em inglês).
+name: Agenda da semana no Telegram
+on:
+  schedule:
+    - cron: '0 10 * * 1'       # 7h00 (segunda)
+    - cron: '30 10 * * 1'      # 7h30 (tentativa 2)
+    - cron: '0 11 * * 1'       # 8h00 (tentativa 3)
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: 'semana = segunda a sexta; hoje = só o dia'
+        type: choice
+        options: [semana, hoje]
+        default: semana
+      teste:
+        description: 'Só mostrar a mensagem no log, sem enviar'
+        type: boolean
+        default: false
+      forcar:
+        description: 'Enviar mesmo que já tenha sido enviado'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: planob-dados
+  cancel-in-progress: false
+jobs:
+  agenda:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Montar e enviar
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MODO: ${{ github.event_name == 'workflow_dispatch' && inputs.modo || 'semana' }}
+          TESTE: ${{ inputs.teste && '1' || '' }}
+          FORCAR: ${{ inputs.forcar && '1' || '' }}
+        run: node agenda.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida
+          git diff --cached --quiet || git commit -m "Agenda: atualiza estado do envio e diagnóstico"
+          git pull --rebase
+          git push
