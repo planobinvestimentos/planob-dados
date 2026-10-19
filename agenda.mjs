@@ -96,11 +96,11 @@ function doManual(inicio, fim, diag) {
   diag.manual = 'ok (' + out.length + ')';
   return out;
 }
-const IBGE_INTERESSA = /ipca|pib|pnad|desemprego|produ[cç][aã]o industrial|varejo|servi[cç]os|inpc|ipp/i;
+const IBGE_INTERESSA = /ipca|pre[cç]os ao consumidor|pib|contas nacionais|pnad|desemprego|produ[cç][aã]o industrial|varejo|servi[cç]os|inpc|ipp/i;
 async function doIbge(inicio, fim, diag) {
   const out = [];
   try {
-    const url = URL_IBGE + '?de=' + inicio.slice(8, 10) + '-' + inicio.slice(5, 7) + '-' + inicio.slice(0, 4) + '&ate=' + fim.slice(8, 10) + '-' + fim.slice(5, 7) + '-' + fim.slice(0, 4) + '&qtd=200';
+    const url = URL_IBGE + '?de=' + inicio.slice(5, 7) + '-' + inicio.slice(8, 10) + '-' + inicio.slice(0, 4) + '&ate=' + fim.slice(5, 7) + '-' + fim.slice(8, 10) + '-' + fim.slice(0, 4) + '&qtd=1000';
     const r = await fetch(url, { headers: UA, signal: AbortSignal.timeout(20000) });
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const j = await r.json();
@@ -112,11 +112,17 @@ async function doIbge(inicio, fim, diag) {
     for (const x of lista) {
       const nome = x.titulo || x.nome_produto || x.produto || x.nome || '';
       const quando = String(x.data_divulgacao || x.data || '');
-      const m = quando.match(/(\d{2})\/(\d{2})\/(\d{4})(?:\s+(\d{2}):(\d{2}))?/) || quando.match(/(\d{4})-(\d{2})-(\d{2})(?:[T\s](\d{2}):(\d{2}))?/);
+      const m = quando.match(/(\d{2})\/(\d{2})\/(\d{4})(?:\s+(\d{2}):(\d{2}))?/);
       if (!nome || !m) continue;
-      const iso = quando.includes('/') ? m[3] + '-' + m[2] + '-' + m[1] : m[1] + '-' + m[2] + '-' + m[3];
+      let iso = m[3] + '-' + m[2] + '-' + m[1], hora = '';
+      if (m[4]) { const d = new Date(Date.UTC(+m[3], +m[2] - 1, +m[1], +m[4], +m[5]) - 3 * 3600 * 1000); iso = d.toISOString().slice(0, 10); hora = d.toISOString().slice(11, 16); } // o IBGE informa em UTC
       if (iso < inicio || iso > fim || !IBGE_INTERESSA.test(nome)) continue;
-      out.push({ iso, hora: m[4] ? m[4] + ':' + m[5] : '', pais: 'BR', titulo: nome.replace(/\s+/g, ' ').trim() + ' (IBGE)', fonte: 'ibge' });
+      let t = nome.replace(/\s+/g, ' ').trim();
+      if (/pre[cç]os ao consumidor amplo\s*15/i.test(t)) t = 'IPCA-15 (prévia da inflação)';
+      else if (/pre[cç]os ao consumidor amplo/i.test(t)) t = 'IPCA (inflação oficial)';
+      else if (/contas nacionais trimestrais/i.test(t)) t = 'PIB do trimestre';
+      else if (/cont[ií]nua mensal|pnad.*mensal/i.test(t)) t = 'PNAD: taxa de desemprego';
+      out.push({ iso, hora, pais: 'BR', titulo: t + ' (IBGE)', fonte: 'ibge' });
     }
     diag.ibge = 'ok (' + out.length + ' de interesse)';
   } catch (e) { diag.ibge = 'falhou: ' + e.message; }
