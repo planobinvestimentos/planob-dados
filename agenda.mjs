@@ -171,7 +171,7 @@ function montar(eventos, inicio, fim, modo) {
   return [cab, corpo.join('\n\n'), 'Horários de Brasília. Datas e horários podem mudar: confira nas fontes oficiais (Banco Central, IBGE, Fed, BCE).', 'Conteúdo educacional. Não é recomendação de investimento.'].join('\n\n');
 }
 
-const ASSINATURA = '\n\n📲 Participe do nosso grupo do Telegram: https://t.me/+rQhKpS0wx2lhNzgx';
+const ASSINATURA = '\n\n📲 Participe do nosso grupo do Telegram: @planobinvestimentos';
 async function enviar(corpo) {
   const texto = corpo + ASSINATURA;
   if (TESTE) { console.log('--- MENSAGEM (teste, não enviada) ---\n' + texto + '\n--- fim ---'); return; }

@@ -165,7 +165,7 @@ function partir(texto, max = 3900) {
   if (atual) out.push(atual);
   return out.flatMap((p) => (p.length <= max ? [p] : p.match(new RegExp('[\\s\\S]{1,' + max + '}', 'g'))));
 }
-const ASSINATURA = '\n\n📲 Participe do nosso grupo do Telegram: https://t.me/+rQhKpS0wx2lhNzgx';
+const ASSINATURA = '\n\n📲 Participe do nosso grupo do Telegram: @planobinvestimentos';
 async function enviar(texto) {
   for (const corpo of partir(texto)) {
     const parte = corpo + ASSINATURA;

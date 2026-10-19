@@ -181,7 +181,7 @@ function partir(texto, max = 3900) {
   if (atual) out.push(atual);
   return out.flatMap((p) => (p.length <= max ? [p] : p.match(new RegExp('[\\s\\S]{1,' + max + '}', 'g'))));
 }
-const ASSINATURA = '\n\n📲 Participe do nosso grupo do Telegram: https://t.me/+rQhKpS0wx2lhNzgx';
+const ASSINATURA = '\n\n📲 Participe do nosso grupo do Telegram: @planobinvestimentos';
 async function enviar(texto) {
   for (const corpo of partir(texto)) {
     const parte = corpo + ASSINATURA;
@@ -211,8 +211,12 @@ try {
   const todos = await documentos(primeira ? 4 : 5, diag);
   const chave = (d) => d.prot + '|' + d.ver;
   const novos = [];
+  const vistosConteudo = new Set();
   for (const d of todos) {
     if (!FORCAR && enviados.has(chave(d))) continue;
+    const dup = d.cnpj + '|' + d.cat + '|' + d.assunto + '|' + d.data;   // mesmo aviso entregue em duas versões: publica só uma
+    if (vistosConteudo.has(dup)) { enviados.add(chave(d)); continue; }
+    vistosConteudo.add(dup);
     const t = (tickers[d.cnpj] || []);
     if (!t.length) continue;
     const dest = ehDestaque(t), prov = PROVENTO.test(d.assunto || '');

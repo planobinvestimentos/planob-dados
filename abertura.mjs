@@ -233,7 +233,7 @@ function msgFuturos(br) {
   return ['🇧🇷 FUTUROS BRASILEIROS · ' + DIAS[DOW] + ', ' + dataBR(HOJE), l.join('\n'), 'Dados coletados às ' + coletadoAs() + ' (horário de Brasília). Fonte: B3, com atraso de cerca de 15 minutos.', 'Conteúdo educacional. Não é recomendação de investimento.'].join('\n\n');
 }
 
-const ASSINATURA = '\n\n📲 Participe do nosso grupo do Telegram: https://t.me/+rQhKpS0wx2lhNzgx';
+const ASSINATURA = '\n\n📲 Participe do nosso grupo do Telegram: @planobinvestimentos';
 async function enviar(corpo) {
   const texto = corpo + ASSINATURA;
   if (TESTE) { console.log('--- MENSAGEM (teste, não enviada) ---\n' + texto + '\n--- fim ---'); return; }
