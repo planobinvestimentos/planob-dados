@@ -62,6 +62,7 @@ export function lerCotahistBolsa(texto) {
       bdi: linha.slice(10, 12),
       esp: linha.slice(39, 49).trim(),
       nome: linha.slice(27, 39).trim(),
+      isin: linha.slice(230, 242).trim(),                          // código ISIN: não muda quando o ticker muda
     };
   }
   return { data, itens };

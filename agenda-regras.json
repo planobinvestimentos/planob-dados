@@ -1,0 +1,13 @@
+{
+  "_ajuda": "Datas oficiais conferidas em 19/10/2026 (Banco Central e Federal Reserve). Horários em Brasília. O Fed usa horário de verão dos EUA até 01/11/2026 (decisão às 15h); depois, 16h. Editar pelo lápis do GitHub. Atualizar ao fim de 2026.",
+  "valido_ate": "2026-12-31",
+  "semanais": [
+    { "dia_semana": 1, "hora": "08:25", "pais": "BR", "titulo": "Boletim Focus (Banco Central)" }
+  ],
+  "datas": [
+    { "data": "2026-11-04", "hora": "18:30", "pais": "BR", "titulo": "Decisão do Copom (Selic)" },
+    { "data": "2026-12-09", "hora": "18:30", "pais": "BR", "titulo": "Decisão do Copom (Selic)" },
+    { "data": "2026-10-28", "hora": "15:00", "pais": "US", "titulo": "Decisão de juros do Fed (FOMC)" },
+    { "data": "2026-12-09", "hora": "16:00", "pais": "US", "titulo": "Decisão de juros do Fed (FOMC)" }
+  ]
+}

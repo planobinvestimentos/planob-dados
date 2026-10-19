@@ -1,0 +1,60 @@
+# Abertura dos mercados no Telegram (dias úteis, horário de Brasília):
+#   6h    principais indicadores lá fora (EUA futuros, Europa, Ásia-Pacífico, petróleo, minério de Dalian, Bitcoin)
+#         + extras (VIX, EWZ, Vale, Petrobras, dólar, Ibovespa)
+#   9h10  futuros brasileiros da B3 (Ibovespa e dólar), que só abrem às 9h
+# Cada parte tenta mais duas vezes (30 min e 1h depois); só a primeira que funcionar envia, sem repetir no dia.
+# Precisa dos segredos TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID (os mesmos do aviso das 19h).
+name: Abertura dos mercados no Telegram
+on:
+  schedule:
+    - cron: '0 9 * * 1-5'      # 6h00 (manhã)
+    - cron: '30 9 * * 1-5'     # 6h30 (manhã, tentativa 2)
+    - cron: '0 10 * * 1-5'     # 7h00 (manhã, tentativa 3)
+    - cron: '10 12 * * 1-5'    # 9h10 (futuros)
+    - cron: '40 12 * * 1-5'    # 9h40 (futuros, tentativa 2)
+    - cron: '10 13 * * 1-5'    # 10h10 (futuros, tentativa 3)
+  workflow_dispatch:
+    inputs:
+      parte:
+        description: 'Qual parte rodar'
+        type: choice
+        options: [manha, futuros]
+        default: manha
+      teste:
+        description: 'Só mostrar a mensagem no log, sem enviar'
+        type: boolean
+        default: false
+      forcar:
+        description: 'Enviar mesmo que hoje já tenha sido enviado'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: planob-dados
+  cancel-in-progress: false
+jobs:
+  abertura:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Montar e enviar
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          MODO: ${{ github.event_name == 'workflow_dispatch' && inputs.parte || ((contains(github.event.schedule, ' 12 ') || contains(github.event.schedule, ' 13 ')) && 'futuros' || 'manha') }}
+          TESTE: ${{ inputs.teste && '1' || '' }}
+          FORCAR: ${{ inputs.forcar && '1' || '' }}
+        run: node abertura.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida
+          git diff --cached --quiet || git commit -m "Abertura: atualiza estado do envio e diagnóstico"
+          git pull --rebase
+          git push

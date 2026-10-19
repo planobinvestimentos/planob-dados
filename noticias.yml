@@ -1,0 +1,56 @@
+# Noticiário Corporativo no Telegram (horário de Brasília, segunda a sexta):
+#   12h e 15h  resumo dos comunicados novos das empresas (fatos relevantes, avisos aos acionistas, comunicados)
+# Cada edição envia só o que ainda não foi enviado; sem novidade, não manda nada.
+# Fonte: dados abertos da CVM (atualizados uma vez por dia, então itens de hoje podem aparecer só no dia seguinte).
+# Começa no modo GRATUITO (só manchetes), sem nenhum gasto. Para resumos por IA (pago, à parte da assinatura do Claude): crie o segredo
+# ANTHROPIC_API_KEY (Haiku). Para usar também o Opus nos documentos importantes, troque USAR_OPUS para '1'.
+# Precisa dos segredos TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID.
+name: Noticiário Corporativo no Telegram
+on:
+  schedule:
+    - cron: '0 15 * * 1-5'     # 12h
+    - cron: '0 18 * * 1-5'     # 15h
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: 'Só mostrar a mensagem no log, sem enviar'
+        type: boolean
+        default: false
+      forcar:
+        description: 'Enviar mesmo que já tenha sido enviado'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: planob-dados
+  cancel-in-progress: false
+jobs:
+  noticias:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Instalar leitor de PDF
+        continue-on-error: true
+        run: sudo apt-get install -y poppler-utils
+      - name: Montar e enviar
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # sem esse segredo: só manchetes (grátis)
+          USAR_OPUS: '0'                                        # mude para '1' para usar o Opus nos documentos importantes
+          TESTE: ${{ inputs.teste && '1' || '' }}
+          FORCAR: ${{ inputs.forcar && '1' || '' }}
+        run: node noticias.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida
+          git diff --cached --quiet || git commit -m "Noticiário: atualiza estado do envio e diagnóstico"
+          git pull --rebase
+          git push

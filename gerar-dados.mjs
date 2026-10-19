@@ -2,11 +2,15 @@
      saida/d1.json           fechamento do dia anterior (B3, dados de D-1 liberados sem custo)
      saida/fundamentos.json  LPA e VPA do último balanço anual (CVM, dados abertos)
      saida/bolsa.json        5 maiores altas e quedas de ações, FIIs de tijolo, FIIs de papel e ETFs (B3, último pregão)
-   Uso:  node dados/gerar-dados.mjs [d1|fund|bolsa|bolsa-hoje|bcb|tudo]      (Node 18 ou mais novo) */
+     saida/universo.json     cadastro de códigos vistos na B3 (para achar novos, retirados e mudanças de código)
+     saida/eventos.json      novos, retirados e mudanças de código do último pregão
+     saida/proventos.json    proventos de FIIs e ações anunciados nos últimos dias (experimental)
+   Uso:  node dados/gerar-dados.mjs [d1|fund|bolsa|bolsa-hoje|proventos|bcb|tudo]      (Node 18 ou mais novo) */
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { lerZip, lerCotahist, lerCotahistBolsa, urlCotahistDia, lerCsv, lerFundamentos } from './lib.mjs';
+import { atualizarUniverso, atualizarProventos } from './eventos.mjs';
 
 const SAIDA = path.join(path.dirname(fileURLToPath(import.meta.url)), 'saida');
 fs.mkdirSync(SAIDA, { recursive: true });
@@ -90,6 +94,18 @@ async function bolsa(hojeBR = false) {
   if (bv && bva) saida.ibov = { t: 'BOVA11', p: bv.c, v: Math.round((bv.c / bva.c - 1) * 10000) / 100 };
   fs.writeFileSync(path.join(SAIDA, 'bolsa.json'), JSON.stringify(saida));
   console.log('bolsa ok:', saida.data, 'x', saida.ref, '| universo ações', saida.acoes.universo, 'etfs', saida.etfs.universo, 'tijolo', saida.fiisTijolo.universo, 'papel', saida.fiisPapel.universo);
+  /* cadastro de códigos: novos, retirados e mudanças de código (não pode derrubar o ranking) */
+  try {
+    await atualizarUniverso(SAIDA, hojeD, async () => {
+      const base = new Date(hojeD.data + 'T12:00:00Z'), out = [];
+      for (let i = 1; i <= 45 && out.length < 25; i++) {
+        const d = new Date(base.getTime() - i * 86400000);
+        if ([0, 6].includes(d.getUTCDay())) continue;
+        try { const zip = lerZip(await baixar(urlCotahistDia(d))), arq = [...zip.keys()][0]; const r = lerCotahistBolsa(zip.get(arq).toString('latin1')); if (Object.keys(r.itens).length >= 100) out.unshift(r); } catch (e) { /* feriado */ }
+      }
+      return out;
+    });
+  } catch (e) { console.warn('aviso universo:', e.message); }
   /* avisa se alguma lista ficou vazia (sinal de lista desatualizada ou filtro muito alto) */
   for (const k of ['acoes', 'etfs', 'fiisTijolo', 'fiisPapel']) if (!saida[k].altas.length && !saida[k].quedas.length) console.warn('aviso bolsa: nenhum ativo em', k);
 }
@@ -190,5 +206,10 @@ if (modo === 'd1' || modo === 'tudo' || modo === 'bcb') await bcb().catch((e) =>
 /* idem para o ranking da bolsa */
 if (modo === 'bolsa-hoje') await bolsa(true).catch((e) => { console.warn('aviso bolsa:', e.message); });
 if (modo === 'd1' || modo === 'tudo' || modo === 'bolsa') await bolsa().catch((e) => { console.warn('aviso bolsa:', e.message); });
+/* proventos (experimental): FIIs pelo FNET e ações pelo site da B3; falhar não derruba nada */
+if (modo === 'proventos') {
+  const hojeBR = process.env.DATA_TESTE ? process.env.DATA_TESTE : new Date(Date.now() - 3 * 3600 * 1000).toISOString().slice(0, 10);
+  await atualizarProventos(SAIDA, hojeBR).catch((e) => { console.warn('aviso proventos:', e.message); });
+}
 if (modo === 'fund' || modo === 'tudo') await fund().catch((e) => { console.error('ERRO fundamentos:', e.message); falhou = true; });
 process.exit(falhou ? 1 : 0);
