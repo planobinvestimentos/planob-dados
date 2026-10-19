@@ -106,6 +106,9 @@ async function doIbge(inicio, fim, diag) {
     const j = await r.json();
     const lista = Array.isArray(j) ? j : (j.items || j.itens || j.calendario || []);
     diag.ibge_recebidos = lista.length;
+    diag.ibge_chaves = lista[0] ? Object.keys(lista[0]).slice(0, 25) : [];
+    diag.ibge_amostra = lista.slice(0, 4).map((x) => JSON.stringify(x).slice(0, 400));
+    diag.ibge_datas = lista.map((x) => String(x.data_divulgacao || x.data || '')).filter(Boolean).sort().filter((v, i, a) => i === 0 || i === a.length - 1);
     for (const x of lista) {
       const nome = x.titulo || x.nome_produto || x.produto || x.nome || '';
       const quando = String(x.data_divulgacao || x.data || '');
