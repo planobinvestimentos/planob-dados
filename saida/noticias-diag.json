@@ -1,0 +1,30 @@
+{
+ "gerado": "2026-10-19T15:24:02.735Z",
+ "modo": "manha",
+ "ia": false,
+ "ipe": {
+  "linhas": 37434,
+  "na_janela_e_categorias": 0,
+  "colunas": [
+   "CNPJ_COMPANHIA",
+   "NOME_COMPANHIA",
+   "CODIGO_CVM",
+   "DATA_REFERENCIA",
+   "CATEGORIA",
+   "TIPO",
+   "ESPECIE",
+   "ASSUNTO",
+   "DATA_ENTREGA",
+   "TIPO_APRESENTACAO",
+   "PROTOCOLO_ENTREGA",
+   "VERSAO",
+   "LINK_DOWNLOAD"
+  ]
+ },
+ "itens": {
+  "novos": 0,
+  "enviados_agora": 0,
+  "com_ia": 0,
+  "ia_falhas": 0
+ }
+}
