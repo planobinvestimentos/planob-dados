@@ -1,0 +1,4 @@
+{
+  "_ajuda": "Eventos escritos à mão. Cada linha: data (AAAA-MM-DD), hora (HH:MM, horário de Brasília; pode ficar vazia), pais (BR, US, EU, CN...) e titulo. Apague o exemplo quando for usar. Linhas com data fora da semana são ignoradas.",
+  "eventos": []
+}
