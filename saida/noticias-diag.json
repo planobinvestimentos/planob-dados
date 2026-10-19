@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-19T15:29:31.565Z",
+ "gerado": "2026-10-19T17:02:48.035Z",
  "modo": "manha",
- "ia": false,
+ "ia": true,
  "ipe": {
   "linhas": 37434,
-  "janela_desde": "2026-10-15",
+  "janela_desde": "2026-10-14",
   "data_mais_recente": "2026-10-17",
   "categorias_ultimos_10_dias": {
    "Comunicado ao Mercado": 121,
@@ -31,7 +31,7 @@
    "Termo de Emissão de Nota Comercial": 1,
    "Contratos de Indenidade": 1
   },
-  "na_janela_e_categorias": 23,
+  "na_janela_e_categorias": 37,
   "colunas": [
    "CNPJ_COMPANHIA",
    "NOME_COMPANHIA",
@@ -49,10 +49,12 @@
   ]
  },
  "itens": {
-  "novos": 12,
-  "enviados_agora": 11,
+  "novos": 6,
+  "enviados_agora": 6,
   "com_ia": 0,
-  "ia_falhas": 0,
+  "ia_falhas": 1,
   "materias": 0
- }
+ },
+ "materia_erro": "fetch failed",
+ "ia_erro": "fetch failed"
 }
