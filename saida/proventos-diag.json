@@ -1,0 +1,40 @@
+{
+ "gerado": "2026-10-19T15:19:04.738Z",
+ "de": "2026-10-17",
+ "ate": "2026-10-19",
+ "fii": {
+  "erro": "The operation was aborted due to timeout"
+ },
+ "acoes": {
+  "emissoras": 279,
+  "amostra": {
+   "emissora": "AFLT",
+   "campos": [
+    "assetIssued",
+    "paymentDate",
+    "rate",
+    "relatedTo",
+    "approvedOn",
+    "isinCode",
+    "label",
+    "lastDatePrior",
+    "remarks"
+   ],
+   "primeiro": {
+    "assetIssued": "BRAFLTACNOR1",
+    "paymentDate": "31/12/2026",
+    "rate": "0,15851704140",
+    "relatedTo": "Complementar/2026",
+    "approvedOn": "21/07/2026",
+    "isinCode": "BRAFLTACNOR1",
+    "label": "DIVIDENDO",
+    "lastDatePrior": "24/07/2026",
+    "remarks": ""
+   }
+  },
+  "ok": 279,
+  "falhas": 0,
+  "semDividendos": 82,
+  "itens": 0
+ }
+}
