@@ -1,7 +1,8 @@
 {
- "gerado": "2026-10-19T17:02:48.035Z",
+ "gerado": "2026-10-19T17:21:27.399Z",
  "modo": "manha",
  "ia": true,
+ "ia_teste": "ok: ok",
  "ipe": {
   "linhas": 37434,
   "janela_desde": "2026-10-14",
@@ -49,12 +50,13 @@
   ]
  },
  "itens": {
-  "novos": 6,
-  "enviados_agora": 6,
-  "com_ia": 0,
-  "ia_falhas": 1,
+  "novos": 2,
+  "enviados_agora": 2,
+  "com_ia": 1,
+  "ia_falhas": 0,
+  "fora_do_filtro": 9,
   "materias": 0
  },
- "materia_erro": "fetch failed",
- "ia_erro": "fetch failed"
+ "filtro": "lista elegiveis.json (219 empresas, anos 2021-2022-2023-2024-2025)",
+ "materia_erro": "resposta da IA sem JSON"
 }
