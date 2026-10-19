@@ -96,11 +96,14 @@ async function documentos(janelaDias, diag) {
   }
   if (!linhas.length) throw new Error('não consegui ler o arquivo IPE da CVM');
   const desde = iso(new Date(Date.parse(HOJE + 'T12:00:00Z') - janelaDias * 86400000));
+  const brutos = linhas.map((r) => ({ cat: achar(r, /^CATEGORIA/), data: String(achar(r, /^DATA_ENTREGA/)).slice(0, 10) }));
   const docs = linhas.map((r) => ({
     cnpj: so(achar(r, /^CNPJ/)), empresa: achar(r, /^NOME_COMPANHIA|^NOME_CIA/), cat: achar(r, /^CATEGORIA/), tipo: achar(r, /^TIPO$/), assunto: achar(r, /^ASSUNTO/),
     data: String(achar(r, /^DATA_ENTREGA/)).slice(0, 10), prot: achar(r, /^PROTOCOLO/), ver: achar(r, /^VERSAO/), link: achar(r, /^LINK/),
   })).filter((d) => d.data >= desde && d.data <= HOJE && CATEGORIAS.test(d.cat + ' ' + d.tipo) && (!/comunicado ao mercado/i.test(d.cat + ' ' + d.tipo) || /fato relevante|aviso aos acionistas/i.test(d.cat) || COMUNICADO_RELEVANTE.test(d.assunto)));
-  diag.ipe = { linhas: linhas.length, na_janela_e_categorias: docs.length, colunas: Object.keys(linhas[0] || {}) };
+  const recentes = {}, d10 = iso(new Date(Date.parse(HOJE + 'T12:00:00Z') - 10 * 86400000));
+  for (const x of brutos) if (x.data >= d10) recentes[x.cat] = (recentes[x.cat] || 0) + 1;
+  diag.ipe = { linhas: linhas.length, janela_desde: desde, data_mais_recente: brutos.reduce((m, x) => (x.data > m ? x.data : m), ''), categorias_ultimos_10_dias: recentes, na_janela_e_categorias: docs.length, colunas: Object.keys(linhas[0] || {}) };
   return docs.sort((a, b) => (b.data + b.prot).localeCompare(a.data + a.prot));
 }
 
@@ -205,7 +208,7 @@ try {
   const primeira = !Array.isArray(est.enviados);
   const enviados = new Set(est.enviados || []);
   const tickers = await mapaTickers(diag);
-  const todos = await documentos(primeira ? 2 : 5, diag);
+  const todos = await documentos(primeira ? 4 : 5, diag);
   const chave = (d) => d.prot + '|' + d.ver;
   const novos = [];
   for (const d of todos) {
