@@ -35,6 +35,7 @@ const sinal = (v) => (!isFinite(v) ? '▫️' : v > 0.005 ? '🟢' : v < -0.005 
 const DIAS = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
 const agora = process.env.DATA_TESTE ? new Date(process.env.DATA_TESTE + 'T10:00:00Z') : new Date(Date.now() - 3 * 3600 * 1000); // Brasília
 const HOJE = agora.toISOString().slice(0, 10), DOW = agora.getUTCDay();
+const coletadoAs = () => new Date(Date.now() - 3 * 3600 * 1000).toISOString().slice(11, 16); // hora de Brasília em que os dados foram buscados
 const dataBR = (iso) => iso.slice(8, 10) + '/' + iso.slice(5, 7) + '/' + iso.slice(0, 4);
 const numero = (s) => { const v = parseFloat(String(s == null ? '' : s).replace(/[%,\s]/g, '')); return Number.isFinite(v) ? v : NaN; };
 
@@ -217,19 +218,19 @@ function msgManha(got, minerio, ibov) {
         ls.push('• Minério de ferro (bolsa de Dalian, China): ' + pct(minerio.v) + ', a ' + num(minerio.p, 0) + ' iuanes' + usd);
       } else if (got.tio) ls.push('• Minério de ferro (Cingapura): ' + pct(got.tio.v) + ', a ' + dolarTxt(got.tio.p) + ' a tonelada');
     }
-    if (g.t.includes('Extras') && ibov) ls.push('• Ibovespa (último fechamento): ' + num(ibov.p, 0) + ' pts (' + pct(ibov.v) + ')');
+    if (g.t.includes('Extras') && ibov) ls.push('• Ibovespa (última cotação): ' + num(ibov.p, 0) + ' pts (' + pct(ibov.v) + ')');
     if (ls.length) blocos.push(g.t + '\n' + ls.join('\n'));
   }
   const nota = 'Futuros do Ibovespa e do dólar (B3): a partir das 9h10, em outra mensagem.';
-  return ['🔎 Veja os principais indicadores às 6h (horário de Brasília) · ' + DIAS[DOW] + ', ' + dataBR(HOJE), ...blocos, nota, 'Fontes: CNBC, Yahoo Finance, Stooq, Sina, Eastmoney, CoinGecko e B3. Dados podem ter atraso.', 'Conteúdo educacional. Não é recomendação de investimento.'].join('\n\n');
+  return ['🔎 Veja os principais indicadores · ' + DIAS[DOW] + ', ' + dataBR(HOJE), ...blocos, nota, 'Dados coletados às ' + coletadoAs() + ' (horário de Brasília). Fontes: CNBC, Yahoo Finance, Stooq, Sina, Eastmoney, CoinGecko e B3; podem ter atraso.', 'Conteúdo educacional. Não é recomendação de investimento.'].join('\n\n');
 }
 function msgFuturos(br) {
   const l = [];
   if (br.win) l.push(sinal(br.win.v) + ' Ibovespa futuro (' + br.win.t + '): ' + num(br.win.p, 0) + ' pts (' + pct(br.win.v) + ')');
   if (br.wdo) l.push(sinal(br.wdo.v) + ' Dólar futuro (' + br.wdo.t + '): R$ ' + num(br.wdo.p / 1000, 3) + ' (' + pct(br.wdo.v) + ')');
-  if (br.ibov) l.push('Ibovespa (último fechamento): ' + num(br.ibov.p, 0) + ' pts (' + pct(br.ibov.v) + ')');
+  if (br.ibov) l.push('Ibovespa (última cotação): ' + num(br.ibov.p, 0) + ' pts (' + pct(br.ibov.v) + ')');
   if (!br.win && !br.wdo) return '';
-  return ['🇧🇷 FUTUROS BRASILEIROS · ' + DIAS[DOW] + ', ' + dataBR(HOJE), l.join('\n'), 'Fonte: B3 (cotações com atraso de cerca de 15 minutos).', 'Conteúdo educacional. Não é recomendação de investimento.'].join('\n\n');
+  return ['🇧🇷 FUTUROS BRASILEIROS · ' + DIAS[DOW] + ', ' + dataBR(HOJE), l.join('\n'), 'Dados coletados às ' + coletadoAs() + ' (horário de Brasília). Fonte: B3, com atraso de cerca de 15 minutos.', 'Conteúdo educacional. Não é recomendação de investimento.'].join('\n\n');
 }
 
 const ASSINATURA = '\n\n📲 Participe do nosso grupo do Telegram: https://t.me/+rQhKpS0wx2lhNzgx';
