@@ -1,10 +1,37 @@
 {
- "gerado": "2026-10-19T15:36:02.859Z",
+ "gerado": "2026-10-19T16:39:50.411Z",
  "modo": "semana",
  "hoje": "2026-10-19",
  "global_recebidos": 86,
  "global": "ok (1 de alto impacto)",
  "ibge_recebidos": 200,
+ "ibge_chaves": [
+  "id",
+  "titulo",
+  "descricao",
+  "data_divulgacao",
+  "tipo_id",
+  "tipo",
+  "produto_id",
+  "nome_produto",
+  "alias_produto",
+  "descricao_produto",
+  "ano_referencia_inicio",
+  "mes_referencia_inicio",
+  "ano_referencia_fim",
+  "mes_referencia_fim",
+  "link"
+ ],
+ "ibge_amostra": [
+  "{\"id\":4365,\"titulo\":\"Pesquisas Trimestrais do Abate de Animais, do Leite, do Couro e da Produção de Ovos de Galinha\",\"descricao\":\"\",\"data_divulgacao\":\"23/03/2027 12:00:00\",\"tipo_id\":1,\"tipo\":\"Divulgação de Indicadores\",\"produto_id\":19111,\"nome_produto\":\"Pesquisas Trimestrais do Abate de Animais, do Leite, do Couro e da Produção de Ovos de Galinha\",\"alias_produto\":\"pesquisas-trimestrais-do-abate-de",
+  "{\"id\":4364,\"titulo\":\"Sistema de Contas Nacionais Trimestrais\",\"descricao\":\"\",\"data_divulgacao\":\"02/03/2027 12:00:00\",\"tipo_id\":1,\"tipo\":\"Divulgação de Indicadores\",\"produto_id\":9300,\"nome_produto\":\"Sistema de Contas Nacionais Trimestrais\",\"alias_produto\":\"contas-nacionais-trimestrais\",\"descricao_produto\":\"<p align=\\\"justify\\\">Apresenta os valores correntes e os índices de volume (1995=100) trimest",
+  "{\"id\":4362,\"titulo\":\"Pesquisas Trimestrais do Abate de Animais, do Leite, do Couro e da Produção de Ovos de Galinha: Primeiros resultados\",\"descricao\":\"\",\"data_divulgacao\":\"19/02/2027 12:00:00\",\"tipo_id\":1,\"tipo\":\"Divulgação de Indicadores\",\"produto_id\":19120,\"nome_produto\":\"Pesquisas Trimestrais do Abate de Animais, do Leite, do Couro e da Produção de Ovos de Galinha: Primeiros Resultados\",\"alias",
+  "{\"id\":4363,\"titulo\":\"Pesquisa Nacional por Amostra de Domicílios Contínua Trimestral\",\"descricao\":\"\",\"data_divulgacao\":\"19/02/2027 12:00:00\",\"tipo_id\":1,\"tipo\":\"Divulgação de Indicadores\",\"produto_id\":9173,\"nome_produto\":\"Divulgação trimestral#pnadc2\",\"alias_produto\":\"pesquisa-nacional-por-amostra-de-domicilios-continua-trimestral\",\"descricao_produto\":\"<p align=\\\"justify\\\">Destina-se a produzir in"
+ ],
+ "ibge_datas": [
+  "01/04/2026 13:00:00",
+  "31/08/2026 13:00:00"
+ ],
  "ibge": "ok (0 de interesse)",
  "regras": "ok (1)",
  "manual": "ok (0)",
