@@ -1,10 +1,37 @@
 {
- "gerado": "2026-10-19T15:24:02.735Z",
+ "gerado": "2026-10-19T15:29:31.565Z",
  "modo": "manha",
  "ia": false,
  "ipe": {
   "linhas": 37434,
-  "na_janela_e_categorias": 0,
+  "janela_desde": "2026-10-15",
+  "data_mais_recente": "2026-10-17",
+  "categorias_ultimos_10_dias": {
+   "Comunicado ao Mercado": 121,
+   "Valores Mobiliários negociados e detidos (art. 11 da Instr. CVM nº 358)": 396,
+   "Fato Relevante": 31,
+   "Aviso aos Acionistas": 13,
+   "Documentos de Oferta de Distribuição Pública": 14,
+   "Reunião da Administração": 73,
+   "Assembleia": 106,
+   "Relato Integrado": 2,
+   "Dados Econômico-Financeiros": 19,
+   "Código de Conduta": 2,
+   "Estatuto Social": 12,
+   "Calendário de Eventos Corporativos": 8,
+   "Relatório Proventos": 5,
+   "Aviso aos Debenturistas": 15,
+   "Escrituras e aditamentos de debêntures": 9,
+   "Acordo de Acionistas": 9,
+   "Plano de Remuneração Baseado em Ações": 1,
+   "Relatório de Sustentabilidade": 2,
+   "OPA - Edital de Oferta Pública de Ações": 1,
+   "Comunicação sobre Transação entre Partes Relacionadas": 3,
+   "Informações de Companhias em Recuperação Judicial ou Extrajudicial": 2,
+   "Termo de Emissão de Nota Comercial": 1,
+   "Contratos de Indenidade": 1
+  },
+  "na_janela_e_categorias": 23,
   "colunas": [
    "CNPJ_COMPANHIA",
    "NOME_COMPANHIA",
@@ -22,9 +49,10 @@
   ]
  },
  "itens": {
-  "novos": 0,
-  "enviados_agora": 0,
+  "novos": 12,
+  "enviados_agora": 11,
   "com_ia": 0,
-  "ia_falhas": 0
+  "ia_falhas": 0,
+  "materias": 0
  }
 }
