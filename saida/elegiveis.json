@@ -1,0 +1,1496 @@
+{
+ "gerado": "2026-10-19",
+ "anos": [
+  2021,
+  2022,
+  2023,
+  2024,
+  2025
+ ],
+ "criterio": "lucro líquido positivo e dividendos/JCP pagos em todos os anos",
+ "empresas": {
+  "00000000000191": "BCO BRASIL S.A.",
+  "00070698000111": "COMPANHIA ENERGÉTICA DE BRASÍLIA - CEB",
+  "00080671000100": "CARAMURU ALIMENTOS S.A.",
+  "00194724000113": "AUREN OPERAÇÕES S.A.",
+  "00242184000104": "ARMAC LOCAÇÃO, LOGÍSTICA E SERVIÇOS S.A.",
+  "00864214000106": "ENERGISA S.A.",
+  "01938783000111": "CIA PARTICIPACOES ALIANCA DA BAHIA",
+  "01968293000168": "ELETRORIVER S.A.",
+  "02149205000169": "PORTO SEGURO S.A.",
+  "02193750000152": "DEXXOS PARTICIPAÇÕES S.A.",
+  "02255187000108": "UNIFIQUE TELECOMUNICAÇÕES S.A.",
+  "02286479000108": "LOCALIZA FLEET S.A.",
+  "02351144000118": "TEGMA GESTAO LOGISTICA S.A.",
+  "02429144000193": "CPFL ENERGIA S.A.",
+  "02474103000119": "ENGIE BRASIL ENERGIA S.A.",
+  "02558157000162": "TELEFÔNICA BRASIL S.A",
+  "02600854000134": "TIM BRASIL SERVIÇOS E PARTICIPAÇÕES S.A.",
+  "02762121000104": "SANTOS BRASIL PARTICIPACOES S.A.",
+  "02846056000197": "MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.",
+  "02932074000191": "HYPERA S.A.",
+  "02998611000104": "ISA ENERGIA BRASIL",
+  "03220438000173": "EQUATORIAL S.A.",
+  "03847461000192": "BRADESPAR S.A.",
+  "03983431000103": "EDP - ENERGIAS DO BRASIL S.A.",
+  "05878397000132": "ALLOS S.A.",
+  "06047087000139": "REDE D'OR SÃO LUIZ S.A.",
+  "06977745000191": "BR MALLS PARTICIPACOES S.A.",
+  "06981176000158": "CEMIG GERACAO E TRANSMISSAO S.A.",
+  "07526557000100": "AMBEV S.A.",
+  "07628528000159": "BRASILAGRO - CIA BRAS DE PROP AGRICOLAS",
+  "07802794000156": "ESSENTIA PCHS S.A.",
+  "07816890000153": "MULTIPLAN - EMPREEND IMOBILIARIOS S.A.",
+  "07859971000130": "TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.",
+  "07882930000165": "MITRE REALTY EMPREENDIMENTOS E PARTICIPAÇÕES S.A.",
+  "08078847000109": "LPS BRASIL - CONSULTORIA DE IMOVEIS S.A.",
+  "08294224000165": "JHSF PARTICIPACOES S.A.",
+  "08312229000173": "EZ TEC EMPREEND. E PARTICIPACOES S.A.",
+  "08364948000138": "ALUPAR INVESTIMENTO S/A",
+  "08439659000150": "CPFL ENERGIAS RENOVÁVEIS S.A.",
+  "08574411000100": "PRÁTICA PRODUTOS S.A.",
+  "08797760000183": "CURY CONSTRUTORA E INCORPORADORA S.A.",
+  "08811643000127": "TRISUL S.A.",
+  "08827501000158": "AEGEA SANEAMENTO E PARTICIPAÇÕES S.A.",
+  "08873873000110": "ECORODOVIAS CONCESSÕES E SERVIÇOS S.A.",
+  "08902291000115": "CSN MINERAÇÃO S.A.",
+  "09041168000110": "LOG COMMERCIAL PROPERTIES E PARTICIPAÇÕES",
+  "09042817000105": "BEMOBI MOBILE TECH S.A.",
+  "09229201000130": "GPS PARTICIPAÇÕES E EMPREENDIMENTOS S.A.",
+  "09346601000125": "B3 S.A. - BRASIL, BOLSA, BALCÃO",
+  "10739356000103": "BRBI BR PARTNERS S.A",
+  "12181987000177": "MELNICK DESENVOLVIMENTO IMOBILIÁRIO S.A.",
+  "14998371000119": "J. MACEDO S.A.",
+  "15141799000103": "CIA FERRO LIGAS DA BAHIA - FERBASA",
+  "16234171000115": "METANOR SA METANOL DO NE",
+  "16614075000100": "DIRECIONAL ENGENHARIA S.A.",
+  "16670085000155": "LOCALIZA RENT A CAR S.A.",
+  "17155730000164": "CIA ENERGETICA DE MINAS GERAIS - CEMIG",
+  "17184037000110": "BCO MERCANTIL DO BRASIL S.A.",
+  "17281106000103": "CIA SANEAMENTO DE MINAS GERAIS-COPASA MG",
+  "17344597000194": "BB SEGURIDADE PARTICIPAÇÕES S.A.",
+  "19014221000147": "CHINA THREE GORGES BRASIL ENERGIA S.A.",
+  "19526748000150": "COMPANHIA INDUSTRIAL CATAGUASES",
+  "20247322000147": "ALLIED TECNOLOGIA S.A.",
+  "21110778000123": "OLIVEIRA TRUST S.A.",
+  "21389501000181": "COMPASS GÁS E ENERGIA S.A.",
+  "22543331000100": "CAIXA SEGURIDADE PARTICIPAÇÕES S.A.",
+  "23236821000127": "PATRIMAR ENGENHARIA S.A.",
+  "24230275000180": "PLANO & PLANO DESENVOLVIMENTO IMOBILIÁRIO S.A.",
+  "24624551000194": "ARGO ENERGIA EMPREENDIMENTOS E PARTICIPAÇÕES S/A",
+  "26462693000128": "LAVVI EMPREENDIMENTOS IMOBILIÁRIOS S.A.",
+  "27093558000115": "MILLS LOCAÇÃO, SERVIÇOS E LOGÍSTICA S.A.",
+  "28127603000178": "BANESTES S.A. - BCO EST ESPIRITO SANTO",
+  "30306294000145": "BCO BTG PACTUAL S.A.",
+  "31001230000107": "CELEO REDES TRANSMISSÃO DE ENERGIA S.A.",
+  "32681371000172": "VIX LOGÍSTICA S.A.",
+  "33000167000101": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+  "33113309000147": "VALID SOLUÇÕES S.A.",
+  "33228024000151": "WLM PART. E COMÉRCIO DE MÁQUINAS E VEÍCULOS S.A.",
+  "33256439000139": "ULTRAPAR PARTICIPACOES S.A.",
+  "33386210000119": "SONDOTECNICA ENGENHARIA SOLOS S.A.",
+  "33467572000134": "TEKNO S.A. - INDUSTRIA E COMERCIO",
+  "33592510000154": "VALE S.A.",
+  "33611500000119": "GERDAU S.A.",
+  "33839910000111": "VIVARA PARTICIPAÇÕES S.A.",
+  "33958695000178": "UNIPAR CARBOCLORO S.A.",
+  "34274233000102": "VIBRA ENERGIA S/A",
+  "35791391000194": "QUALITY SOFTWARE S.A.",
+  "41052420000107": "SOLAR BEBIDAS S.A.",
+  "42278473000103": "WIZ CO PARTICIPAÇÕES E CORRETAGEM DE SEGUROS S.A.",
+  "43948405000169": "LUPO S.A.",
+  "49263189000102": "HELBOR EMPREENDIMENTOS S.A.",
+  "50926955000142": "VULCABRAS S.A.",
+  "51466860000156": "SAO MARTINHO S.A.",
+  "53113791000122": "TOTVS S.A.",
+  "56643018000166": "EUCATEX S.A. INDUSTRIA E COMERCIO",
+  "56720428000163": "ROMI S.A.",
+  "58119199000151": "BRADSAÚDE S.A.",
+  "58430828000160": "BLAU FARMACÊUTICA S.A.",
+  "59105999000186": "WHIRLPOOL S.A.",
+  "59418806000147": "TRACK & FIELD CO S.A.",
+  "59981829000165": "RODOBENS SA",
+  "60476884000187": "MAHLE METAL LEVE S.A.",
+  "60543816000193": "IGUATEMI S.A.",
+  "60665981000118": "UNIÃO QUÍMICA FARMACÊUTICA NACIONAL S.A.",
+  "60746948000112": "BCO BRADESCO S.A.",
+  "60840055000131": "FLEURY S.A.",
+  "60872504000123": "ITAU UNIBANCO HOLDING S.A.",
+  "61156113000175": "IOCHPE MAXION S.A.",
+  "61186680000174": "BANCO BMG S/A",
+  "61190096000192": "EUROFARMA LABORATÓRIOS S.A.",
+  "61532644000115": "ITAÚSA S.A.",
+  "61584140000149": "REDE ENERGIA PARTICIPAÇÕES S.A.",
+  "61585865000151": "RAIA DROGASIL S.A.",
+  "62232889000190": "BCO DAYCOVAL S.A.",
+  "62307848000115": "BANCO RCI BRASIL S.A.",
+  "62984091000102": "CRUZEIRO DO SUL EDUCACIONAL S.A.",
+  "64904295000103": "CAMIL ALIMENTOS S.A.",
+  "73178600000118": "CYRELA BRAZIL REALTY S.A.EMPREEND E PART",
+  "76483817000120": "CIA PARANAENSE DE ENERGIA - COPEL",
+  "80680093000181": "SENIOR SISTEMAS S.A.",
+  "81243735000148": "POSITIVO TECNOLOGIA S.A.",
+  "82120676000183": "ALMEIDA JUNIOR SHOPPING CENTERS S.A.",
+  "82901000000127": "INTELBRAS S.A. IND. DE TELECOMUNICAÇÃO ELETRÔNICA BRASILEIRA",
+  "83878892000155": "CENTRAIS ELET DE SANTA CATARINA S.A.",
+  "84429695000111": "WEG S.A.",
+  "84693183000168": "SCHULZ S.A.",
+  "86375425000109": "METISA METALURGICA TIMBOENSE S.A.",
+  "87456562000122": "JOSAPAR-JOAQUIM OLIVEIRA S.A. - PARTICIP",
+  "87762563000103": "CIA HABITASUL DE PARTICIPACOES",
+  "87870952000144": "BORRACHAS VIPAL S.A.",
+  "88610126000129": "FRASLE MOBILITY S.A.",
+  "88611835000129": "MARCOPOLO S.A.",
+  "89096457000155": "SLC AGRICOLA S.A.",
+  "89637490000145": "KLABIN S.A.",
+  "89850341000160": "GRENDENE S.A.",
+  "90400888000142": "BCO SANTANDER (BRASIL) S.A.",
+  "91983056000169": "KEPLER WEBER S.A.",
+  "92012467000170": "GRAZZIOTIN S.A.",
+  "92665611000177": "DIMED S.A. DISTRIBUIDORA DE MEDICAMENTOS",
+  "92690783000109": "METALURGICA GERDAU S.A.",
+  "92693019000189": "PANATLANTICA S.A.",
+  "92702067000196": "BANCO DO ESTADO DO RIO GRANDE DO SUL SA",
+  "92715812000131": "CPFL TRANSMISSÃO S.A.",
+  "92754738000162": "LOJAS RENNER S.A.",
+  "92791243000103": "IRANI PAPEL E EMBALAGEM S.A.",
+  "96298013000168": "PACAEMBU CONSTRUTORA S.A.",
+  "97837181000147": "DEXCO S.A.",
+  "00383281000109": "BNDES PARTICIPACOES S.A. - BNDESPAR",
+  "00644907000193": "INVESTCO S.A.",
+  "00743065000127": "LITEL PARTICIPACOES S.A.",
+  "01417222000177": "MRS LOGISTICA S.A.",
+  "01548981000179": "INVESTIMENTOS BEMGE S.A.",
+  "01616929000102": "SANEAMENTO DE GOIAS SA",
+  "01896779000138": "CSU DIGITAL S.A.",
+  "02016440000162": "RGE SUL DISTRIBUIDORA DE ENERGIA S.A.",
+  "02302100000106": "EDP SÃO PAULO DISTRIBUIÇÃO DE ENERGIA S.A.",
+  "02328280000197": "ELEKTRO REDES S.A.",
+  "02382073000110": "PROLAGOS S/A - CONC.DE SERVICOS PÚBLICOS DE ÁGUA E ESGOTO",
+  "02451848000162": "CONC SIST ANHANG-BANDEIRANT S.A. AUTOBAN",
+  "02509491000126": "CONC ECOVIAS IMIGRANTES S.A.",
+  "03025305000146": "RODOVIAS DAS COLINAS S.A.",
+  "03467321000199": "ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A",
+  "03538833000107": "XX DE NOVEMBRO INVESTIMENTOS E PARTICIPAÇÕES S.A.",
+  "03820456000196": "BSB ENERGÉTICA S.A.",
+  "04089570000150": "ÁGUAS GUARIROBA S.A",
+  "04172213000151": "CIA PIRATININGA DE FORCA E LUZ",
+  "04895728000180": "EQUATORIAL PARÁ DISTRIBUIDORA DE ENERGIA S.A.",
+  "04902979000144": "BCO AMAZONIA S.A.",
+  "04913711000108": "BCO ESTADO DO PARA S.A.",
+  "04992714000184": "NOVA TRANSPORTADORA DO SUDESTE S.A. - NTS",
+  "05336882000184": "CACHOEIRA PAULISTA TRANSMISSORA ENERGIA S.A.",
+  "06272793000184": "EQUATORIAL MARANHÃO DISTRIBUIDORA DE ENERGIA S.A.",
+  "06981180000116": "CEMIG DISTRIBUICAO S.A.",
+  "07040108000157": "CAGECE - CIA DE AGUA E ESGOTO DO CEARA",
+  "07047251000170": "CIA ENERGETICA DO CEARA - COELCE",
+  "07237373000120": "BCO NORDESTE DO BRASIL S.A.",
+  "07282377000120": "ENERGISA SUL-SUDESTE - DISTRIBUIDORA DE ENERGIA S/A",
+  "07636657000199": "AÇO VERDE DO BRASIL S.A",
+  "07659538000151": "DINAMICA ENERGIA S.A.",
+  "08324196000181": "CIA ENERGETICA DO RIO GDE NORTE - COSERN",
+  "09095183000140": "ENERGISA PARAÍBA - DISTRIBUIDORA DE ENERGIA S/A",
+  "09257877000137": "FERROVIA NORTE SUL S/A",
+  "09584854000137": "MANAUS TRANSMISSORA DE ENERGIA S.A",
+  "09625321000156": "NORTE BRASIL TRANSMISSORA DE ENERGIA S.A.",
+  "10338320000100": "AFLUENTE TRANSMISSÃO DE ENERGIA ELÉTRICA S/A",
+  "10807374000177": "BOA SAFRA SEMENTES S.A.",
+  "10835932000108": "CIA ENERGETICA DE PERNAMBUCO - CELPE",
+  "10841050000155": "CONC ROD AYRTON SENNA E CARV PINTO S.A.-ECOPISTAS",
+  "12489315000123": "FERREIRA GOMES ENERGIA S.A.",
+  "12592831000189": "MNLT S.A.",
+  "13017462000163": "ENERGISA SERGIPE - DISTRIBUIDORA DE ENERGIA S/A",
+  "15139629000194": "CIA ELETRICIDADE EST. DA BAHIA - COELBA",
+  "15413826000150": "ENERGISA MATO GROSSO DO SUL - DIST DE ENERGIA S.A.",
+  "17161241000115": "MINASMAQUINAS S.A.",
+  "17359233000188": "TECIDOS E ARMARINHOS MIGUEL BARTOLOMEU S.A.",
+  "19527639000158": "ENERGISA MINAS RIO - DISTRIBUIDORA DE ENERGIA S/A",
+  "21728083000100": "TRANSMISSORA JOSÉ MARIA DE MACEDO DE ELETRICIDADE S.A.",
+  "22163297000149": "CONCESSIONÁRIA PONTE RIO-NITERÓI S.A. - ECOPONTE",
+  "22261473000185": "COMPANHIA DE GÁS DE MINAS GERAIS - GASMIG",
+  "24624490000165": "ARGO TRANSMISSÃO DE ENERGIA S/A",
+  "24962466000136": "RUMO MALHA NORTE S.A.",
+  "26609050000164": "TRAVESSIA SECURITIZADORA S.A.",
+  "26845702000160": "BELÉM TRANSMISSORA DE ENERGIA S.A",
+  "27967244000102": "TAPAJÓS TRANSMISSORA DE ENERGIA S.A.",
+  "28152650000171": "EDP ESPIRITO SANTO DISTRIBUIÇÃO DE ENERGIA S.A.",
+  "28925264000175": "COMPANHIA ENERGÉTICA JAGUARA",
+  "28942127000149": "COMPANHIA ENERGÉTICA MIRANDA",
+  "33050196000188": "CIA PAULISTA DE FORCA E LUZ",
+  "33938119000169": "CIA DISTRIB DE GAS DO RIO DE JANEIRO-CEG",
+  "36763716000198": "CONCESSIONÁRIA CATARINENSE DE RODOVIAS S.A.",
+  "43776517000180": "CIA SANEAMENTO BASICO EST SAO PAULO",
+  "46119855000137": "SOCIEDADE ABASTECIMENTO DE ÁGUA E SANEAMENTO S.A - SANASA",
+  "56992423000190": "BICICLETAS MONARK S.A.",
+  "61695227000193": "ELETROPAULO METROP. ELET. SAO PAULO S.A.",
+  "61856571000117": "CIA GAS DE SAO PAULO - COMGAS",
+  "76484013000145": "CIA SANEAMENTO DO PARANA - SANEPAR",
+  "87043832000173": "SEIVA S.A. - FLORESTAS E INDÚSTRIAS",
+  "92802784000190": "CIA RIOGRANDENSE DE SANEAMENTO",
+  "94813102000170": "TRÊS TENTOS AGROINDUSTRIAL S/A"
+ },
+ "excecao_setor": {
+  "01547749000116": "Emp. Adm. Part. - Energia Elétrica",
+  "08827501000158": "Saneamento, Serv. Água e Gás",
+  "10338320000100": "Energia Elétrica",
+  "27157474000106": "Saneamento, Serv. Água e Gás",
+  "61067901000195": "Saneamento, Serv. Água e Gás",
+  "61067902000130": "Saneamento, Serv. Água e Gás",
+  "61067904000129": "Saneamento, Serv. Água e Gás",
+  "42310775000103": "Saneamento, Serv. Água e Gás",
+  "42644220000106": "Saneamento, Serv. Água e Gás",
+  "45456117000112": "Saneamento, Serv. Água e Gás",
+  "04089570000150": "Saneamento, Serv. Água e Gás",
+  "08364948000138": "Emp. Adm. Part. - Energia Elétrica",
+  "12648266000124": "Saneamento, Serv. Água e Gás",
+  "33050071000158": "Energia Elétrica",
+  "24624551000194": "Emp. Adm. Part. - Energia Elétrica",
+  "24624490000165": "Energia Elétrica",
+  "20514590000188": "Energia Elétrica",
+  "20514555000169": "Energia Elétrica",
+  "09359927000197": "Emp. Adm. Part. - Energia Elétrica",
+  "38286323000166": "Emp. Adm. Part. - Energia Elétrica",
+  "28594234000123": "Energia Elétrica",
+  "00194724000113": "Emp. Adm. Part. - Energia Elétrica",
+  "37663076000107": "Energia Elétrica",
+  "33541368000116": "Energia Elétrica",
+  "00357038000116": "Energia Elétrica",
+  "00001180000126": "Emp. Adm. Part. - Energia Elétrica",
+  "02016507000169": "Energia Elétrica",
+  "09391823000160": "Energia Elétrica",
+  "28195667000106": "Bancos",
+  "61186680000174": "Bancos",
+  "60746948000112": "Bancos",
+  "30306294000145": "Bancos",
+  "04902979000144": "Bancos",
+  "62232889000190": "Bancos",
+  "00000000000191": "Bancos",
+  "13009717000146": "Bancos",
+  "04913711000108": "Bancos",
+  "92702067000196": "Bancos",
+  "07237373000120": "Bancos",
+  "17184037000110": "Bancos",
+  "34169557000172": "Bancos",
+  "62144175000120": "Bancos",
+  "62307848000115": "Bancos",
+  "90400888000142": "Bancos",
+  "28127603000178": "Bancos",
+  "26845702000160": "Energia Elétrica",
+  "02117801000167": "Emp. Adm. Part. - Energia Elétrica",
+  "09478309000166": "Energia Elétrica",
+  "00000208000100": "Bancos",
+  "10739356000103": "Emp. Adm. Part. - Bancos",
+  "39580673000101": "Emp. Adm. Part. - Saneamento, Serv. Água e Gás",
+  "24396489000120": "Emp. Adm. Part. - Saneamento, Serv. Água e Gás",
+  "05336882000184": "Energia Elétrica",
+  "31001230000107": "Emp. Adm. Part. - Energia Elétrica",
+  "06981180000116": "Energia Elétrica",
+  "06981176000158": "Energia Elétrica",
+  "83878892000155": "Energia Elétrica",
+  "60933603000178": "Energia Elétrica",
+  "19014221000147": "Energia Elétrica",
+  "82508433000117": "Saneamento, Serv. Água e Gás",
+  "15139629000194": "Energia Elétrica",
+  "07047251000170": "Energia Elétrica",
+  "17155730000164": "Energia Elétrica",
+  "10835932000108": "Energia Elétrica",
+  "08324196000181": "Energia Elétrica",
+  "33352394000104": "Saneamento, Serv. Água e Gás",
+  "08467115000100": "Energia Elétrica",
+  "04172213000151": "Energia Elétrica",
+  "92802784000190": "Saneamento, Serv. Água e Gás",
+  "43776517000180": "Saneamento, Serv. Água e Gás",
+  "76484013000145": "Saneamento, Serv. Água e Gás",
+  "33938119000169": "Saneamento, Serv. Água e Gás",
+  "25369840000157": "Energia Elétrica",
+  "08560444000193": "Emp. Adm. Part. - Energia Elétrica",
+  "07040108000157": "Saneamento, Serv. Água e Gás",
+  "22261473000185": "Saneamento, Serv. Água e Gás",
+  "61856571000117": "Emp. Adm. Part. - Saneamento, Serv. Água e Gás",
+  "17281106000103": "Saneamento, Serv. Água e Gás",
+  "00070698000111": "Energia Elétrica",
+  "28925264000175": "Energia Elétrica",
+  "28942127000149": "Energia Elétrica",
+  "19527586000175": "Energia Elétrica",
+  "39881421000104": "Energia Elétrica",
+  "21254073000180": "Emp. Adm. Part. - Energia Elétrica",
+  "76483817000120": "Energia Elétrica",
+  "33050196000188": "Energia Elétrica",
+  "21389501000181": "Emp. Adm. Part. - Saneamento, Serv. Água e Gás",
+  "04368898000106": "Energia Elétrica",
+  "04370282000170": "Energia Elétrica",
+  "02429144000193": "Emp. Adm. Part. - Energia Elétrica",
+  "08439659000150": "Emp. Adm. Part. - Energia Elétrica",
+  "92715812000131": "Energia Elétrica",
+  "07659538000151": "Emp. Adm. Part. - Energia Elétrica",
+  "03983431000103": "Energia Elétrica",
+  "28152650000171": "Energia Elétrica",
+  "02302100000106": "Energia Elétrica",
+  "02328280000197": "Energia Elétrica",
+  "61695227000193": "Energia Elétrica",
+  "02302101000142": "Energia Elétrica",
+  "15413826000150": "Energia Elétrica",
+  "03467321000199": "Energia Elétrica",
+  "19527639000158": "Energia Elétrica",
+  "09095183000140": "Energia Elétrica",
+  "00864214000106": "Emp. Adm. Part. - Energia Elétrica",
+  "13017462000163": "Energia Elétrica",
+  "07282377000120": "Energia Elétrica",
+  "28201130000101": "Emp. Adm. Part. - Energia Elétrica",
+  "04423567000121": "Energia Elétrica",
+  "02474103000119": "Energia Elétrica",
+  "09527023000123": "Saneamento, Serv. Água e Gás",
+  "01543032000104": "Energia Elétrica",
+  "06272793000184": "Energia Elétrica",
+  "04895728000180": "Energia Elétrica",
+  "03220438000173": "Energia Elétrica",
+  "15385166000140": "Saneamento, Serv. Água e Gás",
+  "07802794000156": "Energia Elétrica",
+  "12489315000123": "Energia Elétrica",
+  "07823262000103": "Emp. Adm. Part. - Energia Elétrica",
+  "32431519000110": "Energia Elétrica",
+  "42353180000135": "Emp. Adm. Part. - Saneamento, Serv. Água e Gás",
+  "08159965000133": "Saneamento, Serv. Água e Gás",
+  "58070452000120": "Emp. Adm. Part. - Saneamento, Serv. Água e Gás",
+  "00644907000193": "Energia Elétrica",
+  "01548981000179": "Bancos",
+  "02998611000104": "Energia Elétrica",
+  "60872504000123": "Bancos",
+  "01917818000136": "Energia Elétrica",
+  "03378521000175": "Emp. Adm. Part. - Energia Elétrica",
+  "60444437000146": "Energia Elétrica",
+  "10234027000100": "Energia Elétrica",
+  "10240186000100": "Energia Elétrica",
+  "09584854000137": "Energia Elétrica",
+  "46568486000160": "Emp. Adm. Part. - Energia Elétrica",
+  "01083200000118": "Emp. Adm. Part. - Energia Elétrica",
+  "09625321000156": "Energia Elétrica",
+  "12300288000107": "Energia Elétrica",
+  "03279285000130": "Saneamento, Serv. Água e Gás",
+  "11421994000136": "Saneamento, Serv. Água e Gás",
+  "14388334000199": "Bancos",
+  "44854238000150": "Saneamento, Serv. Água e Gás",
+  "49703913000163": "Emp. Adm. Part. - Energia Elétrica",
+  "02291077000193": "Energia Elétrica",
+  "02382073000110": "Saneamento, Serv. Água e Gás",
+  "28367479000118": "Emp. Adm. Part. - Energia Elétrica",
+  "61584140000149": "Energia Elétrica",
+  "10319900000150": "Saneamento, Serv. Água e Gás",
+  "08534605000174": "Energia Elétrica",
+  "02016440000162": "Energia Elétrica",
+  "38199406000118": "Energia Elétrica",
+  "23096269000119": "Energia Elétrica",
+  "02998301000181": "Energia Elétrica",
+  "42292007000174": "Saneamento, Serv. Água e Gás",
+  "01616929000102": "Saneamento, Serv. Água e Gás",
+  "42500384000151": "Emp. Adm. Part. - Energia Elétrica",
+  "09149503000106": "Emp. Adm. Part. - Energia Elétrica",
+  "46119855000137": "Saneamento, Serv. Água e Gás",
+  "40263170000183": "Saneamento, Serv. Água e Gás",
+  "27967244000102": "Energia Elétrica",
+  "10502676000137": "Energia Elétrica",
+  "21748188000120": "Emp. Adm. Part. - Energia Elétrica",
+  "07859971000130": "Emp. Adm. Part. - Energia Elétrica",
+  "21728083000100": "Energia Elétrica",
+  "59115685000164": "Emp. Adm. Part. - Energia Elétrica",
+  "04739720000124": "Energia Elétrica",
+  "02536066000126": "Saneamento, Serv. Água e Gás"
+ },
+ "lista": [
+  {
+   "cnpj": "07636657000199",
+   "nome": "AÇO VERDE DO BRASIL S.A",
+   "tickers": ""
+  },
+  {
+   "cnpj": "08827501000158",
+   "nome": "AEGEA SANEAMENTO E PARTICIPAÇÕES S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "10338320000100",
+   "nome": "AFLUENTE TRANSMISSÃO DE ENERGIA ELÉTRICA S/A",
+   "tickers": "AFLT3"
+  },
+  {
+   "cnpj": "04089570000150",
+   "nome": "ÁGUAS GUARIROBA S.A",
+   "tickers": ""
+  },
+  {
+   "cnpj": "20247322000147",
+   "nome": "ALLIED TECNOLOGIA S.A.",
+   "tickers": "ALLD3"
+  },
+  {
+   "cnpj": "05878397000132",
+   "nome": "ALLOS S.A.",
+   "tickers": "ALOS3"
+  },
+  {
+   "cnpj": "82120676000183",
+   "nome": "ALMEIDA JUNIOR SHOPPING CENTERS S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "08364948000138",
+   "nome": "ALUPAR INVESTIMENTO S/A",
+   "tickers": "ALUP11"
+  },
+  {
+   "cnpj": "07526557000100",
+   "nome": "AMBEV S.A.",
+   "tickers": "ABEV3"
+  },
+  {
+   "cnpj": "24624551000194",
+   "nome": "ARGO ENERGIA EMPREENDIMENTOS E PARTICIPAÇÕES S/A",
+   "tickers": ""
+  },
+  {
+   "cnpj": "24624490000165",
+   "nome": "ARGO TRANSMISSÃO DE ENERGIA S/A",
+   "tickers": ""
+  },
+  {
+   "cnpj": "00242184000104",
+   "nome": "ARMAC LOCAÇÃO, LOGÍSTICA E SERVIÇOS S.A.",
+   "tickers": "ARML3"
+  },
+  {
+   "cnpj": "00194724000113",
+   "nome": "AUREN OPERAÇÕES S.A.",
+   "tickers": "AESO3"
+  },
+  {
+   "cnpj": "09346601000125",
+   "nome": "B3 S.A. - BRASIL, BOLSA, BALCÃO",
+   "tickers": ""
+  },
+  {
+   "cnpj": "61186680000174",
+   "nome": "BANCO BMG S/A",
+   "tickers": "BMGB4 BMGB11"
+  },
+  {
+   "cnpj": "92702067000196",
+   "nome": "BANCO DO ESTADO DO RIO GRANDE DO SUL SA",
+   "tickers": "BRSR3 BRSR6 BRSR5"
+  },
+  {
+   "cnpj": "62307848000115",
+   "nome": "BANCO RCI BRASIL S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "28127603000178",
+   "nome": "BANESTES S.A. - BCO EST ESPIRITO SANTO",
+   "tickers": "BEES3 BEES4"
+  },
+  {
+   "cnpj": "17344597000194",
+   "nome": "BB SEGURIDADE PARTICIPAÇÕES S.A.",
+   "tickers": "BBSE3"
+  },
+  {
+   "cnpj": "04902979000144",
+   "nome": "BCO AMAZONIA S.A.",
+   "tickers": "BAZA3"
+  },
+  {
+   "cnpj": "60746948000112",
+   "nome": "BCO BRADESCO S.A.",
+   "tickers": "BBDC3 BBDC4"
+  },
+  {
+   "cnpj": "00000000000191",
+   "nome": "BCO BRASIL S.A.",
+   "tickers": "BBAS3"
+  },
+  {
+   "cnpj": "30306294000145",
+   "nome": "BCO BTG PACTUAL S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "62232889000190",
+   "nome": "BCO DAYCOVAL S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "04913711000108",
+   "nome": "BCO ESTADO DO PARA S.A.",
+   "tickers": "BPAR3"
+  },
+  {
+   "cnpj": "17184037000110",
+   "nome": "BCO MERCANTIL DO BRASIL S.A.",
+   "tickers": "BMEB3 BMEB4"
+  },
+  {
+   "cnpj": "07237373000120",
+   "nome": "BCO NORDESTE DO BRASIL S.A.",
+   "tickers": "BNBR3"
+  },
+  {
+   "cnpj": "90400888000142",
+   "nome": "BCO SANTANDER (BRASIL) S.A.",
+   "tickers": "SANB11 SANB3 SANB4"
+  },
+  {
+   "cnpj": "26845702000160",
+   "nome": "BELÉM TRANSMISSORA DE ENERGIA S.A",
+   "tickers": ""
+  },
+  {
+   "cnpj": "09042817000105",
+   "nome": "BEMOBI MOBILE TECH S.A.",
+   "tickers": "BMOB3"
+  },
+  {
+   "cnpj": "56992423000190",
+   "nome": "BICICLETAS MONARK S.A.",
+   "tickers": "BMKS3"
+  },
+  {
+   "cnpj": "58430828000160",
+   "nome": "BLAU FARMACÊUTICA S.A.",
+   "tickers": "BLAU3"
+  },
+  {
+   "cnpj": "00383281000109",
+   "nome": "BNDES PARTICIPACOES S.A. - BNDESPAR",
+   "tickers": ""
+  },
+  {
+   "cnpj": "10807374000177",
+   "nome": "BOA SAFRA SEMENTES S.A.",
+   "tickers": "SOJA3"
+  },
+  {
+   "cnpj": "87870952000144",
+   "nome": "BORRACHAS VIPAL S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "06977745000191",
+   "nome": "BR MALLS PARTICIPACOES S.A.",
+   "tickers": "BRML3"
+  },
+  {
+   "cnpj": "03847461000192",
+   "nome": "BRADESPAR S.A.",
+   "tickers": "BRAP3 BRAP4"
+  },
+  {
+   "cnpj": "58119199000151",
+   "nome": "BRADSAÚDE S.A.",
+   "tickers": "SAUD3"
+  },
+  {
+   "cnpj": "07628528000159",
+   "nome": "BRASILAGRO - CIA BRAS DE PROP AGRICOLAS",
+   "tickers": "AGRO3"
+  },
+  {
+   "cnpj": "10739356000103",
+   "nome": "BRBI BR PARTNERS S.A",
+   "tickers": "BRBI11"
+  },
+  {
+   "cnpj": "03820456000196",
+   "nome": "BSB ENERGÉTICA S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "05336882000184",
+   "nome": "CACHOEIRA PAULISTA TRANSMISSORA ENERGIA S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "07040108000157",
+   "nome": "CAGECE - CIA DE AGUA E ESGOTO DO CEARA",
+   "tickers": ""
+  },
+  {
+   "cnpj": "22543331000100",
+   "nome": "CAIXA SEGURIDADE PARTICIPAÇÕES S.A.",
+   "tickers": "CXSE3"
+  },
+  {
+   "cnpj": "64904295000103",
+   "nome": "CAMIL ALIMENTOS S.A.",
+   "tickers": "CAML3"
+  },
+  {
+   "cnpj": "00080671000100",
+   "nome": "CARAMURU ALIMENTOS S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "31001230000107",
+   "nome": "CELEO REDES TRANSMISSÃO DE ENERGIA S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "06981180000116",
+   "nome": "CEMIG DISTRIBUICAO S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "06981176000158",
+   "nome": "CEMIG GERACAO E TRANSMISSAO S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "83878892000155",
+   "nome": "CENTRAIS ELET DE SANTA CATARINA S.A.",
+   "tickers": "CLSC3 CLSC4"
+  },
+  {
+   "cnpj": "19014221000147",
+   "nome": "CHINA THREE GORGES BRASIL ENERGIA S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "33938119000169",
+   "nome": "CIA DISTRIB DE GAS DO RIO DE JANEIRO-CEG",
+   "tickers": "CEGR3"
+  },
+  {
+   "cnpj": "15139629000194",
+   "nome": "CIA ELETRICIDADE EST. DA BAHIA - COELBA",
+   "tickers": "CEEB3 CEEB5 CEEB6"
+  },
+  {
+   "cnpj": "17155730000164",
+   "nome": "CIA ENERGETICA DE MINAS GERAIS - CEMIG",
+   "tickers": "CMIG3 CMIG4"
+  },
+  {
+   "cnpj": "10835932000108",
+   "nome": "CIA ENERGETICA DE PERNAMBUCO - CELPE",
+   "tickers": ""
+  },
+  {
+   "cnpj": "07047251000170",
+   "nome": "CIA ENERGETICA DO CEARA - COELCE",
+   "tickers": "COCE3 COCE5 COCE6"
+  },
+  {
+   "cnpj": "08324196000181",
+   "nome": "CIA ENERGETICA DO RIO GDE NORTE - COSERN",
+   "tickers": ""
+  },
+  {
+   "cnpj": "15141799000103",
+   "nome": "CIA FERRO LIGAS DA BAHIA - FERBASA",
+   "tickers": "FESA3 FESA4"
+  },
+  {
+   "cnpj": "61856571000117",
+   "nome": "CIA GAS DE SAO PAULO - COMGAS",
+   "tickers": "CGAS3 CGAS5"
+  },
+  {
+   "cnpj": "87762563000103",
+   "nome": "CIA HABITASUL DE PARTICIPACOES",
+   "tickers": "HBTS5"
+  },
+  {
+   "cnpj": "76483817000120",
+   "nome": "CIA PARANAENSE DE ENERGIA - COPEL",
+   "tickers": "CPLE3 CPLE6 CPLE5"
+  },
+  {
+   "cnpj": "01938783000111",
+   "nome": "CIA PARTICIPACOES ALIANCA DA BAHIA",
+   "tickers": "PEAB3 PEAB4"
+  },
+  {
+   "cnpj": "33050196000188",
+   "nome": "CIA PAULISTA DE FORCA E LUZ",
+   "tickers": ""
+  },
+  {
+   "cnpj": "04172213000151",
+   "nome": "CIA PIRATININGA DE FORCA E LUZ",
+   "tickers": ""
+  },
+  {
+   "cnpj": "92802784000190",
+   "nome": "CIA RIOGRANDENSE DE SANEAMENTO",
+   "tickers": ""
+  },
+  {
+   "cnpj": "43776517000180",
+   "nome": "CIA SANEAMENTO BASICO EST SAO PAULO",
+   "tickers": "SBSP3"
+  },
+  {
+   "cnpj": "17281106000103",
+   "nome": "CIA SANEAMENTO DE MINAS GERAIS-COPASA MG",
+   "tickers": "CSMG3"
+  },
+  {
+   "cnpj": "76484013000145",
+   "nome": "CIA SANEAMENTO DO PARANA - SANEPAR",
+   "tickers": "SAPR3 SAPR4 SAPR11"
+  },
+  {
+   "cnpj": "22261473000185",
+   "nome": "COMPANHIA DE GÁS DE MINAS GERAIS - GASMIG",
+   "tickers": ""
+  },
+  {
+   "cnpj": "00070698000111",
+   "nome": "COMPANHIA ENERGÉTICA DE BRASÍLIA - CEB",
+   "tickers": "CEBR3 CEBR6 CEBR5"
+  },
+  {
+   "cnpj": "28925264000175",
+   "nome": "COMPANHIA ENERGÉTICA JAGUARA",
+   "tickers": ""
+  },
+  {
+   "cnpj": "28942127000149",
+   "nome": "COMPANHIA ENERGÉTICA MIRANDA",
+   "tickers": ""
+  },
+  {
+   "cnpj": "19526748000150",
+   "nome": "COMPANHIA INDUSTRIAL CATAGUASES",
+   "tickers": "CATA3"
+  },
+  {
+   "cnpj": "21389501000181",
+   "nome": "COMPASS GÁS E ENERGIA S.A.",
+   "tickers": "PASS3 PASS5 PASS6"
+  },
+  {
+   "cnpj": "02509491000126",
+   "nome": "CONC ECOVIAS IMIGRANTES S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "10841050000155",
+   "nome": "CONC ROD AYRTON SENNA E CARV PINTO S.A.-ECOPISTAS",
+   "tickers": ""
+  },
+  {
+   "cnpj": "02451848000162",
+   "nome": "CONC SIST ANHANG-BANDEIRANT S.A. AUTOBAN",
+   "tickers": ""
+  },
+  {
+   "cnpj": "36763716000198",
+   "nome": "CONCESSIONÁRIA CATARINENSE DE RODOVIAS S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "22163297000149",
+   "nome": "CONCESSIONÁRIA PONTE RIO-NITERÓI S.A. - ECOPONTE",
+   "tickers": ""
+  },
+  {
+   "cnpj": "02429144000193",
+   "nome": "CPFL ENERGIA S.A.",
+   "tickers": "CPFE3"
+  },
+  {
+   "cnpj": "08439659000150",
+   "nome": "CPFL ENERGIAS RENOVÁVEIS S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "92715812000131",
+   "nome": "CPFL TRANSMISSÃO S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "62984091000102",
+   "nome": "CRUZEIRO DO SUL EDUCACIONAL S.A.",
+   "tickers": "CSED3"
+  },
+  {
+   "cnpj": "08902291000115",
+   "nome": "CSN MINERAÇÃO S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "01896779000138",
+   "nome": "CSU DIGITAL S.A.",
+   "tickers": "CSUD3"
+  },
+  {
+   "cnpj": "08797760000183",
+   "nome": "CURY CONSTRUTORA E INCORPORADORA S.A.",
+   "tickers": "CURY3"
+  },
+  {
+   "cnpj": "73178600000118",
+   "nome": "CYRELA BRAZIL REALTY S.A.EMPREEND E PART",
+   "tickers": "CYRE3 CYRE4"
+  },
+  {
+   "cnpj": "97837181000147",
+   "nome": "DEXCO S.A.",
+   "tickers": "DXCO3"
+  },
+  {
+   "cnpj": "02193750000152",
+   "nome": "DEXXOS PARTICIPAÇÕES S.A.",
+   "tickers": "DEXP3 DEXP4"
+  },
+  {
+   "cnpj": "92665611000177",
+   "nome": "DIMED S.A. DISTRIBUIDORA DE MEDICAMENTOS",
+   "tickers": "PNVL3"
+  },
+  {
+   "cnpj": "07659538000151",
+   "nome": "DINAMICA ENERGIA S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "16614075000100",
+   "nome": "DIRECIONAL ENGENHARIA S.A.",
+   "tickers": "DIRR3"
+  },
+  {
+   "cnpj": "08873873000110",
+   "nome": "ECORODOVIAS CONCESSÕES E SERVIÇOS S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "03983431000103",
+   "nome": "EDP - ENERGIAS DO BRASIL S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "28152650000171",
+   "nome": "EDP ESPIRITO SANTO DISTRIBUIÇÃO DE ENERGIA S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "02302100000106",
+   "nome": "EDP SÃO PAULO DISTRIBUIÇÃO DE ENERGIA S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "02328280000197",
+   "nome": "ELEKTRO REDES S.A.",
+   "tickers": "EKTR3 EKTR4"
+  },
+  {
+   "cnpj": "61695227000193",
+   "nome": "ELETROPAULO METROP. ELET. SAO PAULO S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "01968293000168",
+   "nome": "ELETRORIVER S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "15413826000150",
+   "nome": "ENERGISA MATO GROSSO DO SUL - DIST DE ENERGIA S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "03467321000199",
+   "nome": "ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A",
+   "tickers": "ENMT3 ENMT4"
+  },
+  {
+   "cnpj": "19527639000158",
+   "nome": "ENERGISA MINAS RIO - DISTRIBUIDORA DE ENERGIA S/A",
+   "tickers": ""
+  },
+  {
+   "cnpj": "09095183000140",
+   "nome": "ENERGISA PARAÍBA - DISTRIBUIDORA DE ENERGIA S/A",
+   "tickers": ""
+  },
+  {
+   "cnpj": "00864214000106",
+   "nome": "ENERGISA S.A.",
+   "tickers": "ENGI3 ENGI4 ENGI11"
+  },
+  {
+   "cnpj": "13017462000163",
+   "nome": "ENERGISA SERGIPE - DISTRIBUIDORA DE ENERGIA S/A",
+   "tickers": ""
+  },
+  {
+   "cnpj": "07282377000120",
+   "nome": "ENERGISA SUL-SUDESTE - DISTRIBUIDORA DE ENERGIA S/A",
+   "tickers": ""
+  },
+  {
+   "cnpj": "02474103000119",
+   "nome": "ENGIE BRASIL ENERGIA S.A.",
+   "tickers": "EGIE3"
+  },
+  {
+   "cnpj": "06272793000184",
+   "nome": "EQUATORIAL MARANHÃO DISTRIBUIDORA DE ENERGIA S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "04895728000180",
+   "nome": "EQUATORIAL PARÁ DISTRIBUIDORA DE ENERGIA S.A.",
+   "tickers": "CELP3 CELP7 CELP5 CELP6"
+  },
+  {
+   "cnpj": "03220438000173",
+   "nome": "EQUATORIAL S.A.",
+   "tickers": "EQTL3"
+  },
+  {
+   "cnpj": "07802794000156",
+   "nome": "ESSENTIA PCHS S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "56643018000166",
+   "nome": "EUCATEX S.A. INDUSTRIA E COMERCIO",
+   "tickers": "EUCA3 EUCA4"
+  },
+  {
+   "cnpj": "61190096000192",
+   "nome": "EUROFARMA LABORATÓRIOS S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "08312229000173",
+   "nome": "EZ TEC EMPREEND. E PARTICIPACOES S.A.",
+   "tickers": "EZTC3"
+  },
+  {
+   "cnpj": "12489315000123",
+   "nome": "FERREIRA GOMES ENERGIA S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "09257877000137",
+   "nome": "FERROVIA NORTE SUL S/A",
+   "tickers": ""
+  },
+  {
+   "cnpj": "60840055000131",
+   "nome": "FLEURY S.A.",
+   "tickers": "FLRY3"
+  },
+  {
+   "cnpj": "88610126000129",
+   "nome": "FRASLE MOBILITY S.A.",
+   "tickers": "FRAS3"
+  },
+  {
+   "cnpj": "33611500000119",
+   "nome": "GERDAU S.A.",
+   "tickers": "GGBR3 GGBR4"
+  },
+  {
+   "cnpj": "09229201000130",
+   "nome": "GPS PARTICIPAÇÕES E EMPREENDIMENTOS S.A.",
+   "tickers": "GGPS3"
+  },
+  {
+   "cnpj": "92012467000170",
+   "nome": "GRAZZIOTIN S.A.",
+   "tickers": "CGRA3 CGRA4"
+  },
+  {
+   "cnpj": "89850341000160",
+   "nome": "GRENDENE S.A.",
+   "tickers": "GRND3"
+  },
+  {
+   "cnpj": "49263189000102",
+   "nome": "HELBOR EMPREENDIMENTOS S.A.",
+   "tickers": "HBOR3"
+  },
+  {
+   "cnpj": "02932074000191",
+   "nome": "HYPERA S.A.",
+   "tickers": "HYPE3"
+  },
+  {
+   "cnpj": "60543816000193",
+   "nome": "IGUATEMI S.A.",
+   "tickers": "IGTI3 IGTI4 IGTI11"
+  },
+  {
+   "cnpj": "82901000000127",
+   "nome": "INTELBRAS S.A. IND. DE TELECOMUNICAÇÃO ELETRÔNICA BRASILEIRA",
+   "tickers": "INTB3"
+  },
+  {
+   "cnpj": "00644907000193",
+   "nome": "INVESTCO S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "01548981000179",
+   "nome": "INVESTIMENTOS BEMGE S.A.",
+   "tickers": "FIGE3 FIGE4"
+  },
+  {
+   "cnpj": "61156113000175",
+   "nome": "IOCHPE MAXION S.A.",
+   "tickers": "MYPK3"
+  },
+  {
+   "cnpj": "92791243000103",
+   "nome": "IRANI PAPEL E EMBALAGEM S.A.",
+   "tickers": "RANI3"
+  },
+  {
+   "cnpj": "02998611000104",
+   "nome": "ISA ENERGIA BRASIL",
+   "tickers": "ISAE3 ISAE4"
+  },
+  {
+   "cnpj": "60872504000123",
+   "nome": "ITAU UNIBANCO HOLDING S.A.",
+   "tickers": "ITUB3 ITUB4"
+  },
+  {
+   "cnpj": "61532644000115",
+   "nome": "ITAÚSA S.A.",
+   "tickers": "ITSA3 ITSA4"
+  },
+  {
+   "cnpj": "14998371000119",
+   "nome": "J. MACEDO S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "08294224000165",
+   "nome": "JHSF PARTICIPACOES S.A.",
+   "tickers": "JHSF3"
+  },
+  {
+   "cnpj": "87456562000122",
+   "nome": "JOSAPAR-JOAQUIM OLIVEIRA S.A. - PARTICIP",
+   "tickers": "JOPA3 JOPA4"
+  },
+  {
+   "cnpj": "91983056000169",
+   "nome": "KEPLER WEBER S.A.",
+   "tickers": "KEPL3 KEPL11"
+  },
+  {
+   "cnpj": "89637490000145",
+   "nome": "KLABIN S.A.",
+   "tickers": "KLBN11"
+  },
+  {
+   "cnpj": "26462693000128",
+   "nome": "LAVVI EMPREENDIMENTOS IMOBILIÁRIOS S.A.",
+   "tickers": "LAVV3"
+  },
+  {
+   "cnpj": "00743065000127",
+   "nome": "LITEL PARTICIPACOES S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "02286479000108",
+   "nome": "LOCALIZA FLEET S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "16670085000155",
+   "nome": "LOCALIZA RENT A CAR S.A.",
+   "tickers": "RENT3 RENT4"
+  },
+  {
+   "cnpj": "09041168000110",
+   "nome": "LOG COMMERCIAL PROPERTIES E PARTICIPAÇÕES",
+   "tickers": "LOGG3"
+  },
+  {
+   "cnpj": "92754738000162",
+   "nome": "LOJAS RENNER S.A.",
+   "tickers": "LREN3"
+  },
+  {
+   "cnpj": "08078847000109",
+   "nome": "LPS BRASIL - CONSULTORIA DE IMOVEIS S.A.",
+   "tickers": "LPSB3"
+  },
+  {
+   "cnpj": "43948405000169",
+   "nome": "LUPO S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "60476884000187",
+   "nome": "MAHLE METAL LEVE S.A.",
+   "tickers": "LEVE3"
+  },
+  {
+   "cnpj": "09584854000137",
+   "nome": "MANAUS TRANSMISSORA DE ENERGIA S.A",
+   "tickers": ""
+  },
+  {
+   "cnpj": "88611835000129",
+   "nome": "MARCOPOLO S.A.",
+   "tickers": "POMO3 POMO4"
+  },
+  {
+   "cnpj": "12181987000177",
+   "nome": "MELNICK DESENVOLVIMENTO IMOBILIÁRIO S.A.",
+   "tickers": "MELK3"
+  },
+  {
+   "cnpj": "92690783000109",
+   "nome": "METALURGICA GERDAU S.A.",
+   "tickers": "GOAU3 GOAU4"
+  },
+  {
+   "cnpj": "16234171000115",
+   "nome": "METANOR SA METANOL DO NE",
+   "tickers": ""
+  },
+  {
+   "cnpj": "86375425000109",
+   "nome": "METISA METALURGICA TIMBOENSE S.A.",
+   "tickers": "MTSA3 MTSA4"
+  },
+  {
+   "cnpj": "27093558000115",
+   "nome": "MILLS LOCAÇÃO, SERVIÇOS E LOGÍSTICA S.A.",
+   "tickers": "MILS3"
+  },
+  {
+   "cnpj": "17161241000115",
+   "nome": "MINASMAQUINAS S.A.",
+   "tickers": "MMAQ3 MMAQ4"
+  },
+  {
+   "cnpj": "07882930000165",
+   "nome": "MITRE REALTY EMPREENDIMENTOS E PARTICIPAÇÕES S.A.",
+   "tickers": "MTRE3"
+  },
+  {
+   "cnpj": "12592831000189",
+   "nome": "MNLT S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "02846056000197",
+   "nome": "MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.",
+   "tickers": "MOTV3"
+  },
+  {
+   "cnpj": "01417222000177",
+   "nome": "MRS LOGISTICA S.A.",
+   "tickers": "MRSA3 MRSA5 MRSA6"
+  },
+  {
+   "cnpj": "07816890000153",
+   "nome": "MULTIPLAN - EMPREEND IMOBILIARIOS S.A.",
+   "tickers": "MULT3"
+  },
+  {
+   "cnpj": "09625321000156",
+   "nome": "NORTE BRASIL TRANSMISSORA DE ENERGIA S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "04992714000184",
+   "nome": "NOVA TRANSPORTADORA DO SUDESTE S.A. - NTS",
+   "tickers": ""
+  },
+  {
+   "cnpj": "21110778000123",
+   "nome": "OLIVEIRA TRUST S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "96298013000168",
+   "nome": "PACAEMBU CONSTRUTORA S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "92693019000189",
+   "nome": "PANATLANTICA S.A.",
+   "tickers": "PATI3 PATI4"
+  },
+  {
+   "cnpj": "23236821000127",
+   "nome": "PATRIMAR ENGENHARIA S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "33000167000101",
+   "nome": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+   "tickers": "PETR3 PETR4"
+  },
+  {
+   "cnpj": "24230275000180",
+   "nome": "PLANO & PLANO DESENVOLVIMENTO IMOBILIÁRIO S.A.",
+   "tickers": "PLPL3"
+  },
+  {
+   "cnpj": "02149205000169",
+   "nome": "PORTO SEGURO S.A.",
+   "tickers": "PSSA3"
+  },
+  {
+   "cnpj": "81243735000148",
+   "nome": "POSITIVO TECNOLOGIA S.A.",
+   "tickers": "POSI3"
+  },
+  {
+   "cnpj": "08574411000100",
+   "nome": "PRÁTICA PRODUTOS S.A.",
+   "tickers": "PTCA3"
+  },
+  {
+   "cnpj": "02382073000110",
+   "nome": "PROLAGOS S/A - CONC.DE SERVICOS PÚBLICOS DE ÁGUA E ESGOTO",
+   "tickers": ""
+  },
+  {
+   "cnpj": "35791391000194",
+   "nome": "QUALITY SOFTWARE S.A.",
+   "tickers": "QUSW3"
+  },
+  {
+   "cnpj": "61585865000151",
+   "nome": "RAIA DROGASIL S.A.",
+   "tickers": "RADL3"
+  },
+  {
+   "cnpj": "06047087000139",
+   "nome": "REDE D'OR SÃO LUIZ S.A.",
+   "tickers": "RDOR3"
+  },
+  {
+   "cnpj": "61584140000149",
+   "nome": "REDE ENERGIA PARTICIPAÇÕES S.A.",
+   "tickers": "REDE3"
+  },
+  {
+   "cnpj": "02016440000162",
+   "nome": "RGE SUL DISTRIBUIDORA DE ENERGIA S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "59981829000165",
+   "nome": "RODOBENS SA",
+   "tickers": ""
+  },
+  {
+   "cnpj": "03025305000146",
+   "nome": "RODOVIAS DAS COLINAS S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "56720428000163",
+   "nome": "ROMI S.A.",
+   "tickers": "ROMI3"
+  },
+  {
+   "cnpj": "24962466000136",
+   "nome": "RUMO MALHA NORTE S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "01616929000102",
+   "nome": "SANEAMENTO DE GOIAS SA",
+   "tickers": ""
+  },
+  {
+   "cnpj": "02762121000104",
+   "nome": "SANTOS BRASIL PARTICIPACOES S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "51466860000156",
+   "nome": "SAO MARTINHO S.A.",
+   "tickers": "SMTO3"
+  },
+  {
+   "cnpj": "84693183000168",
+   "nome": "SCHULZ S.A.",
+   "tickers": "SHUL3 SHUL4"
+  },
+  {
+   "cnpj": "87043832000173",
+   "nome": "SEIVA S.A. - FLORESTAS E INDÚSTRIAS",
+   "tickers": ""
+  },
+  {
+   "cnpj": "80680093000181",
+   "nome": "SENIOR SISTEMAS S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "89096457000155",
+   "nome": "SLC AGRICOLA S.A.",
+   "tickers": "SLCE3"
+  },
+  {
+   "cnpj": "46119855000137",
+   "nome": "SOCIEDADE ABASTECIMENTO DE ÁGUA E SANEAMENTO S.A - SANASA",
+   "tickers": ""
+  },
+  {
+   "cnpj": "41052420000107",
+   "nome": "SOLAR BEBIDAS S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "33386210000119",
+   "nome": "SONDOTECNICA ENGENHARIA SOLOS S.A.",
+   "tickers": "SOND3 SOND6 SOND5"
+  },
+  {
+   "cnpj": "27967244000102",
+   "nome": "TAPAJÓS TRANSMISSORA DE ENERGIA S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "17359233000188",
+   "nome": "TECIDOS E ARMARINHOS MIGUEL BARTOLOMEU S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "02351144000118",
+   "nome": "TEGMA GESTAO LOGISTICA S.A.",
+   "tickers": "TGMA3"
+  },
+  {
+   "cnpj": "33467572000134",
+   "nome": "TEKNO S.A. - INDUSTRIA E COMERCIO",
+   "tickers": "TKNO3 TKNO4"
+  },
+  {
+   "cnpj": "02558157000162",
+   "nome": "TELEFÔNICA BRASIL S.A",
+   "tickers": "VIVT3"
+  },
+  {
+   "cnpj": "02600854000134",
+   "nome": "TIM BRASIL SERVIÇOS E PARTICIPAÇÕES S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "53113791000122",
+   "nome": "TOTVS S.A.",
+   "tickers": "TOTS3"
+  },
+  {
+   "cnpj": "59418806000147",
+   "nome": "TRACK & FIELD CO S.A.",
+   "tickers": "TFCO4"
+  },
+  {
+   "cnpj": "07859971000130",
+   "nome": "TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.",
+   "tickers": "TAEE3 TAEE4 TAEE11"
+  },
+  {
+   "cnpj": "21728083000100",
+   "nome": "TRANSMISSORA JOSÉ MARIA DE MACEDO DE ELETRICIDADE S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "26609050000164",
+   "nome": "TRAVESSIA SECURITIZADORA S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "94813102000170",
+   "nome": "TRÊS TENTOS AGROINDUSTRIAL S/A",
+   "tickers": "TTEN3"
+  },
+  {
+   "cnpj": "08811643000127",
+   "nome": "TRISUL S.A.",
+   "tickers": "TRIS3"
+  },
+  {
+   "cnpj": "33256439000139",
+   "nome": "ULTRAPAR PARTICIPACOES S.A.",
+   "tickers": "UGPA3"
+  },
+  {
+   "cnpj": "60665981000118",
+   "nome": "UNIÃO QUÍMICA FARMACÊUTICA NACIONAL S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "02255187000108",
+   "nome": "UNIFIQUE TELECOMUNICAÇÕES S.A.",
+   "tickers": "FIQE3"
+  },
+  {
+   "cnpj": "33958695000178",
+   "nome": "UNIPAR CARBOCLORO S.A.",
+   "tickers": "UNIP3 UNIP6 UNIP5"
+  },
+  {
+   "cnpj": "33592510000154",
+   "nome": "VALE S.A.",
+   "tickers": "VALE3"
+  },
+  {
+   "cnpj": "33113309000147",
+   "nome": "VALID SOLUÇÕES S.A.",
+   "tickers": "VLID3"
+  },
+  {
+   "cnpj": "34274233000102",
+   "nome": "VIBRA ENERGIA S/A",
+   "tickers": "VBBR3"
+  },
+  {
+   "cnpj": "33839910000111",
+   "nome": "VIVARA PARTICIPAÇÕES S.A.",
+   "tickers": "VIVA3"
+  },
+  {
+   "cnpj": "32681371000172",
+   "nome": "VIX LOGÍSTICA S.A.",
+   "tickers": ""
+  },
+  {
+   "cnpj": "50926955000142",
+   "nome": "VULCABRAS S.A.",
+   "tickers": "VULC3"
+  },
+  {
+   "cnpj": "84429695000111",
+   "nome": "WEG S.A.",
+   "tickers": "WEGE3"
+  },
+  {
+   "cnpj": "59105999000186",
+   "nome": "WHIRLPOOL S.A.",
+   "tickers": "WHRL3 WHRL4"
+  },
+  {
+   "cnpj": "42278473000103",
+   "nome": "WIZ CO PARTICIPAÇÕES E CORRETAGEM DE SEGUROS S.A.",
+   "tickers": "WIZC3"
+  },
+  {
+   "cnpj": "33228024000151",
+   "nome": "WLM PART. E COMÉRCIO DE MÁQUINAS E VEÍCULOS S.A.",
+   "tickers": "WLMM3 WLMM4"
+  },
+  {
+   "cnpj": "03538833000107",
+   "nome": "XX DE NOVEMBRO INVESTIMENTOS E PARTICIPAÇÕES S.A.",
+   "tickers": ""
+  }
+ ]
+}

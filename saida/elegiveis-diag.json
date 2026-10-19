@@ -1,0 +1,163 @@
+{
+ "gerado": "2026-10-19T17:19:08.178Z",
+ "anos": [
+  2021,
+  2022,
+  2023,
+  2024,
+  2025
+ ],
+ "ano_2025": {
+  "empresas_com_lucro_lido": 669,
+  "empresas_com_dividendo_pago": 400,
+  "linhas_dre": 74589
+ },
+ "ano_2021": {
+  "empresas_com_lucro_lido": 765,
+  "empresas_com_dividendo_pago": 413,
+  "linhas_dre": 81659
+ },
+ "ano_2022": {
+  "empresas_com_lucro_lido": 729,
+  "empresas_com_dividendo_pago": 415,
+  "linhas_dre": 82016
+ },
+ "ano_2023": {
+  "empresas_com_lucro_lido": 732,
+  "empresas_com_dividendo_pago": 418,
+  "linhas_dre": 82972
+ },
+ "ano_2024": {
+  "empresas_com_lucro_lido": 709,
+  "empresas_com_dividendo_pago": 390,
+  "linhas_dre": 79070
+ },
+ "setores_incluidos": {
+  "Emp. Adm. Part. - Energia Elétrica": 30,
+  "Saneamento, Serv. Água e Gás": 36,
+  "Energia Elétrica": 90,
+  "Bancos": 21,
+  "Emp. Adm. Part. - Bancos": 1,
+  "Emp. Adm. Part. - Saneamento, Serv. Água e Gás": 8
+ },
+ "empresas_por_setor": 165,
+ "conferir": [
+  {
+   "nome": "ENGIE BRASIL ENERGIA S.A.",
+   "aprovada": true,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "TELEFÔNICA BRASIL S.A",
+   "aprovada": true,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "EQUATORIAL S.A.",
+   "aprovada": true,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "CEMIG GERACAO E TRANSMISSAO S.A.",
+   "aprovada": true,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "CIA ENERGETICA DE MINAS GERAIS - CEMIG",
+   "aprovada": true,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "CIA SANEAMENTO DE MINAS GERAIS-COPASA MG",
+   "aprovada": true,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "CAIXA SEGURIDADE PARTICIPAÇÕES S.A.",
+   "aprovada": true,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+   "aprovada": true,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "VALE S.A.",
+   "aprovada": true,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "BCO BRADESCO S.A.",
+   "aprovada": true,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "ITAU UNIBANCO HOLDING S.A.",
+   "aprovada": true,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "WEG S.A.",
+   "aprovada": true,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "KLABIN S.A.",
+   "aprovada": true,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "BCO SANTANDER (BRASIL) S.A.",
+   "aprovada": true,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "EQUATORIAL GOIÁS DISTRIBUIDORA DE ENERGIA S.A.",
+   "aprovada": false,
+   "anos": "2021:PREJUIZO/nao pagou | 2022:PREJUIZO/nao pagou | 2023:PREJUIZO/nao pagou | 2024:lucro/nao pagou | 2025:PREJUIZO/nao pagou"
+  },
+  {
+   "nome": "EQUATORIAL PARÁ DISTRIBUIDORA DE ENERGIA S.A.",
+   "aprovada": true,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "EQUATORIAL MARANHÃO DISTRIBUIDORA DE ENERGIA S.A.",
+   "aprovada": true,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "CEMIG DISTRIBUICAO S.A.",
+   "aprovada": true,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "BRADESCO LEASING S.A. ARREND MERCANTIL",
+   "aprovada": false,
+   "anos": "2021:PREJUIZO/pagou | 2022:lucro/nao pagou | 2023:lucro/pagou | 2024:lucro/nao pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "CIA SANEAMENTO DO PARANA - SANEPAR",
+   "aprovada": true,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/pagou | 2025:lucro/pagou"
+  },
+  {
+   "nome": "BANRISUL ARMAZENS GERAIS SA",
+   "aprovada": false,
+   "anos": "2021:lucro/pagou | 2022:lucro/pagou | 2023:lucro/pagou | 2024:lucro/nao pagou | 2025:sem dado/nao pagou"
+  },
+  {
+   "nome": "BANRISUL SOLUÇÕES EM PAGAMENTOS S.A. - INSTITUIÇÃO DE PAGAME",
+   "aprovada": false,
+   "anos": "2021:lucro/pagou | 2022:sem dado/nao pagou | 2023:sem dado/nao pagou | 2024:sem dado/nao pagou | 2025:sem dado/nao pagou"
+  }
+ ],
+ "aprovadas": 219,
+ "reprovadas": {
+  "prejuizo": 286,
+  "sem_dividendo": 82,
+  "historico_incompleto": 267
+ },
+ "total_analisadas": 854
+}
