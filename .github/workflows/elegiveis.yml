@@ -1,0 +1,33 @@
+# Lista de empresas elegíveis do Plano B (1 vez por mês, e quando você mandar rodar):
+#   só entram empresas com lucro líquido positivo e dividendos/JCP pagos em TODOS os últimos 5 anos (balanços anuais da CVM).
+# O noticiário usa essa lista (saida/elegiveis.json). Exceções à mão: campo "excecoes" do destaques.json.
+# Para conferir: abra saida/elegiveis-diag.json (campo "conferir" mostra empresas conhecidas ano a ano) e saida/elegiveis.json.
+name: Lista de empresas elegíveis (lucro e dividendos)
+on:
+  schedule:
+    - cron: '0 9 5 * *'      # dia 5 de cada mês, 6h de Brasília
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: planob-dados
+  cancel-in-progress: false
+jobs:
+  elegiveis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Calcular a lista
+        run: node elegiveis.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida
+          git diff --cached --quiet || git commit -m "Elegíveis: atualiza lista de empresas (lucro e dividendos)"
+          git pull --rebase
+          git push
