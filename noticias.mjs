@@ -44,8 +44,9 @@ const HOJE = agora.toISOString().slice(0, 10), DOW = agora.getUTCDay();
 const dataBR = (iso) => iso.slice(8, 10) + '/' + iso.slice(5, 7) + '/' + iso.slice(0, 4);
 const iso = (d) => d.toISOString().slice(0, 10);
 
+const causa = (e) => String((e && e.message) || e) + (e && e.cause ? ' [' + (e.cause.code || e.cause.message || e.cause) + ']' : '');
 async function baixar(url, ms = 120000) {
-  const r = await fetch(url, { headers: UA, signal: AbortSignal.timeout(ms), redirect: 'follow' });
+  const r = await fetch(url, { headers: UA, signal: AbortSignal.timeout(ms), redirect: 'follow' }).catch((e) => { throw new Error('download do documento falhou: ' + causa(e) + ' ' + url); });
   if (!r.ok) throw new Error('HTTP ' + r.status + ' ' + url);
   return Buffer.from(await r.arrayBuffer());
 }
@@ -126,7 +127,7 @@ async function textoDoDocumento_(link) {
   throw new Error('formato de documento não suportado');
 }
 async function chamarIA(modelo, prompt, maxTokens) {
-  const r = await fetch(IA_URL, { method: 'POST', headers: { 'content-type': 'application/json', 'x-api-key': IA_CHAVE, 'anthropic-version': '2023-06-01' }, body: JSON.stringify({ model: modelo, max_tokens: maxTokens, messages: [{ role: 'user', content: prompt }] }), signal: AbortSignal.timeout(90000) });
+  const r = await fetch(IA_URL, { method: 'POST', headers: { 'content-type': 'application/json', 'x-api-key': IA_CHAVE, 'anthropic-version': '2023-06-01' }, body: JSON.stringify({ model: modelo, max_tokens: maxTokens, messages: [{ role: 'user', content: prompt }] }), signal: AbortSignal.timeout(90000) }).catch((e) => { throw new Error('chamada à API da Anthropic falhou: ' + causa(e)); });
   const j = await r.json().catch(() => ({}));
   if (!r.ok) throw new Error('IA (' + modelo + '): HTTP ' + r.status + ' ' + (j.error && j.error.message || ''));
   return j.content && j.content[0] && j.content[0].text ? j.content[0].text.trim() : '';
@@ -205,6 +206,7 @@ if (DOW === 0 || DOW === 6) { console.log('fim de semana: sem noticiário.'); pr
 const diag = { gerado: new Date().toISOString(), modo: MODO, ia: !!IA_CHAVE };
 const gravaDiag = () => { try { fs.writeFileSync(path.join(SAIDA, 'noticias-diag.json'), JSON.stringify(diag, null, 1)); } catch (e) { /* ignora */ } };
 try {
+  if (IA_CHAVE) { try { diag.ia_teste = 'ok: ' + (await chamarIA(IA_MODELO, 'Responda apenas: ok', 10)).slice(0, 20); } catch (e) { diag.ia_teste = 'falhou: ' + causa(e); } }
   const primeira = !Array.isArray(est.enviados);
   const enviados = new Set(est.enviados || []);
   const tickers = await mapaTickers(diag);
