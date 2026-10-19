@@ -1,0 +1,47 @@
+# Liquidez dos FIIs (toda segunda-feira, 6h de Brasília):
+#   calcula o volume médio negociado por dia (últimos ~21 pregões) de cada FII e guarda só os que passam de R$ 1 milhão/dia
+#   (arquivo saida/liquidez-fiis.json). Essa lista decide quais FIIs entram nos avisos de rendimentos do Telegram
+#   e nas matérias do site (rendimento extraordinário, grandes compras e vendas).
+# Depois já atualiza os proventos (traz também os nomes dos fundos). Não envia nada ao Telegram.
+# Rode à mão na primeira vez (Run workflow) antes de ligar os avisos de proventos.
+name: Liquidez dos FIIs
+on:
+  schedule:
+    - cron: '0 9 * * 1'      # 6h00 (segunda)
+  workflow_dispatch:
+    inputs:
+      minimo:
+        description: 'Liquidez mínima por dia, em reais (padrão 1000000 = R$ 1 milhão)'
+        type: string
+        default: '1000000'
+permissions:
+  contents: write
+concurrency:
+  group: planob-dados
+  cancel-in-progress: false
+jobs:
+  liquidez:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Calcular a liquidez dos FIIs
+        env:
+          MIN_LIQUIDEZ: ${{ inputs.minimo || '1000000' }}
+        run: node liquidez.mjs
+      - name: Atualizar cadastro de códigos e proventos
+        continue-on-error: true
+        run: |
+          node gerar-dados.mjs bolsa-hoje || true
+          node gerar-dados.mjs proventos
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida
+          git diff --cached --quiet || git commit -m "Liquidez dos FIIs: atualiza lista e proventos"
+          git pull --rebase
+          git push

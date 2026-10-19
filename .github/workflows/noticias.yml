@@ -45,6 +45,13 @@ jobs:
           TESTE: ${{ inputs.teste && '1' || '' }}
           FORCAR: ${{ inputs.forcar && '1' || '' }}
         run: node noticias.mjs
+      - name: Matérias de FIIs no site (grandes compras e vendas)
+        if: ${{ !inputs.teste }}
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          VALOR_MIN: '10000000'                                 # só compras/vendas acima de R$ 10 milhões
+        run: node fatos-fii.mjs
       - name: Salvar
         if: always()
         run: |
