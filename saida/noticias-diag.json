@@ -1,31 +1,30 @@
 {
- "gerado": "2026-10-19T17:29:17.456Z",
+ "gerado": "2026-10-19T18:20:49.048Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
   "modelo": "claude-haiku-5-5",
   "parada": "end_turn",
   "blocos": [
-   "thinking",
    "text"
   ],
   "usado": {
-   "input_tokens": 2719,
+   "input_tokens": 17,
    "cache_creation_input_tokens": 0,
    "cache_read_input_tokens": 0,
    "cache_creation": {
     "ephemeral_5m_input_tokens": 0,
     "ephemeral_1h_input_tokens": 0
    },
-   "output_tokens": 1830,
+   "output_tokens": 4,
    "output_tokens_details": {
-    "thinking_tokens": 1101
+    "thinking_tokens": 0
    },
    "service_tier": "standard",
    "inference_geo": "global",
    "speed": "standard"
   },
-  "texto": "{\"titulo\":\"Rede D'Or informa formalização do 3º aditamento ao acordo de acionistas da família Moll\",\"resumo\":\"Em fato relevante, a Rede D'Or (RDOR3) comunicou o 3º Aditamento e Consolidação ao Acordo de Acionistas, com prazo de 20 (vinte) anos a partir de 16/10/2026.\",\"paragrafos\":[\"Em 16/10/2026, a"
+  "texto": "ok"
  },
  "ia_teste": "ok: ok",
  "ipe": {
@@ -75,13 +74,12 @@
   ]
  },
  "itens": {
-  "novos": 10,
-  "enviados_agora": 10,
-  "com_ia": 1,
-  "ia_falhas": 1,
-  "fora_do_filtro": 12,
-  "materias": 3
+  "novos": 0,
+  "enviados_agora": 0,
+  "com_ia": 0,
+  "ia_falhas": 0,
+  "fora_do_filtro": 9,
+  "rotina_escondida": 0
  },
- "filtro": "lista elegiveis.json (219 empresas, anos 2021-2022-2023-2024-2025)",
- "ia_erro": "IA (claude-haiku-5-5) respondeu sem texto (parada: max_tokens, blocos: thinking)"
+ "filtro": "lista elegiveis.json (219 empresas, anos 2021-2022-2023-2024-2025)"
 }
