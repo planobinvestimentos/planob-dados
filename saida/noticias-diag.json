@@ -1,7 +1,32 @@
 {
- "gerado": "2026-10-19T17:21:27.399Z",
+ "gerado": "2026-10-19T17:26:06.203Z",
  "modo": "manha",
  "ia": true,
+ "ia_ultima": {
+  "modelo": "claude-haiku-5-5",
+  "parada": "end_turn",
+  "blocos": [
+   "thinking",
+   "text"
+  ],
+  "usado": {
+   "input_tokens": 2017,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 2484,
+   "output_tokens_details": {
+    "thinking_tokens": 1655
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  },
+  "texto": "{\"titulo\":\"Telefônica Brasil (VIVT3) aprova JSCP no montante bruto de R$ 450.000.000,00\",\"resumo\":\"Telefônica Brasil aprovou JSCP bruto de R$ 450.000.000,00. Posição acionária em 26 de outubro de 2026 e pagamento até 30 de abril de 2027.\",\"paragrafos\":[\"A Telefônica Brasil S.A. (VIVT3) informou que "
+ },
  "ia_teste": "ok: ok",
  "ipe": {
   "linhas": 37434,
@@ -52,11 +77,10 @@
  "itens": {
   "novos": 2,
   "enviados_agora": 2,
-  "com_ia": 1,
+  "com_ia": 0,
   "ia_falhas": 0,
   "fora_do_filtro": 9,
-  "materias": 0
+  "materias": 1
  },
- "filtro": "lista elegiveis.json (219 empresas, anos 2021-2022-2023-2024-2025)",
- "materia_erro": "resposta da IA sem JSON"
+ "filtro": "lista elegiveis.json (219 empresas, anos 2021-2022-2023-2024-2025)"
 }
