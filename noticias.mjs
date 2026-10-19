@@ -64,6 +64,7 @@ const passaFiltro = (cnpj, tickers) => tickers.some((t) => EXCECOES.has(t.slice(
 const ehPrincipal = (tickers) => tickers.some((t) => PRINCIPAIS.has(t.slice(0, 4)));
 const setorDe = (tickers) => { for (const [s, lista] of Object.entries(SETORES)) if (tickers.some((t) => lista.includes(t.slice(0, 4)))) return s; return 'geral'; };
 const PROVENTO = /dividend|jcp|juros sobre|provento|bonifica|rendimento|distribui[cç][aã]o de (lucros|resultado)/i;   // anúncios de proventos (qualquer empresa)
+const ROTINA = /posse|ren[uú]ncia|elei[cç][aã]o|eleito|nomea[cç][aã]o|substitui[cç][aã]o d[eo] (diretor|conselheiro|membro)|(membro|diretor|conselheiro|presidente)s? d[oea]|convoca[cç][aã]o|assembleia|\bAGO\b|\bAGE\b|calend[aá]rio|regimento|estatuto|c[oó]digo de conduta|pol[ií]tica d[eo]|comit[eê]|conselho fiscal|plano de op[cç][aã]o|participa[cç][aã]o nos resultados|cancelamento de a[cç][oõ]es|registro de companhia|cadastro/i;   // avisos de rotina (empresas fora da lista de acompanhamento)
 const IMPORTANTE = /resultado|release|balan[cç]o|fus[aã]o|incorpora|aquisi|venda de|oferta|recompra|guidance|reestrutura|recupera[cç][aã]o|insolv|dividend|jcp|juros sobre/i;
 
 /* ---------- tickers de cada empresa (CNPJ -> códigos), vindos do FCA da CVM; renovado a cada 14 dias ---------- */
@@ -223,7 +224,7 @@ try {
   const chave = (d) => d.prot + '|' + d.ver;
   const novos = [];
   const vistosConteudo = new Set();
-  let foraFiltro = 0;
+  let foraFiltro = 0, rotina = 0;
   for (const d of todos) {
     if (!FORCAR && enviados.has(chave(d))) continue;
     const dup = d.cnpj + '|' + d.cat + '|' + d.assunto + '|' + d.data;   // mesmo aviso entregue em duas versões: publica só uma
@@ -233,13 +234,14 @@ try {
     if (!t.length) continue;
     if (!passaFiltro(d.cnpj, t)) { foraFiltro++; continue; }
     const dest = ehDestaque(t), prov = PROVENTO.test(d.assunto || '');
+    if (!dest && !prov && ROTINA.test(d.assunto || '') && !IMPORTANTE.test(d.assunto || '')) { rotina++; enviados.add(chave(d)); continue; }   // rotina fora da lista: não publica
     if (!dest && !prov && !/fato relevante/i.test(d.cat)) continue;  // fora da lista: Fatos Relevantes e anúncios de proventos
     novos.push(Object.assign(d, { tickers: t, dest, prov }));
   }
   /* Fatos Relevantes primeiro; limita o tamanho da mensagem */
   novos.sort((a, b) => (b.dest - a.dest) || (/fato relevante/i.test(b.cat) - /fato relevante/i.test(a.cat)) || (b.data + b.prot).localeCompare(a.data + a.prot));
   const escolhidos = [...novos.filter((d) => d.dest && !d.prov).slice(0, MAXIMO), ...novos.filter((d) => d.prov).slice(0, MAX_PROV), ...novos.filter((d) => !d.dest && !d.prov).slice(0, MAX_OUTROS)];
-  diag.itens = { novos: novos.length, enviados_agora: escolhidos.length, com_ia: 0, ia_falhas: 0, fora_do_filtro: foraFiltro };
+  diag.itens = { novos: novos.length, enviados_agora: escolhidos.length, com_ia: 0, ia_falhas: 0, fora_do_filtro: foraFiltro, rotina_escondida: rotina };
   diag.filtro = ELEGIVEIS ? 'lista elegiveis.json (' + Object.keys(ELEGIVEIS.empresas).length + ' empresas, anos ' + ELEGIVEIS.anos.join('-') + ')' : 'lista ainda não gerada: só a lista de acompanhamento';
   if (!escolhidos.length) { console.log('sem documentos novos para o noticiário.'); gravaDiag(); est.enviados = [...enviados]; salvar(); process.exit(0); }
 
@@ -275,7 +277,7 @@ try {
   }
   gravaDiag();
   if (linhas.length || provs.length || outros.length) {
-    const resumoIA = diag.itens.com_ia ? 'Resumos automáticos feitos por IA a partir dos documentos enviados à CVM; confira sempre o original.' : 'Assuntos informados pelas empresas à CVM; confira sempre o documento original.';
+    const resumoIA = diag.itens.com_ia ? 'Fonte: documentos enviados à CVM; confira sempre o original.' : 'Assuntos informados pelas empresas à CVM; confira sempre o documento original.';
     const sobrou = novos.length - escolhidos.length;
     await enviar(['📰 NOTICIÁRIO CORPORATIVO – ' + DIAS[DOW] + ', ' + dataBR(HOJE) + ' · ' + (agora.getUTCHours() + (agora.getUTCMinutes() >= 30 ? 1 : 0)) + 'h', ...linhas, provs.length ? '💰 Dividendos, JCP e bonificações\n' + provs.join('\n') : '', outros.length ? '📌 Outros fatos relevantes\n' + outros.join('\n') : '', sobrou > 0 ? '+' + sobrou + ' documentos no próximo envio.' : '', 'Fonte: CVM. ' + resumoIA, 'Conteúdo educacional. Não é recomendação de investimento.'].filter(Boolean).join('\n\n'));
   }
