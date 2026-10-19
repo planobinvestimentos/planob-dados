@@ -1,0 +1,16 @@
+{
+ "gerado": "2026-10-19T15:36:02.859Z",
+ "modo": "semana",
+ "hoje": "2026-10-19",
+ "global_recebidos": 86,
+ "global": "ok (1 de alto impacto)",
+ "ibge_recebidos": 200,
+ "ibge": "ok (0 de interesse)",
+ "regras": "ok (1)",
+ "manual": "ok (0)",
+ "eventos": 2,
+ "por_fonte": {
+  "regra": 1,
+  "global": 1
+ }
+}
