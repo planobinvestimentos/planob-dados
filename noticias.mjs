@@ -136,7 +136,10 @@ async function chamarIA(modelo, prompt, maxTokens) {
   const r = await fetch(IA_URL, { method: 'POST', headers: { 'content-type': 'application/json', 'x-api-key': IA_CHAVE, 'anthropic-version': '2023-06-01' }, body: JSON.stringify({ model: modelo, max_tokens: maxTokens, messages: [{ role: 'user', content: prompt }] }), signal: AbortSignal.timeout(90000) }).catch((e) => { throw new Error('chamada à API da Anthropic falhou: ' + causa(e)); });
   const j = await r.json().catch(() => ({}));
   if (!r.ok) throw new Error('IA (' + modelo + '): HTTP ' + r.status + ' ' + (j.error && j.error.message || ''));
-  return j.content && j.content[0] && j.content[0].text ? j.content[0].text.trim() : '';
+  const texto = (Array.isArray(j.content) ? j.content : []).filter((b) => b && b.type === 'text' && b.text).map((b) => b.text).join('\n').trim();
+  try { diag.ia_ultima = { modelo, parada: j.stop_reason, blocos: (j.content || []).map((b) => b && b.type), usado: j.usage, texto: texto.slice(0, 300) }; } catch (e) { /* ignora */ }
+  if (!texto) throw new Error('IA (' + modelo + ') respondeu sem texto (parada: ' + j.stop_reason + ', blocos: ' + (j.content || []).map((b) => b && b.type).join(',') + ')');
+  return texto;
 }
 async function resumirIA(d, diag, forte) {
   const texto = (await textoDoDocumento(d.link)).replace(/\s+/g, ' ').trim().slice(0, forte ? 30000 : 14000);
@@ -144,10 +147,10 @@ async function resumirIA(d, diag, forte) {
   const prompt = 'Você resume comunicados de empresas listadas na B3 para um canal de investidores.\nEmpresa: ' + d.empresa + '\nCategoria: ' + d.cat + '\nAssunto informado: ' + d.assunto + '\n\nTexto do documento:\n' + texto +
     '\n\nEscreva UM parágrafo de no máximo ' + (forte ? 65 : d.prov ? 55 : 45) + ' palavras, em português, no estilo de noticiário, começando pelo nome da empresa. Diga o que foi anunciado, com os números e datas principais que estejam no texto (valores, data-com ou data-base, ex-provento, pagamento). Use somente informações do texto: não invente, não calcule o que não estiver nele, não dê opinião nem recomendação. ' + (d.prov ? 'Foque em: tipo de provento (dividendos, JCP, bonificação), valor por ação (bruto), data de corte (data-com/data-base), data do ex-provento e data de pagamento; na bonificação, a proporção e o custo atribuído. ' : '') + 'Se o documento não trouxer nada relevante para investidores, responda exatamente: NADA';
   if (forte) {
-    try { const t = await chamarIA(IA_MODELO_FORTE, prompt, 400); diag.itens.com_ia_forte = (diag.itens.com_ia_forte || 0) + 1; return t; }
+    try { const t = await chamarIA(IA_MODELO_FORTE, prompt, 2000); diag.itens.com_ia_forte = (diag.itens.com_ia_forte || 0) + 1; return t; }
     catch (e) { diag.ia_forte_erro = e.message; /* se o modelo forte falhar, tenta o rápido */ }
   }
-  return chamarIA(IA_MODELO, prompt, 260);
+  return chamarIA(IA_MODELO, prompt, 1500);
 }
 
 /* ---------- matérias para o site (saida/materias.json) ---------- */
@@ -165,7 +168,7 @@ async function escreverMateria(d, diag) {
   const prompt = 'Você é redator do site Plano B Investimentos e escreve matérias curtas sobre comunicados de empresas da B3 para investidores iniciantes.\nEmpresa: ' + d.empresa + ' (' + d.tickers.join(', ') + ')\nCategoria: ' + d.cat + '\nAssunto informado: ' + d.assunto + '\nData de entrega à CVM: ' + dataBR(d.data) + '\n\nTexto do documento:\n' + texto +
     '\n\nEscreva uma matéria em português do Brasil usando SOMENTE o que está no documento. Regras: não invente; não dê opinião, recomendação, preço-alvo ou previsão; não use "compre" nem "venda"; copie valores, percentuais e datas EXATAMENTE como estão no texto, sem converter unidades nem arredondar; não cite outras empresas além das do documento; se uma informação não estiver no texto, não a mencione; tom neutro e claro; quando aparecer termo técnico (data-com, JCP, bonificação, fato relevante), explique em uma frase simples.' +
     '\nResponda apenas com JSON neste formato: {"titulo":"até 90 caracteres, factual, sem sensacionalismo","resumo":"até 180 caracteres, para a prévia no Telegram","paragrafos":["3 a 5 parágrafos curtos"],"tipo":"dividendos|jcp|bonificacao|resultado|fato-relevante|outro"}. Se o documento não trouxer nada relevante para investidores, responda {"nada":true}.';
-  const bruto = await chamarIA(IA_MODELO, prompt, 1200);
+  const bruto = await chamarIA(IA_MODELO, prompt, 4000);
   const m = bruto.match(/\{[\s\S]*\}/);
   if (!m) throw new Error('resposta da IA sem JSON');
   const j = JSON.parse(m[0]);
