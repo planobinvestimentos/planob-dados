@@ -145,6 +145,68 @@ export async function proventosFii({ de, ate, anterior = [], vistos = new Set(),
   return itens;
 }
 
+
+/* ---------- FIIs: rendimentos e amortizações pelo site da B3 (fundos listados), só os FIIs líquidos ---------- */
+export async function proventosFiiB3({ fiis, isinParaTicker, de, diag, simultaneas = 4, nomes = {} }) {
+  const base = process.env.B3_FUNDOS_URL || 'https://sistemaswebb3-listados.b3.com.br/fundsProxy/fundsCall/GetListedSupplementFunds/';
+  const codigos = [...new Set(fiis.map((t) => t.slice(0, 4)))].sort();
+  const liquidos = new Set(fiis);
+  const itens = [], vistos = new Set();
+  let ok = 0, falhas = 0, semRendimentos = 0, abortar = false;
+  diag.fii = { fonte: 'B3 (fundos listados)', fundos: codigos.length, amostra: null };
+  const um = async (cod) => {
+    if (abortar) return;
+    try {
+      const j = await pegar(base + Buffer.from(JSON.stringify({ identifierFund: cod, typeFund: 7, cnpj: '' })).toString('base64'), { json: true, tentativas: 2, ms: 25000 });
+      ok++;
+      const arr = Array.isArray(j) ? j : [j];
+      for (const f of arr) {
+        const caixa = (f && f.cashDividends) || [];
+        if (f && f.fund && f.code) nomes[String(f.code).trim()] = String(f.fund).trim();
+        if (!diag.fii.amostra && caixa.length) diag.fii.amostra = { fundo: f.fund, campos: Object.keys(caixa[0]), primeiro: caixa[0] };
+        if (!caixa.length) semRendimentos++;
+        /* só a cota principal (o recibo de subscrição tem outro código ISIN) e só FIIs líquidos */
+        const proprias = caixa.filter((c) => { const tk = isinParaTicker[c.assetIssued || c.isinCode]; return tk && liquidos.has(tk) && numero(c.rate) > 0; });
+        const rends = proprias.filter((c) => !/AMORTIZ/i.test(c.label || ''));
+        const mediana = (a) => { const o = [...a].sort((x, y) => x - y), m = Math.floor(o.length / 2); return o.length ? (o.length % 2 ? o[m] : (o[m - 1] + o[m]) / 2) : 0; };
+        for (const c of proprias) {
+          const aprov = dataISO(c.approvedOn), tk = isinParaTicker[c.assetIssued || c.isinCode];
+          const v = numero(c.rate);
+          if (!aprov || aprov < de) continue;
+          const tipo = /AMORTIZ/i.test(c.label || '') ? 'Amortização' : 'Rendimento';
+          const chave = [tk, tipo, c.lastDatePrior, c.paymentDate, v].join('|');
+          if (vistos.has(chave)) continue;
+          vistos.add(chave);
+          /* rendimento extraordinário: marcado como tal, 2º rendimento do mesmo mês de referência, ou valor bem acima do habitual do fundo */
+          let extra = '';
+          if (tipo === 'Rendimento') {
+            const ref = String(c.relatedTo || '').trim();
+            const pagISO = (x) => dataISO(x.paymentDate) || '';
+            /* só o pagamento que vem DEPOIS de outro do mesmo mês de referência é o "adicional" */
+            const outrosMesmoMes = rends.filter((o) => o !== c && String(o.relatedTo || '').trim() === ref && (pagISO(o) < pagISO(c) || (pagISO(o) === pagISO(c) && numero(o.rate) > v)));
+            const anteriores = [...new Map(rends.filter((o) => dataISO(o.approvedOn) < aprov && String(o.relatedTo || '').trim() !== ref).map((o) => [String(o.relatedTo || '').trim(), numero(o.rate)])).values()].slice(0, 6);
+            const med = mediana(anteriores);
+            if (/EXTRA/i.test((c.label || '') + ' ' + (c.remarks || ''))) extra = 'indicado como extraordinário pelo fundo';
+            else if (outrosMesmoMes.length) extra = 'um segundo rendimento do mesmo mês de referência (pode ser parcela adicional ou distribuição extraordinária)';
+            else if (anteriores.length >= 3 && med > 0 && v >= 1.6 * med && v - med >= 0.2) extra = 'valor ' + (v / med).toFixed(1).replace('.', ',') + ' vez(es) a mediana dos meses anteriores (' + String(med.toFixed(2)).replace('.', ',') + ')';
+          }
+          itens.push({ t: tk, tipo, v, base: dataBR(c.lastDatePrior), pag: dataBR(c.paymentDate), ent: aprov, ref: String(c.relatedTo || '').trim(), fundo: String(f.fund || '').trim(), extra: extra || undefined });
+        }
+      }
+    } catch (e) {
+      falhas++;
+      if (falhas >= 8 && ok === 0) { abortar = true; diag.fii.erro = 'as primeiras consultas falharam (' + e.message + '): endereço bloqueado ou mudou'; }
+    }
+    await dorme(100);
+  };
+  const fila = [...codigos];
+  await Promise.all(Array.from({ length: simultaneas }, async () => { while (fila.length && !abortar) await um(fila.shift()); }));
+  Object.assign(diag.fii, { ok, falhas, semRendimentos, itens: itens.length });
+  console.log('proventos FIIs (B3):', ok, 'fundos ok,', falhas, 'falhas,', itens.length, 'proventos recentes');
+  if (abortar) throw new Error(diag.fii.erro);
+  return itens;
+}
+
 /* ---------- Ações: dividendos e JCP (site da B3, por empresa) ---------- */
 export async function proventosAcoes({ emissoras, isinParaTicker, de, diag, simultaneas = 4 }) {
   const base = process.env.B3_EMP_URL || 'https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/GetListedSupplementCompany/';
@@ -195,10 +257,27 @@ export async function atualizarProventos(saida, hoje) {
     if (it.isin) isinParaTicker[it.isin] = tk;
     if (it.cls === 'Ação' && !it.sumiu) emissoras.add(tk.slice(0, 4));
   }
-  const saidaJ = { gerado: diag.gerado, de, fii: ant.fii || [], acoes: ant.acoes || [], docsVistos: ant.docsVistos || [] };
+  const saidaJ = { gerado: diag.gerado, de, fii: ant.fii || [], acoes: ant.acoes || [], docsVistos: ant.docsVistos || [], nomes: ant.nomes || {} };
   const vistos = new Set(saidaJ.docsVistos);
-  try { saidaJ.fii = await proventosFii({ de, ate: hoje, anterior: saidaJ.fii, vistos, diag }); }
-  catch (e) { console.warn('aviso proventos FIIs:', e.message); diag.fii = { erro: e.message }; }
+  /* FIIs: preferência pelo site da B3, só para os FIIs com liquidez acima do mínimo (saida/liquidez-fiis.json); sem essa lista, tenta o FNET */
+  const liq = lerJson(path.join(saida, 'liquidez-fiis.json'), null);
+  const fiisLiquidos = liq && liq.fiis ? Object.keys(liq.fiis) : [];
+  let fiiOk = false;
+  if (fiisLiquidos.length >= 20) {
+    try {
+      const nomes = Object.assign({}, ant.nomes || {});
+      const novos = await proventosFiiB3({ fiis: fiisLiquidos, isinParaTicker, de, diag, nomes });
+      saidaJ.nomes = nomes;
+      const mant = (saidaJ.fii || []).filter((x) => x.ent >= de && liq.fiis[x.t]);
+      const chv = (x) => [x.t, x.tipo, x.base, x.pag, x.v].join('|'), ja = new Set(mant.map(chv));
+      saidaJ.fii = mant.concat(novos.filter((x) => !ja.has(chv(x)))); fiiOk = true;
+    } catch (e) { console.warn('aviso proventos FIIs (B3):', e.message); }
+  } else { diag.fii = { aviso: 'liquidez-fiis.json ainda não existe ou está vazio; rode o workflow de liquidez' }; }
+  if (!fiiOk) {
+    /* regra do Plano B: só FIIs com liquidez acima de R$ 1 milhão/dia. Sem a lista de liquidez, ou se a B3 falhar, nenhum FII é divulgado. */
+    saidaJ.fii = fiisLiquidos.length >= 20 ? (saidaJ.fii || []).filter((x) => liq.fiis[x.t]) : [];
+    diag.fii = Object.assign(diag.fii || {}, { aviso_regra: 'FIIs não divulgados nesta rodada (sem lista de liquidez ou falha na B3)' });
+  }
   if (emissoras.size) {
     try { saidaJ.acoes = await proventosAcoes({ emissoras: [...emissoras], isinParaTicker, de, diag }); }
     catch (e) { console.warn('aviso proventos ações:', e.message); diag.acoes = { erro: e.message }; }

@@ -17,6 +17,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { gravarMateriasFii } from './materias-fii.mjs';
 
 const RAIZ = path.dirname(fileURLToPath(import.meta.url));
 const SAIDA = path.join(RAIZ, 'saida');
@@ -143,15 +144,23 @@ function msgEventos(ev) {
 }
 
 /* ---------- proventos ---------- */
-function msgProventos(itens, data) {
+function msgProventos(itens, data, precos = {}) {
   const dt = (br) => br || 'a definir';
+  const curto = (br) => (br ? br.slice(0, 5) : 'a definir');
   const casas = (v) => (Math.abs(v * 100 - Math.round(v * 100)) < 1e-6 ? 2 : Math.abs(v * 10000 - Math.round(v * 10000)) < 1e-6 ? 4 : 6);
-  const linha = (x, ac) => x.t + ' — ' + x.tipo + ': ' + brl(x.v, casas(x.v)) + '\n   ' + (ac ? 'Data-com: ' : 'Data-base: ') + dt(x.base) + ' · Pagamento: ' + dt(x.pag);
-  const grupo = (tit, l, ac) => (l.length ? tit + '\n' + l.sort((a, b) => a.t.localeCompare(b.t)).map((x) => linha(x, ac)).join('\n') : '');
-  const f = itens.filter((x) => x.fonte === 'FII'), a = itens.filter((x) => x.fonte !== 'FII');
-  const corpo = [grupo('🏠 FIIs', f, false), grupo('🏢 AÇÕES', a, true)].filter(Boolean).join('\n\n');
+  /* FII em linha compacta: HGLG11: R$ 1,17 (0,73%) · base 30/09 · pag. 15/10  (% = valor ÷ último fechamento) */
+  const linhaFii = (x) => {
+    const p = precos[x.t], dy = p > 0 && x.tipo !== 'Amortização' ? ' (' + num((x.v / p) * 100) + '%)' : '';
+    return x.t + ': ' + brl(x.v, casas(x.v)) + dy + (x.tipo === 'Amortização' ? ' [amortização]' : '') + (x.extra ? ' 🔔' : '') + ' · base ' + curto(x.base) + ' · pag. ' + curto(x.pag);
+  };
+  const linhaAcao = (x) => x.t + ' — ' + x.tipo + ': ' + brl(x.v, casas(x.v)) + '\n   Data-com: ' + dt(x.base) + ' · Pagamento: ' + dt(x.pag);
+  const f = itens.filter((x) => x.fonte === 'FII').sort((a, b) => a.t.localeCompare(b.t)), a = itens.filter((x) => x.fonte !== 'FII').sort((x, y) => x.t.localeCompare(y.t));
+  const corpo = [f.length ? '🏠 FIIs\n' + f.map(linhaFii).join('\n') : '', a.length ? '🏢 AÇÕES\n' + a.map(linhaAcao).join('\n') : ''].filter(Boolean).join('\n\n');
   if (!corpo) return '';
-  return ['💰 PROVENTOS ANUNCIADOS · ' + dataBR(data), corpo, a.length ? 'Ações: valor bruto por ação. JCP tem imposto retido na fonte.' : '', 'Fonte: B3. Confira sempre o comunicado oficial.', RODAPE].filter(Boolean).join('\n\n');
+  const notas = [];
+  if (f.length) notas.push('FIIs: valor por cota; entre parênteses, o valor em relação ao último fechamento (rendimento de um mês, não garante os próximos). Só FIIs com negociação média acima de R$ 1 milhão por dia.' + (f.some((x) => x.extra) ? ' 🔔 = pagamento fora do padrão habitual do fundo.' : ''));
+  if (a.length) notas.push('Ações: valor bruto por ação. JCP tem imposto retido na fonte.');
+  return ['💰 PROVENTOS ANUNCIADOS · ' + dataBR(data), corpo, notas.join('\n'), 'Fonte: B3. Confira sempre o comunicado oficial.', RODAPE].filter(Boolean).join('\n\n');
 }
 
 /* ---------- envio ---------- */
@@ -222,10 +231,23 @@ try {
   if (prov && faz('proventos') && liberado(18) && (ENVIAR_PROV || TESTE)) {
     const chave = (x) => [x.t, x.tipo, x.base, x.pag, x.v].join('|');
     const vistos = new Set(provIds || []);
-    let novos = (prov.fii || []).map((x) => Object.assign({ fonte: 'FII' }, x)).concat((prov.acoes || []).map((x) => Object.assign({ fonte: 'AÇÃO' }, x)));
+    const liqFii = (lerJson('liquidez-fiis.json') || {}).fiis || {};   // regra: só FIIs com liquidez acima de R$ 1 milhão/dia
+    let novos = (prov.fii || []).filter((x) => liqFii[x.t]).map((x) => Object.assign({ fonte: 'FII' }, x)).concat((prov.acoes || []).map((x) => Object.assign({ fonte: 'AÇÃO' }, x)));
     if (!TESTE) { novos = novos.filter((x) => !vistos.has(chave(x))); if (!provIds) novos = novos.filter((x) => x.ent === HOJE); }
-    const t = msgProventos(novos, HOJE);
-    if (t) { await enviar(t); if (!TESTE) { provIds = [...vistos, ...novos.map(chave)].slice(-3000); salvar(); } }
+    const d1 = lerJson('d1.json');
+    const precos = (d1 && d1.p) || {};
+    const t = msgProventos(novos, HOJE, precos);
+    if (t) {
+      await enviar(t);
+      if (!TESTE) {
+        provIds = [...vistos, ...novos.map(chave)].slice(-3000); salvar();
+        try { const n = gravarMateriasFii(novos.filter((x) => x.fonte === 'FII'), { saida: SAIDA, precos, dataPreco: d1 && d1.data, hoje: HOJE }); if (n) console.log('matérias de rendimento extraordinário no site:', n); }
+        catch (e) { console.warn('aviso: não consegui gravar matérias de FIIs:', e.message); }
+      } else {
+        const ex = novos.filter((x) => x.fonte === 'FII' && x.extra);
+        console.log('(teste) rendimentos extraordinários que virariam matéria no site:', ex.length ? ex.map((x) => x.t + ' (' + x.extra + ')').join('; ') : 'nenhum');
+      }
+    }
     else console.log('sem proventos novos para enviar.');
   } else if (prov && faz('proventos') && liberado(18)) console.log('proventos: envio desligado (PROVENTOS_ENVIAR); nada enviado.');
 } catch (e) {
