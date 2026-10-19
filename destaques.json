@@ -1,5 +1,7 @@
 {
- "_ajuda": "Lista de acompanhamento do Plano B (editável pelo lápis do GitHub). 'acoes' = empresas em destaque: os 4 primeiros caracteres do código (PETR pega PETR3 e PETR4). 'principais' = grandes empresas da bolsa, que também ganham matéria no site (revisar de tempos em tempos). 'setores' define a ilustração da matéria. 'fiis' será usado quando o noticiário de FIIs estiver pronto.",
+ "_ajuda": "Lista de acompanhamento do Plano B (editável pelo lápis do GitHub). 'acoes' = empresas em destaque: os 4 primeiros caracteres do código (PETR pega PETR3 e PETR4). 'principais' = grandes empresas da bolsa, que também ganham matéria no site (revisar de tempos em tempos). 'setores' define a ilustração da matéria. 'setores_excecao' = setores da CVM em que TODAS as empresas entram (energia elétrica, bancos e saneamento). 'excecoes' = empresas que entram no noticiário mesmo sem passar no filtro de lucro e dividendos (ex.: [\"PETR\", \"VALE\"]; use os 4 primeiros caracteres do código). 'fiis' será usado quando o noticiário de FIIs estiver pronto.",
+ "excecoes": ["VALE", "PETR", "BBAS", "KLBN", "SAPR", "CMIG", "TAEE", "CMIN", "BBDC", "SANB", "ITUB", "ITSA"],
+ "setores_excecao": ["ENERGIA ELETRICA", "BANCOS", "SANEAMENTO"],
  "acoes": {
   "PETR": "Petrobras",
   "CMIG": "Cemig",

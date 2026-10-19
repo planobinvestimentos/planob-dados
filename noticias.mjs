@@ -55,6 +55,12 @@ async function baixar(url, ms = 120000) {
 let DESTAQUES = {}, PRINCIPAIS = new Set(), SETORES = {};
 try { const cfgD = JSON.parse(fs.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), 'destaques.json'), 'utf8')); DESTAQUES = cfgD.acoes || {}; PRINCIPAIS = new Set([...Object.keys(DESTAQUES), ...(cfgD.principais || [])]); SETORES = cfgD.setores || {}; } catch (e) { console.warn('aviso: destaques.json não encontrado; sem lista de acompanhamento.'); }
 const ehDestaque = (tickers) => tickers.some((t) => DESTAQUES[t.slice(0, 4)]);
+/* filtro do Plano B: só empresas com lucro e dividendos nos últimos anos (saida/elegiveis.json, feito por elegiveis.mjs),
+   mais as exceções escolhidas à mão em destaques.json ("excecoes": ["PETR", ...]). Enquanto a lista não existir, vale só a lista de acompanhamento. */
+let EXCECOES = new Set(), ELEGIVEIS = null;
+try { EXCECOES = new Set((JSON.parse(fs.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), 'destaques.json'), 'utf8')).excecoes || []).map((x) => String(x).toUpperCase().slice(0, 4))); } catch (e) { /* ignora */ }
+try { const j = JSON.parse(fs.readFileSync(path.join(SAIDA, 'elegiveis.json'), 'utf8')); if (j && j.empresas && Object.keys(j.empresas).length >= 10) ELEGIVEIS = j; } catch (e) { /* ignora */ }
+const passaFiltro = (cnpj, tickers) => tickers.some((t) => EXCECOES.has(t.slice(0, 4))) || (ELEGIVEIS ? !!(ELEGIVEIS.empresas[cnpj] || (ELEGIVEIS.excecao_setor && ELEGIVEIS.excecao_setor[cnpj])) : ehDestaque(tickers));
 const ehPrincipal = (tickers) => tickers.some((t) => PRINCIPAIS.has(t.slice(0, 4)));
 const setorDe = (tickers) => { for (const [s, lista] of Object.entries(SETORES)) if (tickers.some((t) => lista.includes(t.slice(0, 4)))) return s; return 'geral'; };
 const PROVENTO = /dividend|jcp|juros sobre|provento|bonifica|rendimento|distribui[cç][aã]o de (lucros|resultado)/i;   // anúncios de proventos (qualquer empresa)
@@ -214,6 +220,7 @@ try {
   const chave = (d) => d.prot + '|' + d.ver;
   const novos = [];
   const vistosConteudo = new Set();
+  let foraFiltro = 0;
   for (const d of todos) {
     if (!FORCAR && enviados.has(chave(d))) continue;
     const dup = d.cnpj + '|' + d.cat + '|' + d.assunto + '|' + d.data;   // mesmo aviso entregue em duas versões: publica só uma
@@ -221,6 +228,7 @@ try {
     vistosConteudo.add(dup);
     const t = (tickers[d.cnpj] || []);
     if (!t.length) continue;
+    if (!passaFiltro(d.cnpj, t)) { foraFiltro++; continue; }
     const dest = ehDestaque(t), prov = PROVENTO.test(d.assunto || '');
     if (!dest && !prov && !/fato relevante/i.test(d.cat)) continue;  // fora da lista: Fatos Relevantes e anúncios de proventos
     novos.push(Object.assign(d, { tickers: t, dest, prov }));
@@ -228,7 +236,8 @@ try {
   /* Fatos Relevantes primeiro; limita o tamanho da mensagem */
   novos.sort((a, b) => (b.dest - a.dest) || (/fato relevante/i.test(b.cat) - /fato relevante/i.test(a.cat)) || (b.data + b.prot).localeCompare(a.data + a.prot));
   const escolhidos = [...novos.filter((d) => d.dest && !d.prov).slice(0, MAXIMO), ...novos.filter((d) => d.prov).slice(0, MAX_PROV), ...novos.filter((d) => !d.dest && !d.prov).slice(0, MAX_OUTROS)];
-  diag.itens = { novos: novos.length, enviados_agora: escolhidos.length, com_ia: 0, ia_falhas: 0 };
+  diag.itens = { novos: novos.length, enviados_agora: escolhidos.length, com_ia: 0, ia_falhas: 0, fora_do_filtro: foraFiltro };
+  diag.filtro = ELEGIVEIS ? 'lista elegiveis.json (' + Object.keys(ELEGIVEIS.empresas).length + ' empresas, anos ' + ELEGIVEIS.anos.join('-') + ')' : 'lista ainda não gerada: só a lista de acompanhamento';
   if (!escolhidos.length) { console.log('sem documentos novos para o noticiário.'); gravaDiag(); est.enviados = [...enviados]; salvar(); process.exit(0); }
 
   const linhas = [], provs = [], outros = [];
