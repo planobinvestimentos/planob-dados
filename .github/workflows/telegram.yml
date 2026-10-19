@@ -1,6 +1,7 @@
 # Avisos da bolsa no Telegram (horário de Brasília). Nada é enviado entre 23h e 5h59.
 #   18h    proventos anunciados (FIIs e ações) - só os que ainda não foram enviados (LIGADO desde 19/10)
-#   20h    fechamento: maiores altas e baixas, dólar e criptomoedas (tentativas extras às 20h30 e 21h)
+#   20h    fechamento: maiores altas e baixas, dólar e criptomoedas (tentativas extras às 20h30 e 21h) + proventos que saíram depois das 18h
+#          (releitura da B3: só envia o que ainda não foi enviado; se às 18h não saiu nenhum, é aqui que saem os do dia)
 #   22h    atualizações da B3 (mudança de código, novos listados) + proventos que saíram depois das 18h (tentativa extra 22h30)
 # Cada parte envia uma única vez por dia. Precisa dos segredos TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID.
 name: Aviso diário no Telegram
@@ -54,7 +55,7 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          PARTE: ${{ github.event_name == 'workflow_dispatch' && inputs.parte || (github.event.schedule == '0 21 * * *' && 'proventos' || (github.event.schedule == '0 1 * * *' && 'eventos,proventos' || (github.event.schedule == '30 1 * * *' && 'eventos' || 'fechamento'))) }}
+          PARTE: ${{ github.event_name == 'workflow_dispatch' && inputs.parte || (github.event.schedule == '0 21 * * *' && 'proventos' || (github.event.schedule == '0 1 * * *' && 'eventos,proventos' || (github.event.schedule == '30 1 * * *' && 'eventos' || (github.event.schedule == '0 23 * * *' && 'fechamento,proventos' || 'fechamento')))) }}
           TESTE: ${{ inputs.teste && '1' || '' }}
           FORCAR: ${{ inputs.forcar && '1' || '' }}
           PROVENTOS_ENVIAR: ${{ github.event_name == 'schedule' && '1' || (inputs.proventos && '1' || '0') }}   # nos horários automáticos os proventos são enviados; à mão, só se marcar "proventos"
