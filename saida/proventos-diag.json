@@ -1,14 +1,12 @@
 {
- "gerado": "2026-10-19T15:19:04.738Z",
+ "gerado": "2026-10-19T18:34:23.873Z",
  "de": "2026-10-17",
  "ate": "2026-10-19",
  "fii": {
-  "erro": "The operation was aborted due to timeout"
- },
- "acoes": {
-  "emissoras": 279,
+  "fonte": "B3 (fundos listados)",
+  "fundos": 73,
   "amostra": {
-   "emissora": "AFLT",
+   "fundo": "FII ALIANZA ",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -21,14 +19,46 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAFLTACNOR1",
-    "paymentDate": "31/12/2026",
-    "rate": "0,15851704140",
-    "relatedTo": "Complementar/2026",
-    "approvedOn": "21/07/2026",
-    "isinCode": "BRAFLTACNOR1",
-    "label": "DIVIDENDO",
-    "lastDatePrior": "24/07/2026",
+    "assetIssued": "BRALZRCTF006",
+    "paymentDate": "23/10/2026",
+    "rate": "0,08400000000",
+    "relatedTo": "Setembro-2026/2026",
+    "approvedOn": "16/10/2026",
+    "isinCode": "BRALZRCTF006",
+    "label": "RENDIMENTO",
+    "lastDatePrior": "16/10/2026",
+    "remarks": ""
+   }
+  },
+  "ok": 73,
+  "falhas": 0,
+  "semRendimentos": 1,
+  "itens": 0
+ },
+ "acoes": {
+  "emissoras": 279,
+  "amostra": {
+   "emissora": "ABCB",
+   "campos": [
+    "assetIssued",
+    "paymentDate",
+    "rate",
+    "relatedTo",
+    "approvedOn",
+    "isinCode",
+    "label",
+    "lastDatePrior",
+    "remarks"
+   ],
+   "primeiro": {
+    "assetIssued": "BRABCBACNPR4",
+    "paymentDate": "12/08/2026",
+    "rate": "1,16800000000",
+    "relatedTo": "1º Semestre/2026",
+    "approvedOn": "24/06/2026",
+    "isinCode": "BRABCBACNPR4",
+    "label": "JRS CAP PROPRIO",
+    "lastDatePrior": "29/06/2026",
     "remarks": ""
    }
   },

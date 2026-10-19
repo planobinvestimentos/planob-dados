@@ -1,0 +1,27 @@
+{
+ "gerado": "2026-10-19T18:34:07.147Z",
+ "pregoes_pedidos": 21,
+ "minimo": 1000000,
+ "pregoes": 21,
+ "de": "2026-09-17",
+ "ate": "2026-10-16",
+ "fiis_analisados": 357,
+ "fiis_acima_do_minimo": 73,
+ "maiores": [
+  "TRXF11 R$ 33.6 mi",
+  "KNCR11 R$ 29.3 mi",
+  "XPML11 R$ 25.7 mi",
+  "BTLG11 R$ 25.1 mi",
+  "HGLG11 R$ 22.7 mi",
+  "MXRF11 R$ 22.3 mi",
+  "GGRC11 R$ 14.4 mi",
+  "CPOF11 R$ 12.0 mi",
+  "KNIP11 R$ 11.5 mi",
+  "XPLG11 R$ 11.3 mi",
+  "HGRU11 R$ 10.6 mi",
+  "BRCO11 R$ 10.2 mi",
+  "VISC11 R$ 10.1 mi",
+  "VXXV11 R$ 8.8 mi",
+  "SNEL11 R$ 8.6 mi"
+ ]
+}
