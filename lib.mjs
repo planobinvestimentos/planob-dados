@@ -42,6 +42,8 @@ export function lerCotahist(texto) {
   return { data, precos };
 }
 /* versão completa para o ranking de altas e quedas: fechamento, volume financeiro, negócios, tipo (BDI) e espécie */
+/* ETFs que sempre aparecem no fechamento e nos avisos de proventos (mudar com a variável ETFS_DESTAQUE, separados por vírgula) */
+export const ETFS_DESTAQUE = String(process.env.ETFS_DESTAQUE || 'ETHY11,COIN11').split(',').map((s) => s.trim().toUpperCase()).filter(Boolean);
 export function lerCotahistBolsa(texto) {
   const itens = {};
   let data = '';
@@ -55,8 +57,11 @@ export function lerCotahistBolsa(texto) {
     if (!(c > 0)) continue;
     const d = linha.slice(2, 10);
     if (/^\d{8}$/.test(d)) data = d.slice(0, 4) + '-' + d.slice(4, 6) + '-' + d.slice(6, 8);
+    const px = (a, b) => Math.round((parseInt(linha.slice(a, b), 10) / 100 / fator) * 10000) / 10000;
     itens[tk] = {
       c: Math.round(c * 10000) / 10000,
+      ab: px(56, 69),                                              // preço de abertura
+      max: px(69, 82), min: px(82, 95),                            // máxima e mínima do dia
       vol: (parseInt(linha.slice(170, 188), 10) || 0) / 100,      // volume financeiro do dia, em R$
       neg: parseInt(linha.slice(147, 152), 10) || 0,               // número de negócios
       bdi: linha.slice(10, 12),

@@ -3,9 +3,9 @@
    e `node gerar-dados.mjs proventos`. Horários (Brasília), cada parte sai só quando o dado está disponível
    e, se perdeu o horário, sai na próxima tentativa:
      a partir das 19h:  1) Maiores altas e 2) Maiores baixas (ações, FIIs de tijolo, FIIs de papel, ETFs)
-                        3) Mercado: dólar e cripto (5 maiores altas e 5 maiores baixas do top 50)
-     a partir das 20h:  4) Proventos (FIIs e ações anunciados), só se PROVENTOS_ENVIAR=1
-     a partir das 21h:  5) Atualizações da B3 (mudanças de código, novos listados, possíveis retiradas), só se houver
+                        3) Mercado: dólar e cripto (5 maiores altas e 5 maiores baixas do top 50), preços em dólar
+     a partir das 21h:  4) Atualizações da B3 (mudanças de código, novos listados, possíveis retiradas), só se houver
+     a partir das 22h:  5) Resumo do dia: dividendos, JCP e bonificações anunciados hoje (parte "resumo"; os proventos saem na hora pelo proventos-agora.mjs); às 22h30, proventos que ainda não saíram (parte "proventos") (mudanças de código, novos listados, possíveis retiradas), só se houver
    Variáveis (segredos do repositório):
      TELEGRAM_BOT_TOKEN   token do bot criado no @BotFather
      TELEGRAM_CHAT_ID     id do canal (começa com -100...) ou @nomedocanal
@@ -18,6 +18,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { gravarMateriasFii } from './materias-fii.mjs';
+import { ETFS_DESTAQUE } from './lib.mjs';
+import { msgProventos, msgResumo, chaveProvento, chaveAlt } from './proventos-msg.mjs';
 
 const RAIZ = path.dirname(fileURLToPath(import.meta.url));
 const SAIDA = path.join(RAIZ, 'saida');
@@ -27,7 +29,7 @@ const ENVIAR_PROV = process.env.PROVENTOS_ENVIAR === '1';
 const API = process.env.TELEGRAM_API || 'https://api.telegram.org';
 const AWESOME = process.env.AWESOME_URL || 'https://economia.awesomeapi.com.br/json/last/USD-BRL';
 const GECKO = process.env.COINGECKO_URL || 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=brl,usd&include_24hr_change=true';
-const GECKO_MKT = process.env.COINGECKO_MARKETS_URL || 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=brl&order=market_cap_desc&per_page=50&page=1&price_change_percentage=24h';
+const GECKO_MKT = process.env.COINGECKO_MARKETS_URL || 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&price_change_percentage=24h';
 const SITE = 'https://planobinvestimentos.com/cotacoes/bolsa/';
 const UA = { 'User-Agent': 'PlanoB-Investimentos-aviso/1.0 (uso educacional)' };
 
@@ -45,6 +47,7 @@ const num = (v, c = 2) => Number(v).toLocaleString('pt-BR', { minimumFractionDig
 const pct = (v) => (v >= 0 ? '+' : '−') + num(Math.abs(v)) + '%';
 const brl = (v, c = 2) => 'R$ ' + num(v, c);
 const brlAuto = (v) => brl(v, v >= 1000 ? 0 : v >= 1 ? 2 : v >= 0.01 ? 4 : 6);
+const usdAuto = (v) => 'US$ ' + num(v, v >= 1000 ? 0 : v >= 1 ? 2 : v >= 0.01 ? 4 : 6);
 const DIAS = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
 const dataBR = (iso) => iso.slice(8, 10) + '/' + iso.slice(5, 7) + '/' + iso.slice(0, 4);
 
@@ -55,7 +58,7 @@ const DOW = agora.getUTCDay();
 const HORA = process.env.HORA_TESTE ? Number(process.env.HORA_TESTE) : agora.getUTCHours();
 /* cada parte só sai a partir do seu horário; em teste ou forçado, sai a qualquer hora */
 const liberado = (h) => TESTE || FORCAR || HORA >= h;
-/* PARTE (vem do horário agendado): fechamento (20h), proventos (18h e 22h), eventos (22h); sem PARTE = tudo */
+/* PARTE (vem do horário agendado): fechamento (20h), eventos (21h), resumo (22h: proventos, JCP e bonificações do dia), proventos (22h30: só o que ainda não saiu); sem PARTE = tudo */
 const PARTE = process.env.PARTE || 'tudo';
 const faz = (p) => PARTE === 'tudo' || PARTE.split(',').includes(p);
 const titulo = (t) => t + ' · ' + DIAS[DOW] + ', ' + dataBR(HOJE);
@@ -70,8 +73,11 @@ function msgBolsa(b, altas) {
   const ibov = altas && b.ibov ? 'Ibovespa (via BOVA11): ' + pct(b.ibov.v) : '';
   const gs = [['🏢 AÇÕES', b.acoes], ['🏠 FIIs DE TIJOLO', b.fiisTijolo], ['📄 FIIs DE PAPEL', b.fiisPapel], ['📦 ETFs', b.etfs]]
     .map(([n, g]) => secao(n, g && g[k], e)).filter(Boolean);
-  if (!gs.length) return '';
-  return [cab, ibov, gs.join('\n\n'), altas ? '' : 'Ranking completo: ' + SITE, altas ? '' : RODAPE].filter(Boolean).join('\n\n');
+  /* ETFs em destaque (ETHY11, COIN11): abertura, fechamento e variação, sempre, no primeiro bloco */
+  const dest = altas && Array.isArray(b.destaque) && b.destaque.length
+    ? '⭐ ETFs EM DESTAQUE\n' + b.destaque.map((x) => x.t + ': ' + (x.ab > 0 ? 'abertura ' + brl(x.ab) + ' · ' : '') + 'fechamento ' + brl(x.p) + (x.v !== null && isFinite(x.v) ? ' (' + pct(x.v) + ')' : '')).join('\n') : '';
+  if (!gs.length && !dest) return '';
+  return [cab, ibov, gs.join('\n\n'), dest, altas ? '' : 'Ranking completo: ' + SITE, altas ? '' : RODAPE].filter(Boolean).join('\n\n');
 }
 
 /* ---------- dólar e criptomoedas ---------- */
@@ -96,14 +102,14 @@ async function dolar(btc) {
 const FORA = new Set(['usdt', 'usdc', 'dai', 'usde', 'fdusd', 'usds', 'busd', 'tusd', 'pyusd', 'usdd', 'usdt0', 'susde', 'usd1', 'usdtb', 'bsc-usd', 'steth', 'wsteth', 'wbtc', 'weth', 'weeth', 'wbeth', 'cbbtc', 'reth', 'cbeth', 'susds', 'bfusd', 'ousg', 'buidl', 'wtrx', 'jitosol', 'rseth']);
 /* top 50 por valor de mercado, sem stablecoins nem versões "embrulhadas": 5 maiores altas e 5 maiores baixas em 24h */
 async function cripto(dol, btcSimples) {
-  const vazio = { btc: btcSimples ? { s: 'BTC', p: btcSimples.brl, v: btcSimples.brl_24h_change } : null, altas: [], quedas: [] };
+  const vazio = { btc: btcSimples ? { s: 'BTC', p: btcSimples.usd, v: btcSimples.usd_24h_change } : null, altas: [], quedas: [] };
   try {
     const j = await pegarComRetry(GECKO_MKT);
     const chg = (c) => (c.price_change_percentage_24h_in_currency != null ? c.price_change_percentage_24h_in_currency : c.price_change_percentage_24h);
     const l = (Array.isArray(j) ? j : []).filter((c) => {
       const s = String(c.symbol || '').toLowerCase();
       if (FORA.has(s) || !(c.current_price > 0) || !isFinite(chg(c))) return false;
-      return !(dol && c.current_price / dol > 0.97 && c.current_price / dol < 1.03 && Math.abs(chg(c)) < 1);   // parece stablecoin
+      return !(c.current_price > 0.97 && c.current_price < 1.03 && Math.abs(chg(c)) < 1);   // parece stablecoin (preço já em dólar)
     }).map((c) => ({ s: String(c.symbol).toUpperCase(), p: c.current_price, v: chg(c) }));
     const btc = l.find((x) => x.s === 'BTC') || vazio.btc;
     return { btc, altas: [...l].filter((x) => x.v > 0).sort((a, b) => b.v - a.v).slice(0, 5), quedas: [...l].filter((x) => x.v < 0).sort((a, b) => a.v - b.v).slice(0, 5) };
@@ -122,9 +128,9 @@ function msgMercado(m, fimDeSemana, temBolsa) {
   const intro = fimDeSemana ? 'A bolsa não abre hoje. Veja o dólar (último fechamento) e as criptomoedas:' : (temBolsa ? '' : 'Os números de ações, FIIs e ETFs saem assim que a B3 liberar o fechamento.');
   const d = m.dolar ? '💵 Dólar: ' + brl(m.dolar.v) + (m.dolar.p !== null ? ' (' + pct(m.dolar.p) + ')' : '') : '';
   const c = m.cripto;
-  const lin = (x, e) => e + ' ' + x.s + ': ' + brlAuto(x.p) + ' (' + pct(x.v) + ')';
+  const lin = (x, e) => e + ' ' + x.s + ': ' + usdAuto(x.p) + ' (' + pct(x.v) + ')';
   const cr = [];
-  if (c.btc) cr.push('₿ Bitcoin: ' + brlAuto(c.btc.p) + (isFinite(c.btc.v) ? ' (' + pct(c.btc.v) + ')' : ''));
+  if (c.btc) cr.push('₿ Bitcoin: ' + usdAuto(c.btc.p) + (isFinite(c.btc.v) ? ' (' + pct(c.btc.v) + ')' : ''));
   if (c.altas.length) cr.push('⬆️ Maiores altas em 24h (top 50)\n' + c.altas.map((x) => lin(x, '🟢')).join('\n'));
   if (c.quedas.length) cr.push('⬇️ Maiores baixas em 24h (top 50)\n' + c.quedas.map((x) => lin(x, '🔻')).join('\n'));
   const temCripto = cr.length > 0;
@@ -141,26 +147,6 @@ function msgEventos(ev) {
   if (ev.sairam.length) blocos.push('⚠️ Sem negociação há mais de 30 dias (possível retirada da B3):\n' + porCls(ev.sairam));
   if (!blocos.length) return '';
   return ['🔄 ATUALIZAÇÕES NA B3 · ' + dataBR(ev.data), ...blocos, 'Fonte: arquivos de negociação da B3. Confirme nos comunicados oficiais.'].join('\n\n');
-}
-
-/* ---------- proventos ---------- */
-function msgProventos(itens, data, precos = {}) {
-  const dt = (br) => br || 'a definir';
-  const curto = (br) => (br ? br.slice(0, 5) : 'a definir');
-  const casas = (v) => (Math.abs(v * 100 - Math.round(v * 100)) < 1e-6 ? 2 : Math.abs(v * 10000 - Math.round(v * 10000)) < 1e-6 ? 4 : 6);
-  /* FII em linha compacta: HGLG11: R$ 1,17 (0,73%) · base 30/09 · pag. 15/10  (% = valor ÷ último fechamento) */
-  const linhaFii = (x) => {
-    const p = precos[x.t], dy = p > 0 && x.tipo !== 'Amortização' ? ' (' + num((x.v / p) * 100) + '%)' : '';
-    return x.t + ': ' + brl(x.v, casas(x.v)) + dy + (x.tipo === 'Amortização' ? ' [amortização]' : '') + (x.extra ? ' 🔔' : '') + ' · base ' + curto(x.base) + ' · pag. ' + curto(x.pag);
-  };
-  const linhaAcao = (x) => x.t + ' — ' + x.tipo + ': ' + brl(x.v, casas(x.v)) + '\n   Data-com: ' + dt(x.base) + ' · Pagamento: ' + dt(x.pag);
-  const f = itens.filter((x) => x.fonte === 'FII').sort((a, b) => a.t.localeCompare(b.t)), a = itens.filter((x) => x.fonte !== 'FII').sort((x, y) => x.t.localeCompare(y.t));
-  const corpo = [f.length ? '🏠 FIIs\n' + f.map(linhaFii).join('\n') : '', a.length ? '🏢 AÇÕES\n' + a.map(linhaAcao).join('\n') : ''].filter(Boolean).join('\n\n');
-  if (!corpo) return '';
-  const notas = [];
-  if (f.length) notas.push('FIIs: valor por cota; entre parênteses, o valor em relação ao último fechamento (rendimento de um mês, não garante os próximos). Só FIIs com negociação média acima de R$ 1 milhão por dia.' + (f.some((x) => x.extra) ? ' 🔔 = pagamento fora do padrão habitual do fundo.' : ''));
-  if (a.length) notas.push('Ações: valor bruto por ação. JCP tem imposto retido na fonte.');
-  return ['💰 PROVENTOS ANUNCIADOS · ' + dataBR(data), corpo, notas.join('\n'), 'Fonte: B3. Confira sempre o comunicado oficial.', RODAPE].filter(Boolean).join('\n\n');
 }
 
 /* ---------- envio ---------- */
@@ -218,7 +204,7 @@ try {
     else console.warn('aviso: sem dados de dólar e criptomoedas; nada enviado.');
   }
   /* 4: atualizações da B3 (só depois que o arquivo do dia da B3 saiu) */
-  if (faz('eventos') && liberado(22) && !fimDeSemana && temBolsa && !E.ev) {
+  if (faz('eventos') && liberado(21) && !fimDeSemana && temBolsa && !E.ev) {
     const ev = lerJson('eventos.json');
     if (ev && ev.data === HOJE) {
       const t = ev.base ? '' : msgEventos(ev);
@@ -226,30 +212,46 @@ try {
       E.ev = true; salvar();
     } else console.log('eventos da B3 de hoje ainda não disponíveis.');
   }
-  /* 5: proventos (cada provento é enviado uma única vez) */
+  /* 5: proventos. Durante o dia eles saem na hora (proventos-agora.mjs, estado em saida/agora.json).
+        Aqui: "resumo" (21h) = tudo o que foi anunciado hoje em uma lista só; "proventos" (22h) = só o que ainda não saiu. Cada provento é enviado uma única vez. */
   const prov = lerJson('proventos.json');
-  if (prov && faz('proventos') && liberado(18) && (ENVIAR_PROV || TESTE)) {
-    const chave = (x) => [x.t, x.tipo, x.base, x.pag, x.v].join('|');
-    const vistos = new Set(provIds || []);
+  const agoraSt = lerJson('agora.json') || {};
+  const doDia = agoraSt.provDia && agoraSt.provDia.data === HOJE ? agoraSt.provDia.itens || [] : [];
+  const querResumo = faz('resumo') && liberado(22) && !E.resumo && (ENVIAR_PROV || TESTE);
+  const querNovos = faz('proventos') && liberado(18) && (ENVIAR_PROV || TESTE);
+  if ((prov || doDia.length) && (querResumo || querNovos)) {
+    const vistos = new Set([...(provIds || []), ...(agoraSt.enviados || [])]);
     const liqFii = (lerJson('liquidez-fiis.json') || {}).fiis || {};   // regra: só FIIs com liquidez acima de R$ 1 milhão/dia
-    let novos = (prov.fii || []).filter((x) => liqFii[x.t]).map((x) => Object.assign({ fonte: 'FII' }, x)).concat((prov.acoes || []).map((x) => Object.assign({ fonte: 'AÇÃO' }, x)));
-    if (!TESTE) { novos = novos.filter((x) => !vistos.has(chave(x))); if (!provIds) novos = novos.filter((x) => x.ent === HOJE); }
+    const pv = prov || {};
+    let novos = (pv.fii || []).filter((x) => liqFii[x.t] || ETFS_DESTAQUE.includes(x.t)).map((x) => Object.assign({ fonte: 'FII' }, x)).concat((pv.acoes || []).map((x) => Object.assign({ fonte: 'AÇÃO' }, x)));
+    if (!TESTE) { novos = novos.filter((x) => !vistos.has(chaveProvento(x)) && !vistos.has(chaveAlt(x))); if (!provIds && !(agoraSt.enviados || []).length) novos = novos.filter((x) => x.ent === HOJE); }
+    { const a = new Set(); novos = novos.filter((x) => { const k = chaveAlt(x); if (a.has(k)) return false; a.add(k); return true; }); }   // mesmo provento vindo de duas fontes entra uma vez só
     const d1 = lerJson('d1.json');
     const precos = (d1 && d1.p) || {};
-    const t = msgProventos(novos, HOJE, precos);
-    if (t) {
-      await enviar(t);
-      if (!TESTE) {
-        provIds = [...vistos, ...novos.map(chave)].slice(-3000); salvar();
-        try { const n = gravarMateriasFii(novos.filter((x) => x.fonte === 'FII'), { saida: SAIDA, precos, dataPreco: d1 && d1.data, hoje: HOJE }); if (n) console.log('matérias de rendimento extraordinário no site:', n); }
-        catch (e) { console.warn('aviso: não consegui gravar matérias de FIIs:', e.message); }
-      } else {
-        const ex = novos.filter((x) => x.fonte === 'FII' && x.extra);
-        console.log('(teste) rendimentos extraordinários que virariam matéria no site:', ex.length ? ex.map((x) => x.t + ' (' + x.extra + ')').join('; ') : 'nenhum');
+    const marcar = (lista) => { provIds = [...new Set([...(provIds || []), ...lista.flatMap((x) => [chaveProvento(x), chaveAlt(x)])])].slice(-6000); };
+    const materiasSite = (lista) => {
+      try { const n = gravarMateriasFii(lista.filter((x) => x.fonte === 'FII' && x.cls !== 'ETF'), { saida: SAIDA, precos, dataPreco: d1 && d1.data, hoje: HOJE }); if (n) console.log('matérias de rendimento extraordinário no site:', n); }
+      catch (e) { console.warn('aviso: não consegui gravar matérias de FIIs:', e.message); }
+    };
+    if (querResumo) {
+      /* resumo do dia: o que saiu na hora + o que ainda não tinha saído (aparece só aqui) */
+      const todos = [...doDia, ...novos.map((x) => Object.assign({}, x, { novoNoResumo: true }))].filter((x, i, a) => a.findIndex((y) => chaveProvento(y) === chaveProvento(x) || chaveAlt(y) === chaveAlt(x)) === i);
+      const t = msgResumo(todos, HOJE, precos);
+      if (t) { await enviar(t); if (!TESTE) { E.resumo = true; marcar(novos); salvar(); materiasSite(todos); } }
+      else { console.log('resumo do dia: sem proventos anunciados hoje.'); if (!TESTE) { E.resumo = true; salvar(); } }
+    } else {
+      const t = msgProventos(novos, HOJE, precos);
+      if (t) {
+        await enviar(t);
+        if (!TESTE) { marcar(novos); salvar(); materiasSite(novos); }
+        else {
+          const ex = novos.filter((x) => x.fonte === 'FII' && x.extra);
+          console.log('(teste) rendimentos extraordinários que virariam matéria no site:', ex.length ? ex.map((x) => x.t + ' (' + x.extra + ')').join('; ') : 'nenhum');
+        }
       }
+      else console.log('sem proventos novos para enviar.');
     }
-    else console.log('sem proventos novos para enviar.');
-  } else if (prov && faz('proventos') && liberado(18)) console.log('proventos: envio desligado (PROVENTOS_ENVIAR); nada enviado.');
+  } else if ((prov || doDia.length) && (faz('proventos') || faz('resumo')) && liberado(18) && !(ENVIAR_PROV || TESTE)) console.log('proventos: envio desligado (PROVENTOS_ENVIAR); nada enviado.');
 } catch (e) {
   console.error('ERRO:', e.message);
   process.exitCode = 1;

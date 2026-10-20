@@ -225,6 +225,7 @@ try {
   const novos = [];
   const vistosConteudo = new Set();
   let foraFiltro = 0, rotina = 0;
+  const linhasVistas = new Set();
   for (const d of todos) {
     if (!FORCAR && enviados.has(chave(d))) continue;
     const dup = d.cnpj + '|' + d.cat + '|' + d.assunto + '|' + d.data;   // mesmo aviso entregue em duas versões: publica só uma
@@ -267,7 +268,10 @@ try {
       } catch (e) { diag.itens.ia_falhas++; diag.ia_erro = e.message; texto = ''; }
     }
     if (!texto) texto = d.empresa + ' · ' + (d.cat || '').replace(/\s+/g, ' ') + (d.assunto ? ': ' + cab(d.assunto) : '');
-    (d.prov ? provs : d.dest ? linhas : outros).push(tags + ' - ' + texto);
+    const linhaFinal = tags + ' - ' + texto;
+    if (linhasVistas.has(linhaFinal)) { enviados.add(chave(d)); continue; }   // linha idêntica (mesmo aviso em duas versões): publica uma só
+    linhasVistas.add(linhaFinal);
+    (d.prov ? provs : d.dest ? linhas : outros).push(linhaFinal);
     enviados.add(chave(d));
   }
   diag.itens.materias = novasMaterias.length;

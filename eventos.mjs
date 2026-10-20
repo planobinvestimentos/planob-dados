@@ -7,6 +7,7 @@
    derrubar o resto, e deixam um arquivo de diagnóstico em saida/proventos-diag.json. */
 import fs from 'node:fs';
 import path from 'node:path';
+import { ETFS_DESTAQUE } from './lib.mjs';
 
 const UA = { 'User-Agent': 'Mozilla/5.0 (compatible; PlanoB-Investimentos-dados/1.0; uso educacional)', Accept: 'application/json, text/plain, */*' };
 const dorme = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -190,7 +191,7 @@ export async function proventosFiiB3({ fiis, isinParaTicker, de, diag, simultane
             else if (outrosMesmoMes.length) extra = 'um segundo rendimento do mesmo mês de referência (pode ser parcela adicional ou distribuição extraordinária)';
             else if (anteriores.length >= 3 && med > 0 && v >= 1.6 * med && v - med >= 0.2) extra = 'valor ' + (v / med).toFixed(1).replace('.', ',') + ' vez(es) a mediana dos meses anteriores (' + String(med.toFixed(2)).replace('.', ',') + ')';
           }
-          itens.push({ t: tk, tipo, v, base: dataBR(c.lastDatePrior), pag: dataBR(c.paymentDate), ent: aprov, ref: String(c.relatedTo || '').trim(), fundo: String(f.fund || '').trim(), extra: extra || undefined });
+          itens.push({ t: tk, tipo, v, base: dataBR(c.lastDatePrior), pag: dataBR(c.paymentDate), ent: aprov, ref: String(c.relatedTo || '').trim(), fundo: String(f.fund || '').trim(), extra: ETFS_DESTAQUE.includes(tk) ? undefined : (extra || undefined), cls: ETFS_DESTAQUE.includes(tk) ? 'ETF' : undefined });
         }
       }
     } catch (e) {
@@ -232,6 +233,18 @@ export async function proventosAcoes({ emissoras, isinParaTicker, de, diag, simu
         vistos.add(chave);
         itens.push({ t: tk, tipo, v, base: dataBR(c.lastDatePrior), pag: dataBR(c.paymentDate), ent: aprov });
       }
+      /* bonificação em ações (stockDividends): o "factor" é o percentual de ações novas; se o formato for outro, o diagnóstico guarda uma amostra */
+      const bonus = arr.flatMap((x) => (x && x.stockDividends) || []);
+      if (bonus.length && !diag.acoes.amostraBonificacao) diag.acoes.amostraBonificacao = { emissora: cod, campos: Object.keys(bonus[0]), primeiro: bonus[0] };
+      for (const c of bonus) {
+        const aprov = dataISO(c.approvedOn), tk = isinParaTicker[c.assetIssued || c.isinCode];
+        const v = numero(c.factor);
+        if (!tk || !(v > 0) || !aprov || aprov < de || !/BONIF/i.test(c.label || '')) continue;
+        const chave = [tk, 'Bonificação', c.lastDatePrior, v].join('|');
+        if (vistos.has(chave)) continue;
+        vistos.add(chave);
+        itens.push({ t: tk, tipo: 'Bonificação', v, base: dataBR(c.lastDatePrior), pag: '', ent: aprov });
+      }
     } catch (e) {
       falhas++;
       if (falhas >= 8 && ok === 0) { abortar = true; diag.acoes.erro = 'as primeiras consultas falharam (' + e.message + '): endereço bloqueado ou mudou'; }
@@ -246,7 +259,7 @@ export async function proventosAcoes({ emissoras, isinParaTicker, de, diag, simu
 }
 
 /* ---------- orquestra a atualização de proventos ---------- */
-export async function atualizarProventos(saida, hoje) {
+export async function atualizarProventos(saida, hoje, { acoes = true } = {}) {
   const arq = path.join(saida, 'proventos.json');
   const ant = lerJson(arq, {});
   const de = paraIso(new Date(Date.parse(hoje + 'T12:00:00Z') - 2 * 86400000));
@@ -262,23 +275,25 @@ export async function atualizarProventos(saida, hoje) {
   /* FIIs: preferência pelo site da B3, só para os FIIs com liquidez acima do mínimo (saida/liquidez-fiis.json); sem essa lista, tenta o FNET */
   const liq = lerJson(path.join(saida, 'liquidez-fiis.json'), null);
   const fiisLiquidos = liq && liq.fiis ? Object.keys(liq.fiis) : [];
+  const consulta = [...new Set([...fiisLiquidos, ...ETFS_DESTAQUE])];   // FIIs líquidos + ETFs em destaque (ETHY11, COIN11)
   let fiiOk = false;
   if (fiisLiquidos.length >= 20) {
     try {
       const nomes = Object.assign({}, ant.nomes || {});
-      const novos = await proventosFiiB3({ fiis: fiisLiquidos, isinParaTicker, de, diag, nomes });
+      const novos = await proventosFiiB3({ fiis: consulta, isinParaTicker, de, diag, nomes });
       saidaJ.nomes = nomes;
-      const mant = (saidaJ.fii || []).filter((x) => x.ent >= de && liq.fiis[x.t]);
+      const mant = (saidaJ.fii || []).filter((x) => x.ent >= de && (liq.fiis[x.t] || ETFS_DESTAQUE.includes(x.t)));
       const chv = (x) => [x.t, x.tipo, x.base, x.pag, x.v].join('|'), ja = new Set(mant.map(chv));
       saidaJ.fii = mant.concat(novos.filter((x) => !ja.has(chv(x)))); fiiOk = true;
     } catch (e) { console.warn('aviso proventos FIIs (B3):', e.message); }
   } else { diag.fii = { aviso: 'liquidez-fiis.json ainda não existe ou está vazio; rode o workflow de liquidez' }; }
   if (!fiiOk) {
     /* regra do Plano B: só FIIs com liquidez acima de R$ 1 milhão/dia. Sem a lista de liquidez, ou se a B3 falhar, nenhum FII é divulgado. */
-    saidaJ.fii = fiisLiquidos.length >= 20 ? (saidaJ.fii || []).filter((x) => liq.fiis[x.t]) : [];
+    saidaJ.fii = fiisLiquidos.length >= 20 ? (saidaJ.fii || []).filter((x) => liq.fiis[x.t] || ETFS_DESTAQUE.includes(x.t)) : [];
     diag.fii = Object.assign(diag.fii || {}, { aviso_regra: 'FIIs não divulgados nesta rodada (sem lista de liquidez ou falha na B3)' });
   }
-  if (emissoras.size) {
+  if (!acoes) { diag.acoes = { aviso: 'ações não consultadas nesta rodada' }; }
+  else if (emissoras.size) {
     try { saidaJ.acoes = await proventosAcoes({ emissoras: [...emissoras], isinParaTicker, de, diag }); }
     catch (e) { console.warn('aviso proventos ações:', e.message); diag.acoes = { erro: e.message }; }
   } else { diag.acoes = { erro: 'cadastro de códigos ainda vazio (rode o fechamento antes)' }; }
