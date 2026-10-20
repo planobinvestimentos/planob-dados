@@ -5,6 +5,7 @@
    Chamado pelo telegram.mjs quando envia os proventos. */
 import fs from 'node:fs';
 import path from 'node:path';
+import { lerMaterias, gravarMaterias } from './materias-arquivo.mjs';
 
 const num = (v, c = 2) => Number(v).toLocaleString('pt-BR', { minimumFractionDigits: c, maximumFractionDigits: c });
 const brl = (v) => 'R$ ' + num(v, Math.abs(v * 100 - Math.round(v * 100)) < 1e-6 ? 2 : Math.abs(v * 10000 - Math.round(v * 10000)) < 1e-6 ? 4 : 6);
@@ -45,9 +46,7 @@ export function montarMateriaFii(x, { preco, dataPreco, hoje }) {
 
 /* grava (ou atualiza) saida/materias.json com as matérias novas; devolve quantas entraram */
 export function gravarMateriasFii(itens, { saida, precos = {}, dataPreco = '', hoje, max = 25 }) {
-  const arq = path.join(saida, 'materias.json');
-  let atual = { materias: [] };
-  try { atual = JSON.parse(fs.readFileSync(arq, 'utf8')); } catch (e) { /* ainda não existe */ }
+  const atual = lerMaterias(saida);   // se o arquivo existir e estiver ilegível, para aqui (não apaga matérias)
   const existentes = new Set((atual.materias || []).map((m) => m.chave));
   const novas = [];
   for (const x of itens.filter((i) => i.extra && i.tipo !== 'Amortização').slice(0, max)) {
@@ -56,7 +55,6 @@ export function gravarMateriasFii(itens, { saida, precos = {}, dataPreco = '', h
     novas.push(m);
   }
   if (!novas.length) return 0;
-  const todas = [...novas, ...(atual.materias || [])].sort((a, b) => (b.data + b.criada).localeCompare(a.data + a.criada)).slice(0, 300);
-  fs.writeFileSync(arq, JSON.stringify({ atualizado: new Date().toISOString(), materias: todas }));
+  gravarMaterias(saida, novas, atual.materias || []);
   return novas.length;
 }

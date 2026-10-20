@@ -9,6 +9,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { lerMaterias, gravarMaterias } from './materias-arquivo.mjs';
 
 const SAIDA = process.env.SAIDA_DIR || path.join(path.dirname(fileURLToPath(import.meta.url)), 'saida');
 fs.mkdirSync(SAIDA, { recursive: true });
@@ -124,7 +125,7 @@ async function principal() {
   const meus = fatos.filter((x) => porNome.has(norm(x.nomePregao)) || porNome.has(norm((x.informacoesAdicionais || '').split(';')[0])));
   dl.de_fiis_liquidos = meus.length;
   const novos = meus.filter((x) => !vistos.has(String(x.id) + '|' + (x.versao || 1))).slice(0, MAX_POR_RODADA);
-  const arq = lerJson('materias.json', { materias: [] });
+  const arq = lerMaterias(SAIDA);   // se o arquivo existir e estiver ilegível, para aqui (não apaga matérias)
   const existentes = new Set((arq.materias || []).map((m) => m.chave));
   const novas = [];
   diag.analisados = 0; diag.sem_texto = 0; diag.fora_do_escopo = 0; diag.abaixo_do_minimo = 0; diag.reprovadas = [];
@@ -151,8 +152,7 @@ async function principal() {
   }
   diag.materias_novas = novas.length;
   if (novas.length) {
-    const todas = [...novas, ...(arq.materias || [])].sort((a, b) => (b.data + b.criada).localeCompare(a.data + a.criada)).slice(0, 300);
-    fs.writeFileSync(path.join(SAIDA, 'materias.json'), JSON.stringify({ atualizado: new Date().toISOString(), materias: todas }));
+    gravarMaterias(SAIDA, novas, arq.materias || []);
   }
   fs.writeFileSync(path.join(SAIDA, 'fatos-fii.json'), JSON.stringify({ vistos: [...vistos].slice(-3000) }));
 }

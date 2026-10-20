@@ -14,6 +14,7 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { lerZip, lerCsv } from './lib.mjs';
+import { lerMaterias, gravarMaterias } from './materias-arquivo.mjs';
 
 const SAIDA = path.join(path.dirname(fileURLToPath(import.meta.url)), 'saida');
 fs.mkdirSync(SAIDA, { recursive: true });
@@ -248,7 +249,8 @@ try {
 
   const linhas = [], provs = [], outros = [];
   let usadosForte = 0, geradas = 0;
-  const arqMat = lerJson('materias.json', { materias: [] });
+  let arqMat = { materias: [] }, matLegivel = true;
+  try { arqMat = lerMaterias(SAIDA); } catch (e) { matLegivel = false; diag.materias_leitura_erro = e.message; console.warn('aviso:', e.message); }   // arquivo ilegível: o noticiário segue, mas não grava matérias por cima
   const matExistentes = new Set((arqMat.materias || []).map((x) => x.chave)), novasMaterias = [];
   for (const d of escolhidos) {
     const tags = d.tickers.slice(0, 2).map((t) => '#' + t).join(' ');
@@ -275,9 +277,8 @@ try {
     enviados.add(chave(d));
   }
   diag.itens.materias = novasMaterias.length;
-  if (novasMaterias.length && !TESTE) {
-    const todas = [...novasMaterias, ...(arqMat.materias || [])].sort((a, b) => (b.data + b.criada).localeCompare(a.data + a.criada)).slice(0, 300);
-    fs.writeFileSync(path.join(SAIDA, 'materias.json'), JSON.stringify({ atualizado: new Date().toISOString(), materias: todas }));
+  if (novasMaterias.length && !TESTE && matLegivel) {
+    gravarMaterias(SAIDA, novasMaterias, arqMat.materias || []);
   }
   gravaDiag();
   if (linhas.length || provs.length || outros.length) {
