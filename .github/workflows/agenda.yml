@@ -1,7 +1,8 @@
 # Agenda da semana no Telegram (segunda-feira, 7h de Brasília):
 #   eventos importantes de segunda a sexta (Copom, Fed, Boletim Focus, IPCA, PIB, payroll, CPI etc.).
 # Tenta 7h, 7h30 e 8h; só a primeira que funcionar envia, sem repetir no dia.
-# Para a agenda do dia (terça a sexta), rode à mão escolhendo modo = hoje.
+# AGENDA DO DIA (terça a sexta): sai às 6h30 (tentativas 7h e 7h30), só com os eventos de hoje (Brasil, EUA, Europa, China).
+# Eventos políticos/avulsos (ex.: discurso, campanha) entram pelo arquivo agenda-manual.json.
 # Precisa dos segredos TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID; ANTHROPIC_API_KEY é opcional (traduz títulos em inglês).
 name: Agenda da semana no Telegram
 on:
@@ -9,6 +10,9 @@ on:
     - cron: '0 10 * * 1'       # 7h00 (segunda)
     - cron: '30 10 * * 1'      # 7h30 (tentativa 2)
     - cron: '0 11 * * 1'       # 8h00 (tentativa 3)
+    - cron: '30 9 * * 2-5'     # 6h30 (agenda do dia, terça a sexta)
+    - cron: '0 10 * * 2-5'     # 7h00 (tentativa 2)
+    - cron: '30 10 * * 2-5'    # 7h30 (tentativa 3)
   workflow_dispatch:
     inputs:
       modo:
@@ -42,7 +46,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          MODO: ${{ github.event_name == 'workflow_dispatch' && inputs.modo || 'semana' }}
+          MODO: ${{ github.event_name == 'workflow_dispatch' && inputs.modo || '' }}   # vazio = segunda: semana; terça a sexta: hoje
           TESTE: ${{ inputs.teste && '1' || '' }}
           FORCAR: ${{ inputs.forcar && '1' || '' }}
         run: node agenda.mjs

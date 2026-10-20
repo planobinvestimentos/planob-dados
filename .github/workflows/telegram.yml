@@ -1,24 +1,25 @@
 # Avisos da bolsa no Telegram (horário de Brasília). Nada é enviado entre 23h e 5h59.
-#   18h    proventos anunciados (FIIs e ações) - só os que ainda não foram enviados (LIGADO desde 19/10)
-#   20h    fechamento: maiores altas e baixas, dólar e criptomoedas (tentativas extras às 20h30 e 21h) + proventos que saíram depois das 18h
-#          (releitura da B3: só envia o que ainda não foi enviado; se às 18h não saiu nenhum, é aqui que saem os do dia)
-#   22h    atualizações da B3 (mudança de código, novos listados) + proventos que saíram depois das 18h (tentativa extra 22h30)
+#   (os proventos de FIIs, ações, JCP e bonificação saem NA HORA, pelo workflow proventos-agora.yml, a cada 15 minutos das 9h às 21h)
+#   20h    fechamento: maiores altas e baixas, dólar e criptomoedas (tentativas extras às 20h30 e 21h)
+#   21h    atualizações da B3 (mudança de código, novos listados), junto da 3ª tentativa do fechamento (nova tentativa às 21h30)
+#   22h    resumo do dia: dividendos, JCP e bonificações anunciados hoje, em uma lista só (e 3ª tentativa das atualizações da B3)
+#   22h30  proventos que só saíram depois do resumo (só envia o que ainda não foi enviado) e última tentativa das atualizações da B3
 # Cada parte envia uma única vez por dia. Precisa dos segredos TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID.
 name: Aviso diário no Telegram
 on:
   schedule:
-    - cron: '0 21 * * *'     # 18h00 proventos
     - cron: '0 23 * * *'     # 20h00 fechamento
     - cron: '30 23 * * *'    # 20h30 fechamento (tentativa 2)
-    - cron: '0 0 * * *'      # 21h00 fechamento (tentativa 3)
-    - cron: '0 1 * * *'      # 22h00 atualizações da B3 + proventos da noite
-    - cron: '30 1 * * *'     # 22h30 atualizações da B3 (tentativa 2)
+    - cron: '0 0 * * *'      # 21h00 fechamento (tentativa 3) + atualizações da B3
+    - cron: '30 0 * * *'     # 21h30 atualizações da B3 (tentativa 2)
+    - cron: '0 1 * * *'      # 22h00 resumo do dia (+ atualizações da B3, tentativa 3)
+    - cron: '30 1 * * *'     # 22h30 proventos da noite (+ atualizações da B3, tentativa 4)
   workflow_dispatch:
     inputs:
       parte:
         description: 'Qual parte rodar'
         type: choice
-        options: [tudo, fechamento, proventos, eventos]
+        options: [tudo, fechamento, resumo, proventos, eventos]
         default: tudo
       teste:
         description: 'Só mostrar as mensagens no log, sem enviar'
@@ -55,7 +56,7 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          PARTE: ${{ github.event_name == 'workflow_dispatch' && inputs.parte || (github.event.schedule == '0 21 * * *' && 'proventos' || (github.event.schedule == '0 1 * * *' && 'eventos,proventos' || (github.event.schedule == '30 1 * * *' && 'eventos' || (github.event.schedule == '0 23 * * *' && 'fechamento,proventos' || 'fechamento')))) }}
+          PARTE: ${{ github.event_name == 'workflow_dispatch' && inputs.parte || (github.event.schedule == '0 0 * * *' && 'fechamento,eventos' || (github.event.schedule == '30 0 * * *' && 'eventos' || (github.event.schedule == '0 1 * * *' && 'resumo,eventos' || (github.event.schedule == '30 1 * * *' && 'proventos,eventos' || 'fechamento')))) }}
           TESTE: ${{ inputs.teste && '1' || '' }}
           FORCAR: ${{ inputs.forcar && '1' || '' }}
           PROVENTOS_ENVIAR: ${{ github.event_name == 'schedule' && '1' || (inputs.proventos && '1' || '0') }}   # nos horários automáticos os proventos são enviados; à mão, só se marcar "proventos"

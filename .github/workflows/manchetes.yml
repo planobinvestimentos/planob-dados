@@ -1,0 +1,47 @@
+# Manchetes do dia no Telegram (segunda a sexta, 6h50 de Brasília; tentativa extra às 7h20).
+# Fonte: feeds RSS da Agência Brasil (agência pública da EBC), seções Economia e Política: só os títulos, com crédito.
+# Cada dia sai uma única vez. Precisa dos segredos TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID.
+name: Manchetes do dia no Telegram
+on:
+  schedule:
+    - cron: '50 9 * * 1-5'     # 6h50
+    - cron: '20 10 * * 1-5'    # 7h20 (tentativa 2)
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: 'Só mostrar a mensagem no log, sem enviar'
+        type: boolean
+        default: false
+      forcar:
+        description: 'Enviar mesmo que já tenha sido enviado hoje'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: planob-dados
+  cancel-in-progress: false
+jobs:
+  manchetes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Montar e enviar
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TESTE: ${{ inputs.teste && '1' || '' }}
+          FORCAR: ${{ inputs.forcar && '1' || '' }}
+        run: node manchetes.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida
+          git diff --cached --quiet || git commit -m "Manchetes: atualiza estado do envio e diagnóstico"
+          git pull --rebase
+          git push

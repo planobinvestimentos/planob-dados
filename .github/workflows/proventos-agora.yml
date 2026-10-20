@@ -1,0 +1,50 @@
+# Proventos NA HORA no Telegram (FIIs, ETFs em destaque, ações, JCP e bonificação) + relatório gerencial do FII, quando existir.
+# Roda a cada 15 minutos em dias úteis, das 9h às 20h45, mais 21h00 e 21h15 (Brasília). O GitHub costuma atrasar alguns minutos: conte com "em até 15 a 30 minutos".
+# FIIs: na hora (aviso do FNET) e varredura de hora em hora. AÇÕES (dividendos, JCP, bonificação): 4 consultas por dia, perto de 12h, 16h, 20h e 21h (HORAS_ACOES no script).
+# Só envia cada provento uma vez. Guarda o estado em saida/agora.json (não mexe nos outros arquivos).
+# O resumo do dia às 22h (workflow "Aviso diário no Telegram") lê esse estado.
+name: Proventos na hora
+on:
+  schedule:
+    - cron: '*/15 12-23 * * 1-5'   # 9h00 às 20h45 (Brasília), segunda a sexta
+    - cron: '0,15 0 * * 2-6'       # 21h00 e 21h15 (Brasília), segunda a sexta (consulta das ações das 21h)
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: 'Só mostrar as mensagens no log, sem enviar'
+        type: boolean
+        default: false
+      forcar:
+        description: 'Ignorar o horário e fazer a varredura completa agora'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: planob-proventos-agora
+  cancel-in-progress: false
+jobs:
+  proventos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Proventos na hora
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TESTE: ${{ inputs.teste && '1' || '' }}
+          FORCAR: ${{ inputs.forcar && '1' || '' }}
+        run: node proventos-agora.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida/agora.json saida/agora-diag.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Proventos na hora: atualiza estado"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1

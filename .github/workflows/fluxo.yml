@@ -1,0 +1,54 @@
+# Fluxo de investidores na B3 no Telegram (segunda a sexta, 10h de Brasília; tentativas extras às 10h30 e 12h):
+#   saldo diário do investidor estrangeiro e do institucional, últimos 10 pregões, saldo do mês e do ano, com gráfico.
+# Fonte: tabela "Participação dos Investidores" do Boletim Diário (BDI) da B3, que sai com 2 pregões de atraso.
+# Cada dia de dados sai uma única vez. Precisa dos segredos TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID.
+name: Fluxo de investidores na B3 (Telegram)
+on:
+  schedule:
+    - cron: '0 13 * * 1-5'     # 10h00
+    - cron: '30 13 * * 1-5'    # 10h30 (tentativa 2)
+    - cron: '0 15 * * 1-5'     # 12h00 (tentativa 3)
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: 'Só mostrar a mensagem no log, sem enviar'
+        type: boolean
+        default: false
+      forcar:
+        description: 'Enviar mesmo que o dia já tenha sido enviado'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: planob-dados
+  cancel-in-progress: false
+jobs:
+  fluxo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Instalar leitor de PDF e biblioteca do gráfico
+        continue-on-error: true
+        run: |
+          sudo apt-get install -y poppler-utils
+          pip install --break-system-packages matplotlib || pip install matplotlib
+      - name: Montar e enviar
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TESTE: ${{ inputs.teste && '1' || '' }}
+          FORCAR: ${{ inputs.forcar && '1' || '' }}
+        run: node fluxo.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida
+          git diff --cached --quiet || git commit -m "Fluxo B3: atualiza histórico, estado do envio e diagnóstico"
+          git pull --rebase
+          git push
