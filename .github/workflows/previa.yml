@@ -1,0 +1,50 @@
+# PRÉVIA DO PREGÃO às 15h (Brasília), segunda a sexta: maiores altas e baixas "até o momento" de ações, FIIs de tijolo, FIIs de papel, ETFs e criptomoedas.
+# Tentativas às 15h00, 15h30 e 16h00 (o GitHub costuma atrasar alguns minutos). Envia uma única vez por dia; se a primeira deu certo, as outras não fazem nada.
+# Cotações com atraso de ~15 min, de fonte gratuita de terceiros (TradingView e, de reserva, Yahoo Finance). Se não houver dado confiável ou não houver pregão (feriado), não envia nada.
+# Guarda o estado em saida/previa.json (não mexe nos outros arquivos). O fechamento completo continua às 20h (workflow "Aviso diário no Telegram").
+name: Prévia do pregão (15h)
+on:
+  schedule:
+    - cron: '0 18 * * 1-5'    # 15h00
+    - cron: '30 18 * * 1-5'   # 15h30 (tentativa 2)
+    - cron: '0 19 * * 1-5'    # 16h00 (tentativa 3, última)
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: 'Só mostrar a mensagem no log, sem enviar'
+        type: boolean
+        default: false
+      forcar:
+        description: 'Ignorar o horário e o "já enviou hoje" e enviar agora'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: planob-previa
+  cancel-in-progress: false
+jobs:
+  previa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Prévia do pregão
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TESTE: ${{ inputs.teste && '1' || '' }}
+          FORCAR: ${{ inputs.forcar && '1' || '' }}
+        run: node previa.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida/previa.json saida/previa-diag.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Prévia do pregão: atualiza estado"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1
