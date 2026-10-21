@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-21T18:00:24.724Z",
+ "gerado": "2026-10-21T18:21:35.274Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -74,10 +74,10 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 1358,
+  "linhas": 1363,
   "na_janela_e_categorias": 14,
   "sem_cnpj": 177,
-  "entrega_mais_recente": "20261021 21/10/2026 14:52",
+  "entrega_mais_recente": "20261021 21/10/2026 15:21",
   "tentativa": 1
  },
  "fontes": {
