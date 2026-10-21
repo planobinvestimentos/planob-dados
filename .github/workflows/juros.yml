@@ -1,0 +1,49 @@
+# JUROS FUTUROS (DI) às 11h e às 18h (Brasília), segunda a sexta: taxa dos contratos de DI com vencimento em janeiro (jan/27 a jan/35) e variação contra o fechamento anterior.
+# Tentativas na hora cheia e na meia hora (o GitHub costuma atrasar alguns minutos): cada edição envia uma única vez; se a da hora cheia deu certo, a da meia hora não faz nada.
+# Cotações com atraso de ~15 min, de fonte gratuita de terceiros (TradingView). Se não houver dado confiável ou não houver pregão (feriado), não envia nada.
+# Guarda o estado e a última curva em saida/juros.json (não mexe nos outros arquivos).
+name: Juros futuros (11h e 18h)
+on:
+  schedule:
+    - cron: '0,30 14 * * 1-5'    # 11h00 e 11h30 (Brasília)
+    - cron: '0,30 21 * * 1-5'    # 18h00 e 18h30 (Brasília)
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: 'Só mostrar a mensagem no log, sem enviar'
+        type: boolean
+        default: false
+      forcar:
+        description: 'Ignorar o horário e o "já enviou nesta hora" e enviar agora'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: planob-juros
+  cancel-in-progress: false
+jobs:
+  juros:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Juros futuros
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TESTE: ${{ inputs.teste && '1' || '' }}
+          FORCAR: ${{ inputs.forcar && '1' || '' }}
+        run: node juros.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida/juros.json saida/juros-diag.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Juros futuros: atualiza estado"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1
