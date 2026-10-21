@@ -19,7 +19,7 @@ const dias = []; for (let i = 1; dias.length < 3 && i < 12; i++) { const d = new
 diag.dias = dias;
 /* PARTE 1 (nova, 21/10): a página de consulta da B3 "Volume total acumulado" (participação dos investidores) costuma estar 1 pregão à frente do PDF do BDI.
    Procura nela os endereços de dados (API/JSON) e as datas que ela mostra. */
-const PAGINAS = ['https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/consultas/mercado-a-vista/participacao-dos-investidores/volume-total-acumulado/', 'https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/consultas/boletim-diario/boletim-diario-do-mercado/'];
+const PAGINAS = ['https://arquivos.b3.com.br/bdi/tabelas?lang=pt-BR'];   // aplicação de tabelas do BDI da B3 (achada na sonda de 21/10)
 diag.paginas = [];
 for (const url of PAGINAS) {
   const item = { url };
@@ -38,13 +38,15 @@ for (const url of PAGINAS) {
 }
 /* os scripts da página (que não sejam de terceiros) podem ter o endereço do serviço de dados */
 for (const it of diag.paginas) {
-  for (const src of (it.scripts || []).filter((u) => !/google|gtm|analytics|facebook|hotjar|jquery|cdn|adobe|clarity|maze|ruxit|dynatrace/i.test(u)).slice(0, 6)) {
+  for (const src of (it.scripts || []).filter((u) => !/google|gtm|analytics|facebook|hotjar|jquery|adobe|clarity|maze|ruxit|dynatrace|vlibras|modernizr/i.test(u)).slice(0, 12)) {
     try {
       const u = new URL(src, it.url).href;
       const r = await fetch(u, { headers: UA, signal: AbortSignal.timeout(60000) });
       const t = await r.text();
       const ends = [...new Set((t.match(/["'`](https?:\/\/[^"'`\s]{6,160}|\/[a-zA-Z0-9_\/.-]*(?:api|json|participa|investidor|service)[a-zA-Z0-9_\/.?=&-]*)["'`]/gi) || []))].slice(0, 25);
-      if (ends.length || /participa|investidor/i.test(t)) (diag.scripts_b3 = diag.scripts_b3 || []).push({ script: u, bytes: t.length, enderecos: ends, menciona_participacao: /participa[çc][ãa]o/i.test(t) });
+      const trechos = []; for (const m of t.matchAll(/participa[çc][ãa]o|ParticipacaoInvest|investidor/gi)) { if (trechos.length >= 8) break; trechos.push(t.slice(Math.max(0, m.index - 150), m.index + 250).replace(/\s+/g, ' ')); }
+      const apis = [...new Set((t.match(/["'`][^"'`\s]{0,80}(?:bdi\/|\/api\/|table\/|tabelas?\/|\.json)[^"'`\s]{0,120}["'`]/gi) || []))].slice(0, 40);
+      if (ends.length || trechos.length || apis.length) (diag.scripts_b3 = diag.scripts_b3 || []).push({ script: u, bytes: t.length, enderecos: ends, apis, trechos, menciona_participacao: /participa[çc][ãa]o/i.test(t) });
     } catch (e) { /* ignora */ }
     await dorme(500);
   }
