@@ -2,6 +2,9 @@
    - msgProventos: mensagem de proventos anunciados (FIIs em linha compacta, ETFs em destaque, ações, JCP, bonificação)
    - msgResumo:    resumo do dia (tudo o que foi anunciado hoje, em uma lista só)
    - enviarTexto / enviarPdf: envio ao Telegram (TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID; TESTE=1 só mostra no log) */
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 export const RODAPE = 'Conteúdo educacional. Não é recomendação de investimento.';
 export const ASSINATURA = '\n\n📲 Participe do nosso grupo do Telegram: @planobinvestimentos';
 
@@ -12,6 +15,32 @@ const casas = (v) => (Math.abs(v * 100 - Math.round(v * 100)) < 1e-6 ? 2 : Math.
 const dt = (br) => br || 'a definir';
 const curto = (br) => (br ? br.slice(0, 5) : 'a definir');
 const ehBonif = (x) => x.tipo === 'Bonificação';
+
+/* ---------- ficha do FII: tipo (tijolo/papel), P/VP e cotistas ----------
+   Tipo: das listas do Plano B (listas-bolsa.json); fundo fora das listas mostra o segmento informado à CVM.
+   O resto (valor patrimonial, P/VP e cotistas) vem de saida/fii-info.json (workflow "Liquidez dos FIIs", script fii-info.mjs). Se o arquivo ou o dado faltar, a linha simplesmente não aparece. */
+const DIR_MSG = path.dirname(fileURLToPath(import.meta.url));
+let _fichas = null;
+function fontes() {
+  if (_fichas) return _fichas;
+  _fichas = { info: {}, tijolo: new Set(), papel: new Set() };
+  try { _fichas.info = JSON.parse(fs.readFileSync(path.join(process.env.SAIDA_DIR || path.join(DIR_MSG, 'saida'), 'fii-info.json'), 'utf8')).itens || {}; } catch (e) { /* sem ficha */ }
+  try {
+    const l = JSON.parse(fs.readFileSync(path.join(DIR_MSG, 'listas-bolsa.json'), 'utf8')), conj = (a) => new Set((a || []).map((t) => String(t).trim().toUpperCase()));
+    _fichas.tijolo = conj(l.fiisTijolo); _fichas.papel = conj(l.fiisPapel);
+  } catch (e) { /* sem listas */ }
+  return _fichas;
+}
+const TVM = /t[ií]tulos e valores mobili/i;
+function ficha(tk, preco) {
+  const F = fontes(), i = F.info[tk] || {};
+  let tipo = '';
+  if (F.tijolo.has(tk)) tipo = 'Tijolo' + (i.seg && !TVM.test(i.seg) && !/^tijolo$/i.test(i.seg) ? ' (' + i.seg + ')' : '');
+  else if (F.papel.has(tk)) tipo = 'Papel';
+  else if (i.seg) tipo = TVM.test(i.seg) ? 'Títulos e valores mobiliários (papel ou fundo de fundos)' : i.seg;
+  const pvp = preco > 0 && i.vp > 0 && preco / i.vp >= 0.1 && preco / i.vp <= 5 ? preco / i.vp : null;
+  return { tipo, curto: F.tijolo.has(tk) ? 'tijolo' : F.papel.has(tk) ? 'papel' : '', pvp, vp: pvp !== null ? i.vp : null, ref: i.ref ? i.ref.slice(5, 7) + '/' + i.ref.slice(0, 4) : '', cotistas: i.cotistas };
+}
 
 /* chave que identifica um provento (para não enviar duas vezes) */
 export const chaveProvento = (x) => [x.t, x.tipo, x.base, x.pag, x.v].join('|');
@@ -27,13 +56,19 @@ const pctCota = (x, precos) => { const p = precos[x.t]; return p > 0 && x.tipo !
 /* FII/ETF em bloco (um por provento), na ordem pedida pelo Andrade: Código, Valor da cota, Dividendos, Data de pagamento, % sobre o preço, % líquida */
 function blocoFii(x, precos) {
   const etf = x.cls === 'ETF', amort = x.tipo === 'Amortização', p = precos[x.t], bruto = pctCota(x, precos);
+  const fc = etf ? null : ficha(x.t, p);
   const l = [(etf ? '📦' : '🏠') + ' Código: ' + x.t + (x.novoNoResumo ? ' 🆕' : '')];
+  if (fc && fc.tipo) l.push('🧱 Tipo: ' + fc.tipo);
   if (p > 0) l.push('🏷️ Valor da cota (último fechamento): ' + brl(p));
+  if (fc && fc.pvp !== null) l.push('📐 P/VP: ' + num(fc.pvp) + ' (valor patrimonial de ' + brl(fc.vp) + ' por cota)');
   l.push('💰 ' + (amort ? 'Amortização' : 'Dividendos') + ': ' + brl(x.v, casas(x.v)) + (x.extra ? ' 🔔' : ''));
   l.push('💸 Data de pagamento: ' + dt(x.pag));
   if (bruto !== null) {
     l.push('📊 % sobre o preço: ' + num(bruto) + '%');
     l.push('ℹ️ % líquida: ' + num(etf ? bruto * (1 - IR_ETF) : bruto) + '%' + (etf ? ' (após 15% de IR)' : ' (isento de IR para pessoa física)'));
+  }
+  if (fc) {
+    if (fc.cotistas > 0) l.push('👥 Cotistas: ' + fc.cotistas.toLocaleString('pt-BR'));
   }
   if (x.extra) l.push('🔔 Pagamento fora do padrão habitual do fundo');
   if (x.atualizado !== undefined) l.push('✏️ Corrigido (antes ' + brl(x.atualizado, casas(x.atualizado)) + ')');
@@ -42,7 +77,8 @@ function blocoFii(x, precos) {
 /* versão curta, só para o resumo do dia (lista com muitos fundos): HGLG11: R$ 1,17 · 0,73% sobre a cota · base 30/09 · pag. 15/10 */
 function linhaFii(x, precos) {
   const b = pctCota(x, precos);
-  return x.t + ': ' + brl(x.v, casas(x.v)) + (b !== null ? ' · ' + num(b) + '% sobre a cota' : '') + (x.tipo === 'Amortização' ? ' [amortização]' : '') + (x.extra ? ' 🔔' : '') + ' · base ' + curto(x.base) + ' · pag. ' + curto(x.pag) + sufixo(x);
+  const fc = x.cls === 'ETF' ? null : ficha(x.t, precos[x.t]);
+  return x.t + (fc && fc.curto ? ' (' + fc.curto + ')' : '') + ': ' + brl(x.v, casas(x.v)) + (b !== null ? ' · ' + num(b) + '% sobre a cota' : '') + (fc && fc.pvp !== null ? ' · P/VP ' + num(fc.pvp) : '') + (x.tipo === 'Amortização' ? ' [amortização]' : '') + (x.extra ? ' 🔔' : '') + ' · base ' + curto(x.base) + ' · pag. ' + curto(x.pag) + sufixo(x);
 }
 const linhaAcao = (x) => ehBonif(x)
   ? x.t + ' — Bonificação de ' + num(x.v, 2) + '% em ações' + sufixo(x) + '\n   Data-com: ' + dt(x.base) + (x.pag ? ' · Pagamento: ' + x.pag : '')
@@ -58,6 +94,10 @@ const grupos = (itens) => ({
 });
 const notas = (g, itensTodos = [], resumo = false) => {
   const n = [];
+  if (!resumo && g.f.some((x) => fontes().info[x.t])) {
+    const ref = (g.f.map((x) => ficha(x.t, 0).ref).filter(Boolean).sort().pop()) || '';
+    n.push('FIIs: P/VP = preço da cota ÷ valor patrimonial por cota. O valor patrimonial e o número de cotistas vêm do último informe mensal do fundo à CVM' + (ref ? ' (ref. ' + ref + ')' : '') + ', com 1 a 2 meses de defasagem.');
+  }
   if (resumo && g.f.some((x) => x.extra)) n.push('🔔 = pagamento fora do padrão habitual do fundo.');
   if (resumo && itensTodos.some((x) => x.atualizado !== undefined)) n.push('✏️ = a empresa ou o fundo corrigiu o valor em relação ao anúncio anterior (não é um provento repetido).');
   if (!resumo && g.a.some((x) => x.atualizado !== undefined)) n.push('✏️ = a empresa corrigiu o valor em relação ao anúncio anterior (não é um provento repetido).');
