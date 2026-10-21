@@ -1,342 +1,146 @@
 {
- "gerado": "2026-10-21T14:29:15.422Z",
- "pdfs": [
-  {
-   "iso": "2026-10-20",
-   "n": "00",
-   "status": 200,
-   "bytes": 36917594,
-   "comeca": "%PDF-",
-   "erro_texto": "spawnSync pdftotext ETIMEDOUT",
-   "paginas": "1719",
-   "chars_texto": 0,
-   "primeira_linha": "",
-   "linhas_com_investidores": 0
-  },
-  {
-   "iso": "2026-10-20",
-   "n": "01",
-   "status": 200,
-   "bytes": 22356412,
-   "comeca": "%PDF-",
-   "paginas": "3062",
-   "chars_texto": 51147314,
-   "primeira_linha": "Boletim Diário do Mercado |        REFERENTE A TERÇA-FEIRA - 20 DE OUTUBRO DE 2026 - Nº 200 | Renda fixa",
-   "linhas_com_investidores": 0
-  },
-  {
-   "iso": "2026-10-20",
-   "n": "02",
-   "status": 200,
-   "bytes": 14366544,
-   "comeca": "%PDF-",
-   "paginas": "146",
-   "chars_texto": 857519,
-   "primeira_linha": "Boletim Diário do Mercado |     REFERENTE A TERÇA-FEIRA - 20 DE OUTUBRO DE 2026 - Nº 200 | Indicadores e informativos",
-   "linhas_com_investidores": 8
-  },
-  {
-   "iso": "2026-10-20",
-   "n": "03",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-20",
-   "n": "04",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-20",
-   "n": "05",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-20",
-   "n": "06",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-20",
-   "n": "07",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-20",
-   "n": "08",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-20",
-   "n": "09",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-20",
-   "n": "10",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-20",
-   "n": "11",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-20",
-   "n": "12",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-19",
-   "n": "00",
-   "status": 200,
-   "bytes": 36642735,
-   "comeca": "%PDF-",
-   "erro_texto": "spawnSync pdftotext ETIMEDOUT",
-   "paginas": "1707",
-   "chars_texto": 0,
-   "primeira_linha": "",
-   "linhas_com_investidores": 0
-  },
-  {
-   "iso": "2026-10-19",
-   "n": "01",
-   "status": 200,
-   "bytes": 2124910,
-   "comeca": "%PDF-",
-   "paginas": "225",
-   "chars_texto": 3799595,
-   "primeira_linha": "Boletim Diário do Mercado |        REFERENTE A SEGUNDA-FEIRA - 19 DE OUTUBRO DE 2026 - Nº 199 | Renda fixa",
-   "linhas_com_investidores": 0
-  },
-  {
-   "iso": "2026-10-19",
-   "n": "02",
-   "status": 200,
-   "bytes": 14249894,
-   "comeca": "%PDF-",
-   "paginas": "144",
-   "chars_texto": 838078,
-   "primeira_linha": "Boletim Diário do Mercado |     REFERENTE A SEGUNDA-FEIRA - 19 DE OUTUBRO DE 2026 - Nº 199 | Indicadores e informativos",
-   "linhas_com_investidores": 8
-  },
-  {
-   "iso": "2026-10-19",
-   "n": "03",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-19",
-   "n": "04",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-19",
-   "n": "05",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-19",
-   "n": "06",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-19",
-   "n": "07",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-19",
-   "n": "08",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-19",
-   "n": "09",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-19",
-   "n": "10",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-19",
-   "n": "11",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-19",
-   "n": "12",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-16",
-   "n": "00",
-   "status": 200,
-   "bytes": 61592545,
-   "comeca": "%PDF-",
-   "erro_texto": "spawnSync pdftotext ETIMEDOUT",
-   "paginas": "2038",
-   "chars_texto": 0,
-   "primeira_linha": "",
-   "linhas_com_investidores": 0
-  },
-  {
-   "iso": "2026-10-16",
-   "n": "01",
-   "status": 200,
-   "bytes": 23103616,
-   "comeca": "%PDF-",
-   "paginas": "3150",
-   "chars_texto": 52830540,
-   "primeira_linha": "Boletim Diário do Mercado |        REFERENTE A SEXTA-FEIRA - 16 DE OUTUBRO DE 2026 - Nº 198 | Renda fixa",
-   "linhas_com_investidores": 0
-  },
-  {
-   "iso": "2026-10-16",
-   "n": "02",
-   "status": 200,
-   "bytes": 36479883,
-   "comeca": "%PDF-",
-   "paginas": "286",
-   "chars_texto": 1143482,
-   "primeira_linha": "Boletim Diário do Mercado |     REFERENTE A SEXTA-FEIRA - 16 DE OUTUBRO DE 2026 - Nº 198 | Indicadores e informativos",
-   "linhas_com_investidores": 11
-  },
-  {
-   "iso": "2026-10-16",
-   "n": "03",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-16",
-   "n": "04",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-16",
-   "n": "05",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-16",
-   "n": "06",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-16",
-   "n": "07",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-16",
-   "n": "08",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-16",
-   "n": "09",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-16",
-   "n": "10",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-16",
-   "n": "11",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  },
-  {
-   "iso": "2026-10-16",
-   "n": "12",
-   "status": 500,
-   "bytes": 0,
-   "comeca": ""
-  }
- ],
- "trechos": [
-  {
-   "iso": "2026-10-20",
-   "n": "02",
-   "linha": 3642,
-   "contexto": "Z26                                                                    0                        0                                      3                             3    \\nTOTAL                                                                                          55                                    188                          243     \\n\\n\\n\\n\\nParticipação dos investidores\\nContribuição de diferentes perfis de investidores no volume total de negociações realizadas na B3.\\n\\nDados acumulados do início do mês até o dia 16/10/2026.\\nTipos de investidores                                         Compras (R$) mil                                    Participação (%)                                   Venda\\nInstitucionais                                                                                      183.174.743                                             12,74         \\nInstituições Financeiras                                                                             16.098.501                                               1,12        \\nInvestidor Estrangeiro                                                                              455.933.719                                             31,72         \\nInvestidores Individuais                                                                            60.583.564                                               4,21         \\nOutros                                                                                                2.921.765                                             0,20          \\n\\n\\n\\n\\n                                                                                                                                42                                        \\n\fBoletim Diário do Mercado\\n\\n\\nIndicadores e informativos\\nParticipação dos investidores mensal\\nContribuição de diferentes perfis de investidores no volume total de negociações realizadas na B3 no mês anterior.\\n\\nTotal de dados acumulados (Compras + Vendas) por tipo de Mercado do mês anterior (Setembro).\\n                                                À vista                             A termo                            Opções                           Exercícios de opçõ\\nTipos de investidores\\n                                   R$                         (%)           R$                   (%)           R$                    (%)           R$                     "
-  },
-  {
-   "iso": "2026-10-19",
-   "n": "02",
-   "linha": 3645,
-   "contexto": "Z26                                                                    0                        0                                       3                            3    \\nTOTAL                                                                                          55                                      188                         243    \\n\\n\\n\\n\\nParticipação dos investidores\\nContribuição de diferentes perfis de investidores no volume total de negociações realizadas na B3.\\n\\nDados acumulados do início do mês até o dia 15/10/2026.\\nTipos de investidores                                         Compras (R$) mil                                      Participação (%)                                 Venda\\nInstitucionais                                                                                        162.141.127                                            12,78        \\nInstituições Financeiras                                                                              13.032.683                                              1,03        \\nInvestidor Estrangeiro                                                                              402.048.384                                              31,69        \\nInvestidores Individuais                                                                             54.483.995                                              4,29         \\nOutros                                                                                                 2.709.572                                              0,21        \\n\\n\\n\\n\\n                                                                                                                                 42                                       \\n\fBoletim Diário do Mercado\\n\\n\\nIndicadores e informativos\\nParticipação dos investidores mensal\\nContribuição de diferentes perfis de investidores no volume total de negociações realizadas na B3 no mês anterior.\\n\\nTotal de dados acumulados (Compras + Vendas) por tipo de Mercado do mês anterior (Setembro).\\n                                                À vista                             A termo                            Opções                           Exercícios de opçõ\\nTipos de investidores\\n                                   R$                         (%)           R$                   (%)           R$                    (%)           R$                     "
-  },
-  {
-   "iso": "2026-10-16",
-   "n": "02",
-   "linha": 3642,
-   "contexto": "Z26                                                                    0                        0                                      3                             3    \\nTOTAL                                                                                          55                                    179                          234     \\n\\n\\n\\n\\nParticipação dos investidores\\nContribuição de diferentes perfis de investidores no volume total de negociações realizadas na B3.\\n\\nDados acumulados do início do mês até o dia 14/10/2026.\\nTipos de investidores                                         Compras (R$) mil                                    Participação (%)                                   Venda\\nInstitucionais                                                                                      154.099.128                                             12,99         \\nInstituições Financeiras                                                                             12.013.879                                               1,01        \\nInvestidor Estrangeiro                                                                              374.669.362                                             31,59         \\nInvestidores Individuais                                                                             49.716.397                                              4,19         \\nOutros                                                                                                2.453.230                                              0,21         \\n\\n\\n\\n\\n                                                                                                                                42                                        \\n\fBoletim Diário do Mercado\\n\\n\\nIndicadores e informativos\\nParticipação dos investidores mensal\\nContribuição de diferentes perfis de investidores no volume total de negociações realizadas na B3 no mês anterior.\\n\\nTotal de dados acumulados (Compras + Vendas) por tipo de Mercado do mês anterior (Setembro).\\n                                                À vista                             A termo                            Opções                           Exercícios de opçõ\\nTipos de investidores\\n                                   R$                         (%)           R$                   (%)           R$                    (%)           R$                     "
-  }
- ],
+ "gerado": "2026-10-21T14:58:35.023Z",
+ "pdfs": [],
+ "trechos": [],
  "dias": [
   "2026-10-20",
   "2026-10-19",
   "2026-10-16"
+ ],
+ "paginas": [
+  {
+   "url": "https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/consultas/mercado-a-vista/participacao-dos-investidores/volume-total-acumulado/",
+   "status": 200,
+   "bytes": 38169,
+   "scripts": [
+    "lumis/tool/html5shiv/html5shiv.js",
+    "../../../../../../../../lumis/portal/client/script/LumisPortal.js",
+    "/ruxitagentjs_ICA2Vfgjqru_10235220309135426.js",
+    "../../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/vendor/modernizr.js",
+    "../../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/vendor/jquery.js",
+    "../../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/bvmf.js",
+    "../../../../../../../../lumis/doui/client/script/LumisDouiErrorSummary.js",
+    "../../../../../../../../lumis/doui/client/script/LumisDoui.js",
+    "../../../../../../../../lumis/doui/control/validator/client/script/LumisDouiValidator.js",
+    "../../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/foundation.min.js",
+    "../../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/jquery.stellar.min.js",
+    "../../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/responsive.tables.min.js",
+    "../../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/search/classie.js",
+    "../../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/search/uisearch.js",
+    "../../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/jquery-ui.js",
+    "../../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/jquery.bxslider.min.js",
+    "../../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/bowser.min.js",
+    "../../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/vlibras-plugin.js",
+    "../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/vlibras-plugin.js"
+   ],
+   "enderecos": [
+    "https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/consultas/mercado-a-vista/participacao-dos-investidores/volume-total-acumulado/",
+    "https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/consultas/boletim-diario/boletim-diario-do-mercado/"
+   ],
+   "pedacos": [
+    "3\"; var g_LumisPageConfig = new Object();g_LumisPageConfig.name = \"Volume total acumulado\"; g_LumisPageConfig.type = 0; g_LumisPageConfig.isTemplate = false; g_LumisPageConfig.hasParentTemplate = true; var g_LumisLayoutFile = true; var g_LumisDisplayMode = 0; var g_LumisViewMode ",
+    " g_LumisChannelConfig = new Object(); g_LumisChannelConfig.name = \"Volume total acumulado\";var g_LumisIsHtmlCache=true;var g_LumisRootPath='/';var g_LumisLoadingHtmlMessage=\"<img style=\\\"vertical-align: middle;\\\" alt=\\\"Carregando\\\" src=\\\"../../../../../../../../lumis/portal/clien",
+    "viewport\" content=\"width=device-width, initial-scale=1.0\"> <title>Volume total acumulado | B3</title> <script type=\"text/javascript\" data-dtconfig=\"app=fd69ce40c52bd20e|rcdec=1209600000|featureHash=ICA2Vfgjqru|vcv=2|rdnt=1|uxrgce=1|bp=3|srmcrv=10|cuc=kju5m9kg|mel=100000|dpvc=1|",
+    " content=\"summary_large_image\"><meta name=\"twitter:title\" content=\"Volume total acumulado | B3\"><meta name=\"og:title\" content=\"Volume total acumulado | B3\"><link rel=\"canonical\" href=\"https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/consultas/mercad",
+    "ntent=\"Volume total acumulado | B3\"><meta name=\"og:title\" content=\"Volume total acumulado | B3\"><link rel=\"canonical\" href=\"https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/consultas/mercado-a-vista/participacao-dos-investidores/volume-total-acumula",
+    "r/market-data-e-indices/servicos-de-dados/market-data/consultas/mercado-a-vista/participacao-dos-investidores/volume-total-acumulado/\"><script type=\"text/javascript\" charset=\"UTF-8\" src=\"../../../../../../../../lumis/doui/client/script/LumisDouiErrorSummary.js\"></script> <script ",
+    "ndices/servicos-de-dados/market-data/consultas/mercado-a-vista/participacao-dos-investidores/volume-total-acumulado/\"><script type=\"text/javascript\" charset=\"UTF-8\" src=\"../../../../../../../../lumis/doui/client/script/LumisDouiErrorSummary.js\"></script> <script type=\"text/javasc",
+    "arket-data/consultas/mercado-a-vista/participacao-dos-investidores/volume-total-acumulado/\"><script type=\"text/javascript\" charset=\"UTF-8\" src=\"../../../../../../../../lumis/doui/client/script/LumisDouiErrorSummary.js\"></script> <script type=\"text/javascript\">window.LumisBWKeys =",
+    "ript').remove(); </script></head> <body><!-- Google Tag Manager --> <noscript><iframe height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\" src=\"https://www.googletagmanager.com/ns.html?id=GTM-NXGFHZ4\"></iframe></noscript><!-- End Google Tag Manager --><form style=\"display",
+    "ibility:hidden\" src=\"https://www.googletagmanager.com/ns.html?id=GTM-NXGFHZ4\"></iframe></noscript><!-- End Google Tag Manager --><form style=\"display:none\" accept-charset=\"UTF-8\" id=\"LumisPortalForm\" method=\"post\" action=\"../../../../../../../../main.jsp?lumPageId=8AE690F77522D07",
+    "src; return null; } function requestAutocomplete(query, response) { $.ajax({ url: g_LumisRootPath + \"lumis/service/search/rest/autocomplete\", method: \"GET\", data: { q : query.term, ii : '8AE690F77522D07701754CA16A9F25F7' }, dataType: 'json', su",
+    " </g> </svg> Voltar </a> <div class=\"titulo-internas\"> <h1>Participação dos Investidores</h1> <ul aria-label=\"Breadcrumb\" class=\"breadcrumbs hide-for-small-only\"> <li><a href=\"../../../../../../../../pt_br/\">Home</a></li> <li><a href=\"../../../../../../"
+   ],
+   "datas_vistas": []
+  },
+  {
+   "url": "https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/consultas/boletim-diario/boletim-diario-do-mercado/",
+   "status": 200,
+   "bytes": 50360,
+   "scripts": [
+    "lumis/tool/html5shiv/html5shiv.js",
+    "../../../../../../../lumis/portal/client/script/LumisPortal.js",
+    "/ruxitagentjs_ICANVfgqru_10295240705110949.js",
+    "/ruxitagentjs_ICA2Vfgjqru_10235220309135426.js",
+    "../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/vendor/modernizr.js",
+    "../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/vendor/jquery.js",
+    "../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/jquery.ui.datepicker.js",
+    "../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/jquery.ui.datepicker-pt-BR.js",
+    "../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/bvmf.js",
+    "../../../../../../../lumis/doui/client/script/LumisDouiErrorSummary.js",
+    "../../../../../../../lumis/doui/client/script/LumisDoui.js",
+    "../../../../../../../lumis/doui/control/validator/client/script/LumisDouiValidator.js",
+    "../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/foundation.min.js",
+    "../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/jquery.stellar.min.js",
+    "../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/responsive.tables.min.js",
+    "../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/search/classie.js",
+    "../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/search/uisearch.js",
+    "../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/jquery-ui.js",
+    "../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/jquery.bxslider.min.js",
+    "../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/bowser.min.js",
+    "../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/swiper.js",
+    "../../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/vlibras-plugin.js",
+    "../../../../../../lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/vlibras-plugin.js"
+   ],
+   "enderecos": [
+    "https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/consultas/boletim-diario/boletim-diario-do-mercado/",
+    "https://arquivos.b3.com.br/bdi/tabelas?lang=pt-BR"
+   ],
+   "pedacos": [
+    "ript').remove(); </script></head> <body><!-- Google Tag Manager --> <noscript><iframe height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\" src=\"https://www.googletagmanager.com/ns.html?id=GTM-NXGFHZ4\"></iframe></noscript><!-- End Google Tag Manager --><form style=\"display",
+    "ibility:hidden\" src=\"https://www.googletagmanager.com/ns.html?id=GTM-NXGFHZ4\"></iframe></noscript><!-- End Google Tag Manager --><form style=\"display:none\" accept-charset=\"UTF-8\" id=\"LumisPortalForm\" method=\"post\" action=\"../../../../../../../main.jsp?lumPageId=8A6882184DFE365C01",
+    "src; return null; } function requestAutocomplete(query, response) { $.ajax({ url: g_LumisRootPath + \"lumis/service/search/rest/autocomplete\", method: \"GET\", data: { q : query.term, ii : '8A6A8E2C516DFFD601516E6EFFFB7E0B' }, dataType: 'json', su",
+    "#e0e0e0; color: #0056b3; border-color: #0056b3; } #chatIframe-38 { display: none; position: fixed; bottom: 90px; right: 20px; width: 400px; height: 500px; border: none; box-shadow: 0 0 10px r",
+    " } #chatButton-38 svg { stroke: currentColor; } </style> <!--<iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen=\"\" frameborder=\"0\" height=\"315\" id=\"chatIframe-38\" src=\"https://atend",
+    "-in-picture; web-share\" allowfullscreen=\"\" frameborder=\"0\" height=\"315\" id=\"chatIframe-38\" src=\"https://atendimento.b3.com.br/$sn-va-web-client-app.do?sysparm_branding_key=sap&amp;sysparm_portal=atendimento\" title=\"ChatBot B3\" width=\"560\"></iframe>--><button aria-label=\"Abrir cha",
+    "anding_key=sap&amp;sysparm_portal=atendimento\" title=\"ChatBot B3\" width=\"560\"></iframe>--><button aria-label=\"Abrir chat\" id=\"chatButton-38\"> <div id=\"openIcon-38\"><svg fill=\"none\" height=\"32\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" v",
+    " const chatButton38 = document.getElementById('chatButton-38'); // const chatIframe38 = document.getElementById('chatIframe-38'); // const openIcon38 = document.getElementById('openIcon-38'); // const closeIcon38 = document.getElementById('closeIcon-38'); document.getE",
+    "tById('chatButton-38'); // const chatIframe38 = document.getElementById('chatIframe-38'); // const openIcon38 = document.getElementById('openIcon-38'); // const closeIcon38 = document.getElementById('closeIcon-38'); document.getElementById('chatButton-38').addEventList",
+    "tos foram encontrados antes de adicionar o evento // if (chatButton38 && chatIframe38 && openIcon38 && closeIcon38) { // chatButton38.addEventListener('click', () => { // if (chatIframe38.style.display === 'none' || chatIframe38.style.display === '') { // ",
+    " { // chatButton38.addEventListener('click', () => { // if (chatIframe38.style.display === 'none' || chatIframe38.style.display === '') { // chatIframe38.style.display = 'block'; // openIcon38.style.display = 'none'; // close",
+    "r('click', () => { // if (chatIframe38.style.display === 'none' || chatIframe38.style.display === '') { // chatIframe38.style.display = 'block'; // openIcon38.style.display = 'none'; // closeIcon38.style.display = 'block'; // "
+   ],
+   "datas_vistas": []
+  }
+ ],
+ "scripts_b3": [
+  {
+   "script": "https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/consultas/mercado-a-vista/participacao-dos-investidores/volume-total-acumulado/lumis/tool/html5shiv/html5shiv.js",
+   "bytes": 368,
+   "enderecos": [],
+   "menciona_participacao": true
+  },
+  {
+   "script": "https://www.b3.com.br/lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/vendor/modernizr.js",
+   "bytes": 12698,
+   "enderecos": [
+    "\"http://www.w3.org/2000/svg\""
+   ],
+   "menciona_participacao": false
+  },
+  {
+   "script": "https://www.b3.com.br/lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/bvmf.js",
+   "bytes": 9672,
+   "enderecos": [
+    "\"http://bvmf.bmfbovespa.com.br\""
+   ],
+   "menciona_participacao": false
+  },
+  {
+   "script": "https://www.b3.com.br/lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/vendor/modernizr.js",
+   "bytes": 12698,
+   "enderecos": [
+    "\"http://www.w3.org/2000/svg\""
+   ],
+   "menciona_participacao": false
+  },
+  {
+   "script": "https://www.b3.com.br/lumis-theme/br/com/bvmf/internet/theme/bvmf-internet/js/bvmf.js",
+   "bytes": 9672,
+   "enderecos": [
+    "\"http://bvmf.bmfbovespa.com.br\""
+   ],
+   "menciona_participacao": false
+  }
  ]
 }
