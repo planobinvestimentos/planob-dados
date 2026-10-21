@@ -1,5 +1,6 @@
-/* PRÉVIA DO PREGÃO (15h, Brasília): maiores altas e baixas "até o momento" de ações, FIIs de tijolo, FIIs de papel, ETFs e criptomoedas.
-   Roda no GitHub Actions (.github/workflows/previa.yml), segunda a sexta. Sai uma única vez por dia.
+/* PARCIAL DO PREGÃO (de hora em hora, das 12h às 17h, Brasília): maiores altas e baixas "até o momento" de ações, FIIs de tijolo, FIIs de papel e ETFs
+   (as criptomoedas entram só nas horas de PREVIA_CRIPTO_HORAS, padrão 15h). Roda no GitHub Actions (.github/workflows/previa.yml), segunda a sexta.
+   Cada hora sai uma única vez (estado por hora em saida/previa.json); o workflow tenta de novo na meia hora se a primeira tentativa da hora falhar.
    Diferença para o fechamento das 20h: o fechamento usa o arquivo oficial da B3 (só sai depois do pregão). Aqui as cotações vêm de uma fonte gratuita
    com atraso de uns 15 minutos. Por isso a prévia mostra só 3 de cada lado e avisa que o fechamento completo sai às 20h.
    Fontes (nesta ordem, sem chave e sem custo):
@@ -24,12 +25,17 @@ const UA = { 'User-Agent': 'Mozilla/5.0 (compatible; PlanoB-Investimentos-aviso/
 const RODAPE = 'Conteúdo educacional. Não é recomendação de investimento.';
 const DIAS = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
 const QUANTOS = Number(process.env.PREVIA_QUANTOS) || 3;
+const H_INI = Number(process.env.PREVIA_DE) || 12, H_FIM = Number(process.env.PREVIA_ATE) || 17;                       // janela: das 12h às 17h (inclusive)
+const CRIPTO_HORAS = String(process.env.PREVIA_CRIPTO_HORAS || '15').split(',').map((x) => Number(x.trim())).filter(Boolean);   // horas em que a mensagem inclui criptomoedas
 
 /* agora em Brasília (UTC-3, sem horário de verão) */
 const agora = process.env.DATA_TESTE ? new Date(process.env.DATA_TESTE + 'T18:00:00Z') : new Date(Date.now() - 3 * 3600 * 1000);
 const HOJE = agora.toISOString().slice(0, 10);
 const DOW = agora.getUTCDay();
 const HORA = process.env.HORA_TESTE ? Number(process.env.HORA_TESTE) : agora.getUTCHours();
+const MINUTO = process.env.MINUTO_TESTE ? Number(process.env.MINUTO_TESTE) : agora.getUTCMinutes();
+/* fração do pregão já decorrida (10h às ~18h): o volume mínimo cresce ao longo do dia (12h = 25%, 17h = 89%) */
+const FRACAO = Math.min(1, Math.max(0.15, (HORA + MINUTO / 60 - 10) / 7.9));
 
 const lerJson = (arq, padrao = null) => { try { return JSON.parse(fs.readFileSync(path.join(SAIDA, arq), 'utf8')); } catch (e) { return padrao; } };
 const gravar = (arq, obj) => { try { fs.mkdirSync(SAIDA, { recursive: true }); fs.writeFileSync(path.join(SAIDA, arq), JSON.stringify(obj, null, 1)); } catch (e) { console.warn('aviso: não consegui gravar', arq + ':', e.message); } };
@@ -93,12 +99,12 @@ function carregarListas() {
   const acoes = new Set(Object.entries(uni).filter(([tk, it]) => it.cls === 'Ação' && !it.sumiu && !tijolo.has(tk) && !papel.has(tk) && !etfs.has(tk)).map(([tk]) => tk));
   return { f, tijolo, papel, etfs, acoes };
 }
-/* o dia ainda não acabou: o volume mínimo é METADE do exigido no fechamento */
+/* o dia ainda não acabou: o volume mínimo é a fração do exigido no fechamento que corresponde à parte do pregão já decorrida (FRACAO) */
 function ranking(cot, conjunto, minVol, f) {
   const lista = [];
   for (const tk of conjunto) {
     const c = cot[tk];
-    if (!c || c.vol < minVol / 2) continue;
+    if (!c || c.vol < minVol * FRACAO) continue;
     if (Math.abs(c.v) > f.variacaoMaxima) { console.warn('prévia: ignorado por variação extrema (possível desdobramento ou evento):', tk, c.v.toFixed(1) + '%'); continue; }
     lista.push({ t: tk, p: c.p, v: Math.round(c.v * 100) / 100 });
   }
@@ -122,7 +128,7 @@ function pareceParado(cot) {
 }
 
 /* ---------- mensagem ---------- */
-function mensagem(g, ibov, destaque, cr) {
+function mensagem(g, ibov, destaque, cr, incluirCripto) {
   const linhas = (lista, e) => lista.map((x) => e + ' ' + x.t + ': ' + brl(x.p) + ' (' + pct(x.v) + ')');
   const bloco = (nome, r) => (r && (r.altas.length || r.quedas.length) ? [nome, ...linhas(r.altas, '🟢'), ...linhas(r.quedas, '🔻')].join('\n') : '');
   const blocos = [bloco('🏢 AÇÕES', g.acoes), bloco('🏠 FIIs DE TIJOLO', g.fiisTijolo), bloco('📄 FIIs DE PAPEL', g.fiisPapel), bloco('📦 ETFs', g.etfs)].filter(Boolean);
@@ -130,13 +136,13 @@ function mensagem(g, ibov, destaque, cr) {
   const cripBlocos = [];
   if (cr && cr.btc) cripBlocos.push('₿ Bitcoin: ' + usdAuto(cr.btc.p) + (isFinite(cr.btc.v) ? ' (' + pct(cr.btc.v) + ')' : ''));
   if (cr && (cr.altas.length || cr.quedas.length)) cripBlocos.push([...cr.altas.map((x) => '🟢 ' + x.s + ': ' + usdAuto(x.p) + ' (' + pct(x.v) + ')'), ...cr.quedas.map((x) => '🔻 ' + x.s + ': ' + usdAuto(x.p) + ' (' + pct(x.v) + ')')].join('\n'));
-  const cripto = cripBlocos.length ? '🪙 CRIPTO (últimas 24h, top 50)\n' + cripBlocos.join('\n') : '';
+  const cripto = incluirCripto && cripBlocos.length ? '🪙 CRIPTO (últimas 24h, top 50)\n' + cripBlocos.join('\n') : '';
   return [
-    '⏱️ PRÉVIA DO PREGÃO · ' + DIAS[DOW] + ', ' + dataBR(HOJE) + ' · 15h',
-    'Como o mercado está até agora: ' + QUANTOS + ' maiores altas (🟢) e ' + QUANTOS + ' maiores baixas (🔻) de cada grupo. 🔁 Repetição proposital: o fechamento completo, com os números finais do dia, sai às 20h.',
+    '⏱️ PARCIAL DO PREGÃO · ' + DIAS[DOW] + ', ' + dataBR(HOJE) + ' · ' + HORA + 'h',
+    'Como o mercado está até agora: ' + QUANTOS + ' maiores altas (🟢) e ' + QUANTOS + ' maiores baixas (🔻) de cada grupo. 🔁 Repetição proposital: sai de hora em hora, das ' + H_INI + 'h às ' + H_FIM + 'h. O fechamento completo, com os números finais do dia, sai às 20h.',
     ibov ? 'Ibovespa (via BOVA11): ' + pct(ibov.v) : '',
     blocos.join('\n\n'), dest, cripto,
-    'Ações, FIIs e ETFs: cotações com atraso de cerca de 15 minutos, de fonte de terceiros. Cripto: CoinGecko.',
+    'Ações, FIIs e ETFs: cotações com atraso de cerca de 15 minutos, de fonte de terceiros.' + (incluirCripto && cripto ? ' Cripto: CoinGecko.' : ''),
     RODAPE,
   ].filter(Boolean).join('\n\n');
 }
@@ -144,13 +150,14 @@ function mensagem(g, ibov, destaque, cr) {
 /* ---------- principal ---------- */
 const diag = { gerado: new Date().toISOString(), hoje: HOJE, hora: HORA };
 const estado = lerJson('previa.json', {});
+const slots = estado.data === HOJE && estado.slots ? Object.assign({}, estado.slots) : {};   // horas já enviadas hoje, ex.: { "12": true, "13": true }
 const fim = (motivo, erro = false) => { diag.resultado = motivo; console.log(erro ? 'ERRO:' : 'prévia:', motivo); if (!TESTE) gravar('previa-diag.json', diag); if (erro) process.exitCode = 1; };
 
 try {
   if (!TESTE && !FORCAR) {
     if (DOW === 0 || DOW === 6) { console.log('prévia: fim de semana, a bolsa não abre.'); process.exit(0); }
-    if (HORA < 15 || HORA >= 17) { console.log('prévia: fora da janela das 15h às 16h59 (agora ' + HORA + 'h); nada a fazer.'); process.exit(0); }
-    if (estado.data === HOJE && estado.enviado) { console.log('prévia: já enviada hoje.'); process.exit(0); }
+    if (HORA < H_INI || HORA > H_FIM) { console.log('prévia: fora da janela das ' + H_INI + 'h às ' + H_FIM + 'h59 (agora ' + HORA + 'h); nada a fazer.'); process.exit(0); }
+    if (slots[HORA]) { console.log('prévia: a edição das ' + HORA + 'h já foi enviada.'); process.exit(0); }
   }
   const L = carregarListas();
   diag.acoes_no_cadastro = L.acoes.size;
@@ -165,8 +172,8 @@ try {
     cot = await fonteYahoo(codigos); fonte = 'Yahoo Finance'; diag.yahoo = Object.keys(cot).length;
   }
   diag.fonte = fonte; diag.cotacoes = Object.keys(cot).length;
-  /* na última tentativa (16h) o fracasso aparece como ❌ no GitHub */
-  if (Object.keys(cot).length < 150) { fim('sem cotações suficientes (' + Object.keys(cot).length + '); nada enviado', HORA >= 16 && !TESTE && !FORCAR); process.exit(process.exitCode || 0); }
+  /* na 2ª tentativa da hora (a da meia hora) o fracasso aparece como ❌ no GitHub */
+  if (Object.keys(cot).length < 150) { fim('sem cotações suficientes (' + Object.keys(cot).length + '); nada enviado', MINUTO >= 30 && !TESTE && !FORCAR); process.exit(process.exitCode || 0); }
 
   const par = pareceParado(cot);
   diag.comparacao_d1 = par;
@@ -183,12 +190,13 @@ try {
   const ibov = cot.BOVA11 ? { v: cot.BOVA11.v } : null;
   if (!Object.values(g).some((x) => x.altas.length || x.quedas.length)) { fim('nenhum ativo passou nos filtros; nada enviado'); process.exit(0); }
 
-  const cr = await cripto(null, null, QUANTOS);
-  const texto = mensagem(g, ibov, destaque, cr);
+  const incluirCripto = CRIPTO_HORAS.includes(HORA);
+  const cr = incluirCripto ? await cripto(null, null, QUANTOS) : null;
+  const texto = mensagem(g, ibov, destaque, cr, incluirCripto);
   diag.mensagem_chars = texto.length;
   await enviarTexto(texto, { teste: TESTE });
-  if (!TESTE) gravar('previa.json', { data: HOJE, enviado: true, fonte });
-  fim('enviada (fonte: ' + fonte + ')');
+  if (!TESTE) { slots[HORA] = true; gravar('previa.json', { data: HOJE, slots, fonte }); }
+  fim('edição das ' + HORA + 'h enviada (fonte: ' + fonte + ')');
 } catch (e) {
   fim(e.message, true);
 }
