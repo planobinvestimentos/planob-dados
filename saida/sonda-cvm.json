@@ -1,0 +1,147 @@
+{
+ "gerado": "2026-10-21T13:00:56.313Z",
+ "passos": [
+  {
+   "nome": "ipe_zip",
+   "status": 200,
+   "last_modified": "Sun, 18 Oct 2026 10:00:21 GMT",
+   "tamanho": "1749658"
+  },
+  {
+   "nome": "enet_pagina",
+   "status": 200,
+   "tipo": "text/html; charset=utf-8",
+   "bytes": 814164,
+   "inicio": " <!DOCTYPE html> <html xmlns=\"http://www.w3.org/1999/xhtml\"> <head id=\"Head1\"><link href=\"App_Themes/CVM/Calendar/Skins/CVM/Calendar.css\" type=\"text/css\" rel=\"stylesheet\" "
+  },
+  {
+   "nome": "enet_scripts",
+   "lista": [
+    "/ENETWEB/ruxitagentjs_ICANQVfgqrux_10345260810170330.js",
+    "jquery/jquery-1.12.4.js",
+    "jquery/ui/jquery-ui.js",
+    "jquery/jquery.maskedinput.js",
+    "jquery/jquery.mask.min.js",
+    "js/jquery.autocomplete.multiselect.js",
+    "DataTables-1.10.11/media/js/jquery.dataTables.js",
+    "DataTables-1.10.11/extensions/Buttons/js/dataTables.buttons.js",
+    "jquery/chosen/chosen.jquery.js",
+    "jquery/chosen/docsupport/prism.js",
+    "js/vendor/select2.min.js",
+    "js/ordenarColunasGrid.js",
+    "js/mensagemModal.js",
+    "js/FileSaver/FileSaver.js",
+    "js/common.js?v=3",
+    "js/forms/frmConsultaExternaCVM.js"
+   ]
+  },
+  {
+   "nome": "enet_enderecos_na_pagina",
+   "enderecos": [
+    "./frmConsultaExternaCVM.aspx",
+    "frmExibirArquivoIPEExterno.aspx",
+    "ListarDocumentos(event);"
+   ],
+   "trechos": [
+    "=\"button\" value=\"Consultar\" class=\"large button\" id=\"btnConsulta\" onclick=\"ListarDocumentos(event);\" /> <div id=\"divCaptchaV2\"> </div> </div> </div> </fieldset> </div> </div> <div class=\"di"
+   ]
+  },
+  {
+   "nome": "enet_script_ruxitagentjs_ICANQVfgqrux_10345260810170330.js",
+   "url": "https://www.rad.cvm.gov.br/ENETWEB/ruxitagentjs_ICANQVfgqrux_10345260810170330.js",
+   "status": 200,
+   "bytes": 296203,
+   "enderecos": [],
+   "trechos": []
+  },
+  {
+   "nome": "enet_script_select2.min.js",
+   "url": "https://www.rad.cvm.gov.br/ENETWeb/js/vendor/select2.min.js",
+   "status": 200,
+   "bytes": 70181,
+   "enderecos": [],
+   "trechos": []
+  },
+  {
+   "nome": "enet_script_ordenarColunasGrid.js",
+   "url": "https://www.rad.cvm.gov.br/ENETWeb/js/ordenarColunasGrid.js",
+   "status": 200,
+   "bytes": 3662,
+   "enderecos": [],
+   "trechos": []
+  },
+  {
+   "nome": "enet_script_mensagemModal.js",
+   "url": "https://www.rad.cvm.gov.br/ENETWeb/js/mensagemModal.js",
+   "status": 200,
+   "bytes": 5003,
+   "enderecos": [],
+   "trechos": []
+  },
+  {
+   "nome": "enet_script_FileSaver.js",
+   "url": "https://www.rad.cvm.gov.br/ENETWeb/js/FileSaver/FileSaver.js",
+   "status": 200,
+   "bytes": 6153,
+   "enderecos": [],
+   "trechos": []
+  },
+  {
+   "nome": "enet_script_common.js",
+   "url": "https://www.rad.cvm.gov.br/ENETWeb/js/common.js?v=3",
+   "status": 200,
+   "bytes": 7986,
+   "enderecos": [
+    "frmGerenciadorLogin.aspx/IdentificaAvisoEntregaTipoEmpresa",
+    "{"
+   ],
+   "trechos": [
+    " }, } function ExibirAvisoEntregaParticipante(codCvm) { var datavalue = \" { codCvm: '\" + codCvm + \"' }\"; $.ajax({ type: \"POST\", url: \"frmGerenciadorLogin.aspx/IdentificaAvisoEntregaTipoEmpresa\", contentType: \"application/json; charset=utf-8\", dataType: \"json\", data: datavalue, success: function (response) { var retorno = response.d.split('-'); if (retorno[0] == \"6\") { "
+   ]
+  },
+  {
+   "nome": "enet_script_frmConsultaExternaCVM.js",
+   "url": "https://www.rad.cvm.gov.br/ENETWeb/js/forms/frmConsultaExternaCVM.js",
+   "status": 200,
+   "bytes": 90615,
+   "enderecos": [
+    "frmConsultaExternaCVM.aspx/MontaAutoCompletePalavraChave",
+    "frmConsultaExternaCVM.aspx/PopularComboEspeciePorCategoriaTipo",
+    "frmConsultaExternaCVM.aspx/PopularComboTipoPorCategoria",
+    "frmConsultaExternaCVM.aspx/RetornarProtocoloPDF",
+    "frmConsultaExternaCVM.aspx/MontarCombosCategoriaTipoEspecie",
+    "frmConsultaExternaCVM.aspx/ListarEmpresasConsultaExterna",
+    "frmConsultaExternaCVM.aspx/ConsultarCompanhiaAbertaCodigoCVM",
+    "frmConsultaExternaCVM.aspx/ConsultarCompanhiaAbertaCNPJ",
+    "frmConsultaExternaCVM.aspx/PopulaComboEmpresas",
+    "frmConsultaExternaCVM.aspx/PopularComboCategoria",
+    "frmConsultaExternaCVM.aspx/PopularComboTipo",
+    "frmConsultaExternaCVM.aspx/PopularComboEspecie",
+    "frmConsultaExternaCVM.aspx/ListarDocumentos",
+    "frmDownloadDocumento.aspx?Tela=ext&numSequencia=",
+    "frmGerenciadorDocumento.aspx/ExportarGovernanca",
+    "{"
+   ],
+   "trechos": [
+    "8', true, $(\"#parametroCia\").val()); } else { if ($(\"#parametroCia\").val() == \"-1\") { ListarDocumentos(); } } $(\"#divPesquisa\").accordion({ collapsible: true, icons: { \"header\": \"ui-icon-plus\", \"activeHeader\": \"ui-icon-minus\" }, heightStyle: \"content\" }); $('#cboPalavraChave').focusin(function (event) { TrataEventoFocusInPalavraChave(event); }); $('#cbo",
+    " $('#cboTipoParticipante').trigger('change'); if (buscaDocumentos) { ListarDocumentos(); } } }, error: function (response) { $(\"#divSplash\").hide(); MensagemModal(\"Consulta Externa CVM\", response.responseText, \"E\"); } }); } function atualizarComboCategoriaEmissor(retorno) { $('#cboCategoriaEmissor').empty(); $('",
+    " $(menu[0].children[0]).click(); posicionaCategoriaCVM(); } ListarDocumentos(); }, error: function (response) { $(\"#divSplash\").hide(); MensagemModal(\"Consulta Externa CVM\", response.responseText, \"E\"); } }); } function ExibirMensagemVisualizarArquivo() { MensagemModal('Consulta Externa CVM', 'A extensão do arquivo é diferente de PDF, portan",
+    "aIni + \"', horaFim: '\" + horaFim + \"', ultimaDtRef:'\" + ultimaDtRef + \"', tipoEmpresa:'\" + tipoEmpresa + \"'}\"; $.ajax({ type: \"POST\", url: \"frmConsultaExternaCVM.aspx/MontaAutoCompletePalavraChave\", data: dataValue, contentType: \"application/json; charset=utf-8\", dataType: \"json\", async: \"true\", cache: \"false\", success: function (response) { retornoAutoComplete = response.d",
+    "n('tbody').html(htmlTabela); } function carregarComboEspecie(codigoCategoria, codigoTipo) { MostraAjax(); $.ajax({ type: \"POST\", url: \"frmConsultaExternaCVM.aspx/PopularComboEspeciePorCategoriaTipo\", data: '{\"codigoCategoria\": \"' + codigoCategoria + '\", \"codigoTipo\": \"' + codigoTipo + '\"}', contentType: \"application/json; charset=utf-8\", dataType: \"json\", async: \"true\", cache: \"false\", ",
+    "specie').trigger(\"chosen:updated\"); incluirCondicao(); return; } MostraAjax(); $.ajax({ type: \"POST\", url: \"frmConsultaExternaCVM.aspx/PopularComboTipoPorCategoria\", data: '{\"codigoCategoria\": \"' + codigoCategoria + '\"}', contentType: \"application/json; charset=utf-8\", dataType: \"json\", async: \"true\", cache: \"false\", success: function (response) { "
+   ]
+  },
+  {
+   "nome": "chute_ListarDocumentos",
+   "status": 500,
+   "tipo": "application/json; charset=utf-8",
+   "inicio": "{\"Message\":\"Invalid web service call, missing value for parameter: \\u0027dataDe\\u0027.\",\"StackTrace\":\" at System.Web.Script.Services.WebServiceMethodData.CallMethod(Object target, IDictionary`2 parameters)\\r\\n at System.Web.Script.Services.WebSer"
+  },
+  {
+   "nome": "chute_ConsultarDocumentos",
+   "status": 500,
+   "tipo": "text/html; charset=utf-8",
+   "inicio": "<!DOCTYPE html> <html> <head> <title>Unknown web method ConsultarDocumentos.<br>Parameter name: methodName</title> <meta name=\"viewport\" content=\"width=device-width\" /> <script type=\"text/javascript\" src=\"/ENETWEB/rux"
+  }
+ ]
+}
