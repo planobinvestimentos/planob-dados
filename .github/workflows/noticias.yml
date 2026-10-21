@@ -1,8 +1,8 @@
 # Noticiário Corporativo no Telegram (horário de Brasília, segunda a sexta):
 #   9h, 12h e 15h  resumo dos comunicados novos das empresas (fatos relevantes, avisos aos acionistas, comunicados) e matérias de FIIs (FNET, em tempo real)
-#   Atenção: os comunicados de EMPRESAS vêm do arquivo da CVM, que só é atualizado 1 vez por SEMANA (domingo ~7h). Mais rodadas por dia ajudam os FIIs, não as empresas.
+#   Os comunicados de EMPRESAS agora vêm do sistema da CVM em TEMPO REAL (ENETWeb); o arquivo semanal da CVM (domingo) fica de reserva. Nada é enviado duas vezes.
 # Cada edição envia só o que ainda não foi enviado; sem novidade, não manda nada.
-# Fonte: dados abertos da CVM (atualizados uma vez por dia, então itens de hoje podem aparecer só no dia seguinte).
+# Fontes: CVM ENETWeb (tempo real) e, de reserva, dados abertos da CVM (IPE, semanal).
 # Começa no modo GRATUITO (só manchetes), sem nenhum gasto. Para resumos por IA (pago, à parte da assinatura do Claude): crie o segredo
 # ANTHROPIC_API_KEY (Haiku). Para usar também o Opus nos documentos importantes, troque USAR_OPUS para '1'.
 # Precisa dos segredos TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID.
