@@ -1,0 +1,33 @@
+# SONDA DO BDI da B3 (manual): acha o PDF e o formato da tabela "Participação dos Investidores" para consertar o fluxo de investidores.
+# Só roda quando você mandar (Actions > Sonda BDI > Run workflow). Não envia nada ao Telegram. Grava saida/sonda-bdi.json.
+name: Sonda BDI
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: planob-sonda-bdi
+  cancel-in-progress: false
+jobs:
+  sonda:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Instalar leitor de PDF
+        continue-on-error: true
+        run: sudo apt-get install -y poppler-utils
+      - name: Sonda
+        run: node sonda-bdi.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida/sonda-bdi.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Sonda BDI: resultado"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1
