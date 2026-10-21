@@ -17,6 +17,40 @@ const dorme = (ms) => new Promise((r) => setTimeout(r, ms));
 const hoje = new Date(Date.now() - 3 * 3600 * 1000);
 const dias = []; for (let i = 1; dias.length < 3 && i < 12; i++) { const d = new Date(hoje.getTime() - i * 86400000); if (d.getUTCDay() >= 1 && d.getUTCDay() <= 5) dias.push(d.toISOString().slice(0, 10)); }
 diag.dias = dias;
+/* PARTE 1 (nova, 21/10): a página de consulta da B3 "Volume total acumulado" (participação dos investidores) costuma estar 1 pregão à frente do PDF do BDI.
+   Procura nela os endereços de dados (API/JSON) e as datas que ela mostra. */
+const PAGINAS = ['https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/consultas/mercado-a-vista/participacao-dos-investidores/volume-total-acumulado/', 'https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/consultas/boletim-diario/boletim-diario-do-mercado/'];
+diag.paginas = [];
+for (const url of PAGINAS) {
+  const item = { url };
+  try {
+    const r = await fetch(url, { headers: Object.assign({ Accept: 'text/html,application/json,*/*' }, UA), signal: AbortSignal.timeout(60000) });
+    const t = await r.text();
+    item.status = r.status; item.bytes = t.length;
+    item.scripts = [...new Set([...t.matchAll(/<script[^>]+src=["']([^"']+)["']/gi)].map((m) => m[1]))].slice(0, 40);
+    item.enderecos = [...new Set((t.match(/https?:\/\/[a-z0-9.-]*b3[a-z0-9.-]*\/[^"'\s<>)]{3,160}/gi) || []).filter((u) => /api|json|arquivos|sistemasweb|service|participa|boletim|bdi|download/i.test(u)))].slice(0, 40);
+    item.pedacos = [];
+    for (const m of t.matchAll(/(participa[çc][ãa]o|investidor|acumulado|iframe|data-url|fetch\(|ajax|\.json|api\/)/gi)) { if (item.pedacos.length >= 12) break; const i = m.index; item.pedacos.push(t.slice(Math.max(0, i - 80), i + 200).replace(/\s+/g, ' ')); }
+    item.datas_vistas = [...new Set(t.match(/\d{2}\/\d{2}\/\d{4}/g) || [])].slice(0, 10);
+  } catch (e) { item.erro = e.message; }
+  diag.paginas.push(item);
+  await dorme(800);
+}
+/* os scripts da página (que não sejam de terceiros) podem ter o endereço do serviço de dados */
+for (const it of diag.paginas) {
+  for (const src of (it.scripts || []).filter((u) => !/google|gtm|analytics|facebook|hotjar|jquery|cdn|adobe|clarity|maze|ruxit|dynatrace/i.test(u)).slice(0, 6)) {
+    try {
+      const u = new URL(src, it.url).href;
+      const r = await fetch(u, { headers: UA, signal: AbortSignal.timeout(60000) });
+      const t = await r.text();
+      const ends = [...new Set((t.match(/["'`](https?:\/\/[^"'`\s]{6,160}|\/[a-zA-Z0-9_\/.-]*(?:api|json|participa|investidor|service)[a-zA-Z0-9_\/.?=&-]*)["'`]/gi) || []))].slice(0, 25);
+      if (ends.length || /participa|investidor/i.test(t)) (diag.scripts_b3 = diag.scripts_b3 || []).push({ script: u, bytes: t.length, enderecos: ends, menciona_participacao: /participa[çc][ãa]o/i.test(t) });
+    } catch (e) { /* ignora */ }
+    await dorme(500);
+  }
+}
+if (process.env.BDI_PDFS !== '1') { salvar(); process.exit(0); }   // PARTE 2 (os PDFs, já feita em 21/10) só roda com BDI_PDFS=1
+
 try {
   for (const iso of dias) {
     for (let n = 0; n <= 12; n++) {
