@@ -1,42 +1,18 @@
 {
- "gerado": "2026-10-19T16:46:43.437Z",
- "modo": "semana",
- "hoje": "2026-10-19",
+ "gerado": "2026-10-21T10:02:19.344Z",
+ "modo": "hoje",
+ "hoje": "2026-10-21",
  "global_recebidos": 86,
  "global": "ok (1 de alto impacto)",
- "ibge_recebidos": 2,
- "ibge_chaves": [
-  "id",
-  "titulo",
-  "descricao",
-  "data_divulgacao",
-  "tipo_id",
-  "tipo",
-  "produto_id",
-  "nome_produto",
-  "alias_produto",
-  "descricao_produto",
-  "ano_referencia_inicio",
-  "mes_referencia_inicio",
-  "ano_referencia_fim",
-  "mes_referencia_fim",
-  "link"
- ],
- "ibge_amostra": [
-  "{\"id\":4314,\"titulo\":\"Índice Nacional de Preços ao Consumidor Amplo 15\",\"descricao\":\"\",\"data_divulgacao\":\"23/10/2026 12:00:00\",\"tipo_id\":1,\"tipo\":\"Divulgação de Indicadores\",\"produto_id\":9260,\"nome_produto\":\"Índice Nacional de Preços ao Consumidor Amplo 15\",\"alias_produto\":\"indice-nacional-de-precos-ao-consumidor-amplo-15\",\"descricao_produto\":\"<p>Texto na categoria</p>\",\"ano_referencia_inicio\":2026",
-  "{\"id\":4573,\"titulo\":\"Contas Econômicas Ambientais - Contas de Ecossistemas: uma abordagem para Unidades de Conservação\",\"descricao\":\"\",\"data_divulgacao\":\"22/10/2026 13:00:00\",\"tipo_id\":8,\"tipo\":\"Produtos Geocientíficos Experimentais\",\"produto_id\":28920,\"nome_produto\":\"Contas de Ecossistemas\",\"alias_produto\":\"contas-de-ecossistemas\",\"descricao_produto\":\"\",\"ano_referencia_inicio\":0,\"mes_referencia_i"
- ],
- "ibge_datas": [
-  "22/10/2026 13:00:00",
-  "23/10/2026 12:00:00"
- ],
- "ibge": "ok (1 de interesse)",
- "regras": "ok (1)",
+ "ibge_recebidos": 0,
+ "ibge_chaves": [],
+ "ibge_amostra": [],
+ "ibge_datas": [],
+ "ibge": "ok (0 de interesse)",
+ "regras": "ok (0)",
  "manual": "ok (0)",
- "eventos": 3,
+ "eventos": 1,
  "por_fonte": {
-  "regra": 1,
-  "ibge": 1,
   "global": 1
  }
 }
