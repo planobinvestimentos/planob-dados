@@ -1,8 +1,8 @@
 /* Liquidez diária dos FIIs (volume médio negociado por pregão), a partir dos arquivos de cotações históricas da B3.
    Roda no GitHub Actions (.github/workflows/liquidez.yml, toda semana):  node liquidez.mjs
-   Resultado: saida/liquidez-fiis.json  → só os FIIs com média diária acima do mínimo (padrão R$ 100 mil por dia: só deixa de fora fundo praticamente sem negociação).
+   Resultado: saida/liquidez-fiis.json  → só os FIIs com média diária acima do mínimo (padrão R$ 300 mil por dia).
    Esse arquivo diz quais FIIs entram nos avisos de rendimentos (Telegram) e nas matérias do site.
-   Opcionais: PREGOES (padrão 21, cerca de 1 mês), MIN_LIQUIDEZ (padrão 100000), COTAHIST_BASE, DATA_TESTE=AAAA-MM-DD. */
+   Opcionais: PREGOES (padrão 21, cerca de 1 mês), MIN_LIQUIDEZ (padrão 300000), COTAHIST_BASE, DATA_TESTE=AAAA-MM-DD. */
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -12,7 +12,7 @@ import { classe } from './eventos.mjs';
 const SAIDA = process.env.SAIDA_DIR || path.join(path.dirname(fileURLToPath(import.meta.url)), 'saida');
 fs.mkdirSync(SAIDA, { recursive: true });
 const PREGOES = Number(process.env.PREGOES) || 21;
-const MINIMO = Number(process.env.MIN_LIQUIDEZ) || 100000;
+const MINIMO = Number(process.env.MIN_LIQUIDEZ) || 300000;
 const UA = { 'User-Agent': 'PlanoB-Investimentos-dados/1.0 (uso educacional)' };
 const diag = { gerado: new Date().toISOString(), pregoes_pedidos: PREGOES, minimo: MINIMO };
 
