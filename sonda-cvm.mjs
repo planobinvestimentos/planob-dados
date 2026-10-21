@@ -72,58 +72,54 @@ try {
     }
   }
 
-  /* 4) consulta de verdade: os 17 parâmetros que o JavaScript da própria página envia (descobertos na 1ª sonda). Últimos 3 dias, todas as categorias. */
+  /* 4) documentos "eventuais" (IPE: Fato Relevante, Comunicado, Aviso aos Acionistas, Proventos): amostras reais, datas, e teste de download.
+        Resultado da 1ª rodada: a consulta funciona sem captcha (852 documentos em 3 dias). Aqui olhamos o formato das linhas de IPE. */
   const brt = (d) => { const x = new Date(Date.now() - 3 * 3600 * 1000 - d * 86400000); return String(x.getUTCDate()).padStart(2, '0') + '/' + String(x.getUTCMonth() + 1).padStart(2, '0') + '/' + x.getUTCFullYear(); };
-  const base = { dataDe: brt(3), dataAte: brt(0), empresa: '', dataReferencia: '', categoria: '', periodo: '2', horaIni: '', horaFim: '', palavraChave: '', ultimaDtRef: 'false', tipoEmpresa: '0', token: '', versaoCaptcha: '' };
-  const variantes = { combos_menos1: { setorAtividade: '-1', categoriaEmissor: '-1', situacaoEmissor: '-1', tipoParticipante: '-1' }, combos_vazios: { setorAtividade: '', categoriaEmissor: '', situacaoEmissor: '', tipoParticipante: '' } };
-  for (const [nome, extra] of Object.entries(variantes)) {
+  const limpa = (c) => String(c || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+  const post = async (metodo, corpo) => buscar(BASE + 'frmConsultaExternaCVM.aspx/' + metodo, { method: 'POST', headers: Object.assign({ 'Content-Type': 'application/json; charset=utf-8' }, UA), body: JSON.stringify(corpo) });
+  const parse = (t) => { let j = null; try { j = JSON.parse(t); } catch (e) { /* ignora */ } let d = j && j.d; if (typeof d === 'string') { try { d = JSON.parse(d); } catch (e) { /* texto puro */ } } return d; };
+  let catIds = {};
+  try { /* códigos das categorias de IPE (ex.: IPE_4_-1_-1 = Fato Relevante) */
+    const { r, t } = await post('MontarCombosCategoriaTipoEspecie', {});
+    const htm = String((parse(t) || '')).replace(/&#160;/g, ' ').replace(/&amp;/g, '&');
+    for (const m of htm.matchAll(/<option value="(IPE_[^"]+)"[^>]*>([^<]*)<\/option>/g)) { const nome = limpa(m[2]); if (/fato relevante|aviso aos acionistas|comunicado ao mercado|proventos|calend[aá]rio de eventos/i.test(nome) && /\|\s*TODOS\s*\|\s*TODAS/i.test(nome)) catIds[m[1]] = nome; }
+    passo('ipe_codigos_categorias', { status: r.status, achados: catIds, total_options: (htm.match(/<option /g) || []).length });
+  } catch (e) { passo('ipe_codigos_categorias', { erro: e.message }); }
+  await new Promise((r) => setTimeout(r, 1500));
+  const base = { dataDe: brt(2), dataAte: brt(0), empresa: '', dataReferencia: '', categoria: 'IPE_-1_-1_-1', periodo: '2', horaIni: '', horaFim: '', palavraChave: '', ultimaDtRef: 'false', tipoEmpresa: '0', token: '', versaoCaptcha: '', setorAtividade: '-1', categoriaEmissor: '-1', situacaoEmissor: '-1', tipoParticipante: '-1' };
+  let linhasIPE = [];
+  try {
+    const { r, t } = await post('ListarDocumentos', base);
+    const d = parse(t);
+    const dados = d && typeof d.dados === 'string' ? d.dados : '';
+    linhasIPE = dados.split('&*').filter(Boolean).map((l) => l.split('$&'));
+    const porData = {}, porCat = {}, tamanhos = {};
+    for (const c of linhasIPE) { const dt = limpa(c[6]).split(' ')[1] || '?'; porData[dt] = (porData[dt] || 0) + 1; porCat[limpa(c[2])] = (porCat[limpa(c[2])] || 0) + 1; tamanhos[c.length] = (tamanhos[c.length] || 0) + 1; }
+    const horas = linhasIPE.map((c) => limpa(c[6]).replace(/^\d+\s/, '')).sort();
+    passo('ipe_consulta', { status: r.status, SolicitarCaptcha: d && d.SolicitarCaptcha, temErro: d && d.temErro, msgErro: d && d.msgErro, linhas: linhasIPE.length, por_data_entrega: porData, por_categoria: porCat, colunas_por_linha: tamanhos, entrega_mais_antiga: horas[0], entrega_mais_recente: horas[horas.length - 1], ordem_das_5_primeiras: linhasIPE.slice(0, 5).map((c) => limpa(c[6])) });
+  } catch (e) { passo('ipe_consulta', { erro: e.message }); }
+  /* 3 amostras brutas de cada tipo de interesse */
+  const amostras = {};
+  for (const c of linhasIPE) {
+    const cat = limpa(c[2]);
+    if (!/fato relevante|aviso aos acionistas|comunicado ao mercado|proventos/i.test(cat)) continue;
+    amostras[cat] = amostras[cat] || [];
+    if (amostras[cat].length < 3) amostras[cat].push({ campos: c.map((x, i) => (i === 10 ? String(x).slice(0, 700) : limpa(x).slice(0, 300))) });
+  }
+  passo('ipe_amostras', { amostras });
+  /* download: monta o endereço como o JavaScript da página e baixa 1 Fato Relevante e 1 Comunicado */
+  const alvo = [linhasIPE.find((c) => /fato relevante/i.test(c[2])), linhasIPE.find((c) => /comunicado ao mercado/i.test(c[2]))].filter(Boolean);
+  for (const c of alvo) {
     try {
-      const { r, t } = await buscar(BASE + 'frmConsultaExternaCVM.aspx/ListarDocumentos', { method: 'POST', headers: Object.assign({ 'Content-Type': 'application/json; charset=utf-8' }, UA), body: JSON.stringify(Object.assign({}, base, extra)) });
-      let j = null; try { j = JSON.parse(t); } catch (e) { /* não é JSON */ }
-      let d = j && j.d; if (typeof d === 'string') { try { d = JSON.parse(d); } catch (e) { /* texto puro */ } }
-      const info = { status: r.status, tipo: r.headers.get('content-type'), chaves_d: d && typeof d === 'object' ? Object.keys(d) : typeof d, bytes: t.length };
-      if (d && typeof d === 'object') {
-        info.temErro = d.temErro; info.msgErro = d.msgErro; info.SolicitarCaptcha = d.SolicitarCaptcha;
-        const dados = typeof d.dados === 'string' ? d.dados : '';
-        const linhas = dados ? dados.split('&*').filter(Boolean) : [];
-        info.total_linhas = linhas.length;
-        info.exemplo_linhas = linhas.slice(0, 12).map((l) => l.split('$&').map((c) => c.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 140)));
-        info.exemplo_linha_bruta = linhas[0] ? linhas[0].slice(0, 1500) : null;
-        const cats = {}; for (const l of linhas) { const c = (l.split('$&')[2] || '').replace(/<[^>]*>/g, '').trim(); cats[c] = (cats[c] || 0) + 1; }
-        info.categorias_na_resposta = cats;
-      } else info.inicio = t.slice(0, 500).replace(/\s+/g, ' ');
-      passo('consulta_' + nome, info);
-    } catch (e) { passo('consulta_' + nome, { erro: e.message }); }
+      const m = String(c[10] || '').match(/OpenDownloadDocumentos\(\s*'([^']*)'\s*,\s*'([^']*)'\s*,\s*'([^']*)'\s*,\s*'([^']*)'\s*\)/);
+      if (!m) { passo('ipe_download_' + limpa(c[2]).slice(0, 12), { erro: 'não achei OpenDownloadDocumentos na linha', coluna10: String(c[10] || '').slice(0, 400) }); continue; }
+      const url = BASE + 'frmDownloadDocumento.aspx?Tela=ext&numSequencia=' + encodeURIComponent(m[1]) + '&numVersao=' + encodeURIComponent(m[2]) + '&numProtocolo=' + encodeURIComponent(m[3]) + '&descTipo=' + encodeURIComponent(m[4]) + '&CodigoInstituicao=1';
+      const r = await fetch(url, { headers: UA, redirect: 'follow', signal: AbortSignal.timeout(60000) });
+      const buf = Buffer.from(await r.arrayBuffer());
+      passo('ipe_download_' + limpa(c[2]).slice(0, 12), { empresa: limpa(c[1]), assunto: limpa(c[11]), url, status: r.status, tipo: r.headers.get('content-type'), disposicao: r.headers.get('content-disposition'), bytes: buf.length, comeca_com: buf.subarray(0, 8).toString('latin1').replace(/[^\x20-\x7e]/g, '.'), texto_inicio: /pdf/i.test(String(r.headers.get('content-type'))) ? '(PDF)' : buf.toString('latin1').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(0, 300) });
+    } catch (e) { passo('ipe_download', { erro: e.message }); }
     await new Promise((r) => setTimeout(r, 2000));
   }
-  /* 5) lista de categorias (códigos usados no filtro "categoria", ex.: Fato Relevante) */
-  for (const metodo of ['PopularComboCategoria', 'MontarCombosCategoriaTipoEspecie']) {
-    try {
-      const { r, t } = await buscar(BASE + 'frmConsultaExternaCVM.aspx/' + metodo, { method: 'POST', headers: Object.assign({ 'Content-Type': 'application/json; charset=utf-8' }, UA), body: '{}' });
-      passo('categorias_' + metodo, { status: r.status, bytes: t.length, inicio: t.slice(0, 1800).replace(/\s+/g, ' ') });
-    } catch (e) { passo('categorias_' + metodo, { erro: e.message }); }
-    await new Promise((r) => setTimeout(r, 1500));
-  }
-
-  /* 6) fontes de juros: Tesouro Direto (taxas do dia, como no print do Alex Economia) e juros futuros (DI) */
-  const fontesJuros = {
-    tesouro_direto_json: ['GET', 'https://www.tesourodireto.com.br/json/br/com/b3/tesourodireto/service/api/treasurybondsinfo.json'],
-    tesouro_transparente_csv: ['HEAD', 'https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/precotaxatesourodireto.csv'],
-    b3_ajustes_pregao: ['GET', 'https://www2.bmf.com.br/pages/portal/bmfbovespa/lumis/lum-ajustes-do-pregao-ptBR.asp'],
-    b3_curva_di_pre: ['GET', 'https://www2.bmf.com.br/pages/portal/bmfbovespa/boletim1/TxRef1.asp']
-  };
-  for (const [nome, [metodo, url]] of Object.entries(fontesJuros)) {
-    try {
-      const { r, t } = await buscar(url, { method: metodo, headers: UA });
-      passo('juros_' + nome, { status: r.status, tipo: r.headers.get('content-type'), modificado: r.headers.get('last-modified'), bytes: t.length, inicio: t.slice(0, 700).replace(/\s+/g, ' ') });
-    } catch (e) { passo('juros_' + nome, { erro: e.message }); }
-    await new Promise((r) => setTimeout(r, 1000));
-  }
-  try { /* TradingView: futuros de DI (juros futuros), cotação ~15 min de atraso */
-    const corpo = { filter: [{ left: 'name', operation: 'match', right: 'DI1' }], columns: ['name', 'description', 'close', 'change', 'change_abs', 'expiration'], range: [0, 40], sort: { sortBy: 'name', sortOrder: 'asc' } };
-    const { r, t } = await buscar('https://scanner.tradingview.com/futures/scan', { method: 'POST', headers: Object.assign({ 'Content-Type': 'application/json' }, UA), body: JSON.stringify(corpo) });
-    passo('juros_tradingview_di1', { status: r.status, bytes: t.length, inicio: t.slice(0, 1500).replace(/\s+/g, ' ') });
-  } catch (e) { passo('juros_tradingview_di1', { erro: e.message }); }
 } catch (e) { diag.erro = e.message; console.error('ERRO:', e.message); }
 fs.mkdirSync(SAIDA, { recursive: true });
 fs.writeFileSync(path.join(SAIDA, 'sonda-cvm.json'), JSON.stringify(diag, null, 1));
