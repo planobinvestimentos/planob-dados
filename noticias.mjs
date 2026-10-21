@@ -1,8 +1,9 @@
 /* Noticiário Corporativo do Plano B no Telegram.
    Roda no GitHub Actions (.github/workflows/noticias.yml):  node noticias.mjs
-   Fonte: CVM, dados abertos "IPE" (documentos que as empresas enviam à CVM: Fatos Relevantes, Avisos aos Acionistas e
-   Comunicados ao Mercado). O arquivo da CVM é atualizado uma vez por dia, então um comunicado de hoje pode só aparecer
-   no dia seguinte. Roda às 12h e às 15h (seg a sex); cada documento é enviado uma única vez.
+   Fontes dos documentos que as empresas enviam à CVM (Fatos Relevantes, Avisos aos Acionistas e Comunicados ao Mercado):
+     1) CVM ENETWeb, a consulta pública do próprio sistema da CVM, EM TEMPO REAL (documentos de hoje aparecem na hora). Uma única consulta por rodada.
+     2) Dados abertos da CVM "IPE" (arquivo atualizado só 1 vez por semana, domingo): reserva, e cobre o que o ENETWeb eventualmente não trouxer.
+   Roda às 9h, 12h e 15h (seg a sex); cada documento é enviado uma única vez (mesmo que apareça nas duas fontes).
    Os tickers vêm do cadastro de valores mobiliários da CVM (FCA).
    Sem chave de IA: cada linha mostra o "assunto" informado pela empresa na CVM.
    Com ANTHROPIC_API_KEY (segredo opcional): o documento é lido e resumido em 1 a 2 frases pela IA (Claude Haiku).
@@ -23,6 +24,8 @@ const TESTE = process.env.TESTE === '1', FORCAR = process.env.FORCAR === '1';
 const MAXIMO = Number(process.env.MAXIMO) || 25;
 const API = process.env.TELEGRAM_API || 'https://api.telegram.org';
 const CVM = process.env.CVM_URL || 'https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/';
+const CVM_CAD = process.env.CVM_CAD_URL || 'https://dados.cvm.gov.br/dados/CIA_ABERTA/CAD/DADOS/cad_cia_aberta.csv';
+const ENET = (process.env.CVM_ENET_BASE || 'https://www.rad.cvm.gov.br/ENETWeb/').replace(/\/?$/, '/');
 const IA_URL = process.env.ANTHROPIC_URL || 'https://api.anthropic.com/v1/messages';
 const IA_MODELO = process.env.ANTHROPIC_MODEL || 'claude-haiku-5-5';
 const IA_CHAVE = process.env.ANTHROPIC_API_KEY || '';
@@ -95,7 +98,68 @@ async function mapaTickers(diag) {
 /* ---------- documentos da CVM (IPE) ---------- */
 const CATEGORIAS = /fato relevante|aviso aos acionistas|comunicado ao mercado/i;
 const COMUNICADO_RELEVANTE = /resultado|release|dividend|jcp|juros sobre|provento|aquisi|venda de|alienac|fus[aã]o|incorpora|oferta|recompra|aumento de capital|desdobramento|grupamento|bonifica|guidance|rating|acordo|contrato|investimento|preju[ií]zo|lucro|produ[cç][aã]o|operacional|reestrutura|recupera[cç][aã]o|insolv|falencia/i;
-async function documentos(janelaDias, diag) {
+const cvmCod = (x) => { const m = String(x || '').match(/\d+/); return m ? String(Number(m[0])) : ''; };   // "05010-5" (com dígito verificador) -> "5010"
+const limpaHtml = (c) => String(c || '').replace(/<[^>]*>/g, ' ').replace(/&nbsp;|&#160;/g, ' ').replace(/\s+/g, ' ').trim();
+const passaCategoria = (d) => CATEGORIAS.test(d.cat + ' ' + d.tipo) && (!/comunicado ao mercado/i.test(d.cat + ' ' + d.tipo) || /fato relevante|aviso aos acionistas/i.test(d.cat) || COMUNICADO_RELEVANTE.test(d.assunto));
+
+/* código CVM -> CNPJ: vem das linhas do IPE (têm os dois) e do cadastro de companhias abertas; fica guardado em saida/cvm-cnpj.json */
+async function mapaCvmCnpj(linhasIpe, diag) {
+  const guardado = lerJson('cvm-cnpj.json', {}), m = Object.assign({}, guardado.m || {});
+  const n0 = Object.keys(m).length; let mudou = false;
+  for (const r of linhasIpe) { const cod = cvmCod(achar(r, /^CODIGO_CVM|^CD_CVM/)), cnpj = so(achar(r, /^CNPJ/)); if (cod && cnpj) m[cod] = cnpj; }
+  if (!guardado.cadastro || (Date.parse(HOJE) - Date.parse(guardado.cadastro)) / 86400000 >= 14) {
+    try {
+      for (const r of lerCsv(await baixar(CVM_CAD))) { const cod = cvmCod(achar(r, /^CD_CVM$/)), cnpj = so(achar(r, /^CNPJ_CIA|^CNPJ/)); if (cod && cnpj) m[cod] = cnpj; }
+      guardado.cadastro = HOJE; mudou = true;
+    } catch (e) { diag.cadastro_cvm = 'erro: ' + e.message; }
+  }
+  diag.cvm_cnpj = { total: Object.keys(m).length, novos: Object.keys(m).length - n0 };
+  if (!TESTE && (mudou || Object.keys(m).length !== n0)) { try { fs.writeFileSync(path.join(SAIDA, 'cvm-cnpj.json'), JSON.stringify({ cadastro: guardado.cadastro || '', m })); } catch (e) { /* ignora */ } }
+  return m;
+}
+
+/* fonte 1: CVM ENETWeb (tempo real). Uma consulta por rodada, sem login e sem captcha (testado em 21/10/2026). */
+async function documentosEnet(janelaDias, mCnpj, diag) {
+  const ini = iso(new Date(Date.parse(HOJE + 'T12:00:00Z') - janelaDias * 86400000));
+  const corpo = { dataDe: dataBR(ini), dataAte: dataBR(HOJE), empresa: '', dataReferencia: '', categoria: 'IPE_-1_-1_-1', periodo: '2', horaIni: '', horaFim: '', palavraChave: '', ultimaDtRef: 'false', tipoEmpresa: '0', token: '', versaoCaptcha: '', setorAtividade: '-1', categoriaEmissor: '-1', situacaoEmissor: '-1', tipoParticipante: '-1' };
+  let ultimo;
+  for (let t = 0; t < 2; t++) {
+    try {
+      const r = await fetch(ENET + 'frmConsultaExternaCVM.aspx/ListarDocumentos', { method: 'POST', headers: Object.assign({ 'Content-Type': 'application/json; charset=utf-8', Accept: 'application/json' }, UA), body: JSON.stringify(corpo), signal: AbortSignal.timeout(90000) });
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      let d = (await r.json()).d;
+      if (typeof d === 'string') d = JSON.parse(d);
+      if (!d || typeof d !== 'object') throw new Error('resposta inesperada');
+      if (d.SolicitarCaptcha === 'S') throw new Error('a CVM pediu captcha');
+      if (d.temErro) throw new Error('a CVM respondeu erro: ' + d.msgErro);
+      const linhas = String(d.dados || '').split('&*').filter(Boolean).map((l) => l.split('$&'));
+      const docs = []; let semCnpj = 0, maisRecente = '';
+      for (const c of linhas) {
+        if (c.length < 12) continue;
+        const cat = limpaHtml(c[2]), tipo = limpaHtml(c[3]);
+        const ent = limpaHtml(c[6]).match(/^(\d{4})(\d{2})(\d{2})\s+(\d{2}\/\d{2}\/\d{4})(?:\s+(\d{2}:\d{2}))?/);
+        const dl = String(c[10] || '').match(/OpenDownloadDocumentos\(\s*'([^']*)'\s*,\s*'([^']*)'\s*,\s*'([^']*)'\s*,\s*'([^']*)'\s*\)/);
+        if (!ent || !dl || /cancel|inativ/i.test(limpaHtml(c[7]))) continue;
+        const data = ent[1] + '-' + ent[2] + '-' + ent[3];
+        if (ent[0] > maisRecente) maisRecente = ent[0];
+        const assunto = limpaHtml(c[11]) || limpaHtml(c[4]).replace(/\s*-\s*$/, '');
+        const d1 = { cnpj: mCnpj[cvmCod(c[0])] || '', empresa: limpaHtml(c[1]), cat, tipo, assunto, data, prot: dl[3], ver: dl[2], seq: dl[1], fonte: 'ENETWeb',
+          link: ENET + 'frmDownloadDocumento.aspx?Tela=ext&numSequencia=' + encodeURIComponent(dl[1]) + '&numVersao=' + encodeURIComponent(dl[2]) + '&numProtocolo=' + encodeURIComponent(dl[3]) + '&descTipo=' + encodeURIComponent(dl[4]) + '&CodigoInstituicao=1' };
+        if (!passaCategoria(d1) || d1.data < ini || d1.data > HOJE) continue;
+        if (!d1.cnpj) { semCnpj++; continue; }
+        d1.ids = [d1.prot + '|' + d1.ver, 'np:' + d1.prot + '|' + d1.ver];
+        docs.push(d1);
+      }
+      diag.enet = { linhas: linhas.length, na_janela_e_categorias: docs.length, sem_cnpj: semCnpj, entrega_mais_recente: maisRecente, tentativa: t + 1 };
+      if (!linhas.length) throw new Error('a consulta não devolveu nenhum documento');
+      return docs;
+    } catch (e) { ultimo = e; diag.enet_erro = causa(e); await dorme(3000); }
+  }
+  throw new Error('ENETWeb: ' + causa(ultimo));
+}
+
+/* fonte 2: arquivo IPE (dados abertos, semanal) */
+async function documentosIpe(janelaDias, diag) {
   const linhas = [];
   for (const ano of [agora.getUTCFullYear(), ...(agora.getUTCMonth() === 0 ? [agora.getUTCFullYear() - 1] : [])]) {
     try {
@@ -106,13 +170,33 @@ async function documentos(janelaDias, diag) {
   if (!linhas.length) throw new Error('não consegui ler o arquivo IPE da CVM');
   const desde = iso(new Date(Date.parse(HOJE + 'T12:00:00Z') - janelaDias * 86400000));
   const brutos = linhas.map((r) => ({ cat: achar(r, /^CATEGORIA/), data: String(achar(r, /^DATA_ENTREGA/)).slice(0, 10) }));
-  const docs = linhas.map((r) => ({
-    cnpj: so(achar(r, /^CNPJ/)), empresa: achar(r, /^NOME_COMPANHIA|^NOME_CIA/), cat: achar(r, /^CATEGORIA/), tipo: achar(r, /^TIPO$/), assunto: achar(r, /^ASSUNTO/),
-    data: String(achar(r, /^DATA_ENTREGA/)).slice(0, 10), prot: achar(r, /^PROTOCOLO/), ver: achar(r, /^VERSAO/), link: achar(r, /^LINK/),
-  })).filter((d) => d.data >= desde && d.data <= HOJE && CATEGORIAS.test(d.cat + ' ' + d.tipo) && (!/comunicado ao mercado/i.test(d.cat + ' ' + d.tipo) || /fato relevante|aviso aos acionistas/i.test(d.cat) || COMUNICADO_RELEVANTE.test(d.assunto)));
+  const docs = linhas.map((r) => {
+    const d = { cnpj: so(achar(r, /^CNPJ/)), empresa: achar(r, /^NOME_COMPANHIA|^NOME_CIA/), cat: achar(r, /^CATEGORIA/), tipo: achar(r, /^TIPO$/), assunto: achar(r, /^ASSUNTO/),
+      data: String(achar(r, /^DATA_ENTREGA/)).slice(0, 10), prot: achar(r, /^PROTOCOLO/), ver: achar(r, /^VERSAO/), link: achar(r, /^LINK/), fonte: 'IPE' };
+    const np = String(d.link).match(/NumeroProtocoloEntrega=(\d+)/i) || String(d.link).match(/numProtocolo=(\d+)/i);
+    d.ids = [d.prot + '|' + d.ver].concat(np ? ['np:' + np[1] + '|' + d.ver] : []);
+    return d;
+  }).filter((d) => d.data >= desde && d.data <= HOJE && passaCategoria(d));
   const recentes = {}, d10 = iso(new Date(Date.parse(HOJE + 'T12:00:00Z') - 10 * 86400000));
   for (const x of brutos) if (x.data >= d10) recentes[x.cat] = (recentes[x.cat] || 0) + 1;
   diag.ipe = { linhas: linhas.length, janela_desde: desde, data_mais_recente: brutos.reduce((m, x) => (x.data > m ? x.data : m), ''), categorias_ultimos_10_dias: recentes, na_janela_e_categorias: docs.length, colunas: Object.keys(linhas[0] || {}) };
+  return { docs, linhas };
+}
+
+/* junta as duas fontes: o mesmo documento (mesmo protocolo) aparece uma vez, preferindo o do ENETWeb */
+async function documentos(janelaDias, diag) {
+  let ipe = { docs: [], linhas: [] };
+  try { ipe = await documentosIpe(janelaDias, diag); } catch (e) { diag.ipe_erro = e.message; console.warn('aviso (IPE):', e.message); }
+  let enet = [];
+  try { enet = await documentosEnet(janelaDias, await mapaCvmCnpj(ipe.linhas, diag), diag); } catch (e) { diag.enet_erro = e.message; console.warn('aviso (ENETWeb):', e.message); }
+  if (!enet.length && !ipe.docs.length && (diag.enet_erro || diag.ipe_erro)) throw new Error('nenhuma fonte da CVM respondeu (ENETWeb: ' + (diag.enet_erro || 'sem documentos') + '; IPE: ' + (diag.ipe_erro || 'sem documentos') + ')');
+  const vistos = new Set(), docs = [];
+  for (const d of [...enet, ...ipe.docs]) {
+    if (d.ids.some((i) => vistos.has(i))) continue;
+    d.ids.forEach((i) => vistos.add(i));
+    docs.push(d);
+  }
+  diag.fontes = { enet: enet.length, ipe: ipe.docs.length, apos_juntar: docs.length };
   return docs.sort((a, b) => (b.data + b.prot).localeCompare(a.data + a.prot));
 }
 
@@ -223,20 +307,23 @@ try {
   const tickers = await mapaTickers(diag);
   const todos = await documentos(primeira ? 4 : 5, diag);
   const chave = (d) => d.prot + '|' + d.ver;
+  const dupDe = (d) => 'c:' + d.cnpj + '|' + d.cat + '|' + d.assunto + '|' + d.data;      // mesmo aviso nas duas fontes ou em duas versões: publica só um
+  const jaFoi = (d) => (d.ids || [chave(d)]).some((i) => enviados.has(i)) || enviados.has(dupDe(d));
+  const marca = (d) => { (d.ids || [chave(d)]).forEach((i) => enviados.add(i)); enviados.add(dupDe(d)); };
   const novos = [];
   const vistosConteudo = new Set();
   let foraFiltro = 0, rotina = 0;
   const linhasVistas = new Set();
   for (const d of todos) {
-    if (!FORCAR && enviados.has(chave(d))) continue;
-    const dup = d.cnpj + '|' + d.cat + '|' + d.assunto + '|' + d.data;   // mesmo aviso entregue em duas versões: publica só uma
-    if (vistosConteudo.has(dup)) { enviados.add(chave(d)); continue; }
+    if (!FORCAR && jaFoi(d)) continue;
+    const dup = dupDe(d);
+    if (vistosConteudo.has(dup)) { marca(d); continue; }
     vistosConteudo.add(dup);
     const t = (tickers[d.cnpj] || []);
     if (!t.length) continue;
     if (!passaFiltro(d.cnpj, t)) { foraFiltro++; continue; }
     const dest = ehDestaque(t), prov = PROVENTO.test(d.assunto || '');
-    if (!dest && !prov && ROTINA.test(d.assunto || '') && !IMPORTANTE.test(d.assunto || '')) { rotina++; enviados.add(chave(d)); continue; }   // rotina fora da lista: não publica
+    if (!dest && !prov && ROTINA.test(d.assunto || '') && !IMPORTANTE.test(d.assunto || '')) { rotina++; marca(d); continue; }   // rotina fora da lista: não publica
     if (!dest && !prov && !/fato relevante/i.test(d.cat)) continue;  // fora da lista: Fatos Relevantes e anúncios de proventos
     novos.push(Object.assign(d, { tickers: t, dest, prov }));
   }
@@ -265,16 +352,16 @@ try {
       try {
         texto = await resumirIA(d, diag, forte);
         if (forte) usadosForte++;
-        if (/^NADA\.?$/i.test(texto)) { enviados.add(chave(d)); continue; }       // sem relevância: não publica
+        if (/^NADA\.?$/i.test(texto)) { marca(d); continue; }       // sem relevância: não publica
         diag.itens.com_ia++;
       } catch (e) { diag.itens.ia_falhas++; diag.ia_erro = e.message; texto = ''; }
     }
     if (!texto) texto = d.empresa + ' · ' + (d.cat || '').replace(/\s+/g, ' ') + (d.assunto ? ': ' + cab(d.assunto) : '');
     const linhaFinal = tags + ' - ' + texto;
-    if (linhasVistas.has(linhaFinal)) { enviados.add(chave(d)); continue; }   // linha idêntica (mesmo aviso em duas versões): publica uma só
+    if (linhasVistas.has(linhaFinal)) { marca(d); continue; }   // linha idêntica (mesmo aviso em duas versões): publica uma só
     linhasVistas.add(linhaFinal);
     (d.prov ? provs : d.dest ? linhas : outros).push(linhaFinal);
-    enviados.add(chave(d));
+    marca(d);
   }
   diag.itens.materias = novasMaterias.length;
   if (novasMaterias.length && !TESTE && matLegivel) {
