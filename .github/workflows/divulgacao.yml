@@ -1,0 +1,54 @@
+# DIVULGAÇÃO DO SITE no Telegram, duas vezes ao dia (8h e 19h, Brasília, todos os dias): convida o pessoal a usar as calculadoras e explorar o site.
+# Os textos ficam em divulgacao.json (editável no GitHub). Tentativas na hora cheia e na meia hora; cada edição envia uma única vez.
+# Para mudar os horários: altere os crons abaixo (UTC = Brasília + 3) e a variável DIVULGACAO_HORAS no passo "Divulgação".
+name: Divulgação do site (8h e 19h)
+on:
+  schedule:
+    - cron: '0,30 11 * * *'    # 8h00 e 8h30 (Brasília)
+    - cron: '0,30 22 * * *'    # 19h00 e 19h30 (Brasília)
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: 'Só mostrar a mensagem no log, sem enviar'
+        type: boolean
+        default: false
+      todas:
+        description: 'Com "teste": mostrar TODAS as mensagens no log'
+        type: boolean
+        default: false
+      forcar:
+        description: 'Ignorar o horário e o "já enviou nesta hora" e enviar agora'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: planob-divulgacao
+  cancel-in-progress: false
+jobs:
+  divulgacao:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Divulgação
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DIVULGACAO_HORAS: '8,19'
+          TESTE: ${{ inputs.teste && '1' || '' }}
+          TODAS: ${{ inputs.todas && '1' || '' }}
+          FORCAR: ${{ inputs.forcar && '1' || '' }}
+        run: node divulgacao.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida/divulgacao-estado.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Divulgação: atualiza estado"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1
