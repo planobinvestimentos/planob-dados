@@ -1,8 +1,8 @@
 /* Aviso diário do Plano B no Telegram.
    Roda no GitHub Actions (.github/workflows/telegram.yml) depois de `node gerar-dados.mjs bolsa-hoje`
    e `node gerar-dados.mjs proventos`. Horários (Brasília), cada parte sai só quando o dado está disponível
-   e, se perdeu o horário, sai na próxima tentativa:
-     a partir das 19h:  1) Maiores altas e 2) Maiores baixas (ações, FIIs de tijolo, FIIs de papel, ETFs)
+   e, se perdeu o horário, sai na próxima tentativa. As altas e baixas (1 e 2) só saem aqui se o fechamento rápido das ~18h20 (previa.mjs) não saiu:
+     a partir das 20h:  1) Maiores altas e 2) Maiores baixas (ações, FIIs de tijolo, FIIs de papel, ETFs)
                         3) Mercado: dólar e cripto (5 maiores altas e 5 maiores baixas do top 50), preços em dólar
      a partir das 21h:  4) Atualizações da B3 (mudanças de código, novos listados, possíveis retiradas), só se houver
      a partir das 22h:  5) Resumo do dia: dividendos, JCP e bonificações anunciados hoje (parte "resumo"; os proventos saem na hora pelo proventos-agora.mjs); às 22h30, proventos que ainda não saíram (parte "proventos") (mudanças de código, novos listados, possíveis retiradas), só se houver
@@ -163,10 +163,13 @@ const salvar = () => { if (!TESTE) fs.writeFileSync(path.join(SAIDA, 'telegram.j
 const bolsa = lerJson('bolsa.json');
 const temBolsa = !!(bolsa && bolsa.data === HOJE && bolsa.acoes);
 const fimDeSemana = DOW === 0 || DOW === 6;
+/* fechamento rápido (previa.mjs, MODO=fechamento, ~18h20): se já saiu hoje, o fechamento oficial das 20h não repete as altas e baixas (nada duplicado) */
+const rapido = lerJson('previa.json');
+const fechRapidoEnviado = !!(rapido && rapido.data === HOJE && rapido.slots && rapido.slots.fech) && !FORCAR;
 
 try {
   /* 1 e 2: altas e baixas */
-  if (faz('fechamento') && liberado(20) && !fimDeSemana && temBolsa && !E.fech) {
+  if (faz('fechamento') && liberado(20) && !fimDeSemana && temBolsa && !E.fech && !fechRapidoEnviado) {
     const a = msgBolsa(bolsa, true), b = msgBolsa(bolsa, false);
     if (a) await enviar(a);
     if (b) await enviar(b);

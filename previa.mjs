@@ -7,6 +7,9 @@
      1) TradingView (scanner): uma única consulta traz o mercado brasileiro inteiro, com preço, variação do dia e volume.
      2) Yahoo Finance (gráfico de cada código): reserva, usada só se a 1 falhar. Consulta um código por vez.
    Se nenhuma fonte entregar dados confiáveis (ou se não houve pregão hoje), NADA é enviado e o motivo fica em saida/previa-diag.json.
+   MODO=fechamento (workflow fechamento-rapido.yml): o MESMO script envia o FECHAMENTO RÁPIDO por volta das 18h20 (altas e baixas do dia, 5 de cada lado, com as mesmas
+   fontes e filtros). Sai uma única vez (slot "fech" em saida/previa.json) e o fechamento oficial das 20h (telegram.mjs) NÃO é enviado se este já saiu: nada duplicado.
+   Se o rápido não sair (fonte fora do ar, feriado), o oficial continua como reserva, a partir das 20h.
    Variáveis: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID. Opcionais: TESTE=1 (só mostra no log, ignora horário e não grava estado), FORCAR=1 (ignora horário e o "já enviou hoje"). */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -24,7 +27,8 @@ const YAHOO_URL = process.env.YAHOO_URL || 'https://query1.finance.yahoo.com/v8/
 const UA = { 'User-Agent': 'Mozilla/5.0 (compatible; PlanoB-Investimentos-aviso/1.0; uso educacional)' };
 const RODAPE = 'Conteúdo educacional. Não é recomendação de investimento.';
 const DIAS = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
-const QUANTOS = Number(process.env.PREVIA_QUANTOS) || 3;
+const FECH = process.env.MODO === 'fechamento';                                                                      // fechamento rápido (18h20 em diante)
+const QUANTOS = Number(process.env.PREVIA_QUANTOS) || (FECH ? 5 : 3);
 const H_INI = Number(process.env.PREVIA_DE) || 12, H_FIM = Number(process.env.PREVIA_ATE) || 17;                       // janela: das 12h às 17h (inclusive)
 const CRIPTO_HORAS = String(process.env.PREVIA_CRIPTO_HORAS || '15').split(',').map((x) => Number(x.trim())).filter(Boolean);   // horas em que a mensagem inclui criptomoedas
 
@@ -35,7 +39,9 @@ const DOW = agora.getUTCDay();
 const HORA = process.env.HORA_TESTE ? Number(process.env.HORA_TESTE) : agora.getUTCHours();
 const MINUTO = process.env.MINUTO_TESTE ? Number(process.env.MINUTO_TESTE) : agora.getUTCMinutes();
 /* fração do pregão já decorrida (10h às ~18h): o volume mínimo cresce ao longo do dia (12h = 25%, 17h = 89%) */
-const FRACAO = Math.min(1, Math.max(0.15, (HORA + MINUTO / 60 - 10) / 7.9));
+const FRACAO = FECH ? 1 : Math.min(1, Math.max(0.15, (HORA + MINUTO / 60 - 10) / 7.9));
+const CHAVE = FECH ? 'fech' : HORA;                      // chave do envio em saida/previa.json
+const H_FECH_INI = 18 * 60 + 15, H_FECH_FIM = 19 * 60 + 59;   // fechamento rápido: de 18h15 (atraso da fonte ~15 min após o fim do pregão às 18h00) até 19h59
 
 const lerJson = (arq, padrao = null) => { try { return JSON.parse(fs.readFileSync(path.join(SAIDA, arq), 'utf8')); } catch (e) { return padrao; } };
 const gravar = (arq, obj) => { try { fs.mkdirSync(SAIDA, { recursive: true }); fs.writeFileSync(path.join(SAIDA, arq), JSON.stringify(obj, null, 1)); } catch (e) { console.warn('aviso: não consegui gravar', arq + ':', e.message); } };
@@ -139,12 +145,33 @@ function mensagem(g, ibov, destaque, cr, incluirCripto) {
   const cripto = incluirCripto && cripBlocos.length ? '🪙 CRIPTO (últimas 24h, top 50)\n' + cripBlocos.join('\n') : '';
   return [
     '⏱️ PARCIAL DO PREGÃO · ' + DIAS[DOW] + ', ' + dataBR(HOJE) + ' · ' + HORA + 'h',
-    'Como o mercado está até agora: ' + QUANTOS + ' maiores altas (🟢) e ' + QUANTOS + ' maiores baixas (🔻) de cada grupo. 🔁 Repetição proposital: sai de hora em hora, das ' + H_INI + 'h às ' + H_FIM + 'h. O fechamento completo, com os números finais do dia, sai às 20h.',
+    'Como o mercado está até agora: ' + QUANTOS + ' maiores altas (🟢) e ' + QUANTOS + ' maiores baixas (🔻) de cada grupo. 🔁 Repetição proposital: sai de hora em hora, das ' + H_INI + 'h às ' + H_FIM + 'h. O fechamento do dia sai logo depois das 18h.',
     ibov ? 'Ibovespa (via BOVA11): ' + pct(ibov.v) : '',
     blocos.join('\n\n'), dest, cripto,
     'Ações, FIIs e ETFs: cotações com atraso de cerca de 15 minutos, de fonte de terceiros.' + (incluirCripto && cripto ? ' Cripto: CoinGecko.' : ''),
     RODAPE,
   ].filter(Boolean).join('\n\n');
+}
+
+/* fechamento rápido: duas mensagens (altas e baixas), no mesmo formato do fechamento oficial das 20h, mas avisando que a fonte é de terceiros */
+function mensagensFechamento(g, ibov, destaque) {
+  const linhas = (lista, e) => lista.map((x) => e + ' ' + x.t + ': ' + brl(x.p) + ' (' + pct(x.v) + ')');
+  const nomes = [['🏢 AÇÕES', g.acoes], ['🏠 FIIs DE TIJOLO', g.fiisTijolo], ['📄 FIIs DE PAPEL', g.fiisPapel], ['📦 ETFs', g.etfs]];
+  const fonteAviso = 'Números do fechamento de hoje, de fonte de terceiros (atraso de cerca de 15 minutos); podem diferir em centavos dos números oficiais da B3, que só saem à noite.';
+  const monta = (altas) => {
+    const k = altas ? 'altas' : 'quedas', e = altas ? '🟢' : '🔻';
+    const blocos = nomes.map(([n, r]) => (r && r[k].length ? [n, ...linhas(r[k], e)].join('\n') : '')).filter(Boolean);
+    const dest = altas && destaque.length ? '⭐ ETFs EM DESTAQUE\n' + destaque.map((x) => x.t + ': fechamento ' + brl(x.p) + ' (' + pct(x.v) + ')').join('\n') : '';
+    if (!blocos.length && !dest) return '';
+    return [
+      '🚪 FECHAMENTO (' + dataBR(HOJE) + ')\n' + (altas ? '⬆️ Maiores altas' : '⬇️ Maiores baixas'),
+      altas && ibov ? 'Ibovespa (via BOVA11): ' + pct(ibov.v) : '',
+      blocos.join('\n\n'), dest,
+      altas ? '' : fonteAviso + '\nDólar e criptomoedas saem às 20h. Ranking completo: https://planobinvestimentos.com/cotacoes/bolsa/',
+      altas ? '' : RODAPE,
+    ].filter(Boolean).join('\n\n');
+  };
+  return [monta(true), monta(false)].filter(Boolean);
 }
 
 /* ---------- principal ---------- */
@@ -156,8 +183,11 @@ const fim = (motivo, erro = false) => { diag.resultado = motivo; console.log(err
 try {
   if (!TESTE && !FORCAR) {
     if (DOW === 0 || DOW === 6) { console.log('prévia: fim de semana, a bolsa não abre.'); process.exit(0); }
-    if (HORA < H_INI || HORA > H_FIM) { console.log('prévia: fora da janela das ' + H_INI + 'h às ' + H_FIM + 'h59 (agora ' + HORA + 'h); nada a fazer.'); process.exit(0); }
-    if (slots[HORA]) { console.log('prévia: a edição das ' + HORA + 'h já foi enviada.'); process.exit(0); }
+    if (FECH) {
+      const min = HORA * 60 + MINUTO;
+      if (min < H_FECH_INI || min > H_FECH_FIM) { console.log('fechamento rápido: janela das 18h15 às 19h59 (agora ' + HORA + 'h' + String(MINUTO).padStart(2, '0') + '); nada a fazer.'); process.exit(0); }
+    } else if (HORA < H_INI || HORA > H_FIM) { console.log('prévia: fora da janela das ' + H_INI + 'h às ' + H_FIM + 'h59 (agora ' + HORA + 'h); nada a fazer.'); process.exit(0); }
+    if (slots[CHAVE]) { console.log(FECH ? 'fechamento rápido: já foi enviado hoje.' : 'prévia: a edição das ' + HORA + 'h já foi enviada.'); process.exit(0); }
   }
   const L = carregarListas();
   diag.acoes_no_cadastro = L.acoes.size;
@@ -173,7 +203,7 @@ try {
   }
   diag.fonte = fonte; diag.cotacoes = Object.keys(cot).length;
   /* na 2ª tentativa da hora (a da meia hora) o fracasso aparece como ❌ no GitHub */
-  if (Object.keys(cot).length < 150) { fim('sem cotações suficientes (' + Object.keys(cot).length + '); nada enviado', MINUTO >= 30 && !TESTE && !FORCAR); process.exit(process.exitCode || 0); }
+  if (Object.keys(cot).length < 150) { fim('sem cotações suficientes (' + Object.keys(cot).length + '); nada enviado', (FECH ? HORA >= 19 : MINUTO >= 30) && !TESTE && !FORCAR); process.exit(process.exitCode || 0); }
 
   const par = pareceParado(cot);
   diag.comparacao_d1 = par;
@@ -190,12 +220,20 @@ try {
   const ibov = cot.BOVA11 ? { v: cot.BOVA11.v } : null;
   if (!Object.values(g).some((x) => x.altas.length || x.quedas.length)) { fim('nenhum ativo passou nos filtros; nada enviado'); process.exit(0); }
 
+  if (FECH) {
+    const msgs = mensagensFechamento(g, ibov, destaque);
+    diag.mensagem_chars = msgs.reduce((s, m) => s + m.length, 0);
+    for (const m of msgs) await enviarTexto(m, { teste: TESTE });
+    if (!TESTE) { slots.fech = true; gravar('previa.json', { data: HOJE, slots, fonte }); }
+    fim('fechamento rápido enviado (fonte: ' + fonte + ')');
+    process.exit(process.exitCode || 0);
+  }
   const incluirCripto = CRIPTO_HORAS.includes(HORA);
   const cr = incluirCripto ? await cripto(null, null, QUANTOS) : null;
   const texto = mensagem(g, ibov, destaque, cr, incluirCripto);
   diag.mensagem_chars = texto.length;
   await enviarTexto(texto, { teste: TESTE });
-  if (!TESTE) { slots[HORA] = true; gravar('previa.json', { data: HOJE, slots, fonte }); }
+  if (!TESTE) { slots[CHAVE] = true; gravar('previa.json', { data: HOJE, slots, fonte }); }
   fim('edição das ' + HORA + 'h enviada (fonte: ' + fonte + ')');
 } catch (e) {
   fim(e.message, true);
