@@ -1,17 +1,47 @@
 {
-  "_ajuda": "Mensagens de divulgação do site (divulgacao.mjs). Cada item é um texto; o robô alterna entre eles, duas vezes ao dia, sem repetir o anterior. Pode editar pelo lápis do GitHub: use {site} no lugar de https://planobinvestimentos.com. Evite prometer ganho; o rodapé educacional é colocado pelo robô.",
+  "_ajuda": "Mensagens de divulgação do site (divulgacao.mjs). Cada item é um texto, ou {\"texto\": ..., \"imagem\": \"imagens/arquivo.png\"} para sair com uma imagem (coloque a imagem na pasta imagens/). O robô alterna entre eles, duas vezes ao dia, sem repetir o anterior. Pode editar pelo lápis do GitHub: use {site} no lugar de https://planobinvestimentos.com. Evite prometer ganho; o rodapé educacional é colocado pelo robô.",
   "mensagens": [
-    "💸 Para onde vai o seu dinheiro?\n\nNa calculadora de Orçamento Mensal você coloca seus gastos e vê em um gráfico de pizza o que pesa mais e quanto sobra no mês. Leva 5 minutos, é grátis e sem cadastro.\n👉 {site}/calculadoras/orcamento-mensal/",
-    "🎯 Quanto falta para chegar em R$ 1 milhão?\n\nSimule o valor inicial, o aporte mensal, a taxa e o prazo e veja o patrimônio final, quanto veio de juros e quanto ainda falta para o milhão. É grátis e sem cadastro.\n👉 {site}/calculadoras/juros-compostos/",
-    "🧭 O caminho em 2 passos (leva menos de 10 minutos)\n\n1️⃣ Descubra quanto sobra no mês: {site}/calculadoras/orcamento-mensal/\n2️⃣ Veja no que essa sobra pode virar com os juros compostos: {site}/calculadoras/juros-compostos/\n\nGrátis e sem cadastro.",
+    {
+      "texto": "💸 Para onde vai o seu dinheiro?\n\nNa calculadora de Orçamento Mensal você coloca seus gastos e vê em um gráfico de pizza o que pesa mais e quanto sobra no mês. Leva 5 minutos, é grátis e sem cadastro.\n👉 {site}/calculadoras/orcamento-mensal/\n\n📌 Imagem de exemplo, com valores de demonstração. Troque pelos seus números.",
+      "imagem": "imagens/orcamento-mensal.png"
+    },
+    {
+      "texto": "🎯 Quanto falta para chegar em R$ 1 milhão?\n\nSimule o valor inicial, o aporte mensal, a taxa e o prazo e veja o patrimônio final, quanto veio de juros e quanto ainda falta para o milhão. É grátis e sem cadastro.\n👉 {site}/calculadoras/juros-compostos/\n\n📌 Imagem de exemplo, com valores de demonstração. Troque pelos seus números.",
+      "imagem": "imagens/juros-compostos.png"
+    },
+    {
+      "texto": "🧭 O caminho em 2 passos (leva menos de 10 minutos)\n\n1️⃣ Descubra quanto sobra no mês: {site}/calculadoras/orcamento-mensal/\n2️⃣ Veja no que essa sobra pode virar com os juros compostos: {site}/calculadoras/juros-compostos/\n\nGrátis e sem cadastro.\n\n📌 Imagem de exemplo, com valores de demonstração. Troque pelos seus números.",
+      "imagem": "imagens/orcamento-mensal.png"
+    },
     "₿ Cripto sem achismo: preços em reais ou dólar, índice de medo e ganância e dominância do Bitcoin, tudo em uma página. Tem também calculadora de ROI e de lucro com taxas da exchange.\n👉 {site}/criptomoedas/",
-    "🛟 Quanto você precisa guardar de reserva de emergência? A calculadora mostra o valor ideal, em quanto tempo você forma e quanto guardar por mês. Grátis e sem cadastro.\n👉 {site}/calculadoras/reserva-de-emergencia/",
-    "🏖️ Quanto você precisa ter para se aposentar com a renda mensal que deseja? Descubra o patrimônio necessário, em que idade chega lá e quanto aportar por mês.\n👉 {site}/calculadoras/aposentadoria/",
-    "⚖️ CDB, LCI, poupança ou Tesouro Selic: qual rende mais no seu prazo? O comparador já desconta imposto de renda e taxas. Grátis e sem cadastro.\n👉 {site}/calculadoras/comparador-renda-fixa/",
+    {
+      "texto": "🛟 Quanto você precisa guardar de reserva de emergência? A calculadora mostra o valor ideal, em quanto tempo você forma e quanto guardar por mês. Grátis e sem cadastro.\n👉 {site}/calculadoras/reserva-de-emergencia/\n\n📌 Imagem de exemplo, com valores de demonstração. Troque pelos seus números.",
+      "imagem": "imagens/reserva-de-emergencia.png"
+    },
+    {
+      "texto": "🏖️ Quanto você precisa ter para se aposentar com a renda mensal que deseja? Descubra o patrimônio necessário, em que idade chega lá e quanto aportar por mês.\n👉 {site}/calculadoras/aposentadoria/\n\n📌 Imagem de exemplo, com valores de demonstração. Troque pelos seus números.",
+      "imagem": "imagens/aposentadoria.png"
+    },
+    {
+      "texto": "⚖️ CDB, LCI, poupança ou Tesouro Selic: qual rende mais no seu prazo? O comparador já desconta imposto de renda e taxas. Grátis e sem cadastro.\n👉 {site}/calculadoras/comparador-renda-fixa/\n\n📌 Imagem de exemplo, com valores de demonstração. Troque pelos seus números.",
+      "imagem": "imagens/comparador-renda-fixa.png"
+    },
     "📈 Você sabia que o Plano B tem cotações da bolsa e as notícias das empresas (fatos relevantes, dividendos, JCP) organizadas em um só lugar?\n👉 {site}/cotacoes/\n👉 {site}/noticias-da-bolsa/",
-    "⏱️ Desafio de 5 minutos: abra a calculadora de Orçamento Mensal, preencha seus gastos do mês e descubra quanto sobra. Depois me conta aqui no grupo o que mais te surpreendeu!\n👉 {site}/calculadoras/orcamento-mensal/",
-    "🏠 Vai financiar um imóvel? Compare parcelas e juros do SAC e da Price e simule uma amortização extra para quitar antes do prazo.\n👉 {site}/calculadoras/financiamento-sac-price/",
-    "🧮 Todas as nossas calculadoras são grátis e não pedem cadastro: orçamento mensal, rumo ao primeiro milhão, reserva de emergência, aposentadoria, renda fixa, financiamento e cripto. Escolha uma e comece hoje.\n👉 {site}/calculadoras/",
-    "💬 Qual é o seu objetivo: organizar o orçamento, juntar o primeiro milhão ou entender cripto? Dê uma olhada no site do Plano B e use as calculadoras, é grátis.\n👉 {site}\n💸 Orçamento: {site}/calculadoras/orcamento-mensal/\n🎯 Primeiro milhão: {site}/calculadoras/juros-compostos/\n₿ Cripto: {site}/criptomoedas/"
+    {
+      "texto": "⏱️ Desafio de 5 minutos: abra a calculadora de Orçamento Mensal, preencha seus gastos do mês e descubra quanto sobra. Depois me conta aqui no grupo o que mais te surpreendeu!\n👉 {site}/calculadoras/orcamento-mensal/\n\n📌 Imagem de exemplo, com valores de demonstração. Troque pelos seus números.",
+      "imagem": "imagens/orcamento-mensal.png"
+    },
+    {
+      "texto": "🏠 Vai financiar um imóvel? Compare parcelas e juros do SAC e da Price e simule uma amortização extra para quitar antes do prazo.\n👉 {site}/calculadoras/financiamento-sac-price/\n\n📌 Imagem de exemplo, com valores de demonstração. Troque pelos seus números.",
+      "imagem": "imagens/financiamento-sac-price.png"
+    },
+    {
+      "texto": "🧮 Todas as nossas calculadoras são grátis e não pedem cadastro: orçamento mensal, rumo ao primeiro milhão, reserva de emergência, aposentadoria, renda fixa, financiamento e cripto. Escolha uma e comece hoje.\n👉 {site}/calculadoras/",
+      "imagem": "imagens/calculadoras.png"
+    },
+    {
+      "texto": "💬 Qual é o seu objetivo: organizar o orçamento, juntar o primeiro milhão ou entender cripto? Dê uma olhada no site do Plano B e use as calculadoras, é grátis.\n👉 {site}\n💸 Orçamento: {site}/calculadoras/orcamento-mensal/\n🎯 Primeiro milhão: {site}/calculadoras/juros-compostos/\n₿ Cripto: {site}/criptomoedas/",
+      "imagem": "imagens/calculadoras.png"
+    }
   ]
 }
