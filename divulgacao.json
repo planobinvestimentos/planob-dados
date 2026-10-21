@@ -1,5 +1,5 @@
 {
-  "_ajuda": "Mensagens de divulgação do site (divulgacao.mjs). Cada item é um texto, ou {\"texto\": ..., \"imagem\": \"imagens/arquivo.png\"} para sair com uma imagem (coloque a imagem na pasta imagens/). O robô alterna entre eles, duas vezes ao dia, sem repetir o anterior. Pode editar pelo lápis do GitHub: use {site} no lugar de https://planobinvestimentos.com. Evite prometer ganho; o rodapé educacional é colocado pelo robô.",
+  "_ajuda": "Mensagens de divulgação do site (divulgacao.mjs). Cada item é um texto, ou {\"texto\": ..., \"imagem\": \"imagens/arquivo.png\"} para sair com uma imagem (coloque a imagem na pasta imagens/). O robô alterna entre eles, três vezes ao dia, sem repetir o anterior. Pode editar pelo lápis do GitHub: use {site} no lugar de https://planobinvestimentos.com. Evite prometer ganho; o rodapé educacional é colocado pelo robô.",
   "mensagens": [
     {
       "texto": "💸 Para onde vai o seu dinheiro?\n\nNa calculadora de Orçamento Mensal você coloca seus gastos e vê em um gráfico de pizza o que pesa mais e quanto sobra no mês. Leva 5 minutos, é grátis e sem cadastro.\n👉 {site}/calculadoras/orcamento-mensal/\n\n📌 Imagem de exemplo, com valores de demonstração. Troque pelos seus números.",

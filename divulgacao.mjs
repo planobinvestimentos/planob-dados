@@ -1,8 +1,8 @@
-/* DIVULGAÇÃO DO SITE no Telegram, duas vezes ao dia (padrão: 8h e 19h, Brasília, todos os dias). Roda no GitHub Actions (.github/workflows/divulgacao.yml).
+/* DIVULGAÇÃO DO SITE no Telegram, três vezes ao dia (padrão: 9h, 13h e 19h, Brasília, todos os dias). Roda no GitHub Actions (.github/workflows/divulgacao.yml).
    Convida o pessoal a explorar o site e usar as calculadoras (orçamento mensal, rumo ao primeiro milhão, cripto etc.).
    Os textos ficam em divulgacao.json (editável pelo lápis do GitHub). O robô alterna entre eles, sem repetir o anterior, e envia cada edição uma única vez (saida/divulgacao-estado.json).
    Variáveis: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID. Opcionais: TESTE=1 (só mostra no log, ignora horário, não grava estado), FORCAR=1 (ignora horário e "já enviou"),
-   TODAS=1 (com TESTE: mostra todas as mensagens), DIVULGACAO_HORAS (padrão "8,19"), SITE_URL. */
+   TODAS=1 (com TESTE: mostra todas as mensagens), DIVULGACAO_HORAS (padrão "9,13,19"), SITE_URL. */
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -12,7 +12,7 @@ const RAIZ = path.dirname(fileURLToPath(import.meta.url));
 const SAIDA = process.env.SAIDA_DIR || path.join(RAIZ, 'saida');
 const TESTE = process.env.TESTE === '1', FORCAR = process.env.FORCAR === '1', TODAS = process.env.TODAS === '1';
 const SITE = (process.env.SITE_URL || 'https://planobinvestimentos.com').replace(/\/+$/, '');
-const HORAS = String(process.env.DIVULGACAO_HORAS || '8,19').split(',').map((x) => Number(x.trim())).filter((x) => x >= 0);
+const HORAS = String(process.env.DIVULGACAO_HORAS || '9,13,19').split(',').map((x) => Number(x.trim())).filter((x) => x >= 0);
 const agora = process.env.DATA_TESTE ? new Date(process.env.DATA_TESTE + 'T11:00:00Z') : new Date(Date.now() - 3 * 3600 * 1000);   // Brasília (UTC-3)
 const HOJE = agora.toISOString().slice(0, 10);
 const HORA = process.env.HORA_TESTE ? Number(process.env.HORA_TESTE) : agora.getUTCHours();
