@@ -47,15 +47,15 @@ async function baixar(url) {
   diag.baixados++;
   return Buffer.from(await r.arrayBuffer());
 }
-function textoDe(buf) {
+function textoDe(buf, de = 0, ate = 0) {
   if (buf.subarray(0, 4).toString() !== '%PDF') return buf.toString('utf8');   // (testes) texto puro
   const tmp = path.join(os.tmpdir(), 'bdi-' + Date.now() + '-' + Math.random().toString(36).slice(2) + '.pdf');
   fs.writeFileSync(tmp, buf);
-  try { return execFileSync('pdftotext', ['-layout', tmp, '-'], { encoding: 'utf8', timeout: 60000, maxBuffer: 5e7 }); }
+  try { return execFileSync('pdftotext', ['-layout', ...(de ? ['-f', String(de), '-l', String(ate)] : []), tmp, '-'], { encoding: 'utf8', timeout: 120000, maxBuffer: 1e8 }); }
   finally { try { fs.unlinkSync(tmp); } catch (e) { /* ignora */ } }
 }
 const brNum = (s) => Number(String(s).replace(/\./g, '').replace(',', '.'));
-const TIPOS = [['est', /estrangeir/i], ['inst', /institucion/i], ['fin', /institui[çc][õo]es? financeir|financeir/i], ['pf', /pessoas? f[ií]sica/i], ['out', /^\s*outros/i]];
+const TIPOS = [['est', /estrangeir/i], ['inst', /institucion/i], ['fin', /institui[çc][õo]es? financeir|financeir/i], ['pf', /pessoas? f[ií]sica|individua/i], ['out', /^\s*outros/i]];
 /* acha a tabela "Participação dos Investidores" (do mês até a data X) e devolve {ref, tipos:{est:[compras,vendas],...}} */
 function lerTabela(texto, dataBdi) {
   const linhas = texto.split(/\r?\n/);
@@ -81,6 +81,8 @@ function lerTabela(texto, dataBdi) {
   return null;
 }
 const hist = lerJson('fluxo.json', { bdis: {}, acum: {}, enviado: '' });
+const VERSAO_LEITOR = 2;   // 2 = reconhece "Investidores Individuais" (21/10/2026); ao subir de versão, as leituras que falharam são refeitas
+if (hist.versao !== VERSAO_LEITOR) { for (const k of Object.keys(hist.bdis)) if (hist.bdis[k] === 'falhou') delete hist.bdis[k]; hist.versao = VERSAO_LEITOR; }
 async function buscaBdi(iso) {
   if (hist.bdis[iso] && hist.bdis[iso] !== 'falhou') return hist.bdis[iso];
   if (hist.bdis[iso] === 'falhou' && iso < somaDias(HOJE, -5)) return null;   // leitura que já falhou: só tenta de novo nos dias recentes
@@ -88,7 +90,10 @@ async function buscaBdi(iso) {
   try {
     const buf = await baixar(url);
     if (!buf) { if (iso < somaDias(HOJE, -3)) hist.bdis[iso] = 'nao-existe'; return null; }
-    const t = lerTabela(textoDe(buf), iso);
+    /* a tabela fica na seção "Indicadores e informativos" (página ~42 de ~150): lê só as páginas 20 a 80 e, se não achar, o PDF inteiro */
+    let t = null;
+    try { t = lerTabela(textoDe(buf, 20, 80), iso); } catch (e) { /* tenta o PDF inteiro */ }
+    if (!t) t = lerTabela(textoDe(buf), iso);
     if (!t) { diag.falhas[iso] = 'tabela não encontrada/validada'; diag.trecho = diag.trecho || textoDe(buf).split(/\r?\n/).filter((l) => /investidor|estrangeir|institucion/i.test(l)).slice(0, 12).join('\n'); hist.bdis[iso] = 'falhou'; return null; }
     hist.acum[t.ref] = t.tipos; hist.bdis[iso] = t.ref; diag.lidos++;
     return t.ref;
