@@ -1,17 +1,20 @@
 {
- "gerado": "2026-10-21T17:00:15.651Z",
+ "gerado": "2026-10-21T17:15:16.509Z",
  "hora": 14,
+ "fnet_erro": "The operation was aborted due to timeout",
  "fnet": {
-  "linhas": 1923,
-  "avisos": 156,
-  "relatorios": 96
+  "linhas": 0,
+  "avisos": 0,
+  "relatorios": 0
  },
- "avisos_novos": [
-  "EXES11:1355112"
- ],
+ "avisos_novos": [],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 4,
+  "acoes": "não consultadas"
+ },
  "novos": [
-  "EXES11 Rendimento"
+  "BROF11 Rendimento"
  ],
  "pdfs": 0
 }
