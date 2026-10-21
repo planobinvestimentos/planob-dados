@@ -1,6 +1,6 @@
 {
- "gerado": "2026-10-21T00:31:24.781Z",
- "hora": 21,
+ "gerado": "2026-10-21T12:24:35.301Z",
+ "hora": 9,
  "fnet_erro": "The operation was aborted due to timeout",
  "fnet": {
   "linhas": 0,
@@ -8,11 +8,14 @@
   "relatorios": 0
  },
  "avisos_novos": [],
- "acoes_nesta_rodada": true,
+ "acoes_nesta_rodada": false,
  "varredura": {
-  "fii": 0,
-  "acoes": 0
+  "fii": 3,
+  "acoes": "não consultadas"
  },
- "novos": [],
+ "novos": [
+  "COIN11 Rendimento",
+  "ETHY11 Rendimento"
+ ],
  "pdfs": 0
 }
