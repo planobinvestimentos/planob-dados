@@ -1,0 +1,56 @@
+# MEDO E GANÂNCIA das criptomoedas (índice do alternative.me), 2x por dia, todos os dias (cripto não fecha): 8h00 e 21h30 (Brasília).
+# Uma imagem com o ponteiro, o valor de agora, ontem, semana passada e mês passado. Cada edição sai uma única vez (estado em saida/medo-ganancia.json).
+# Tentativas no horário e 20 minutos depois. O índice só muda uma vez por dia (por volta das 21h de Brasília, a conferir no diagnóstico saida/medo-ganancia-diag.json).
+# Logo opcional: imagens/logo.png. Rodar à mão: "teste" manda só para o seu Telegram privado.
+name: Medo e Ganância das criptos (8h e 21h30)
+on:
+  schedule:
+    - cron: '0,20 11 * * *'     # 8h00 e 8h20 (Brasília)
+    - cron: '30,50 0 * * *'     # 21h30 e 21h50 (Brasília)
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: 'Teste: manda a imagem só para o meu Telegram privado'
+        type: boolean
+        default: false
+      forcar:
+        description: 'Ignorar horário e o "já enviou" e enviar ao canal agora'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: planob-medo-ganancia
+  cancel-in-progress: false
+jobs:
+  medo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Biblioteca do gráfico e fonte
+        continue-on-error: true
+        run: |
+          pip install --break-system-packages matplotlib || pip install matplotlib
+          sudo apt-get install -y fonts-inter || true
+      - name: Medo e Ganância
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_ALERTA_CHAT_ID: ${{ secrets.TELEGRAM_ALERTA_CHAT_ID }}
+          MODO: medo
+          TESTE: ${{ inputs.teste && '1' || '' }}
+          FORCAR: ${{ inputs.forcar && '1' || '' }}
+        run: node futuros-imagem.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida/medo-ganancia.json saida/medo-ganancia-diag.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Medo e Ganância: atualiza estado"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1

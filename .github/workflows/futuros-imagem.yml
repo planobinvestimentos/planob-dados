@@ -1,0 +1,57 @@
+# PAINEL DO MERCADO ("futuros imagem"), segunda a sexta, 3 lotes por dia: 11h30, 14h30 e 16h30 (Brasília). Cada lote é UM ÁLBUM no Telegram (1 notificação) com até 4 imagens:
+#   índices setoriais da B3 (TradingView), criptomoedas (CoinGecko), commodities (CNBC/Yahoo/Stooq, Dalian, B3) e dólar no mundo (DXY + 23 moedas; CNBC/Yahoo/Stooq).
+# Cada lote sai uma única vez (estado em saida/futuros-imagem.json). Tentativas no horário e 20 minutos depois (GitHub atrasa; o "relógio" da Cloudflare dispara na hora exata).
+# Se alguma fonte falhar na 1ª tentativa, espera a 2ª e envia o que estiver disponível. Não sai em feriado (compara com o fechamento de ontem).
+# Logo opcional: se existir imagens/logo.png no repositório, aparece no cabeçalho de todas as imagens.
+# Rodar à mão: "teste" manda o álbum SÓ para o seu Telegram privado (segredo TELEGRAM_ALERTA_CHAT_ID), em qualquer horário, sem tocar no canal e sem gravar estado.
+name: Painel do mercado (futuros imagem)
+on:
+  schedule:
+    - cron: '30,50 14,17,19 * * 1-5'    # 11h30/11h50, 14h30/14h50 e 16h30/16h50 (Brasília), segunda a sexta
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: 'Teste: manda o álbum só para o meu Telegram privado'
+        type: boolean
+        default: false
+      forcar:
+        description: 'Ignorar horário, feriado e o "já enviou" e enviar ao canal agora'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: planob-futuros-imagem
+  cancel-in-progress: false
+jobs:
+  painel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Biblioteca do gráfico e fonte
+        continue-on-error: true
+        run: |
+          pip install --break-system-packages matplotlib || pip install matplotlib
+          sudo apt-get install -y fonts-inter || true
+      - name: Painel do mercado
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_ALERTA_CHAT_ID: ${{ secrets.TELEGRAM_ALERTA_CHAT_ID }}
+          MODO: lote
+          TESTE: ${{ inputs.teste && '1' || '' }}
+          FORCAR: ${{ inputs.forcar && '1' || '' }}
+        run: node futuros-imagem.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida/futuros-imagem.json saida/futuros-imagem-diag.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Painel do mercado: atualiza estado"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1

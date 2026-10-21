@@ -1,5 +1,5 @@
 # PARCIAL DO PREGÃO de hora em hora, das 12h às 17h (Brasília), segunda a sexta: maiores altas e baixas "até o momento" de ações, FIIs de tijolo, FIIs de papel e ETFs.
-# As criptomoedas entram só na edição das 15h (variável PREVIA_CRIPTO_HORAS no script). Tentativas na hora cheia e na meia hora (o GitHub costuma atrasar alguns minutos):
+# As criptomoedas NÃO entram mais na parcial: têm imagem própria 1 hora depois (workflow "Painel do mercado", futuros-imagem.mjs). Tentativas na hora cheia e na meia hora (o GitHub costuma atrasar alguns minutos):
 # cada hora envia uma única vez; se a hora cheia deu certo, a da meia hora não faz nada.
 # Cotações com atraso de ~15 min, de fonte gratuita de terceiros (TradingView e, de reserva, Yahoo Finance). Se não houver dado confiável ou não houver pregão (feriado), não envia nada.
 # Guarda o estado em saida/previa.json (não mexe nos outros arquivos). O fechamento completo continua às 20h (workflow "Aviso diário no Telegram").
