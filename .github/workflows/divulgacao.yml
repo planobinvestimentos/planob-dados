@@ -1,10 +1,11 @@
-# DIVULGAÇÃO DO SITE no Telegram, duas vezes ao dia (8h e 19h, Brasília, todos os dias): convida o pessoal a usar as calculadoras e explorar o site.
+# DIVULGAÇÃO DO SITE no Telegram, três vezes ao dia (9h, 13h e 19h, Brasília, todos os dias): convida o pessoal a usar as calculadoras e explorar o site.
 # Os textos ficam em divulgacao.json (editável no GitHub). Tentativas na hora cheia e na meia hora; cada edição envia uma única vez.
 # Para mudar os horários: altere os crons abaixo (UTC = Brasília + 3) e a variável DIVULGACAO_HORAS no passo "Divulgação".
-name: Divulgação do site (8h e 19h)
+name: Divulgação do site (9h, 13h e 19h)
 on:
   schedule:
-    - cron: '0,30 11 * * *'    # 8h00 e 8h30 (Brasília)
+    - cron: '0,30 12 * * *'    # 9h00 e 9h30 (Brasília)
+    - cron: '0,30 16 * * *'    # 13h00 e 13h30 (Brasília)
     - cron: '0,30 22 * * *'    # 19h00 e 19h30 (Brasília)
   workflow_dispatch:
     inputs:
@@ -37,7 +38,7 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          DIVULGACAO_HORAS: '8,19'
+          DIVULGACAO_HORAS: '9,13,19'
           TESTE: ${{ inputs.teste && '1' || '' }}
           TODAS: ${{ inputs.todas && '1' || '' }}
           FORCAR: ${{ inputs.forcar && '1' || '' }}
