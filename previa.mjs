@@ -1,5 +1,5 @@
 /* PARCIAL DO PREGÃO (de hora em hora, das 12h às 17h, Brasília): maiores altas e baixas "até o momento" de ações, FIIs de tijolo, FIIs de papel e ETFs
-   (as criptomoedas entram só nas horas de PREVIA_CRIPTO_HORAS, padrão 15h). Roda no GitHub Actions (.github/workflows/previa.yml), segunda a sexta.
+   (as criptomoedas NÃO entram mais aqui: têm imagem própria, no painel do mercado, em futuros-imagem.mjs; para voltar a incluir no texto da parcial use PREVIA_CRIPTO_HORAS=15). Roda no GitHub Actions (.github/workflows/previa.yml), segunda a sexta.
    Cada hora sai uma única vez (estado por hora em saida/previa.json); o workflow tenta de novo na meia hora se a primeira tentativa da hora falhar.
    Diferença para o fechamento das 20h: o fechamento usa o arquivo oficial da B3 (só sai depois do pregão). Aqui as cotações vêm de uma fonte gratuita
    com atraso de uns 15 minutos. Por isso a prévia mostra só 3 de cada lado e avisa que o fechamento completo sai às 20h.
@@ -30,7 +30,7 @@ const DIAS = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
 const FECH = process.env.MODO === 'fechamento';                                                                      // fechamento rápido (18h20 em diante)
 const QUANTOS = Number(process.env.PREVIA_QUANTOS) || (FECH ? 5 : 3);
 const H_INI = Number(process.env.PREVIA_DE) || 12, H_FIM = Number(process.env.PREVIA_ATE) || 17;                       // janela: das 12h às 17h (inclusive)
-const CRIPTO_HORAS = String(process.env.PREVIA_CRIPTO_HORAS || '15').split(',').map((x) => Number(x.trim())).filter(Boolean);   // horas em que a mensagem inclui criptomoedas
+const CRIPTO_HORAS = String(process.env.PREVIA_CRIPTO_HORAS || '').split(',').map((x) => Number(x.trim())).filter(Boolean);   // horas em que a mensagem inclui criptomoedas
 
 /* agora em Brasília (UTC-3, sem horário de verão) */
 const agora = process.env.DATA_TESTE ? new Date(process.env.DATA_TESTE + 'T18:00:00Z') : new Date(Date.now() - 3 * 3600 * 1000);

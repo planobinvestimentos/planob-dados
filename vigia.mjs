@@ -63,6 +63,11 @@ export const CHECKS = [
   { id: 'divulgacao-19', rotulo: 'Divulgação do site das 19h', fluxo: 'divulgacao.yml', dias: TODOS, prazo: '19:45', estado: () => hojeEm(lerJson('divulgacao-estado.json')) && !!lerJson('divulgacao-estado.json').slots['19'] },
   { id: 'dolar-cripto', rotulo: 'Dólar e criptomoedas das 20h', fluxo: 'telegram.yml', dias: TODOS, prazo: '20:50', estado: () => hojeEm(lerJson('telegram.json')) && !!(lerJson('telegram.json').enviado || {}).merc },
   { id: 'resumo-dia', rotulo: 'Resumo do dia (proventos) das 22h', fluxo: 'telegram.yml', dias: UTIL, prazo: '22:50', estado: () => hojeEm(lerJson('telegram.json')) && !!(lerJson('telegram.json').enviado || {}).resumo },
+  /* PAINEL DO MERCADO (futuros-imagem.yml): 3 lotes por dia útil (álbum com setores, cripto, commodities e dólar); Medo e Ganância (medo-ganancia.yml) 2x por dia, todos os dias */
+  ...[['1130', '11h30', '12:25'], ['1430', '14h30', '15:25'], ['1630', '16h30', '17:25']].map(([id, rot, prazo]) => ({ id: 'painel-' + id, rotulo: 'Painel do mercado das ' + rot + ' (setores, cripto, commodities e dólar)', fluxo: 'futuros-imagem.yml', dias: UTIL, b3: true, prazo,
+    estado: () => { const j = lerJson('futuros-imagem.json'); return !!(hojeEm(j) && j.lotes && j.lotes[id] && j.lotes[id].enviado); }, explicado: () => diagExplica('futuros-imagem-diag.json') })),
+  ...[['0800', '8h00', '08:50'], ['2130', '21h30', '22:20']].map(([id, rot, prazo]) => ({ id: 'medo-' + id, rotulo: 'Medo e Ganância das criptomoedas das ' + rot, fluxo: 'medo-ganancia.yml', dias: TODOS, prazo,
+    estado: () => { const j = lerJson('medo-ganancia.json'); return !!(hojeEm(j) && j.slots && j.slots[id]); } })),
   { id: 'fechamento-dia', rotulo: 'Fechamento do dia (altas e baixas, rápido ou oficial)', fluxo: 'telegram.yml', dias: UTIL, b3: true, prazo: '23:50', estado: () => (hojeEm(lerJson('telegram.json')) && !!(lerJson('telegram.json').enviado || {}).fech) || (hojeEm(lerJson('previa.json')) && !!lerJson('previa.json').slots.fech) },
 ];
 
