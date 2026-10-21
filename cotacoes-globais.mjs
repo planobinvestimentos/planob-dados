@@ -164,6 +164,16 @@ export async function futuroB3(prefixo, meses, diag = {}, hoje = new Date()) {
       erros.push(tk + ': sem cotação');
     } catch (e) { erros.push(tk + ': ' + e.message); }
   }
+  // plano B: contrato contínuo no TradingView (CCM1! = 1º vencimento, CCM2! = 2º)
+  try {
+    const r = await fetch('https://scanner.tradingview.com/futures/scan', { method: 'POST', headers: Object.assign({ 'Content-Type': 'application/json', Accept: 'application/json' }, UA), body: JSON.stringify({ symbols: { tickers: [1, 2].map((n) => 'BMFBOVESPA:' + prefixo + n + '!') }, columns: ['name', 'close', 'change'] }), signal: AbortSignal.timeout(20000) });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const j = await r.json();
+    const lista = ((j && j.data) || []).map((x) => ({ s: x.s, p: Number((x.d || [])[1]), v: Number((x.d || [])[2]) })).sort((a, b) => a.s.localeCompare(b.s));
+    const ok = lista.find((x) => x.p > 0 && isFinite(x.v));
+    if (ok) { diag[prefixo] = 'tv ' + ok.s; return { p: ok.p, v: ok.v, fonte: 'tv ' + ok.s }; }
+    erros.push('tv: sem cotação (' + lista.length + ' retornos)');
+  } catch (e) { erros.push('tv: ' + e.message); }
   diag[prefixo] = 'indisponível: ' + erros.join(' | ');
   return null;
 }

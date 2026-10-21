@@ -1,6 +1,6 @@
 /* PAINEL DO MERCADO ("futuros imagem"): imagens com a marca do Plano B, enviadas ao canal do Telegram. Roda no GitHub Actions. Dois modos (variável MODO):
    MODO=lote (padrão; workflow futuros-imagem.yml, segunda a sexta, às 11h30, 14h30 e 16h30 de Brasília): UM ÁLBUM (1 notificação) com até 4 imagens:
-     1) Índices setoriais da B3 (ICON, IEEX, INDX, UTIL, IMOB, IFNC, IMAT): variação do dia e pontos. Fonte: TradingView (~15 min de atraso).
+     1) Índices setoriais da B3 (ICON, IEEX, INDX, IMOB, IFNC, IMAT; o TradingView não tem o UTIL): variação do dia e pontos. Fonte: TradingView (~15 min de atraso).
      2) Criptomoedas: Bitcoin em destaque (24 h e 7 dias) + as 9 maiores seguintes (24 h). Fonte: CoinGecko.
      3) Commodities: petróleo WTI e Brent, gás, ouro, prata, minério de ferro (Dalian), cobre, milho, boi gordo, soja e trigo. Fontes: CNBC/Yahoo/Stooq, Sina/Eastmoney, B3.
      4) Dólar no mundo: DXY + dólar contra 23 moedas emergentes, com média e contagem de altas/quedas. Fontes: CNBC/Yahoo/Stooq.
@@ -35,7 +35,7 @@ const UA = { 'User-Agent': 'Mozilla/5.0 (compatible; PlanoB-Investimentos-aviso/
 const LOGO = path.join(RAIZ, 'imagens', 'logo.png');
 const TICKER = /^[A-Z]{4}\d{1,2}$/;
 const INDICES = [
-  { cod: 'ICON', nome: 'Consumo' }, { cod: 'IEEX', nome: 'Energia elétrica' }, { cod: 'INDX', nome: 'Industrial' }, { cod: 'UTIL', nome: 'Utilidade pública' },
+  { cod: 'ICON', nome: 'Consumo' }, { cod: 'IEEX', nome: 'Energia elétrica' }, { cod: 'INDX', nome: 'Industrial' },
   { cod: 'IMOB', nome: 'Imobiliário' }, { cod: 'IFNC', nome: 'Financeiro' }, { cod: 'IMAT', nome: 'Materiais básicos' },
 ];
 const MIN_INDICES = 5, MIN_COMMODITIES = 6, MIN_MOEDAS = 15;
