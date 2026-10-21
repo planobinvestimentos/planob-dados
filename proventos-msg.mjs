@@ -20,10 +20,29 @@ export const chaveAlt = (x) => ['ALT', x.t, x.pag, x.v].join('|');
 /* sinais nas linhas: ✏️ valor corrigido em relação ao anúncio anterior; 🆕 (só no resumo) = ainda não tinha saído durante o dia */
 const sufixo = (x) => (x.atualizado !== undefined ? ' ✏️ corrigido (antes ' + brl(x.atualizado, casas(x.atualizado)) + ')' : '') + (x.novoNoResumo ? ' 🆕' : '');
 
-/* FII em linha compacta: HGLG11: R$ 1,17 (0,73%) · base 30/09 · pag. 15/10  (% = valor ÷ último fechamento) */
+/* IR sobre o rendimento: FII = isento para pessoa física (regra geral); ETF = 15% retido na fonte (conferido com o QQQI11: 1,11% bruto → 0,94% líquido) */
+const IR_ETF = 0.15;
+const pctCota = (x, precos) => { const p = precos[x.t]; return p > 0 && x.tipo !== 'Amortização' ? (x.v / p) * 100 : null; };
+
+/* FII/ETF em bloco (um por provento), na ordem pedida pelo Andrade: Código, Valor da cota, Dividendos, Data de pagamento, % sobre o preço, % líquida */
+function blocoFii(x, precos) {
+  const etf = x.cls === 'ETF', amort = x.tipo === 'Amortização', p = precos[x.t], bruto = pctCota(x, precos);
+  const l = [(etf ? '📦' : '🏠') + ' Código: ' + x.t + (x.novoNoResumo ? ' 🆕' : '')];
+  if (p > 0) l.push('🏷️ Valor da cota (último fechamento): ' + brl(p));
+  l.push('💰 ' + (amort ? 'Amortização' : 'Dividendos') + ': ' + brl(x.v, casas(x.v)) + (x.extra ? ' 🔔' : ''));
+  l.push('💸 Data de pagamento: ' + dt(x.pag));
+  if (bruto !== null) {
+    l.push('📊 % sobre o preço: ' + num(bruto) + '%');
+    l.push('ℹ️ % líquida: ' + num(etf ? bruto * (1 - IR_ETF) : bruto) + '%' + (etf ? ' (após 15% de IR)' : ' (isento de IR para pessoa física)'));
+  }
+  if (x.extra) l.push('🔔 Pagamento fora do padrão habitual do fundo');
+  if (x.atualizado !== undefined) l.push('✏️ Corrigido (antes ' + brl(x.atualizado, casas(x.atualizado)) + ')');
+  return l.join('\n');
+}
+/* versão curta, só para o resumo do dia (lista com muitos fundos): HGLG11: R$ 1,17 · 0,73% sobre a cota · base 30/09 · pag. 15/10 */
 function linhaFii(x, precos) {
-  const p = precos[x.t], dy = p > 0 && x.tipo !== 'Amortização' ? ' (' + num((x.v / p) * 100) + '%)' : '';
-  return x.t + ': ' + brl(x.v, casas(x.v)) + dy + (x.tipo === 'Amortização' ? ' [amortização]' : '') + (x.extra ? ' 🔔' : '') + ' · base ' + curto(x.base) + ' · pag. ' + curto(x.pag) + sufixo(x);
+  const b = pctCota(x, precos);
+  return x.t + ': ' + brl(x.v, casas(x.v)) + (b !== null ? ' · ' + num(b) + '% sobre a cota' : '') + (x.tipo === 'Amortização' ? ' [amortização]' : '') + (x.extra ? ' 🔔' : '') + ' · base ' + curto(x.base) + ' · pag. ' + curto(x.pag) + sufixo(x);
 }
 const linhaAcao = (x) => ehBonif(x)
   ? x.t + ' — Bonificação de ' + num(x.v, 2) + '% em ações' + sufixo(x) + '\n   Data-com: ' + dt(x.base) + (x.pag ? ' · Pagamento: ' + x.pag : '')
@@ -37,19 +56,20 @@ const grupos = (itens) => ({
   et: itens.filter((x) => x.fonte === 'FII' && x.cls === 'ETF').sort((a, b) => a.t.localeCompare(b.t)),
   a: itens.filter((x) => x.fonte !== 'FII').sort((a, b) => a.t.localeCompare(b.t)),
 });
-const notas = (g, itensTodos = []) => {
+const notas = (g, itensTodos = [], resumo = false) => {
   const n = [];
-  if (g.f.length || g.et.length) n.push('FIIs e ETFs: valor por cota; entre parênteses, o valor em relação ao último fechamento (rendimento de um mês, não garante os próximos). Só FIIs com negociação média acima de R$ 1 milhão por dia (e os ETFs em destaque).' + (g.f.some((x) => x.extra) ? ' 🔔 = pagamento fora do padrão habitual do fundo.' : ''));
-  if (itensTodos.some((x) => x.atualizado !== undefined)) n.push('✏️ = a empresa ou o fundo corrigiu o valor em relação ao anúncio anterior (não é um provento repetido).');
+  if (resumo && g.f.some((x) => x.extra)) n.push('🔔 = pagamento fora do padrão habitual do fundo.');
+  if (resumo && itensTodos.some((x) => x.atualizado !== undefined)) n.push('✏️ = a empresa ou o fundo corrigiu o valor em relação ao anúncio anterior (não é um provento repetido).');
+  if (!resumo && g.a.some((x) => x.atualizado !== undefined)) n.push('✏️ = a empresa corrigiu o valor em relação ao anúncio anterior (não é um provento repetido).');
   if (g.a.length) n.push('Ações: valor bruto por ação. JCP tem imposto retido na fonte.' + (g.a.some(ehBonif) ? ' Bonificação: o percentual é a quantidade de ações novas para cada 100 que você tem.' : ''));
   return n.join('\n');
 };
 
 export function msgProventos(itens, data, precos = {}, titulo = '💰 PROVENTOS ANUNCIADOS') {
   const g = grupos(itens);
-  const corpo = [g.f.length ? '🏠 FIIs\n' + g.f.map((x) => linhaFii(x, precos)).join('\n') : '', g.et.length ? '📦 ETFs em destaque\n' + g.et.map((x) => linhaFii(x, precos)).join('\n') : '', g.a.length ? '🏢 AÇÕES\n' + g.a.map(linhaAcao).join('\n') : ''].filter(Boolean).join('\n\n');
+  const corpo = [...g.f.map((x) => blocoFii(x, precos)), ...g.et.map((x) => blocoFii(x, precos)), g.a.length ? '🏢 AÇÕES\n' + g.a.map(linhaAcao).join('\n') : ''].filter(Boolean).join('\n\n');
   if (!corpo) return '';
-  return [titulo + ' · ' + dataBR(data), corpo, notas(g, itens), 'Fonte: B3. Confira sempre o comunicado oficial.', RODAPE].filter(Boolean).join('\n\n');
+  return [titulo + ' · ' + dataBR(data), corpo, notas(g, itens, false), 'Fonte: B3. Confira sempre o comunicado oficial.', RODAPE].filter(Boolean).join('\n\n');
 }
 
 /* resumo do dia: tudo o que foi anunciado hoje, separado por tipo, em linhas curtas */
@@ -66,7 +86,7 @@ export function msgResumo(itens, data, precos = {}) {
   ].filter(Boolean);
   if (!blocos.length) return '';
   const total = itens.length;
-  return ['📋 RESUMO DO DIA · ' + dataBR(data), 'Dividendos, JCP e bonificações anunciados hoje (' + total + ' no total).\n🔁 Repetição proposital: quase tudo aqui já saiu ao longo do dia. Esta é a lista única do dia, para você consultar de uma vez.' + (itens.some((x) => x.novoNoResumo) ? '\n🆕 = ainda não tinha saído durante o dia.' : ''), blocos.join('\n\n'), notas(g, itens), 'Fonte: B3. Confira sempre o comunicado oficial.', RODAPE].filter(Boolean).join('\n\n');
+  return ['📋 RESUMO DO DIA · ' + dataBR(data), 'Dividendos, JCP e bonificações anunciados hoje (' + total + ' no total).\n🔁 Repetição proposital: quase tudo aqui já saiu ao longo do dia. Esta é a lista única do dia, para você consultar de uma vez.' + (itens.some((x) => x.novoNoResumo) ? '\n🆕 = ainda não tinha saído durante o dia.' : ''), blocos.join('\n\n'), notas(g, itens, true), 'Fonte: B3. Confira sempre o comunicado oficial.', RODAPE].filter(Boolean).join('\n\n');
 }
 
 /* ---------- envio ---------- */
