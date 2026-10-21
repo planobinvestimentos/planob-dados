@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-21T02:01:51.140Z",
- "de": "2026-10-18",
- "ate": "2026-10-20",
+ "gerado": "2026-10-21T16:57:26.136Z",
+ "de": "2026-10-19",
+ "ate": "2026-10-21",
  "fii": {
   "fonte": "B3 (fundos listados)",
-  "fundos": 75,
+  "fundos": 174,
   "amostra": {
    "fundo": "FII ADSH    ",
    "campos": [
@@ -30,15 +30,15 @@
     "remarks": ""
    }
   },
-  "ok": 75,
-  "falhas": 0,
-  "semRendimentos": 1,
-  "itens": 0
+  "ok": 170,
+  "falhas": 4,
+  "semRendimentos": 7,
+  "itens": 4
  },
  "acoes": {
   "emissoras": 279,
   "amostra": {
-   "emissora": "ABCB",
+   "emissora": "AFLT",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -51,14 +51,14 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRABCBACNPR4",
-    "paymentDate": "12/08/2026",
-    "rate": "1,16800000000",
-    "relatedTo": "1º Semestre/2026",
-    "approvedOn": "24/06/2026",
-    "isinCode": "BRABCBACNPR4",
-    "label": "JRS CAP PROPRIO",
-    "lastDatePrior": "29/06/2026",
+    "assetIssued": "BRAFLTACNOR1",
+    "paymentDate": "31/12/2026",
+    "rate": "0,15851704140",
+    "relatedTo": "Complementar/2026",
+    "approvedOn": "21/07/2026",
+    "isinCode": "BRAFLTACNOR1",
+    "label": "DIVIDENDO",
+    "lastDatePrior": "24/07/2026",
     "remarks": ""
    }
   },
