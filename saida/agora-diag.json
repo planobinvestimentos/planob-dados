@@ -1,20 +1,18 @@
 {
- "gerado": "2026-10-20T23:50:35.729Z",
- "hora": 20,
+ "gerado": "2026-10-21T00:31:24.781Z",
+ "hora": 21,
+ "fnet_erro": "The operation was aborted due to timeout",
  "fnet": {
-  "linhas": 1907,
-  "avisos": 156,
-  "relatorios": 96
+  "linhas": 0,
+  "avisos": 0,
+  "relatorios": 0
  },
- "avisos_novos": [
-  "BTRU11:1355164"
- ],
- "acoes_nesta_rodada": false,
- "lido_do_aviso": [
-  "BTRU11"
- ],
- "novos": [
-  "BTRU11 Rendimento"
- ],
+ "avisos_novos": [],
+ "acoes_nesta_rodada": true,
+ "varredura": {
+  "fii": 0,
+  "acoes": 0
+ },
+ "novos": [],
  "pdfs": 0
 }
