@@ -1,18 +1,14 @@
 {
- "gerado": "2026-10-21T19:00:16.807Z",
+ "gerado": "2026-10-21T19:15:16.664Z",
  "hora": 16,
- "fnet_erro": "HTTP 520",
+ "fnet_erro": "The operation was aborted due to timeout",
  "fnet": {
   "linhas": 0,
   "avisos": 0,
   "relatorios": 0
  },
  "avisos_novos": [],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 4,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
