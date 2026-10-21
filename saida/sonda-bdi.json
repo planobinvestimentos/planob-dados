@@ -1,0 +1,342 @@
+{
+ "gerado": "2026-10-21T14:29:15.422Z",
+ "pdfs": [
+  {
+   "iso": "2026-10-20",
+   "n": "00",
+   "status": 200,
+   "bytes": 36917594,
+   "comeca": "%PDF-",
+   "erro_texto": "spawnSync pdftotext ETIMEDOUT",
+   "paginas": "1719",
+   "chars_texto": 0,
+   "primeira_linha": "",
+   "linhas_com_investidores": 0
+  },
+  {
+   "iso": "2026-10-20",
+   "n": "01",
+   "status": 200,
+   "bytes": 22356412,
+   "comeca": "%PDF-",
+   "paginas": "3062",
+   "chars_texto": 51147314,
+   "primeira_linha": "Boletim Diário do Mercado |        REFERENTE A TERÇA-FEIRA - 20 DE OUTUBRO DE 2026 - Nº 200 | Renda fixa",
+   "linhas_com_investidores": 0
+  },
+  {
+   "iso": "2026-10-20",
+   "n": "02",
+   "status": 200,
+   "bytes": 14366544,
+   "comeca": "%PDF-",
+   "paginas": "146",
+   "chars_texto": 857519,
+   "primeira_linha": "Boletim Diário do Mercado |     REFERENTE A TERÇA-FEIRA - 20 DE OUTUBRO DE 2026 - Nº 200 | Indicadores e informativos",
+   "linhas_com_investidores": 8
+  },
+  {
+   "iso": "2026-10-20",
+   "n": "03",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-20",
+   "n": "04",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-20",
+   "n": "05",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-20",
+   "n": "06",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-20",
+   "n": "07",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-20",
+   "n": "08",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-20",
+   "n": "09",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-20",
+   "n": "10",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-20",
+   "n": "11",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-20",
+   "n": "12",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-19",
+   "n": "00",
+   "status": 200,
+   "bytes": 36642735,
+   "comeca": "%PDF-",
+   "erro_texto": "spawnSync pdftotext ETIMEDOUT",
+   "paginas": "1707",
+   "chars_texto": 0,
+   "primeira_linha": "",
+   "linhas_com_investidores": 0
+  },
+  {
+   "iso": "2026-10-19",
+   "n": "01",
+   "status": 200,
+   "bytes": 2124910,
+   "comeca": "%PDF-",
+   "paginas": "225",
+   "chars_texto": 3799595,
+   "primeira_linha": "Boletim Diário do Mercado |        REFERENTE A SEGUNDA-FEIRA - 19 DE OUTUBRO DE 2026 - Nº 199 | Renda fixa",
+   "linhas_com_investidores": 0
+  },
+  {
+   "iso": "2026-10-19",
+   "n": "02",
+   "status": 200,
+   "bytes": 14249894,
+   "comeca": "%PDF-",
+   "paginas": "144",
+   "chars_texto": 838078,
+   "primeira_linha": "Boletim Diário do Mercado |     REFERENTE A SEGUNDA-FEIRA - 19 DE OUTUBRO DE 2026 - Nº 199 | Indicadores e informativos",
+   "linhas_com_investidores": 8
+  },
+  {
+   "iso": "2026-10-19",
+   "n": "03",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-19",
+   "n": "04",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-19",
+   "n": "05",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-19",
+   "n": "06",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-19",
+   "n": "07",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-19",
+   "n": "08",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-19",
+   "n": "09",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-19",
+   "n": "10",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-19",
+   "n": "11",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-19",
+   "n": "12",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-16",
+   "n": "00",
+   "status": 200,
+   "bytes": 61592545,
+   "comeca": "%PDF-",
+   "erro_texto": "spawnSync pdftotext ETIMEDOUT",
+   "paginas": "2038",
+   "chars_texto": 0,
+   "primeira_linha": "",
+   "linhas_com_investidores": 0
+  },
+  {
+   "iso": "2026-10-16",
+   "n": "01",
+   "status": 200,
+   "bytes": 23103616,
+   "comeca": "%PDF-",
+   "paginas": "3150",
+   "chars_texto": 52830540,
+   "primeira_linha": "Boletim Diário do Mercado |        REFERENTE A SEXTA-FEIRA - 16 DE OUTUBRO DE 2026 - Nº 198 | Renda fixa",
+   "linhas_com_investidores": 0
+  },
+  {
+   "iso": "2026-10-16",
+   "n": "02",
+   "status": 200,
+   "bytes": 36479883,
+   "comeca": "%PDF-",
+   "paginas": "286",
+   "chars_texto": 1143482,
+   "primeira_linha": "Boletim Diário do Mercado |     REFERENTE A SEXTA-FEIRA - 16 DE OUTUBRO DE 2026 - Nº 198 | Indicadores e informativos",
+   "linhas_com_investidores": 11
+  },
+  {
+   "iso": "2026-10-16",
+   "n": "03",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-16",
+   "n": "04",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-16",
+   "n": "05",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-16",
+   "n": "06",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-16",
+   "n": "07",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-16",
+   "n": "08",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-16",
+   "n": "09",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-16",
+   "n": "10",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-16",
+   "n": "11",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  },
+  {
+   "iso": "2026-10-16",
+   "n": "12",
+   "status": 500,
+   "bytes": 0,
+   "comeca": ""
+  }
+ ],
+ "trechos": [
+  {
+   "iso": "2026-10-20",
+   "n": "02",
+   "linha": 3642,
+   "contexto": "Z26                                                                    0                        0                                      3                             3    \\nTOTAL                                                                                          55                                    188                          243     \\n\\n\\n\\n\\nParticipação dos investidores\\nContribuição de diferentes perfis de investidores no volume total de negociações realizadas na B3.\\n\\nDados acumulados do início do mês até o dia 16/10/2026.\\nTipos de investidores                                         Compras (R$) mil                                    Participação (%)                                   Venda\\nInstitucionais                                                                                      183.174.743                                             12,74         \\nInstituições Financeiras                                                                             16.098.501                                               1,12        \\nInvestidor Estrangeiro                                                                              455.933.719                                             31,72         \\nInvestidores Individuais                                                                            60.583.564                                               4,21         \\nOutros                                                                                                2.921.765                                             0,20          \\n\\n\\n\\n\\n                                                                                                                                42                                        \\n\fBoletim Diário do Mercado\\n\\n\\nIndicadores e informativos\\nParticipação dos investidores mensal\\nContribuição de diferentes perfis de investidores no volume total de negociações realizadas na B3 no mês anterior.\\n\\nTotal de dados acumulados (Compras + Vendas) por tipo de Mercado do mês anterior (Setembro).\\n                                                À vista                             A termo                            Opções                           Exercícios de opçõ\\nTipos de investidores\\n                                   R$                         (%)           R$                   (%)           R$                    (%)           R$                     "
+  },
+  {
+   "iso": "2026-10-19",
+   "n": "02",
+   "linha": 3645,
+   "contexto": "Z26                                                                    0                        0                                       3                            3    \\nTOTAL                                                                                          55                                      188                         243    \\n\\n\\n\\n\\nParticipação dos investidores\\nContribuição de diferentes perfis de investidores no volume total de negociações realizadas na B3.\\n\\nDados acumulados do início do mês até o dia 15/10/2026.\\nTipos de investidores                                         Compras (R$) mil                                      Participação (%)                                 Venda\\nInstitucionais                                                                                        162.141.127                                            12,78        \\nInstituições Financeiras                                                                              13.032.683                                              1,03        \\nInvestidor Estrangeiro                                                                              402.048.384                                              31,69        \\nInvestidores Individuais                                                                             54.483.995                                              4,29         \\nOutros                                                                                                 2.709.572                                              0,21        \\n\\n\\n\\n\\n                                                                                                                                 42                                       \\n\fBoletim Diário do Mercado\\n\\n\\nIndicadores e informativos\\nParticipação dos investidores mensal\\nContribuição de diferentes perfis de investidores no volume total de negociações realizadas na B3 no mês anterior.\\n\\nTotal de dados acumulados (Compras + Vendas) por tipo de Mercado do mês anterior (Setembro).\\n                                                À vista                             A termo                            Opções                           Exercícios de opçõ\\nTipos de investidores\\n                                   R$                         (%)           R$                   (%)           R$                    (%)           R$                     "
+  },
+  {
+   "iso": "2026-10-16",
+   "n": "02",
+   "linha": 3642,
+   "contexto": "Z26                                                                    0                        0                                      3                             3    \\nTOTAL                                                                                          55                                    179                          234     \\n\\n\\n\\n\\nParticipação dos investidores\\nContribuição de diferentes perfis de investidores no volume total de negociações realizadas na B3.\\n\\nDados acumulados do início do mês até o dia 14/10/2026.\\nTipos de investidores                                         Compras (R$) mil                                    Participação (%)                                   Venda\\nInstitucionais                                                                                      154.099.128                                             12,99         \\nInstituições Financeiras                                                                             12.013.879                                               1,01        \\nInvestidor Estrangeiro                                                                              374.669.362                                             31,59         \\nInvestidores Individuais                                                                             49.716.397                                              4,19         \\nOutros                                                                                                2.453.230                                              0,21         \\n\\n\\n\\n\\n                                                                                                                                42                                        \\n\fBoletim Diário do Mercado\\n\\n\\nIndicadores e informativos\\nParticipação dos investidores mensal\\nContribuição de diferentes perfis de investidores no volume total de negociações realizadas na B3 no mês anterior.\\n\\nTotal de dados acumulados (Compras + Vendas) por tipo de Mercado do mês anterior (Setembro).\\n                                                À vista                             A termo                            Opções                           Exercícios de opçõ\\nTipos de investidores\\n                                   R$                         (%)           R$                   (%)           R$                    (%)           R$                     "
+  }
+ ],
+ "dias": [
+  "2026-10-20",
+  "2026-10-19",
+  "2026-10-16"
+ ]
+}
