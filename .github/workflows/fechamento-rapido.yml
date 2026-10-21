@@ -1,0 +1,51 @@
+# FECHAMENTO RÁPIDO (por volta das 18h20, Brasília), segunda a sexta: maiores altas e baixas do dia (5 de cada lado) de ações, FIIs de tijolo, FIIs de papel e ETFs.
+# Usa o mesmo programa da parcial do pregão (previa.mjs) no modo "fechamento": cotações do TradingView (reserva: Yahoo), atraso de ~15 min, que ao fim do pregão (18h00) já são as finais.
+# Sai uma única vez por dia (estado em saida/previa.json). Se saiu, o fechamento oficial das 20h (workflow "Aviso diário no Telegram") NÃO repete as altas e baixas.
+# Se este não sair (fonte fora do ar, feriado), o oficial das 20h segue como reserva. Dólar e cripto continuam só às 20h.
+# O GitHub costuma atrasar os horários agendados; o "relógio" da Cloudflare (pasta cloudflare) dispara este fluxo na hora certa.
+name: Fechamento rápido (18h20)
+on:
+  schedule:
+    - cron: '20,40 21 * * 1-5'    # 18h20 e 18h40 (Brasília)
+    - cron: '0,30 22 * * 1-5'     # 19h00 e 19h30 (últimas tentativas)
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: 'Só mostrar a mensagem no log, sem enviar'
+        type: boolean
+        default: false
+      forcar:
+        description: 'Ignorar o horário e o "já enviou hoje" e enviar agora'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: planob-previa
+  cancel-in-progress: false
+jobs:
+  fechamento:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Fechamento rápido
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          MODO: fechamento
+          TESTE: ${{ inputs.teste && '1' || '' }}
+          FORCAR: ${{ inputs.forcar && '1' || '' }}
+        run: node previa.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida/previa.json saida/previa-diag.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Fechamento rápido: atualiza estado"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1

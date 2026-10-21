@@ -22,7 +22,7 @@ on:
       parte:
         description: 'Qual parte rodar'
         type: choice
-        options: [tudo, fechamento, resumo, proventos, eventos]
+        options: [tudo, fechamento, resumo, proventos, eventos, 'fechamento,eventos', 'fechamento,resumo,eventos', 'fechamento,proventos,eventos']   # as combinações são usadas pelo relógio da Cloudflare
         default: tudo
       teste:
         description: 'Só mostrar as mensagens no log, sem enviar'

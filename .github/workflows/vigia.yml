@@ -1,0 +1,39 @@
+# VIGIA: confere se cada envio do dia aconteceu e, se não, avisa no SEU Telegram privado (não no canal). Só lê; não altera nenhum arquivo do repositório.
+# O relógio da Cloudflare chama este fluxo no prazo de cada envio (ex.: 11h45 para o juros das 11h), com o nome da conferência em "verificar".
+# Reserva: às 23h50 (Brasília) confere se o relógio da Cloudflare funcionou hoje; se não, confere o dia inteiro.
+# Segredos usados: TELEGRAM_BOT_TOKEN (já existe), TELEGRAM_ALERTA_CHAT_ID (novo: seu número pessoal no Telegram), ANTHROPIC_API_KEY (já existe; opcional, explica falhas em português).
+name: Vigia dos envios
+on:
+  schedule:
+    - cron: '50 2 * * *'     # 23h50 (Brasília): conferência de fim de dia
+  workflow_dispatch:
+    inputs:
+      verificar:
+        description: 'Qual conferência (teste = só manda um aviso de teste; todos = as que já passaram do prazo; fimdodia; ou o nome, ex.: juros-11)'
+        type: string
+        default: 'todos'
+      teste:
+        description: 'Só mostrar o aviso no log, sem enviar ao Telegram'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+  actions: read
+# sem grupo de concorrência de propósito: o vigia só lê, e várias conferências no mesmo minuto precisam rodar todas (o GitHub descartaria as que ficam na fila)
+jobs:
+  vigia:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Conferir
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_ALERTA_CHAT_ID: ${{ secrets.TELEGRAM_ALERTA_CHAT_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          VERIFICAR: ${{ inputs.verificar || 'fimdodia' }}
+          TESTE: ${{ inputs.teste && '1' || '' }}
+        run: node vigia.mjs
