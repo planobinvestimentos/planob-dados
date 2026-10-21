@@ -1,0 +1,16 @@
+{
+ "gerado": "2026-10-21T14:22:47.738Z",
+ "hoje": "2026-10-21",
+ "hora": 11,
+ "contratos": 44,
+ "vertices": 9,
+ "parado": {
+  "contratos": 9,
+  "com_volume": 9,
+  "semVolume": false,
+  "semVariacao": false,
+  "parado": false
+ },
+ "mensagem_chars": 671,
+ "resultado": "edição das 11h enviada (9 vencimentos)"
+}
