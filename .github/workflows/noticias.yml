@@ -1,5 +1,6 @@
 # Noticiário Corporativo no Telegram (horário de Brasília, segunda a sexta):
-#   12h e 15h  resumo dos comunicados novos das empresas (fatos relevantes, avisos aos acionistas, comunicados)
+#   9h, 12h e 15h  resumo dos comunicados novos das empresas (fatos relevantes, avisos aos acionistas, comunicados) e matérias de FIIs (FNET, em tempo real)
+#   Atenção: os comunicados de EMPRESAS vêm do arquivo da CVM, que só é atualizado 1 vez por SEMANA (domingo ~7h). Mais rodadas por dia ajudam os FIIs, não as empresas.
 # Cada edição envia só o que ainda não foi enviado; sem novidade, não manda nada.
 # Fonte: dados abertos da CVM (atualizados uma vez por dia, então itens de hoje podem aparecer só no dia seguinte).
 # Começa no modo GRATUITO (só manchetes), sem nenhum gasto. Para resumos por IA (pago, à parte da assinatura do Claude): crie o segredo
@@ -8,6 +9,7 @@
 name: Noticiário Corporativo no Telegram
 on:
   schedule:
+    - cron: '0 12 * * 1-5'     # 9h
     - cron: '0 15 * * 1-5'     # 12h
     - cron: '0 18 * * 1-5'     # 15h
   workflow_dispatch:

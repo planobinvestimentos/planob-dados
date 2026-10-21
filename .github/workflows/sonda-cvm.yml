@@ -1,0 +1,31 @@
+# SONDA DA CVM (só à mão): descobre como buscar comunicados de empresas em tempo real.
+# O arquivo aberto da CVM (IPE) só é atualizado 1 vez por semana (domingo ~7h), por isso as matérias de empresas atrasam.
+# Esta sonda só LÊ páginas públicas e grava o resultado em saida/sonda-cvm.json. Não envia nada ao Telegram.
+name: Sonda da CVM
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: planob-sonda
+  cancel-in-progress: false
+jobs:
+  sonda:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Rodar a sonda
+        run: node sonda-cvm.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida/sonda-cvm.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Sonda da CVM: resultado"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1
