@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-21T16:57:01.967Z",
+ "gerado": "2026-10-21T17:00:13.040Z",
  "pregoes_pedidos": 21,
- "minimo": 100000,
+ "minimo": 300000,
  "pregoes": 21,
  "de": "2026-09-21",
  "ate": "2026-10-20",
  "fiis_analisados": 353,
- "fiis_acima_do_minimo": 172,
+ "fiis_acima_do_minimo": 129,
  "maiores": [
   "TRXF11 R$ 30.2 mi",
   "KNCR11 R$ 29.3 mi",
