@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-20T18:23:03.217Z",
+ "gerado": "2026-10-21T15:27:51.831Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -29,13 +29,13 @@
  "ia_teste": "ok: ok",
  "ipe": {
   "linhas": 37434,
-  "janela_desde": "2026-10-15",
+  "janela_desde": "2026-10-16",
   "data_mais_recente": "2026-10-17",
   "categorias_ultimos_10_dias": {
-   "Comunicado ao Mercado": 96,
+   "Comunicado ao Mercado": 95,
    "Fato Relevante": 20,
    "Aviso aos Acionistas": 11,
-   "Valores Mobiliários negociados e detidos (art. 11 da Instr. CVM nº 358)": 110,
+   "Valores Mobiliários negociados e detidos (art. 11 da Instr. CVM nº 358)": 102,
    "Documentos de Oferta de Distribuição Pública": 12,
    "Reunião da Administração": 51,
    "Relato Integrado": 2,
@@ -43,7 +43,7 @@
    "Código de Conduta": 1,
    "Assembleia": 84,
    "Estatuto Social": 7,
-   "Calendário de Eventos Corporativos": 7,
+   "Calendário de Eventos Corporativos": 6,
    "Relatório Proventos": 4,
    "Aviso aos Debenturistas": 14,
    "Escrituras e aditamentos de debêntures": 8,
@@ -52,7 +52,7 @@
    "Relatório de Sustentabilidade": 2,
    "Informações de Companhias em Recuperação Judicial ou Extrajudicial": 2
   },
-  "na_janela_e_categorias": 23,
+  "na_janela_e_categorias": 11,
   "colunas": [
    "CNPJ_COMPANHIA",
    "NOME_COMPANHIA",
@@ -69,12 +69,28 @@
    "LINK_DOWNLOAD"
   ]
  },
+ "cvm_cnpj": {
+  "total": 2590,
+  "novos": 2590
+ },
+ "enet": {
+  "linhas": 1292,
+  "na_janela_e_categorias": 12,
+  "sem_cnpj": 172,
+  "entrega_mais_recente": "20261021 21/10/2026 11:35",
+  "tentativa": 1
+ },
+ "fontes": {
+  "enet": 12,
+  "ipe": 11,
+  "apos_juntar": 23
+ },
  "itens": {
   "novos": 0,
   "enviados_agora": 0,
   "com_ia": 0,
   "ia_falhas": 0,
-  "fora_do_filtro": 3,
+  "fora_do_filtro": 2,
   "rotina_escondida": 0
  },
  "filtro": "lista elegiveis.json (219 empresas, anos 2021-2022-2023-2024-2025)"

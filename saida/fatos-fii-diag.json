@@ -1,25 +1,25 @@
 {
- "gerado": "2026-10-20T18:23:04.839Z",
+ "gerado": "2026-10-21T15:27:58.687Z",
  "valor_min": 10000000,
  "fundos_liquidos_com_nome": 73,
  "lista": {
-  "linhas_vistas": 151,
+  "linhas_vistas": 262,
   "categorias": {
-   "Informes Periódicos": 36,
-   "Comunicado ao Mercado": 24,
-   "Assembleia": 22,
-   "Oferta Pública de Distribuição de Cotas": 15,
-   "Relatórios": 15,
-   "Regulamento": 11,
-   "Aviso aos Cotistas - Estruturado": 9,
-   "Atos de Deliberação do Administrador": 7
+   "Assembleia": 54,
+   "Informes Periódicos": 46,
+   "Relatórios": 32,
+   "Comunicado ao Mercado": 30,
+   "Aviso aos Cotistas - Estruturado": 25,
+   "Oferta Pública de Distribuição de Cotas": 22,
+   "Regulamento": 20,
+   "Atos de Deliberação do Administrador": 13
   },
-  "fatos_relevantes": 4,
+  "fatos_relevantes": 9,
   "de_fiis_liquidos": 1
  },
- "analisados": 1,
+ "analisados": 0,
  "sem_texto": 0,
- "fora_do_escopo": 1,
+ "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
  "materias_novas": 0
