@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-21T23:30:17.298Z",
+ "gerado": "2026-10-21T23:56:05.541Z",
  "de": "2026-10-19",
  "ate": "2026-10-21",
  "fii": {
@@ -36,7 +36,7 @@
   "itens": 4
  },
  "acoes": {
-  "emissoras": 279,
+  "emissoras": 280,
   "amostra": {
    "emissora": "ABCB",
    "campos": [
@@ -83,9 +83,9 @@
     "remarks": ""
    }
   },
-  "ok": 279,
+  "ok": 280,
   "falhas": 0,
-  "semDividendos": 82,
+  "semDividendos": 83,
   "itens": 0
  }
 }
