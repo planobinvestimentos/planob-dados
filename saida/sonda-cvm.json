@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-21T13:17:47.994Z",
+ "gerado": "2026-10-21T13:28:18.991Z",
  "passos": [
   {
    "nome": "ipe_zip",
@@ -11,7 +11,7 @@
    "nome": "enet_pagina",
    "status": 200,
    "tipo": "text/html; charset=utf-8",
-   "bytes": 814164,
+   "bytes": 814163,
    "hdnHabilitaCaptcha": "N",
    "tem_chave_v3": true,
    "tem_chave_v2": true
@@ -19,7 +19,7 @@
   {
    "nome": "enet_scripts",
    "lista": [
-    "/EnetWeb/ruxitagentjs_ICANQVfgqrux_10345260810170330.js",
+    "/ENETWEB/ruxitagentjs_ICANQVfgqrux_10345260810170330.js",
     "jquery/jquery-1.12.4.js",
     "jquery/ui/jquery-ui.js",
     "jquery/jquery.maskedinput.js",
@@ -50,7 +50,7 @@
   },
   {
    "nome": "enet_script_ruxitagentjs_ICANQVfgqrux_10345260810170330.js",
-   "url": "https://www.rad.cvm.gov.br/EnetWeb/ruxitagentjs_ICANQVfgqrux_10345260810170330.js",
+   "url": "https://www.rad.cvm.gov.br/ENETWEB/ruxitagentjs_ICANQVfgqrux_10345260810170330.js",
    "status": 200,
    "bytes": 296203,
    "enderecos": [],
@@ -143,213 +143,35 @@
    "nome": "chute_ConsultarDocumentos",
    "status": 500,
    "tipo": "text/html; charset=utf-8",
-   "inicio": "<!DOCTYPE html> <html> <head> <title>Unknown web method ConsultarDocumentos.<br>Parameter name: methodName</title> <meta name=\"viewport\" content=\"width=device-width\" /> <script type=\"text/javascript\" src=\"/EnetWeb/rux"
+   "inicio": "<!DOCTYPE html> <html> <head> <title>Unknown web method ConsultarDocumentos.<br>Parameter name: methodName</title> <meta name=\"viewport\" content=\"width=device-width\" /> <script type=\"text/javascript\" src=\"/ENETWEB/rux"
   },
   {
-   "nome": "consulta_combos_menos1",
+   "nome": "ipe_codigos_categorias",
    "status": 200,
-   "tipo": "application/json; charset=utf-8",
-   "chaves_d": [
-    "__type",
-    "temErro",
-    "expirouSessao",
-    "msgErro",
-    "dados",
-    "SolicitarCaptcha"
-   ],
-   "bytes": 1168090,
+   "achados": {
+    "IPE_3_-1_-1": "Aviso aos Acionistas | TODOS | TODAS",
+    "IPE_9_-1_-1": "Calendário de Eventos Corporativos | TODOS | TODAS",
+    "IPE_6_-1_-1": "Comunicado ao Mercado | TODOS | TODAS",
+    "IPE_4_-1_-1": "Fato Relevante | TODOS | TODAS",
+    "IPE_11_-1_-1": "Política de Divulgação de Ato ou Fato Relevante | TODOS | TODAS",
+    "IPE_107_-1_-1": "Relatório Proventos | TODOS | TODAS"
+   },
+   "total_options": 532
+  },
+  {
+   "nome": "ipe_consulta",
+   "status": 200,
+   "SolicitarCaptcha": "N",
    "temErro": false,
    "msgErro": "",
-   "SolicitarCaptcha": "N",
-   "total_linhas": 852,
-   "exemplo_linhas": [
-    [
-     "02509-7",
-     "NORTE ENERGIA S.A.",
-     "ITR - Informações Trimestrais",
-     "-",
-     "-",
-     "20260930 30/09/2026",
-     "20261019 19/10/2026 22:00",
-     "Ativo",
-     "1",
-     "AP",
-     "",
-     "",
-     ""
-    ],
-    [
-     "02726-0",
-     "CORREDOR LOGÍSTICA E INFRAESTRUTURA S.A.",
-     "FRE - Formulário de Referência",
-     "-",
-     "-",
-     "20261231 2026",
-     "20261019 19/10/2026 20:30",
-     "Ativo",
-     "3",
-     "RE",
-     "",
-     "",
-     ""
-    ],
-    [
-     "02724-3",
-     "CLI SUL S.A.",
-     "FRE - Formulário de Referência",
-     "-",
-     "-",
-     "20261231 2026",
-     "20261019 19/10/2026 20:29",
-     "Ativo",
-     "4",
-     "RE",
-     "",
-     "",
-     ""
-    ],
-    [
-     "02047-8",
-     "PDG REALTY S.A. EMPREEND E PARTICIPACOES",
-     "FRE - Formulário de Referência",
-     "-",
-     "-",
-     "20261231 2026",
-     "20261019 19/10/2026 19:43",
-     "Ativo",
-     "11",
-     "RE",
-     "",
-     "",
-     ""
-    ],
-    [
-     "02739-1",
-     "BRZ EMPREENDIMENTOS E CONSTRUÇÕES S.A.",
-     "FRE - Formulário de Referência",
-     "-",
-     "-",
-     "20261231 2026",
-     "20261019 19/10/2026 19:25",
-     "Ativo",
-     "2",
-     "RE",
-     "",
-     "",
-     ""
-    ],
-    [
-     "00650-5",
-     "GRUPO CASAS BAHIA S.A.",
-     "FCA - Formulário Cadastral",
-     "-",
-     "-",
-     "20260101 2026",
-     "20261019 19/10/2026 19:04",
-     "Ativo",
-     "2",
-     "RE",
-     "",
-     "",
-     ""
-    ],
-    [
-     "02530-5",
-     "PATRIMAR ENGENHARIA S.A.",
-     "FRE - Formulário de Referência",
-     "-",
-     "-",
-     "20261231 2026",
-     "20261019 19/10/2026 18:50",
-     "Ativo",
-     "4",
-     "RE",
-     "",
-     "",
-     ""
-    ],
-    [
-     "02470-8",
-     "NOVA TRANSPORTADORA DO SUDESTE S.A. - NTS",
-     "FCA - Formulário Cadastral",
-     "-",
-     "-",
-     "20260101 2026",
-     "20261019 19/10/2026 18:35",
-     "Ativo",
-     "2",
-     "RE",
-     "",
-     "",
-     ""
-    ],
-    [
-     "02470-8",
-     "NOVA TRANSPORTADORA DO SUDESTE S.A. - NTS",
-     "FRE - Formulário de Referência",
-     "-",
-     "-",
-     "20261231 2026",
-     "20261019 19/10/2026 18:31",
-     "Ativo",
-     "4",
-     "RE",
-     "",
-     "",
-     ""
-    ],
-    [
-     "00576-2",
-     "ETERNIT S.A.",
-     "FRE - Formulário de Referência",
-     "-",
-     "-",
-     "20261231 2026",
-     "20261019 19/10/2026 18:12",
-     "Ativo",
-     "4",
-     "RE",
-     "",
-     "",
-     ""
-    ],
-    [
-     "01466-4",
-     "SCHULZ S.A.",
-     "FRE - Formulário de Referência",
-     "-",
-     "-",
-     "20261231 2026",
-     "20261019 19/10/2026 18:04",
-     "Inativo",
-     "5",
-     "RE",
-     "",
-     "",
-     ""
-    ],
-    [
-     "02256-0",
-     "INBRANDS S.A.",
-     "FRE - Formulário de Referência",
-     "-",
-     "-",
-     "20261231 2026",
-     "20261019 19/10/2026 17:16",
-     "Ativo",
-     "4",
-     "RE",
-     "",
-     "",
-     ""
-    ]
-   ],
-   "exemplo_linha_bruta": "02509-7$&NORTE ENERGIA S.A.$&ITR - Informações Trimestrais$& - $&<spanOrder></spanOrder> - $&<spanOrder>20260930</spanOrder> 30/09/2026$&<spanOrder>20261019</spanOrder> 19/10/2026 22:00$&Ativo$&1$&AP$&<i class='fi-page-search' id='VisualizarDocumento' style='font-size: 18px;cursor:pointer;color:#0C7766;' onclick=OpenPopUpVer('frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=161754&CodigoTipoInstituicao=1') title='Visualizar o Documento'> </i><i class='fi-download' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Download' onclick=OpenDownloadDocumentos('161754','1','025097ITR300920260100161754-72','ITR')> </i><i class='fi-info' style='font-size: 18px;cursor:pointer;color:#696969;' title='Documento não possui local de publicação.'> </i><i class='fi-clipboard-notes' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Exibir Protocolo de Entrega' onclick='exibirProtocoloPDF(161754, \"ENET\")'</i>$&$&",
-   "categorias_na_resposta": {
-    "ITR - Informações Trimestrais": 9,
-    "FRE - Formulário de Referência": 31,
-    "FCA - Formulário Cadastral": 3,
-    "Comunicado ao Mercado": 493,
+   "linhas": 808,
+   "por_data_entrega": {
+    "19/10/2026": 392,
+    "20/10/2026": 367,
+    "21/10/2026": 49
+   },
+   "por_categoria": {
+    "Comunicado ao Mercado": 492,
     "Reunião da Administração": 43,
     "Fato Relevante": 26,
     "Aviso aos Acionistas": 93,
@@ -366,280 +188,260 @@
     "Relatório de Sustentabilidade": 3,
     "BDR Não Patrocinado - Descritivo Operacional do Programa": 1,
     "Informações de Companhias em Recuperação Judicial ou Extrajudicial": 1
-   }
+   },
+   "colunas_por_linha": {
+    "13": 808
+   },
+   "entrega_mais_antiga": "19/10/2026 07:34",
+   "entrega_mais_recente": "21/10/2026 10:02",
+   "ordem_das_5_primeiras": [
+    "20261019 19/10/2026 07:34",
+    "20261019 19/10/2026 07:34",
+    "20261019 19/10/2026 07:34",
+    "20261019 19/10/2026 07:34",
+    "20261019 19/10/2026 07:34"
+   ]
   },
   {
-   "nome": "consulta_combos_vazios",
-   "status": 200,
-   "tipo": "application/json; charset=utf-8",
-   "chaves_d": [
-    "__type",
-    "temErro",
-    "expirouSessao",
-    "msgErro",
-    "dados",
-    "SolicitarCaptcha"
-   ],
-   "bytes": 1168090,
-   "temErro": false,
-   "msgErro": "",
-   "SolicitarCaptcha": "N",
-   "total_linhas": 852,
-   "exemplo_linhas": [
-    [
-     "02509-7",
-     "NORTE ENERGIA S.A.",
-     "ITR - Informações Trimestrais",
-     "-",
-     "-",
-     "20260930 30/09/2026",
-     "20261019 19/10/2026 22:00",
-     "Ativo",
-     "1",
-     "AP",
-     "",
-     "",
-     ""
+   "nome": "ipe_amostras",
+   "amostras": {
+    "Comunicado ao Mercado": [
+     {
+      "campos": [
+       "05010-5",
+       "CITIGROUP INC.",
+       "Comunicado ao Mercado",
+       "Outros Comunicados Não Considerados Fatos Relevantes",
+       "Documento Diversos -",
+       "20261019 19/10/2026",
+       "20261019 19/10/2026 07:34",
+       "Ativo",
+       "1",
+       "AP",
+       "<i class='fi-page-search' id='VisualizarDocumento' style='font-size: 18px;cursor:pointer;color:#0C7766;'  onclick=OpenPopUpVer('frmExibirArquivoIPEExterno.aspx?NumeroProtocoloEntrega=1578122') title='Visualizar o Documento'> </i><i class='fi-download' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Download' onclick=OpenDownloadDocumentos('1102828','1','1578122','IPE')> </i><i class='fi-info' style='font-size: 18px;cursor:pointer;color:#696969;' title='Documento não possui local de publicação.'> </i><i class='fi-clipboard-notes' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Exibir Protocolo de Entrega' onclick='exibirProtocoloPDF(1102828, \"IPE\")'</i>",
+       "Documento Diversos",
+       ""
+      ]
+     },
+     {
+      "campos": [
+       "05057-1",
+       "JPMORGAN CHASE & CO.",
+       "Comunicado ao Mercado",
+       "Outros Comunicados Não Considerados Fatos Relevantes",
+       "Documento Diversos -",
+       "20261019 19/10/2026",
+       "20261019 19/10/2026 07:34",
+       "Ativo",
+       "1",
+       "AP",
+       "<i class='fi-page-search' id='VisualizarDocumento' style='font-size: 18px;cursor:pointer;color:#0C7766;'  onclick=OpenPopUpVer('frmExibirArquivoIPEExterno.aspx?NumeroProtocoloEntrega=1578123') title='Visualizar o Documento'> </i><i class='fi-download' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Download' onclick=OpenDownloadDocumentos('1102829','1','1578123','IPE')> </i><i class='fi-info' style='font-size: 18px;cursor:pointer;color:#696969;' title='Documento não possui local de publicação.'> </i><i class='fi-clipboard-notes' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Exibir Protocolo de Entrega' onclick='exibirProtocoloPDF(1102829, \"IPE\")'</i>",
+       "Documento Diversos",
+       ""
+      ]
+     },
+     {
+      "campos": [
+       "05141-1",
+       "TRANSOCEAN LTD.",
+       "Comunicado ao Mercado",
+       "Outros Comunicados Não Considerados Fatos Relevantes",
+       "8-K -",
+       "20261019 19/10/2026",
+       "20261019 19/10/2026 07:34",
+       "Ativo",
+       "1",
+       "AP",
+       "<i class='fi-page-search' id='VisualizarDocumento' style='font-size: 18px;cursor:pointer;color:#0C7766;'  onclick=OpenPopUpVer('frmExibirArquivoIPEExterno.aspx?NumeroProtocoloEntrega=1578124') title='Visualizar o Documento'> </i><i class='fi-download' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Download' onclick=OpenDownloadDocumentos('1102830','1','1578124','IPE')> </i><i class='fi-info' style='font-size: 18px;cursor:pointer;color:#696969;' title='Documento não possui local de publicação.'> </i><i class='fi-clipboard-notes' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Exibir Protocolo de Entrega' onclick='exibirProtocoloPDF(1102830, \"IPE\")'</i>",
+       "8-K",
+       ""
+      ]
+     }
     ],
-    [
-     "02726-0",
-     "CORREDOR LOGÍSTICA E INFRAESTRUTURA S.A.",
-     "FRE - Formulário de Referência",
-     "-",
-     "-",
-     "20261231 2026",
-     "20261019 19/10/2026 20:30",
-     "Ativo",
-     "3",
-     "RE",
-     "",
-     "",
-     ""
+    "Fato Relevante": [
+     {
+      "campos": [
+       "02770-7",
+       "AUTOMOB PARTICIPAÇÕES S.A.",
+       "Fato Relevante",
+       "-",
+       "Prévia de Resultados 3T26 -",
+       "20261019 19/10/2026",
+       "20261019 19/10/2026 08:45",
+       "Ativo",
+       "1",
+       "AP",
+       "<i class='fi-page-search' id='VisualizarDocumento' style='font-size: 18px;cursor:pointer;color:#0C7766;'  onclick=OpenPopUpVer('frmExibirArquivoIPEExterno.aspx?NumeroProtocoloEntrega=1578144') title='Visualizar o Documento'> </i><i class='fi-download' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Download' onclick=OpenDownloadDocumentos('1102850','1','1578144','IPE')> </i><i class='fi-info' style='font-size: 18px;cursor:pointer;color:#696969;' title='Documento não possui local de publicação.'> </i><i class='fi-clipboard-notes' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Exibir Protocolo de Entrega' onclick='exibirProtocoloPDF(1102850, \"IPE\")'</i>",
+       "Prévia de Resultados 3T26",
+       ""
+      ]
+     },
+     {
+      "campos": [
+       "02109-1",
+       "DEXCO S.A.",
+       "Fato Relevante",
+       "-",
+       "Encerramento das atividades na planta de Louças em Santo Agostinho (PE) -",
+       "20261019 19/10/2026",
+       "20261019 19/10/2026 09:06",
+       "Ativo",
+       "1",
+       "AP",
+       "<i class='fi-page-search' id='VisualizarDocumento' style='font-size: 18px;cursor:pointer;color:#0C7766;'  onclick=OpenPopUpVer('frmExibirArquivoIPEExterno.aspx?NumeroProtocoloEntrega=1578154') title='Visualizar o Documento'> </i><i class='fi-download' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Download' onclick=OpenDownloadDocumentos('1102860','1','1578154','IPE')> </i><i class='fi-info' style='font-size: 18px;cursor:pointer;color:#696969;' title='Documento não possui local de publicação.'> </i><i class='fi-clipboard-notes' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Exibir Protocolo de Entrega' onclick='exibirProtocoloPDF(1102860, \"IPE\")'</i>",
+       "Encerramento das atividades na planta de Louças em Santo Agostinho (PE)",
+       ""
+      ]
+     },
+     {
+      "campos": [
+       "02781-2",
+       "IGUA SERGIPE S.A.",
+       "Fato Relevante",
+       "-",
+       "Renúncia e Eleição de Diretoria -",
+       "20261019 19/10/2026",
+       "20261019 19/10/2026 18:01",
+       "Ativo",
+       "1",
+       "AP",
+       "<i class='fi-page-search' id='VisualizarDocumento' style='font-size: 18px;cursor:pointer;color:#0C7766;'  onclick=OpenPopUpVer('frmExibirArquivoIPEExterno.aspx?NumeroProtocoloEntrega=1578381') title='Visualizar o Documento'> </i><i class='fi-download' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Download' onclick=OpenDownloadDocumentos('1103087','1','1578381','IPE')> </i><i class='fi-info' style='font-size: 18px;cursor:pointer;color:#696969;' title='Documento não possui local de publicação.'> </i><i class='fi-clipboard-notes' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Exibir Protocolo de Entrega' onclick='exibirProtocoloPDF(1103087, \"IPE\")'</i>",
+       "Renúncia e Eleição de Diretoria",
+       ""
+      ]
+     }
     ],
-    [
-     "02724-3",
-     "CLI SUL S.A.",
-     "FRE - Formulário de Referência",
-     "-",
-     "-",
-     "20261231 2026",
-     "20261019 19/10/2026 20:29",
-     "Ativo",
-     "4",
-     "RE",
-     "",
-     "",
-     ""
+    "Aviso aos Acionistas": [
+     {
+      "campos": [
+       "08021-7",
+       "INTER CO INC",
+       "Aviso aos Acionistas",
+       "Outros avisos",
+       "Encerramento do Peri´odo de Definic¸a~o - Descontinuidade Programa BDRs -",
+       "20261019 19/10/2026",
+       "20261019 19/10/2026 09:03",
+       "Ativo",
+       "1",
+       "AP",
+       "<i class='fi-page-search' id='VisualizarDocumento' style='font-size: 18px;cursor:pointer;color:#0C7766;'  onclick=OpenPopUpVer('frmExibirArquivoIPEExterno.aspx?NumeroProtocoloEntrega=1578153') title='Visualizar o Documento'> </i><i class='fi-download' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Download' onclick=OpenDownloadDocumentos('1102859','1','1578153','IPE')> </i><i id=codPublicacao_1102859 class='fi-info' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='' onmouseout=\"ocultaLocaisPublicacao(this)\" onmouseover=\"mostraLocaisPublicacao('codPublicacao_1102859', '40@!@19/10/2026@!@https://investors.inter.co/@!@BR')\"> </i><i class='fi-clipboard-notes' style='fon",
+       "Encerramento do Peri´odo de Definic¸a~o - Descontinuidade Programa BDRs",
+       ""
+      ]
+     },
+     {
+      "campos": [
+       "05122-5",
+       "THE TRAVELERS COMPANIES, INC",
+       "Aviso aos Acionistas",
+       "Outros avisos",
+       "Dividendo -",
+       "20261019 19/10/2026",
+       "20261019 19/10/2026 09:34",
+       "Ativo",
+       "1",
+       "AP",
+       "<i class='fi-page-search' id='VisualizarDocumento' style='font-size: 18px;cursor:pointer;color:#0C7766;'  onclick=OpenPopUpVer('frmExibirArquivoIPEExterno.aspx?NumeroProtocoloEntrega=1578158') title='Visualizar o Documento'> </i><i class='fi-download' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Download' onclick=OpenDownloadDocumentos('1102864','1','1578158','IPE')> </i><i class='fi-info' style='font-size: 18px;cursor:pointer;color:#696969;' title='Documento não possui local de publicação.'> </i><i class='fi-clipboard-notes' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Exibir Protocolo de Entrega' onclick='exibirProtocoloPDF(1102864, \"IPE\")'</i>",
+       "Dividendo",
+       ""
+      ]
+     },
+     {
+      "campos": [
+       "05285-0",
+       "CITIZENS FINANCIAL GROUP INC",
+       "Aviso aos Acionistas",
+       "Outros avisos",
+       "Dividendo -",
+       "20261019 19/10/2026",
+       "20261019 19/10/2026 09:34",
+       "Ativo",
+       "1",
+       "AP",
+       "<i class='fi-page-search' id='VisualizarDocumento' style='font-size: 18px;cursor:pointer;color:#0C7766;'  onclick=OpenPopUpVer('frmExibirArquivoIPEExterno.aspx?NumeroProtocoloEntrega=1578160') title='Visualizar o Documento'> </i><i class='fi-download' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Download' onclick=OpenDownloadDocumentos('1102866','1','1578160','IPE')> </i><i class='fi-info' style='font-size: 18px;cursor:pointer;color:#696969;' title='Documento não possui local de publicação.'> </i><i class='fi-clipboard-notes' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Exibir Protocolo de Entrega' onclick='exibirProtocoloPDF(1102866, \"IPE\")'</i>",
+       "Dividendo",
+       ""
+      ]
+     }
     ],
-    [
-     "02047-8",
-     "PDG REALTY S.A. EMPREEND E PARTICIPACOES",
-     "FRE - Formulário de Referência",
-     "-",
-     "-",
-     "20261231 2026",
-     "20261019 19/10/2026 19:43",
-     "Ativo",
-     "11",
-     "RE",
-     "",
-     "",
-     ""
-    ],
-    [
-     "02739-1",
-     "BRZ EMPREENDIMENTOS E CONSTRUÇÕES S.A.",
-     "FRE - Formulário de Referência",
-     "-",
-     "-",
-     "20261231 2026",
-     "20261019 19/10/2026 19:25",
-     "Ativo",
-     "2",
-     "RE",
-     "",
-     "",
-     ""
-    ],
-    [
-     "00650-5",
-     "GRUPO CASAS BAHIA S.A.",
-     "FCA - Formulário Cadastral",
-     "-",
-     "-",
-     "20260101 2026",
-     "20261019 19/10/2026 19:04",
-     "Ativo",
-     "2",
-     "RE",
-     "",
-     "",
-     ""
-    ],
-    [
-     "02530-5",
-     "PATRIMAR ENGENHARIA S.A.",
-     "FRE - Formulário de Referência",
-     "-",
-     "-",
-     "20261231 2026",
-     "20261019 19/10/2026 18:50",
-     "Ativo",
-     "4",
-     "RE",
-     "",
-     "",
-     ""
-    ],
-    [
-     "02470-8",
-     "NOVA TRANSPORTADORA DO SUDESTE S.A. - NTS",
-     "FCA - Formulário Cadastral",
-     "-",
-     "-",
-     "20260101 2026",
-     "20261019 19/10/2026 18:35",
-     "Ativo",
-     "2",
-     "RE",
-     "",
-     "",
-     ""
-    ],
-    [
-     "02470-8",
-     "NOVA TRANSPORTADORA DO SUDESTE S.A. - NTS",
-     "FRE - Formulário de Referência",
-     "-",
-     "-",
-     "20261231 2026",
-     "20261019 19/10/2026 18:31",
-     "Ativo",
-     "4",
-     "RE",
-     "",
-     "",
-     ""
-    ],
-    [
-     "00576-2",
-     "ETERNIT S.A.",
-     "FRE - Formulário de Referência",
-     "-",
-     "-",
-     "20261231 2026",
-     "20261019 19/10/2026 18:12",
-     "Ativo",
-     "4",
-     "RE",
-     "",
-     "",
-     ""
-    ],
-    [
-     "01466-4",
-     "SCHULZ S.A.",
-     "FRE - Formulário de Referência",
-     "-",
-     "-",
-     "20261231 2026",
-     "20261019 19/10/2026 18:04",
-     "Inativo",
-     "5",
-     "RE",
-     "",
-     "",
-     ""
-    ],
-    [
-     "02256-0",
-     "INBRANDS S.A.",
-     "FRE - Formulário de Referência",
-     "-",
-     "-",
-     "20261231 2026",
-     "20261019 19/10/2026 17:16",
-     "Ativo",
-     "4",
-     "RE",
-     "",
-     "",
-     ""
+    "Relatório Proventos": [
+     {
+      "campos": [
+       "02490-2",
+       "MITRE REALTY EMPREENDIMENTOS E PARTICIPAÇÕES S.A.",
+       "Relatório Proventos",
+       "-",
+       "-",
+       "20261015 10/2026",
+       "20261019 19/10/2026 11:43",
+       "Ativo",
+       "1",
+       "AP",
+       "<i class='fi-page-search' id='VisualizarDocumento' style='font-size: 18px;cursor:pointer;color:#0C7766;'  onclick=OpenPopUpVer('frmExibirArquivoIPEExterno.aspx?NumeroProtocoloEntrega=1578192') title='Visualizar o Documento'> </i><i class='fi-download' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Download' onclick=OpenDownloadDocumentos('1102898','1','1578192','IPE')> </i><i class='fi-info' style='font-size: 18px;cursor:pointer;color:#696969;' title='Documento não possui local de publicação.'> </i><i class='fi-clipboard-notes' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Exibir Protocolo de Entrega' onclick='exibirProtocoloPDF(1102898, \"IPE\")'</i>",
+       "",
+       ""
+      ]
+     },
+     {
+      "campos": [
+       "05374-0",
+       "CONSOLIDATED EDISON INC",
+       "Relatório Proventos",
+       "-",
+       "-",
+       "20261016 10/2026",
+       "20261019 19/10/2026 16:29",
+       "Ativo",
+       "1",
+       "AP",
+       "<i class='fi-page-search' id='VisualizarDocumento' style='font-size: 18px;cursor:pointer;color:#0C7766;'  onclick=OpenPopUpVer('frmExibirArquivoIPEExterno.aspx?NumeroProtocoloEntrega=1578245') title='Visualizar o Documento'> </i><i class='fi-download' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Download' onclick=OpenDownloadDocumentos('1102951','1','1578245','IPE')> </i><i class='fi-info' style='font-size: 18px;cursor:pointer;color:#696969;' title='Documento não possui local de publicação.'> </i><i class='fi-clipboard-notes' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Exibir Protocolo de Entrega' onclick='exibirProtocoloPDF(1102951, \"IPE\")'</i>",
+       "",
+       ""
+      ]
+     },
+     {
+      "campos": [
+       "05413-5",
+       "PAYCHEX INC",
+       "Relatório Proventos",
+       "-",
+       "-",
+       "20261016 10/2026",
+       "20261019 19/10/2026 16:30",
+       "Ativo",
+       "1",
+       "AP",
+       "<i class='fi-page-search' id='VisualizarDocumento' style='font-size: 18px;cursor:pointer;color:#0C7766;'  onclick=OpenPopUpVer('frmExibirArquivoIPEExterno.aspx?NumeroProtocoloEntrega=1578246') title='Visualizar o Documento'> </i><i class='fi-download' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Download' onclick=OpenDownloadDocumentos('1102952','1','1578246','IPE')> </i><i class='fi-info' style='font-size: 18px;cursor:pointer;color:#696969;' title='Documento não possui local de publicação.'> </i><i class='fi-clipboard-notes' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Exibir Protocolo de Entrega' onclick='exibirProtocoloPDF(1102952, \"IPE\")'</i>",
+       "",
+       ""
+      ]
+     }
     ]
-   ],
-   "exemplo_linha_bruta": "02509-7$&NORTE ENERGIA S.A.$&ITR - Informações Trimestrais$& - $&<spanOrder></spanOrder> - $&<spanOrder>20260930</spanOrder> 30/09/2026$&<spanOrder>20261019</spanOrder> 19/10/2026 22:00$&Ativo$&1$&AP$&<i class='fi-page-search' id='VisualizarDocumento' style='font-size: 18px;cursor:pointer;color:#0C7766;' onclick=OpenPopUpVer('frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=161754&CodigoTipoInstituicao=1') title='Visualizar o Documento'> </i><i class='fi-download' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Download' onclick=OpenDownloadDocumentos('161754','1','025097ITR300920260100161754-72','ITR')> </i><i class='fi-info' style='font-size: 18px;cursor:pointer;color:#696969;' title='Documento não possui local de publicação.'> </i><i class='fi-clipboard-notes' style='font-size: 18px;cursor:pointer;color:#0C7766;' title='Exibir Protocolo de Entrega' onclick='exibirProtocoloPDF(161754, \"ENET\")'</i>$&$&",
-   "categorias_na_resposta": {
-    "ITR - Informações Trimestrais": 9,
-    "FRE - Formulário de Referência": 31,
-    "FCA - Formulário Cadastral": 3,
-    "Comunicado ao Mercado": 493,
-    "Reunião da Administração": 43,
-    "Fato Relevante": 26,
-    "Aviso aos Acionistas": 93,
-    "Assembleia": 33,
-    "Ato Homologatório emitido pelo Banco Central": 1,
-    "Escrituras e aditamentos de debêntures": 7,
-    "Relatório Proventos": 57,
-    "Valores Mobiliários Negociados e Detidos": 5,
-    "Documentos de Oferta de Distribuição Pública": 14,
-    "Dados Econômico-Financeiros": 20,
-    "Aviso aos Debenturistas": 5,
-    "Calendário de Eventos Corporativos": 5,
-    "Estatuto Social": 2,
-    "Relatório de Sustentabilidade": 3,
-    "BDR Não Patrocinado - Descritivo Operacional do Programa": 1,
-    "Informações de Companhias em Recuperação Judicial ou Extrajudicial": 1
    }
   },
   {
-   "nome": "categorias_PopularComboCategoria",
-   "status": 500,
-   "bytes": 647,
-   "inicio": "{\"Message\":\"Invalid web service call, missing value for parameter: \\u0027empresa\\u0027.\",\"StackTrace\":\" at System.Web.Script.Services.WebServiceMethodData.CallMethod(Object target, IDictionary`2 parameters)\\r\\n at System.Web.Script.Services.WebServiceMethodData.CallMethodFromRawParams(Object target, IDictionary`2 parameters)\\r\\n at System.Web.Script.Services.RestHandler.InvokeMethod(HttpContext context, WebServiceMethodData methodData, IDictionary`2 rawParams)\\r\\n at System.Web.Script.Services.RestHandler.ExecuteWebServiceCall(HttpContext context, WebServiceMethodData methodData)\",\"ExceptionType\":\"System.InvalidOperationException\"}"
-  },
-  {
-   "nome": "categorias_MontarCombosCategoriaTipoEspecie",
+   "nome": "ipe_download_Fato Relevan",
+   "empresa": "AUTOMOB PARTICIPAÇÕES S.A.",
+   "assunto": "Prévia de Resultados 3T26",
+   "url": "https://www.rad.cvm.gov.br/ENETWeb/frmDownloadDocumento.aspx?Tela=ext&numSequencia=1102850&numVersao=1&numProtocolo=1578144&descTipo=IPE&CodigoInstituicao=1",
    "status": 200,
-   "bytes": 110775,
-   "inicio": "{\"d\":\"\\u003coptgroup label=\\\"Documentos Estruturados\\\"\\u003e\\u003coption value=\\\"EST_-1\\\" selected=\\\"selected\\\"\\u003eTODOS os Documentos Estruturados\\u003c/option\\u003e\\u003coption value=\\\"EST_3\\\"\\u003eITR - Informações Trimestrais\\u003c/option\\u003e\\u003coption value=\\\"EST_2\\\"\\u003eFRE - Formulário de Referência\\u003c/option\\u003e\\u003coption value=\\\"EST_11\\\"\\u003eInforme do Código de Governança\\u003c/option\\u003e\\u003coption value=\\\"EST_1\\\"\\u003eFCA - Formulário Cadastral\\u003c/option\\u003e\\u003coption value=\\\"EST_4\\\"\\u003eDFP - Demonstrações Financeiras Padronizadas\\u003c/option\\u003e\\u003coption value=\\\"EST_6\\\"\\u003eInforme Trimestral de Securitizadora\\u003c/option\\u003e\\u003coption value=\\\"EST_13\\\"\\u003eIAN - Informações Anuais\\u003c/option\\u003e\\u003c/optgroup\\u003e\\u003coptgroup label=\\\"Informações Eventuais\\\"\\u003e\\u003coption value=\\\"IPE_-1_-1_-1\\\" selected=\\\"selected\\\"\\u003eTODOS os Documentos com Informações Eventuais\\u003c/option\\u003e\\u003coption value=\\\"IPE_44_-1_-1\\\"\\u003eAcordo de Acionistas\\u0026#160;\\u0026#160;\\u0026#160;|\\u0026#160;\\u0026#160;\\u0026#160;TODOS\\u0026#160;\\u0026#160;\\u0026#160;|\\u0026#160;\\u0026#160;\\u0026#160; TODAS\\u003c/option\\u003e\\u003coption value=\\\"IPE_1_-1_-1\\\"\\u003eAssembleia\\u0026#160;\\u0026#160;\\u0026#160;|\\u0026#160;\\u0026#160;\\u0026#160;TODOS\\u0026#160;\\u0026#160;\\u0026#160;|\\u0026#160;\\u0026#160;\\u0026#160; TODAS\\u003c/option\\u003e\\u003coption value=\\\"IPE_1_-1_4\\\"\\u003eAssembleia\\u0026#160;\\u0026#160;\\u0026#160;|\\u0026#160;\\u0026#160;\\u0026#160;TODOS\\u0026#160;\\u0026#160;\\u0026#160;|\\u0026#160;\\u0026#160;\\u0026#160; Ata\\u003c/option\\u003e\\u003coption value=\\\"IPE_1_-1_54\\\"\\u003eAssembleia\\u0026#160;\\u0026#160;\\u0026#160;|\\u0026#160;\\u0026#160;\\u0026#160;TODOS\\u0026#160;\\u0026#160;\\u0026#160;|\\u0026#160;\\u0026#160;\\u002"
-  },
-  {
-   "nome": "juros_tesouro_direto_json",
-   "status": 410,
    "tipo": "text/html",
-   "modificado": null,
-   "bytes": 4,
-   "inicio": "gone"
+   "disposicao": "attachment; filename=027707000101011.pdf",
+   "bytes": 819536,
+   "comeca_com": "%PDF-1.7",
+   "texto_inicio": "%PDF-1.7 %âãÏÓ 10 0 obj > stream xì} xTÕÙÿ{Î½wö$}%s!\u0003d\u0002 \u0004\u0002$\b\u0011 \u0010b\u0006$°#Á \b\"Ï\"8.¨m)Z\u0015´Ö]¹YÀa±P7êÐbí§µ[?YÚG­\u001bïwîL\u0002´ØÏ§]þÏÞ;¿óå=ç¼ç=ïYî\u0004bD\u0014@¦öÉÓró\u0013&\\_KÄæ#·±yISëEÛïì\"ð8¡ªyÅrõ}Go%÷\u001aÒWÌm·¤èçI\u001e¢É\u0012YµyWÍm¹Úb%º¢èÌù-Ms¾zù¶~hë\u0013`ä|dÄ\u0015¤mBû\u0003\u001e0Éò«SÊ \u001fDúWDãß]¼´¹é¡µGú\u0011Ëâú%MW·&ò ¯.iYÞ$"
   },
   {
-   "nome": "juros_tesouro_transparente_csv",
+   "nome": "ipe_download_Comunicado a",
+   "empresa": "CITIGROUP INC.",
+   "assunto": "Documento Diversos",
+   "url": "https://www.rad.cvm.gov.br/ENETWeb/frmDownloadDocumento.aspx?Tela=ext&numSequencia=1102828&numVersao=1&numProtocolo=1578122&descTipo=IPE&CodigoInstituicao=1",
    "status": 200,
-   "tipo": "text/csv",
-   "modificado": "Fri, 16 Oct 2026 10:34:14 GMT",
-   "bytes": 0,
-   "inicio": ""
-  },
-  {
-   "nome": "juros_b3_ajustes_pregao",
-   "status": 200,
-   "tipo": "text/html; charset=UTF-8",
-   "modificado": "Fri, 16 Oct 2026 00:28:09 GMT",
-   "bytes": 50360,
-   "inicio": "<!DOCTYPE html><html class=\"no-js\" lang=\"pt-BR\"><head><meta charset=\"utf-8\"><script> (function (m, a, z, e) { var s, t, u, v; try { t = m.sessionStorage.getItem('maze-us'); } catch (err) {} if (!t) { t = new Date().getTime(); try { m.sessionStorage.setItem('maze-us', t); } catch (err) {} } u = document.currentScript || (function () { var w = document.getElementsByTagName('script'); return w[w.length - 1]; })(); v = u && u.nonce; s = a.createElement('script'); s.src = z + '?apiKey=' + e; s.async = true; if (v) s.setAttribute('nonce', v); a.getElementsByTagName('head')[0].appendChild(s); m.mazeUniversalSnippetApiKey = e; })(window"
-  },
-  {
-   "nome": "juros_b3_curva_di_pre",
-   "status": 404,
    "tipo": "text/html",
-   "modificado": null,
-   "bytes": 1660,
-   "inicio": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\"> <head> <meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\"/> <title>404 - File or directory not found.</title> <script type=\"text/javascript\" src=\"/ruxitagentjs_ICANVfqru_10345260810170330.js\" data-dtconfig=\"rid=RID_-1486950472|rpid=1807530482|domain=bmf.com.br|reportUrl=/rb_ea8d7b8f-040c-423b-b726-54310cab2c40|app=e44446475f923f8e|cuc=kju5m9kg|owasp=1|mel=100000|featureHash=ICANVfqru|dpvc=1|lastModification=1789825341339|tp=500,50,0|rdnt=1|uxrgce=1|srbbv=2|agentUri=/ruxitagentjs_ICANVfqru_10345260810170330.js\"></sc"
-  },
-  {
-   "nome": "juros_tradingview_di1",
-   "status": 200,
-   "bytes": 5899,
-   "inicio": "{\"totalCount\":48,\"data\":[{\"s\":\"BMFBOVESPA:DDI1!\",\"d\":[\"DDI1!\",\"ID x U.S. Dollar Spread Futures\",27.237,27.603654251581165,5.8919999999999995,null]},{\"s\":\"BMFBOVESPA:DI11!\",\"d\":[\"DI11!\",\"One-day Interbank Deposit Futures\",13.48,-0.04449058282663671,-0.006000000000000227,null]},{\"s\":\"BMFBOVESPA:DI1F2027\",\"d\":[\"DI1F2027\",\"One-day Interbank Deposit Futures (Jan 2027)\",13.48,-0.04449058282663671,-0.006000000000000227,20270104]},{\"s\":\"BMFBOVESPA:DI1F2028\",\"d\":[\"DI1F2028\",\"One-day Interbank Deposit Futures (Jan 2028)\",12.72,-0.4616949683073736,-0.058999999999999275,20280103]},{\"s\":\"BMFBOVESPA:DI1F2029\",\"d\":[\"DI1F2029\",\"One-day Interbank Deposit Futures (Jan 2029)\",12.49,-0.5889843998726507,-0.07399999999999984,20290102]},{\"s\":\"BMFBOVESPA:DI1F2030\",\"d\":[\"DI1F2030\",\"One-day Interbank Deposit Futures (Jan 2030)\",12.525,-0.6267851475721903,-0.07899999999999885,20300102]},{\"s\":\"BMFBOVESPA:DI1F2031\",\"d\":[\"DI1F2031\",\"One-day Interbank Deposit Futures (Jan 2031)\",12.55,-0.6963127077069092,-0.08799999999999919,20310102]},{\"s\":\"BMFBOVESPA:DI1F2032\",\"d\":[\"DI1F2032\",\"One-day Interbank Deposit Futures (Jan 2032)\",12.615,-0.6614694070399215,-0.08399999999999963,20320102]},{\"s\":\"BMFBOVESPA:DI1F2033\",\"d\":[\"DI1F2033\",\"One-day Interbank Deposit Futures (Jan 2033)\",12.66,-0.6669282071400477,-0.08499999999999908,20330103]},{\"s\":\"BMFBOVESPA:DI1F2034\",\"d\":[\"DI1F2034\",\"One-day Interbank Deposit Futures (Jan 2034)\",12.68,-0.5957980558168745,-0.07600000000000051,20340102]},{\"s\":\"BMFBOVESPA:DI1F2035\",\"d\":[\"D"
+   "disposicao": "attachment; filename=050105000101011.pdf",
+   "bytes": 8339,
+   "comeca_com": "%PDF-1.4",
+   "texto_inicio": "%PDF-1.4 %âãÏÓ 1 0 obj >stream ÿØÿà\u0000\u0010JFIF\u0000\u0001\u0001\u0001\u0000`\u0000`\u0000\u0000ÿÛ\u0000C\u0000\u0003\u0002\u0002\u0003\u0002\u0002\u0003\u0003\u0003\u0003\u0004\u0003\u0003\u0004\u0005\b\u0005\u0005\u0004\u0004\u0005 \u0007\u0007\u0006\b \u000e\u0012\u0010 \u000e\u0011\u000e \u0010\u0016\u0010\u0011\u0013\u0014\u0015\u0015\u0015 \u000f\u0017\u0018\u0016\u0014\u0018\u0012\u0014\u0015\u0014ÿÛ\u0000C\u0001\u0003\u0004\u0004\u0005\u0004\u0005 \u0005\u0005 \u0014 \u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014\u0014ÿÀ\u0000\u0011\b\u0000Æ\u0001\u0003\u0001\"\u0000\u0002\u0011\u0001\u0003\u0011\u0001ÿÄ\u0000\u001f\u0000\u0000\u0001\u0005\u0001\u0001\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0003\u0004\u0005\u0006\u0007\b ÿÄ\u0000µ\u0010\u0000\u0002\u0001\u0003\u0003\u0002\u0004\u0003\u0005\u0005\u0004\u0004\u0000\u0000\u0001}\u0001\u0002\u0003\u0000\u0004\u0011\u0005\u0012!1A\u0006\u0013Qa\u0007\"q\u00142¡\b#B±Á\u0015RÑð$3br \u0016\u0017\u0018\u0019\u001a%&'()*45"
   }
  ]
 }
