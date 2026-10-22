@@ -11,6 +11,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { lembraElpis } from './elpis-lembra.mjs';
 
 const SAIDA = path.join(path.dirname(fileURLToPath(import.meta.url)), 'saida');
 fs.mkdirSync(SAIDA, { recursive: true });
@@ -275,7 +276,7 @@ if (process.argv[1] && process.argv[1].endsWith('abertura.mjs')) {
       diag.faltando = TODOS.filter((i) => !got[i.id]).map((i) => i.id); gravaDiag();
       console.log('abertura:', Object.keys(got).length + '/' + TODOS.length, 'itens | minério:', diag.minerio, '| faltando:', diag.faltando.join(',') || '-');
       if (Object.keys(got).length < 5) { console.warn('aviso: poucos dados disponíveis; nada enviado.'); process.exit(0); }
-      await enviar(msgManha(got, minerio, ibov)); salvar('manha');
+      await enviar(msgManha(got, minerio, ibov) + lembraElpis(HOJE)); salvar('manha');
     }
   } catch (e) { console.error('ERRO:', e.message); process.exitCode = 1; }
 }
