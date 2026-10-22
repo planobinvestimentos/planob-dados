@@ -148,8 +148,12 @@ async function documentosEnet(janelaDias, mCnpj, diag) {
         const assunto = limpaHtml(c[11]) || limpaHtml(c[4]).replace(/\s*-\s*$/, '');
         const d1 = { cnpj: mCnpj[cvmCod(c[0])] || '', empresa: limpaHtml(c[1]), cat, tipo, assunto, data, prot: dl[3], ver: dl[2], seq: dl[1], fonte: 'ENETWeb',
           link: ENET + 'frmDownloadDocumento.aspx?Tela=ext&numSequencia=' + encodeURIComponent(dl[1]) + '&numVersao=' + encodeURIComponent(dl[2]) + '&numProtocolo=' + encodeURIComponent(dl[3]) + '&descTipo=' + encodeURIComponent(dl[4]) + '&CodigoInstituicao=1' };
-        if (!passaCategoria(d1) || d1.data < ini || d1.data > HOJE) continue;
-        if (!d1.cnpj) { semCnpj++; continue; }
+        const rk = d1.prot + '|' + d1.ver;
+        if (d1.data === HOJE || /bradesco|itau|ita[uú]|banco do brasil|petrobras|vale s/i.test(d1.empresa)) REC.set(rk, { h: ent[5] || '', emp: d1.empresa, cat: d1.cat, tipo: d1.tipo, ass: d1.assunto.slice(0, 90), d: d1.data, st: '' });
+        const rec = REC.get(rk), marcaRec = (x) => { if (rec) rec.st = x; };
+        if (!passaCategoria(d1) || d1.data < ini || d1.data > HOJE) { marcaRec('categoria_ou_assunto_nao_passou'); continue; }
+        if (!d1.cnpj) { semCnpj++; marcaRec('sem_cnpj'); continue; }
+        marcaRec('lido');
         d1.ids = [d1.prot + '|' + d1.ver, 'np:' + d1.prot + '|' + d1.ver];
         docs.push(d1);
       }
@@ -301,8 +305,9 @@ const salvar = () => { if (!TESTE) fs.writeFileSync(path.join(SAIDA, 'noticias.j
 if (est.dia !== HOJE) est.dia = HOJE;
 
 if (DOW === 0 || DOW === 6) { console.log('fim de semana: sem noticiário.'); process.exit(0); }
+const REC = new Map();   // diagnóstico: o que aconteceu com cada documento recente da CVM
 const diag = { gerado: new Date().toISOString(), modo: MODO, ia: !!IA_CHAVE };
-const gravaDiag = () => { try { fs.writeFileSync(path.join(SAIDA, 'noticias-diag.json'), JSON.stringify(diag, null, 1)); } catch (e) { /* ignora */ } };
+const gravaDiag = () => { try { diag.recentes = [...REC.values()].sort((a, b) => (b.d + b.h).localeCompare(a.d + a.h)).slice(0, 120); fs.writeFileSync(path.join(SAIDA, 'noticias-diag.json'), JSON.stringify(diag, null, 1)); } catch (e) { /* ignora */ } };
 try {
   if (IA_CHAVE) { try { diag.ia_teste = 'ok: ' + (await chamarIA(IA_MODELO, 'Responda apenas: ok', 10)).slice(0, 20); } catch (e) { diag.ia_teste = 'falhou: ' + causa(e); } }
   const primeira = !Array.isArray(est.enviados);
@@ -318,17 +323,18 @@ try {
   let foraFiltro = 0, rotina = 0;
   const linhasVistas = new Set();
   for (const d of todos) {
-    if (!FORCAR && jaFoi(d)) continue;
+    const rr = REC.get(chave(d)), mr = (x) => { if (rr) rr.st = x; };
+    if (!FORCAR && jaFoi(d)) { mr('ja_enviado_antes'); continue; }
     const dup = dupDe(d);
-    if (vistosConteudo.has(dup)) { marca(d); continue; }
+    if (vistosConteudo.has(dup)) { mr('duplicado'); marca(d); continue; }
     vistosConteudo.add(dup);
     const t = (tickers[d.cnpj] || []);
-    if (!t.length) continue;
-    if (!passaFiltro(d.cnpj, t)) { foraFiltro++; continue; }
+    if (!t.length) { mr('sem_ticker_para_o_cnpj'); continue; }
+    if (!passaFiltro(d.cnpj, t)) { foraFiltro++; mr('fora_do_filtro_de_empresas'); continue; }
     const dest = ehDestaque(t), prov = PROVENTO.test(d.assunto || '');
-    if (!dest && !prov && ROTINA.test(d.assunto || '') && !IMPORTANTE.test(d.assunto || '') && !(ehPrincipal(t) && /fato relevante/i.test(d.cat))) { rotina++; marca(d); continue; }   // rotina fora da lista: não publica
-    if (!dest && !prov && !/fato relevante/i.test(d.cat) && !(ehPrincipal(t) && PESSOAL.test(d.assunto || ''))) continue;  // fora da lista: Fatos Relevantes e anúncios de proventos
-    novos.push(Object.assign(d, { tickers: t, dest, prov }));
+    if (!dest && !prov && ROTINA.test(d.assunto || '') && !IMPORTANTE.test(d.assunto || '') && !(ehPrincipal(t) && /fato relevante/i.test(d.cat))) { rotina++; mr('rotina_escondida'); marca(d); continue; }   // rotina fora da lista: não publica
+    if (!dest && !prov && !/fato relevante/i.test(d.cat) && !(ehPrincipal(t) && PESSOAL.test(d.assunto || ''))) { mr('nao_e_fato_relevante_nem_destaque'); continue; }  // fora da lista: Fatos Relevantes e anúncios de proventos
+    mr('NOVO'); novos.push(Object.assign(d, { tickers: t, dest, prov }));
   }
   /* Fatos Relevantes primeiro; limita o tamanho da mensagem */
   novos.sort((a, b) => (b.dest - a.dest) || (/fato relevante/i.test(b.cat) - /fato relevante/i.test(a.cat)) || (b.data + b.prot).localeCompare(a.data + a.prot));
