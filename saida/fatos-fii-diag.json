@@ -1,26 +1,7 @@
 {
- "gerado": "2026-10-22T21:17:15.584Z",
+ "gerado": "2026-10-22T21:28:14.098Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 129,
- "lista": {
-  "linhas_vistas": 407,
-  "categorias": {
-   "Relatórios": 76,
-   "Assembleia": 75,
-   "Informes Periódicos": 61,
-   "Aviso aos Cotistas - Estruturado": 37,
-   "Comunicado ao Mercado": 37,
-   "Oferta Pública de Distribuição de Cotas": 32,
-   "Regulamento": 29,
-   "Atos de Deliberação do Administrador": 20
-  },
-  "fatos_relevantes": 17,
-  "de_fiis_liquidos": 2
- },
- "analisados": 0,
- "sem_texto": 0,
- "fora_do_escopo": 0,
- "abaixo_do_minimo": 0,
- "reprovadas": [],
- "materias_novas": 0
+ "lista": {},
+ "erro": "The operation was aborted due to timeout"
 }
