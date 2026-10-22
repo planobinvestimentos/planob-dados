@@ -149,7 +149,7 @@ async function documentosEnet(janelaDias, mCnpj, diag) {
         const d1 = { cnpj: mCnpj[cvmCod(c[0])] || '', empresa: limpaHtml(c[1]), cat, tipo, assunto, data, prot: dl[3], ver: dl[2], seq: dl[1], fonte: 'ENETWeb',
           link: ENET + 'frmDownloadDocumento.aspx?Tela=ext&numSequencia=' + encodeURIComponent(dl[1]) + '&numVersao=' + encodeURIComponent(dl[2]) + '&numProtocolo=' + encodeURIComponent(dl[3]) + '&descTipo=' + encodeURIComponent(dl[4]) + '&CodigoInstituicao=1' };
         const rk = d1.prot + '|' + d1.ver;
-        if (d1.data === HOJE || /bradesco|itau|ita[uú]|banco do brasil|petrobras|vale s/i.test(d1.empresa)) REC.set(rk, { h: ent[5] || '', emp: d1.empresa, cat: d1.cat, tipo: d1.tipo, ass: d1.assunto.slice(0, 90), d: d1.data, st: '' });
+        if (d1.data === HOJE || /bradesco|itau|ita[uú]|banco do brasil|petrobras|vale s/i.test(d1.empresa)) REC.set(rk, { h: ent[5] || '', emp: d1.empresa, cat: d1.cat, tipo: d1.tipo, ass: d1.assunto.slice(0, 90), d: d1.data, st: '', c0: String(c[0]).slice(0, 40), c5: limpaHtml(c[5]).slice(0, 40), c8: limpaHtml(c[8]).slice(0, 40), c9: limpaHtml(c[9]).slice(0, 40) });
         const rec = REC.get(rk), marcaRec = (x) => { if (rec) rec.st = x; };
         if (!passaCategoria(d1) || d1.data < ini || d1.data > HOJE) { marcaRec('categoria_ou_assunto_nao_passou'); continue; }
         if (!d1.cnpj) { semCnpj++; marcaRec('sem_cnpj'); continue; }
