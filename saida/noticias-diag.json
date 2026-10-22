@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-22T12:33:37.564Z",
+ "gerado": "2026-10-22T15:01:23.664Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -74,16 +74,16 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 1169,
-  "na_janela_e_categorias": 11,
-  "sem_cnpj": 146,
-  "entrega_mais_recente": "20261022 22/10/2026 09:29",
+  "linhas": 1216,
+  "na_janela_e_categorias": 13,
+  "sem_cnpj": 162,
+  "entrega_mais_recente": "20261022 22/10/2026 11:35",
   "tentativa": 1
  },
  "fontes": {
-  "enet": 11,
+  "enet": 13,
   "ipe": 0,
-  "apos_juntar": 11
+  "apos_juntar": 13
  },
  "itens": {
   "novos": 0,
