@@ -1,0 +1,12 @@
+ELPIS - SERIE 2 (castanho cacheado, blazer azul royal) - recortes transparentes - 22/10/2026
+
+png/    -> 17 poses em PNG transparente (alta resolucao, margem aparada)
+webp/   -> mesmas poses leves (max 900 px) para o site
+avatar/ -> avatar redondo (png transparente) e quadrado (jpg) 512x512, fundo azul-marinho #272F63
+
+ATENCAO
+- As duas imagens com "ATENCAO" no nome (caneca) tem o texto da caneca levemente deformado
+  ("Investimentas"). Nao usar em material publico sem retocar.
+- As poses "polegar com seta verde subindo" NAO foram incluidas: grafico so subindo passa ideia de
+  promessa de ganho. Use "apontando-grafico" (grafico com altos e baixos).
+- Esta serie usa azul royal; a ficha v3 pedia azul-marinho #272F63. Nao misturar as duas series.
