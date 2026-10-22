@@ -1,67 +1,54 @@
 {
- "gerado": "2026-10-21T21:47:38.883Z",
- "hoje": "2026-10-21",
- "hora": "18:47",
+ "gerado": "2026-10-22T14:30:30.933Z",
+ "hoje": "2026-10-22",
+ "hora": "11:30",
  "modo": "lote",
+ "pregao": {
+  "comparaveis": 77,
+  "iguais": 3
+ },
  "setores": {
-  "lista_total": 12,
-  "lista_nomes": [
-   "IMAT",
-   "MLCX",
-   "IBRA",
-   "ICON",
-   "IFIX",
-   "IBOV",
-   "IMOB",
-   "SMLL",
-   "INDX",
-   "IEEX",
-   "IBXL",
-   "IFNC"
-  ],
   "achados": {
    "ICON": {
-    "v": -1.3050647045429025,
+    "v": -0.47644727113018276,
     "s": "BMFBOVESPA:ICON",
     "origem": "simbolo"
    },
    "IEEX": {
-    "v": -1.0574008929465937,
+    "v": -0.5518052901094914,
     "s": "BMFBOVESPA:IEEX",
     "origem": "simbolo"
    },
    "INDX": {
-    "v": -1.4949505326982806,
+    "v": -1.5865757932083997,
     "s": "BMFBOVESPA:INDX",
     "origem": "simbolo"
    },
    "IMOB": {
-    "v": -0.8104847753738789,
+    "v": -0.8831114859496685,
     "s": "BMFBOVESPA:IMOB",
     "origem": "simbolo"
    },
    "IFNC": {
-    "v": -0.44886639182672866,
+    "v": -1.0008796919579943,
     "s": "BMFBOVESPA:IFNC",
     "origem": "simbolo"
    },
    "IMAT": {
-    "v": -0.6195176567283053,
+    "v": -1.974194761507908,
     "s": "BMFBOVESPA:IMAT",
     "origem": "simbolo"
    }
   },
-  "faltando": [
-   "UTIL"
-  ]
+  "faltando": []
  },
  "commodities": {
   "cnbc": "ok: 8 itens",
   "yahoo": "0 ok",
   "stooq": "0 ok",
   "minerio": "sina",
-  "CCM": "indisponível: CCMX26: sem cotação | CCMF27: sem cotação | CCMH27: sem cotação | CCMK27: sem cotação",
-  "BGI": "indisponível: BGIV26: sem cotação | BGIX26: sem cotação | BGIZ26: sem cotação | BGIF27: sem cotação",
+  "CCM": "CCMX26",
+  "BGI": "BGIV26",
   "itens_ok": [
    "wti:cnbc",
    "brent:cnbc",
@@ -70,13 +57,12 @@
    "prata:cnbc",
    "minerio:sina",
    "cobre:cnbc",
+   "milho:b3 CCMX26",
+   "boi:b3 BGIV26",
    "soja:cnbc",
    "trigo:cnbc"
   ],
-  "itens_faltando": [
-   "milho",
-   "boi"
-  ]
+  "itens_faltando": []
  },
  "dolar": {
   "cnbc": "ok: 24 itens",
@@ -93,5 +79,5 @@
   "dolar"
  ],
  "falhas": [],
- "resultado": "painel das 18h47 enviado (setores, cripto, commodities, dolar)"
+ "resultado": "painel das 11h30 enviado (setores, cripto, commodities, dolar)"
 }

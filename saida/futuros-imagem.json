@@ -1,0 +1,15 @@
+{
+ "data": "2026-10-22",
+ "lotes": {
+  "1130": {
+   "enviado": true,
+   "itens": [
+    "setores",
+    "cripto",
+    "commodities",
+    "dolar"
+   ],
+   "falhas": []
+  }
+ }
+}
