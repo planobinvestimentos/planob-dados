@@ -1,0 +1,51 @@
+# APRESENTAÇÃO DA ELPIS no canal (uma foto + legenda, enviada uma única vez). Só roda à mão (Run workflow), não tem horário.
+# 1) Rode primeiro com "teste" marcado: manda só para o seu Telegram privado, sem gravar nada.
+# 2) Depois rode sem "teste" (e, se quiser, com "fixar") para enviar ao canal. Se já foi enviada, não repete (use "forcar" para repetir).
+name: Apresentação da Elpis (manual)
+on:
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: 'Teste: manda só para o meu Telegram privado'
+        type: boolean
+        default: false
+      fixar:
+        description: 'Fixar a mensagem no canal depois de enviar'
+        type: boolean
+        default: false
+      forcar:
+        description: 'Enviar de novo mesmo que já tenha sido enviada'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: planob-elpis-apresentacao
+  cancel-in-progress: false
+jobs:
+  elpis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Apresentação da Elpis
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_ALERTA_CHAT_ID: ${{ secrets.TELEGRAM_ALERTA_CHAT_ID }}
+          TESTE: ${{ inputs.teste && '1' || '' }}
+          FIXAR: ${{ inputs.fixar && '1' || '' }}
+          FORCAR: ${{ inputs.forcar && '1' || '' }}
+        run: node elpis-apresentacao.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida/elpis-apresentacao.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Elpis: registra a apresentação enviada"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1
