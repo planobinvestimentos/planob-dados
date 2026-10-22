@@ -28,6 +28,10 @@ on:
         description: 'Enviar mesmo que hoje já tenha sido enviado'
         type: boolean
         default: false
+      so_para_mim:
+        description: 'Manda SÓ para o meu Telegram privado (não vai ao canal, não grava nada)'
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -45,6 +49,8 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_ALERTA_CHAT_ID: ${{ secrets.TELEGRAM_ALERTA_CHAT_ID }}
+          PRIVADO: ${{ inputs.so_para_mim && '1' || '' }}
           MODO: ${{ github.event_name == 'workflow_dispatch' && inputs.parte || ((contains(github.event.schedule, ' 12 ') || contains(github.event.schedule, ' 13 ')) && 'futuros' || 'manha') }}
           TESTE: ${{ inputs.teste && '1' || '' }}
           FORCAR: ${{ inputs.forcar && '1' || '' }}
