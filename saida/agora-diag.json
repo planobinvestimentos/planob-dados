@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-22T12:00:18.342Z",
+ "gerado": "2026-10-22T12:15:16.869Z",
  "hora": 9,
  "fnet_erro": "The operation was aborted due to timeout",
  "fnet": {
@@ -9,13 +9,6 @@
  },
  "avisos_novos": [],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 5,
-  "acoes": "não consultadas"
- },
- "novos": [
-  "COIN11 Rendimento (corrigido)",
-  "ETHY11 Rendimento (corrigido)"
- ],
+ "novos": [],
  "pdfs": 0
 }
