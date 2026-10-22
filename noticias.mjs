@@ -64,12 +64,15 @@ const ehDestaque = (tickers) => tickers.some((t) => DESTAQUES[t.slice(0, 4)]);
 let EXCECOES = new Set(), ELEGIVEIS = null;
 try { EXCECOES = new Set((JSON.parse(fs.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), 'destaques.json'), 'utf8')).excecoes || []).map((x) => String(x).toUpperCase().slice(0, 4))); } catch (e) { /* ignora */ }
 try { const j = JSON.parse(fs.readFileSync(path.join(SAIDA, 'elegiveis.json'), 'utf8')); if (j && j.empresas && Object.keys(j.empresas).length >= 10) ELEGIVEIS = j; } catch (e) { /* ignora */ }
-const passaFiltro = (cnpj, tickers) => tickers.some((t) => EXCECOES.has(t.slice(0, 4))) || (ELEGIVEIS ? !!(ELEGIVEIS.empresas[cnpj] || (ELEGIVEIS.excecao_setor && ELEGIVEIS.excecao_setor[cnpj])) : ehDestaque(tickers));
+const passaFiltro = (cnpj, tickers) => tickers.some((t) => EXCECOES.has(t.slice(0, 4))) || ehPrincipal(tickers) || (ELEGIVEIS ? !!(ELEGIVEIS.empresas[cnpj] || (ELEGIVEIS.excecao_setor && ELEGIVEIS.excecao_setor[cnpj])) : ehDestaque(tickers));
 const ehPrincipal = (tickers) => tickers.some((t) => PRINCIPAIS.has(t.slice(0, 4)));
 const setorDe = (tickers) => { for (const [s, lista] of Object.entries(SETORES)) if (tickers.some((t) => lista.includes(t.slice(0, 4)))) return s; return 'geral'; };
+/* cortes de pessoal e fechamento de agências/unidades (pedido do Andrade, 22/10/2026): sempre relevantes */
+const PESSOAL = /redu[cç][aã]o d[eo] (quadro|pessoal|efetivo|funcion[aá]rios|colaboradores)|demiss|desligamento|programa d[eo] (demiss|desligamento|incentivo [aà] aposentadoria)|\bPDV\b|\bPDI\b|fechamento d[eoa]s? (ag[eê]ncias?|unidades|lojas|f[aá]bricas?)|encerramento d[eoa]s? (ag[eê]ncias?|unidades|atividades)|racionaliza[cç][aã]o/i;
 const PROVENTO = /dividend|jcp|juros sobre|provento|bonifica|rendimento|distribui[cç][aã]o de (lucros|resultado)/i;   // anúncios de proventos (qualquer empresa)
 const ROTINA = /posse|ren[uú]ncia|elei[cç][aã]o|eleito|nomea[cç][aã]o|substitui[cç][aã]o d[eo] (diretor|conselheiro|membro)|(membro|diretor|conselheiro|presidente)s? d[oea]|convoca[cç][aã]o|assembleia|\bAGO\b|\bAGE\b|calend[aá]rio|regimento|estatuto|c[oó]digo de conduta|pol[ií]tica d[eo]|comit[eê]|conselho fiscal|plano de op[cç][aã]o|participa[cç][aã]o nos resultados|cancelamento de a[cç][oõ]es|registro de companhia|cadastro/i;   // avisos de rotina (empresas fora da lista de acompanhamento)
-const IMPORTANTE = /resultado|release|balan[cç]o|fus[aã]o|incorpora|aquisi|venda de|oferta|recompra|guidance|reestrutura|recupera[cç][aã]o|insolv|dividend|jcp|juros sobre/i;
+const IMPORTANTE_BASE = /resultado|release|balan[cç]o|fus[aã]o|incorpora|aquisi|venda de|oferta|recompra|guidance|reestrutura|recupera[cç][aã]o|insolv|dividend|jcp|juros sobre/i;
+const IMPORTANTE = { test: (t) => IMPORTANTE_BASE.test(t) || PESSOAL.test(t) };
 
 /* ---------- tickers de cada empresa (CNPJ -> códigos), vindos do FCA da CVM; renovado a cada 14 dias ---------- */
 async function mapaTickers(diag) {
@@ -100,7 +103,7 @@ const CATEGORIAS = /fato relevante|aviso aos acionistas|comunicado ao mercado/i;
 const COMUNICADO_RELEVANTE = /resultado|release|dividend|jcp|juros sobre|provento|aquisi|venda de|alienac|fus[aã]o|incorpora|oferta|recompra|aumento de capital|desdobramento|grupamento|bonifica|guidance|rating|acordo|contrato|investimento|preju[ií]zo|lucro|produ[cç][aã]o|operacional|reestrutura|recupera[cç][aã]o|insolv|falencia/i;
 const cvmCod = (x) => { const m = String(x || '').match(/\d+/); return m ? String(Number(m[0])) : ''; };   // "05010-5" (com dígito verificador) -> "5010"
 const limpaHtml = (c) => String(c || '').replace(/<[^>]*>/g, ' ').replace(/&nbsp;|&#160;/g, ' ').replace(/\s+/g, ' ').trim();
-const passaCategoria = (d) => CATEGORIAS.test(d.cat + ' ' + d.tipo) && (!/comunicado ao mercado/i.test(d.cat + ' ' + d.tipo) || /fato relevante|aviso aos acionistas/i.test(d.cat) || COMUNICADO_RELEVANTE.test(d.assunto));
+const passaCategoria = (d) => CATEGORIAS.test(d.cat + ' ' + d.tipo) && (!/comunicado ao mercado/i.test(d.cat + ' ' + d.tipo) || /fato relevante|aviso aos acionistas/i.test(d.cat) || COMUNICADO_RELEVANTE.test(d.assunto) || PESSOAL.test(d.assunto || ''));
 
 /* código CVM -> CNPJ: vem das linhas do IPE (têm os dois) e do cadastro de companhias abertas; fica guardado em saida/cvm-cnpj.json */
 async function mapaCvmCnpj(linhasIpe, diag) {
@@ -323,8 +326,8 @@ try {
     if (!t.length) continue;
     if (!passaFiltro(d.cnpj, t)) { foraFiltro++; continue; }
     const dest = ehDestaque(t), prov = PROVENTO.test(d.assunto || '');
-    if (!dest && !prov && ROTINA.test(d.assunto || '') && !IMPORTANTE.test(d.assunto || '')) { rotina++; marca(d); continue; }   // rotina fora da lista: não publica
-    if (!dest && !prov && !/fato relevante/i.test(d.cat)) continue;  // fora da lista: Fatos Relevantes e anúncios de proventos
+    if (!dest && !prov && ROTINA.test(d.assunto || '') && !IMPORTANTE.test(d.assunto || '') && !(ehPrincipal(t) && /fato relevante/i.test(d.cat))) { rotina++; marca(d); continue; }   // rotina fora da lista: não publica
+    if (!dest && !prov && !/fato relevante/i.test(d.cat) && !(ehPrincipal(t) && PESSOAL.test(d.assunto || ''))) continue;  // fora da lista: Fatos Relevantes e anúncios de proventos
     novos.push(Object.assign(d, { tickers: t, dest, prov }));
   }
   /* Fatos Relevantes primeiro; limita o tamanho da mensagem */
