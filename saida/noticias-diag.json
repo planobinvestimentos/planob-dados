@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-21T18:21:35.274Z",
+ "gerado": "2026-10-22T12:00:19.769Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -29,13 +29,13 @@
  "ia_teste": "ok: ok",
  "ipe": {
   "linhas": 37434,
-  "janela_desde": "2026-10-16",
+  "janela_desde": "2026-10-17",
   "data_mais_recente": "2026-10-17",
   "categorias_ultimos_10_dias": {
    "Comunicado ao Mercado": 95,
    "Fato Relevante": 20,
    "Aviso aos Acionistas": 11,
-   "Valores Mobiliários negociados e detidos (art. 11 da Instr. CVM nº 358)": 102,
+   "Valores Mobiliários negociados e detidos (art. 11 da Instr. CVM nº 358)": 101,
    "Documentos de Oferta de Distribuição Pública": 12,
    "Reunião da Administração": 51,
    "Relato Integrado": 2,
@@ -52,7 +52,7 @@
    "Relatório de Sustentabilidade": 2,
    "Informações de Companhias em Recuperação Judicial ou Extrajudicial": 2
   },
-  "na_janela_e_categorias": 11,
+  "na_janela_e_categorias": 0,
   "colunas": [
    "CNPJ_COMPANHIA",
    "NOME_COMPANHIA",
@@ -74,23 +74,23 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 1363,
-  "na_janela_e_categorias": 14,
-  "sem_cnpj": 177,
-  "entrega_mais_recente": "20261021 21/10/2026 15:21",
+  "linhas": 1158,
+  "na_janela_e_categorias": 11,
+  "sem_cnpj": 143,
+  "entrega_mais_recente": "20261022 22/10/2026 08:35",
   "tentativa": 1
  },
  "fontes": {
-  "enet": 14,
-  "ipe": 11,
-  "apos_juntar": 25
+  "enet": 11,
+  "ipe": 0,
+  "apos_juntar": 11
  },
  "itens": {
   "novos": 0,
   "enviados_agora": 0,
   "com_ia": 0,
   "ia_falhas": 0,
-  "fora_do_filtro": 2,
+  "fora_do_filtro": 0,
   "rotina_escondida": 0
  },
  "filtro": "lista elegiveis.json (219 empresas, anos 2021-2022-2023-2024-2025)"
