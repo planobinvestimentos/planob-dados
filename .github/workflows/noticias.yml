@@ -1,5 +1,5 @@
 # Noticiário Corporativo no Telegram (horário de Brasília, segunda a sexta):
-#   9h, 12h e 15h  resumo dos comunicados novos das empresas (fatos relevantes, avisos aos acionistas, comunicados) e matérias de FIIs (FNET, em tempo real)
+#   9h, 12h, 15h, 18h, 19h, 20h e 21h  resumo dos comunicados novos das empresas (fatos relevantes, avisos aos acionistas, comunicados) e matérias de FIIs (FNET, em tempo real)
 #   Os comunicados de EMPRESAS agora vêm do sistema da CVM em TEMPO REAL (ENETWeb); o arquivo semanal da CVM (domingo) fica de reserva. Nada é enviado duas vezes.
 # Cada edição envia só o que ainda não foi enviado; sem novidade, não manda nada.
 # Fontes: CVM ENETWeb (tempo real) e, de reserva, dados abertos da CVM (IPE, semanal).
@@ -12,6 +12,10 @@ on:
     - cron: '0 12 * * 1-5'     # 9h
     - cron: '0 15 * * 1-5'     # 12h
     - cron: '0 18 * * 1-5'     # 15h
+    - cron: '0 21 * * 1-5'     # 18h   (balanços e resultados saem depois do fechamento do pregão)
+    - cron: '0 22 * * 1-5'     # 19h
+    - cron: '0 23 * * 1-5'     # 20h
+    - cron: '0 0 * * 2-6'      # 21h   (UTC 00h do dia seguinte = 21h de segunda a sexta em Brasília)
   workflow_dispatch:
     inputs:
       teste:
