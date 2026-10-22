@@ -1,9 +1,9 @@
 {
- "gerado": "2026-10-21T12:43:58.243Z",
+ "gerado": "2026-10-22T12:10:17.280Z",
  "modo": "futuros",
+ "b3_win": "erro: sem cotação para WINZ26",
+ "b3_wdo": "erro: sem cotação para WDOX26",
  "brasil": [
-  "win",
-  "wdo",
   "ibov"
  ]
 }
