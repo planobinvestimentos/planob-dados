@@ -64,15 +64,17 @@ const ehDestaque = (tickers) => tickers.some((t) => DESTAQUES[t.slice(0, 4)]);
 let EXCECOES = new Set(), ELEGIVEIS = null;
 try { EXCECOES = new Set((JSON.parse(fs.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), 'destaques.json'), 'utf8')).excecoes || []).map((x) => String(x).toUpperCase().slice(0, 4))); } catch (e) { /* ignora */ }
 try { const j = JSON.parse(fs.readFileSync(path.join(SAIDA, 'elegiveis.json'), 'utf8')); if (j && j.empresas && Object.keys(j.empresas).length >= 10) ELEGIVEIS = j; } catch (e) { /* ignora */ }
-const passaFiltro = (cnpj, tickers) => tickers.some((t) => EXCECOES.has(t.slice(0, 4))) || ehPrincipal(tickers) || (ELEGIVEIS ? !!(ELEGIVEIS.empresas[cnpj] || (ELEGIVEIS.excecao_setor && ELEGIVEIS.excecao_setor[cnpj])) : ehDestaque(tickers));
+const FILTRO_LUCRO = process.env.FILTRO_LUCRO === '1';   // desligado em 22/10/2026 a pedido do Andrade: vale qualquer empresa (para voltar a só lucro+dividendos, FILTRO_LUCRO=1)
+const passaFiltro = (cnpj, tickers) => !FILTRO_LUCRO || tickers.some((t) => EXCECOES.has(t.slice(0, 4))) || ehPrincipal(tickers) || (ELEGIVEIS ? !!(ELEGIVEIS.empresas[cnpj] || (ELEGIVEIS.excecao_setor && ELEGIVEIS.excecao_setor[cnpj])) : ehDestaque(tickers));
 const ehPrincipal = (tickers) => tickers.some((t) => PRINCIPAIS.has(t.slice(0, 4)));
 const setorDe = (tickers) => { for (const [s, lista] of Object.entries(SETORES)) if (tickers.some((t) => lista.includes(t.slice(0, 4)))) return s; return 'geral'; };
 /* cortes de pessoal e fechamento de agências/unidades (pedido do Andrade, 22/10/2026): sempre relevantes */
 const PESSOAL = /redu[cç][aã]o d[eo] (quadro|pessoal|efetivo|funcion[aá]rios|colaboradores)|demiss|desligamento|programa d[eo] (demiss|desligamento|incentivo [aà] aposentadoria)|\bPDV\b|\bPDI\b|fechamento d[eoa]s? (ag[eê]ncias?|unidades|lojas|f[aá]bricas?)|encerramento d[eoa]s? (ag[eê]ncias?|unidades|atividades)|racionaliza[cç][aã]o/i;
+const RATING = /rating|classifica[cç][aã]o de risco|\bS&P\b|\bFitch\b|\bMoody/i;   // mudanças de nota de crédito (pedido do Andrade, 22/10/2026)
 const PROVENTO = /dividend|jcp|juros sobre|provento|bonifica|rendimento|distribui[cç][aã]o de (lucros|resultado)/i;   // anúncios de proventos (qualquer empresa)
 const ROTINA = /posse|ren[uú]ncia|elei[cç][aã]o|eleito|nomea[cç][aã]o|substitui[cç][aã]o d[eo] (diretor|conselheiro|membro)|(membro|diretor|conselheiro|presidente)s? d[oea]|convoca[cç][aã]o|assembleia|\bAGO\b|\bAGE\b|calend[aá]rio|regimento|estatuto|c[oó]digo de conduta|pol[ií]tica d[eo]|comit[eê]|conselho fiscal|plano de op[cç][aã]o|participa[cç][aã]o nos resultados|cancelamento de a[cç][oõ]es|registro de companhia|cadastro/i;   // avisos de rotina (empresas fora da lista de acompanhamento)
 const IMPORTANTE_BASE = /resultado|release|balan[cç]o|fus[aã]o|incorpora|aquisi|venda de|oferta|recompra|guidance|reestrutura|recupera[cç][aã]o|insolv|dividend|jcp|juros sobre/i;
-const IMPORTANTE = { test: (t) => IMPORTANTE_BASE.test(t) || PESSOAL.test(t) };
+const IMPORTANTE = { test: (t) => IMPORTANTE_BASE.test(t) || PESSOAL.test(t) || RATING.test(t) };
 
 /* ---------- tickers de cada empresa (CNPJ -> códigos), vindos do FCA da CVM; renovado a cada 14 dias ---------- */
 async function mapaTickers(diag) {
@@ -334,7 +336,7 @@ try {
     if (!passaFiltro(d.cnpj, t)) { foraFiltro++; mr('fora_do_filtro_de_empresas'); continue; }
     const dest = ehDestaque(t), prov = PROVENTO.test(d.assunto || '');
     if (!dest && !prov && ROTINA.test(d.assunto || '') && !IMPORTANTE.test(d.assunto || '') && !(ehPrincipal(t) && /fato relevante/i.test(d.cat))) { rotina++; mr('rotina_escondida'); marca(d); continue; }   // rotina fora da lista: não publica
-    if (!dest && !prov && !/fato relevante/i.test(d.cat) && !(ehPrincipal(t) && PESSOAL.test(d.assunto || ''))) { mr('nao_e_fato_relevante_nem_destaque'); continue; }  // fora da lista: Fatos Relevantes e anúncios de proventos
+    if (!dest && !prov && !/fato relevante/i.test(d.cat) && !IMPORTANTE.test(d.assunto || '')) { mr('nao_e_fato_relevante_nem_destaque'); continue; }  // fora da lista: Fatos Relevantes e anúncios de proventos
     mr('NOVO'); novos.push(Object.assign(d, { tickers: t, dest, prov }));
   }
   /* Fatos Relevantes primeiro; limita o tamanho da mensagem */
@@ -342,7 +344,7 @@ try {
   const escolhidos = [...novos.filter((d) => d.dest && !d.prov).slice(0, MAXIMO), ...novos.filter((d) => d.prov).slice(0, MAX_PROV), ...novos.filter((d) => !d.dest && !d.prov).slice(0, MAX_OUTROS)];
   diag.itens = { novos: novos.length, enviados_agora: escolhidos.length, com_ia: 0, ia_falhas: 0, fora_do_filtro: foraFiltro, rotina_escondida: rotina };
   est.corrigido_cnpj = 1;
-  diag.filtro = ELEGIVEIS ? 'lista elegiveis.json (' + Object.keys(ELEGIVEIS.empresas).length + ' empresas, anos ' + ELEGIVEIS.anos.join('-') + ')' : 'lista ainda não gerada: só a lista de acompanhamento';
+  diag.filtro = !FILTRO_LUCRO ? 'sem filtro de lucro (todas as empresas)' : ELEGIVEIS ? 'lista elegiveis.json (' + Object.keys(ELEGIVEIS.empresas).length + ' empresas, anos ' + ELEGIVEIS.anos.join('-') + ')' : 'lista ainda não gerada: só a lista de acompanhamento';
   if (!escolhidos.length) { console.log('sem documentos novos para o noticiário.'); gravaDiag(); est.enviados = [...enviados]; salvar(); process.exit(0); }
 
   const linhas = [], provs = [], outros = [];
@@ -354,7 +356,7 @@ try {
     const tags = d.tickers.slice(0, 2).map((t) => '#' + t).join(' ');
     let texto = '', mat = null;
     /* matéria para o site: só empresas principais, com anúncio de provento, fato relevante ou assunto de peso */
-    if (IA_CHAVE && geradas < MAX_MATERIAS && ehPrincipal(d.tickers) && (d.prov || /fato relevante/i.test(d.cat) || IMPORTANTE.test(d.assunto || '')) && !matExistentes.has(chave(d))) {
+    if (IA_CHAVE && geradas < MAX_MATERIAS && ((ehPrincipal(d.tickers) && d.prov) || /fato relevante/i.test(d.cat) || IMPORTANTE.test(d.assunto || '')) && !matExistentes.has(chave(d))) {
       try { mat = await escreverMateria(d, diag); } catch (e) { diag.materia_erro = e.message; mat = null; }
       if (mat) { geradas++; novasMaterias.push(mat); texto = mat.resumo + '\n🔗 Matéria completa: ' + SITE_URL + '/noticias-da-bolsa/?m=' + mat.slug; }
     }
