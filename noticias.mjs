@@ -146,7 +146,7 @@ async function documentosEnet(janelaDias, mCnpj, diag) {
         const data = ent[1] + '-' + ent[2] + '-' + ent[3];
         if (ent[0] > maisRecente) maisRecente = ent[0];
         const assunto = limpaHtml(c[11]) || limpaHtml(c[4]).replace(/\s*-\s*$/, '');
-        const d1 = { cnpj: mCnpj[cvmCod(c[0])] || '', empresa: limpaHtml(c[1]), cat, tipo, assunto, data, prot: dl[3], ver: dl[2], seq: dl[1], fonte: 'ENETWeb',
+        const d1 = { cnpj: mCnpj[String(Number(String(c[0]).replace(/\D/g, '')))] || mCnpj[cvmCod(c[0])] || '', empresa: limpaHtml(c[1]), cat, tipo, assunto, data, prot: dl[3], ver: dl[2], seq: dl[1], fonte: 'ENETWeb',
           link: ENET + 'frmDownloadDocumento.aspx?Tela=ext&numSequencia=' + encodeURIComponent(dl[1]) + '&numVersao=' + encodeURIComponent(dl[2]) + '&numProtocolo=' + encodeURIComponent(dl[3]) + '&descTipo=' + encodeURIComponent(dl[4]) + '&CodigoInstituicao=1' };
         const rk = d1.prot + '|' + d1.ver;
         if (d1.data === HOJE || /bradesco|itau|ita[uú]|banco do brasil|petrobras|vale s/i.test(d1.empresa)) REC.set(rk, { h: ent[5] || '', emp: d1.empresa, cat: d1.cat, tipo: d1.tipo, ass: d1.assunto.slice(0, 90), d: d1.data, st: '', c0: String(c[0]).slice(0, 40), c5: limpaHtml(c[5]).slice(0, 40), c8: limpaHtml(c[8]).slice(0, 40), c9: limpaHtml(c[9]).slice(0, 40) });
@@ -325,6 +325,7 @@ try {
   for (const d of todos) {
     const rr = REC.get(chave(d)), mr = (x) => { if (rr) rr.st = x; };
     if (!FORCAR && jaFoi(d)) { mr('ja_enviado_antes'); continue; }
+    if (!est.corrigido_cnpj && d.data < HOJE) { marca(d); continue; }   // uma vez só, após a correção do CNPJ: não despeja de uma vez o que ficou escondido nos dias anteriores
     const dup = dupDe(d);
     if (vistosConteudo.has(dup)) { mr('duplicado'); marca(d); continue; }
     vistosConteudo.add(dup);
@@ -340,6 +341,7 @@ try {
   novos.sort((a, b) => (b.dest - a.dest) || (/fato relevante/i.test(b.cat) - /fato relevante/i.test(a.cat)) || (b.data + b.prot).localeCompare(a.data + a.prot));
   const escolhidos = [...novos.filter((d) => d.dest && !d.prov).slice(0, MAXIMO), ...novos.filter((d) => d.prov).slice(0, MAX_PROV), ...novos.filter((d) => !d.dest && !d.prov).slice(0, MAX_OUTROS)];
   diag.itens = { novos: novos.length, enviados_agora: escolhidos.length, com_ia: 0, ia_falhas: 0, fora_do_filtro: foraFiltro, rotina_escondida: rotina };
+  est.corrigido_cnpj = 1;
   diag.filtro = ELEGIVEIS ? 'lista elegiveis.json (' + Object.keys(ELEGIVEIS.empresas).length + ' empresas, anos ' + ELEGIVEIS.anos.join('-') + ')' : 'lista ainda não gerada: só a lista de acompanhamento';
   if (!escolhidos.length) { console.log('sem documentos novos para o noticiário.'); gravaDiag(); est.enviados = [...enviados]; salvar(); process.exit(0); }
 
