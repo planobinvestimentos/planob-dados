@@ -1,7 +1,7 @@
 {
- "gerado": "2026-10-22T15:59:46.612Z",
- "hora": 12,
- "fnet_erro": "The operation was aborted due to timeout",
+ "gerado": "2026-10-22T16:15:15.696Z",
+ "hora": 13,
+ "fnet_erro": "HTTP 520",
  "fnet": {
   "linhas": 0,
   "avisos": 0,
@@ -9,10 +9,6 @@
  },
  "avisos_novos": [],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 5,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
