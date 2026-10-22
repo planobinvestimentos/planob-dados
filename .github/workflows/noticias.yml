@@ -52,7 +52,7 @@ jobs:
         continue-on-error: true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          VALOR_MIN: '10000000'                                 # só compras/vendas acima de R$ 10 milhões
+          VALOR_MIN: '3000000'                                  # só compras/vendas acima de R$ 3 milhões
         run: node fatos-fii.mjs
       - name: Salvar
         if: always()
