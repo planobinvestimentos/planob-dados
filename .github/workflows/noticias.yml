@@ -41,7 +41,10 @@ jobs:
         with: { node-version: 20 }
       - name: Instalar leitor de PDF
         continue-on-error: true
-        run: sudo apt-get install -y poppler-utils
+        run: |
+          sudo apt-get update || true
+          sudo apt-get install -y poppler-utils || (sleep 15 && sudo apt-get update && sudo apt-get install -y poppler-utils)
+          pdftotext -v
       - name: Montar e enviar
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
