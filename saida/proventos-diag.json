@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-22T00:00:23.608Z",
+ "gerado": "2026-10-22T00:10:41.785Z",
  "de": "2026-10-19",
  "ate": "2026-10-21",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 131,
   "amostra": {
-   "fundo": "FII AFHI CRI",
+   "fundo": "FII ADSH    ",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -19,14 +19,14 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAFHICTF005",
-    "paymentDate": "22/10/2026",
-    "rate": "1,00000000000",
-    "relatedTo": "Setembro-2026/2026",
-    "approvedOn": "15/10/2026",
-    "isinCode": "BRAFHICTF005",
+    "assetIssued": "BRADSHR04M15",
+    "paymentDate": "21/08/2026",
+    "rate": "0,02000000000",
+    "relatedTo": "JULHO/2026",
+    "approvedOn": "20/08/2026",
+    "isinCode": "BRADSHR04M15",
     "label": "RENDIMENTO",
-    "lastDatePrior": "15/10/2026",
+    "lastDatePrior": "20/08/2026",
     "remarks": ""
    }
   },
@@ -38,7 +38,7 @@
  "acoes": {
   "emissoras": 280,
   "amostra": {
-   "emissora": "ABCB",
+   "emissora": "ALLD",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -51,19 +51,19 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRABCBACNPR4",
-    "paymentDate": "12/08/2026",
-    "rate": "1,16800000000",
-    "relatedTo": "1º Semestre/2026",
-    "approvedOn": "24/06/2026",
-    "isinCode": "BRABCBACNPR4",
+    "assetIssued": "BRALLDACNOR3",
+    "paymentDate": "12/11/2026",
+    "rate": "0,48124087968",
+    "relatedTo": "Complementar/2025",
+    "approvedOn": "29/09/2026",
+    "isinCode": "BRALLDACNOR3",
     "label": "JRS CAP PROPRIO",
-    "lastDatePrior": "29/06/2026",
+    "lastDatePrior": "05/10/2026",
     "remarks": ""
    }
   },
   "amostraBonificacao": {
-   "emissora": "AERI",
+   "emissora": "ALPA",
    "campos": [
     "assetIssued",
     "factor",
@@ -74,18 +74,18 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAERIACNOR4",
-    "factor": "0,05000000000",
-    "approvedOn": "11/04/2024",
-    "isinCode": "BRAERIACNOR4",
-    "label": "GRUPAMENTO",
-    "lastDatePrior": "13/05/2024",
+    "assetIssued": "BRALPAACNOR0",
+    "factor": "25,00000000000",
+    "approvedOn": "20/03/2019",
+    "isinCode": "BRALPAACNOR0",
+    "label": "BONIFICACAO",
+    "lastDatePrior": "20/03/2019",
     "remarks": ""
    }
   },
-  "ok": 280,
-  "falhas": 0,
-  "semDividendos": 83,
+  "ok": 273,
+  "falhas": 7,
+  "semDividendos": 81,
   "itens": 0
  }
 }
