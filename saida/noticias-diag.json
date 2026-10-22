@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-22T21:17:09.599Z",
+ "gerado": "2026-10-22T21:25:33.776Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -74,10 +74,10 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 1405,
+  "linhas": 1408,
   "na_janela_e_categorias": 14,
-  "sem_cnpj": 169,
-  "entrega_mais_recente": "20261022 22/10/2026 18:15",
+  "sem_cnpj": 170,
+  "entrega_mais_recente": "20261022 22/10/2026 18:19",
   "tentativa": 1
  },
  "fontes": {
@@ -93,5 +93,1087 @@
   "fora_do_filtro": 0,
   "rotina_escondida": 0
  },
- "filtro": "lista elegiveis.json (219 empresas, anos 2021-2022-2023-2024-2025)"
+ "filtro": "lista elegiveis.json (219 empresas, anos 2021-2022-2023-2024-2025)",
+ "recentes": [
+  {
+   "h": "18:19",
+   "emp": "GERDAU S.A.",
+   "cat": "Dados Econômico-Financeiros",
+   "tipo": "Relatório de Agência de Rating",
+   "ass": "S&P Global Ratings revisa perspectiva de rating para positiva",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "18:18",
+   "emp": "BCO BRADESCO S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Apresentações a analistas/agentes do mercado",
+   "ass": "Bradesco 3T26 - Apresentação Resultados",
+   "d": "2026-10-22",
+   "st": "sem_cnpj"
+  },
+  {
+   "h": "18:17",
+   "emp": "IRB - BRASIL RESSEGUROS S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "3T26 IRB Período de Silêncio e Vedação",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "18:15",
+   "emp": "AMERICANAS S.A",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Atualização sobre a Venda de Ativos - Lojas Hortifruti Natural da Terra",
+   "d": "2026-10-22",
+   "st": "sem_cnpj"
+  },
+  {
+   "h": "18:15",
+   "emp": "TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.",
+   "cat": "Aviso aos Debenturistas",
+   "tipo": "-",
+   "ass": "Pagamento de juros/remuneração",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "18:14",
+   "emp": "BCO BRADESCO S.A.",
+   "cat": "Dados Econômico-Financeiros",
+   "tipo": "Demonstrações Financeiras Adicionais",
+   "ass": "Demonstrações Financeiras em IFRS - Português",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "18:13",
+   "emp": "FLEURY S.A.",
+   "cat": "Aviso aos Debenturistas",
+   "tipo": "-",
+   "ass": "Resgate Antecipado Facultativo da 8ª Emissão de Debêntures da Companhia",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "18:13",
+   "emp": "BCO BRADESCO S.A.",
+   "cat": "Dados Econômico-Financeiros",
+   "tipo": "Demonstrações Financeiras Adicionais",
+   "ass": "Demonstrações Financeiras em IFRS - Inglês",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "18:13",
+   "emp": "BCO BRADESCO S.A.",
+   "cat": "Dados Econômico-Financeiros",
+   "tipo": "Demonstrações Financeiras Intermediárias",
+   "ass": "Demonstrações Financeiras Intermediárias",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "18:11",
+   "emp": "RUMO MALHA NORTE S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Aprovar a distribuição de juros sobre capital próprio",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "18:11",
+   "emp": "BCO BRADESCO S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Report On Economic and Financial Analysis",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "18:03",
+   "emp": "VIX LOGÍSTICA S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Autorizar a contratação de operação financeira já aprovada e prevista em orçamento",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "18:01",
+   "emp": "VITRU EDUCAÇÃO S.A",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Agenda Divulgação 3T26",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "18:00",
+   "emp": "AÇO VERDE DO BRASIL S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Aprovação de contratação de operação financeira pela Companhia, nos termos do art. 29, inc",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "18:00",
+   "emp": "BCO BRADESCO S.A.",
+   "cat": "Dados Econômico-Financeiros",
+   "tipo": "Press-release",
+   "ass": "Press Release",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "18:00",
+   "emp": "GERDAU S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "S&P Global Ratings revisa perspectiva de rating para positiva",
+   "d": "2026-10-22",
+   "st": "sem_cnpj"
+  },
+  {
+   "h": "18:00",
+   "emp": "BCO BRADESCO S.A.",
+   "cat": "Dados Econômico-Financeiros",
+   "tipo": "Relatório de Análise Gerencial",
+   "ass": "Relatório de Análise Econômica e Financeira",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:54",
+   "emp": "BRK AMBIENTAL - REGIÃO METROPOLITANA DE MACEIÓ S.A",
+   "cat": "Dados Econômico-Financeiros",
+   "tipo": "Relatório de Agência de Rating",
+   "ass": "Relatório Anual do Agente Fiduciário - 2ª Emissão de Debêntures",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:37",
+   "emp": "SPACE EXPLORATION TECHNOLOGIES CORP",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "S-8",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:37",
+   "emp": "SPACE EXPLORATION TECHNOLOGIES CORP",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "10-Q",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:37",
+   "emp": "MONDAY.COM LTD",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:37",
+   "emp": "LINEAGE INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "WESTERN DIGITAL CORP",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "SYNCHRONY FINANCIAL",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "10-Q",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "STATE STREET CORP",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Documento Diversos",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "COPART INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Documento Diversos",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "MARSH & MCLENNAN COS INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "SOUTHWEST AIRLINES CO",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "10-Q",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "LAM RESEARCH CORP",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "10-Q",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "ELEVANCE HEALTH, INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "144",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "SPOTIFY TECHNOLOGY SA",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "ROLLINS INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "10-Q",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "OMNICOM GROUP INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "LULULEMON ATHLETICA INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "ROBERT HALF INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "NASDAQ INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "MSCI INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "144",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "BROOKFIELD CORPORATION",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "WILLIS TOWERS WATSON PLC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "VULCAN MATERIALS CO",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "PAYLOCITY HOLDING CORP",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "UIPATH INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "144",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "BLOCK, INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "144",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:36",
+   "emp": "SS&C TECHNOLOGIES HOLDINGS INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:35",
+   "emp": "PROCTER & GAMBLE COMPANY",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "10-Q",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:35",
+   "emp": "MERCK & CO., INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "3/A",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:35",
+   "emp": "WELLS FARGO & COMPANY",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:35",
+   "emp": "PROCTER & GAMBLE COMPANY",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "144",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:35",
+   "emp": "UNION PACIFIC CORPORATION",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "10-Q",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:35",
+   "emp": "THE TRAVELERS COMPANIES, INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:35",
+   "emp": "JPMORGAN CHASE & CO.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Documento Diversos",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:35",
+   "emp": "BANK OF AMERICA CORPORATION",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Documento Diversos",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:35",
+   "emp": "VERTEX PHARMACEUTICALS INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Documento Diversos",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:35",
+   "emp": "VERISIGN INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:35",
+   "emp": "GOLDMAN SACHS GROUP INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Documento Diversos",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:35",
+   "emp": "PULTEGROUP INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "10-Q",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:35",
+   "emp": "NEWMONT CORP",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:35",
+   "emp": "HUNTINGTON BANCSHARES INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:35",
+   "emp": "THE SOUTHERN CO",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:34",
+   "emp": "CITIGROUP INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:28",
+   "emp": "VITAL ENGENHARIA AMBIENTAL SA",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Alteração dos membros da Diretoria",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:26",
+   "emp": "VITAL ENGENHARIA AMBIENTAL SA",
+   "cat": "Assembleia",
+   "tipo": "AGE",
+   "ass": "Alteração dos membros do Conselho de Administração",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:22",
+   "emp": "BRF S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Comunicado ao Mercado Conjunto - Comunicação sobre Demandas Societárias",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:21",
+   "emp": "MARFRIG GLOBAL FOODS S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Comunicação sobre Demandas Societárias",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:14",
+   "emp": "GERDAU S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Diretoria",
+   "ass": "Prestação de Garantia em Financiamento da Controlada",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:12",
+   "emp": "TPI - TRIUNFO PARTICIP. E INVEST. S.A.",
+   "cat": "Calendário de Eventos Corporativos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:11",
+   "emp": "PBG S/A",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Esclarecimentos sobre Questionamentos da CVM/B3 - Ofício 310/2026-SLE",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:10",
+   "emp": "CIA SANEAMENTO BASICO EST SAO PAULO",
+   "cat": "Assembleia",
+   "tipo": "AGDEB",
+   "ass": "Proposta da Administração - 26ª Emissão",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:10",
+   "emp": "CIA SANEAMENTO BASICO EST SAO PAULO",
+   "cat": "Assembleia",
+   "tipo": "AGDEB",
+   "ass": "Proposta da Administração - 24ª Emissão",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:10",
+   "emp": "CIA SANEAMENTO BASICO EST SAO PAULO",
+   "cat": "Assembleia",
+   "tipo": "AGDEB",
+   "ass": "Proposta da Administração - 2ª e 3ª Série - 33ª Emissão",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:09",
+   "emp": "CIA SANEAMENTO BASICO EST SAO PAULO",
+   "cat": "Assembleia",
+   "tipo": "AGDEB",
+   "ass": "Proposta da Administração - 35ª Emissão",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:09",
+   "emp": "CIA SANEAMENTO BASICO EST SAO PAULO",
+   "cat": "Assembleia",
+   "tipo": "AGDEB",
+   "ass": "Ata da AGD 34ª Emissão",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "17:05",
+   "emp": "CENTRAIS ELET DE SANTA CATARINA S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Abertura de Chamamento Público e Estudo Preliminar do Plano de Negócio para estruturação d",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "16:55",
+   "emp": "LIGGA TELECOMUNICAÇÕES S.A.",
+   "cat": "Assembleia",
+   "tipo": "AGDEB",
+   "ass": "Alteração de características das debêntures",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "16:53",
+   "emp": "LIGGA TELECOMUNICAÇÕES S.A.",
+   "cat": "Assembleia",
+   "tipo": "AGDEB",
+   "ass": "Alteração de características das debêntures",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "16:48",
+   "emp": "GLOBAL INFRA TELECOM - GIT S.A.",
+   "cat": "Escrituras e aditamentos de debêntures",
+   "tipo": "-",
+   "ass": "Alteração nos Direitos e Vantagens dos Valores Mobiliários",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "16:35",
+   "emp": "ISHARES MSCI EMERGING MARKETS EX CHINA ETF",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Tracking Error",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "16:35",
+   "emp": "GLOBAL X MLP ETF",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Tracking Error",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "16:35",
+   "emp": "COMCAST CORPORATION",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "10-Q",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "16:35",
+   "emp": "CITIGROUP INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "16:35",
+   "emp": "BANK OF AMERICA CORPORATION",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "16:35",
+   "emp": "GOLDMAN SACHS GROUP INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "16:35",
+   "emp": "JPMORGAN CHASE & CO.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Documento Diversos",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "16:34",
+   "emp": "ISHARES MSCI ALL COUNTRY ASIA EX JAPAN ETF",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Tracking Error",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "16:34",
+   "emp": "ISHARES MSCI TAIWAN ETF",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Tracking Error",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "16:34",
+   "emp": "ISHARES MSCI SOUTH KOREA ETF",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Tracking Error",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "16:19",
+   "emp": "MAIS MU COMÉRCIO DE ALIMENTOS E BEBIDAS S.A.",
+   "cat": "Formulário FÁCIL",
+   "tipo": "-",
+   "ass": "Atualização Formulário Fácil",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "16:19",
+   "emp": "BRK AMBIENTAL PARTICIPACOES S/A",
+   "cat": "Dados Econômico-Financeiros",
+   "tipo": "Relatório de Agência de Rating",
+   "ass": "Relatorio de Credito Moodys",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:35",
+   "emp": "BANK OF AMERICA CORPORATION",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Documento Diversos",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:35",
+   "emp": "THE TRAVELERS COMPANIES, INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "144",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:35",
+   "emp": "BURLINGTON STORES INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "144",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:35",
+   "emp": "BROOKFIELD CORPORATION",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:35",
+   "emp": "SL GREEN REALTY CORP",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:35",
+   "emp": "NASDAQ INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "10-Q",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:35",
+   "emp": "KOHLS CORP",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "144",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:35",
+   "emp": "GOLDMAN SACHS GROUP INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:35",
+   "emp": "CIA ESTADUAL DE ÁGUAS E ESGOTOS - CEDAE",
+   "cat": "Reunião da Administração",
+   "tipo": "Comitê de Auditoria",
+   "ass": "Apresentação do Relatório dos Controles Internos elaborado pela Auditoria Independente BDO",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:34",
+   "emp": "CITIGROUP INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:34",
+   "emp": "JPMORGAN CHASE & CO.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:34",
+   "emp": "WELLS FARGO & COMPANY",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:24",
+   "emp": "VIVMARK RESIDENTIAL",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:16",
+   "emp": "CITIGROUP INC.",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:15",
+   "emp": "ISHARES 0-5 YEAR TIPS BOND ETF",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:12",
+   "emp": "INTERNATIONAL BUSINESS MACHINES CORPORATION",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:12",
+   "emp": "ISHARES 3-7 YEAR TREASURY BOND ETF",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:11",
+   "emp": "LINEAGE INC",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:10",
+   "emp": "GENTEX CORP",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:10",
+   "emp": "BRB BCO DE BRASILIA S.A.",
+   "cat": "Política de Dividendos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:09",
+   "emp": "ROPER TECHNOLOGIES INC",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:08",
+   "emp": "QUEST DIAGNOSTICS INC",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:07",
+   "emp": "CISCO SYSTEMS, INC.",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "15:00",
+   "emp": "TURBI COMPARTILHAMENTO DE VEICULOS S/A",
+   "cat": "Escrituras e aditamentos de debêntures",
+   "tipo": "-",
+   "ass": "Emissão de Valores Mobiliários",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "14:57",
+   "emp": "NETSTREIT CORP",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "14:56",
+   "emp": "REGAL REXNORD CORP",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "14:55",
+   "emp": "LAS VEGAS SANDS CORPORATION",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "14:54",
+   "emp": "THE SHERWIN-WILLIAMS CO",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "14:53",
+   "emp": "HUNTINGTON INGALLS INDUSTRIES INC",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "14:53",
+   "emp": "LABCORP HOLDINGS INC.",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "14:52",
+   "emp": "PINNACLE WEST CAPITAL CORP",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  },
+  {
+   "h": "14:51",
+   "emp": "NORTHERN TRUST CORP",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou"
+  }
+ ]
 }
