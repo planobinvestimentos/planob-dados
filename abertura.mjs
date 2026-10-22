@@ -17,6 +17,7 @@ const SAIDA = path.join(path.dirname(fileURLToPath(import.meta.url)), 'saida');
 fs.mkdirSync(SAIDA, { recursive: true });
 const MODO = process.argv[2] || process.env.MODO || 'manha';
 const TESTE = process.env.TESTE === '1', FORCAR = process.env.FORCAR === '1';
+const PRIVADO = process.env.PRIVADO === '1';   // manda SÓ para o seu Telegram privado (TELEGRAM_ALERTA_CHAT_ID), sem gravar estado e ignorando "já enviado hoje"
 const API = process.env.TELEGRAM_API || 'https://api.telegram.org';
 const B3 = process.env.B3_COTACAO_URL || 'https://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/';
 const CNBC = process.env.CNBC_URL || 'https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol';
@@ -236,10 +237,10 @@ function msgFuturos(br) {
 
 const ASSINATURA = '\n\n📲 Participe do nosso grupo do Telegram: @planobinvestimentos';
 async function enviar(corpo) {
-  const texto = corpo + ASSINATURA;
+  const texto = (PRIVADO ? '🧪 TESTE (só para você)\n\n' : '') + corpo + ASSINATURA;
   if (TESTE) { console.log('--- MENSAGEM (teste, não enviada) ---\n' + texto + '\n--- fim ---'); return; }
-  const token = process.env.TELEGRAM_BOT_TOKEN, chat = process.env.TELEGRAM_CHAT_ID;
-  if (!token || !chat) throw new Error('faltam os segredos TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID');
+  const token = process.env.TELEGRAM_BOT_TOKEN, chat = PRIVADO ? process.env.TELEGRAM_ALERTA_CHAT_ID : process.env.TELEGRAM_CHAT_ID;
+  if (!token || !chat) throw new Error(PRIVADO ? 'faltam os segredos TELEGRAM_BOT_TOKEN e TELEGRAM_ALERTA_CHAT_ID' : 'faltam os segredos TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID');
   const r = await fetch(API + '/bot' + token + '/sendMessage', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: chat, text: texto, disable_web_page_preview: true }), signal: AbortSignal.timeout(20000) });
   const j = await r.json().catch(() => ({}));
   if (!r.ok || !j.ok) throw new Error('Telegram recusou: ' + (j.description || 'HTTP ' + r.status));
@@ -249,9 +250,9 @@ async function enviar(corpo) {
 /* ---------- execução (só quando rodado direto, não quando importado nos testes) ---------- */
 if (process.argv[1] && process.argv[1].endsWith('abertura.mjs')) {
   const est = lerJson('abertura.json') || {};
-  const salvar = (k) => { if (!TESTE) fs.writeFileSync(path.join(SAIDA, 'abertura.json'), JSON.stringify(Object.assign({}, est.data === HOJE ? est : {}, { data: HOJE, [k]: true }))); };
+  const salvar = (k) => { if (!TESTE && !PRIVADO) fs.writeFileSync(path.join(SAIDA, 'abertura.json'), JSON.stringify(Object.assign({}, est.data === HOJE ? est : {}, { data: HOJE, [k]: true }))); };
   if (DOW === 0 || DOW === 6) { console.log('fim de semana: sem resumo de abertura.'); process.exit(0); }
-  if (est.data === HOJE && est[MODO] && !FORCAR) { console.log('esta parte (' + MODO + ') já foi enviada hoje.'); process.exit(0); }
+  if (est.data === HOJE && est[MODO] && !FORCAR && !PRIVADO) { console.log('esta parte (' + MODO + ') já foi enviada hoje.'); process.exit(0); }
   const diag = { gerado: new Date().toISOString(), modo: MODO }, hojeUtc = new Date(Date.UTC(agora.getUTCFullYear(), agora.getUTCMonth(), agora.getUTCDate()));
   const gravaDiag = () => { try { fs.writeFileSync(path.join(SAIDA, 'abertura-diag-' + MODO + '.json'), JSON.stringify(diag, null, 1)); } catch (e) { /* ignora */ } };
   try {
