@@ -1,6 +1,6 @@
 {
- "gerado": "2026-10-22T14:43:28.545Z",
- "hora": 11,
+ "gerado": "2026-10-22T15:00:20.266Z",
+ "hora": 12,
  "fnet_erro": "The operation was aborted due to timeout",
  "fnet": {
   "linhas": 0,
@@ -8,7 +8,13 @@
   "relatorios": 0
  },
  "avisos_novos": [],
- "acoes_nesta_rodada": false,
- "novos": [],
+ "acoes_nesta_rodada": true,
+ "varredura": {
+  "fii": 5,
+  "acoes": 1
+ },
+ "novos": [
+  "AGRO3 Dividendo"
+ ],
  "pdfs": 0
 }
