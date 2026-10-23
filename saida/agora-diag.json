@@ -1,13 +1,17 @@
 {
- "gerado": "2026-10-23T19:30:17.164Z",
+ "gerado": "2026-10-23T19:45:16.119Z",
  "hora": 16,
  "fnet": {
-  "linhas": 1381,
-  "avisos": 125,
+  "linhas": 1383,
+  "avisos": 128,
   "relatorios": 130
  },
- "avisos_novos": [],
+ "avisos_novos": [
+  "GZIT11:1357986"
+ ],
  "avisos_sem_ticker": [
+  "FII GALERIA #1357985",
+  "FII NMKS #1357984",
   "FII IDUA #1357698",
   "FII ITAU TEM #1356605",
   "BTG LOG AAA CAJAMAR FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1356601",
@@ -16,6 +20,11 @@
   "SC JGP RENDA IMOBILIÁRIA FUNDO DE INVESTIMENTO IMOBILIÁRIO #1356429"
  ],
  "acoes_nesta_rodada": false,
- "novos": [],
+ "lido_do_aviso": [
+  "GZIT11"
+ ],
+ "novos": [
+  "GZIT11 Rendimento"
+ ],
  "pdfs": 0
 }
