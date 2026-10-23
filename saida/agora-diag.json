@@ -1,14 +1,12 @@
 {
- "gerado": "2026-10-23T19:45:16.119Z",
+ "gerado": "2026-10-23T19:55:28.961Z",
  "hora": 16,
  "fnet": {
-  "linhas": 1383,
+  "linhas": 1385,
   "avisos": 128,
   "relatorios": 130
  },
- "avisos_novos": [
-  "GZIT11:1357986"
- ],
+ "avisos_novos": [],
  "avisos_sem_ticker": [
   "FII GALERIA #1357985",
   "FII NMKS #1357984",
@@ -20,11 +18,10 @@
   "SC JGP RENDA IMOBILIÁRIA FUNDO DE INVESTIMENTO IMOBILIÁRIO #1356429"
  ],
  "acoes_nesta_rodada": false,
- "lido_do_aviso": [
-  "GZIT11"
- ],
- "novos": [
-  "GZIT11 Rendimento"
- ],
+ "varredura": {
+  "fii": 0,
+  "acoes": "não consultadas"
+ },
+ "novos": [],
  "pdfs": 0
 }
