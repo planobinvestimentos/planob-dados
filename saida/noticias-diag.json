@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-22T23:22:00.378Z",
+ "gerado": "2026-10-23T00:14:32.211Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -74,10 +74,10 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 1473,
+  "linhas": 1478,
   "na_janela_e_categorias": 84,
   "sem_cnpj": 103,
-  "entrega_mais_recente": "20261022 22/10/2026 19:51",
+  "entrega_mais_recente": "20261022 22/10/2026 20:54",
   "tentativa": 1
  },
  "fontes": {
@@ -95,6 +95,71 @@
  },
  "filtro": "sem filtro de lucro (todas as empresas)",
  "recentes": [
+  {
+   "h": "20:54",
+   "emp": "ADECOAGRO VALE DO EVINHEMA S.A.",
+   "cat": "Escrituras e aditamentos de debêntures",
+   "tipo": "-",
+   "ass": "Emissão de Valores Mobiliários",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "91357-4",
+   "c5": "20261022 22/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "20:54",
+   "emp": "ADECOAGRO VALE DO EVINHEMA S.A.",
+   "cat": "Documentos de Oferta de Distribuição Pública",
+   "tipo": "Anúncio de Início de Distribuição Pública",
+   "ass": "Anúncio de Início",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "91357-4",
+   "c5": "20261022 22/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "20:34",
+   "emp": "CONOCOPHILLIPS",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "144",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05052-0",
+   "c5": "20261022 22/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "20:34",
+   "emp": "BLOCK, INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05732-0",
+   "c5": "20261022 22/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "20:34",
+   "emp": "ARISTA NETWORKS INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-10-22",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05446-1",
+   "c5": "20261022 22/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
   {
    "h": "19:51",
    "emp": "BPGM VILA NOVA EMPREENDIMENTOS E PARTICIPAÇÕES S.A",
@@ -1586,71 +1651,6 @@
    "d": "2026-10-22",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05122-5",
-   "c5": "20261022 22/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "17:35",
-   "emp": "JPMORGAN CHASE & CO.",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Documento Diversos",
-   "d": "2026-10-22",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05057-1",
-   "c5": "20261022 22/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "17:35",
-   "emp": "BANK OF AMERICA CORPORATION",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Documento Diversos",
-   "d": "2026-10-22",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05005-9",
-   "c5": "20261022 22/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "17:35",
-   "emp": "VERTEX PHARMACEUTICALS INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Documento Diversos",
-   "d": "2026-10-22",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05220-5",
-   "c5": "20261022 22/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "17:35",
-   "emp": "VERISIGN INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "8-K",
-   "d": "2026-10-22",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05219-1",
-   "c5": "20261022 22/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "17:35",
-   "emp": "GOLDMAN SACHS GROUP INC.",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Documento Diversos",
-   "d": "2026-10-22",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05009-1",
    "c5": "20261022 22/10/2026",
    "c8": "1",
    "c9": "AP"
