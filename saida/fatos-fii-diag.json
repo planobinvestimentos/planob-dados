@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-23T18:00:35.165Z",
+ "gerado": "2026-10-23T18:19:50.304Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 130,
  "top": {
@@ -59,9 +59,9 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 378,
+  "linhas_vistas": 379,
   "categorias": {
-   "Relatórios": 87,
+   "Relatórios": 88,
    "Informes Periódicos": 75,
    "Assembleia": 68,
    "Aviso aos Cotistas - Estruturado": 30,
@@ -86,9 +86,9 @@
   "FII LOTUS TOWER FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
   "FII TRCO"
  ],
- "analisados": 1,
+ "analisados": 0,
  "sem_texto": 0,
- "fora_do_escopo": 1,
+ "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
  "materias_novas": 0,
