@@ -50,6 +50,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # sem esse segredo: só manchetes (grátis)
+          TETO_IA_USD: '5'                                      # teto mensal de gasto com IA nas matérias (US$); passou, só manchetes até o mês seguinte
           USAR_OPUS: '0'                                        # mude para '1' para usar o Opus nos documentos importantes
           TESTE: ${{ inputs.teste && '1' || '' }}
           FORCAR: ${{ inputs.forcar && '1' || '' }}
@@ -59,7 +60,10 @@ jobs:
         continue-on-error: true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          VALOR_MIN: '3000000'                                  # só compras/vendas acima de R$ 3 milhões
+          TETO_IA_USD: '5'
+          TOP_FIIS: '50'                                        # os 50 maiores FIIs (por patrimônio líquido) têm matérias sobre compras, vendas, emissões, gestão e locatários
+          VALOR_MIN_TOP: '1000000'                              # top 50: compras/vendas acima de R$ 1 milhão
+          VALOR_MIN: '3000000'                                  # demais FIIs líquidos: só compras/vendas acima de R$ 3 milhões
         run: node fatos-fii.mjs
       - name: Salvar
         if: always()
