@@ -1,25 +1,91 @@
 {
- "gerado": "2026-10-23T02:00:17.701Z",
+ "gerado": "2026-10-23T02:02:11.583Z",
  "de": "2026-10-20",
  "ate": "2026-10-22",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 131,
-  "amostra": null,
-  "erro": "as primeiras consultas falharam (HTTP 403): endereço bloqueado ou mudou",
-  "ok": 0,
-  "falhas": 9,
-  "semRendimentos": 0,
-  "itens": 0,
-  "aviso_regra": "FIIs não divulgados nesta rodada (sem lista de liquidez ou falha na B3)"
+  "amostra": {
+   "fundo": "FII ADSH    ",
+   "campos": [
+    "assetIssued",
+    "paymentDate",
+    "rate",
+    "relatedTo",
+    "approvedOn",
+    "isinCode",
+    "label",
+    "lastDatePrior",
+    "remarks"
+   ],
+   "primeiro": {
+    "assetIssued": "BRADSHR04M15",
+    "paymentDate": "21/08/2026",
+    "rate": "0,02000000000",
+    "relatedTo": "JULHO/2026",
+    "approvedOn": "20/08/2026",
+    "isinCode": "BRADSHR04M15",
+    "label": "RENDIMENTO",
+    "lastDatePrior": "20/08/2026",
+    "remarks": ""
+   }
+  },
+  "ok": 131,
+  "falhas": 0,
+  "semRendimentos": 3,
+  "itens": 3
  },
  "acoes": {
   "emissoras": 280,
-  "amostra": null,
-  "erro": "as primeiras consultas falharam (HTTP 403): endereço bloqueado ou mudou",
-  "ok": 0,
-  "falhas": 10,
-  "semDividendos": 0,
-  "itens": 0
+  "amostra": {
+   "emissora": "AFLT",
+   "campos": [
+    "assetIssued",
+    "paymentDate",
+    "rate",
+    "relatedTo",
+    "approvedOn",
+    "isinCode",
+    "label",
+    "lastDatePrior",
+    "remarks"
+   ],
+   "primeiro": {
+    "assetIssued": "BRAFLTACNOR1",
+    "paymentDate": "31/12/2026",
+    "rate": "0,15851704140",
+    "relatedTo": "Complementar/2026",
+    "approvedOn": "21/07/2026",
+    "isinCode": "BRAFLTACNOR1",
+    "label": "DIVIDENDO",
+    "lastDatePrior": "24/07/2026",
+    "remarks": ""
+   }
+  },
+  "amostraBonificacao": {
+   "emissora": "AERI",
+   "campos": [
+    "assetIssued",
+    "factor",
+    "approvedOn",
+    "isinCode",
+    "label",
+    "lastDatePrior",
+    "remarks"
+   ],
+   "primeiro": {
+    "assetIssued": "BRAERIACNOR4",
+    "factor": "0,05000000000",
+    "approvedOn": "11/04/2024",
+    "isinCode": "BRAERIACNOR4",
+    "label": "GRUPAMENTO",
+    "lastDatePrior": "13/05/2024",
+    "remarks": ""
+   }
+  },
+  "ok": 280,
+  "falhas": 0,
+  "semDividendos": 83,
+  "itens": 1
  }
 }
