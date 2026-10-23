@@ -1,6 +1,6 @@
 {
- "gerado": "2026-10-22T23:45:16.816Z",
- "hora": 20,
+ "gerado": "2026-10-23T00:00:17.353Z",
+ "hora": 21,
  "fnet_erro": "The operation was aborted due to timeout",
  "fnet": {
   "linhas": 0,
@@ -8,7 +8,11 @@
   "relatorios": 0
  },
  "avisos_novos": [],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
+ "varredura": {
+  "fii": 5,
+  "acoes": 1
+ },
  "novos": [],
  "pdfs": 0
 }
