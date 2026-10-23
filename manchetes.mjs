@@ -7,6 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { ASSINATURA_ELPIS } from './elpis-dica.mjs';
 
 const SAIDA = process.env.SAIDA_DIR || path.join(path.dirname(fileURLToPath(import.meta.url)), 'saida');
 fs.mkdirSync(SAIDA, { recursive: true });
@@ -41,7 +42,7 @@ const recentes = (l, n) => l.filter((x) => agora.getTime() - x.data <= JANELA &&
 const chave = (t) => t.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 
 async function enviar(texto) {
-  const corpo = texto + '\n\n📲 Participe do nosso grupo do Telegram: @planobinvestimentos';
+  const corpo = texto + ASSINATURA_ELPIS();
   if (TESTE) { console.log('--- MENSAGEM (teste, não enviada) ---\n' + corpo + '\n--- fim ---'); return; }
   const token = process.env.TELEGRAM_BOT_TOKEN, chat = process.env.TELEGRAM_CHAT_ID;
   if (!token || !chat) throw new Error('faltam os segredos TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID');

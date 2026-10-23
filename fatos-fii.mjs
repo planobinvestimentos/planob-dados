@@ -1,7 +1,7 @@
 /* Matérias do site sobre os FIIs MAIORES (top 50 por patrimônio líquido) e, fora do top 50, sobre grandes compras e vendas dos FIIs líquidos.
    Fonte: "Fato Relevante" publicado no FNET (B3/CVM). A IA (Claude Haiku) lê o documento e classifica: compra, venda, emissão de cotas,
    gestão/estrutura (troca de gestor, fusão etc.) e imóveis/locatários. Todo número da matéria precisa existir no documento (trava de segurança).
-   - Top 50: aceita os 5 tipos acima; compra e venda precisam de valor acima de VALOR_MIN_TOP (padrão R$ 1 milhão).
+   - Top 50: aceita os 5 tipos acima e "comunicado" (formador de mercado, calendário, decisões etc.); compra e venda precisam de valor acima de VALOR_MIN_TOP (padrão R$ 1 milhão).
    - Demais FIIs líquidos: só compra e venda acima de VALOR_MIN (padrão R$ 10 milhões; o noticias.yml usa R$ 3 milhões).
    O top 50 vem de saida/fii-info.json (campo pl, patrimônio líquido, atualizado pelo workflow Liquidez dos FIIs). Enquanto o campo não existir,
    o top 50 é o dos 50 FIIs de maior volume negociado por dia.
@@ -15,6 +15,7 @@ import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { lerMaterias, gravarMaterias } from './materias-arquivo.mjs';
 import { criarGasto } from './gasto-ia.mjs';
+import { enviarTexto, RODAPE } from './proventos-msg.mjs';
 
 const SAIDA = process.env.SAIDA_DIR || path.join(path.dirname(fileURLToPath(import.meta.url)), 'saida');
 fs.mkdirSync(SAIDA, { recursive: true });
@@ -26,8 +27,8 @@ const IA_CHAVE = process.env.ANTHROPIC_API_KEY || '';
 const VALOR_MIN = Number(process.env.VALOR_MIN) || 10000000;
 const VALOR_MIN_TOP = Number(process.env.VALOR_MIN_TOP) || 1000000;
 const TOP_N = Number(process.env.TOP_FIIS) || 50;
-const VERSAO = 2;   // mudou o critério: na primeira rodada reanalisa os fatos dos últimos dias (matérias já publicadas não duplicam)
-const ASSUNTO = { compra: 'Aquisição', venda: 'Venda', emissao: 'Emissão de cotas', gestao: 'Gestão e estrutura do fundo', locatario: 'Imóveis e locatários' };
+const VERSAO = 3;   // mudou o critério: na primeira rodada reanalisa os fatos dos últimos dias (matérias já publicadas não duplicam)
+const ASSUNTO = { compra: 'Aquisição', venda: 'Venda', emissao: 'Emissão de cotas', gestao: 'Gestão e estrutura do fundo', locatario: 'Imóveis e locatários', comunicado: 'Comunicado ao cotista' };
 const JANELA = Number(process.env.JANELA_DIAS) || 3;
 const MAX_POR_RODADA = Number(process.env.MAX_DOCS) || 15;
 const UA = { 'User-Agent': 'PlanoB-Investimentos-dados/1.0 (uso educacional)', Accept: 'application/json, text/plain, */*' };
@@ -108,8 +109,8 @@ const limpa = (t) => String(t || '').replace(/\s+/g, ' ').trim();
 
 async function analisar(x, tk, texto) {
   const prompt = 'Você é redator do site Plano B Investimentos e escreve matérias curtas sobre comunicados de fundos imobiliários (FIIs) para investidores iniciantes.\nFundo: ' + limpa(x.descricaoFundo) + ' (' + tk + ')\nData de entrega: ' + limpa(x.dataEntrega) + '\n\nTexto do documento (Fato Relevante):\n' + limpa(texto).slice(0, 30000) +
-    '\n\nTarefa: classifique o documento em UM destes tipos: "compra" (aquisição de imóveis, participações, cotas ou outros ativos pelo fundo), "venda" (alienação de ativos pelo fundo), "emissao" (nova emissão ou oferta de cotas do fundo), "gestao" (troca de gestor ou administrador, incorporação, fusão ou mudança relevante na estrutura ou na política do fundo), "locatario" (rescisão, renovação, inadimplência ou vacância relevante de imóveis ou de locatários) ou "outro". Responda apenas com JSON: {"tipo":"compra|venda|emissao|gestao|locatario|outro","valor_total_reais":número ou null,"titulo":"até 90 caracteres, factual","resumo":"até 180 caracteres","paragrafos":["3 a 5 parágrafos curtos"]}. ' +
-    'Use "outro" para qualquer assunto diferente (assembleia sem decisão, distribuição de rendimentos comum, retificação, relatório etc.) e, nesse caso, deixe titulo/resumo/paragrafos vazios. Regras da matéria: use SOMENTE o que está no documento; não invente; não dê opinião, recomendação ou previsão; copie valores, percentuais, áreas e datas EXATAMENTE como estão no texto, sem converter nem arredondar; não cite outros fundos ou empresas além das do documento; no título e no texto diga EXATAMENTE o instrumento negociado (imóvel, fração de imóvel, participação em shopping, CRI, cotas de outro fundo etc.): se o fundo comprou um CRI ou cotas, não escreva que comprou o imóvel; numa emissão de cotas, informe só o que o texto traz (valor, preço da cota, datas); explique em uma frase simples termos técnicos (alienação, cap rate, fato relevante). "valor_total_reais" é o valor total da operação (compra, venda ou emissão) em reais, como número (ex.: 125000000), ou null se o texto não informar.';
+    '\n\nTarefa: classifique o documento em UM destes tipos: "compra" (aquisição de imóveis, participações, cotas ou outros ativos pelo fundo), "venda" (alienação de ativos pelo fundo), "emissao" (nova emissão ou oferta de cotas do fundo), "gestao" (troca de gestor ou administrador, incorporação, fusão ou mudança relevante na estrutura ou na política do fundo), "locatario" (rescisão, renovação, inadimplência ou vacância relevante de imóveis ou de locatários), "comunicado" (qualquer outra informação nova e relevante para o cotista: contratação ou troca de formador de mercado, mudança de calendário ou de política de rendimentos, decisões de assembleia, aprovação de oferta, mudança de taxas, litígio, etc.) ou "outro" (somente formalidade sem novidade: retificação sem mudança de conteúdo, repetição de comunicado já feito, ata, relatório periódico). Responda apenas com JSON: {"tipo":"compra|venda|emissao|gestao|locatario|comunicado|outro","valor_total_reais":número ou null,"titulo":"até 90 caracteres, factual","resumo":"até 180 caracteres","paragrafos":["3 a 5 parágrafos curtos"]}. ' +
+    'Use "outro" apenas para formalidades sem novidade (e, nesse caso, deixe titulo/resumo/paragrafos vazios). Regras da matéria: use SOMENTE o que está no documento; não invente; não dê opinião, recomendação ou previsão; copie valores, percentuais, áreas e datas EXATAMENTE como estão no texto, sem converter nem arredondar; não cite outros fundos ou empresas além das do documento; no título e no texto diga EXATAMENTE o instrumento negociado (imóvel, fração de imóvel, participação em shopping, CRI, cotas de outro fundo etc.): se o fundo comprou um CRI ou cotas, não escreva que comprou o imóvel; numa emissão de cotas, informe só o que o texto traz (valor, preço da cota, datas); explique em uma frase simples termos técnicos (alienação, cap rate, fato relevante). "valor_total_reais" é o valor total da operação (compra, venda ou emissão) em reais, como número (ex.: 125000000), ou null se o texto não informar.';
   const bruto = await chamarIA(prompt);
   const m = bruto.match(/\{[\s\S]*\}/);
   if (!m) throw new Error('resposta da IA sem JSON');
@@ -130,6 +131,17 @@ async function principal() {
     if (tks.length) porNome.set(norm(nome), tks[0]);
   }
   diag.fundos_liquidos_com_nome = porNome.size;
+  /* o nome do fundo no FNET nem sempre é igual ao da B3: compara também sem "FII/FDO/IMOB..." e por início do nome */
+  const miolo = (s) => norm(s).replace(/[^A-Z0-9 ]/g, ' ').split(' ').filter((p) => p && !['FII', 'FDO', 'FUNDO', 'INV', 'INVEST', 'INVESTIMENTO', 'INVESTIMENTOS', 'IMOB', 'IMOBILIARIO', 'IMOBILIARIOS', 'DE', 'DO', 'DA'].includes(p)).join(' ');
+  const porMiolo = new Map([...porNome].map(([n, t]) => [miolo(n), t]));
+  const tkAprox = (nome) => {
+    const m = miolo(nome);
+    if (!m || m.length < 4) return '';
+    if (porMiolo.has(m)) return porMiolo.get(m);
+    const cand = [...porMiolo].filter(([k]) => k.length >= 4 && (k.startsWith(m + ' ') || m.startsWith(k + ' ')));
+    return cand.length === 1 ? cand[0][1] : '';
+  };
+  const tkDe = (x) => porNome.get(norm(x.nomePregao)) || porNome.get(norm((x.informacoesAdicionais || '').split(';')[0])) || tkAprox(x.nomePregao) || tkAprox((x.informacoesAdicionais || '').split(';')[0]) || '';
   /* top N: maiores por patrimônio líquido (fii-info.json); sem esse dado ainda, os de maior volume negociado */
   const info = (lerJson('fii-info.json', {}) || {}).itens || {};
   let ranking = fiis.filter((t) => info[t] && info[t].pl > 0).sort((a, b) => info[b].pl - info[a].pl), criterio = 'patrimonio_liquido';
@@ -140,7 +152,9 @@ async function principal() {
   const vistos = new Set(estado.v === VERSAO ? (estado.vistos || []) : []);
   const dl = {}; diag.lista = dl;
   const fatos = await listarFatos(dl);
-  const meus = fatos.filter((x) => porNome.has(norm(x.nomePregao)) || porNome.has(norm((x.informacoesAdicionais || '').split(';')[0])));
+  const meus = fatos.filter((x) => tkDe(x));
+  const semTk = fatos.filter((x) => !tkDe(x)).map((x) => limpa(x.nomePregao || x.descricaoFundo)).filter(Boolean);
+  if (semTk.length) diag.fatos_sem_ticker = [...new Set(semTk)].slice(0, 30);
   dl.de_fiis_liquidos = meus.length;
   const novos = meus.filter((x) => !vistos.has(String(x.id) + '|' + (x.versao || 1))).slice(0, MAX_POR_RODADA);
   const arq = lerMaterias(SAIDA);   // se o arquivo existir e estiver ilegível, para aqui (não apaga matérias)
@@ -149,7 +163,7 @@ async function principal() {
   diag.analisados = 0; diag.sem_texto = 0; diag.fora_do_escopo = 0; diag.abaixo_do_minimo = 0; diag.reprovadas = [];
   for (const x of novos) {
     const chaveDoc = String(x.id) + '|' + (x.versao || 1);
-    const tk = porNome.get(norm(x.nomePregao)) || porNome.get(norm((x.informacoesAdicionais || '').split(';')[0]));
+    const tk = tkDe(x);
     try {
       const texto = await textoDoDocumento(x.id);
       if (limpa(texto).length < 150) { diag.sem_texto++; vistos.add(chaveDoc); continue; }
@@ -157,7 +171,7 @@ async function principal() {
       diag.analisados++;
       vistos.add(chaveDoc);
       const grande = top.has(tk);
-      const aceitos = grande ? ['compra', 'venda', 'emissao', 'gestao', 'locatario'] : ['compra', 'venda'];
+      const aceitos = grande ? ['compra', 'venda', 'emissao', 'gestao', 'locatario', 'comunicado'] : ['compra', 'venda'];
       if (!aceitos.includes(j.tipo)) { diag.fora_do_escopo++; continue; }
       if (j.tipo === 'compra' || j.tipo === 'venda') {
         const val = Number(j.valor_total_reais);
@@ -176,7 +190,16 @@ async function principal() {
   if (novas.length) {
     gravarMaterias(SAIDA, novas, arq.materias || []);
   }
-  fs.writeFileSync(path.join(SAIDA, 'fatos-fii.json'), JSON.stringify({ v: VERSAO, vistos: [...vistos].slice(-3000) }));
+  /* Telegram: cada fato novo (dos 50 maiores FIIs: qualquer assunto relevante; dos demais: grandes compras e vendas) vai na hora para o canal, uma vez só */
+  const tg = new Set(estado.tg || []);
+  diag.telegram = { enviados: 0, erros: [] };
+  for (const m of novas) {
+    if (tg.has(m.chave)) continue;
+    const corpo = '🏢 FATO RELEVANTE · ' + m.tickers[0] + '\n' + m.empresa + '\n\n' + m.titulo + '\n\n' + (m.paragrafos || []).slice(0, 3).join('\n\n') + '\n\n📄 Documento oficial (FNET/B3): ' + m.fonte.link + '\n\n' + RODAPE;
+    try { await enviarTexto(corpo, { teste: process.env.TESTE === '1' }); tg.add(m.chave); diag.telegram.enviados++; }
+    catch (e) { diag.telegram.erros.push(m.tickers[0] + ': ' + e.message); }
+  }
+  fs.writeFileSync(path.join(SAIDA, 'fatos-fii.json'), JSON.stringify({ v: VERSAO, vistos: [...vistos].slice(-3000), tg: [...tg].slice(-500) }));
 }
 
 try { await principal(); } catch (e) { diag.erro = causa(e); console.error('ERRO:', diag.erro); process.exitCode = 1; }

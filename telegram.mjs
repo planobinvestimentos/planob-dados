@@ -21,6 +21,7 @@ import { gravarMateriasFii } from './materias-fii.mjs';
 import { ETFS_DESTAQUE } from './lib.mjs';
 import { msgProventos, msgResumo, chaveProvento, chaveAlt } from './proventos-msg.mjs';
 import { pegar, pegarComRetry, cripto, dorme } from './mercado.mjs';
+import { ASSINATURA_ELPIS } from './elpis-dica.mjs';
 
 const RAIZ = path.dirname(fileURLToPath(import.meta.url));
 const SAIDA = path.join(RAIZ, 'saida');
@@ -135,7 +136,7 @@ function partir(texto, max = 3900) {
   if (atual) out.push(atual);
   return out.flatMap((p) => (p.length <= max ? [p] : p.match(new RegExp('[\\s\\S]{1,' + max + '}', 'g'))));
 }
-const ASSINATURA = '\n\n📲 Participe do nosso grupo do Telegram: @planobinvestimentos';
+const ASSINATURA = ASSINATURA_ELPIS();
 async function enviar(texto) {
   for (const corpo of partir(texto)) {
     const parte = corpo + ASSINATURA;
@@ -199,7 +200,7 @@ try {
   const querNovos = faz('proventos') && liberado(18) && (ENVIAR_PROV || TESTE);
   if ((prov || doDia.length) && (querResumo || querNovos)) {
     const vistos = new Set([...(provIds || []), ...(agoraSt.enviados || [])]);
-    const liqFii = (lerJson('liquidez-fiis.json') || {}).fiis || {};   // regra: só FIIs com liquidez acima de R$ 1 milhão/dia
+    const liqFii = (lerJson('liquidez-fiis.json') || {}).fiis || {};   // regra: só FIIs com alguma liquidez (média acima de R$ 300 mil/dia; ver liquidez.mjs)
     const pv = prov || {};
     let novos = (pv.fii || []).filter((x) => liqFii[x.t] || ETFS_DESTAQUE.includes(x.t)).map((x) => Object.assign({ fonte: 'FII' }, x)).concat((pv.acoes || []).map((x) => Object.assign({ fonte: 'AÇÃO' }, x)));
     if (!TESTE) { novos = novos.filter((x) => !vistos.has(chaveProvento(x)) && !vistos.has(chaveAlt(x))); if (!provIds && !(agoraSt.enviados || []).length) novos = novos.filter((x) => x.ent === HOJE); }

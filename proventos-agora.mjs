@@ -2,7 +2,7 @@
    Roda no GitHub Actions a cada 15 minutos em dias úteis, das 9h às 20h45 (e às 21h00 e 21h15, para a consulta das ações das 21h) (workflow proventos-agora.yml):  node proventos-agora.mjs
    Como funciona:
      1) Lê a lista de documentos recentes dos FIIs no FNET (B3). Quando aparece um "Aviso aos Cotistas" novo de um FII com liquidez acima
-        de R$ 1 milhão/dia, busca o rendimento (primeiro no site da B3 para aquele fundo; se ainda não saiu lá, lê o próprio aviso do FNET).
+        de R$ 300 mil/dia, busca o rendimento (primeiro no site da B3 para aquele fundo; se ainda não saiu lá, lê o próprio aviso do FNET).
      2) A cada ~1 hora varre os FIIs líquidos e os ETFs em destaque (para pegar o que o passo 1 não viu). As AÇÕES (dividendos, JCP e bonificação)
         são consultadas só 4 vezes por dia, perto das 12h, 16h, 20h e 21h (HORAS_ACOES), porque a B3 exige uma consulta por empresa (~280).
      3) Posta o que for novo no Telegram, uma única vez por provento. Se o FII tem relatório gerencial no FNET (entregue de 7 dias antes até agora),
@@ -111,7 +111,17 @@ async function principal() {
     const tks = liquidos.filter((t) => t.startsWith(cod)).sort((a, b) => (/11$/.test(b) ? 1 : 0) - (/11$/.test(a) ? 1 : 0));
     if (tks.length) porNome.set(norm(nome), tks[0]);
   }
-  const tkDe = (x) => porNome.get(norm(x.nomePregao)) || porNome.get(norm((x.informacoesAdicionais || '').split(';')[0])) || '';
+  /* nome do fundo no FNET nem sempre é igual ao da B3 ("FII TRX REAL" x "TRX REAL ESTATE"): compara também sem "FII/FDO/IMOB..." e por início do nome */
+  const miolo = (s) => norm(s).replace(/[^A-Z0-9 ]/g, ' ').split(' ').filter((p) => p && !['FII', 'FDO', 'FUNDO', 'INV', 'INVEST', 'INVESTIMENTO', 'INVESTIMENTOS', 'IMOB', 'IMOBILIARIO', 'IMOBILIARIOS', 'DE', 'DO', 'DA'].includes(p)).join(' ');
+  const porMiolo = new Map([...porNome].map(([n, t]) => [miolo(n), t]));
+  const tkAprox = (nome) => {
+    const m = miolo(nome);
+    if (!m || m.length < 4) return '';
+    if (porMiolo.has(m)) return porMiolo.get(m);
+    const cand = [...porMiolo].filter(([k]) => k.length >= 4 && (k.startsWith(m + ' ') || m.startsWith(k + ' ')));
+    return cand.length === 1 ? cand[0][1] : '';
+  };
+  const tkDe = (x) => porNome.get(norm(x.nomePregao)) || porNome.get(norm((x.informacoesAdicionais || '').split(';')[0])) || tkAprox(x.nomePregao) || tkAprox((x.informacoesAdicionais || '').split(';')[0]) || '';
   const universo = lerJson('universo.json', { itens: {} });
   const isinParaTicker = {};
   for (const [tk, it] of Object.entries(universo.itens || {})) if (it.isin) isinParaTicker[it.isin] = tk;
@@ -132,6 +142,8 @@ async function principal() {
   const corte = somaDias(HOJE, -1);
   const novosAvisos = avisos.filter((x) => isoDeBR(x.dataEntrega) >= corte && tkDe(x) && !avisosVistos.has(chaveDoc(x)));
   diag.avisos_novos = novosAvisos.map((x) => tkDe(x) + ':' + x.id);
+  const semTk = avisos.filter((x) => isoDeBR(x.dataEntrega) >= corte && !tkDe(x));   // avisos recentes de fundos que não ligamos a um ticker (diagnóstico)
+  if (semTk.length) { diag.avisos_sem_ticker = semTk.slice(0, 25).map((x) => (x.nomePregao || x.descricaoFundo || '?') + ' #' + x.id); escreverDiag = true; }
 
   /* 2) valores: B3 para os fundos com aviso novo; varredura completa de hora em hora */
   const itens = new Map();

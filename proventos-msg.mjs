@@ -5,6 +5,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { ASSINATURA_ELPIS } from './elpis-dica.mjs';
 export const RODAPE = 'Conteúdo educacional. Não é recomendação de investimento.';
 export const ASSINATURA = '\n\n📲 Participe do nosso grupo do Telegram: @planobinvestimentos';
 
@@ -150,7 +151,7 @@ const api = () => process.env.TELEGRAM_API || 'https://api.telegram.org';
 
 export async function enviarTexto(texto, { teste = false } = {}) {
   for (const corpo of partir(texto)) {
-    const parte = corpo + ASSINATURA;
+    const parte = corpo + ASSINATURA_ELPIS();
     if (teste) { console.log('--- MENSAGEM (teste, não enviada) ---\n' + parte + '\n--- fim ---'); continue; }
     const { token, chat } = credenciais();
     const r = await fetch(api() + '/bot' + token + '/sendMessage', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: chat, text: parte, disable_web_page_preview: true }), signal: AbortSignal.timeout(20000) });

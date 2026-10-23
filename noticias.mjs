@@ -18,6 +18,7 @@ import { lerZip, lerCsv } from './lib.mjs';
 import { lerMaterias, gravarMaterias } from './materias-arquivo.mjs';
 
 import { criarGasto } from './gasto-ia.mjs';
+import { ASSINATURA_ELPIS } from './elpis-dica.mjs';
 const SAIDA = path.join(path.dirname(fileURLToPath(import.meta.url)), 'saida');
 const GASTO = criarGasto(SAIDA, process.env.TETO_IA_USD);   // teto mensal de IA das matérias (padrão US$ 5)
 fs.mkdirSync(SAIDA, { recursive: true });
@@ -290,7 +291,7 @@ function partir(texto, max = 3900) {
   if (atual) out.push(atual);
   return out.flatMap((p) => (p.length <= max ? [p] : p.match(new RegExp('[\\s\\S]{1,' + max + '}', 'g'))));
 }
-const ASSINATURA = '\n\n📲 Participe do nosso grupo do Telegram: @planobinvestimentos';
+const ASSINATURA = ASSINATURA_ELPIS();
 async function enviar(texto) {
   for (const corpo of partir(texto)) {
     const parte = corpo + ASSINATURA;
