@@ -59,6 +59,8 @@ jobs:
         if: ${{ !inputs.teste }}
         continue-on-error: true
         env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TETO_IA_USD: '5'
           TOP_FIIS: '50'                                        # os 50 maiores FIIs (por patrimônio líquido) têm matérias sobre compras, vendas, emissões, gestão e locatários
