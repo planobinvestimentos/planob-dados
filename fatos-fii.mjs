@@ -1,23 +1,33 @@
-/* Matérias do site sobre GRANDES COMPRAS E VENDAS de imóveis/ativos dos FIIs com liquidez acima de R$ 1 milhão por dia.
-   Fonte: "Fato Relevante" publicado no FNET (B3/CVM). A IA (Claude Haiku) lê o documento e só gera matéria se houver
-   compra ou venda com valor informado acima do mínimo; todo número da matéria precisa existir no documento (trava de segurança).
-   Roda no GitHub Actions junto do noticiário (12h e 15h):  node fatos-fii.mjs
+/* Matérias do site sobre os FIIs MAIORES (top 50 por patrimônio líquido) e, fora do top 50, sobre grandes compras e vendas dos FIIs líquidos.
+   Fonte: "Fato Relevante" publicado no FNET (B3/CVM). A IA (Claude Haiku) lê o documento e classifica: compra, venda, emissão de cotas,
+   gestão/estrutura (troca de gestor, fusão etc.) e imóveis/locatários. Todo número da matéria precisa existir no documento (trava de segurança).
+   - Top 50: aceita os 5 tipos acima; compra e venda precisam de valor acima de VALOR_MIN_TOP (padrão R$ 1 milhão).
+   - Demais FIIs líquidos: só compra e venda acima de VALOR_MIN (padrão R$ 10 milhões; o noticias.yml usa R$ 3 milhões).
+   O top 50 vem de saida/fii-info.json (campo pl, patrimônio líquido, atualizado pelo workflow Liquidez dos FIIs). Enquanto o campo não existir,
+   o top 50 é o dos 50 FIIs de maior volume negociado por dia.
+   Roda no GitHub Actions junto do noticiário (9h, 12h e 15h):  node fatos-fii.mjs
    Precisa de: saida/liquidez-fiis.json (workflow Liquidez dos FIIs), saida/proventos.json (traz os nomes dos fundos) e ANTHROPIC_API_KEY.
-   Opcionais: VALOR_MIN (padrão 10000000 = R$ 10 milhões), JANELA_DIAS (padrão 3), FNET_URL, ANTHROPIC_URL, ANTHROPIC_MODEL. */
+   Opcionais: TOP_FIIS (padrão 50), VALOR_MIN_TOP, VALOR_MIN, JANELA_DIAS (padrão 3), FNET_URL, ANTHROPIC_URL, ANTHROPIC_MODEL. */
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { lerMaterias, gravarMaterias } from './materias-arquivo.mjs';
+import { criarGasto } from './gasto-ia.mjs';
 
 const SAIDA = process.env.SAIDA_DIR || path.join(path.dirname(fileURLToPath(import.meta.url)), 'saida');
 fs.mkdirSync(SAIDA, { recursive: true });
+const GASTO = criarGasto(SAIDA, process.env.TETO_IA_USD);   // teto mensal de IA das matérias (padrão US$ 5), compartilhado com noticias.mjs
 const FNET = process.env.FNET_URL || 'https://fnet.bmfbovespa.com.br/fnet/publico/';
 const IA_URL = process.env.ANTHROPIC_URL || 'https://api.anthropic.com/v1/messages';
 const IA_MODELO = process.env.ANTHROPIC_MODEL || 'claude-haiku-5-5';
 const IA_CHAVE = process.env.ANTHROPIC_API_KEY || '';
 const VALOR_MIN = Number(process.env.VALOR_MIN) || 10000000;
+const VALOR_MIN_TOP = Number(process.env.VALOR_MIN_TOP) || 1000000;
+const TOP_N = Number(process.env.TOP_FIIS) || 50;
+const VERSAO = 2;   // mudou o critério: na primeira rodada reanalisa os fatos dos últimos dias (matérias já publicadas não duplicam)
+const ASSUNTO = { compra: 'Aquisição', venda: 'Venda', emissao: 'Emissão de cotas', gestao: 'Gestão e estrutura do fundo', locatario: 'Imóveis e locatários' };
 const JANELA = Number(process.env.JANELA_DIAS) || 3;
 const MAX_POR_RODADA = Number(process.env.MAX_DOCS) || 15;
 const UA = { 'User-Agent': 'PlanoB-Investimentos-dados/1.0 (uso educacional)', Accept: 'application/json, text/plain, */*' };
@@ -77,8 +87,10 @@ async function textoDoDocumento(id) {
 }
 
 async function chamarIA(prompt, maxTokens = 3000) {
+  if (GASTO.estourou()) throw new Error('teto mensal de IA das matérias atingido (US$ ' + GASTO.teto + ')');
   const r = await fetch(IA_URL, { method: 'POST', headers: { 'content-type': 'application/json', 'x-api-key': IA_CHAVE, 'anthropic-version': '2023-06-01' }, body: JSON.stringify({ model: IA_MODELO, max_tokens: maxTokens, messages: [{ role: 'user', content: prompt }] }), signal: AbortSignal.timeout(90000) }).catch((e) => { throw new Error('chamada à API da Anthropic falhou: ' + causa(e)); });
   const j = await r.json().catch(() => ({}));
+  if (j && j.usage) GASTO.somar(IA_MODELO, j.usage);
   if (!r.ok) throw new Error('IA: HTTP ' + r.status + ' ' + (j.error && j.error.message || ''));
   const t = (Array.isArray(j.content) ? j.content : []).filter((b) => b && b.type === 'text' && b.text).map((b) => b.text).join('\n').trim();
   if (!t) throw new Error('IA respondeu sem texto');
@@ -96,8 +108,8 @@ const limpa = (t) => String(t || '').replace(/\s+/g, ' ').trim();
 
 async function analisar(x, tk, texto) {
   const prompt = 'Você é redator do site Plano B Investimentos e escreve matérias curtas sobre comunicados de fundos imobiliários (FIIs) para investidores iniciantes.\nFundo: ' + limpa(x.descricaoFundo) + ' (' + tk + ')\nData de entrega: ' + limpa(x.dataEntrega) + '\n\nTexto do documento (Fato Relevante):\n' + limpa(texto).slice(0, 30000) +
-    '\n\nTarefa: descubra se o documento anuncia COMPRA (aquisição) ou VENDA (alienação) de imóveis, participações, cotas ou outros ativos pelo fundo, com valor total informado no texto. Responda apenas com JSON: {"tipo":"compra|venda|outro","valor_total_reais":número ou null,"titulo":"até 90 caracteres, factual","resumo":"até 180 caracteres","paragrafos":["3 a 5 parágrafos curtos"]}. ' +
-    'Use "outro" para qualquer assunto diferente (emissão de cotas, troca de gestor, assembleia, distribuição de rendimentos, vacância etc.) e, nesse caso, deixe titulo/resumo/paragrafos vazios. Regras da matéria: use SOMENTE o que está no documento; não invente; não dê opinião, recomendação ou previsão; copie valores, percentuais, áreas e datas EXATAMENTE como estão no texto, sem converter nem arredondar; não cite outros fundos ou empresas além das do documento; no título e no texto diga EXATAMENTE o instrumento negociado (imóvel, fração de imóvel, participação em shopping, CRI, cotas de outro fundo etc.): se o fundo comprou um CRI ou cotas, não escreva que comprou o imóvel; explique em uma frase simples termos técnicos (alienação, cap rate, fato relevante). "valor_total_reais" é o valor total da operação em reais, como número (ex.: 125000000), ou null se o texto não informar.';
+    '\n\nTarefa: classifique o documento em UM destes tipos: "compra" (aquisição de imóveis, participações, cotas ou outros ativos pelo fundo), "venda" (alienação de ativos pelo fundo), "emissao" (nova emissão ou oferta de cotas do fundo), "gestao" (troca de gestor ou administrador, incorporação, fusão ou mudança relevante na estrutura ou na política do fundo), "locatario" (rescisão, renovação, inadimplência ou vacância relevante de imóveis ou de locatários) ou "outro". Responda apenas com JSON: {"tipo":"compra|venda|emissao|gestao|locatario|outro","valor_total_reais":número ou null,"titulo":"até 90 caracteres, factual","resumo":"até 180 caracteres","paragrafos":["3 a 5 parágrafos curtos"]}. ' +
+    'Use "outro" para qualquer assunto diferente (assembleia sem decisão, distribuição de rendimentos comum, retificação, relatório etc.) e, nesse caso, deixe titulo/resumo/paragrafos vazios. Regras da matéria: use SOMENTE o que está no documento; não invente; não dê opinião, recomendação ou previsão; copie valores, percentuais, áreas e datas EXATAMENTE como estão no texto, sem converter nem arredondar; não cite outros fundos ou empresas além das do documento; no título e no texto diga EXATAMENTE o instrumento negociado (imóvel, fração de imóvel, participação em shopping, CRI, cotas de outro fundo etc.): se o fundo comprou um CRI ou cotas, não escreva que comprou o imóvel; numa emissão de cotas, informe só o que o texto traz (valor, preço da cota, datas); explique em uma frase simples termos técnicos (alienação, cap rate, fato relevante). "valor_total_reais" é o valor total da operação (compra, venda ou emissão) em reais, como número (ex.: 125000000), ou null se o texto não informar.';
   const bruto = await chamarIA(prompt);
   const m = bruto.match(/\{[\s\S]*\}/);
   if (!m) throw new Error('resposta da IA sem JSON');
@@ -118,8 +130,14 @@ async function principal() {
     if (tks.length) porNome.set(norm(nome), tks[0]);
   }
   diag.fundos_liquidos_com_nome = porNome.size;
+  /* top N: maiores por patrimônio líquido (fii-info.json); sem esse dado ainda, os de maior volume negociado */
+  const info = (lerJson('fii-info.json', {}) || {}).itens || {};
+  let ranking = fiis.filter((t) => info[t] && info[t].pl > 0).sort((a, b) => info[b].pl - info[a].pl), criterio = 'patrimonio_liquido';
+  if (ranking.length < TOP_N) { ranking = fiis.slice().sort((a, b) => (liq.fiis[b] || 0) - (liq.fiis[a] || 0)); criterio = 'volume_negociado'; }
+  const top = new Set(ranking.slice(0, TOP_N));
+  diag.top = { criterio, tamanho: top.size, fundos: [...top] };
   const estado = lerJson('fatos-fii.json', { vistos: [] });
-  const vistos = new Set(estado.vistos || []);
+  const vistos = new Set(estado.v === VERSAO ? (estado.vistos || []) : []);
   const dl = {}; diag.lista = dl;
   const fatos = await listarFatos(dl);
   const meus = fatos.filter((x) => porNome.has(norm(x.nomePregao)) || porNome.has(norm((x.informacoesAdicionais || '').split(';')[0])));
@@ -138,23 +156,27 @@ async function principal() {
       const j = await analisar(x, tk, texto);
       diag.analisados++;
       vistos.add(chaveDoc);
-      if (!['compra', 'venda'].includes(j.tipo)) { diag.fora_do_escopo++; continue; }
-      const val = Number(j.valor_total_reais);
-      if (!(val >= VALOR_MIN)) { diag.abaixo_do_minimo++; continue; }
+      const grande = top.has(tk);
+      const aceitos = grande ? ['compra', 'venda', 'emissao', 'gestao', 'locatario'] : ['compra', 'venda'];
+      if (!aceitos.includes(j.tipo)) { diag.fora_do_escopo++; continue; }
+      if (j.tipo === 'compra' || j.tipo === 'venda') {
+        const val = Number(j.valor_total_reais);
+        if (!(val >= (grande ? VALOR_MIN_TOP : VALOR_MIN))) { diag.abaixo_do_minimo++; continue; }
+      }
       if (!j.titulo || !Array.isArray(j.paragrafos) || j.paragrafos.length < 2) { diag.reprovadas.push({ id: x.id, motivo: 'matéria incompleta' }); continue; }
       const t = numerosOk(j, texto, dataISOdeBR(x.dataEntrega).slice(0, 4));
       if (!t.ok) { diag.reprovadas.push({ id: x.id, fundo: tk, numeros_fora_do_documento: t.sobra.slice(0, 8) }); continue; }
       const chave = 'fii-fato|' + chaveDoc;
       if (existentes.has(chave)) continue;
       const data = dataISOdeBR(x.dataEntrega);
-      novas.push({ slug: (data + '-' + tk + '-' + j.tipo + '-' + x.id).toLowerCase().replace(/[^a-z0-9-]+/g, '-'), chave, data, titulo: limpa(j.titulo).slice(0, 140), resumo: limpa(j.resumo).slice(0, 220), paragrafos: j.paragrafos.map(limpa).filter(Boolean).slice(0, 6), tipo: 'fato-relevante', empresa: limpa(x.descricaoFundo), tickers: [tk], setor: 'fii', fonte: { categoria: 'Fato Relevante (FNET/B3)', assunto: j.tipo === 'compra' ? 'Aquisição' : 'Venda', link: FNET + 'exibirDocumento?id=' + x.id + '&cvm=true' }, criada: new Date().toISOString() });
+      novas.push({ slug: (data + '-' + tk + '-' + j.tipo + '-' + x.id).toLowerCase().replace(/[^a-z0-9-]+/g, '-'), chave, data, titulo: limpa(j.titulo).slice(0, 140), resumo: limpa(j.resumo).slice(0, 220), paragrafos: j.paragrafos.map(limpa).filter(Boolean).slice(0, 6), tipo: 'fato-relevante', empresa: limpa(x.descricaoFundo), tickers: [tk], setor: 'fii', top50: grande, fonte: { categoria: 'Fato Relevante (FNET/B3)', assunto: ASSUNTO[j.tipo] || 'Fato relevante', link: FNET + 'exibirDocumento?id=' + x.id + '&cvm=true' }, criada: new Date().toISOString() });
     } catch (e) { diag.reprovadas.push({ id: x.id, erro: e.message }); /* não marca como visto: tenta de novo na próxima rodada */ }
   }
   diag.materias_novas = novas.length;
   if (novas.length) {
     gravarMaterias(SAIDA, novas, arq.materias || []);
   }
-  fs.writeFileSync(path.join(SAIDA, 'fatos-fii.json'), JSON.stringify({ vistos: [...vistos].slice(-3000) }));
+  fs.writeFileSync(path.join(SAIDA, 'fatos-fii.json'), JSON.stringify({ v: VERSAO, vistos: [...vistos].slice(-3000) }));
 }
 
 try { await principal(); } catch (e) { diag.erro = causa(e); console.error('ERRO:', diag.erro); process.exitCode = 1; }

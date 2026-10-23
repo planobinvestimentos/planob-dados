@@ -4,7 +4,7 @@
    Fonte (sem chave e sem custo): https://dados.cvm.gov.br/dados/FII/DOC/INF_MENSAL/DADOS/inf_mensal_fii_AAAA.zip  (arquivos "geral" e "complemento").
    O informe sai por volta do dia 10 do mês seguinte, então o valor patrimonial tem de 1 a 2 meses de defasagem (a mensagem avisa).
    Liga o ticker ao fundo pelo código ISIN (cadastro saida/universo.json). Fundo sem ISIN ou sem informe fica sem P/VP e o aviso sai normalmente.
-   Resultado: saida/fii-info.json  { gerado, itens: { HGLG11: { vp, ref, seg, cotistas } } }  e saida/fii-info-diag.json (o que foi encontrado, para conferir).
+   Resultado: saida/fii-info.json  { gerado, itens: { HGLG11: { vp, ref, seg, cotistas, pl } } }  e saida/fii-info-diag.json (o que foi encontrado, para conferir).
    Se a CVM falhar, o arquivo anterior é mantido. Opcionais: CVM_FII_URL, SAIDA_DIR, ANO_TESTE. */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -77,7 +77,8 @@ try {
     const item = {};
     if (g.seg) item.seg = g.seg;
     if (vp > 0 && vp < 100000) { item.vp = Math.round(vp * 10000) / 10000; item.ref = refMes(c.ref); } else semVp++;
-    if (c && c.cotistas > 0) item.cotistas = Math.round(c.cotistas);                 // número de cotistas
+    if (c && c.cotistas > 0) item.cotistas = Math.round(c.cotistas);   // número de cotistas
+    if (c && c.pl > 0) item.pl = Math.round(c.pl);   // patrimônio líquido em R$ (define o top 50 das matérias)
     if (item.seg || item.vp) itens[tk] = item;
   }
   Object.assign(diag, { fundos_no_informe: geral.size, tickers_ligados: Object.keys(itens).length, sem_isin_no_cadastro: semIsin, sem_valor_patrimonial: semVp, exemplo: Object.entries(itens).slice(0, 5) });

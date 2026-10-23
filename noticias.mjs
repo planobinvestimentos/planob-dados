@@ -17,7 +17,9 @@ import { fileURLToPath } from 'node:url';
 import { lerZip, lerCsv } from './lib.mjs';
 import { lerMaterias, gravarMaterias } from './materias-arquivo.mjs';
 
+import { criarGasto } from './gasto-ia.mjs';
 const SAIDA = path.join(path.dirname(fileURLToPath(import.meta.url)), 'saida');
+const GASTO = criarGasto(SAIDA, process.env.TETO_IA_USD);   // teto mensal de IA das matérias (padrão US$ 5)
 fs.mkdirSync(SAIDA, { recursive: true });
 const MODO = process.argv[2] || process.env.MODO || 'manha';
 const TESTE = process.env.TESTE === '1', FORCAR = process.env.FORCAR === '1';
@@ -228,8 +230,10 @@ async function textoDoDocumento_(link) {
   throw new Error('formato de documento não suportado');
 }
 async function chamarIA(modelo, prompt, maxTokens) {
+  if (GASTO.estourou()) throw new Error('teto mensal de IA das matérias atingido (US$ ' + GASTO.teto + '): só manchetes até o mês que vem');
   const r = await fetch(IA_URL, { method: 'POST', headers: { 'content-type': 'application/json', 'x-api-key': IA_CHAVE, 'anthropic-version': '2023-06-01' }, body: JSON.stringify({ model: modelo, max_tokens: maxTokens, messages: [{ role: 'user', content: prompt }] }), signal: AbortSignal.timeout(90000) }).catch((e) => { throw new Error('chamada à API da Anthropic falhou: ' + causa(e)); });
   const j = await r.json().catch(() => ({}));
+  if (j && j.usage) GASTO.somar(modelo, j.usage);
   if (!r.ok) throw new Error('IA (' + modelo + '): HTTP ' + r.status + ' ' + (j.error && j.error.message || ''));
   const texto = (Array.isArray(j.content) ? j.content : []).filter((b) => b && b.type === 'text' && b.text).map((b) => b.text).join('\n').trim();
   try { diag.ia_ultima = { modelo, parada: j.stop_reason, blocos: (j.content || []).map((b) => b && b.type), usado: j.usage, texto: texto.slice(0, 300) }; } catch (e) { /* ignora */ }
@@ -309,7 +313,7 @@ if (est.dia !== HOJE) est.dia = HOJE;
 if (DOW === 0 || DOW === 6) { console.log('fim de semana: sem noticiário.'); process.exit(0); }
 const REC = new Map();   // diagnóstico: o que aconteceu com cada documento recente da CVM
 const diag = { gerado: new Date().toISOString(), modo: MODO, ia: !!IA_CHAVE };
-const gravaDiag = () => { try { diag.recentes = [...REC.values()].sort((a, b) => (b.d + b.h).localeCompare(a.d + a.h)).slice(0, 120); fs.writeFileSync(path.join(SAIDA, 'noticias-diag.json'), JSON.stringify(diag, null, 1)); } catch (e) { /* ignora */ } };
+const gravaDiag = () => { try { diag.gasto_ia = GASTO.resumo(); diag.recentes = [...REC.values()].sort((a, b) => (b.d + b.h).localeCompare(a.d + a.h)).slice(0, 120); fs.writeFileSync(path.join(SAIDA, 'noticias-diag.json'), JSON.stringify(diag, null, 1)); } catch (e) { /* ignora */ } };
 try {
   if (IA_CHAVE) { try { diag.ia_teste = 'ok: ' + (await chamarIA(IA_MODELO, 'Responda apenas: ok', 10)).slice(0, 20); } catch (e) { diag.ia_teste = 'falhou: ' + causa(e); } }
   const primeira = !Array.isArray(est.enviados);
