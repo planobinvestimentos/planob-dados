@@ -1,0 +1,54 @@
+# CARTAZ DA ELPIS no Telegram, 1 vez por dia, às 20h30 (Brasília): alterna entre 3 artes (YouTube, "Converse com a Elpis", Imposto de Renda).
+# Tentativas às 20h30, 21h00 e 21h30; só a primeira que der certo envia (uma vez por dia). Horário: UTC = Brasília + 3.
+# As imagens ficam em imagens/elpis-cartaz-1.png, -2.png e -3.png e os textos em elpis-cartaz.mjs.
+name: Cartaz da Elpis (20h30)
+on:
+  schedule:
+    - cron: '30 23 * * *'   # 20h30 (Brasília)
+    - cron: '0 0 * * *'     # 21h00 (tentativa 2)
+    - cron: '30 0 * * *'    # 21h30 (tentativa 3)
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: 'Só mostrar a legenda no log, sem enviar'
+        type: boolean
+        default: false
+      forcar:
+        description: 'Ignorar o horário e o "já enviou hoje" e enviar agora'
+        type: boolean
+        default: false
+      arte:
+        description: 'Escolher a arte (1, 2 ou 3); vazio = a próxima do rodízio'
+        type: string
+        default: ''
+permissions:
+  contents: write
+concurrency:
+  group: planob-elpis-cartaz
+  cancel-in-progress: false
+jobs:
+  cartaz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Cartaz da Elpis
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TESTE: ${{ inputs.teste && '1' || '' }}
+          FORCAR: ${{ inputs.forcar && '1' || '' }}
+          INDICE_TESTE: ${{ inputs.arte }}
+        run: node elpis-cartaz.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida/elpis-cartaz.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Cartaz da Elpis: atualiza estado"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1
