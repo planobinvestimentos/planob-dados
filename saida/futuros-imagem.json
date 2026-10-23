@@ -1,27 +1,7 @@
 {
- "data": "2026-10-22",
+ "data": "2026-10-23",
  "lotes": {
   "1130": {
-   "enviado": true,
-   "itens": [
-    "setores",
-    "cripto",
-    "commodities",
-    "dolar"
-   ],
-   "falhas": []
-  },
-  "1430": {
-   "enviado": true,
-   "itens": [
-    "setores",
-    "cripto",
-    "commodities",
-    "dolar"
-   ],
-   "falhas": []
-  },
-  "1630": {
    "enviado": true,
    "itens": [
     "setores",
