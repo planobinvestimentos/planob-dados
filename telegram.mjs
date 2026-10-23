@@ -66,9 +66,11 @@ function msgBolsa(b, altas) {
   const ibov = altas && b.ibov ? 'Ibovespa (via BOVA11): ' + pct(b.ibov.v) : '';
   const gs = [['🏢 AÇÕES', b.acoes], ['🏠 FIIs DE TIJOLO', b.fiisTijolo], ['📄 FIIs DE PAPEL', b.fiisPapel], ['📦 ETFs', b.etfs]]
     .map(([n, g]) => secao(n, g && g[k], e)).filter(Boolean);
-  /* ETFs em destaque (ETHY11, COIN11): abertura, fechamento e variação, sempre, no primeiro bloco */
-  const dest = altas && Array.isArray(b.destaque) && b.destaque.length
-    ? '⭐ ETFs EM DESTAQUE\n' + b.destaque.map((x) => x.t + ': ' + (x.ab > 0 ? 'abertura ' + brl(x.ab) + ' · ' : '') + 'fechamento ' + brl(x.p) + (x.v !== null && isFinite(x.v) ? ' (' + pct(x.v) + ')' : '')).join('\n') : '';
+  /* ETFs em destaque (ETHY11, COIN11, IVVB11, BOVA11, HASH11, QBTC11 e, em dólar, VOO e QQQ): abertura, fechamento e variação, sempre, no primeiro bloco */
+  const linhasDest = [
+    ...(Array.isArray(b.destaque) ? b.destaque : []).map((x) => x.t + ': ' + (x.ab > 0 ? 'abertura ' + brl(x.ab) + ' · ' : '') + 'fechamento ' + brl(x.p) + (x.v !== null && isFinite(x.v) ? ' (' + pct(x.v) + ')' : '')),
+    ...(Array.isArray(b.exterior) ? b.exterior : []).map((x) => x.t + ': fechamento ' + usdAuto(x.p) + (x.v !== null && isFinite(x.v) ? ' (' + pct(x.v) + ')' : '') + ' · EUA')];
+  const dest = altas && linhasDest.length ? '⭐ ETFs EM DESTAQUE\n' + linhasDest.join('\n') : '';
   if (!gs.length && !dest) return '';
   return [cab, ibov, gs.join('\n\n'), dest, altas ? '' : 'Ranking completo: ' + SITE, altas ? '' : RODAPE].filter(Boolean).join('\n\n');
 }

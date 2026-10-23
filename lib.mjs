@@ -42,8 +42,50 @@ export function lerCotahist(texto) {
   return { data, precos };
 }
 /* versão completa para o ranking de altas e quedas: fechamento, volume financeiro, negócios, tipo (BDI) e espécie */
-/* ETFs que sempre aparecem no fechamento e nos avisos de proventos (mudar com a variável ETFS_DESTAQUE, separados por vírgula) */
-export const ETFS_DESTAQUE = String(process.env.ETFS_DESTAQUE || 'ETHY11,COIN11').split(',').map((s) => s.trim().toUpperCase()).filter(Boolean);
+/* ETFs da B3 que sempre aparecem no fechamento e nos avisos de proventos (mudar com a variável ETFS_DESTAQUE, separados por vírgula) */
+export const ETFS_DESTAQUE = String(process.env.ETFS_DESTAQUE || 'ETHY11,COIN11,IVVB11,BOVA11,HASH11,QBTC11,DIVO11').split(',').map((s) => s.trim().toUpperCase()).filter(Boolean);
+
+/* ETFs americanos em destaque no fechamento (preço em dólar): VOO e QQQ. Mudar com a variável ETFS_EXTERIOR, separados por vírgula.
+   Fonte: Yahoo Finance (reserva: Stooq). Só vale o pregão do dia pedido (hojeISO); em feriado nos EUA o ETF simplesmente não aparece. */
+export const ETFS_EXTERIOR = String(process.env.ETFS_EXTERIOR || 'VOO,QQQ').split(',').map((s) => s.trim().toUpperCase()).filter(Boolean);
+const diaBRT = (seg) => new Date(seg * 1000 - 3 * 3600 * 1000).toISOString().slice(0, 10);
+async function yahooExterior(tk) {
+  const base = process.env.YAHOO_URL || 'https://query1.finance.yahoo.com/v8/finance/chart/';
+  const r = await fetch(base + encodeURIComponent(tk) + '?range=5d&interval=1d', { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; PlanoB/1.0)', Accept: 'application/json' }, signal: AbortSignal.timeout(15000) });
+  if (!r.ok) throw new Error('Yahoo HTTP ' + r.status);
+  const res = (((await r.json()).chart || {}).result || [])[0];
+  const meta = res && res.meta;
+  if (!meta || !(meta.regularMarketPrice > 0) || !meta.regularMarketTime) throw new Error('Yahoo sem preço');
+  const dia = diaBRT(meta.regularMarketTime);
+  const ts = res.timestamp || [], cl = (((res.indicators || {}).quote || [])[0] || {}).close || [];
+  let ant = 0;
+  for (let i = ts.length - 1; i >= 0; i--) { if (cl[i] > 0 && diaBRT(ts[i]) < dia) { ant = cl[i]; break; } }   // último fechamento de um dia anterior
+  if (!(ant > 0)) ant = meta.previousClose || 0;
+  if (!(ant > 0)) throw new Error('Yahoo sem fechamento anterior');
+  return { p: meta.regularMarketPrice, v: Math.round((meta.regularMarketPrice / ant - 1) * 10000) / 100, dia };
+}
+async function stooqExterior(tk) {
+  const r = await fetch((process.env.STOOQ_URL || 'https://stooq.com/q/d/l/') + '?s=' + encodeURIComponent(tk.toLowerCase()) + '.us&i=d', { signal: AbortSignal.timeout(15000) });
+  if (!r.ok) throw new Error('Stooq HTTP ' + r.status);
+  const l = (await r.text()).trim().split(/\r?\n/).filter((x) => /^\d{4}-\d{2}-\d{2},/.test(x)).slice(-2).map((x) => x.split(','));
+  if (l.length < 2) throw new Error('Stooq sem dados');
+  const p = Number(l[1][4]), ant = Number(l[0][4]);
+  if (!(p > 0) || !(ant > 0)) throw new Error('Stooq sem preço');
+  return { p, v: Math.round((p / ant - 1) * 10000) / 100, dia: l[1][0] };
+}
+export async function cotacoesExterior(tickers = ETFS_EXTERIOR, hojeISO = null, avisos = null) {
+  const out = [];
+  for (const tk of tickers) {
+    let c = null, erro = '';
+    for (const fonte of [yahooExterior, stooqExterior]) {
+      try { c = await fonte(tk); if (!hojeISO || c.dia === hojeISO) break; erro = 'cotação de outro dia (' + c.dia + ')'; c = null; }
+      catch (e) { erro = e.message; c = null; }
+    }
+    if (c) out.push({ t: tk, p: c.p, v: c.v });
+    else if (avisos) avisos.push(tk + ': ' + erro);
+  }
+  return out;
+}
 export function lerCotahistBolsa(texto) {
   const itens = {};
   let data = '';

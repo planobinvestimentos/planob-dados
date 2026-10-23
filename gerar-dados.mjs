@@ -9,7 +9,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { lerZip, lerCotahist, lerCotahistBolsa, ETFS_DESTAQUE, urlCotahistDia, lerCsv, lerFundamentos } from './lib.mjs';
+import { lerZip, lerCotahist, lerCotahistBolsa, ETFS_DESTAQUE, ETFS_EXTERIOR, cotacoesExterior, urlCotahistDia, lerCsv, lerFundamentos } from './lib.mjs';
 import { atualizarUniverso, atualizarProventos } from './eventos.mjs';
 
 const SAIDA = path.join(path.dirname(fileURLToPath(import.meta.url)), 'saida');
@@ -95,6 +95,9 @@ async function bolsa(hojeBR = false) {
     if (!a) return null;
     return { t: tk, ab: a.ab, p: a.c, max: a.max, min: a.min, v: b ? Math.round((a.c / b.c - 1) * 10000) / 100 : null };
   }).filter(Boolean);
+  /* ETFs americanos em destaque (VOO, QQQ), em dólar: não vêm da B3; se a fonte falhar, o bloco só não aparece */
+  try { const av = []; saida.exterior = await cotacoesExterior(ETFS_EXTERIOR, hojeD.data, av); if (av.length) console.warn('aviso exterior:', av.join('; ')); }
+  catch (e) { saida.exterior = []; console.warn('aviso exterior:', e.message); }
   /* referência do Ibovespa: o ETF BOVA11 (o índice em si não vem nesse arquivo) */
   const bv = hojeD.itens.BOVA11, bva = antesD.itens.BOVA11;
   if (bv && bva) saida.ibov = { t: 'BOVA11', p: bv.c, v: Math.round((bv.c / bva.c - 1) * 10000) / 100 };

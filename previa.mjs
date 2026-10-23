@@ -16,7 +16,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { dorme, cripto } from './mercado.mjs';
 import { enviarTexto, num, brl, dataBR } from './proventos-msg.mjs';
-import { ETFS_DESTAQUE } from './lib.mjs';
+import { ETFS_DESTAQUE, ETFS_EXTERIOR, cotacoesExterior } from './lib.mjs';
 
 const RAIZ = path.dirname(fileURLToPath(import.meta.url));
 const SAIDA = process.env.SAIDA_DIR || path.join(RAIZ, 'saida');
@@ -154,14 +154,15 @@ function mensagem(g, ibov, destaque, cr, incluirCripto) {
 }
 
 /* fechamento rápido: duas mensagens (altas e baixas), no mesmo formato do fechamento oficial das 20h, mas avisando que a fonte é de terceiros */
-function mensagensFechamento(g, ibov, destaque) {
+function mensagensFechamento(g, ibov, destaque, exterior = []) {
   const linhas = (lista, e) => lista.map((x) => e + ' ' + x.t + ': ' + brl(x.p) + ' (' + pct(x.v) + ')');
   const nomes = [['🏢 AÇÕES', g.acoes], ['🏠 FIIs DE TIJOLO', g.fiisTijolo], ['📄 FIIs DE PAPEL', g.fiisPapel], ['📦 ETFs', g.etfs]];
   const fonteAviso = 'Números do fechamento de hoje, de fonte de terceiros (atraso de cerca de 15 minutos); podem diferir em centavos dos números oficiais da B3, que só saem à noite.';
   const monta = (altas) => {
     const k = altas ? 'altas' : 'quedas', e = altas ? '🟢' : '🔻';
     const blocos = nomes.map(([n, r]) => (r && r[k].length ? [n, ...linhas(r[k], e)].join('\n') : '')).filter(Boolean);
-    const dest = altas && destaque.length ? '⭐ ETFs EM DESTAQUE\n' + destaque.map((x) => x.t + ': fechamento ' + brl(x.p) + ' (' + pct(x.v) + ')').join('\n') : '';
+    const linhasDest = [...destaque.map((x) => x.t + ': fechamento ' + brl(x.p) + ' (' + pct(x.v) + ')'), ...exterior.map((x) => x.t + ': fechamento ' + usdAuto(x.p) + ' (' + pct(x.v) + ') · EUA')];
+    const dest = altas && linhasDest.length ? '⭐ ETFs EM DESTAQUE\n' + linhasDest.join('\n') : '';
     if (!blocos.length && !dest) return '';
     return [
       '🚪 FECHAMENTO (' + dataBR(HOJE) + ')\n' + (altas ? '⬆️ Maiores altas' : '⬇️ Maiores baixas'),
@@ -221,7 +222,10 @@ try {
   if (!Object.values(g).some((x) => x.altas.length || x.quedas.length)) { fim('nenhum ativo passou nos filtros; nada enviado'); process.exit(0); }
 
   if (FECH) {
-    const msgs = mensagensFechamento(g, ibov, destaque);
+    let exterior = [];
+    try { const av = []; exterior = await cotacoesExterior(ETFS_EXTERIOR, HOJE, av); diag.exterior = exterior.length + ' de ' + ETFS_EXTERIOR.length + (av.length ? ' (' + av.join('; ') + ')' : ''); }
+    catch (e) { diag.exterior = 'falhou: ' + e.message; }
+    const msgs = mensagensFechamento(g, ibov, destaque, exterior);
     diag.mensagem_chars = msgs.reduce((s, m) => s + m.length, 0);
     for (const m of msgs) await enviarTexto(m, { teste: TESTE });
     if (!TESTE) { slots.fech = true; gravar('previa.json', { data: HOJE, slots, fonte }); }
