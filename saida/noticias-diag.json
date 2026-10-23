@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-23T12:00:38.315Z",
+ "gerado": "2026-10-23T12:28:32.385Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -10,22 +10,22 @@
    "text"
   ],
   "usado": {
-   "input_tokens": 1614,
+   "input_tokens": 4965,
    "cache_creation_input_tokens": 0,
    "cache_read_input_tokens": 0,
    "cache_creation": {
     "ephemeral_5m_input_tokens": 0,
     "ephemeral_1h_input_tokens": 0
    },
-   "output_tokens": 2347,
+   "output_tokens": 3451,
    "output_tokens_details": {
-    "thinking_tokens": 1537
+    "thinking_tokens": 2517
    },
    "service_tier": "standard",
    "inference_geo": "global",
    "speed": "standard"
   },
-  "texto": "{\"titulo\":\"Oi informa homologação do plano de recuperação judicial da subsidiária Tahto\",\"resumo\":\"Juízo homologou em 20.10.2026 o plano de recuperação judicial da Tahto, subsidiária da Oi, que seguirá sob fiscalização por 2 (dois) anos.\",\"paragrafos\":[\"Em 20.10.2026, o Juízo da 7ª Vara Empresarial "
+  "texto": "{\"titulo\":\"Simpar (SIMH3) divulga prévia do 3T26 com alta de 11,3% na receita de serviços\",\"resumo\":\"Simpar (SIMH3) divulga prévia do 3T26 com Receita Líquida de Serviços de R$ 9.967 mm, alta de 11,3% a/a, e alavancagem de 2,8x.\",\"paragrafos\":[\"A Simpar S.A. (SIMH3) divulgou, em 23/10/2026, um Fato "
  },
  "ia_teste": "ok: ok",
  "ipe": {
@@ -75,28 +75,193 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 1516,
-  "na_janela_e_categorias": 91,
+  "linhas": 1528,
+  "na_janela_e_categorias": 94,
   "sem_cnpj": 103,
-  "entrega_mais_recente": "20261023 23/10/2026 08:56",
+  "entrega_mais_recente": "20261023 23/10/2026 09:28",
   "tentativa": 1
  },
  "fontes": {
-  "enet": 91,
+  "enet": 94,
   "ipe": 0,
-  "apos_juntar": 91
+  "apos_juntar": 94
  },
  "itens": {
-  "novos": 5,
-  "enviados_agora": 5,
+  "novos": 3,
+  "enviados_agora": 3,
   "com_ia": 0,
   "ia_falhas": 0,
   "fora_do_filtro": 0,
   "rotina_escondida": 0,
-  "materias": 5
+  "materias": 2
  },
  "filtro": "sem filtro de lucro (todas as empresas)",
+ "materias_reprovadas": [
+  {
+   "prot": "1579640",
+   "empresa": "SIMPAR S.A.",
+   "numeros_fora_do_documento": [
+    "2025"
+   ]
+  }
+ ],
  "recentes": [
+  {
+   "h": "09:28",
+   "emp": "HONEYWELL INTERNATIONAL INC.",
+   "cat": "Dados Econômico-Financeiros",
+   "tipo": "Demonstrações Financeiras Intermediárias",
+   "ass": "Demonstrações Financeiras Trimestrais",
+   "d": "2026-10-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05067-9",
+   "c5": "20260930 30/09/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:28",
+   "emp": "LOCKHEED MARTIN CORPORATION",
+   "cat": "Dados Econômico-Financeiros",
+   "tipo": "Demonstrações Financeiras Intermediárias",
+   "ass": "Demonstrações Financeiras Trimestrais",
+   "d": "2026-10-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05065-2",
+   "c5": "20260927 27/09/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:14",
+   "emp": "UNIÃO PET PARTICIPAÇÕES S.A.",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Programa de Recompra de Ações",
+   "d": "2026-10-23",
+   "st": "NOVO",
+   "c0": "02776-6",
+   "c5": "20261023 23/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:14",
+   "emp": "JSL S.A.",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Novos Contratos Assinados no 3T26",
+   "d": "2026-10-23",
+   "st": "NOVO",
+   "c0": "02202-0",
+   "c5": "20261023 23/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:12",
+   "emp": "UNIÃO PET PARTICIPAÇÕES S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Aprovação da criação e instituição de programa de recompra de ações de emissão da Companhi",
+   "d": "2026-10-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02776-6",
+   "c5": "20261022 22/10/2026 10:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:10",
+   "emp": "ENEVA S.A",
+   "cat": "Assembleia",
+   "tipo": "AGE",
+   "ass": "Protocolo e Justificação de Incorporação, Fusão ou Cisão",
+   "d": "2026-10-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02123-7",
+   "c5": "20261113 13/11/2026 11:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:08",
+   "emp": "JSL S.A.",
+   "cat": "Calendário de Eventos Corporativos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02202-0",
+   "c5": "20261231 31/12/2026",
+   "c8": "6",
+   "c9": "RE"
+  },
+  {
+   "h": "09:07",
+   "emp": "SIMPAR S.A.",
+   "cat": "Calendário de Eventos Corporativos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02500-3",
+   "c5": "20261231 31/12/2026",
+   "c8": "4",
+   "c9": "RE"
+  },
+  {
+   "h": "09:05",
+   "emp": "AUTOMOB PARTICIPAÇÕES S.A.",
+   "cat": "Calendário de Eventos Corporativos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02770-7",
+   "c5": "20261231 31/12/2026",
+   "c8": "5",
+   "c9": "RE"
+  },
+  {
+   "h": "09:05",
+   "emp": "MOVIDA PARTICIPACOES SA",
+   "cat": "Calendário de Eventos Corporativos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02382-5",
+   "c5": "20261231 31/12/2026",
+   "c8": "5",
+   "c9": "RE"
+  },
+  {
+   "h": "09:05",
+   "emp": "SIMPAR S.A.",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Prévia de resultados",
+   "d": "2026-10-23",
+   "st": "NOVO",
+   "c0": "02500-3",
+   "c5": "20261023 23/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:04",
+   "emp": "VAMOS LOCAÇÃO DE CAMINHÕES, MÁQUINAS E EQUIP. S.A.",
+   "cat": "Calendário de Eventos Corporativos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02471-6",
+   "c5": "20261231 31/12/2026",
+   "c8": "6",
+   "c9": "RE"
+  },
   {
    "h": "08:56",
    "emp": "KEPLER WEBER S.A.",
@@ -104,7 +269,7 @@
    "tipo": "Aquisição/Alienação de Participação Acionária Relevante",
    "ass": "Declaração de Aquisição de Participação Acionária Relevante",
    "d": "2026-10-23",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "00787-0",
    "c5": "20261023 23/10/2026",
    "c8": "1",
@@ -130,7 +295,7 @@
    "tipo": "-",
    "ass": "Atualizações sobre o Kinea ALLOS Malls FII e a venda de participações em Shoppings da ALLO",
    "d": "2026-10-23",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "02235-7",
    "c5": "20261023 23/10/2026",
    "c8": "1",
@@ -151,13 +316,13 @@
   },
   {
    "h": "08:34",
-   "emp": "BOOZ ALLEN HAMILTON HOLDING CORP",
+   "emp": "PHILIP MORRIS INTERNATIONAL INC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
    "ass": "10-Q",
    "d": "2026-10-23",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05809-2",
+   "c0": "05205-1",
    "c5": "20261023 23/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -203,13 +368,13 @@
   },
   {
    "h": "08:34",
-   "emp": "PHILIP MORRIS INTERNATIONAL INC",
+   "emp": "BOOZ ALLEN HAMILTON HOLDING CORP",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "10-Q",
+   "ass": "8-K",
    "d": "2026-10-23",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05205-1",
+   "c0": "05809-2",
    "c5": "20261023 23/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -219,7 +384,7 @@
    "emp": "BOOZ ALLEN HAMILTON HOLDING CORP",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "8-K",
+   "ass": "10-Q",
    "d": "2026-10-23",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05809-2",
@@ -260,7 +425,7 @@
    "tipo": "-",
    "ass": "Acordo Comercial com a AST SpaceMobile",
    "d": "2026-10-23",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "02769-3",
    "c5": "20261023 23/10/2026",
    "c8": "1",
@@ -273,8 +438,21 @@
    "tipo": "-",
    "ass": "Acordo Comercial com AST SpaceMobile",
    "d": "2026-10-23",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "02605-0",
+   "c5": "20261023 23/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "07:35",
+   "emp": "NOMURA HOLDINGS INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-10-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05240-0",
    "c5": "20261023 23/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -288,6 +466,19 @@
    "d": "2026-10-23",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05208-6",
+   "c5": "20261023 23/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "07:35",
+   "emp": "MARKETAXESS HOLDINGS INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05622-7",
    "c5": "20261023 23/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -346,13 +537,13 @@
   },
   {
    "h": "07:35",
-   "emp": "NOMURA HOLDINGS INC",
+   "emp": "RINGCENTRAL INC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "424B2",
+   "ass": "10-Q",
    "d": "2026-10-23",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05240-0",
+   "c0": "05871-8",
    "c5": "20261023 23/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -398,19 +589,6 @@
   },
   {
    "h": "07:35",
-   "emp": "MARKETAXESS HOLDINGS INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "8-K",
-   "d": "2026-10-23",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05622-7",
-   "c5": "20261023 23/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "07:35",
    "emp": "SK HYNIX INC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -418,19 +596,6 @@
    "d": "2026-10-23",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05945-0",
-   "c5": "20261023 23/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "07:35",
-   "emp": "RINGCENTRAL INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "10-Q",
-   "d": "2026-10-23",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05871-8",
    "c5": "20261023 23/10/2026",
    "c8": "1",
    "c9": "AP"

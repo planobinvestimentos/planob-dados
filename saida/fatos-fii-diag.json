@@ -1,9 +1,9 @@
 {
- "gerado": "2026-10-23T12:01:41.922Z",
+ "gerado": "2026-10-23T12:29:14.298Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 129,
  "lista": {
-  "linhas_vistas": 342,
+  "linhas_vistas": 343,
   "categorias": {
    "Relatórios": 84,
    "Assembleia": 65,
@@ -17,10 +17,10 @@
   "fatos_relevantes": 20,
   "de_fiis_liquidos": 6
  },
- "analisados": 1,
+ "analisados": 0,
  "sem_texto": 0,
  "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 1
+ "materias_novas": 0
 }
