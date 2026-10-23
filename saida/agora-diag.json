@@ -1,6 +1,6 @@
 {
- "gerado": "2026-10-23T21:56:48.224Z",
- "hora": 18,
+ "gerado": "2026-10-23T22:00:16.080Z",
+ "hora": 19,
  "fnet": {
   "linhas": 1427,
   "avisos": 132,
@@ -22,10 +22,6 @@
   "SC JGP RENDA IMOBILIÁRIA FUNDO DE INVESTIMENTO IMOBILIÁRIO #1356429"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 0,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
