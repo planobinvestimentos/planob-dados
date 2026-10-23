@@ -1,14 +1,22 @@
 {
- "gerado": "2026-10-23T00:15:17.075Z",
- "hora": 21,
- "fnet_erro": "The operation was aborted due to timeout",
+ "gerado": "2026-10-23T12:00:17.775Z",
+ "hora": 9,
  "fnet": {
-  "linhas": 0,
-  "avisos": 0,
-  "relatorios": 0
+  "linhas": 1341,
+  "avisos": 124,
+  "relatorios": 125
  },
- "avisos_novos": [],
+ "avisos_novos": [
+  "CNES11:1356590"
+ ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 0,
+  "acoes": "não consultadas"
+ },
+ "pendentes": [
+  "CNES11"
+ ],
  "novos": [],
  "pdfs": 0
 }
