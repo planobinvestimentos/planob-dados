@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-23T03:05:00.498Z",
+ "gerado": "2026-10-23T16:59:50.256Z",
  "de": "2026-10-21",
  "ate": "2026-10-23",
  "fii": {
   "fonte": "B3 (fundos listados)",
-  "fundos": 131,
+  "fundos": 132,
   "amostra": {
-   "fundo": "FII ADSH    ",
+   "fundo": "FII AUTONOMY",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -19,18 +19,18 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRADSHR04M15",
-    "paymentDate": "21/08/2026",
-    "rate": "0,02000000000",
-    "relatedTo": "JULHO/2026",
-    "approvedOn": "20/08/2026",
-    "isinCode": "BRADSHR04M15",
+    "assetIssued": "BRAIECCTF009",
+    "paymentDate": "08/10/2026",
+    "rate": "0,38000000000",
+    "relatedTo": "Setembro/2026",
+    "approvedOn": "30/09/2026",
+    "isinCode": "BRAIECCTF009",
     "label": "RENDIMENTO",
-    "lastDatePrior": "20/08/2026",
+    "lastDatePrior": "30/09/2026",
     "remarks": ""
    }
   },
-  "ok": 131,
+  "ok": 132,
   "falhas": 0,
   "semRendimentos": 3,
   "itens": 0

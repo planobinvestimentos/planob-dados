@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-21T17:14:36.449Z",
+ "gerado": "2026-10-23T17:00:37.529Z",
  "anos": {
   "2025": {
    "linhas_geral": 13678,
@@ -152,10 +152,10 @@
    ]
   }
  },
- "isins_no_cadastro": 626,
+ "isins_no_cadastro": 628,
  "fundos_no_informe": 1543,
- "tickers_ligados": 328,
- "sem_isin_no_cadastro": 1202,
+ "tickers_ligados": 330,
+ "sem_isin_no_cadastro": 1200,
  "sem_valor_patrimonial": 0,
  "exemplo": [
   [
@@ -164,7 +164,8 @@
     "seg": "Shoppings",
     "vp": 91.8885,
     "ref": "2026-09",
-    "cotistas": 3272
+    "cotistas": 3272,
+    "pl": 257301573
    }
   ],
   [
@@ -173,7 +174,8 @@
     "seg": "Multicategoria",
     "vp": 0,
     "ref": "2026-09",
-    "cotistas": 584
+    "cotistas": 584,
+    "pl": 0
    }
   ],
   [
@@ -182,7 +184,8 @@
     "seg": "Escritórios",
     "vp": 14.7369,
     "ref": "2026-09",
-    "cotistas": 2225
+    "cotistas": 2225,
+    "pl": 96009309
    }
   ],
   [
@@ -191,7 +194,8 @@
     "seg": "Shoppings",
     "vp": 110.8274,
     "ref": "2026-09",
-    "cotistas": 12926
+    "cotistas": 12926,
+    "pl": 521895159
    }
   ],
   [
@@ -200,29 +204,31 @@
     "seg": "Escritórios",
     "vp": 26.3413,
     "ref": "2026-09",
-    "cotistas": 384
+    "cotistas": 384,
+    "pl": 13381594
    }
   ]
  ],
- "liquidos": 129,
+ "liquidos": 130,
  "liquidos_com_vp": 113,
  "liquidos_sem_vp": [
-  "BTHF11",
-  "RZLC11",
   "GZIT11",
-  "BTCI11",
-  "VVCO11",
-  "MCLO11",
-  "MCRE11",
+  "PSEC11",
+  "TVRI11",
+  "RZLC11",
   "FATN11",
   "FIIP11",
+  "OXRL11",
   "CPSH11",
   "PCIP11",
-  "PSEC11",
-  "PMLL11",
-  "TVRI11",
   "KNUQ11",
-  "OXRL11"
+  "PMLL11",
+  "MCRE11",
+  "INHF11",
+  "VVCO11",
+  "BTCI11",
+  "BTHF11",
+  "MCLO11"
  ],
  "resultado": "ok"
 }
