@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-23T21:19:49.213Z",
+ "gerado": "2026-10-23T22:19:18.183Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 130,
  "top": {
@@ -59,21 +59,23 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 417,
+  "linhas_vistas": 434,
   "categorias": {
-   "Relatórios": 94,
-   "Assembleia": 80,
-   "Informes Periódicos": 75,
+   "Relatórios": 102,
+   "Assembleia": 84,
+   "Informes Periódicos": 76,
    "Aviso aos Cotistas - Estruturado": 35,
-   "Regulamento": 29,
+   "Regulamento": 30,
    "Oferta Pública de Distribuição de Cotas": 27,
-   "Fato Relevante": 23,
+   "Fato Relevante": 25,
    "Atos de Deliberação do Administrador": 21
   },
-  "fatos_relevantes": 23,
+  "fatos_relevantes": 25,
   "de_fiis_liquidos": 7
  },
  "fatos_sem_ticker": [
+  "FII IMMB",
+  "FII SUNO LG",
   "FII JHSF CJ",
   "FII RBR III",
   "FII ADSH",
