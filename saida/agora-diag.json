@@ -1,13 +1,14 @@
 {
- "gerado": "2026-10-23T20:00:16.163Z",
+ "gerado": "2026-10-23T20:15:15.108Z",
  "hora": 17,
  "fnet": {
-  "linhas": 1385,
-  "avisos": 128,
-  "relatorios": 130
+  "linhas": 1389,
+  "avisos": 129,
+  "relatorios": 131
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "LCP RENDA IMOBILIÁRIA PREFIXADA - FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1358018",
   "FII GALERIA #1357985",
   "FII NMKS #1357984",
   "FII IDUA #1357698",
