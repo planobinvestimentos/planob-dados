@@ -141,7 +141,8 @@ async function principal() {
     const cand = [...porMiolo].filter(([k]) => k.length >= 4 && (k.startsWith(m + ' ') || m.startsWith(k + ' ')));
     return cand.length === 1 ? cand[0][1] : '';
   };
-  const tkDe = (x) => porNome.get(norm(x.nomePregao)) || porNome.get(norm((x.informacoesAdicionais || '').split(';')[0])) || tkAprox(x.nomePregao) || tkAprox((x.informacoesAdicionais || '').split(';')[0]) || '';
+  const tkExato = (x) => porNome.get(norm(x.nomePregao)) || porNome.get(norm((x.informacoesAdicionais || '').split(';')[0])) || '';
+  const tkDe = (x) => tkExato(x) || tkAprox(x.nomePregao) || tkAprox((x.informacoesAdicionais || '').split(';')[0]) || '';
   /* top N: maiores por patrimônio líquido (fii-info.json); sem esse dado ainda, os de maior volume negociado */
   const info = (lerJson('fii-info.json', {}) || {}).itens || {};
   let ranking = fiis.filter((t) => info[t] && info[t].pl > 0).sort((a, b) => info[b].pl - info[a].pl), criterio = 'patrimonio_liquido';
@@ -167,6 +168,8 @@ async function principal() {
     try {
       const texto = await textoDoDocumento(x.id);
       if (limpa(texto).length < 150) { diag.sem_texto++; vistos.add(chaveDoc); continue; }
+      /* nome só parecido (não igual) ao cadastro: só aceita se o código do fundo aparecer no próprio documento; senão pode ser outro fundo */
+      if (!tkExato(x) && !new RegExp('\\b' + tk.slice(0, 4) + '\\s*11\\b|\\b' + tk + '\\b', 'i').test(texto)) { (diag.nome_parecido_sem_codigo = diag.nome_parecido_sem_codigo || []).push(tk + ' #' + x.id); vistos.add(chaveDoc); continue; }
       const j = await analisar(x, tk, texto);
       diag.analisados++;
       vistos.add(chaveDoc);

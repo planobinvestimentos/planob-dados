@@ -283,7 +283,7 @@ async function escreverMateria(d, diag) {
 
 /* ---------- mensagem e envio ---------- */
 const cab = (txt) => txt.replace(/\s+/g, ' ').trim();
-function partir(texto, max = 3900) {
+function partir(texto, max = 3700) {
   const out = []; let atual = '';
   for (const bloco of texto.split('\n\n')) {
     if ((atual + '\n\n' + bloco).length > max && atual) { out.push(atual); atual = bloco; } else atual = atual ? atual + '\n\n' + bloco : bloco;

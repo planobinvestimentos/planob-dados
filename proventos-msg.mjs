@@ -132,7 +132,7 @@ export function msgResumo(itens, data, precos = {}) {
 
 /* ---------- envio ---------- */
 const dorme = (ms) => new Promise((r) => setTimeout(r, ms));
-export function partir(texto, max = 3900) {
+export function partir(texto, max = 3700) {
   if (texto.length <= max) return [texto];
   const out = []; let atual = '';
   for (const bloco of texto.split('\n\n')) {

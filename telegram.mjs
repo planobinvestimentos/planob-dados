@@ -126,7 +126,7 @@ function msgEventos(ev) {
 }
 
 /* ---------- envio ---------- */
-function partir(texto, max = 3900) {
+function partir(texto, max = 3700) {
   if (texto.length <= max) return [texto];
   const out = []; let atual = '';
   for (const bloco of texto.split('\n\n')) {
