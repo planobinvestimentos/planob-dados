@@ -1,6 +1,6 @@
 {
- "gerado": "2026-10-23T22:55:08.424Z",
- "hora": 19,
+ "gerado": "2026-10-23T23:00:20.168Z",
+ "hora": 20,
  "fnet": {
   "linhas": 1433,
   "avisos": 132,
@@ -21,10 +21,10 @@
   "BTG PACTUAL LOGCP FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1356563",
   "SC JGP RENDA IMOBILIÁRIA FUNDO DE INVESTIMENTO IMOBILIÁRIO #1356429"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
  "varredura": {
   "fii": 0,
-  "acoes": "não consultadas"
+  "acoes": 1
  },
  "novos": [],
  "pdfs": 0
