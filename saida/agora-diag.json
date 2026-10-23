@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-23T12:00:17.775Z",
- "hora": 9,
+ "gerado": "2026-10-23T13:00:17.712Z",
+ "hora": 10,
  "fnet": {
-  "linhas": 1341,
+  "linhas": 1343,
   "avisos": 124,
-  "relatorios": 125
+  "relatorios": 126
  },
  "avisos_novos": [
   "CNES11:1356590"
