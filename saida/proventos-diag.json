@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-23T00:30:21.567Z",
+ "gerado": "2026-10-23T01:00:22.058Z",
  "de": "2026-10-20",
  "ate": "2026-10-22",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 131,
   "amostra": {
-   "fundo": "FII AUTONOMY",
+   "fundo": "FII ALIANZAC",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -19,14 +19,14 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAIECCTF009",
-    "paymentDate": "08/10/2026",
-    "rate": "0,38000000000",
-    "relatedTo": "Setembro/2026",
-    "approvedOn": "30/09/2026",
-    "isinCode": "BRAIECCTF009",
+    "assetIssued": "BRALZCCTF016",
+    "paymentDate": "23/10/2026",
+    "rate": "0,09000000000",
+    "relatedTo": "Setembro-2026/2026",
+    "approvedOn": "16/10/2026",
+    "isinCode": "BRALZCCTF016",
     "label": "RENDIMENTO",
-    "lastDatePrior": "30/09/2026",
+    "lastDatePrior": "16/10/2026",
     "remarks": ""
    }
   },
