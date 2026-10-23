@@ -1,13 +1,14 @@
 {
- "gerado": "2026-10-23T20:57:08.977Z",
- "hora": 17,
+ "gerado": "2026-10-23T21:00:16.579Z",
+ "hora": 18,
  "fnet": {
-  "linhas": 1405,
-  "avisos": 131,
+  "linhas": 1409,
+  "avisos": 132,
   "relatorios": 132
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII ADSH #1358109",
   "GOLD FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1358084",
   "FII BTSP II #1358079",
   "LCP RENDA IMOBILIÁRIA PREFIXADA - FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1358018",
@@ -21,10 +22,6 @@
   "SC JGP RENDA IMOBILIÁRIA FUNDO DE INVESTIMENTO IMOBILIÁRIO #1356429"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 0,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
