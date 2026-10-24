@@ -8,6 +8,7 @@ from playwright.sync_api import sync_playwright
 AQUI = os.path.dirname(os.path.abspath(__file__))
 IMG = os.path.join(AQUI, 'imagens', 'pizza')
 W, H = 1122, 1402
+H_SAIDA = 1220   # o Telegram corta fotos muito altas na prévia do chat (perdia a data e o rodapé); o aviso completo vai na legenda
 
 # posições medidas na arte (x0, y0, x1, y1) das caixinhas de cada fatia
 CAIXAS = {
@@ -60,19 +61,15 @@ def html_cartao(d):
             txt = ('+' if up else '−') + f'{abs(dia):.2f}'.replace('.', ',') + '%'
             conteudo = f'{seta}<span style="color:{cor};font-weight:700;font-size:21px">{txt}</span><span style="font-weight:500;font-size:15px;margin-left:6px;opacity:.95">{rot}</span>'
         p.append(f'<div class="t fit" data-w="{c["pequena"][2]-c["pequena"][0]-14}" style="{caixa(c["pequena"])}">{conteudo}</div>')
-    # rodapé da Elpis (a caixa e a foto já estão na arte)
-    p.append('<div class="t" id="rod" style="left:170px;top:1250px;width:895px;height:120px;text-align:left;justify-content:flex-start;font-weight:400;font-size:21px;line-height:1.28">'
-             '<div><b style="color:#fbbf24;font-weight:700">Elpis lembra:</b> ' + d['rodape'] + ' Os dados podem ter atraso. Rentabilidade passada não garante ganho futuro. As fatias iguais são só para comparar: não é carteira recomendada. Fontes: ' + d['fontes'] + '.</div></div>')
     css = fontes_css() + f'''*{{box-sizing:border-box;margin:0;padding:0}}html,body{{width:{W}px;height:{H}px;overflow:hidden;background:#0a1130}}
 body{{font-family:'Poppins',sans-serif;color:#fff;position:relative}}
 .t{{position:absolute;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap}}
-#rod{{white-space:normal}}'''
+'''
     js = '''<script>
 document.fonts.ready.then(()=>{
  document.querySelectorAll('.fit').forEach(el=>{const w=+el.dataset.w;let s=parseFloat(el.style.fontSize)||20;
    const inner=()=>{const r=document.createRange();r.selectNodeContents(el);return r.getBoundingClientRect().width};
    let n=0;while(inner()>w&&n++<40){s-=1;el.style.fontSize=s+'px';}});
- const r=document.getElementById('rod');let s=21,n=0;while(r.firstChild.getBoundingClientRect().height>118&&n++<30){s-=.5;r.style.fontSize=s+'px';}
  document.body.dataset.pronto='1';});
 </script>'''
     return '<html><head><meta charset="utf-8"><style>' + css + '</style></head><body>' + ''.join(p) + js + '</body></html>'
@@ -86,7 +83,7 @@ def render(html, saida):
             b = pw.chromium.launch()
         pg = b.new_page(viewport={'width': W, 'height': H}, device_scale_factor=1)
         pg.goto('file://' + arq); pg.wait_for_selector('body[data-pronto="1"]', timeout=15000); pg.wait_for_timeout(300)
-        pg.screenshot(path=saida, type='png'); b.close()
+        pg.screenshot(path=saida, type='png', clip={'x': 0, 'y': 0, 'width': W, 'height': H_SAIDA}); b.close()
     os.remove(arq)
 
 if __name__ == '__main__':

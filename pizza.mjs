@@ -255,7 +255,7 @@ try {
   const legenda = [
     `🍕 Pizza do Plano B · ${MODO === 'sabado' ? 'resumo da semana · ' : ''}${dataBR(HOJE)}`,
     `Valorização de ${ANO} até o momento, em reais:`, '', linhas, '',
-    `🌟 Elpis lembra: os dados podem ter atraso e as fatias iguais são só para comparar. Não é recomendação de compra ou venda, e rentabilidade passada não garante ganho futuro.`, '',
+    `🌟 Elpis lembra: ${dados.rodape.replace(/&amp;/g, '&')} Os dados podem ter atraso. As fatias iguais são só para comparar: não é carteira recomendada nem recomendação de compra ou venda, e rentabilidade passada não garante ganho futuro. Fontes: ${dados.fontes}.`, '',
     '📲 Participe do nosso grupo do Telegram: @planobinvestimentos',
   ].join('\n');
 

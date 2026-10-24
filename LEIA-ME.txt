@@ -1,0 +1,2 @@
+Pizza do Plano B, ajuste v3 (24/10/2026): suba SÓ estes 2 arquivos na RAIZ do repositório planob-dados (substituem os atuais). Nada mais muda.
+O que muda: o Telegram cortava a foto na prévia do chat (sumia a data do topo e o rodapé). Agora a imagem sai um pouco mais baixa (sem a caixa do rodapé) e o aviso completo, que antes ia dentro da imagem, vai na legenda, junto das fontes.
