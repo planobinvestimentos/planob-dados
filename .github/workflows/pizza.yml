@@ -1,0 +1,64 @@
+# PIZZA DO PLANO B no Telegram: placar de 4 fatias (Ibovespa, Bitcoin, S&P 500, CDI), valorização desde 1º de janeiro, tudo em reais, com números reais buscados na hora.
+#   segunda a sexta, a partir das 19h40 (Brasília): variação "no dia"
+#   sábado, a partir das 12h: variação "na semana"
+# Tentativas 30 e 60 min depois; só a primeira que der certo envia (uma vez por dia). Se uma fonte falhar, NÃO posta no canal e avisa no seu Telegram privado.
+# O relógio da Cloudflare chama este fluxo na hora certa; os horários abaixo (UTC = Brasília + 3) são a reserva.
+# Segredos: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, TELEGRAM_ALERTA_CHAT_ID (os mesmos dos outros fluxos).
+name: Pizza do Plano B (19h40 e sábado 12h)
+on:
+  schedule:
+    - cron: '40 22 * * 1-5'    # 19h40 (dias de pregão)
+    - cron: '10 23 * * 1-5'    # 20h10 (tentativa 2)
+    - cron: '40 23 * * 1-5'    # 20h40 (tentativa 3)
+    - cron: '0 15 * * 6'       # sábado 12h
+    - cron: '30 15 * * 6'      # sábado 12h30 (tentativa 2)
+    - cron: '0 16 * * 6'       # sábado 13h (tentativa 3)
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: 'dia = variação no dia; sabado = resumo da semana; vazio = decide pelo dia da semana'
+        type: choice
+        options: ['', dia, sabado]
+        default: ''
+      teste:
+        description: 'TESTE: monta o cartão e manda só para o SEU Telegram privado (não posta no canal, não grava estado)'
+        type: boolean
+        default: false
+      forcar:
+        description: 'Ignorar horário e "já enviou hoje" (posta no canal se não for teste)'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: planob-pizza
+  cancel-in-progress: false
+jobs:
+  pizza:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Instalar o desenhista (Playwright usa o Chrome que já vem no GitHub)
+        run: pip install --break-system-packages playwright || pip install playwright
+      - name: Buscar números, desenhar e enviar
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_ALERTA_CHAT_ID: ${{ secrets.TELEGRAM_ALERTA_CHAT_ID }}
+          MODO: ${{ inputs.modo }}
+          TESTE: ${{ inputs.teste && '1' || '' }}
+          FORCAR: ${{ inputs.forcar && '1' || '' }}
+        run: node pizza.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida/pizza.json saida/pizza-diag.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Pizza do Plano B: atualiza estado e diagnóstico"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1
