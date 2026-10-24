@@ -17,6 +17,7 @@ import { fileURLToPath } from 'node:url';
 import { dorme, cripto } from './mercado.mjs';
 import { enviarTexto, num, brl, dataBR } from './proventos-msg.mjs';
 import { ETFS_DESTAQUE, ETFS_EXTERIOR, cotacoesExterior } from './lib.mjs';
+import { DESEJO_SEXTA, ehSexta } from './elpis-dica.mjs';
 
 const RAIZ = path.dirname(fileURLToPath(import.meta.url));
 const SAIDA = process.env.SAIDA_DIR || path.join(RAIZ, 'saida');
@@ -172,7 +173,9 @@ function mensagensFechamento(g, ibov, destaque, exterior = []) {
       altas ? '' : RODAPE,
     ].filter(Boolean).join('\n\n');
   };
-  return [monta(true), monta(false)].filter(Boolean);
+  const msgs = [monta(true), monta(false)].filter(Boolean);
+  if (msgs.length && ehSexta(HOJE)) msgs[msgs.length - 1] += '\n\n' + DESEJO_SEXTA;   // sexta: o fechamento termina com o desejo de bom final de semana
+  return msgs;
 }
 
 /* ---------- principal ---------- */

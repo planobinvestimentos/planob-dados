@@ -21,7 +21,7 @@ import { gravarMateriasFii } from './materias-fii.mjs';
 import { ETFS_DESTAQUE } from './lib.mjs';
 import { msgProventos, msgResumo, chaveProvento, chaveAlt } from './proventos-msg.mjs';
 import { pegar, pegarComRetry, cripto, dorme } from './mercado.mjs';
-import { ASSINATURA_ELPIS } from './elpis-dica.mjs';
+import { ASSINATURA_ELPIS, DESEJO_SEXTA, ehSexta, temFotoElpis, enviarFotoElpis } from './elpis-dica.mjs';
 
 const RAIZ = path.dirname(fileURLToPath(import.meta.url));
 const SAIDA = path.join(RAIZ, 'saida');
@@ -139,9 +139,10 @@ function partir(texto, max = 3700) {
   return out.flatMap((p) => (p.length <= max ? [p] : p.match(new RegExp('[\\s\\S]{1,' + max + '}', 'g'))));
 }
 const ASSINATURA = ASSINATURA_ELPIS();
-async function enviar(texto) {
+async function enviar(texto, { elpisFoto = false } = {}) {
+  const foto = elpisFoto && temFotoElpis();   // resumo do dia: a Elpis aparece em imagem, com o "Elpis lembra" na legenda
   for (const corpo of partir(texto)) {
-    const parte = corpo + ASSINATURA;
+    const parte = corpo + (foto ? '' : ASSINATURA);
     if (TESTE) { console.log('--- MENSAGEM (teste, não enviada) ---\n' + parte + '\n--- fim ---'); continue; }
     const token = process.env.TELEGRAM_BOT_TOKEN, chat = process.env.TELEGRAM_CHAT_ID;
     if (!token || !chat) throw new Error('faltam os segredos TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID');
@@ -154,6 +155,14 @@ async function enviar(texto) {
     if (!r.ok || !j.ok) throw new Error('Telegram recusou: ' + (j.description || 'HTTP ' + r.status));
     console.log('enviado ao Telegram.');
     await dorme(1200);
+  }
+  if (foto) {
+    const token = process.env.TELEGRAM_BOT_TOKEN, chat = process.env.TELEGRAM_CHAT_ID;
+    try { await enviarFotoElpis({ token, chat, api: API, dataISO: HOJE, teste: TESTE }); }
+    catch (e) {   // se a foto falhar, a dica sai em texto, como nas outras mensagens
+      console.warn('aviso: a foto da Elpis falhou (' + e.message + '); enviando a dica em texto.');
+      await fetch(API + '/bot' + token + '/sendMessage', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: chat, text: ASSINATURA.trim(), disable_web_page_preview: true }), signal: AbortSignal.timeout(20000) }).catch(() => {});
+    }
   }
 }
 
@@ -173,9 +182,9 @@ const fechRapidoEnviado = !!(rapido && rapido.data === HOJE && rapido.slots && r
 try {
   /* 1 e 2: altas e baixas */
   if (faz('fechamento') && liberado(20) && !fimDeSemana && temBolsa && !E.fech && !fechRapidoEnviado) {
-    const a = msgBolsa(bolsa, true), b = msgBolsa(bolsa, false);
-    if (a) await enviar(a);
-    if (b) await enviar(b);
+    const msgsF = [msgBolsa(bolsa, true), msgBolsa(bolsa, false)].filter(Boolean);
+    if (msgsF.length && ehSexta(HOJE)) msgsF[msgsF.length - 1] += '\n\n' + DESEJO_SEXTA;   // sexta: fim de semana
+    for (const m of msgsF) await enviar(m);
     E.fech = true; salvar();
   }
   /* 3: dólar e cripto */
@@ -218,7 +227,7 @@ try {
       /* resumo do dia: o que saiu na hora + o que ainda não tinha saído (aparece só aqui) */
       const todos = [...doDia, ...novos.map((x) => Object.assign({}, x, { novoNoResumo: true }))].filter((x, i, a) => a.findIndex((y) => chaveProvento(y) === chaveProvento(x) || chaveAlt(y) === chaveAlt(x)) === i);
       const t = msgResumo(todos, HOJE, precos);
-      if (t) { await enviar(t); if (!TESTE) { E.resumo = true; marcar(novos); salvar(); materiasSite(todos); } }
+      if (t) { await enviar(t, { elpisFoto: true }); if (!TESTE) { E.resumo = true; marcar(novos); salvar(); materiasSite(todos); } }
       else { console.log('resumo do dia: sem proventos anunciados hoje.'); if (!TESTE) { E.resumo = true; salvar(); } }
     } else {
       const t = msgProventos(novos, HOJE, precos);
