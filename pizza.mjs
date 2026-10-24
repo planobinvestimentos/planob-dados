@@ -241,7 +241,7 @@ try {
   const dados = {
     modo: MODO, ano: String(ANO), lider, faixa: esc(faixa), ativos,
     quando: MODO === 'sabado' ? `SÁB ${dataBR(HOJE).slice(0, 5)}/${ANO} · ${hh}h${mm}` : `${dataBR(HOJE)} · ${hh}h${mm}`,
-    rodape: `rentabilidade de 01/01/${ANO} até ${dataBR(HOJE)} ` + (MODO === 'sabado' ? `(Ibovespa e S&amp;P 500 no fechamento de sexta; Bitcoin ao vivo às ${hh}h${mm}; CDI até ${dataCdi})` : `(${hh}h${mm}; CDI até ${dataCdi})`) + ', em reais, sem descontar impostos nem custos. S&amp;P 500 convertido pelo dólar; CDI bruto acumulado.',
+    rodape: `rentabilidade de 01/01/${ANO} até ${dataBR(HOJE)}, em reais, sem descontar impostos nem custos. S&amp;P 500 convertido pelo dólar; CDI até ${dataCdi}.` + (MODO === 'sabado' ? ' Ibovespa e S&amp;P 500 no fechamento de sexta.' : ''),
     fontes: [...fontesUsadas].join(', ') || 'Yahoo Finance, Banco Central',
   };
 
