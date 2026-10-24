@@ -68,6 +68,8 @@ export const CHECKS = [
     estado: () => { const j = lerJson('futuros-imagem.json'); return !!(hojeEm(j) && j.lotes && j.lotes[id] && j.lotes[id].enviado); }, explicado: () => diagExplica('futuros-imagem-diag.json') })),
   ...[['0800', '8h00', '08:50'], ['2130', '21h30', '22:20']].map(([id, rot, prazo]) => ({ id: 'medo-' + id, rotulo: 'Medo e Ganância das criptomoedas das ' + rot, fluxo: 'medo-ganancia.yml', dias: TODOS, prazo,
     estado: () => { const j = lerJson('medo-ganancia.json'); return !!(hojeEm(j) && j.slots && j.slots[id]); } })),
+  { id: 'pizza-dia', rotulo: 'Pizza do Plano B (placar de 4 fatias, 19h40)', fluxo: 'pizza.yml', dias: UTIL, b3: true, prazo: '20:50', estado: () => (lerJson('pizza.json') || {}).dia === HOJE },
+  { id: 'pizza-sabado', rotulo: 'Pizza do Plano B (resumo da semana, sábado 12h)', fluxo: 'pizza.yml', dias: [6], prazo: '13:10', estado: () => (lerJson('pizza.json') || {}).sabado === HOJE },
   { id: 'fechamento-dia', rotulo: 'Fechamento do dia (altas e baixas, rápido ou oficial)', fluxo: 'telegram.yml', dias: UTIL, b3: true, prazo: '23:50', estado: () => (hojeEm(lerJson('telegram.json')) && !!(lerJson('telegram.json').enviado || {}).fech) || (hojeEm(lerJson('previa.json')) && !!lerJson('previa.json').slots.fech) },
 ];
 
