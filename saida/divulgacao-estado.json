@@ -2,8 +2,9 @@
  "data": "2026-10-25",
  "slots": {
   "9": true,
-  "13": true
+  "13": true,
+  "19": true
  },
- "ultima": 1,
- "proximo": 2
+ "ultima": 2,
+ "proximo": 3
 }
