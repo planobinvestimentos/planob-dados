@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-25T21:52:02.406Z",
+ "gerado": "2026-10-25T22:11:44.409Z",
  "consultados": 973,
  "com_dados": 389,
  "sem_dados": 329,
@@ -37,14 +37,23 @@
   "BBOI11",
   "BBOV11"
  ],
+ "via_b3": 0,
+ "b3": {
+  "consultadas": 308,
+  "ok": 308,
+  "falhas": 0,
+  "recuperados": 0,
+  "erro": null,
+  "amostra": null
+ },
  "etfs_destaque": {
   "ETHY11": null,
-  "COIN11": [
-   12.9893,
-   12,
-   "2026-10-21",
-   0.9094
-  ],
+  "COIN11": {
+   "dpa12": 12.9893,
+   "pagamentos": 12,
+   "ultimo": "2026-10-21",
+   "fonte": "Yahoo"
+  },
   "IVVB11": null,
   "BOVA11": null,
   "HASH11": null,
