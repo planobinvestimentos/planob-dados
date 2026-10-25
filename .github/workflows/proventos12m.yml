@@ -1,0 +1,44 @@
+# PROVENTOS DOS ÚLTIMOS 12 MESES de FIIs e ETFs (alimenta o preço-teto automático da carteira do site). 1 vez por dia, de terça a sábado, 7h30 (Brasília).
+# Não envia nada ao Telegram. Escreve saida/proventos12m.json (o site lê esse arquivo). Fonte: Yahoo Finance.
+name: Proventos 12 meses (FIIs e ETFs)
+on:
+  schedule:
+    - cron: '30 10 * * 2-6'    # 7h30 (Brasília)
+  workflow_dispatch:
+    inputs:
+      teste:
+        description: 'Só mostrar o resultado no log, sem gravar'
+        type: boolean
+        default: false
+      extras:
+        description: 'Códigos a mais, separados por vírgula (ex.: ETHY11,QBTC11)'
+        type: string
+        default: ''
+permissions:
+  contents: write
+concurrency:
+  group: planob-dados
+  cancel-in-progress: false
+jobs:
+  proventos12m:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Buscar proventos de 12 meses
+        env:
+          TESTE: ${{ inputs.teste && '1' || '' }}
+          EXTRAS: ${{ inputs.extras }}
+        run: node proventos12m.mjs
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "dados-automaticos"
+          git config user.email "dados@users.noreply.github.com"
+          git add saida/proventos12m.json saida/proventos-hist.json saida/proventos12m-diag.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Proventos 12 meses: atualiza dados"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1
