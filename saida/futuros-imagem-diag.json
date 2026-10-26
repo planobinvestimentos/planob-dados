@@ -1,48 +1,52 @@
 {
- "gerado": "2026-10-26T14:50:36.684Z",
+ "gerado": "2026-10-26T17:30:41.655Z",
  "hoje": "2026-10-26",
- "hora": "11:50",
+ "hora": "14:30",
  "modo": "lote",
  "pregao": {
-  "comparaveis": 78,
+  "comparaveis": 79,
   "iguais": 1
  },
  "setores": {
   "lista_total": 12,
   "lista_nomes": [
-   "MLCX",
-   "IBOV",
-   "IFNC",
-   "IEEX",
-   "IMAT",
-   "IFIX",
-   "INDX",
-   "IMOB",
-   "IBXL",
-   "SMLL",
    "ICON",
-   "IBRA"
+   "IBOV",
+   "SMLL",
+   "IMAT",
+   "IFNC",
+   "IFIX",
+   "IEEX",
+   "IMOB",
+   "INDX",
+   "MLCX",
+   "IBRA",
+   "IBXL"
   ],
   "achados": {
+   "IEEX": {
+    "v": -17.517057850579352,
+    "s": "BMFBOVESPA:IEEX",
+    "origem": "simbolo"
+   },
    "INDX": {
-    "v": -6.2200673175455385,
+    "v": -4.177952693641649,
     "s": "BMFBOVESPA:INDX",
     "origem": "simbolo"
    },
    "IMAT": {
-    "v": -0.6326064847030886,
+    "v": 1.8543480341347922,
     "s": "BMFBOVESPA:IMAT",
     "origem": "simbolo"
    }
   },
   "faltando": [
    "ICON",
-   "IEEX",
    "IMOB",
    "IFNC"
   ]
  },
- "erro_setores": "só 2 de 6 índices setoriais vieram (faltam ICON, IEEX, IMOB, IFNC)",
+ "erro_setores": "só 3 de 6 índices setoriais vieram (faltam ICON, IMOB, IFNC)",
  "commodities": {
   "cnbc": "ok: 8 itens",
   "yahoo": "0 ok",
@@ -81,5 +85,5 @@
  "falhas": [
   "setores"
  ],
- "resultado": "painel das 11h30 enviado (cripto, commodities, dolar); sem: setores"
+ "resultado": "faltou setores: aguardando a nova tentativa (20 minutos) para enviar o painel completo"
 }
