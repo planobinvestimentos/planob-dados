@@ -1,31 +1,30 @@
 {
- "gerado": "2026-10-26T14:36:24.099Z",
+ "gerado": "2026-10-26T15:00:52.617Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
   "modelo": "claude-haiku-5-5",
   "parada": "end_turn",
   "blocos": [
-   "thinking",
    "text"
   ],
   "usado": {
-   "input_tokens": 1498,
+   "input_tokens": 17,
    "cache_creation_input_tokens": 0,
    "cache_read_input_tokens": 0,
    "cache_creation": {
     "ephemeral_5m_input_tokens": 0,
     "ephemeral_1h_input_tokens": 0
    },
-   "output_tokens": 1854,
+   "output_tokens": 4,
    "output_tokens_details": {
-    "thinking_tokens": 1190
+    "thinking_tokens": 0
    },
    "service_tier": "standard",
    "inference_geo": "global",
    "speed": "standard"
   },
-  "texto": "{\"titulo\":\"WEG anuncia aquisição do negócio Power Controls Solutions nos Estados Unidos\",\"resumo\":\"A WEG comunicou a compra do negócio de Power Controls Solutions da L&S Electric nos EUA por US$ 11 milhões, cerca de R$ 55 milhões.\",\"paragrafos\":[\"A WEG S.A. (B3: WEGE3) informou aos acionistas e ao m"
+  "texto": "ok"
  },
  "ia_teste": "ok: ok",
  "ipe": {
@@ -85,69 +84,81 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 1222,
-  "na_janela_e_categorias": 67,
-  "sem_cnpj": 65,
-  "entrega_mais_recente": "20261026 26/10/2026 11:35",
+  "linhas": 1226,
+  "na_janela_e_categorias": 68,
+  "sem_cnpj": 67,
+  "entrega_mais_recente": "20261026 26/10/2026 11:56",
   "tentativa": 1
  },
  "fontes": {
-  "enet": 67,
+  "enet": 68,
   "ipe": 49,
-  "apos_juntar": 67
+  "apos_juntar": 68
  },
  "itens": {
-  "novos": 1,
-  "enviados_agora": 1,
+  "novos": 0,
+  "enviados_agora": 0,
   "com_ia": 0,
   "ia_falhas": 0,
   "fora_do_filtro": 0,
-  "rotina_escondida": 0,
-  "materias": 1
+  "rotina_escondida": 0
  },
  "filtro": "sem filtro de lucro (todas as empresas)",
  "gasto_ia": {
   "mes": "2026-10",
   "usd": 0.0244,
-  "chamadas": 29,
+  "chamadas": 30,
   "teto_usd": 5
  },
  "recentes": [
   {
-   "h": "11:35",
-   "emp": "NORTHERN TRUST CORP",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "144",
+   "h": "11:56",
+   "emp": "VANECK GOLD MINERS ETF",
+   "cat": "Aviso aos Acionistas",
+   "tipo": "Outros avisos",
+   "ass": "Dividendos/Juros sobre Capital Próprio",
    "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05494-1",
+   "st": "sem_cnpj",
+   "c0": "07999-5",
    "c5": "20261026 26/10/2026",
    "c8": "1",
    "c9": "AP"
   },
   {
-   "h": "11:35",
-   "emp": "QUEST DIAGNOSTICS INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "144",
+   "h": "11:56",
+   "emp": "VANECK STEEL ETF",
+   "cat": "Aviso aos Acionistas",
+   "tipo": "Outros avisos",
+   "ass": "Dividendos/Juros sobre Capital Próprio",
    "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05505-0",
+   "st": "sem_ticker_para_o_cnpj",
+   "c0": "07994-4",
    "c5": "20261026 26/10/2026",
    "c8": "1",
    "c9": "AP"
   },
   {
-   "h": "11:35",
-   "emp": "STATE STREET CORP",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "144",
+   "h": "11:56",
+   "emp": "VANECK SOCIAL SENTIMENT ETF",
+   "cat": "Aviso aos Acionistas",
+   "tipo": "Outros avisos",
+   "ass": "Dividendos/Juros sobre Capital Próprio",
+   "d": "2026-10-26",
+   "st": "sem_cnpj",
+   "c0": "07997-9",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "11:54",
+   "emp": "CURY CONSTRUTORA E INCORPORADORA S.A.",
+   "cat": "Código de Conduta",
+   "tipo": "-",
+   "ass": "",
    "d": "2026-10-26",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05336-8",
+   "c0": "02510-0",
    "c5": "20261026 26/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -213,6 +224,45 @@
    "d": "2026-10-26",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05019-9",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "11:35",
+   "emp": "NORTHERN TRUST CORP",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "144",
+   "d": "2026-10-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05494-1",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "11:35",
+   "emp": "QUEST DIAGNOSTICS INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "144",
+   "d": "2026-10-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05505-0",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "11:35",
+   "emp": "STATE STREET CORP",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "144",
+   "d": "2026-10-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05336-8",
    "c5": "20261026 26/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -640,7 +690,7 @@
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
    "ass": "Aquisição do negócio de Power Controls Solutions da L&S Electric nos Estados Unidos",
    "d": "2026-10-26",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "00541-0",
    "c5": "20261026 26/10/2026",
    "c8": "1",
@@ -947,45 +997,6 @@
   },
   {
    "h": "07:35",
-   "emp": "DOVER CORP",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "424B2",
-   "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05458-5",
-   "c5": "20261026 26/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "07:35",
-   "emp": "KB FINANCIAL GROUP INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "6-K",
-   "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05683-9",
-   "c5": "20261026 26/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "07:35",
-   "emp": "ICICI BANK LTD",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "6-K",
-   "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05678-2",
-   "c5": "20261026 26/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "07:35",
    "emp": "GSK PLC.",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -1012,26 +1023,13 @@
   },
   {
    "h": "07:35",
-   "emp": "CEMEX SAB DE CV",
+   "emp": "DOVER CORP",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "6-K",
+   "ass": "424B2",
    "d": "2026-10-26",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05792-4",
-   "c5": "20261026 26/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "07:35",
-   "emp": "ZTO EXPRESS CAYMAN INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "6-K",
-   "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05716-9",
+   "c0": "05458-5",
    "c5": "20261026 26/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -1064,6 +1062,32 @@
   },
   {
    "h": "07:35",
+   "emp": "KB FINANCIAL GROUP INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-10-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05683-9",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "07:35",
+   "emp": "ICICI BANK LTD",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-10-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05678-2",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "07:35",
    "emp": "SK HYNIX INC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -1076,14 +1100,27 @@
    "c9": "AP"
   },
   {
-   "h": "07:34",
-   "emp": "JPMORGAN CHASE & CO.",
+   "h": "07:35",
+   "emp": "CEMEX SAB DE CV",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "424B2",
+   "ass": "6-K",
    "d": "2026-10-26",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05057-1",
+   "c0": "05792-4",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "07:35",
+   "emp": "ZTO EXPRESS CAYMAN INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-10-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05716-9",
    "c5": "20261026 26/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -1123,6 +1160,19 @@
    "d": "2026-10-26",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05005-9",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "07:34",
+   "emp": "JPMORGAN CHASE & CO.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-10-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05057-1",
    "c5": "20261026 26/10/2026",
    "c8": "1",
    "c9": "AP"
