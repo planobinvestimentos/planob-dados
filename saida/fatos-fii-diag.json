@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-26T18:29:18.707Z",
+ "gerado": "2026-10-26T21:21:26.658Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 133,
+  "linhas_vistas": 171,
   "categorias": {
-   "Assembleia": 27,
-   "Relatórios": 26,
-   "Informes Periódicos": 24,
+   "Relatórios": 39,
+   "Assembleia": 35,
+   "Informes Periódicos": 29,
    "Laudo de Avaliação (Conclusão de Negócio)": 18,
-   "Regulamento": 11,
-   "Fato Relevante": 6,
-   "Aviso aos Cotistas - Estruturado": 6,
-   "Oferta Pública de Distribuição de Cotas": 5
+   "Regulamento": 13,
+   "Oferta Pública de Distribuição de Cotas": 9,
+   "Atos de Deliberação do Administrador": 8,
+   "Aviso aos Cotistas - Estruturado": 8
   },
-  "fatos_relevantes": 6,
+  "fatos_relevantes": 7,
   "de_fiis_liquidos": 0
  },
  "fatos_sem_ticker": [
+  "FII HEDGEAAA",
   "FII BLUE",
   "FII IMMB",
   "FII SUNO LG",
