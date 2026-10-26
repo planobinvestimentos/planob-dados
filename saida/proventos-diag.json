@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-26T02:00:18.366Z",
+ "gerado": "2026-10-26T02:06:38.635Z",
  "de": "2026-10-23",
  "ate": "2026-10-25",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 137,
   "amostra": {
-   "fundo": "FII AFHI CRI",
+   "fundo": "FII AUTONOMY",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -19,14 +19,14 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAFHICTF005",
-    "paymentDate": "22/10/2026",
-    "rate": "1,00000000000",
-    "relatedTo": "Setembro-2026/2026",
-    "approvedOn": "15/10/2026",
-    "isinCode": "BRAFHICTF005",
+    "assetIssued": "BRAIECCTF009",
+    "paymentDate": "08/10/2026",
+    "rate": "0,38000000000",
+    "relatedTo": "Setembro/2026",
+    "approvedOn": "30/09/2026",
+    "isinCode": "BRAIECCTF009",
     "label": "RENDIMENTO",
-    "lastDatePrior": "15/10/2026",
+    "lastDatePrior": "30/09/2026",
     "remarks": ""
    }
   },
@@ -38,7 +38,7 @@
  "acoes": {
   "emissoras": 281,
   "amostra": {
-   "emissora": "ABCB",
+   "emissora": "AFLT",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -51,19 +51,19 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRABCBACNPR4",
-    "paymentDate": "12/08/2026",
-    "rate": "1,16800000000",
-    "relatedTo": "1º Semestre/2026",
-    "approvedOn": "24/06/2026",
-    "isinCode": "BRABCBACNPR4",
-    "label": "JRS CAP PROPRIO",
-    "lastDatePrior": "29/06/2026",
+    "assetIssued": "BRAFLTACNOR1",
+    "paymentDate": "31/12/2026",
+    "rate": "0,15851704140",
+    "relatedTo": "Complementar/2026",
+    "approvedOn": "21/07/2026",
+    "isinCode": "BRAFLTACNOR1",
+    "label": "DIVIDENDO",
+    "lastDatePrior": "24/07/2026",
     "remarks": ""
    }
   },
   "amostraBonificacao": {
-   "emissora": "AERI",
+   "emissora": "AGRO",
    "campos": [
     "assetIssued",
     "factor",
@@ -74,12 +74,12 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAERIACNOR4",
-    "factor": "0,05000000000",
-    "approvedOn": "11/04/2024",
-    "isinCode": "BRAERIACNOR4",
-    "label": "GRUPAMENTO",
-    "lastDatePrior": "13/05/2024",
+    "assetIssued": "BRAGROACNOR7",
+    "factor": "9.900,00000000000",
+    "approvedOn": "31/10/2007",
+    "isinCode": "BRAGROACNOR7",
+    "label": "DESDOBRAMENTO",
+    "lastDatePrior": "31/10/2007",
     "remarks": ""
    }
   },
