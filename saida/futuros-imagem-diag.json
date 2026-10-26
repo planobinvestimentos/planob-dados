@@ -1,47 +1,48 @@
 {
- "gerado": "2026-10-23T19:30:30.378Z",
- "hoje": "2026-10-23",
- "hora": "16:30",
+ "gerado": "2026-10-26T14:30:34.167Z",
+ "hoje": "2026-10-26",
+ "hora": "11:30",
  "modo": "lote",
  "pregao": {
-  "comparaveis": 78,
-  "iguais": 2
+  "comparaveis": 77,
+  "iguais": 0
  },
  "setores": {
+  "lista_total": 12,
+  "lista_nomes": [
+   "SMLL",
+   "IMAT",
+   "IEEX",
+   "IBOV",
+   "IFNC",
+   "INDX",
+   "MLCX",
+   "IBRA",
+   "IBXL",
+   "IFIX",
+   "IMOB",
+   "ICON"
+  ],
   "achados": {
-   "ICON": {
-    "v": 0.8760128635425314,
-    "s": "BMFBOVESPA:ICON",
-    "origem": "simbolo"
-   },
-   "IEEX": {
-    "v": -0.1756481388157394,
-    "s": "BMFBOVESPA:IEEX",
-    "origem": "simbolo"
-   },
    "INDX": {
-    "v": 0.23148853020657345,
+    "v": -5.631476299829477,
     "s": "BMFBOVESPA:INDX",
     "origem": "simbolo"
    },
-   "IMOB": {
-    "v": 1.9567545483245883,
-    "s": "BMFBOVESPA:IMOB",
-    "origem": "simbolo"
-   },
-   "IFNC": {
-    "v": 1.1204151484081801,
-    "s": "BMFBOVESPA:IFNC",
-    "origem": "simbolo"
-   },
    "IMAT": {
-    "v": 0.7193927737730008,
+    "v": 0.013949784021652537,
     "s": "BMFBOVESPA:IMAT",
     "origem": "simbolo"
    }
   },
-  "faltando": []
+  "faltando": [
+   "ICON",
+   "IEEX",
+   "IMOB",
+   "IFNC"
+  ]
  },
+ "erro_setores": "só 2 de 6 índices setoriais vieram (faltam ICON, IEEX, IMOB, IFNC)",
  "commodities": {
   "cnbc": "ok: 8 itens",
   "yahoo": "0 ok",
@@ -73,11 +74,12 @@
   "dxy": "cnbc"
  },
  "itens": [
-  "setores",
   "cripto",
   "commodities",
   "dolar"
  ],
- "falhas": [],
- "resultado": "painel das 16h30 enviado (setores, cripto, commodities, dolar)"
+ "falhas": [
+  "setores"
+ ],
+ "resultado": "faltou setores: aguardando a nova tentativa (20 minutos) para enviar o painel completo"
 }
