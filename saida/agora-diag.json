@@ -1,8 +1,8 @@
 {
- "gerado": "2026-10-26T22:45:16.761Z",
- "hora": 19,
+ "gerado": "2026-10-26T23:00:15.995Z",
+ "hora": 20,
  "fnet": {
-  "linhas": 609,
+  "linhas": 612,
   "avisos": 65,
   "relatorios": 129
  },
@@ -11,7 +11,11 @@
   "FII ELDORADO #1358857",
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO RIZA MALLS MASTER RESPONSABILIDADE  LIMITADA #1358696"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
+ "varredura": {
+  "fii": 0,
+  "acoes": 0
+ },
  "novos": [],
  "pdfs": 0
 }
