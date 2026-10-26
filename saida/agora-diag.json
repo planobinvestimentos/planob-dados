@@ -1,17 +1,14 @@
 {
- "gerado": "2026-10-26T19:00:17.928Z",
+ "gerado": "2026-10-26T19:33:32.358Z",
  "hora": 16,
+ "fnet_erro": "HTTP 403",
  "fnet": {
-  "linhas": 561,
-  "avisos": 63,
-  "relatorios": 113
+  "linhas": 0,
+  "avisos": 0,
+  "relatorios": 0
  },
  "avisos_novos": [],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 0,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
