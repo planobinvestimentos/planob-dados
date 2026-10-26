@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-26T12:00:21.007Z",
- "hora": 9,
+ "gerado": "2026-10-26T13:05:09.249Z",
+ "hora": 10,
  "fnet": {
-  "linhas": 545,
+  "linhas": 546,
   "avisos": 63,
-  "relatorios": 110
+  "relatorios": 111
  },
  "avisos_novos": [],
  "acoes_nesta_rodada": false,
