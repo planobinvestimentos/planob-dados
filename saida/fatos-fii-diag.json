@@ -1,7 +1,7 @@
 {
- "gerado": "2026-10-24T00:13:02.972Z",
+ "gerado": "2026-10-26T12:01:15.864Z",
  "valor_min": 3000000,
- "fundos_liquidos_com_nome": 130,
+ "fundos_liquidos_com_nome": 132,
  "top": {
   "criterio": "patrimonio_liquido",
   "tamanho": 50,
@@ -54,42 +54,31 @@
    "BROF11",
    "GTWR11",
    "VGIP11",
-   "KORE11",
-   "RBRP11"
+   "URPR11",
+   "KORE11"
   ]
  },
  "lista": {
-  "linhas_vistas": 438,
+  "linhas_vistas": 117,
   "categorias": {
-   "Relatórios": 104,
-   "Assembleia": 85,
-   "Informes Periódicos": 76,
-   "Aviso aos Cotistas - Estruturado": 35,
-   "Regulamento": 31,
-   "Oferta Pública de Distribuição de Cotas": 27,
-   "Fato Relevante": 25,
-   "Atos de Deliberação do Administrador": 21
+   "Relatórios": 23,
+   "Informes Periódicos": 22,
+   "Assembleia": 20,
+   "Laudo de Avaliação (Conclusão de Negócio)": 18,
+   "Regulamento": 8,
+   "Aviso aos Cotistas - Estruturado": 6,
+   "Fato Relevante": 5,
+   "Oferta Pública de Distribuição de Cotas": 5
   },
-  "fatos_relevantes": 25,
-  "de_fiis_liquidos": 7
+  "fatos_relevantes": 5,
+  "de_fiis_liquidos": 0
  },
  "fatos_sem_ticker": [
   "FII IMMB",
   "FII SUNO LG",
   "FII JHSF CJ",
   "FII RBR III",
-  "FII ADSH",
-  "FII APEX MS",
-  "FII JPPA CRI",
-  "FII SHOP PDP",
-  "FII LAGO PDR",
-  "FII EAGL",
-  "BRASIL ENERGIA FUNDO DE INVESTIMENTO IMOBILIÁRIO",
-  "ENERGIA REAL FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
-  "FII BRIO CRE",
-  "FII VECT REN",
-  "FII LOTUS TOWER FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
-  "FII TRCO"
+  "FII ADSH"
  ],
  "analisados": 0,
  "sem_texto": 0,
