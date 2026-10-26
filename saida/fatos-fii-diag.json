@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-26T21:21:26.658Z",
+ "gerado": "2026-10-26T22:20:05.349Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,19 +59,19 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 171,
+  "linhas_vistas": 181,
   "categorias": {
-   "Relatórios": 39,
-   "Assembleia": 35,
+   "Relatórios": 42,
+   "Assembleia": 37,
    "Informes Periódicos": 29,
    "Laudo de Avaliação (Conclusão de Negócio)": 18,
-   "Regulamento": 13,
+   "Regulamento": 15,
+   "Atos de Deliberação do Administrador": 9,
    "Oferta Pública de Distribuição de Cotas": 9,
-   "Atos de Deliberação do Administrador": 8,
-   "Aviso aos Cotistas - Estruturado": 8
+   "Fato Relevante": 8
   },
-  "fatos_relevantes": 7,
-  "de_fiis_liquidos": 0
+  "fatos_relevantes": 8,
+  "de_fiis_liquidos": 1
  },
  "fatos_sem_ticker": [
   "FII HEDGEAAA",
@@ -82,10 +82,10 @@
   "FII RBR III",
   "FII ADSH"
  ],
- "analisados": 0,
+ "analisados": 1,
  "sem_texto": 0,
  "fora_do_escopo": 0,
- "abaixo_do_minimo": 0,
+ "abaixo_do_minimo": 1,
  "reprovadas": [],
  "materias_novas": 0,
  "telegram": {
