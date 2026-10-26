@@ -1,7 +1,7 @@
 {
- "gerado": "2026-10-26T02:30:18.590Z",
- "de": "2026-10-23",
- "ate": "2026-10-25",
+ "gerado": "2026-10-26T03:07:54.638Z",
+ "de": "2026-10-24",
+ "ate": "2026-10-26",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 137,
@@ -33,7 +33,7 @@
   "ok": 137,
   "falhas": 0,
   "semRendimentos": 8,
-  "itens": 1
+  "itens": 0
  },
  "acoes": {
   "emissoras": 281,
