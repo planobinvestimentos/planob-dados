@@ -22,6 +22,17 @@
    "falhas": [
     "setores"
    ]
+  },
+  "1630": {
+   "enviado": true,
+   "itens": [
+    "cripto",
+    "commodities",
+    "dolar"
+   ],
+   "falhas": [
+    "setores"
+   ]
   }
  }
 }
