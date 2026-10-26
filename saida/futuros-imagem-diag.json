@@ -1,41 +1,41 @@
 {
- "gerado": "2026-10-26T17:53:07.654Z",
+ "gerado": "2026-10-26T19:30:44.359Z",
  "hoje": "2026-10-26",
- "hora": "14:53",
+ "hora": "16:30",
  "modo": "lote",
  "pregao": {
   "comparaveis": 79,
-  "iguais": 0
+  "iguais": 1
  },
  "setores": {
   "lista_total": 12,
   "lista_nomes": [
-   "IFIX",
-   "IFNC",
-   "IMOB",
-   "IBRA",
-   "IMAT",
-   "IBOV",
-   "ICON",
-   "INDX",
-   "IEEX",
    "IBXL",
    "SMLL",
-   "MLCX"
+   "ICON",
+   "IEEX",
+   "IFIX",
+   "IMOB",
+   "IFNC",
+   "MLCX",
+   "IMAT",
+   "INDX",
+   "IBRA",
+   "IBOV"
   ],
   "achados": {
    "IEEX": {
-    "v": -17.941346053415554,
+    "v": -18.513038189637314,
     "s": "BMFBOVESPA:IEEX",
     "origem": "simbolo"
    },
    "INDX": {
-    "v": -4.494804052534391,
+    "v": -5.169178597609472,
     "s": "BMFBOVESPA:INDX",
     "origem": "simbolo"
    },
    "IMAT": {
-    "v": 1.8812743614324083,
+    "v": 0.7211713925615215,
     "s": "BMFBOVESPA:IMAT",
     "origem": "simbolo"
    }
@@ -85,5 +85,5 @@
  "falhas": [
   "setores"
  ],
- "resultado": "painel das 14h30 enviado (cripto, commodities, dolar); sem: setores"
+ "resultado": "faltou setores: aguardando a nova tentativa (20 minutos) para enviar o painel completo"
 }
