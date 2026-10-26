@@ -1,16 +1,16 @@
 {
- "gerado": "2026-10-26T14:00:18.114Z",
- "hora": 11,
+ "gerado": "2026-10-26T15:00:17.808Z",
+ "hora": 12,
  "fnet": {
-  "linhas": 549,
+  "linhas": 553,
   "avisos": 63,
   "relatorios": 111
  },
  "avisos_novos": [],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
  "varredura": {
   "fii": 0,
-  "acoes": "não consultadas"
+  "acoes": 0
  },
  "novos": [],
  "pdfs": 0
