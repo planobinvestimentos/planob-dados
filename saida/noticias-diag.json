@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-26T22:19:47.015Z",
+ "gerado": "2026-10-26T23:21:38.121Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -10,22 +10,22 @@
    "text"
   ],
   "usado": {
-   "input_tokens": 1954,
+   "input_tokens": 2210,
    "cache_creation_input_tokens": 0,
    "cache_read_input_tokens": 0,
    "cache_creation": {
     "ephemeral_5m_input_tokens": 0,
     "ephemeral_1h_input_tokens": 0
    },
-   "output_tokens": 2526,
+   "output_tokens": 2321,
    "output_tokens_details": {
-    "thinking_tokens": 1707
+    "thinking_tokens": 1650
    },
    "service_tier": "standard",
    "inference_geo": "global",
    "speed": "standard"
   },
-  "texto": "{\"titulo\":\"Gerdau e Metalúrgica Gerdau aprovam pagamento de dividendos\",\"resumo\":\"Metalúrgica Gerdau pagará R$ 0,16 por ação e Gerdau S.A. pagará R$ 0,34 por ação. Os pagamentos ocorrerão entre 15/12/2026 e 22/12/2026.\",\"paragrafos\":[\"Os Conselhos de Administração da Gerdau S.A. e da Metalúrgica Ger"
+  "texto": "{\"titulo\":\"Profarma: acionistas controladores celebram contrato para compra de 38,18% das ações\",\"resumo\":\"Controladores da Profarma comunicaram SPA para aquisição de 38,18% do capital pela BTC Participações. A conclusão depende de aprovação do CADE.\",\"paragrafos\":[\"A Profarma Distribuidora de Produ"
  },
  "ia_teste": "ok: ok",
  "ipe": {
@@ -85,16 +85,16 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 1489,
-  "na_janela_e_categorias": 74,
+  "linhas": 1496,
+  "na_janela_e_categorias": 76,
   "sem_cnpj": 72,
-  "entrega_mais_recente": "20261026 26/10/2026 19:13",
+  "entrega_mais_recente": "20261026 26/10/2026 19:54",
   "tentativa": 1
  },
  "fontes": {
-  "enet": 74,
+  "enet": 76,
   "ipe": 49,
-  "apos_juntar": 74
+  "apos_juntar": 76
  },
  "itens": {
   "novos": 1,
@@ -108,11 +108,102 @@
  "filtro": "sem filtro de lucro (todas as empresas)",
  "gasto_ia": {
   "mes": "2026-10",
-  "usd": 0.0303,
-  "chamadas": 40,
+  "usd": 0.0333,
+  "chamadas": 43,
   "teto_usd": 5
  },
  "recentes": [
+  {
+   "h": "19:54",
+   "emp": "EDP TRANSMISSÃO GOIÁS S.A.",
+   "cat": "Documentos de Oferta de Distribuição Pública",
+   "tipo": "Anúncio de Encerramento de Distribuição Pública",
+   "ass": "Anúncio de Encerramento - 4ª Emissão EDP Transmissão Goiás",
+   "d": "2026-10-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "90015-2",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:51",
+   "emp": "RAIZEN S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Atualizações sobre o Aumento de Capital Privado",
+   "d": "2026-10-26",
+   "st": "nao_e_fato_relevante_nem_destaque",
+   "c0": "02591-7",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:34",
+   "emp": "COSTCO WHOLESALE CORPORATION",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-10-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05110-1",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:34",
+   "emp": "JABIL INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-10-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05841-6",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:34",
+   "emp": "NORFOLK SOUTHERN CORP",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-10-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05410-0",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:30",
+   "emp": "PROFARMA DISTRIB PROD FARMACEUTICOS S.A.",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Celebração de SPA",
+   "d": "2026-10-26",
+   "st": "NOVO",
+   "c0": "02034-6",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:29",
+   "emp": "ALGAR TELECOM S/A",
+   "cat": "Assembleia",
+   "tipo": "AGDEB",
+   "ass": "Ata AGDEB 12ª emissão (3ª série)",
+   "d": "2026-10-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02103-2",
+   "c5": "20261026 26/10/2026 14:00",
+   "c8": "1",
+   "c9": "AP"
+  },
   {
    "h": "19:13",
    "emp": "360 ENERGY SOLAR BRASIL S.A",
@@ -155,19 +246,6 @@
   {
    "h": "18:58",
    "emp": "VD COMÉRCIO DE VEÍCULOS LTDA",
-   "cat": "Termo de Emissão de Nota Comercial",
-   "tipo": "-",
-   "ass": "Termo de Emissão da 7ª Emissão de Notas Comerciais Escriturais da VD Comércio de Veículos ",
-   "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "91659-5",
-   "c5": "20261023 10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:58",
-   "emp": "VD COMÉRCIO DE VEÍCULOS LTDA",
    "cat": "Documentos de Oferta de Distribuição Pública",
    "tipo": "Aviso ao Mercado",
    "ass": "Aviso ao Mercado da 7ª Emissão de Notas Comerciais Escriturais da VD Comércio de Veículos ",
@@ -175,6 +253,19 @@
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "91659-5",
    "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "18:58",
+   "emp": "VD COMÉRCIO DE VEÍCULOS LTDA",
+   "cat": "Termo de Emissão de Nota Comercial",
+   "tipo": "-",
+   "ass": "Termo de Emissão da 7ª Emissão de Notas Comerciais Escriturais da VD Comércio de Veículos ",
+   "d": "2026-10-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "91659-5",
+   "c5": "20261023 10/2026",
    "c8": "1",
    "c9": "AP"
   },
@@ -284,19 +375,6 @@
   },
   {
    "h": "18:35",
-   "emp": "GOLDMAN SACHS GROUP INC.",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "424B2",
-   "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05009-1",
-   "c5": "20261026 26/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:35",
    "emp": "BANK OF AMERICA CORPORATION",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -304,6 +382,19 @@
    "d": "2026-10-26",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05005-9",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "18:35",
+   "emp": "GOLDMAN SACHS GROUP INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-10-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05009-1",
    "c5": "20261026 26/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -388,6 +479,19 @@
   },
   {
    "h": "18:35",
+   "emp": "JEFFERIES FINANCIAL GROUP INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-10-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05560-3",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "18:35",
    "emp": "DOVER CORP",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -447,19 +551,6 @@
    "d": "2026-10-26",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05592-1",
-   "c5": "20261026 26/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:35",
-   "emp": "JEFFERIES FINANCIAL GROUP INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "424B2",
-   "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05560-3",
    "c5": "20261026 26/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -614,7 +705,7 @@
    "tipo": "Outros avisos",
    "ass": "Dividendos/Juros sobre Capital Próprio",
    "d": "2026-10-26",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "00865-6",
    "c5": "20261026 26/10/2026",
    "c8": "1",
@@ -935,7 +1026,7 @@
   {
    "h": "17:45",
    "emp": "SAO MARTINHO S.A.",
-   "cat": "Política de Dividendos",
+   "cat": "Política para Contratação de Serviços Extra-Auditoria de seus Auditores Independentes",
    "tipo": "-",
    "ass": "",
    "d": "2026-10-26",
@@ -948,7 +1039,7 @@
   {
    "h": "17:45",
    "emp": "SAO MARTINHO S.A.",
-   "cat": "Política para Contratação de Serviços Extra-Auditoria de seus Auditores Independentes",
+   "cat": "Política de Dividendos",
    "tipo": "-",
    "ass": "",
    "d": "2026-10-26",
@@ -1025,6 +1116,19 @@
   },
   {
    "h": "17:38",
+   "emp": "MSCI INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-10-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05568-9",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "17:38",
    "emp": "JEFFERIES FINANCIAL GROUP INC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -1045,6 +1149,19 @@
    "d": "2026-10-26",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05554-9",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "17:38",
+   "emp": "WHIRLPOOL CORP",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05592-1",
    "c5": "20261026 26/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -1090,14 +1207,14 @@
   },
   {
    "h": "17:38",
-   "emp": "MSCI INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "4",
+   "emp": "AEROPORTO INTERNACIONAL DO RIO S.A.",
+   "cat": "Dados Econômico-Financeiros",
+   "tipo": "Demonstrações Financeiras Anuais Completas",
+   "ass": "",
    "d": "2026-10-26",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05568-9",
-   "c5": "20261026 26/10/2026",
+   "c0": "91806-6",
+   "c5": "20251231 31/12/2025",
    "c8": "1",
    "c9": "AP"
   },
@@ -1155,19 +1272,6 @@
   },
   {
    "h": "17:38",
-   "emp": "WHIRLPOOL CORP",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "8-K",
-   "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05592-1",
-   "c5": "20261026 26/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "17:38",
    "emp": "JAZZ PHARMACEUTICALS PLC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -1215,19 +1319,6 @@
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05751-7",
    "c5": "20261026 26/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "17:38",
-   "emp": "AEROPORTO INTERNACIONAL DO RIO S.A.",
-   "cat": "Dados Econômico-Financeiros",
-   "tipo": "Demonstrações Financeiras Anuais Completas",
-   "ass": "",
-   "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "91806-6",
-   "c5": "20251231 31/12/2025",
    "c8": "1",
    "c9": "AP"
   },
@@ -1350,6 +1441,19 @@
   },
   {
    "h": "17:37",
+   "emp": "WELLTOWER INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05435-6",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "17:37",
    "emp": "MARSH & MCLENNAN COS INC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -1415,13 +1519,13 @@
   },
   {
    "h": "17:37",
-   "emp": "WELLTOWER INC",
+   "emp": "PUBLIC STORAGE",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
    "ass": "8-K",
    "d": "2026-10-26",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05435-6",
+   "c0": "05501-8",
    "c5": "20261026 26/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -1479,14 +1583,14 @@
    "c9": "AP"
   },
   {
-   "h": "17:37",
-   "emp": "PUBLIC STORAGE",
+   "h": "17:36",
+   "emp": "ISHARES BROAD USD INVESTMENT GRADE CORP BOND ETF",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "8-K",
+   "ass": "Constituintes",
    "d": "2026-10-26",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05501-8",
+   "c0": "05009-9",
    "c5": "20261026 26/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -1545,71 +1649,6 @@
   },
   {
    "h": "17:36",
-   "emp": "ISHARES BROAD USD INVESTMENT GRADE CORP BOND ETF",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Constituintes",
-   "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05009-9",
-   "c5": "20261026 26/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "17:36",
-   "emp": "MICROSOFT CORPORATION",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "PX14A6G",
-   "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05015-6",
-   "c5": "20261026 26/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "17:36",
-   "emp": "CITIGROUP INC.",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Documento Diversos",
-   "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05010-5",
-   "c5": "20261026 26/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "17:36",
-   "emp": "WELLS FARGO & COMPANY",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "FWP",
-   "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05013-0",
-   "c5": "20261026 26/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "17:36",
-   "emp": "PROCTER & GAMBLE COMPANY",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "4",
-   "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05019-9",
-   "c5": "20261026 26/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "17:36",
    "emp": "NETFLIX, INC.",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -1623,52 +1662,13 @@
   },
   {
    "h": "17:36",
-   "emp": "JPMORGAN CHASE & CO.",
+   "emp": "MICROSOFT CORPORATION",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Documento Diversos",
+   "ass": "PX14A6G",
    "d": "2026-10-26",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05057-1",
-   "c5": "20261026 26/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "17:36",
-   "emp": "META PLATFORMS, INC.",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "144",
-   "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05073-3",
-   "c5": "20261026 26/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "17:36",
-   "emp": "AMERICAN AIRLINES GROUP INC.",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "SCHEDULE 13D",
-   "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05144-6",
-   "c5": "20261026 26/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "17:36",
-   "emp": "BANK OF AMERICA CORPORATION",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Documento Diversos",
-   "d": "2026-10-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05005-9",
+   "c0": "05015-6",
    "c5": "20261026 26/10/2026",
    "c8": "1",
    "c9": "AP"

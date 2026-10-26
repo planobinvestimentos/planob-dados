@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-26T22:20:05.349Z",
+ "gerado": "2026-10-26T23:21:56.259Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 181,
+  "linhas_vistas": 186,
   "categorias": {
    "Relatórios": 42,
-   "Assembleia": 37,
+   "Assembleia": 39,
    "Informes Periódicos": 29,
    "Laudo de Avaliação (Conclusão de Negócio)": 18,
-   "Regulamento": 15,
-   "Atos de Deliberação do Administrador": 9,
-   "Oferta Pública de Distribuição de Cotas": 9,
-   "Fato Relevante": 8
+   "Regulamento": 16,
+   "Atos de Deliberação do Administrador": 10,
+   "Fato Relevante": 9,
+   "Oferta Pública de Distribuição de Cotas": 9
   },
-  "fatos_relevantes": 8,
+  "fatos_relevantes": 9,
   "de_fiis_liquidos": 1
  },
  "fatos_sem_ticker": [
+  "FII ZAVIT C",
   "FII HEDGEAAA",
   "FII BLUE",
   "FII IMMB",
@@ -82,10 +83,10 @@
   "FII RBR III",
   "FII ADSH"
  ],
- "analisados": 1,
+ "analisados": 0,
  "sem_texto": 0,
  "fora_do_escopo": 0,
- "abaixo_do_minimo": 1,
+ "abaixo_do_minimo": 0,
  "reprovadas": [],
  "materias_novas": 0,
  "telegram": {
