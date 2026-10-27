@@ -1,13 +1,14 @@
 {
- "gerado": "2026-10-27T18:06:12.500Z",
+ "gerado": "2026-10-27T18:15:19.242Z",
  "hora": 15,
  "fnet": {
-  "linhas": 638,
-  "avisos": 65,
+  "linhas": 639,
+  "avisos": 66,
   "relatorios": 138
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII SUNO LG #1359403",
   "FII ELDORADO #1358857",
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO RIZA MALLS MASTER RESPONSABILIDADE  LIMITADA #1358696"
  ],
