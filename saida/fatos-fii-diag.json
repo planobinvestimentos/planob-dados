@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-27T12:36:27.922Z",
+ "gerado": "2026-10-27T15:03:03.205Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,14 +59,14 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 101,
+  "linhas_vistas": 109,
   "categorias": {
-   "Relatórios": 25,
-   "Assembleia": 21,
+   "Relatórios": 27,
+   "Assembleia": 22,
    "Laudo de Avaliação (Conclusão de Negócio)": 18,
-   "Regulamento": 9,
+   "Regulamento": 11,
+   "Oferta Pública de Distribuição de Cotas": 8,
    "Informes Periódicos": 7,
-   "Oferta Pública de Distribuição de Cotas": 6,
    "Fato Relevante": 5,
    "Atos de Deliberação do Administrador": 5
   },
