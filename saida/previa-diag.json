@@ -1,22 +1,23 @@
 {
- "gerado": "2026-10-27T20:00:18.598Z",
+ "gerado": "2026-10-27T21:20:17.690Z",
  "hoje": "2026-10-27",
- "hora": 17,
+ "hora": 18,
  "acoes_no_cadastro": 364,
- "tradingview": 1033,
+ "tradingview": 1037,
  "fonte": "TradingView",
- "cotacoes": 1033,
+ "cotacoes": 1037,
  "comparacao_d1": {
-  "n": 942,
-  "iguais": 78,
+  "n": 946,
+  "iguais": 75,
   "parado": false
  },
  "universo": {
-  "acoes": 194,
+  "acoes": 192,
   "fiisTijolo": 27,
   "fiisPapel": 26,
   "etfs": 26
  },
- "mensagem_chars": 1319,
- "resultado": "edição das 17h enviada (fonte: TradingView)"
+ "exterior": "2 de 2",
+ "mensagem_chars": 2007,
+ "resultado": "fechamento rápido enviado (fonte: TradingView)"
 }
