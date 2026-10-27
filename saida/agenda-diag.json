@@ -1,16 +1,12 @@
 {
- "gerado": "2026-10-26T10:00:32.274Z",
- "modo": "semana",
- "hoje": "2026-10-26",
- "global_recebidos": 96,
- "global": "ok (13 de alto impacto)",
+ "gerado": "2026-10-27T09:30:30.221Z",
+ "modo": "hoje",
+ "hoje": "2026-10-27",
+ "global_recebidos": 97,
+ "global": "ok (0 de alto impacto)",
  "ibge": "falhou: fetch failed",
- "regras": "ok (2)",
+ "regras": "ok (0)",
  "manual": "ok (0)",
- "traducao_ia": "falhou: Unexpected end of JSON input",
- "eventos": 10,
- "por_fonte": {
-  "regra": 2,
-  "global": 8
- }
+ "eventos": 0,
+ "por_fonte": {}
 }
