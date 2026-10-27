@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-27T02:04:34.056Z",
+ "gerado": "2026-10-27T02:21:11.216Z",
  "de": "2026-10-24",
  "ate": "2026-10-26",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 139,
   "amostra": {
-   "fundo": "FII AFHI CRI",
+   "fundo": "FII ALIANZAC",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -19,14 +19,14 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAFHICTF005",
-    "paymentDate": "22/10/2026",
-    "rate": "1,00000000000",
+    "assetIssued": "BRALZCCTF016",
+    "paymentDate": "23/10/2026",
+    "rate": "0,09000000000",
     "relatedTo": "Setembro-2026/2026",
-    "approvedOn": "15/10/2026",
-    "isinCode": "BRAFHICTF005",
+    "approvedOn": "16/10/2026",
+    "isinCode": "BRALZCCTF016",
     "label": "RENDIMENTO",
-    "lastDatePrior": "15/10/2026",
+    "lastDatePrior": "16/10/2026",
     "remarks": ""
    }
   },
