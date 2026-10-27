@@ -1,8 +1,8 @@
 {
- "gerado": "2026-10-27T22:00:18.940Z",
+ "gerado": "2026-10-27T22:07:08.983Z",
  "hora": 19,
  "fnet": {
-  "linhas": 681,
+  "linhas": 683,
   "avisos": 66,
   "relatorios": 157
  },
@@ -13,10 +13,6 @@
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO RIZA MALLS MASTER RESPONSABILIDADE  LIMITADA #1358696"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 0,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
