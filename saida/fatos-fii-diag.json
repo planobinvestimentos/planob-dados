@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-27T22:24:59.319Z",
+ "gerado": "2026-10-27T23:24:24.227Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,23 +59,24 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 163,
+  "linhas_vistas": 171,
   "categorias": {
-   "Relatórios": 46,
-   "Assembleia": 32,
+   "Relatórios": 47,
+   "Assembleia": 34,
    "Laudo de Avaliação (Conclusão de Negócio)": 20,
-   "Regulamento": 17,
+   "Regulamento": 18,
    "Oferta Pública de Distribuição de Cotas": 13,
-   "Atos de Deliberação do Administrador": 10,
-   "Informes Periódicos": 8,
-   "Fato Relevante": 6
+   "Atos de Deliberação do Administrador": 11,
+   "Fato Relevante": 8,
+   "Informes Periódicos": 8
   },
-  "fatos_relevantes": 6,
+  "fatos_relevantes": 8,
   "de_fiis_liquidos": 1
  },
  "fatos_sem_ticker": [
-  "BIOTIC FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
   "FII SUNO LG",
+  "FII REC REND",
+  "BIOTIC FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
   "FII ZAVIT C",
   "FII HEDGEAAA",
   "FII BLUE"
