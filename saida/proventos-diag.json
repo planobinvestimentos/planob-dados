@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-27T01:00:17.961Z",
+ "gerado": "2026-10-27T01:13:09.009Z",
  "de": "2026-10-24",
  "ate": "2026-10-26",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 139,
   "amostra": {
-   "fundo": "FII AUTONOMY",
+   "fundo": "FII AFHI CRI",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -19,14 +19,14 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAIECCTF009",
-    "paymentDate": "08/10/2026",
-    "rate": "0,38000000000",
-    "relatedTo": "Setembro/2026",
-    "approvedOn": "30/09/2026",
-    "isinCode": "BRAIECCTF009",
+    "assetIssued": "BRAFHICTF005",
+    "paymentDate": "22/10/2026",
+    "rate": "1,00000000000",
+    "relatedTo": "Setembro-2026/2026",
+    "approvedOn": "15/10/2026",
+    "isinCode": "BRAFHICTF005",
     "label": "RENDIMENTO",
-    "lastDatePrior": "30/09/2026",
+    "lastDatePrior": "15/10/2026",
     "remarks": ""
    }
   },
@@ -38,7 +38,7 @@
  "acoes": {
   "emissoras": 283,
   "amostra": {
-   "emissora": "ABCB",
+   "emissora": "AFLT",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -51,14 +51,14 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRABCBACNPR4",
-    "paymentDate": "12/08/2026",
-    "rate": "1,16800000000",
-    "relatedTo": "1º Semestre/2026",
-    "approvedOn": "24/06/2026",
-    "isinCode": "BRABCBACNPR4",
-    "label": "JRS CAP PROPRIO",
-    "lastDatePrior": "29/06/2026",
+    "assetIssued": "BRAFLTACNOR1",
+    "paymentDate": "31/12/2026",
+    "rate": "0,15851704140",
+    "relatedTo": "Complementar/2026",
+    "approvedOn": "21/07/2026",
+    "isinCode": "BRAFLTACNOR1",
+    "label": "DIVIDENDO",
+    "lastDatePrior": "24/07/2026",
     "remarks": ""
    }
   },
