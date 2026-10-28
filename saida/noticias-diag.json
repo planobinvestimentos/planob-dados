@@ -1,31 +1,30 @@
 {
- "gerado": "2026-10-27T23:23:46.296Z",
+ "gerado": "2026-10-28T00:20:28.877Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
   "modelo": "claude-haiku-5-5",
   "parada": "end_turn",
   "blocos": [
-   "thinking",
    "text"
   ],
   "usado": {
-   "input_tokens": 3255,
+   "input_tokens": 17,
    "cache_creation_input_tokens": 0,
    "cache_read_input_tokens": 0,
    "cache_creation": {
     "ephemeral_5m_input_tokens": 0,
     "ephemeral_1h_input_tokens": 0
    },
-   "output_tokens": 2461,
+   "output_tokens": 4,
    "output_tokens_details": {
-    "thinking_tokens": 1648
+    "thinking_tokens": 0
    },
    "service_tier": "standard",
    "inference_geo": "global",
    "speed": "standard"
   },
-  "texto": "{\"titulo\":\"Sabesp conclui incorporação de ações da EMAE e credita novas ações SBSP3 a antigos acionistas\",\"resumo\":\"Sabesp e EMAE informam a consumação da incorporação de ações; antigos acionistas da EMAE recebem ações SBSP3 e o capital social da Sabesp é aumentado.\",\"paragrafos\":[\"A Companhia de Sa"
+  "texto": "ok"
  },
  "ia_teste": "ok: ok",
  "ipe": {
@@ -83,10 +82,10 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 1647,
+  "linhas": 1650,
   "na_janela_e_categorias": 69,
   "sem_cnpj": 75,
-  "entrega_mais_recente": "20261027 27/10/2026 20:21",
+  "entrega_mais_recente": "20261027 27/10/2026 20:42",
   "tentativa": 1
  },
  "fontes": {
@@ -95,22 +94,60 @@
   "apos_juntar": 69
  },
  "itens": {
-  "novos": 3,
-  "enviados_agora": 3,
+  "novos": 0,
+  "enviados_agora": 0,
   "com_ia": 0,
   "ia_falhas": 0,
   "fora_do_filtro": 0,
-  "rotina_escondida": 0,
-  "materias": 3
+  "rotina_escondida": 0
  },
  "filtro": "sem filtro de lucro (todas as empresas)",
  "gasto_ia": {
   "mes": "2026-10",
   "usd": 0.0475,
-  "chamadas": 62,
+  "chamadas": 63,
   "teto_usd": 5
  },
  "recentes": [
+  {
+   "h": "20:42",
+   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Esclarecimentos sobre questionamentos da CVM/B3",
+   "ass": "Notícia divulgada na mídia",
+   "d": "2026-10-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00951-2",
+   "c5": "20261027 27/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "20:35",
+   "emp": "THE HAIN CELESTIAL GROUP INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-10-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05906-4",
+   "c5": "20261027 27/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "20:35",
+   "emp": "NEXTERA ENERGY INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "SCHEDULE 13D/A",
+   "d": "2026-10-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05199-3",
+   "c5": "20261027 27/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
   {
    "h": "20:21",
    "emp": "LOCALIZA RENT A CAR S.A.",
@@ -170,7 +207,7 @@
    "tipo": "-",
    "ass": "Aprovação do novo Programa de Recompra de Ações Ordinárias da Companhia",
    "d": "2026-10-27",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "02143-1",
    "c5": "20261027 27/10/2026",
    "c8": "1",
@@ -183,7 +220,7 @@
    "tipo": "-",
    "ass": "CONSUMAÇÃO DA INCORPORAÇÃO DE AÇÕES",
    "d": "2026-10-27",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "01699-3",
    "c5": "20261027 27/10/2026",
    "c8": "1",
@@ -196,7 +233,7 @@
    "tipo": "-",
    "ass": "Consumação da Incorporação de Ações",
    "d": "2026-10-27",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "01444-3",
    "c5": "20261027 27/10/2026",
    "c8": "1",
@@ -490,6 +527,19 @@
   },
   {
    "h": "18:44",
+   "emp": "WPP PLC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "SCHEDULE 13G",
+   "d": "2026-10-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05714-2",
+   "c5": "20261027 27/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "18:44",
    "emp": "NOVARTIS AG",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -581,13 +631,13 @@
   },
   {
    "h": "18:44",
-   "emp": "WPP PLC",
+   "emp": "EVERPURE INC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "SCHEDULE 13G",
+   "ass": "SCHEDULE 13G/A",
    "d": "2026-10-27",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05714-2",
+   "c0": "05866-1",
    "c5": "20261027 27/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -679,19 +729,6 @@
    "d": "2026-10-27",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05872-6",
-   "c5": "20261027 27/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:44",
-   "emp": "EVERPURE INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "SCHEDULE 13G/A",
-   "d": "2026-10-27",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05866-1",
    "c5": "20261027 27/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -815,6 +852,19 @@
   },
   {
    "h": "18:43",
+   "emp": "IQVIA HOLDINGS INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "10-Q",
+   "d": "2026-10-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05477-1",
+   "c5": "20261027 27/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "18:43",
    "emp": "ILLUMINA INC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -893,13 +943,13 @@
   },
   {
    "h": "18:43",
-   "emp": "IQVIA HOLDINGS INC",
+   "emp": "ALLEGION PLC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "10-Q",
+   "ass": "SCHEDULE 13G/A",
    "d": "2026-10-27",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05477-1",
+   "c0": "05526-3",
    "c5": "20261027 27/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -971,19 +1021,6 @@
   },
   {
    "h": "18:43",
-   "emp": "ALLEGION PLC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "SCHEDULE 13G/A",
-   "d": "2026-10-27",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05526-3",
-   "c5": "20261027 27/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:43",
    "emp": "WATSCO INC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -1017,6 +1054,19 @@
    "d": "2026-10-27",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05569-7",
+   "c5": "20261027 27/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "18:42",
+   "emp": "NEXTERA ENERGY INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "SCHEDULE 13G/A",
+   "d": "2026-10-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05199-3",
    "c5": "20261027 27/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -1082,19 +1132,6 @@
    "d": "2026-10-27",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05204-3",
-   "c5": "20261027 27/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:42",
-   "emp": "NEXTERA ENERGY INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "SCHEDULE 13G/A",
-   "d": "2026-10-27",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05199-3",
    "c5": "20261027 27/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -1348,6 +1385,19 @@
   },
   {
    "h": "18:40",
+   "emp": "PROCTER & GAMBLE COMPANY",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "FWP",
+   "d": "2026-10-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05019-9",
+   "c5": "20261027 27/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "18:40",
    "emp": "CITIGROUP INC.",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -1400,19 +1450,6 @@
   },
   {
    "h": "18:40",
-   "emp": "PROCTER & GAMBLE COMPANY",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "FWP",
-   "d": "2026-10-27",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05019-9",
-   "c5": "20261027 27/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:40",
    "emp": "BLACKROCK, INC.",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -1459,6 +1496,19 @@
    "d": "2026-10-27",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05057-1",
+   "c5": "20261027 27/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "18:39",
+   "emp": "ISHARES IBOXX HIGH YIELD CORPORATE BOND ETF",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Demonstrativo Financeiro Semestral",
+   "d": "2026-10-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05021-1",
    "c5": "20261027 27/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -1530,19 +1580,6 @@
   },
   {
    "h": "18:39",
-   "emp": "ISHARES IBOXX HIGH YIELD CORPORATE BOND ETF",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Demonstrativo Financeiro Semestral",
-   "d": "2026-10-27",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05021-1",
-   "c5": "20261027 27/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:39",
    "emp": "ISHARES MBS ETF",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -1595,6 +1632,19 @@
   },
   {
    "h": "18:39",
+   "emp": "ISHARES 10 YEAR INVESTM GRADE CORPORATE BOND ETF",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Demonstrativo Financeiro Semestral",
+   "d": "2026-10-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05005-3",
+   "c5": "20261027 27/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "18:39",
    "emp": "ISHARES 25 YEAR TREASURY STRIPS BOND ETF",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -1615,58 +1665,6 @@
    "d": "2026-10-27",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05004-8",
-   "c5": "20261027 27/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:39",
-   "emp": "ISHARES US CONSUMER DISCRETIONARY ETF",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Metodologias",
-   "d": "2026-10-27",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05045-9",
-   "c5": "20261027 27/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:39",
-   "emp": "ISHARES BROAD USD INVESTMENT GRADE CORP BOND ETF",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Demonstrativo Financeiro Semestral",
-   "d": "2026-10-27",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05009-9",
-   "c5": "20261027 27/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:39",
-   "emp": "ISHARES 10 YEAR INVESTM GRADE CORPORATE BOND ETF",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Demonstrativo Financeiro Semestral",
-   "d": "2026-10-27",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05005-3",
-   "c5": "20261027 27/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:39",
-   "emp": "ISHARES U.S. BASIC MATERIALS ETF",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Metodologias",
-   "d": "2026-10-27",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05083-3",
    "c5": "20261027 27/10/2026",
    "c8": "1",
    "c9": "AP"

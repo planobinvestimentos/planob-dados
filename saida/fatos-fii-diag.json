@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-27T23:24:24.227Z",
+ "gerado": "2026-10-28T00:20:37.338Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 171,
+  "linhas_vistas": 177,
   "categorias": {
-   "Relatórios": 47,
-   "Assembleia": 34,
+   "Relatórios": 50,
+   "Assembleia": 35,
    "Laudo de Avaliação (Conclusão de Negócio)": 20,
    "Regulamento": 18,
-   "Oferta Pública de Distribuição de Cotas": 13,
+   "Oferta Pública de Distribuição de Cotas": 14,
    "Atos de Deliberação do Administrador": 11,
-   "Fato Relevante": 8,
+   "Fato Relevante": 9,
    "Informes Periódicos": 8
   },
-  "fatos_relevantes": 8,
+  "fatos_relevantes": 9,
   "de_fiis_liquidos": 1
  },
  "fatos_sem_ticker": [
+  "FII BTYU",
   "FII SUNO LG",
   "FII REC REND",
   "BIOTIC FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
