@@ -1,73 +1,74 @@
 {
  "data": "2026-10-28",
  "slots": {
-  "11": true
+  "11": true,
+  "18": true
  },
- "hora": 11,
+ "hora": 18,
  "fonte": "TradingView (atraso ~15 min)",
  "curva": [
   {
    "codigo": "DI1F2027",
    "venc": 20270104,
    "ano": 2027,
-   "taxa": 13.622,
-   "var_pp": -0.037
+   "taxa": 13.632,
+   "var_pp": -0.027
   },
   {
    "codigo": "DI1F2028",
    "venc": 20280103,
    "ano": 2028,
-   "taxa": 14.33,
-   "var_pp": -0.051
+   "taxa": 14.405,
+   "var_pp": 0.024
   },
   {
    "codigo": "DI1F2029",
    "venc": 20290102,
    "ano": 2029,
-   "taxa": 14.75,
-   "var_pp": -0.01
+   "taxa": 14.822,
+   "var_pp": 0.062
   },
   {
    "codigo": "DI1F2030",
    "venc": 20300102,
    "ano": 2030,
-   "taxa": 14.895,
-   "var_pp": 0.011
+   "taxa": 15.003,
+   "var_pp": 0.119
   },
   {
    "codigo": "DI1F2031",
    "venc": 20310102,
    "ano": 2031,
-   "taxa": 14.93,
-   "var_pp": 0.02
+   "taxa": 15.071,
+   "var_pp": 0.161
   },
   {
    "codigo": "DI1F2032",
    "venc": 20320102,
    "ano": 2032,
-   "taxa": 14.975,
-   "var_pp": 0.031
+   "taxa": 15.129,
+   "var_pp": 0.185
   },
   {
    "codigo": "DI1F2033",
    "venc": 20330103,
    "ano": 2033,
-   "taxa": 14.995,
-   "var_pp": 0.037
+   "taxa": 15.159,
+   "var_pp": 0.201
   },
   {
    "codigo": "DI1F2034",
    "venc": 20340102,
    "ano": 2034,
-   "taxa": 14.975,
-   "var_pp": 0.035
+   "taxa": 15.161,
+   "var_pp": 0.221
   },
   {
    "codigo": "DI1F2035",
    "venc": 20350102,
    "ano": 2035,
-   "taxa": 14.945,
-   "var_pp": 0.038
+   "taxa": 15.13,
+   "var_pp": 0.223
   }
  ]
 }
