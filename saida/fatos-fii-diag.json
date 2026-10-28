@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-28T15:43:04.181Z",
+ "gerado": "2026-10-28T18:00:36.923Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 178,
+  "linhas_vistas": 198,
   "categorias": {
-   "Relatórios": 50,
-   "Assembleia": 35,
+   "Relatórios": 52,
+   "Assembleia": 45,
    "Regulamento": 22,
-   "Atos de Deliberação do Administrador": 16,
-   "Informes Periódicos": 15,
+   "Informes Periódicos": 20,
+   "Atos de Deliberação do Administrador": 17,
    "Oferta Pública de Distribuição de Cotas": 15,
-   "Fato Relevante": 11,
+   "Fato Relevante": 12,
    "Aviso aos Cotistas - Estruturado": 5
   },
-  "fatos_relevantes": 11,
+  "fatos_relevantes": 12,
   "de_fiis_liquidos": 1
  },
  "fatos_sem_ticker": [
+  "TOWER FUNDO DE INVESTIMENTO IMOBILIÁRIO",
   "FII VGRI",
   "FII BTYU",
   "FII SUNO LG",
