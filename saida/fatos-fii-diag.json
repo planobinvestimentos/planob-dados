@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-28T21:27:31.500Z",
+ "gerado": "2026-10-28T22:26:21.473Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,19 +59,19 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 229,
+  "linhas_vistas": 252,
   "categorias": {
-   "Relatórios": 55,
-   "Assembleia": 54,
-   "Regulamento": 23,
+   "Relatórios": 65,
+   "Assembleia": 55,
+   "Regulamento": 25,
    "Informes Periódicos": 23,
-   "Atos de Deliberação do Administrador": 18,
-   "Oferta Pública de Distribuição de Cotas": 17,
-   "Fato Relevante": 16,
-   "Comunicado ao Mercado": 8
+   "Fato Relevante": 21,
+   "Atos de Deliberação do Administrador": 20,
+   "Oferta Pública de Distribuição de Cotas": 18,
+   "Comunicado ao Mercado": 9
   },
-  "fatos_relevantes": 16,
-  "de_fiis_liquidos": 3
+  "fatos_relevantes": 21,
+  "de_fiis_liquidos": 8
  },
  "fatos_sem_ticker": [
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO ECOPARQUE BAIRROS INTEGRADOS",
@@ -86,14 +86,14 @@
   "FII HEDGEAAA",
   "FII BLUE"
  ],
- "analisados": 2,
+ "analisados": 5,
  "sem_texto": 0,
  "fora_do_escopo": 1,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 1,
+ "materias_novas": 4,
  "telegram": {
-  "enviados": 1,
+  "enviados": 4,
   "erros": []
  }
 }
