@@ -1,20 +1,17 @@
 {
- "gerado": "2026-10-28T19:00:16.535Z",
+ "gerado": "2026-10-28T19:15:21.723Z",
  "hora": 16,
  "fnet": {
-  "linhas": 641,
-  "avisos": 51,
+  "linhas": 648,
+  "avisos": 52,
   "relatorios": 153
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII SMRE #1360580",
   "FII SUNO LG #1359405"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 0,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
