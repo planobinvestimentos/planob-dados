@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-28T00:20:37.338Z",
+ "gerado": "2026-10-28T12:01:47.215Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 177,
+  "linhas_vistas": 162,
   "categorias": {
    "Relatórios": 50,
    "Assembleia": 35,
-   "Laudo de Avaliação (Conclusão de Negócio)": 20,
    "Regulamento": 18,
    "Oferta Pública de Distribuição de Cotas": 14,
    "Atos de Deliberação do Administrador": 11,
-   "Fato Relevante": 9,
-   "Informes Periódicos": 8
+   "Informes Periódicos": 10,
+   "Fato Relevante": 10,
+   "Aviso aos Cotistas - Estruturado": 5
   },
-  "fatos_relevantes": 9,
+  "fatos_relevantes": 10,
   "de_fiis_liquidos": 1
  },
  "fatos_sem_ticker": [
+  "FII VGRI",
   "FII BTYU",
   "FII SUNO LG",
   "FII REC REND",
