@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-28T22:26:21.473Z",
+ "gerado": "2026-10-28T23:27:38.742Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 252,
+  "linhas_vistas": 262,
   "categorias": {
-   "Relatórios": 65,
-   "Assembleia": 55,
+   "Relatórios": 67,
+   "Assembleia": 58,
    "Regulamento": 25,
    "Informes Periódicos": 23,
-   "Fato Relevante": 21,
+   "Fato Relevante": 22,
+   "Oferta Pública de Distribuição de Cotas": 21,
    "Atos de Deliberação do Administrador": 20,
-   "Oferta Pública de Distribuição de Cotas": 18,
-   "Comunicado ao Mercado": 9
+   "Comunicado ao Mercado": 10
   },
-  "fatos_relevantes": 21,
+  "fatos_relevantes": 22,
   "de_fiis_liquidos": 8
  },
  "fatos_sem_ticker": [
+  "CIX MCMV FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO ECOPARQUE BAIRROS INTEGRADOS",
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO AMÉRICA LOGÍSTICA",
   "TOWER FUNDO DE INVESTIMENTO IMOBILIÁRIO",
@@ -86,14 +87,14 @@
   "FII HEDGEAAA",
   "FII BLUE"
  ],
- "analisados": 5,
+ "analisados": 0,
  "sem_texto": 0,
- "fora_do_escopo": 1,
+ "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 4,
+ "materias_novas": 0,
  "telegram": {
-  "enviados": 4,
+  "enviados": 0,
   "erros": []
  }
 }
