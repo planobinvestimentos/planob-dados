@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-28T23:00:21.443Z",
+ "gerado": "2026-10-28T23:21:51.866Z",
  "de": "2026-10-26",
  "ate": "2026-10-28",
  "fii": {
@@ -63,7 +63,7 @@
    }
   },
   "amostraBonificacao": {
-   "emissora": "ALPA",
+   "emissora": "AERI",
    "campos": [
     "assetIssued",
     "factor",
@@ -74,18 +74,18 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRALPAACNOR0",
-    "factor": "25,00000000000",
-    "approvedOn": "20/03/2019",
-    "isinCode": "BRALPAACNOR0",
-    "label": "BONIFICACAO",
-    "lastDatePrior": "20/03/2019",
+    "assetIssued": "BRAERIACNOR4",
+    "factor": "0,05000000000",
+    "approvedOn": "11/04/2024",
+    "isinCode": "BRAERIACNOR4",
+    "label": "GRUPAMENTO",
+    "lastDatePrior": "13/05/2024",
     "remarks": ""
    }
   },
-  "ok": 273,
-  "falhas": 11,
-  "semDividendos": 81,
+  "ok": 284,
+  "falhas": 0,
+  "semDividendos": 85,
   "itens": 0
  }
 }
