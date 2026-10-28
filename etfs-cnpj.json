@@ -1,0 +1,153 @@
+{
+ "_leia-me": "CNPJ de cada ETF, para o robô pegar o valor patrimonial por cota no informe diário da CVM (script etf-info.mjs). Preencha o campo cnpj com os 14 números (com ou sem pontos e barras) e, se quiser, o nome do fundo em nome. Sem CNPJ, o ETF fica sem P/VP. Edite pelo GitHub (lápis) e faça commit.",
+ "itens": {
+  "BOVA11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "IVVB11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "SMAL11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "DIVO11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "PIBB11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "BOVV11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "MATB11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "ISUS11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "ECOO11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "FIND11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "GOVE11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "HASH11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "QBTC11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "QETH11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "BITH11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "SOLH11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "DEFI11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "XINA11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "NASD11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "SPXI11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "WRLD11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "EURP11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "TECK11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "ACWI11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "USTK11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "GOLD11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "IMAB11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "IB5M11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "IRFM11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "B5P211": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "LFTS11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "BBOV11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "NFTS11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "XFIX11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "BRAX11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "ETHY11": {
+   "cnpj": "",
+   "nome": ""
+  },
+  "COIN11": {
+   "cnpj": "",
+   "nome": ""
+  }
+ }
+}
