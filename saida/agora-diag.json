@@ -1,13 +1,14 @@
 {
- "gerado": "2026-10-28T20:21:01.980Z",
+ "gerado": "2026-10-28T20:30:20.345Z",
  "hora": 17,
  "fnet": {
-  "linhas": 658,
-  "avisos": 52,
+  "linhas": 659,
+  "avisos": 53,
   "relatorios": 154
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII PRAIA CS #1360748",
   "FII SMRE #1360580",
   "FII SUNO LG #1359405"
  ],
