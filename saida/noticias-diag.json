@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-28T18:00:29.762Z",
+ "gerado": "2026-10-28T18:30:37.501Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -82,10 +82,10 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 1459,
+  "linhas": 1462,
   "na_janela_e_categorias": 60,
   "sem_cnpj": 70,
-  "entrega_mais_recente": "20261028 28/10/2026 14:55",
+  "entrega_mais_recente": "20261028 28/10/2026 15:26",
   "tentativa": 1
  },
  "fontes": {
@@ -105,10 +105,49 @@
  "gasto_ia": {
   "mes": "2026-10",
   "usd": 0.0598,
-  "chamadas": 75,
+  "chamadas": 76,
   "teto_usd": 5
  },
  "recentes": [
+  {
+   "h": "15:26",
+   "emp": "BCO BRADESCO S.A.",
+   "cat": "Ato Homologatório emitido pelo Banco Central",
+   "tipo": "-",
+   "ass": "Eleição de Diretor(es)",
+   "d": "2026-10-28",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00090-6",
+   "c5": "20261027 27/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:11",
+   "emp": "TURBI COMPARTILHAMENTO DE VEICULOS S/A",
+   "cat": "Estatuto Social",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-28",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02719-7",
+   "c5": "20261026 26/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:02",
+   "emp": "DELTA 3 ENERGIA S.A.",
+   "cat": "Assembleia",
+   "tipo": "AGDEB",
+   "ass": "Substituição de Agente Fiduciário - Instrução de Voto à distância",
+   "d": "2026-10-28",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "90622-2",
+   "c5": "20261127 27/11/2026 15:00",
+   "c8": "1",
+   "c9": "AP"
+  },
   {
    "h": "14:55",
    "emp": "DELTA 3 ENERGIA S.A.",
@@ -1627,45 +1666,6 @@
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05127-6",
    "c5": "20261028 28/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "08:20",
-   "emp": "KLABIN S.A.",
-   "cat": "Dados Econômico-Financeiros",
-   "tipo": "Demonstrações Financeiras Adicionais",
-   "ass": "ITR INGLÊS",
-   "d": "2026-10-28",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "01265-3",
-   "c5": "20260930 30/09/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "08:10",
-   "emp": "HYPERA S.A.",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Apresentações a analistas/agentes do mercado",
-   "ass": "Apresentação de resultados do 3T26",
-   "d": "2026-10-28",
-   "st": "ja_enviado_antes",
-   "c0": "02143-1",
-   "c5": "20261028 28/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "08:10",
-   "emp": "KLABIN S.A.",
-   "cat": "Dados Econômico-Financeiros",
-   "tipo": "Press-release",
-   "ass": "Release de Resultados 3T26",
-   "d": "2026-10-28",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "01265-3",
-   "c5": "20260930 30/09/2026",
    "c8": "1",
    "c9": "AP"
   }
