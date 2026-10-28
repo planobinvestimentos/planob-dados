@@ -1,8 +1,8 @@
 {
- "gerado": "2026-10-28T19:45:19.589Z",
- "hora": 16,
+ "gerado": "2026-10-28T20:00:15.973Z",
+ "hora": 17,
  "fnet": {
-  "linhas": 651,
+  "linhas": 653,
   "avisos": 52,
   "relatorios": 153
  },
@@ -12,6 +12,10 @@
   "FII SUNO LG #1359405"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 0,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
