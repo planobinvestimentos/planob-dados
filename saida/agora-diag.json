@@ -1,13 +1,14 @@
 {
- "gerado": "2026-10-29T19:30:15.230Z",
+ "gerado": "2026-10-29T19:45:18.201Z",
  "hora": 16,
  "fnet": {
-  "linhas": 608,
-  "avisos": 38,
+  "linhas": 611,
+  "avisos": 39,
   "relatorios": 147
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII SHOP PDP #1362718",
   "FII GENERAL #1361852",
   "FII FLNR #1361840",
   "FII JT PREV #1361837",
