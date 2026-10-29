@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-29T18:33:18.754Z",
+ "gerado": "2026-10-29T22:27:21.766Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,24 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 309,
+  "linhas_vistas": 352,
   "categorias": {
-   "Relatórios": 69,
-   "Assembleia": 67,
-   "Informes Periódicos": 37,
-   "Regulamento": 30,
-   "Oferta Pública de Distribuição de Cotas": 24,
-   "Atos de Deliberação do Administrador": 23,
-   "Fato Relevante": 23,
-   "Comunicado ao Mercado": 17
+   "Relatórios": 77,
+   "Assembleia": 75,
+   "Informes Periódicos": 39,
+   "Regulamento": 33,
+   "Fato Relevante": 28,
+   "Atos de Deliberação do Administrador": 26,
+   "Oferta Pública de Distribuição de Cotas": 25,
+   "Comunicado ao Mercado": 24
   },
-  "fatos_relevantes": 23,
-  "de_fiis_liquidos": 8
+  "fatos_relevantes": 28,
+  "de_fiis_liquidos": 10
  },
  "fatos_sem_ticker": [
+  "FII IBBP",
+  "FII JPPA CRI",
+  "FII BANRISUL",
   "FII CCVA",
   "CIX MCMV FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO ECOPARQUE BAIRROS INTEGRADOS",
@@ -88,14 +91,14 @@
   "FII HEDGEAAA",
   "FII BLUE"
  ],
- "analisados": 0,
+ "analisados": 2,
  "sem_texto": 0,
  "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 0,
+ "materias_novas": 2,
  "telegram": {
-  "enviados": 0,
+  "enviados": 2,
   "erros": []
  }
 }
