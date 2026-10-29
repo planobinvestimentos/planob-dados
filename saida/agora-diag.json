@@ -1,13 +1,14 @@
 {
- "gerado": "2026-10-29T19:54:56.332Z",
- "hora": 16,
+ "gerado": "2026-10-29T20:00:18.259Z",
+ "hora": 17,
  "fnet": {
-  "linhas": 610,
-  "avisos": 38,
+  "linhas": 611,
+  "avisos": 39,
   "relatorios": 147
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII GENERAL #1362749",
   "FII SHOP PDP #1362718",
   "FII FLNR #1361840",
   "FII JT PREV #1361837",
@@ -15,10 +16,6 @@
   "FII SMRE #1360580"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 0,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
