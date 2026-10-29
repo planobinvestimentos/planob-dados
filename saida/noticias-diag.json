@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-29T12:00:31.463Z",
+ "gerado": "2026-10-29T12:42:13.081Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -10,22 +10,22 @@
    "text"
   ],
   "usado": {
-   "input_tokens": 2574,
+   "input_tokens": 1795,
    "cache_creation_input_tokens": 0,
    "cache_read_input_tokens": 0,
    "cache_creation": {
     "ephemeral_5m_input_tokens": 0,
     "ephemeral_1h_input_tokens": 0
    },
-   "output_tokens": 2972,
+   "output_tokens": 2225,
    "output_tokens_details": {
-    "thinking_tokens": 1966
+    "thinking_tokens": 1543
    },
    "service_tier": "standard",
    "inference_geo": "global",
    "speed": "standard"
   },
-  "texto": "{\"titulo\":\"Cosan informa celebração de transação tributária ligada à Raízen\",\"resumo\":\"Cosan comunica transação tributária com a PGFN e a Receita Federal sobre contingências de R$3,2 bilhões sob sua responsabilidade econômica.\",\"paragrafos\":[\"A Cosan S.A. (B3: CSAN3) divulgou um fato relevante, comu"
+  "texto": "```json\n{\"titulo\":\"ASAI3: investidores comunicam participação acionária relevante de 15,02% na Sendas\",\"resumo\":\"A Sendas (ASAI3) informou que recebeu comunicado de investidores sobre participação acionária relevante de 15,02% em ações e derivativos da companhia.\",\"paragrafos\":[\"A Sendas Distribuido"
  },
  "ia_teste": "ok: ok",
  "ipe": {
@@ -83,34 +83,427 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 1408,
-  "na_janela_e_categorias": 57,
+  "linhas": 1437,
+  "na_janela_e_categorias": 60,
   "sem_cnpj": 49,
-  "entrega_mais_recente": "20261029 29/10/2026 08:56",
+  "entrega_mais_recente": "20261029 29/10/2026 09:35",
   "tentativa": 1
  },
  "fontes": {
-  "enet": 57,
+  "enet": 60,
   "ipe": 2,
-  "apos_juntar": 57
+  "apos_juntar": 60
  },
  "itens": {
-  "novos": 2,
-  "enviados_agora": 2,
+  "novos": 3,
+  "enviados_agora": 3,
   "com_ia": 0,
   "ia_falhas": 0,
   "fora_do_filtro": 0,
-  "rotina_escondida": 1,
-  "materias": 2
+  "rotina_escondida": 0,
+  "materias": 1
  },
  "filtro": "sem filtro de lucro (todas as empresas)",
+ "materias_reprovadas": [
+  {
+   "prot": "1581436",
+   "empresa": "ONCOCLINICAS DO BRASIL SERVICOS MEDICOS S.A.",
+   "numeros_fora_do_documento": [
+    "1"
+   ]
+  },
+  {
+   "prot": "1581428",
+   "empresa": "SENDAS DISTRIBUIDORA S.A.",
+   "numeros_fora_do_documento": [
+    "3"
+   ]
+  }
+ ],
  "gasto_ia": {
   "mes": "2026-10",
-  "usd": 0.092,
-  "chamadas": 103,
+  "usd": 0.0963,
+  "chamadas": 107,
   "teto_usd": 5
  },
  "recentes": [
+  {
+   "h": "09:35",
+   "emp": "BANK OF AMERICA CORPORATION",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05005-9",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "THE HERSHEY COMPANY",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05098-9",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "COGNIZANT TECHNOLOGY SOLUTIONS",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "10-Q",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05109-8",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "BORGWARNER INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05364-3",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "ANHEUSER-BUSCH INBEV SA/NV",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05262-0",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "BANCO BILBAO VIZCAYA ARGENTARIA SA",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05229-9",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "ALNYLAM PHARMACEUTICALS INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "10-Q",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05596-4",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "AMERIPRISE FINANCIAL INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05529-8",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "INTERCONTINENTAL EXCHANGE INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "10-Q",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05393-7",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "SIBANYE STILLWATER LTD",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05718-5",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "LLOYDS BANKING GROUP PLC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05686-3",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "ALNYLAM PHARMACEUTICALS INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05596-4",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "CRH PLC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "10-Q",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05939-5",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "DOORDASH INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05746-0",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "MEDICAL PROPERTIES TRUST INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05727-4",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "CRH PLC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05939-5",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:34",
+   "emp": "DEXXOS PARTICIPACOES S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Deliberar sobre: i) a distribuição de dividendos intercalares e intermediários; (ii) a aut",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01663-2",
+   "c5": "20261028 28/10/2026 16:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:34",
+   "emp": "JPMORGAN CHASE & CO.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "FWP",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05057-1",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:34",
+   "emp": "MICROSOFT CORPORATION",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05015-6",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:32",
+   "emp": "DEXXOS PARTICIPACOES S.A.",
+   "cat": "Aviso aos Acionistas",
+   "tipo": "Outros avisos",
+   "ass": "Dividendos/Juros sobre Capital Próprio",
+   "d": "2026-10-29",
+   "st": "NOVO",
+   "c0": "01663-2",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:31",
+   "emp": "ONCOCLINICAS DO BRASIL SERVICOS MEDICOS S.A.",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Atualização do Plano de Recuperação Extrajudicial",
+   "d": "2026-10-29",
+   "st": "NOVO",
+   "c0": "02612-3",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:28",
+   "emp": "PROSUS N.V.",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05944-1",
+   "c5": "20261028 10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:23",
+   "emp": "FEDEX CORPORATION",
+   "cat": "Dados Econômico-Financeiros",
+   "tipo": "Demonstrações Financeiras Intermediárias",
+   "ass": "Demonstrações financeiras intermediárias",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05068-7",
+   "c5": "20260930 30/09/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:23",
+   "emp": "FOMENTO ECONOMICO MEXICANO SAB DE CV - FEMSA",
+   "cat": "Dados Econômico-Financeiros",
+   "tipo": "Demonstrações Financeiras Intermediárias",
+   "ass": "Demonstrações financeiras intermediárias",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05105-5",
+   "c5": "20261028 28/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:23",
+   "emp": "THE BANK OF NEW YORK MELLON CORPORATION",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Comunicado ao mercado",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05096-2",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:23",
+   "emp": "FEDEX CORPORATION",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Comunicado ao mercado",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05068-7",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:19",
+   "emp": "AMPLA ENERGIA E SERVICOS S.A.",
+   "cat": "Aviso aos Debenturistas",
+   "tipo": "-",
+   "ass": "Pagamento de Amortização e Juros da 2ª Emissão de Notas Comerciais – Série Única",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00305-0",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:15",
+   "emp": "CIELO S.A. - INSTITUIÇÃO DE PAGAMENTO",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Alteração da Composição do Conselho de Administração",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02173-3",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:11",
+   "emp": "SENDAS DISTRIBUIDORA S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Aquisição/Alienação de Participação Acionária Relevante",
+   "ass": "Declaração de Aquisição de Participação Acionária Relevante",
+   "d": "2026-10-29",
+   "st": "NOVO",
+   "c0": "02537-2",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
   {
    "h": "08:56",
    "emp": "LOJAS RENNER S.A.",
@@ -607,19 +1000,6 @@
   },
   {
    "h": "07:35",
-   "emp": "ING GROEP NV",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "6-K",
-   "d": "2026-10-29",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05263-9",
-   "c5": "20261029 29/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "07:35",
    "emp": "CANADIAN PACIFIC KANSAS CITY LIMITED",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -692,6 +1072,19 @@
    "d": "2026-10-29",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05348-1",
+   "c5": "20261029 29/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "07:35",
+   "emp": "ING GROEP NV",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-10-29",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05263-9",
    "c5": "20261029 29/10/2026",
    "c8": "1",
    "c9": "AP"
@@ -898,7 +1291,7 @@
    "tipo": "-",
    "ass": "Aquisição de Ações de Emissão da Própria Companhia",
    "d": "2026-10-29",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "02326-4",
    "c5": "20261028 28/10/2026",
    "c8": "1",
