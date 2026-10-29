@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-29T22:27:21.766Z",
+ "gerado": "2026-10-29T23:28:55.615Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,14 +59,14 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 352,
+  "linhas_vistas": 360,
   "categorias": {
-   "Relatórios": 77,
-   "Assembleia": 75,
+   "Assembleia": 78,
+   "Relatórios": 78,
    "Informes Periódicos": 39,
-   "Regulamento": 33,
+   "Regulamento": 36,
    "Fato Relevante": 28,
-   "Atos de Deliberação do Administrador": 26,
+   "Atos de Deliberação do Administrador": 27,
    "Oferta Pública de Distribuição de Cotas": 25,
    "Comunicado ao Mercado": 24
   },
@@ -91,14 +91,14 @@
   "FII HEDGEAAA",
   "FII BLUE"
  ],
- "analisados": 2,
+ "analisados": 0,
  "sem_texto": 0,
  "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 2,
+ "materias_novas": 0,
  "telegram": {
-  "enviados": 2,
+  "enviados": 0,
   "erros": []
  }
 }
