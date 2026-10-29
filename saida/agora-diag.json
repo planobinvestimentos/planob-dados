@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-29T12:00:16.312Z",
+ "gerado": "2026-10-29T12:15:16.509Z",
  "hora": 9,
  "fnet": {
   "linhas": 580,
@@ -12,10 +12,6 @@
   "FII SMRE #1360580"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 0,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
