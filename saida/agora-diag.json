@@ -1,8 +1,8 @@
 {
- "gerado": "2026-10-29T22:48:55.066Z",
- "hora": 19,
+ "gerado": "2026-10-29T23:00:16.068Z",
+ "hora": 20,
  "fnet": {
-  "linhas": 646,
+  "linhas": 648,
   "avisos": 41,
   "relatorios": 157
  },
@@ -17,7 +17,11 @@
   "FII PRAIA CS #1360748",
   "FII SMRE #1360580"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
+ "varredura": {
+  "fii": 0,
+  "acoes": 0
+ },
  "novos": [],
  "pdfs": 0
 }
