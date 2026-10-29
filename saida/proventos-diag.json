@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-29T01:30:18.208Z",
+ "gerado": "2026-10-29T01:52:52.171Z",
  "de": "2026-10-26",
  "ate": "2026-10-28",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 139,
   "amostra": {
-   "fundo": "FII AUTONOMY",
+   "fundo": "FII AFHI CRI",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -19,14 +19,14 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAIECCTF009",
-    "paymentDate": "08/10/2026",
-    "rate": "0,38000000000",
-    "relatedTo": "Setembro/2026",
-    "approvedOn": "30/09/2026",
-    "isinCode": "BRAIECCTF009",
+    "assetIssued": "BRAFHICTF005",
+    "paymentDate": "22/10/2026",
+    "rate": "1,00000000000",
+    "relatedTo": "Setembro-2026/2026",
+    "approvedOn": "15/10/2026",
+    "isinCode": "BRAFHICTF005",
     "label": "RENDIMENTO",
-    "lastDatePrior": "30/09/2026",
+    "lastDatePrior": "15/10/2026",
     "remarks": ""
    }
   },
