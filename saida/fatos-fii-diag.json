@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-28T23:27:38.742Z",
+ "gerado": "2026-10-29T00:22:36.024Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 262,
+  "linhas_vistas": 271,
   "categorias": {
-   "Relatórios": 67,
-   "Assembleia": 58,
+   "Relatórios": 68,
+   "Assembleia": 61,
    "Regulamento": 25,
-   "Informes Periódicos": 23,
-   "Fato Relevante": 22,
+   "Informes Periódicos": 24,
+   "Fato Relevante": 23,
    "Oferta Pública de Distribuição de Cotas": 21,
    "Atos de Deliberação do Administrador": 20,
-   "Comunicado ao Mercado": 10
+   "Comunicado ao Mercado": 13
   },
-  "fatos_relevantes": 22,
+  "fatos_relevantes": 23,
   "de_fiis_liquidos": 8
  },
  "fatos_sem_ticker": [
+  "FII CCVA",
   "CIX MCMV FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO ECOPARQUE BAIRROS INTEGRADOS",
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO AMÉRICA LOGÍSTICA",
