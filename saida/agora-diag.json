@@ -1,23 +1,18 @@
 {
- "gerado": "2026-10-29T23:45:14.453Z",
+ "gerado": "2026-10-29T23:59:24.920Z",
  "hora": 20,
+ "fnet_erro": "HTTP 403",
  "fnet": {
-  "linhas": 651,
-  "avisos": 41,
-  "relatorios": 158
+  "linhas": 0,
+  "avisos": 0,
+  "relatorios": 0
  },
  "avisos_novos": [],
- "avisos_sem_ticker": [
-  "FII SPG2 #1362859",
-  "HEDGE OPPORTUNITIES FUNDO DE INVESTIMENTO IMOBILIÁRIO DE RESPONSABILIDADE LIMITADA #1362780",
-  "FII GENERAL #1362749",
-  "FII SHOP PDP #1362718",
-  "FII FLNR #1361840",
-  "FII JT PREV #1361837",
-  "FII PRAIA CS #1360748",
-  "FII SMRE #1360580"
- ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 0,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
