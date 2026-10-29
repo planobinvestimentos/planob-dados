@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-29T21:20:01.176Z",
+ "gerado": "2026-10-29T21:30:15.678Z",
  "hora": 18,
  "fnet": {
-  "linhas": 626,
+  "linhas": 631,
   "avisos": 41,
-  "relatorios": 149
+  "relatorios": 154
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
