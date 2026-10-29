@@ -1,13 +1,14 @@
 {
- "gerado": "2026-10-29T21:00:18.898Z",
+ "gerado": "2026-10-29T21:15:15.504Z",
  "hora": 18,
  "fnet": {
-  "linhas": 620,
-  "avisos": 40,
+  "linhas": 624,
+  "avisos": 41,
   "relatorios": 147
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII SPG2 #1362859",
   "HEDGE OPPORTUNITIES FUNDO DE INVESTIMENTO IMOBILIÁRIO DE RESPONSABILIDADE LIMITADA #1362780",
   "FII GENERAL #1362749",
   "FII SHOP PDP #1362718",
