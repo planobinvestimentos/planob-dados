@@ -1,13 +1,14 @@
 {
- "gerado": "2026-10-29T20:00:18.259Z",
+ "gerado": "2026-10-29T20:15:16.492Z",
  "hora": 17,
  "fnet": {
-  "linhas": 611,
-  "avisos": 39,
+  "linhas": 612,
+  "avisos": 40,
   "relatorios": 147
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "HEDGE OPPORTUNITIES FUNDO DE INVESTIMENTO IMOBILIÁRIO DE RESPONSABILIDADE LIMITADA #1362780",
   "FII GENERAL #1362749",
   "FII SHOP PDP #1362718",
   "FII FLNR #1361840",
