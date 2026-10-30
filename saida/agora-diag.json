@@ -1,13 +1,14 @@
 {
- "gerado": "2026-10-30T15:15:17.639Z",
+ "gerado": "2026-10-30T15:29:20.462Z",
  "hora": 12,
  "fnet": {
-  "linhas": 572,
-  "avisos": 28,
+  "linhas": 575,
+  "avisos": 29,
   "relatorios": 126
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII CX CEDAE #1363745",
   "FII BANRISUL #1363695",
   "FII RBRESID2 #1363671",
   "FII RB TFO #1363663",
