@@ -1,7 +1,7 @@
 {
- "gerado": "2026-10-30T14:00:25.251Z",
+ "gerado": "2026-10-30T21:00:16.700Z",
  "hoje": "2026-10-30",
- "hora": 11,
+ "hora": 18,
  "contratos": 44,
  "vertices": 9,
  "parado": {
@@ -12,5 +12,5 @@
   "parado": false
  },
  "mensagem_chars": 670,
- "resultado": "edição das 11h enviada (9 vencimentos)"
+ "resultado": "edição das 18h enviada (9 vencimentos)"
 }
