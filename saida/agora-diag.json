@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-30T23:00:17.093Z",
+ "gerado": "2026-10-30T23:15:16.150Z",
  "hora": 20,
  "fnet": {
-  "linhas": 975,
-  "avisos": 335,
-  "relatorios": 143
+  "linhas": 986,
+  "avisos": 336,
+  "relatorios": 144
  },
  "avisos_novos": [
   "URPR11:1366057",
@@ -22,6 +22,7 @@
   "KNCR11:1365624"
  ],
  "avisos_sem_ticker": [
+  "RIZA VISEU FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1366526",
   "FII NEWRU #1366042",
   "FII NEWPORT #1366036",
   "FII ANCAR IC #1366030",
@@ -45,14 +46,9 @@
   "FII NOVOHORI #1365821",
   "FRAM CAPITAL PENHA FUNDO DE INVESTIMENTO IMOBILIÁRIO #1365817",
   "FII VIC VIN #1365814",
-  "FII VIC DES #1365813",
-  "FII PATRI IV #1365811"
+  "FII VIC DES #1365813"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 0,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "pendentes": [
   "URPR11",
   "PMLL11",
