@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-30T22:30:16.112Z",
+ "gerado": "2026-10-30T22:44:38.365Z",
  "hora": 19,
  "fnet": {
-  "linhas": 964,
+  "linhas": 966,
   "avisos": 335,
-  "relatorios": 142
+  "relatorios": 143
  },
  "avisos_novos": [
   "URPR11:1366057",
@@ -65,5 +65,5 @@
   "KNCR11"
  ],
  "novos": [],
- "pdfs": 1
+ "pdfs": 0
 }
