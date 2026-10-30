@@ -1,6 +1,6 @@
 {
- "gerado": "2026-10-30T15:45:21.026Z",
- "hora": 12,
+ "gerado": "2026-10-30T16:00:16.827Z",
+ "hora": 13,
  "fnet": {
   "linhas": 575,
   "avisos": 29,
@@ -20,6 +20,10 @@
   "FII JT PREV #1361837"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 0,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
