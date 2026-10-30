@@ -1,13 +1,14 @@
 {
- "gerado": "2026-10-30T17:00:17.297Z",
+ "gerado": "2026-10-30T17:10:29.397Z",
  "hora": 14,
  "fnet": {
-  "linhas": 605,
-  "avisos": 55,
+  "linhas": 606,
+  "avisos": 56,
   "relatorios": 126
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII PMIS #1364277",
   "FII POLO I #1364258",
   "XP OFFICE PRIME FUNDO DE INVESTIMENTO IMOBILIÁRIO #1364243",
   "XP LOGÍSTICO PRIME YIELD II FUNDO DE INVESTIMENTO IMOBILIÁRIO - FII RESPONSABILIDADE LIMITADA #1364237",
@@ -31,14 +32,9 @@
   "FII LSOI #1364035",
   "FII BGRB #1364018",
   "FII CX CEDAE #1363745",
-  "FII BANRISUL #1363695",
-  "FII RBRESID2 #1363671"
+  "FII BANRISUL #1363695"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 0,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
