@@ -1,13 +1,12 @@
 {
- "gerado": "2026-10-30T21:25:55.546Z",
+ "gerado": "2026-10-30T21:30:16.546Z",
  "hora": 18,
  "fnet": {
-  "linhas": 942,
+  "linhas": 943,
   "avisos": 335,
   "relatorios": 134
  },
  "avisos_novos": [
-  "CYCR11:1366068",
   "URPR11:1366057",
   "PMLL11:1365847",
   "HGLG11:1365796",
@@ -50,9 +49,6 @@
   "FII PATRI IV #1365811"
  ],
  "acoes_nesta_rodada": false,
- "lido_do_aviso": [
-  "CYCR11"
- ],
  "pendentes": [
   "URPR11",
   "PMLL11",
@@ -68,8 +64,6 @@
   "KNUQ11",
   "KNCR11"
  ],
- "novos": [
-  "CYCR11 Rendimento"
- ],
- "pdfs": 1
+ "novos": [],
+ "pdfs": 0
 }
