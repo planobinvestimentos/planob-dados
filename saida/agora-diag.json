@@ -1,21 +1,16 @@
 {
- "gerado": "2026-10-30T20:45:16.595Z",
+ "gerado": "2026-10-30T20:47:44.782Z",
  "hora": 17,
  "fnet": {
-  "linhas": 915,
+  "linhas": 917,
   "avisos": 326,
   "relatorios": 131
  },
  "avisos_novos": [
   "PMLL11:1365847",
-  "RZTR11:1365846",
-  "CYCR11:1365833",
-  "JSCR11:1365816",
-  "HGCR11:1365804",
   "HGLG11:1365796",
   "HGRE11:1365795",
   "HGRU11:1365792",
-  "BBIG11:1365789",
   "VPPR11:1365751",
   "VGII11:1365750",
   "TVRI11:1365749",
@@ -69,19 +64,6 @@
   "KNCR11",
   "URPR11"
  ],
- "lido_do_aviso": [
-  "RZTR11",
-  "CYCR11",
-  "JSCR11",
-  "HGCR11",
-  "BBIG11"
- ],
- "novos": [
-  "RZTR11 Rendimento",
-  "CYCR11 Rendimento",
-  "JSCR11 Rendimento",
-  "HGCR11 Rendimento",
-  "BBIG11 Rendimento"
- ],
- "pdfs": 2
+ "novos": [],
+ "pdfs": 0
 }
