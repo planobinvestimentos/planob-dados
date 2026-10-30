@@ -1,13 +1,19 @@
 {
- "gerado": "2026-10-30T19:00:17.403Z",
+ "gerado": "2026-10-30T19:15:18.422Z",
  "hora": 16,
  "fnet": {
-  "linhas": 664,
-  "avisos": 102,
+  "linhas": 670,
+  "avisos": 107,
   "relatorios": 129
  },
- "avisos_novos": [],
+ "avisos_novos": [
+  "BCIA11:1364948"
+ ],
  "avisos_sem_ticker": [
+  "FII BB CORP #1364953",
+  "XP HABITAT FUNDO DE INVESTIMENTO IMOBILIÁRIO #1364952",
+  "FII CX TRX #1364946",
+  "FII RTEL #1364939",
   "XP CDI 97 CRI I FUNDO DE INVESTIMENTO IMOBILIÁRIO #1364931",
   "XP CDI 96 CRI I FUNDO DE INVESTIMENTO IMOBILIÁRIO #1364930",
   "FII TIOM #1364928",
@@ -28,17 +34,14 @@
   "FII TRXY #1364871",
   "FII RECD #1364870",
   "FII RBCRI IV #1364869",
-  "FII V MASTER #1364868",
-  "MANATÍ RENDA CDI FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1364848",
-  "FII MULT OF2 #1364832",
-  "FII MULT OF1 #1364828",
-  "OLSEN FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1364809"
+  "FII V MASTER #1364868"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 0,
-  "acoes": 0
- },
- "novos": [],
+ "acoes_nesta_rodada": false,
+ "lido_do_aviso": [
+  "BCIA11"
+ ],
+ "novos": [
+  "BCIA11 Rendimento"
+ ],
  "pdfs": 0
 }
