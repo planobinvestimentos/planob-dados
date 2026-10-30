@@ -1,18 +1,17 @@
 {
- "gerado": "2026-10-30T16:15:16.093Z",
+ "gerado": "2026-10-30T16:18:49.939Z",
  "hora": 13,
  "fnet": {
-  "linhas": 584,
-  "avisos": 37,
+  "linhas": 587,
+  "avisos": 41,
   "relatorios": 126
  },
- "avisos_novos": [
-  "WHGR11:1364114",
-  "AIEC11:1364104",
-  "KIVO11:1364103",
-  "BCRI11:1364101"
- ],
+ "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII POLO SHO #1364144",
+  "FII TISHMAN #1364143",
+  "FII ZAVIT C #1364142",
+  "FII GENERAL #1364136",
   "FII WHG F SP #1364109",
   "FII RRES #1364105",
   "FII PERFORMA #1364102",
@@ -29,17 +28,6 @@
   "FII JT PREV #1361837"
  ],
  "acoes_nesta_rodada": false,
- "lido_do_aviso": [
-  "WHGR11",
-  "AIEC11",
-  "KIVO11",
-  "BCRI11"
- ],
- "novos": [
-  "WHGR11 Rendimento",
-  "AIEC11 Rendimento",
-  "KIVO11 Rendimento",
-  "BCRI11 Rendimento"
- ],
- "pdfs": 2
+ "novos": [],
+ "pdfs": 0
 }
