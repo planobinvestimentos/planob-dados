@@ -1,13 +1,15 @@
 {
- "gerado": "2026-10-30T15:00:18.872Z",
+ "gerado": "2026-10-30T15:15:17.639Z",
  "hora": 12,
  "fnet": {
-  "linhas": 566,
-  "avisos": 26,
-  "relatorios": 124
+  "linhas": 572,
+  "avisos": 28,
+  "relatorios": 126
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII BANRISUL #1363695",
+  "FII RBRESID2 #1363671",
   "FII RB TFO #1363663",
   "FII SPG2 #1362859",
   "HEDGE OPPORTUNITIES FUNDO DE INVESTIMENTO IMOBILIÁRIO DE RESPONSABILIDADE LIMITADA #1362780",
@@ -16,11 +18,7 @@
   "FII FLNR #1361840",
   "FII JT PREV #1361837"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 0,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
