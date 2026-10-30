@@ -1,13 +1,15 @@
 {
- "gerado": "2026-10-30T17:49:02.637Z",
- "hora": 14,
+ "gerado": "2026-10-30T18:00:17.492Z",
+ "hora": 15,
  "fnet": {
-  "linhas": 615,
-  "avisos": 60,
+  "linhas": 617,
+  "avisos": 62,
   "relatorios": 129
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII RBRESID3 #1364764",
+  "FII RBRES IV #1364752",
   "FII JFDCAM #1364352",
   "FII OCTO #1364350",
   "XP LOGÍSTICO PRIME YIELD FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA #1364316",
@@ -30,11 +32,13 @@
   "FII ZAVIT C #1364142",
   "FII GENERAL #1364136",
   "FII WHG F SP #1364109",
-  "FII RRES #1364105",
-  "FII PERFORMA #1364102",
-  "FII LSOI #1364035"
+  "FII RRES #1364105"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 0,
+  "acoes": "não consultadas"
+ },
  "novos": [],
- "pdfs": 1
+ "pdfs": 0
 }
