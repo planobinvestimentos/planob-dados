@@ -1,13 +1,13 @@
 {
- "gerado": "2026-10-30T19:15:18.422Z",
+ "gerado": "2026-10-30T19:21:52.408Z",
  "hora": 16,
  "fnet": {
-  "linhas": 670,
-  "avisos": 107,
+  "linhas": 671,
+  "avisos": 108,
   "relatorios": 129
  },
  "avisos_novos": [
-  "BCIA11:1364948"
+  "GTWR11:1364979"
  ],
  "avisos_sem_ticker": [
   "FII BB CORP #1364953",
@@ -38,10 +38,10 @@
  ],
  "acoes_nesta_rodada": false,
  "lido_do_aviso": [
-  "BCIA11"
+  "GTWR11"
  ],
  "novos": [
-  "BCIA11 Rendimento"
+  "GTWR11 Rendimento"
  ],
  "pdfs": 0
 }
