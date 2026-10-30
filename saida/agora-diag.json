@@ -1,29 +1,45 @@
 {
- "gerado": "2026-10-30T16:00:16.827Z",
+ "gerado": "2026-10-30T16:15:16.093Z",
  "hora": 13,
  "fnet": {
-  "linhas": 575,
-  "avisos": 29,
+  "linhas": 584,
+  "avisos": 37,
   "relatorios": 126
  },
- "avisos_novos": [],
+ "avisos_novos": [
+  "WHGR11:1364114",
+  "AIEC11:1364104",
+  "KIVO11:1364103",
+  "BCRI11:1364101"
+ ],
  "avisos_sem_ticker": [
+  "FII WHG F SP #1364109",
+  "FII RRES #1364105",
+  "FII PERFORMA #1364102",
+  "FII LSOI #1364035",
+  "FII BGRB #1364018",
   "FII CX CEDAE #1363745",
   "FII BANRISUL #1363695",
   "FII RBRESID2 #1363671",
   "FII RB TFO #1363663",
   "FII SPG2 #1362859",
   "HEDGE OPPORTUNITIES FUNDO DE INVESTIMENTO IMOBILIÁRIO DE RESPONSABILIDADE LIMITADA #1362780",
-  "FII GENERAL #1362749",
   "FII SHOP PDP #1362718",
   "FII FLNR #1361840",
   "FII JT PREV #1361837"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 0,
-  "acoes": "não consultadas"
- },
- "novos": [],
- "pdfs": 0
+ "lido_do_aviso": [
+  "WHGR11",
+  "AIEC11",
+  "KIVO11",
+  "BCRI11"
+ ],
+ "novos": [
+  "WHGR11 Rendimento",
+  "AIEC11 Rendimento",
+  "KIVO11 Rendimento",
+  "BCRI11 Rendimento"
+ ],
+ "pdfs": 2
 }
