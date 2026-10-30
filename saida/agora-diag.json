@@ -1,14 +1,12 @@
 {
- "gerado": "2026-10-30T17:45:17.607Z",
+ "gerado": "2026-10-30T17:49:02.637Z",
  "hora": 14,
  "fnet": {
-  "linhas": 613,
+  "linhas": 615,
   "avisos": 60,
-  "relatorios": 127
+  "relatorios": 129
  },
- "avisos_novos": [
-  "FIIB11:1364708"
- ],
+ "avisos_novos": [],
  "avisos_sem_ticker": [
   "FII JFDCAM #1364352",
   "FII OCTO #1364350",
@@ -37,11 +35,6 @@
   "FII LSOI #1364035"
  ],
  "acoes_nesta_rodada": false,
- "lido_do_aviso": [
-  "FIIB11"
- ],
- "novos": [
-  "FIIB11 Rendimento"
- ],
- "pdfs": 0
+ "novos": [],
+ "pdfs": 1
 }
