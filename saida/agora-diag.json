@@ -1,13 +1,14 @@
 {
- "gerado": "2026-10-30T14:45:15.299Z",
- "hora": 11,
+ "gerado": "2026-10-30T15:00:18.872Z",
+ "hora": 12,
  "fnet": {
-  "linhas": 564,
-  "avisos": 25,
+  "linhas": 566,
+  "avisos": 26,
   "relatorios": 124
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII RB TFO #1363663",
   "FII SPG2 #1362859",
   "HEDGE OPPORTUNITIES FUNDO DE INVESTIMENTO IMOBILIÁRIO DE RESPONSABILIDADE LIMITADA #1362780",
   "FII GENERAL #1362749",
@@ -15,7 +16,11 @@
   "FII FLNR #1361840",
   "FII JT PREV #1361837"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
+ "varredura": {
+  "fii": 0,
+  "acoes": 0
+ },
  "novos": [],
  "pdfs": 0
 }
