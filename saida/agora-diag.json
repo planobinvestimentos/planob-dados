@@ -1,13 +1,17 @@
 {
- "gerado": "2026-10-30T17:30:16.804Z",
+ "gerado": "2026-10-30T17:45:17.607Z",
  "hora": 14,
  "fnet": {
-  "linhas": 609,
-  "avisos": 57,
+  "linhas": 613,
+  "avisos": 60,
   "relatorios": 127
  },
- "avisos_novos": [],
+ "avisos_novos": [
+  "FIIB11:1364708"
+ ],
  "avisos_sem_ticker": [
+  "FII JFDCAM #1364352",
+  "FII OCTO #1364350",
   "XP LOGÍSTICO PRIME YIELD FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA #1364316",
   "FII PMIS #1364277",
   "FII POLO I #1364258",
@@ -30,11 +34,14 @@
   "FII WHG F SP #1364109",
   "FII RRES #1364105",
   "FII PERFORMA #1364102",
-  "FII LSOI #1364035",
-  "FII BGRB #1364018",
-  "FII CX CEDAE #1363745"
+  "FII LSOI #1364035"
  ],
  "acoes_nesta_rodada": false,
- "novos": [],
+ "lido_do_aviso": [
+  "FIIB11"
+ ],
+ "novos": [
+  "FIIB11 Rendimento"
+ ],
  "pdfs": 0
 }
