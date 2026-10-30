@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-30T22:24:03.143Z",
+ "gerado": "2026-10-30T23:26:48.193Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -58,6 +58,50 @@
    "KORE11"
   ]
  },
- "lista": {},
- "erro": "The operation was aborted due to timeout"
+ "lista": {
+  "linhas_vistas": 744,
+  "categorias": {
+   "Aviso aos Cotistas - Estruturado": 211,
+   "Aviso aos Cotistas": 117,
+   "Relatórios": 84,
+   "Assembleia": 76,
+   "Comunicado ao Mercado": 75,
+   "Informes Periódicos": 50,
+   "Fato Relevante": 31,
+   "Regulamento": 31
+  },
+  "fatos_relevantes": 31,
+  "de_fiis_liquidos": 10
+ },
+ "fatos_sem_ticker": [
+  "FII SPTW PAX",
+  "FII HOFFICEI",
+  "FII RBRESID3",
+  "FII CAIXA AG",
+  "FII APEX MS",
+  "FII CANUMA",
+  "FII SUNO LG",
+  "FII IBBP",
+  "FII JPPA CRI",
+  "FII BANRISUL",
+  "FII CCVA",
+  "CIX MCMV FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
+  "FUNDO DE INVESTIMENTO IMOBILIÁRIO ECOPARQUE BAIRROS INTEGRADOS",
+  "FUNDO DE INVESTIMENTO IMOBILIÁRIO AMÉRICA LOGÍSTICA",
+  "TOWER FUNDO DE INVESTIMENTO IMOBILIÁRIO",
+  "FII VGRI",
+  "FII BTYU",
+  "FII REC REND",
+  "BIOTIC FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA"
+ ],
+ "analisados": 1,
+ "sem_texto": 0,
+ "fora_do_escopo": 0,
+ "abaixo_do_minimo": 0,
+ "reprovadas": [],
+ "materias_novas": 1,
+ "telegram": {
+  "enviados": 1,
+  "erros": []
+ }
 }
