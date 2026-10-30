@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-30T15:01:31.532Z",
+ "gerado": "2026-10-30T15:42:25.703Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 317,
+  "linhas_vistas": 324,
   "categorias": {
-   "Assembleia": 64,
+   "Assembleia": 68,
    "Relatórios": 60,
    "Informes Periódicos": 43,
    "Regulamento": 28,
-   "Fato Relevante": 25,
+   "Fato Relevante": 26,
    "Comunicado ao Mercado": 25,
    "Oferta Pública de Distribuição de Cotas": 24,
    "Atos de Deliberação do Administrador": 23
   },
-  "fatos_relevantes": 25,
+  "fatos_relevantes": 26,
   "de_fiis_liquidos": 9
  },
  "fatos_sem_ticker": [
+  "FII APEX MS",
   "FII CANUMA",
   "FII SUNO LG",
   "FII IBBP",
