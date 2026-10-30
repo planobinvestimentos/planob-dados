@@ -1,12 +1,12 @@
-# PARCIAL DO PREGÃO de hora em hora, das 12h às 17h (Brasília), segunda a sexta: maiores altas e baixas "até o momento" de ações, FIIs de tijolo, FIIs de papel e ETFs.
+# PARCIAL DO PREGÃO de 2 em 2 horas, às 12h, 14h e 16h (Brasília), segunda a sexta: maiores altas e baixas "até o momento" de ações, FIIs de tijolo, FIIs de papel e ETFs.
 # As criptomoedas NÃO entram mais na parcial: têm imagem própria 1 hora depois (workflow "Painel do mercado", futuros-imagem.mjs). Tentativas na hora cheia e na meia hora (o GitHub costuma atrasar alguns minutos):
 # cada hora envia uma única vez; se a hora cheia deu certo, a da meia hora não faz nada.
 # Cotações com atraso de ~15 min, de fonte gratuita de terceiros (TradingView e, de reserva, Yahoo Finance). Se não houver dado confiável ou não houver pregão (feriado), não envia nada.
 # Guarda o estado em saida/previa.json (não mexe nos outros arquivos). O fechamento completo continua às 20h (workflow "Aviso diário no Telegram").
-name: Parcial do pregão (12h às 17h)
+name: Parcial do pregão (12h, 14h e 16h)
 on:
   schedule:
-    - cron: '0,30 15-20 * * 1-5'    # 12h00 às 17h30 (Brasília), segunda a sexta
+    - cron: '0,30 15,17,19 * * 1-5'    # 12h, 14h e 16h (Brasília), com nova tentativa na meia hora, segunda a sexta
   workflow_dispatch:
     inputs:
       teste:
