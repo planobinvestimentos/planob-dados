@@ -1,4 +1,4 @@
-/* PARCIAL DO PREGÃO (de hora em hora, das 12h às 17h, Brasília): maiores altas e baixas "até o momento" de ações, FIIs de tijolo, FIIs de papel e ETFs
+/* PARCIAL DO PREGÃO (de 2 em 2 horas, às 12h, 14h e 16h, Brasília; PREVIA_INTERVALO e PREVIA_ATE mudam isso): maiores altas e baixas "até o momento" de ações, FIIs de tijolo, FIIs de papel e ETFs
    (as criptomoedas NÃO entram mais aqui: têm imagem própria, no painel do mercado, em futuros-imagem.mjs; para voltar a incluir no texto da parcial use PREVIA_CRIPTO_HORAS=15). Roda no GitHub Actions (.github/workflows/previa.yml), segunda a sexta.
    Cada hora sai uma única vez (estado por hora em saida/previa.json); o workflow tenta de novo na meia hora se a primeira tentativa da hora falhar.
    Diferença para o fechamento das 20h: o fechamento usa o arquivo oficial da B3 (só sai depois do pregão). Aqui as cotações vêm de uma fonte gratuita
@@ -30,7 +30,11 @@ const RODAPE = 'Conteúdo educacional. Não é recomendação de investimento.';
 const DIAS = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
 const FECH = process.env.MODO === 'fechamento';                                                                      // fechamento rápido (18h20 em diante)
 const QUANTOS = Number(process.env.PREVIA_QUANTOS) || (FECH ? 5 : 3);
-const H_INI = Number(process.env.PREVIA_DE) || 12, H_FIM = Number(process.env.PREVIA_ATE) || 17;                       // janela: das 12h às 17h (inclusive)
+const H_INI = Number(process.env.PREVIA_DE) || 12, H_FIM = Number(process.env.PREVIA_ATE) || 16;                       // janela: das 12h às 16h (inclusive)
+const INTERVALO = Number(process.env.PREVIA_INTERVALO) || 2;                                                          // a cada 2 horas: 12h, 14h e 16h
+const HORAS_PREVIA = [];
+for (let h = H_INI; h <= H_FIM; h += INTERVALO) HORAS_PREVIA.push(h + 'h');
+const HORAS_TXT = HORAS_PREVIA.length > 1 ? HORAS_PREVIA.slice(0, -1).join(', ') + ' e ' + HORAS_PREVIA[HORAS_PREVIA.length - 1] : HORAS_PREVIA.join('');
 const CRIPTO_HORAS = String(process.env.PREVIA_CRIPTO_HORAS || '').split(',').map((x) => Number(x.trim())).filter(Boolean);   // horas em que a mensagem inclui criptomoedas
 
 /* agora em Brasília (UTC-3, sem horário de verão) */
@@ -146,7 +150,7 @@ function mensagem(g, ibov, destaque, cr, incluirCripto) {
   const cripto = incluirCripto && cripBlocos.length ? '🪙 CRIPTO (últimas 24h, top 50)\n' + cripBlocos.join('\n') : '';
   return [
     '⏱️ PARCIAL DO PREGÃO · ' + DIAS[DOW] + ', ' + dataBR(HOJE) + ' · ' + HORA + 'h',
-    'Como o mercado está até agora: ' + QUANTOS + ' maiores altas (🟢) e ' + QUANTOS + ' maiores baixas (🔻) de cada grupo. 🔁 Repetição proposital: sai de hora em hora, das ' + H_INI + 'h às ' + H_FIM + 'h. O fechamento do dia sai logo depois das 18h.',
+    'Como o mercado está até agora: ' + QUANTOS + ' maiores altas (🟢) e ' + QUANTOS + ' maiores baixas (🔻) de cada grupo. 🔁 Repetição proposital: sai de ' + INTERVALO + ' em ' + INTERVALO + ' horas, às ' + HORAS_TXT + '. O fechamento do dia sai logo depois das 18h.',
     ibov ? 'Ibovespa (via BOVA11): ' + pct(ibov.v) : '',
     blocos.join('\n\n'), dest, cripto,
     'Ações, FIIs e ETFs: cotações com atraso de cerca de 15 minutos, de fonte de terceiros.' + (incluirCripto && cripto ? ' Cripto: CoinGecko.' : ''),
@@ -190,7 +194,7 @@ try {
     if (FECH) {
       const min = HORA * 60 + MINUTO;
       if (min < H_FECH_INI || min > H_FECH_FIM) { console.log('fechamento rápido: janela das 18h15 às 19h59 (agora ' + HORA + 'h' + String(MINUTO).padStart(2, '0') + '); nada a fazer.'); process.exit(0); }
-    } else if (HORA < H_INI || HORA > H_FIM) { console.log('prévia: fora da janela das ' + H_INI + 'h às ' + H_FIM + 'h59 (agora ' + HORA + 'h); nada a fazer.'); process.exit(0); }
+    } else if (HORA < H_INI || HORA > H_FIM || (HORA - H_INI) % INTERVALO !== 0) { console.log('prévia: fora dos horários ' + HORAS_TXT + ' (agora ' + HORA + 'h); nada a fazer.'); process.exit(0); }
     if (slots[CHAVE]) { console.log(FECH ? 'fechamento rápido: já foi enviado hoje.' : 'prévia: a edição das ' + HORA + 'h já foi enviada.'); process.exit(0); }
   }
   const L = carregarListas();
