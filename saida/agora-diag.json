@@ -1,9 +1,9 @@
 {
- "gerado": "2026-10-30T21:00:17.208Z",
+ "gerado": "2026-10-30T21:15:16.752Z",
  "hora": 18,
  "fnet": {
-  "linhas": 930,
-  "avisos": 332,
+  "linhas": 936,
+  "avisos": 335,
   "relatorios": 131
  },
  "avisos_novos": [
@@ -22,6 +22,9 @@
   "URPR11:1365414"
  ],
  "avisos_sem_ticker": [
+  "FII NEWRU #1366042",
+  "FII NEWPORT #1366036",
+  "FII ANCAR IC #1366030",
   "JS OPPORTUNITIES FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA #1365922",
   "SAFRA LIQUIDEZ IMOBILIÁRIA FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA #1365919",
   "JS RENDA ATIVA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1365916",
@@ -43,16 +46,9 @@
   "FRAM CAPITAL PENHA FUNDO DE INVESTIMENTO IMOBILIÁRIO #1365817",
   "FII VIC VIN #1365814",
   "FII VIC DES #1365813",
-  "FII PATRI IV #1365811",
-  "FII XP MACAE #1365810",
-  "FII HLMB #1365806",
-  "FII BR7 SENA #1365803"
+  "FII PATRI IV #1365811"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 0,
-  "acoes": "não consultadas"
- },
  "pendentes": [
   "PMLL11",
   "HGLG11",
