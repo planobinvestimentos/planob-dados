@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-30T21:30:16.546Z",
+ "gerado": "2026-10-30T21:45:17.025Z",
  "hora": 18,
  "fnet": {
-  "linhas": 943,
+  "linhas": 951,
   "avisos": 335,
-  "relatorios": 134
+  "relatorios": 138
  },
  "avisos_novos": [
   "URPR11:1366057",
@@ -49,6 +49,13 @@
   "FII PATRI IV #1365811"
  ],
  "acoes_nesta_rodada": false,
+ "aviso_erro": [
+  "URPR11: The operation was aborted due to timeout",
+  "HGLG11: The operation was aborted due to timeout",
+  "HGRE11: The operation was aborted due to timeout",
+  "VPPR11: The operation was aborted due to timeout",
+  "KNRI11: HTTP 520"
+ ],
  "pendentes": [
   "URPR11",
   "PMLL11",
@@ -65,5 +72,8 @@
   "KNCR11"
  ],
  "novos": [],
- "pdfs": 0
+ "pdf_erro": [
+  "GZIT11: The operation was aborted due to timeout"
+ ],
+ "pdfs": 1
 }
