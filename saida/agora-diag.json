@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-30T23:30:17.738Z",
+ "gerado": "2026-10-30T23:45:15.029Z",
  "hora": 20,
  "fnet": {
   "linhas": 988,
@@ -7,7 +7,6 @@
   "relatorios": 144
  },
  "avisos_novos": [
-  "VINO11:1366545",
   "URPR11:1366057",
   "PMLL11:1365847",
   "HGLG11:1365796",
@@ -50,9 +49,6 @@
   "FII VIC DES #1365813"
  ],
  "acoes_nesta_rodada": false,
- "lido_do_aviso": [
-  "VINO11"
- ],
  "pendentes": [
   "URPR11",
   "PMLL11",
@@ -61,15 +57,15 @@
   "HGRU11",
   "VPPR11",
   "VGII11",
-  "TVRI11",
+  "TVRI11"
+ ],
+ "desistiu": [
   "KNRI11",
   "KNRI11",
   "KNRI11",
   "KNUQ11",
   "KNCR11"
  ],
- "novos": [
-  "VINO11 Rendimento (corrigido)"
- ],
+ "novos": [],
  "pdfs": 0
 }
