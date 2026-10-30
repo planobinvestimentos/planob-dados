@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-30T00:42:08.186Z",
- "hora": 21,
+ "gerado": "2026-10-30T12:00:16.303Z",
+ "hora": 9,
  "fnet": {
-  "linhas": 653,
-  "avisos": 41,
-  "relatorios": 158
+  "linhas": 547,
+  "avisos": 25,
+  "relatorios": 124
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
@@ -13,11 +13,13 @@
   "FII GENERAL #1362749",
   "FII SHOP PDP #1362718",
   "FII FLNR #1361840",
-  "FII JT PREV #1361837",
-  "FII PRAIA CS #1360748",
-  "FII SMRE #1360580"
+  "FII JT PREV #1361837"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 0,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
