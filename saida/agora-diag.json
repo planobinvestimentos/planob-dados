@@ -1,8 +1,8 @@
 {
- "gerado": "2026-10-30T22:44:38.365Z",
- "hora": 19,
+ "gerado": "2026-10-30T23:00:17.093Z",
+ "hora": 20,
  "fnet": {
-  "linhas": 966,
+  "linhas": 975,
   "avisos": 335,
   "relatorios": 143
  },
@@ -48,7 +48,11 @@
   "FII VIC DES #1365813",
   "FII PATRI IV #1365811"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
+ "varredura": {
+  "fii": 0,
+  "acoes": 0
+ },
  "pendentes": [
   "URPR11",
   "PMLL11",
