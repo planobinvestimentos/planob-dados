@@ -1,12 +1,14 @@
 {
- "gerado": "2026-10-30T21:15:16.752Z",
+ "gerado": "2026-10-30T21:25:55.546Z",
  "hora": 18,
  "fnet": {
-  "linhas": 936,
+  "linhas": 942,
   "avisos": 335,
-  "relatorios": 131
+  "relatorios": 134
  },
  "avisos_novos": [
+  "CYCR11:1366068",
+  "URPR11:1366057",
   "PMLL11:1365847",
   "HGLG11:1365796",
   "HGRE11:1365795",
@@ -18,8 +20,7 @@
   "KNRI11:1365702",
   "KNRI11:1365697",
   "KNUQ11:1365626",
-  "KNCR11:1365624",
-  "URPR11:1365414"
+  "KNCR11:1365624"
  ],
  "avisos_sem_ticker": [
   "FII NEWRU #1366042",
@@ -49,7 +50,11 @@
   "FII PATRI IV #1365811"
  ],
  "acoes_nesta_rodada": false,
+ "lido_do_aviso": [
+  "CYCR11"
+ ],
  "pendentes": [
+  "URPR11",
   "PMLL11",
   "HGLG11",
   "HGRE11",
@@ -61,9 +66,10 @@
   "KNRI11",
   "KNRI11",
   "KNUQ11",
-  "KNCR11",
-  "URPR11"
+  "KNCR11"
  ],
- "novos": [],
- "pdfs": 0
+ "novos": [
+  "CYCR11 Rendimento"
+ ],
+ "pdfs": 1
 }
