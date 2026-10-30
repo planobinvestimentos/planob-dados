@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-30T12:01:39.058Z",
+ "gerado": "2026-10-30T12:43:14.520Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 295,
+  "linhas_vistas": 298,
   "categorias": {
    "Assembleia": 59,
    "Relatórios": 58,
-   "Informes Periódicos": 37,
+   "Informes Periódicos": 39,
    "Regulamento": 27,
+   "Fato Relevante": 25,
    "Comunicado ao Mercado": 25,
-   "Fato Relevante": 24,
    "Atos de Deliberação do Administrador": 22,
    "Oferta Pública de Distribuição de Cotas": 20
   },
-  "fatos_relevantes": 24,
+  "fatos_relevantes": 25,
   "de_fiis_liquidos": 9
  },
  "fatos_sem_ticker": [
+  "FII CANUMA",
   "FII SUNO LG",
   "FII IBBP",
   "FII JPPA CRI",
