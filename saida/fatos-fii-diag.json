@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-29T23:28:55.615Z",
+ "gerado": "2026-10-30T00:23:48.763Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 360,
+  "linhas_vistas": 366,
   "categorias": {
-   "Assembleia": 78,
-   "Relatórios": 78,
-   "Informes Periódicos": 39,
+   "Relatórios": 80,
+   "Assembleia": 79,
+   "Informes Periódicos": 40,
    "Regulamento": 36,
-   "Fato Relevante": 28,
+   "Fato Relevante": 29,
    "Atos de Deliberação do Administrador": 27,
-   "Oferta Pública de Distribuição de Cotas": 25,
-   "Comunicado ao Mercado": 24
+   "Comunicado ao Mercado": 25,
+   "Oferta Pública de Distribuição de Cotas": 25
   },
-  "fatos_relevantes": 28,
+  "fatos_relevantes": 29,
   "de_fiis_liquidos": 10
  },
  "fatos_sem_ticker": [
+  "FII SUNO LG",
   "FII IBBP",
   "FII JPPA CRI",
   "FII BANRISUL",
@@ -84,7 +85,6 @@
   "TOWER FUNDO DE INVESTIMENTO IMOBILIÁRIO",
   "FII VGRI",
   "FII BTYU",
-  "FII SUNO LG",
   "FII REC REND",
   "BIOTIC FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
   "FII ZAVIT C",
