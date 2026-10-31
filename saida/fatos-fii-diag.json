@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-30T23:26:48.193Z",
+ "gerado": "2026-10-31T00:26:15.367Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,11 +59,11 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 744,
+  "linhas_vistas": 750,
   "categorias": {
-   "Aviso aos Cotistas - Estruturado": 211,
+   "Aviso aos Cotistas - Estruturado": 212,
    "Aviso aos Cotistas": 117,
-   "Relatórios": 84,
+   "Relatórios": 89,
    "Assembleia": 76,
    "Comunicado ao Mercado": 75,
    "Informes Periódicos": 50,
@@ -94,14 +94,14 @@
   "FII REC REND",
   "BIOTIC FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA"
  ],
- "analisados": 1,
+ "analisados": 0,
  "sem_texto": 0,
  "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 1,
+ "materias_novas": 0,
  "telegram": {
-  "enviados": 1,
+  "enviados": 0,
   "erros": []
  }
 }
