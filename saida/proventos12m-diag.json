@@ -1,6 +1,6 @@
 {
- "gerado": "2026-10-30T11:10:35.843Z",
- "consultados": 982,
+ "gerado": "2026-10-31T11:00:30.996Z",
+ "consultados": 984,
  "com_dados": 390,
  "sem_dados": 336,
  "erros": 0,
@@ -9,8 +9,8 @@
   "ABTC11",
   "ACWI11",
   "AERI3",
-  "AGGX11",
   "AGRI11",
+  "AGGX11",
   "AGRX11",
   "AHEB3",
   "ALUG11",
@@ -22,6 +22,7 @@
   "ARGE11",
   "ARND3",
   "ATED3",
+  "AUMT11",
   "AURE3",
   "AUVP11",
   "AVLL3",
@@ -34,13 +35,12 @@
   "AZUL97",
   "AZUL98",
   "AZUL99",
-  "BBOI11",
-  "BBOV11"
+  "BBOI11"
  ],
  "via_b3": 0,
  "b3": {
-  "consultadas": 314,
-  "ok": 314,
+  "consultadas": 315,
+  "ok": 315,
   "falhas": 0,
   "recuperados": 0,
   "erro": null,
