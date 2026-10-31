@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-30T23:30:21.490Z",
+ "gerado": "2026-10-31T00:04:09.627Z",
  "de": "2026-10-28",
  "ate": "2026-10-30",
  "fii": {
@@ -36,9 +36,9 @@
   "itens": 0
  },
  "acoes": {
-  "emissoras": 284,
+  "emissoras": 285,
   "amostra": {
-   "emissora": "ABCB",
+   "emissora": "ABEV",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -51,14 +51,14 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRABCBACNPR4",
-    "paymentDate": "12/08/2026",
-    "rate": "1,16800000000",
-    "relatedTo": "1º Semestre/2026",
-    "approvedOn": "24/06/2026",
-    "isinCode": "BRABCBACNPR4",
+    "assetIssued": "BRABEVACNOR1",
+    "paymentDate": "31/12/2026",
+    "rate": "0,07130000000",
+    "relatedTo": "Anual/2026",
+    "approvedOn": "29/07/2026",
+    "isinCode": "BRABEVACNOR1",
     "label": "JRS CAP PROPRIO",
-    "lastDatePrior": "29/06/2026",
+    "lastDatePrior": "21/09/2026",
     "remarks": ""
    }
   },
@@ -83,9 +83,9 @@
     "remarks": ""
    }
   },
-  "ok": 284,
+  "ok": 285,
   "falhas": 0,
-  "semDividendos": 85,
+  "semDividendos": 86,
   "itens": 0
  }
 }
