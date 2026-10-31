@@ -1,6 +1,6 @@
 {
- "gerado": "2026-10-30T23:59:12.063Z",
- "hora": 20,
+ "gerado": "2026-10-31T00:13:08.883Z",
+ "hora": 21,
  "fnet": {
   "linhas": 993,
   "avisos": 336,
@@ -11,10 +11,7 @@
   "PMLL11:1365847",
   "HGLG11:1365796",
   "HGRE11:1365795",
-  "HGRU11:1365792",
-  "VPPR11:1365751",
-  "VGII11:1365750",
-  "TVRI11:1365749"
+  "HGRU11:1365792"
  ],
  "avisos_sem_ticker": [
   "RIZA VISEU FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1366526",
@@ -43,22 +40,19 @@
   "FII VIC VIN #1365814",
   "FII VIC DES #1365813"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
  "varredura": {
   "fii": 0,
-  "acoes": "não consultadas"
+  "acoes": 0
  },
  "pendentes": [
-  "URPR11",
+  "URPR11"
+ ],
+ "desistiu": [
   "PMLL11",
   "HGLG11",
   "HGRE11",
   "HGRU11"
- ],
- "desistiu": [
-  "VPPR11",
-  "VGII11",
-  "TVRI11"
  ],
  "novos": [],
  "pdfs": 0
