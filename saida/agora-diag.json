@@ -1,10 +1,10 @@
 {
- "gerado": "2026-10-30T23:45:15.029Z",
+ "gerado": "2026-10-30T23:59:12.063Z",
  "hora": 20,
  "fnet": {
-  "linhas": 988,
+  "linhas": 993,
   "avisos": 336,
-  "relatorios": 144
+  "relatorios": 149
  },
  "avisos_novos": [
   "URPR11:1366057",
@@ -14,12 +14,7 @@
   "HGRU11:1365792",
   "VPPR11:1365751",
   "VGII11:1365750",
-  "TVRI11:1365749",
-  "KNRI11:1365705",
-  "KNRI11:1365702",
-  "KNRI11:1365697",
-  "KNUQ11:1365626",
-  "KNCR11:1365624"
+  "TVRI11:1365749"
  ],
  "avisos_sem_ticker": [
   "RIZA VISEU FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1366526",
@@ -49,22 +44,21 @@
   "FII VIC DES #1365813"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 0,
+  "acoes": "não consultadas"
+ },
  "pendentes": [
   "URPR11",
   "PMLL11",
   "HGLG11",
   "HGRE11",
-  "HGRU11",
+  "HGRU11"
+ ],
+ "desistiu": [
   "VPPR11",
   "VGII11",
   "TVRI11"
- ],
- "desistiu": [
-  "KNRI11",
-  "KNRI11",
-  "KNRI11",
-  "KNUQ11",
-  "KNCR11"
  ],
  "novos": [],
  "pdfs": 0
