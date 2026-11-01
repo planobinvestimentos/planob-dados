@@ -1,10 +1,8 @@
 {
- "data": "2026-10-31",
+ "data": "2026-11-01",
  "slots": {
-  "9": true,
-  "13": true,
-  "19": true
+  "9": true
  },
- "ultima": 8,
- "proximo": 9
+ "ultima": 9,
+ "proximo": 10
 }
