@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-26T09:34:22.170Z",
+ "gerado": "2026-11-02T09:53:23.412Z",
  "anos": {
   "2025": {
    "linhas_geral": 13678,
@@ -152,11 +152,11 @@
    ]
   }
  },
- "isins_no_cadastro": 628,
+ "isins_no_cadastro": 636,
  "fundos_no_informe": 1546,
- "tickers_ligados": 330,
- "sem_isin_no_cadastro": 1203,
- "sem_valor_patrimonial": 0,
+ "tickers_ligados": 336,
+ "sem_isin_no_cadastro": 1197,
+ "sem_valor_patrimonial": 1,
  "exemplo": [
   [
    "FVPQ11",
@@ -172,10 +172,7 @@
    "PABY11",
    {
     "seg": "Multicategoria",
-    "vp": 0,
-    "ref": "2026-09",
-    "cotistas": 584,
-    "pl": 0
+    "cotistas": 584
    }
   ],
   [
@@ -209,26 +206,23 @@
    }
   ]
  ],
- "liquidos": 132,
- "liquidos_com_vp": 115,
+ "liquidos": 131,
+ "liquidos_com_vp": 117,
  "liquidos_sem_vp": [
   "BTCI11",
   "BTHF11",
-  "PCIP11",
-  "CPSH11",
-  "GZIT11",
-  "MCLO11",
   "MCRE11",
-  "KNUQ11",
-  "RZLC11",
-  "TVRI11",
-  "INHF11",
   "FATN11",
   "FIIP11",
-  "PMLL11",
-  "VVCO11",
+  "TVRI11",
+  "KNUQ11",
+  "CPSH11",
+  "RZLC11",
+  "GZIT11",
   "PSEC11",
-  "OXRL11"
+  "PCIP11",
+  "PMLL11",
+  "INHF11"
  ],
  "resultado": "ok"
 }
