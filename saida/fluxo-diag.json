@@ -1,12 +1,17 @@
 {
- "gerado": "2026-10-30T13:00:29.361Z",
- "baixados": 2,
+ "gerado": "2026-11-02T13:00:39.126Z",
+ "baixados": 1,
  "falhas": {
-  "2026-10-30": "tabela não encontrada/validada",
-  "2026-10-12": "HTTP 500"
+  "2026-11-02": "HTTP 500",
+  "2026-10-12": "HTTP 500",
+  "2026-11-03": "HTTP 500",
+  "2026-11-04": "HTTP 500",
+  "2026-11-05": "HTTP 500",
+  "2026-11-06": "HTTP 500",
+  "2026-11-09": "HTTP 500",
+  "2026-11-10": "HTTP 500"
  },
  "lidos": 1,
- "trecho": "  INTERMEDIADORA .... GENIAL INSTITUCIONAL CCTVM S/A (120)\nINTERMEDIADORA .... GENIAL INSTITUCIONAL CCTVM S/A (120)\nINTERMEDIADORA .... GENIAL INSTITUCIONAL CCTVM S/A (120)\nINTERMEDIADORA .... GENIAL INSTITUCIONAL CCTVM S/A (120)\nINTERMEDIADORA .... GENIAL INSTITUCIONAL CCTVM S/A (120)\n                                      Investidores de Mercado de Capitais Não Residentes\n              “INR”                   e pelos Investidores Estrangeiros Diretos, em\n“Investidor de Mercado de Capitais    Tem o significado atribuído no item 5.2.(iii) deste\n  “Investidor Estrangeiro Direto”     Tem o significado atribuído no item 5.2.(iv) deste\ncom Investidores da Companhia, informando sobre a verificação de determinada Condição\ne ao Diretor de Relações com Investidores da Companhia que, por sua vez, divulgará,\n4.5. Divulgação: A Ofertante deverá comunicar ao Diretor de Relações com Investidores da",
- "dias_calculados": 28,
- "ultimo": "2026-10-27"
+ "dias_calculados": 29,
+ "ultimo": "2026-10-28"
 }
