@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-02T12:00:53.562Z",
+ "gerado": "2026-11-02T12:53:49.392Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 131,
  "top": {
@@ -80,14 +80,14 @@
   "FII VIML VIN",
   "FII CANUMA"
  ],
- "analisados": 1,
+ "analisados": 0,
  "sem_texto": 0,
  "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 1,
+ "materias_novas": 0,
  "telegram": {
-  "enviados": 1,
+  "enviados": 0,
   "erros": []
  }
 }

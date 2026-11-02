@@ -1,31 +1,30 @@
 {
- "gerado": "2026-11-02T12:00:26.680Z",
+ "gerado": "2026-11-02T12:53:43.511Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
   "modelo": "claude-haiku-5-5",
   "parada": "end_turn",
   "blocos": [
-   "thinking",
    "text"
   ],
   "usado": {
-   "input_tokens": 3047,
+   "input_tokens": 17,
    "cache_creation_input_tokens": 0,
    "cache_read_input_tokens": 0,
    "cache_creation": {
     "ephemeral_5m_input_tokens": 0,
     "ephemeral_1h_input_tokens": 0
    },
-   "output_tokens": 2249,
+   "output_tokens": 4,
    "output_tokens_details": {
-    "thinking_tokens": 1467
+    "thinking_tokens": 0
    },
    "service_tier": "standard",
    "inference_geo": "global",
    "speed": "standard"
   },
-  "texto": "{\"titulo\":\"Enjoei (ENJU3) informa resultado de leilão de frações e data de pagamento\",\"resumo\":\"Leilão de 3.102 ações formadas por frações da Enjoei (ENJU3) apurou R$ 22.607,56. O pagamento aos titulares será feito em 09 de novembro de 2026.\",\"paragrafos\":[\"A Enjoei S.A. (ENJU3) informou, em aviso a"
+  "texto": "ok"
  },
  "ia_teste": "ok: ok",
  "ipe": {
@@ -91,10 +90,10 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 1672,
+  "linhas": 1684,
   "na_janela_e_categorias": 82,
   "sem_cnpj": 77,
-  "entrega_mais_recente": "20261102 02/11/2026 08:36",
+  "entrega_mais_recente": "20261102 02/11/2026 09:35",
   "tentativa": 1
  },
  "fontes": {
@@ -103,70 +102,173 @@
   "apos_juntar": 82
  },
  "itens": {
-  "novos": 1,
-  "enviados_agora": 1,
+  "novos": 0,
+  "enviados_agora": 0,
   "com_ia": 0,
   "ia_falhas": 0,
   "fora_do_filtro": 0,
-  "rotina_escondida": 0,
-  "materias": 1
+  "rotina_escondida": 0
  },
  "filtro": "sem filtro de lucro (todas as empresas)",
  "gasto_ia": {
   "mes": "2026-11",
-  "usd": 0.0014,
-  "chamadas": 2,
+  "usd": 0.0026,
+  "chamadas": 4,
   "teto_usd": 5
  },
  "recentes": [
   {
-   "h": "08:36",
-   "emp": "LOEWS CORP",
+   "h": "09:35",
+   "emp": "CITIGROUP INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Documento Diversos",
+   "d": "2026-11-02",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05010-5",
+   "c5": "20261102 02/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "XCEL ENERGY INC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
    "ass": "8-K",
    "d": "2026-11-02",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05485-2",
+   "c0": "05348-1",
    "c5": "20261102 02/11/2026",
    "c8": "1",
    "c9": "AP"
   },
   {
-   "h": "08:36",
-   "emp": "NETEASE INC",
+   "h": "09:35",
+   "emp": "DIAGEO PLC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
    "ass": "6-K",
    "d": "2026-11-02",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05241-8",
+   "c0": "05235-3",
    "c5": "20261102 02/11/2026",
    "c8": "1",
    "c9": "AP"
   },
   {
-   "h": "08:36",
-   "emp": "MITSUBISHI UFJ FINANCIAL GROUP INC",
+   "h": "09:35",
+   "emp": "MICROSOFT CORPORATION",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "4",
+   "ass": "424B2",
    "d": "2026-11-02",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05689-8",
+   "c0": "05015-6",
    "c5": "20261102 02/11/2026",
    "c8": "1",
    "c9": "AP"
   },
   {
-   "h": "08:36",
-   "emp": "ICICI BANK LTD",
+   "h": "09:35",
+   "emp": "BARCLAYS PLC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
    "ass": "6-K",
    "d": "2026-11-02",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05678-2",
+   "c0": "05655-3",
+   "c5": "20261102 02/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "NEWS CORP",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-11-02",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05492-5",
+   "c5": "20261102 02/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "MARRIOTT INTERNATIONAL INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-11-02",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05487-9",
+   "c5": "20261102 02/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "TRIPADVISOR INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-11-02",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05426-7",
+   "c5": "20261102 02/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "KRYSTAL BIOTECH INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-11-02",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05944-3",
+   "c5": "20261102 02/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "KRYSTAL BIOTECH INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "10-Q",
+   "d": "2026-11-02",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05944-3",
+   "c5": "20261102 02/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:35",
+   "emp": "GOLD FIELDS LTD",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-11-02",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05672-3",
+   "c5": "20261102 02/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:06",
+   "emp": "EMBRAER S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Grécia adquire até seis aeronaves multimissão KC-390 Millennium da Embraer",
+   "d": "2026-11-02",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02008-7",
    "c5": "20261102 02/11/2026",
    "c8": "1",
    "c9": "AP"
@@ -199,26 +301,26 @@
   },
   {
    "h": "08:36",
-   "emp": "SEA LTD",
+   "emp": "LOEWS CORP",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "4",
+   "ass": "8-K",
    "d": "2026-11-02",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05729-0",
+   "c0": "05485-2",
    "c5": "20261102 02/11/2026",
    "c8": "1",
    "c9": "AP"
   },
   {
    "h": "08:36",
-   "emp": "ZTO EXPRESS CAYMAN INC",
+   "emp": "NETEASE INC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
    "ass": "6-K",
    "d": "2026-11-02",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05716-9",
+   "c0": "05241-8",
    "c5": "20261102 02/11/2026",
    "c8": "1",
    "c9": "AP"
@@ -250,14 +352,53 @@
    "c9": "AP"
   },
   {
-   "h": "08:35",
-   "emp": "JPMORGAN ACTIVE GROWTH ETF",
+   "h": "08:36",
+   "emp": "MITSUBISHI UFJ FINANCIAL GROUP INC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "497J",
+   "ass": "4",
    "d": "2026-11-02",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05013-4",
+   "c0": "05689-8",
+   "c5": "20261102 02/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:36",
+   "emp": "ICICI BANK LTD",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-11-02",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05678-2",
+   "c5": "20261102 02/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:36",
+   "emp": "SEA LTD",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-02",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05729-0",
+   "c5": "20261102 02/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:36",
+   "emp": "ZTO EXPRESS CAYMAN INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-11-02",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05716-9",
    "c5": "20261102 02/11/2026",
    "c8": "1",
    "c9": "AP"
@@ -290,19 +431,6 @@
   },
   {
    "h": "08:35",
-   "emp": "JPMORGAN CHASE & CO.",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Documento Diversos",
-   "d": "2026-11-02",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05057-1",
-   "c5": "20261102 02/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "08:35",
    "emp": "WELLS FARGO & COMPANY",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -329,6 +457,19 @@
   },
   {
    "h": "08:35",
+   "emp": "JPMORGAN ACTIVE GROWTH ETF",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "497J",
+   "d": "2026-11-02",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05013-4",
+   "c5": "20261102 02/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:35",
    "emp": "GOLDMAN SACHS GROUP INC.",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -349,6 +490,19 @@
    "d": "2026-11-02",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05126-8",
+   "c5": "20261102 02/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:35",
+   "emp": "JPMORGAN CHASE & CO.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Documento Diversos",
+   "d": "2026-11-02",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05057-1",
    "c5": "20261102 02/11/2026",
    "c8": "1",
    "c9": "AP"
