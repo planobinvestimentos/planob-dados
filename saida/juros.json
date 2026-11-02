@@ -1,10 +1,9 @@
 {
- "data": "2026-10-30",
+ "data": "2026-11-02",
  "slots": {
-  "11": true,
-  "18": true
+  "11": true
  },
- "hora": 18,
+ "hora": 11,
  "fonte": "TradingView (atraso ~15 min)",
  "curva": [
   {
