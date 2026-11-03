@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-03T12:00:32.626Z",
+ "gerado": "2026-11-03T12:52:13.913Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -10,22 +10,22 @@
    "text"
   ],
   "usado": {
-   "input_tokens": 4012,
+   "input_tokens": 1169,
    "cache_creation_input_tokens": 0,
    "cache_read_input_tokens": 0,
    "cache_creation": {
     "ephemeral_5m_input_tokens": 0,
     "ephemeral_1h_input_tokens": 0
    },
-   "output_tokens": 2861,
+   "output_tokens": 1940,
    "output_tokens_details": {
-    "thinking_tokens": 2209
+    "thinking_tokens": 1400
    },
    "service_tier": "standard",
    "inference_geo": "global",
    "speed": "standard"
   },
-  "texto": "{\"titulo\":\"Goldman Sachs informa posição em derivativos de 5,10% das preferenciais da Randoncorp\",\"resumo\":\"Entidades do Goldman Sachs informam posição em derivativos com liquidação financeira equivalente a 11.426.468 ações preferenciais da Randoncorp (RAPT3 e RAPT4).\",\"paragrafos\":[\"A Randoncorp S."
+  "texto": "{\"titulo\":\"Mak Capital informa aquisição de 5,05% das ações ordinárias da Hapvida (HAPV3)\",\"resumo\":\"Hapvida comunica que recebeu, em 30 de outubro de 2026, aviso do Mak Capital sobre aquisição de 5,05% das ações ordinárias da companhia.\",\"paragrafos\":[\"A Hapvida Participações e Investimentos S.A. ("
  },
  "ia_teste": "ok: ok",
  "ipe": {
@@ -85,34 +85,173 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 1561,
-  "na_janela_e_categorias": 59,
+  "linhas": 1571,
+  "na_janela_e_categorias": 61,
   "sem_cnpj": 61,
-  "entrega_mais_recente": "20261103 03/11/2026 09:00",
+  "entrega_mais_recente": "20261103 03/11/2026 09:50",
   "tentativa": 1
  },
  "fontes": {
-  "enet": 59,
+  "enet": 61,
   "ipe": 42,
-  "apos_juntar": 59
+  "apos_juntar": 61
  },
  "itens": {
-  "novos": 3,
-  "enviados_agora": 3,
+  "novos": 1,
+  "enviados_agora": 1,
   "com_ia": 0,
   "ia_falhas": 0,
   "fora_do_filtro": 0,
   "rotina_escondida": 0,
-  "materias": 3
+  "materias": 0
  },
  "filtro": "sem filtro de lucro (todas as empresas)",
+ "materias_reprovadas": [
+  {
+   "prot": "1582948",
+   "empresa": "HAPVIDA PARTICIPACOES E INVESTIMENTOS SA",
+   "numeros_fora_do_documento": [
+    "11"
+   ]
+  }
+ ],
  "gasto_ia": {
   "mes": "2026-11",
-  "usd": 0.0075,
-  "chamadas": 16,
+  "usd": 0.0086,
+  "chamadas": 18,
   "teto_usd": 5
  },
  "recentes": [
+  {
+   "h": "09:50",
+   "emp": "AGROGALAXY PARTICIPAÇÕES S.A.",
+   "cat": "Valores Mobiliários Negociados e Detidos",
+   "tipo": "Posição Consolidada",
+   "ass": "",
+   "d": "2026-11-03",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02565-8",
+   "c5": "20261001 10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:50",
+   "emp": "GSH CORP PARTICIPACOES S.A.",
+   "cat": "Valores Mobiliários Negociados e Detidos",
+   "tipo": "Posição Consolidada",
+   "ass": "",
+   "d": "2026-11-03",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02660-3",
+   "c5": "20261001 10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:36",
+   "emp": "RAIZEN S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Novo código de negociação: RAIZ55",
+   "d": "2026-11-03",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02591-7",
+   "c5": "20261103 03/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:31",
+   "emp": "HAPVIDA PARTICIPACOES E INVESTIMENTOS SA",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Aquisição/Alienação de Participação Acionária Relevante",
+   "ass": "Declaração de Aquisição de Participação Acionária Relevante",
+   "d": "2026-11-03",
+   "st": "NOVO",
+   "c0": "02439-2",
+   "c5": "20261103 03/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:26",
+   "emp": "RAIZEN S.A.",
+   "cat": "Informações de Companhias em Recuperação Judicial ou Extrajudicial",
+   "tipo": "Outros documentos",
+   "ass": "Materiais da Eleição",
+   "d": "2026-11-03",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02591-7",
+   "c5": "20261102 02/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:17",
+   "emp": "AZEVEDO & TRAVASSOS ENERGIA S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Plano Operacional para Incremento de Produção",
+   "d": "2026-11-03",
+   "st": "nao_e_fato_relevante_nem_destaque",
+   "c0": "02762-6",
+   "c5": "20261103 03/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:16",
+   "emp": "CIA SANEAMENTO DE MINAS GERAIS-COPASA MG",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Eleição de Diretor Estatutário; Autorização para pré-pagamento de dívida - Caixa FI; Autor",
+   "d": "2026-11-03",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01944-5",
+   "c5": "20261022 22/10/2026 14:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:12",
+   "emp": "EUCATEX S.A. INDUSTRIA E COMERCIO",
+   "cat": "Valores Mobiliários Negociados e Detidos",
+   "tipo": "Posição Consolidada",
+   "ass": "",
+   "d": "2026-11-03",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00577-0",
+   "c5": "20261001 10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:07",
+   "emp": "ELECTRO ACO ALTONA S.A.",
+   "cat": "Valores Mobiliários Negociados e Detidos",
+   "tipo": "Posição Consolidada",
+   "ass": "",
+   "d": "2026-11-03",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00538-0",
+   "c5": "20261001 10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:02",
+   "emp": "COMPANHIA BRASILEIRA DE ALUMÍNIO",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Apresentações a analistas/agentes do mercado",
+   "ass": "Relatório do Mercado de Alumínio 3T26",
+   "d": "2026-11-03",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02598-4",
+   "c5": "20261103 03/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
   {
    "h": "09:00",
    "emp": "ELECTRO ACO ALTONA S.A.",
@@ -128,6 +267,19 @@
   },
   {
    "h": "08:59",
+   "emp": "OCEANPACT SERVICOS MARITIMOS S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Assinatura de MOAs para a venda de 2 PSVs",
+   "d": "2026-11-03",
+   "st": "ja_enviado_antes",
+   "c0": "02553-4",
+   "c5": "20261103 03/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:59",
    "emp": "TECNISA S.A.",
    "cat": "Aviso aos Acionistas",
    "tipo": "Outros avisos",
@@ -135,19 +287,6 @@
    "d": "2026-11-03",
    "st": "nao_e_fato_relevante_nem_destaque",
    "c0": "02043-5",
-   "c5": "20261103 03/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "08:59",
-   "emp": "OCEANPACT SERVICOS MARITIMOS S.A.",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Assinatura de MOAs para a venda de 2 PSVs",
-   "d": "2026-11-03",
-   "st": "NOVO",
-   "c0": "02553-4",
    "c5": "20261103 03/11/2026",
    "c8": "1",
    "c9": "AP"
@@ -185,7 +324,7 @@
    "tipo": "-",
    "ass": "FR 07/26 - Deslistagem das Ações da Latibex",
    "d": "2026-11-03",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "01431-1",
    "c5": "20261103 03/11/2026",
    "c8": "1",
@@ -510,7 +649,7 @@
    "tipo": "Aquisição/Alienação de Participação Acionária Relevante",
    "ass": "Declaração de Aquisição de Participação Acionária Relevante",
    "d": "2026-11-03",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "01410-9",
    "c5": "20261103 03/11/2026",
    "c8": "1",
