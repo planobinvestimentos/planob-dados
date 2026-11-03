@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-03T19:30:17.942Z",
+ "gerado": "2026-11-03T19:45:31.540Z",
  "hora": 16,
  "fnet": {
-  "linhas": 837,
-  "avisos": 324,
+  "linhas": 838,
+  "avisos": 325,
   "relatorios": 113
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII RBCAP LG #1367502",
   "FII CX RBRAV #1367380",
   "FII CX RBRA2 #1367307",
   "FII NEWRU #1367077"
