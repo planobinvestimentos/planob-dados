@@ -1,6 +1,6 @@
 {
- "gerado": "2026-11-03T14:59:02.051Z",
- "hora": 11,
+ "gerado": "2026-11-03T15:00:16.563Z",
+ "hora": 12,
  "fnet": {
   "linhas": 819,
   "avisos": 322,
@@ -10,10 +10,10 @@
  "avisos_sem_ticker": [
   "FII NEWRU #1367077"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
  "varredura": {
   "fii": 0,
-  "acoes": "não consultadas"
+  "acoes": 0
  },
  "novos": [],
  "pdfs": 0
