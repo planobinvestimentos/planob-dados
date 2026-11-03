@@ -1,14 +1,12 @@
 {
- "gerado": "2026-11-03T20:15:34.902Z",
+ "gerado": "2026-11-03T20:16:44.920Z",
  "hora": 17,
  "fnet": {
   "linhas": 843,
   "avisos": 327,
   "relatorios": 113
  },
- "avisos_novos": [
-  "GGRC11:1367568"
- ],
+ "avisos_novos": [],
  "avisos_sem_ticker": [
   "FII VIMO #1367556",
   "FII RBCAP LG #1367502",
@@ -17,11 +15,6 @@
   "FII NEWRU #1367077"
  ],
  "acoes_nesta_rodada": false,
- "lido_do_aviso": [
-  "GGRC11"
- ],
- "novos": [
-  "GGRC11 Rendimento"
- ],
- "pdfs": 1
+ "novos": [],
+ "pdfs": 0
 }
