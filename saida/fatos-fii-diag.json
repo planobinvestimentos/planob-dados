@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-03T00:27:04.519Z",
+ "gerado": "2026-11-03T12:01:26.862Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 131,
  "top": {
@@ -59,27 +59,14 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 467,
+  "linhas_vistas": 5,
   "categorias": {
-   "Aviso aos Cotistas - Estruturado": 203,
-   "Aviso aos Cotistas": 114,
-   "Comunicado ao Mercado": 54,
-   "Relatórios": 36,
-   "Assembleia": 17,
-   "Informes Periódicos": 16,
-   "Oferta Pública de Distribuição de Cotas": 8,
-   "Fato Relevante": 7
+   "Relatórios": 3,
+   "Comunicado ao Mercado": 2
   },
-  "fatos_relevantes": 7,
-  "de_fiis_liquidos": 2
+  "fatos_relevantes": 0,
+  "de_fiis_liquidos": 0
  },
- "fatos_sem_ticker": [
-  "FII SPTW PAX",
-  "FII RBRESID3",
-  "FII CAIXA AG",
-  "FII VIML VIN",
-  "FII CANUMA"
- ],
  "analisados": 0,
  "sem_texto": 0,
  "fora_do_escopo": 0,
