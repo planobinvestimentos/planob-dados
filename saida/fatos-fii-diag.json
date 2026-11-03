@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-03T22:29:32.927Z",
+ "gerado": "2026-11-03T23:32:05.417Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 131,
  "top": {
@@ -59,21 +59,29 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 111,
+  "linhas_vistas": 145,
   "categorias": {
-   "Assembleia": 17,
-   "Informes Periódicos": 17,
-   "Comunicado ao Mercado": 16,
+   "Comunicado ao Mercado": 20,
+   "Informes Periódicos": 19,
+   "Regulamento": 19,
+   "Atos de Deliberação do Administrador": 19,
+   "Fato Relevante": 18,
+   "Assembleia": 18,
    "Relatórios": 14,
-   "Atos de Deliberação do Administrador": 11,
-   "Regulamento": 10,
-   "Oferta Pública de Distribuição de Cotas": 10,
-   "Fato Relevante": 9
+   "Oferta Pública de Distribuição de Cotas": 11
   },
-  "fatos_relevantes": 9,
-  "de_fiis_liquidos": 1
+  "fatos_relevantes": 18,
+  "de_fiis_liquidos": 2
  },
  "fatos_sem_ticker": [
+  "FII WTXA",
+  "VT TOWER FUNDO DE INVESTIMENTO IMOBILIÁRIO - FII RESPONSABILIDADE LIMITA",
+  "TNU FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA",
+  "FLFC FUNDO DE INVESTIMENTO IMOBILIÁRIO - FII RESPONSABILIDADE LIMITADA",
+  "FL SQUARE FUNDO DE INVESTIMENTO IMOBILIÁRIO -RESPONSABILIDADE LIMITADA",
+  "FII SF",
+  "FUNDO DE INVESTIMENTO IMOBILIÁRIO JK B II - FII RESPONSABILIDADE LIMITADA",
+  "FUNDO DE INVESTIMENTO IMOBILIÁRIO JK B - FII RESPONSABILIDADE LIMITADA",
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO FL 3.500 1 - RESPONSABILIDADE LIMITADA",
   "FII EBTA",
   "CTN FUNDO DE INVESTIMENTO IMOBILIÁRIO - FII RESPONSABILIDADE LIMITADA",
@@ -83,19 +91,14 @@
   "FII AQPA",
   "FII MULT REN"
  ],
- "analisados": 0,
+ "analisados": 2,
  "sem_texto": 0,
- "fora_do_escopo": 0,
+ "fora_do_escopo": 1,
  "abaixo_do_minimo": 0,
- "reprovadas": [
-  {
-   "id": 1367670,
-   "erro": "resposta da IA sem JSON"
-  }
- ],
- "materias_novas": 0,
+ "reprovadas": [],
+ "materias_novas": 1,
  "telegram": {
-  "enviados": 0,
+  "enviados": 1,
   "erros": []
  }
 }
