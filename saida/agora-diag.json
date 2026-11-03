@@ -1,17 +1,22 @@
 {
- "gerado": "2026-11-03T18:45:28.581Z",
- "hora": 15,
+ "gerado": "2026-11-03T19:00:18.741Z",
+ "hora": 16,
  "fnet": {
-  "linhas": 833,
-  "avisos": 323,
+  "linhas": 836,
+  "avisos": 324,
   "relatorios": 113
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII CX RBRAV #1367380",
   "FII CX RBRA2 #1367307",
   "FII NEWRU #1367077"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
+ "varredura": {
+  "fii": 0,
+  "acoes": 0
+ },
  "novos": [],
  "pdfs": 0
 }
