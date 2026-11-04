@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-03T11:20:30.693Z",
+ "gerado": "2026-11-04T11:31:43.970Z",
  "consultados": 984,
- "com_dados": 390,
- "sem_dados": 337,
+ "com_dados": 391,
+ "sem_dados": 335,
  "erros": 0,
  "exemplos_erro": [],
  "exemplos_sem_dados": [
@@ -26,21 +26,21 @@
   "AURE3",
   "AUVP11",
   "AVLL3",
-  "AVUR15",
   "AXIA7",
   "AZEV3",
   "AZEV4",
   "AZTE3",
   "AZUL3",
   "AZUL97",
-  "AZUL98",
   "AZUL99",
-  "BBOI11"
+  "AZUL98",
+  "BBOI11",
+  "BBOV11"
  ],
  "via_b3": 0,
  "b3": {
-  "consultadas": 316,
-  "ok": 316,
+  "consultadas": 313,
+  "ok": 313,
   "falhas": 0,
   "recuperados": 0,
   "erro": null,
