@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-04T18:15:20.032Z",
+ "gerado": "2026-11-04T18:30:18.317Z",
  "hora": 15,
  "fnet": {
-  "linhas": 927,
-  "avisos": 326,
+  "linhas": 929,
+  "avisos": 327,
   "relatorios": 99
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "VERDE A&I CEDRO PORTFOLIO RENDA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1368695",
   "FII VIMO #1367649",
   "FII RBCAP LG #1367502",
   "FII CX RBRAV #1367380",
