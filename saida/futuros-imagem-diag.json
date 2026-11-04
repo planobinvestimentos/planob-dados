@@ -1,41 +1,41 @@
 {
- "gerado": "2026-11-04T14:30:29.455Z",
+ "gerado": "2026-11-04T17:30:26.155Z",
  "hoje": "2026-11-04",
- "hora": "11:30",
+ "hora": "14:30",
  "modo": "lote",
  "pregao": {
-  "comparaveis": 79,
-  "iguais": 6
+  "comparaveis": 78,
+  "iguais": 2
  },
  "setores": {
   "achados": {
    "ICON": {
-    "v": 1.3543999473060242,
+    "v": 3.9932156501119747,
     "s": "BMFBOVESPA:ICON",
     "origem": "simbolo"
    },
    "IEEX": {
-    "v": 1.9263652963481819,
+    "v": 3.3310681723406526,
     "s": "BMFBOVESPA:IEEX",
     "origem": "simbolo"
    },
    "INDX": {
-    "v": 1.3725918373969643,
+    "v": 2.31300570062523,
     "s": "BMFBOVESPA:INDX",
     "origem": "simbolo"
    },
    "IMOB": {
-    "v": 2.6408790699470766,
+    "v": 4.2572708663241965,
     "s": "BMFBOVESPA:IMOB",
     "origem": "simbolo"
    },
    "IFNC": {
-    "v": 1.4801590331885732,
+    "v": 3.092660973068314,
     "s": "BMFBOVESPA:IFNC",
     "origem": "simbolo"
    },
    "IMAT": {
-    "v": 1.119758251518711,
+    "v": 2.241155253588458,
     "s": "BMFBOVESPA:IMAT",
     "origem": "simbolo"
    }
@@ -66,7 +66,7 @@
  },
  "dolar": {
   "cnbc": "ok: 24 itens",
-  "yahoo": "1 ok",
+  "yahoo": "0 ok",
   "stooq": "0 ok",
   "moedas_ok": 23,
   "moedas_faltando": [],
@@ -79,5 +79,5 @@
   "dolar"
  ],
  "falhas": [],
- "resultado": "painel das 11h30 enviado (setores, cripto, commodities, dolar)"
+ "resultado": "painel das 14h30 enviado (setores, cripto, commodities, dolar)"
 }
