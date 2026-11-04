@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-04T19:00:16.494Z",
+ "gerado": "2026-11-04T19:15:19.238Z",
  "hora": 16,
  "fnet": {
-  "linhas": 935,
+  "linhas": 938,
   "avisos": 327,
   "relatorios": 99
  },
@@ -15,11 +15,7 @@
   "FII CX RBRA2 #1367307",
   "FII NEWRU #1367077"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 1,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
