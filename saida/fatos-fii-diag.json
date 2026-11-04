@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-04T22:35:31.358Z",
+ "gerado": "2026-11-04T23:37:00.814Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 131,
  "top": {
@@ -59,25 +59,27 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 297,
+  "linhas_vistas": 310,
   "categorias": {
-   "Assembleia": 62,
-   "Informes Periódicos": 54,
-   "Regulamento": 41,
+   "Assembleia": 63,
+   "Informes Periódicos": 57,
+   "Regulamento": 43,
+   "Fato Relevante": 33,
    "Relatórios": 32,
-   "Fato Relevante": 30,
+   "Atos de Deliberação do Administrador": 27,
    "Comunicado ao Mercado": 24,
-   "Atos de Deliberação do Administrador": 23,
    "Oferta Pública de Distribuição de Cotas": 18
   },
-  "fatos_relevantes": 30,
+  "fatos_relevantes": 33,
   "de_fiis_liquidos": 9
  },
  "fatos_sem_ticker": [
+  "FII RIONEGRO",
+  "FII PLTB",
+  "FII PANAMBY",
   "SPX PORTFÓLIO ALFA FUNDO DE INVESTIMENTO IMOBILIÁRIO",
   "BIOTIC FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
   "ÔMEGA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
-  "FII RIONEGRO",
   "FII WTXA",
   "VT TOWER FUNDO DE INVESTIMENTO IMOBILIÁRIO - FII RESPONSABILIDADE LIMITA",
   "TNU FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA",
