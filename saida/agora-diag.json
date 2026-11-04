@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-04T14:45:23.243Z",
+ "gerado": "2026-11-04T14:49:38.863Z",
  "hora": 11,
  "fnet": {
   "linhas": 907,
@@ -17,10 +17,6 @@
   "FII NEWRU #1367077"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 1,
-  "acoes": "não consultadas"
- },
  "pendentes": [
   "KNRI11"
  ],
