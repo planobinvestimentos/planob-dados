@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-04T16:15:15.974Z",
+ "gerado": "2026-11-04T16:30:19.010Z",
  "hora": 13,
  "fnet": {
-  "linhas": 916,
+  "linhas": 919,
   "avisos": 326,
   "relatorios": 99
  },
@@ -17,7 +17,7 @@
   "FII NEWRU #1367077"
  ],
  "acoes_nesta_rodada": false,
- "pendentes": [
+ "desistiu": [
   "KNRI11"
  ],
  "novos": [],
