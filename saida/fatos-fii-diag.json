@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-03T23:32:05.417Z",
+ "gerado": "2026-11-04T00:27:58.249Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 131,
  "top": {
@@ -59,16 +59,16 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 145,
+  "linhas_vistas": 160,
   "categorias": {
+   "Assembleia": 32,
    "Comunicado ao Mercado": 20,
    "Informes Periódicos": 19,
    "Regulamento": 19,
    "Atos de Deliberação do Administrador": 19,
    "Fato Relevante": 18,
-   "Assembleia": 18,
    "Relatórios": 14,
-   "Oferta Pública de Distribuição de Cotas": 11
+   "Oferta Pública de Distribuição de Cotas": 12
   },
   "fatos_relevantes": 18,
   "de_fiis_liquidos": 2
@@ -91,14 +91,14 @@
   "FII AQPA",
   "FII MULT REN"
  ],
- "analisados": 2,
+ "analisados": 0,
  "sem_texto": 0,
- "fora_do_escopo": 1,
+ "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 1,
+ "materias_novas": 0,
  "telegram": {
-  "enviados": 1,
+  "enviados": 0,
   "erros": []
  }
 }
