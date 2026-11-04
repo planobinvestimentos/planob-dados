@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-04T00:27:58.249Z",
+ "gerado": "2026-11-04T12:02:29.591Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 131,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 160,
+  "linhas_vistas": 177,
   "categorias": {
-   "Assembleia": 32,
+   "Assembleia": 42,
+   "Fato Relevante": 22,
+   "Atos de Deliberação do Administrador": 20,
    "Comunicado ao Mercado": 20,
    "Informes Periódicos": 19,
    "Regulamento": 19,
-   "Atos de Deliberação do Administrador": 19,
-   "Fato Relevante": 18,
-   "Relatórios": 14,
-   "Oferta Pública de Distribuição de Cotas": 12
+   "Oferta Pública de Distribuição de Cotas": 16,
+   "Relatórios": 12
   },
-  "fatos_relevantes": 18,
-  "de_fiis_liquidos": 2
+  "fatos_relevantes": 22,
+  "de_fiis_liquidos": 4
  },
  "fatos_sem_ticker": [
+  "FII RIONEGRO",
   "FII WTXA",
   "VT TOWER FUNDO DE INVESTIMENTO IMOBILIÁRIO - FII RESPONSABILIDADE LIMITA",
   "TNU FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA",
@@ -91,14 +92,14 @@
   "FII AQPA",
   "FII MULT REN"
  ],
- "analisados": 0,
+ "analisados": 2,
  "sem_texto": 0,
  "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 0,
+ "materias_novas": 2,
  "telegram": {
-  "enviados": 0,
+  "enviados": 2,
   "erros": []
  }
 }
