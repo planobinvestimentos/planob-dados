@@ -1,12 +1,14 @@
 {
- "gerado": "2026-11-04T13:15:17.042Z",
+ "gerado": "2026-11-04T13:30:17.104Z",
  "hora": 10,
  "fnet": {
-  "linhas": 899,
-  "avisos": 325,
+  "linhas": 900,
+  "avisos": 326,
   "relatorios": 98
  },
- "avisos_novos": [],
+ "avisos_novos": [
+  "KNRI11:1368173"
+ ],
  "avisos_sem_ticker": [
   "FII VIMO #1367649",
   "FII RBCAP LG #1367502",
@@ -15,6 +17,9 @@
   "FII NEWRU #1367077"
  ],
  "acoes_nesta_rodada": false,
+ "pendentes": [
+  "KNRI11"
+ ],
  "novos": [],
  "pdfs": 0
 }
