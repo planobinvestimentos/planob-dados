@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-04T18:44:14.440Z",
+ "gerado": "2026-11-04T21:39:07.445Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 131,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 215,
+  "linhas_vistas": 251,
   "categorias": {
-   "Informes Periódicos": 45,
-   "Assembleia": 42,
-   "Fato Relevante": 25,
+   "Informes Periódicos": 53,
+   "Assembleia": 52,
+   "Fato Relevante": 29,
+   "Regulamento": 25,
+   "Atos de Deliberação do Administrador": 23,
    "Comunicado ao Mercado": 22,
-   "Regulamento": 21,
-   "Atos de Deliberação do Administrador": 21,
-   "Oferta Pública de Distribuição de Cotas": 16,
-   "Relatórios": 14
+   "Relatórios": 18,
+   "Oferta Pública de Distribuição de Cotas": 17
   },
-  "fatos_relevantes": 25,
-  "de_fiis_liquidos": 6
+  "fatos_relevantes": 29,
+  "de_fiis_liquidos": 9
  },
  "fatos_sem_ticker": [
+  "BIOTIC FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
   "ÔMEGA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
   "FII RIONEGRO",
   "FII WTXA",
@@ -93,14 +94,14 @@
   "FII AQPA",
   "FII MULT REN"
  ],
- "analisados": 1,
+ "analisados": 3,
  "sem_texto": 0,
  "fora_do_escopo": 1,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 0,
+ "materias_novas": 2,
  "telegram": {
-  "enviados": 0,
+  "enviados": 2,
   "erros": []
  }
 }
