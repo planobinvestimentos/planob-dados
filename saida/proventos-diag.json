@@ -1,7 +1,7 @@
 {
- "gerado": "2026-11-04T02:36:06.455Z",
- "de": "2026-11-01",
- "ate": "2026-11-03",
+ "gerado": "2026-11-04T03:22:04.056Z",
+ "de": "2026-11-02",
+ "ate": "2026-11-04",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 138,
@@ -38,7 +38,7 @@
  "acoes": {
   "emissoras": 285,
   "amostra": {
-   "emissora": "ABEV",
+   "emissora": "AFLT",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -51,14 +51,14 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRABEVACNOR1",
+    "assetIssued": "BRAFLTACNOR1",
     "paymentDate": "31/12/2026",
-    "rate": "0,07130000000",
-    "relatedTo": "Anual/2026",
-    "approvedOn": "29/07/2026",
-    "isinCode": "BRABEVACNOR1",
-    "label": "JRS CAP PROPRIO",
-    "lastDatePrior": "21/09/2026",
+    "rate": "0,15851704140",
+    "relatedTo": "Complementar/2026",
+    "approvedOn": "21/07/2026",
+    "isinCode": "BRAFLTACNOR1",
+    "label": "DIVIDENDO",
+    "lastDatePrior": "24/07/2026",
     "remarks": ""
    }
   },
