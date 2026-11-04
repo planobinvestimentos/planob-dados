@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-04T18:00:46.971Z",
+ "gerado": "2026-11-04T18:44:14.440Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 131,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 208,
+  "linhas_vistas": 215,
   "categorias": {
+   "Informes Periódicos": 45,
    "Assembleia": 42,
-   "Informes Periódicos": 41,
-   "Fato Relevante": 23,
+   "Fato Relevante": 25,
    "Comunicado ao Mercado": 22,
    "Regulamento": 21,
    "Atos de Deliberação do Administrador": 21,
    "Oferta Pública de Distribuição de Cotas": 16,
    "Relatórios": 14
   },
-  "fatos_relevantes": 23,
-  "de_fiis_liquidos": 5
+  "fatos_relevantes": 25,
+  "de_fiis_liquidos": 6
  },
  "fatos_sem_ticker": [
+  "ÔMEGA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
   "FII RIONEGRO",
   "FII WTXA",
   "VT TOWER FUNDO DE INVESTIMENTO IMOBILIÁRIO - FII RESPONSABILIDADE LIMITA",
@@ -92,9 +93,9 @@
   "FII AQPA",
   "FII MULT REN"
  ],
- "analisados": 0,
+ "analisados": 1,
  "sem_texto": 0,
- "fora_do_escopo": 0,
+ "fora_do_escopo": 1,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
  "materias_novas": 0,
