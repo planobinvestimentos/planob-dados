@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-03T21:00:22.430Z",
- "hoje": "2026-11-03",
- "hora": 18,
- "contratos": 44,
+ "gerado": "2026-11-04T14:00:18.482Z",
+ "hoje": "2026-11-04",
+ "hora": 11,
+ "contratos": 43,
  "vertices": 9,
  "parado": {
   "contratos": 9,
@@ -11,6 +11,6 @@
   "semVariacao": false,
   "parado": false
  },
- "mensagem_chars": 671,
- "resultado": "edição das 18h enviada (9 vencimentos)"
+ "mensagem_chars": 670,
+ "resultado": "edição das 11h enviada (9 vencimentos)"
 }
