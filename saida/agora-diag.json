@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-04T21:00:18.248Z",
+ "gerado": "2026-11-04T21:15:17.069Z",
  "hora": 18,
  "fnet": {
-  "linhas": 946,
-  "avisos": 328,
-  "relatorios": 98
+  "linhas": 952,
+  "avisos": 329,
+  "relatorios": 99
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII VGRM #1368909",
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO PATRIA CRÉDITO MULTIESTRATÉGIA CDI - RESPONSABILIDADE LIMITADA #1368788",
   "VERDE A&I CEDRO PORTFOLIO RENDA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1368695",
   "FII VIMO #1367649",
@@ -17,10 +18,6 @@
   "FII NEWRU #1367077"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 1,
-  "acoes": "não consultadas"
- },
  "novos": [],
- "pdfs": 0
+ "pdfs": 1
 }
