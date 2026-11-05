@@ -1,19 +1,26 @@
 {
- "gerado": "2026-11-05T19:30:18.747Z",
+ "gerado": "2026-11-05T19:45:17.322Z",
  "hora": 16,
  "fnet": {
-  "linhas": 1013,
-  "avisos": 329,
+  "linhas": 1017,
+  "avisos": 332,
   "relatorios": 96
  },
- "avisos_novos": [],
+ "avisos_novos": [
+  "RZLC11:1370001"
+ ],
  "avisos_sem_ticker": [
+  "FII RENV #1370011",
+  "BTG HOTEL FI #1370002",
   "GUARDIAN CORE RESIDENCIAL FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1369277",
   "FII VGRM #1368909",
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO PATRIA CRÉDITO MULTIESTRATÉGIA CDI - RESPONSABILIDADE LIMITADA #1368788",
   "VERDE A&I CEDRO PORTFOLIO RENDA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1368695"
  ],
  "acoes_nesta_rodada": false,
+ "pendentes": [
+  "RZLC11"
+ ],
  "novos": [],
  "pdfs": 0
 }
