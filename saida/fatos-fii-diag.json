@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-05T22:35:21.954Z",
+ "gerado": "2026-11-05T23:38:28.849Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 131,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 455,
+  "linhas_vistas": 465,
   "categorias": {
    "Informes Periódicos": 99,
-   "Assembleia": 91,
+   "Assembleia": 95,
    "Regulamento": 63,
-   "Relatórios": 49,
+   "Relatórios": 51,
    "Atos de Deliberação do Administrador": 40,
-   "Fato Relevante": 37,
-   "Comunicado ao Mercado": 29,
+   "Fato Relevante": 38,
+   "Comunicado ao Mercado": 32,
    "Aviso aos Cotistas - Estruturado": 19
   },
-  "fatos_relevantes": 37,
+  "fatos_relevantes": 38,
   "de_fiis_liquidos": 10
  },
  "fatos_sem_ticker": [
+  "BLUECAP LAST MILE I FUNDO DE INVESTIMENTO IMOBILIÁRIO DE RESPONSABILIDADE LIMITADA",
   "FII MULT REN",
   "AZ QUEST PANORAMA CRÉDITO IMOBILIÁRIO FUNDO DE INVESTIMENTO IMOBILIÁRIO",
   "FII INTER LG",
