@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-05T19:45:17.322Z",
+ "gerado": "2026-11-05T19:50:44.531Z",
  "hora": 16,
  "fnet": {
-  "linhas": 1017,
+  "linhas": 1022,
   "avisos": 332,
   "relatorios": 96
  },
@@ -18,6 +18,10 @@
   "VERDE A&I CEDRO PORTFOLIO RENDA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1368695"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 1,
+  "acoes": "não consultadas"
+ },
  "pendentes": [
   "RZLC11"
  ],
