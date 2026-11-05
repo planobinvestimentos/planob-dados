@@ -1,14 +1,12 @@
 {
- "gerado": "2026-11-05T22:30:15.973Z",
+ "gerado": "2026-11-05T22:45:16.929Z",
  "hora": 19,
  "fnet": {
-  "linhas": 1087,
+  "linhas": 1094,
   "avisos": 341,
   "relatorios": 103
  },
- "avisos_novos": [
-  "RZLC11:1370001"
- ],
+ "avisos_novos": [],
  "avisos_sem_ticker": [
   "FII CCVA #1370296",
   "FII MULT REN #1370283",
@@ -27,9 +25,10 @@
   "VERDE A&I CEDRO PORTFOLIO RENDA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1368695"
  ],
  "acoes_nesta_rodada": false,
- "desistiu": [
-  "RZLC11"
- ],
+ "varredura": {
+  "fii": 1,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
