@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-05T21:32:18.198Z",
+ "gerado": "2026-11-05T22:35:21.954Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 131,
  "top": {
@@ -59,21 +59,24 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 409,
+  "linhas_vistas": 455,
   "categorias": {
-   "Informes Periódicos": 95,
-   "Assembleia": 87,
-   "Regulamento": 50,
-   "Relatórios": 41,
-   "Fato Relevante": 34,
+   "Informes Periódicos": 99,
+   "Assembleia": 91,
+   "Regulamento": 63,
+   "Relatórios": 49,
+   "Atos de Deliberação do Administrador": 40,
+   "Fato Relevante": 37,
    "Comunicado ao Mercado": 29,
-   "Atos de Deliberação do Administrador": 29,
-   "Oferta Pública de Distribuição de Cotas": 19
+   "Aviso aos Cotistas - Estruturado": 19
   },
-  "fatos_relevantes": 34,
+  "fatos_relevantes": 37,
   "de_fiis_liquidos": 10
  },
  "fatos_sem_ticker": [
+  "FII MULT REN",
+  "AZ QUEST PANORAMA CRÉDITO IMOBILIÁRIO FUNDO DE INVESTIMENTO IMOBILIÁRIO",
+  "FII INTER LG",
   "FII RIONEGRO",
   "FII PLTB",
   "FII PANAMBY",
@@ -94,17 +97,16 @@
   "CASTELO FUNDO DE INVESTIMENTO IMOBILIÁRIO",
   "BSB PA FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA",
   "BPGB-001 FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA",
-  "FII AQPA",
-  "FII MULT REN"
+  "FII AQPA"
  ],
- "analisados": 1,
+ "analisados": 0,
  "sem_texto": 0,
  "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 1,
+ "materias_novas": 0,
  "telegram": {
-  "enviados": 1,
+  "enviados": 0,
   "erros": []
  }
 }
