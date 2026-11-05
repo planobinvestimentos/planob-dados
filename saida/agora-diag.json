@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-05T15:00:21.360Z",
+ "gerado": "2026-11-05T15:02:32.753Z",
  "hora": 12,
  "fnet": {
   "linhas": 993,
@@ -13,11 +13,7 @@
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO PATRIA CRÉDITO MULTIESTRATÉGIA CDI - RESPONSABILIDADE LIMITADA #1368788",
   "VERDE A&I CEDRO PORTFOLIO RENDA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1368695"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 1,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
