@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-05T18:41:27.462Z",
+ "gerado": "2026-11-05T21:32:18.198Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 131,
  "top": {
@@ -59,19 +59,19 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 367,
+  "linhas_vistas": 409,
   "categorias": {
-   "Informes Periódicos": 89,
-   "Assembleia": 70,
-   "Regulamento": 48,
-   "Relatórios": 39,
-   "Fato Relevante": 33,
+   "Informes Periódicos": 95,
+   "Assembleia": 87,
+   "Regulamento": 50,
+   "Relatórios": 41,
+   "Fato Relevante": 34,
+   "Comunicado ao Mercado": 29,
    "Atos de Deliberação do Administrador": 29,
-   "Comunicado ao Mercado": 27,
-   "Oferta Pública de Distribuição de Cotas": 18
+   "Oferta Pública de Distribuição de Cotas": 19
   },
-  "fatos_relevantes": 33,
-  "de_fiis_liquidos": 9
+  "fatos_relevantes": 34,
+  "de_fiis_liquidos": 10
  },
  "fatos_sem_ticker": [
   "FII RIONEGRO",
@@ -97,14 +97,14 @@
   "FII AQPA",
   "FII MULT REN"
  ],
- "analisados": 0,
+ "analisados": 1,
  "sem_texto": 0,
  "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 0,
+ "materias_novas": 1,
  "telegram": {
-  "enviados": 0,
+  "enviados": 1,
   "erros": []
  }
 }
