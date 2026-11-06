@@ -1,13 +1,15 @@
 {
- "gerado": "2026-11-06T19:30:15.907Z",
+ "gerado": "2026-11-06T19:45:16.551Z",
  "hora": 16,
  "fnet": {
-  "linhas": 1083,
-  "avisos": 350,
+  "linhas": 1086,
+  "avisos": 352,
   "relatorios": 94
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "STARBOARD SPECIAL SITUATIONS III FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1371189",
+  "BRASOL RENDA IMOBILIÁRIA SOLAR I FUNDO DE INVESTIMENTO IMOBILIÁRIO #1371188",
   "FII BRCQ #1371076",
   "FII SCP #1370996",
   "FII SC 401 #1370991",
