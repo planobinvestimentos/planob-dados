@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-06T22:30:14.783Z",
+ "gerado": "2026-11-06T22:45:16.158Z",
  "hora": 19,
  "fnet": {
-  "linhas": 1166,
+  "linhas": 1171,
   "avisos": 380,
-  "relatorios": 104
+  "relatorios": 107
  },
  "avisos_novos": [
   "FATN11:1371296"
@@ -41,5 +41,5 @@
   "FATN11"
  ],
  "novos": [],
- "pdfs": 3
+ "pdfs": 1
 }
