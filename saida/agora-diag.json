@@ -1,13 +1,15 @@
 {
- "gerado": "2026-11-06T15:00:23.458Z",
+ "gerado": "2026-11-06T15:15:19.819Z",
  "hora": 12,
  "fnet": {
-  "linhas": 1024,
-  "avisos": 344,
+  "linhas": 1027,
+  "avisos": 346,
   "relatorios": 87
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII P NEGRA #1370828",
+  "FII BRCT #1370821",
   "FII S F LIMA #1370811",
   "RAMAL FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1370786",
   "FII SUPREMO #1370761",
@@ -26,11 +28,7 @@
   "BTG HOTEL FI #1370002",
   "GUARDIAN CORE RESIDENCIAL FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1369277"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 1,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
