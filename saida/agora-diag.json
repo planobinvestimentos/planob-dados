@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-06T13:45:17.563Z",
- "hora": 10,
+ "gerado": "2026-11-06T14:00:05.314Z",
+ "hora": 11,
  "fnet": {
-  "linhas": 1000,
-  "avisos": 339,
+  "linhas": 1003,
+  "avisos": 340,
   "relatorios": 87
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII PAN PROP #1370721",
   "FII CCVA #1370296",
   "FII MULT REN #1370283",
   "XP HABITAT RENDA IMOBILIÁRIA II MASTER FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA #1370216",
@@ -22,6 +23,10 @@
   "GUARDIAN CORE RESIDENCIAL FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1369277"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 1,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
