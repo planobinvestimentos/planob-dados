@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-06T20:45:16.987Z",
- "hora": 17,
+ "gerado": "2026-11-06T21:00:17.335Z",
+ "hora": 18,
  "fnet": {
-  "linhas": 1136,
+  "linhas": 1137,
   "avisos": 378,
   "relatorios": 96
  },
@@ -37,6 +37,10 @@
   "XP HABITAT RENDA IMOBILIÁRIA MASTER FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA #1371225"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 1,
+  "acoes": "não consultadas"
+ },
  "pendentes": [
   "FATN11"
  ],
