@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-06T14:45:18.496Z",
+ "gerado": "2026-11-06T14:53:17.496Z",
  "hora": 11,
  "fnet": {
-  "linhas": 1011,
+  "linhas": 1023,
   "avisos": 343,
   "relatorios": 87
  },
@@ -26,6 +26,10 @@
   "GUARDIAN CORE RESIDENCIAL FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1369277"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 1,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
