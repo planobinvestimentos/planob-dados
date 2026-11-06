@@ -1,6 +1,6 @@
 {
- "gerado": "2026-11-06T21:45:17.648Z",
- "hora": 18,
+ "gerado": "2026-11-06T22:00:17.139Z",
+ "hora": 19,
  "fnet": {
   "linhas": 1161,
   "avisos": 380,
@@ -37,9 +37,13 @@
   "MULTI RENDA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1371231"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 1,
+  "acoes": "não consultadas"
+ },
  "pendentes": [
   "FATN11"
  ],
  "novos": [],
- "pdfs": 1
+ "pdfs": 0
 }
