@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-06T21:30:09.386Z",
+ "gerado": "2026-11-06T22:28:33.327Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 131,
  "top": {
@@ -59,21 +59,23 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 663,
+  "linhas_vistas": 680,
   "categorias": {
-   "Informes Periódicos": 182,
-   "Assembleia": 103,
-   "Relatórios": 94,
+   "Informes Periódicos": 183,
+   "Assembleia": 104,
+   "Relatórios": 102,
    "Regulamento": 66,
-   "Fato Relevante": 42,
-   "Atos de Deliberação do Administrador": 41,
+   "Fato Relevante": 44,
+   "Atos de Deliberação do Administrador": 43,
    "Comunicado ao Mercado": 36,
    "Aviso aos Cotistas - Estruturado": 35
   },
-  "fatos_relevantes": 42,
+  "fatos_relevantes": 44,
   "de_fiis_liquidos": 11
  },
  "fatos_sem_ticker": [
+  "FII WTC SP",
+  "FII AVUR",
   "FII CCVA",
   "FII RIONEGRO",
   "FII TRCO",
