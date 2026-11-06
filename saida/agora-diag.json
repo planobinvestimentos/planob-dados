@@ -1,13 +1,16 @@
 {
- "gerado": "2026-11-06T14:15:15.705Z",
+ "gerado": "2026-11-06T14:30:16.309Z",
  "hora": 11,
  "fnet": {
-  "linhas": 1006,
-  "avisos": 341,
+  "linhas": 1008,
+  "avisos": 342,
   "relatorios": 87
  },
- "avisos_novos": [],
+ "avisos_novos": [
+  "REME11:1370767"
+ ],
  "avisos_sem_ticker": [
+  "FII SUPREMO #1370761",
   "FII TREECORP #1370741",
   "FII PAN PROP #1370721",
   "FII CCVA #1370296",
@@ -24,6 +27,11 @@
   "GUARDIAN CORE RESIDENCIAL FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1369277"
  ],
  "acoes_nesta_rodada": false,
- "novos": [],
+ "lido_do_aviso": [
+  "REME11"
+ ],
+ "novos": [
+  "REME11 Rendimento (corrigido)"
+ ],
  "pdfs": 0
 }
