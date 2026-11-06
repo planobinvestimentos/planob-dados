@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-06T17:22:46.464Z",
+ "gerado": "2026-11-06T17:30:14.933Z",
  "hora": 14,
  "fnet": {
-  "linhas": 1049,
-  "avisos": 348,
+  "linhas": 1052,
+  "avisos": 349,
   "relatorios": 94
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII SCP #1370996",
   "FII SC 401 #1370991",
   "FII OXRL #1370975",
   "FII P NEGRA #1370828",
