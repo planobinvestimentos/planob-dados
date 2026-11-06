@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-06T12:57:12.669Z",
+ "gerado": "2026-11-06T15:02:06.287Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 131,
  "top": {
@@ -59,16 +59,16 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 499,
+  "linhas_vistas": 535,
   "categorias": {
-   "Informes Periódicos": 105,
+   "Informes Periódicos": 128,
    "Assembleia": 97,
-   "Relatórios": 76,
+   "Relatórios": 81,
    "Regulamento": 63,
    "Atos de Deliberação do Administrador": 40,
    "Fato Relevante": 39,
-   "Comunicado ao Mercado": 32,
-   "Aviso aos Cotistas - Estruturado": 19
+   "Comunicado ao Mercado": 33,
+   "Aviso aos Cotistas - Estruturado": 22
   },
   "fatos_relevantes": 39,
   "de_fiis_liquidos": 11
@@ -100,14 +100,14 @@
   "BPGB-001 FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA",
   "FII AQPA"
  ],
- "analisados": 1,
+ "analisados": 0,
  "sem_texto": 0,
  "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 1,
+ "materias_novas": 0,
  "telegram": {
-  "enviados": 1,
+  "enviados": 0,
   "erros": []
  }
 }
