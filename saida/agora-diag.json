@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-06T00:53:46.222Z",
- "hora": 21,
+ "gerado": "2026-11-06T12:00:18.369Z",
+ "hora": 9,
  "fnet": {
-  "linhas": 1099,
-  "avisos": 341,
-  "relatorios": 103
+  "linhas": 989,
+  "avisos": 339,
+  "relatorios": 87
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
@@ -19,16 +19,15 @@
   "LCP PREFIXADO MASTER FUNDO DE INVESTIMENTO IMOBILIÁRIO #1370085",
   "FII RENV #1370011",
   "BTG HOTEL FI #1370002",
-  "GUARDIAN CORE RESIDENCIAL FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1369277",
-  "FII VGRM #1368909",
-  "FUNDO DE INVESTIMENTO IMOBILIÁRIO PATRIA CRÉDITO MULTIESTRATÉGIA CDI - RESPONSABILIDADE LIMITADA #1368788",
-  "VERDE A&I CEDRO PORTFOLIO RENDA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1368695"
+  "GUARDIAN CORE RESIDENCIAL FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1369277"
  ],
  "acoes_nesta_rodada": false,
  "varredura": {
   "fii": 1,
   "acoes": "não consultadas"
  },
- "novos": [],
+ "novos": [
+  "RZLC11 Rendimento"
+ ],
  "pdfs": 0
 }
