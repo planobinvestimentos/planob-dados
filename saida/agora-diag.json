@@ -1,6 +1,6 @@
 {
- "gerado": "2026-11-06T22:48:22.510Z",
- "hora": 19,
+ "gerado": "2026-11-06T23:00:16.353Z",
+ "hora": 20,
  "fnet": {
   "linhas": 1171,
   "avisos": 380,
@@ -36,7 +36,11 @@
   "VALORA CRI CDI RENDA MAIS FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1371233",
   "MULTI RENDA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1371231"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
+ "varredura": {
+  "fii": 1,
+  "acoes": 0
+ },
  "pendentes": [
   "FATN11"
  ],
