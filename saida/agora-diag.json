@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-06T17:15:16.023Z",
+ "gerado": "2026-11-06T17:22:46.464Z",
  "hora": 14,
  "fnet": {
-  "linhas": 1048,
-  "avisos": 347,
+  "linhas": 1049,
+  "avisos": 348,
   "relatorios": 94
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII SC 401 #1370991",
   "FII OXRL #1370975",
   "FII P NEGRA #1370828",
   "FII BRCT #1370821",
@@ -31,5 +32,5 @@
  ],
  "acoes_nesta_rodada": false,
  "novos": [],
- "pdfs": 1
+ "pdfs": 0
 }
