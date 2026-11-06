@@ -1,15 +1,14 @@
 {
- "gerado": "2026-11-06T14:30:16.309Z",
+ "gerado": "2026-11-06T14:45:18.496Z",
  "hora": 11,
  "fnet": {
-  "linhas": 1008,
-  "avisos": 342,
+  "linhas": 1011,
+  "avisos": 343,
   "relatorios": 87
  },
- "avisos_novos": [
-  "REME11:1370767"
- ],
+ "avisos_novos": [],
  "avisos_sem_ticker": [
+  "RAMAL FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1370786",
   "FII SUPREMO #1370761",
   "FII TREECORP #1370741",
   "FII PAN PROP #1370721",
@@ -27,11 +26,6 @@
   "GUARDIAN CORE RESIDENCIAL FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1369277"
  ],
  "acoes_nesta_rodada": false,
- "lido_do_aviso": [
-  "REME11"
- ],
- "novos": [
-  "REME11 Rendimento (corrigido)"
- ],
+ "novos": [],
  "pdfs": 0
 }
