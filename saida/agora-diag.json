@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-06T17:45:15.502Z",
- "hora": 14,
+ "gerado": "2026-11-06T18:00:17.749Z",
+ "hora": 15,
  "fnet": {
-  "linhas": 1053,
-  "avisos": 349,
+  "linhas": 1061,
+  "avisos": 350,
   "relatorios": 94
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII BRCQ #1371076",
   "FII SCP #1370996",
   "FII SC 401 #1370991",
   "FII OXRL #1370975",
@@ -32,6 +33,10 @@
   "GUARDIAN CORE RESIDENCIAL FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1369277"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 1,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
