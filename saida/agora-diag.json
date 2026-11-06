@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-06T19:00:18.129Z",
+ "gerado": "2026-11-06T19:15:16.245Z",
  "hora": 16,
  "fnet": {
-  "linhas": 1081,
+  "linhas": 1082,
   "avisos": 350,
   "relatorios": 94
  },
@@ -32,11 +32,7 @@
   "BTG HOTEL FI #1370002",
   "GUARDIAN CORE RESIDENCIAL FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1369277"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 1,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
