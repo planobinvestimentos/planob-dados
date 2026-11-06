@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-06T16:45:28.540Z",
- "hora": 13,
+ "gerado": "2026-11-06T17:00:17.094Z",
+ "hora": 14,
  "fnet": {
-  "linhas": 1040,
-  "avisos": 346,
+  "linhas": 1041,
+  "avisos": 347,
   "relatorios": 87
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII OXRL #1370975",
   "FII P NEGRA #1370828",
   "FII BRCT #1370821",
   "FII S F LIMA #1370811",
@@ -29,6 +30,10 @@
   "GUARDIAN CORE RESIDENCIAL FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1369277"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 1,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
