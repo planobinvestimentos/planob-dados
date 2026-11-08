@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-08T03:22:22.619Z",
+ "gerado": "2026-11-08T23:00:17.845Z",
  "de": "2026-11-06",
  "ate": "2026-11-08",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 138,
   "amostra": {
-   "fundo": "FII ADSH    ",
+   "fundo": "FII ALIANZAC",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -19,21 +19,21 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRADSHCTF009",
-    "paymentDate": "30/10/2026",
-    "rate": "0,02000000000",
-    "relatedTo": "OUTUBRO/2026",
-    "approvedOn": "23/10/2026",
-    "isinCode": "BRADSHCTF009",
+    "assetIssued": "BRALZCCTF016",
+    "paymentDate": "23/10/2026",
+    "rate": "0,09000000000",
+    "relatedTo": "Setembro-2026/2026",
+    "approvedOn": "16/10/2026",
+    "isinCode": "BRALZCCTF016",
     "label": "RENDIMENTO",
-    "lastDatePrior": "23/10/2026",
+    "lastDatePrior": "16/10/2026",
     "remarks": ""
    }
   },
   "ok": 138,
   "falhas": 0,
-  "semRendimentos": 11,
-  "itens": 0
+  "semRendimentos": 8,
+  "itens": 1
  },
  "acoes": {
   "emissoras": 284,
