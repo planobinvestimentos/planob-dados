@@ -1,15 +1,24 @@
 {
- "gerado": "2026-11-09T19:30:18.699Z",
+ "gerado": "2026-11-09T19:45:18.196Z",
  "hora": 16,
  "fnet": {
-  "linhas": 749,
-  "avisos": 79,
+  "linhas": 759,
+  "avisos": 88,
   "relatorios": 67
  },
  "avisos_novos": [
+  "BRCR11:1372355",
+  "BTHF11:1372350",
   "RECR11:1372090"
  ],
  "avisos_sem_ticker": [
+  "FII MAX RET #1372358",
+  "CIX MCMV FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1372357",
+  "FII CEO CCP #1372356",
+  "FII ANH EDUC #1372351",
+  "FII AERO #1372348",
+  "FII DAMA #1372347",
+  "ROOFTOP II FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1372346",
   "FII EIRA #1372343",
   "FII ZAGH #1372226",
   "FII DEVA PRO #1372121",
@@ -24,9 +33,16 @@
   "FII FYTO #1371811"
  ],
  "acoes_nesta_rodada": false,
+ "lido_do_aviso": [
+  "BRCR11",
+  "BTHF11"
+ ],
  "pendentes": [
   "RECR11"
  ],
- "novos": [],
- "pdfs": 0
+ "novos": [
+  "BRCR11 Rendimento",
+  "BTHF11 Rendimento"
+ ],
+ "pdfs": 1
 }
