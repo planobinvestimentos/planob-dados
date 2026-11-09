@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-09T22:00:16.539Z",
+ "gerado": "2026-11-09T22:15:16.879Z",
  "hora": 19,
  "fnet": {
-  "linhas": 881,
+  "linhas": 884,
   "avisos": 129,
-  "relatorios": 83
+  "relatorios": 84
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
@@ -35,10 +35,6 @@
   "FII TOUR V #1372417"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 0,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
