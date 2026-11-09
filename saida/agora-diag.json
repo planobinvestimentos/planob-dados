@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-09T13:00:17.462Z",
+ "gerado": "2026-11-09T13:15:19.342Z",
  "hora": 10,
  "fnet": {
-  "linhas": 660,
+  "linhas": 663,
   "avisos": 66,
   "relatorios": 66
  },
@@ -11,10 +11,6 @@
   "FII FYTO #1371811"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 0,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
