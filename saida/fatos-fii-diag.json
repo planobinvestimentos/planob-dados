@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-09T22:34:04.178Z",
+ "gerado": "2026-11-09T23:32:59.558Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,16 +59,16 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 499,
+  "linhas_vistas": 531,
   "categorias": {
-   "Informes Periódicos": 191,
-   "Relatórios": 74,
+   "Informes Periódicos": 190,
+   "Relatórios": 81,
+   "Assembleia": 68,
    "Aviso aos Cotistas - Estruturado": 59,
    "Aviso aos Cotistas": 51,
-   "Assembleia": 44,
    "Oferta Pública de Distribuição de Cotas": 26,
    "Fato Relevante": 16,
-   "Comunicado ao Mercado": 13
+   "Comunicado ao Mercado": 14
   },
   "fatos_relevantes": 16,
   "de_fiis_liquidos": 7
@@ -84,14 +84,14 @@
   "FII RIONEGRO",
   "FII TRCO"
  ],
- "analisados": 2,
+ "analisados": 0,
  "sem_texto": 0,
  "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 2,
+ "materias_novas": 0,
  "telegram": {
-  "enviados": 2,
+  "enviados": 0,
   "erros": []
  }
 }
