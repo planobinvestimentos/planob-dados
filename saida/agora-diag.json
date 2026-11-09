@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-09T16:30:15.522Z",
+ "gerado": "2026-11-09T16:45:16.403Z",
  "hora": 13,
  "fnet": {
-  "linhas": 713,
-  "avisos": 75,
+  "linhas": 717,
+  "avisos": 76,
   "relatorios": 66
  },
  "avisos_novos": [
-  "RBRP11:1372065"
+  "RECR11:1372090",
+  "RECT11:1372073"
  ],
  "avisos_sem_ticker": [
   "FII VVDI #1372068",
@@ -21,11 +22,14 @@
   "FII FYTO #1371811"
  ],
  "acoes_nesta_rodada": false,
+ "pendentes": [
+  "RECR11"
+ ],
  "lido_do_aviso": [
-  "RBRP11"
+  "RECT11"
  ],
  "novos": [
-  "RBRP11 Rendimento"
+  "RECT11 Rendimento"
  ],
  "pdfs": 0
 }
