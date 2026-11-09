@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-02T09:53:23.412Z",
+ "gerado": "2026-11-09T09:59:41.749Z",
  "anos": {
   "2025": {
    "linhas_geral": 13678,
@@ -77,8 +77,8 @@
    ]
   },
   "2026": {
-   "linhas_geral": 11735,
-   "linhas_complemento": 11735,
+   "linhas_geral": 11785,
+   "linhas_complemento": 11785,
    "colunas_geral": [
     "TIPO_FUNDO_CLASSE",
     "CNPJ_FUNDO_CLASSE",
@@ -152,10 +152,10 @@
    ]
   }
  },
- "isins_no_cadastro": 636,
+ "isins_no_cadastro": 639,
  "fundos_no_informe": 1546,
- "tickers_ligados": 336,
- "sem_isin_no_cadastro": 1197,
+ "tickers_ligados": 337,
+ "sem_isin_no_cadastro": 1196,
  "sem_valor_patrimonial": 1,
  "exemplo": [
   [
@@ -206,23 +206,23 @@
    }
   ]
  ],
- "liquidos": 131,
- "liquidos_com_vp": 117,
+ "liquidos": 132,
+ "liquidos_com_vp": 118,
  "liquidos_sem_vp": [
-  "BTCI11",
-  "BTHF11",
-  "MCRE11",
-  "FATN11",
-  "FIIP11",
   "TVRI11",
-  "KNUQ11",
-  "CPSH11",
   "RZLC11",
   "GZIT11",
-  "PSEC11",
   "PCIP11",
+  "PSEC11",
   "PMLL11",
-  "INHF11"
+  "MCRE11",
+  "BTCI11",
+  "BTHF11",
+  "FATN11",
+  "FIIP11",
+  "INHF11",
+  "KNUQ11",
+  "CPSH11"
  ],
  "resultado": "ok"
 }
