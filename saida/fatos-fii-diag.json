@@ -1,7 +1,7 @@
 {
- "gerado": "2026-11-07T00:27:35.897Z",
+ "gerado": "2026-11-09T12:01:16.855Z",
  "valor_min": 3000000,
- "fundos_liquidos_com_nome": 131,
+ "fundos_liquidos_com_nome": 132,
  "top": {
   "criterio": "patrimonio_liquido",
   "tamanho": 50,
@@ -15,7 +15,6 @@
    "MXRF11",
    "KNRI11",
    "GGRC11",
-   "RZTR11",
    "VISC11",
    "HGRU11",
    "KNHY11",
@@ -34,6 +33,7 @@
    "BRCO11",
    "KNHF11",
    "LVBI11",
+   "RZTR11",
    "SNEL11",
    "HGRE11",
    "RBVA11",
@@ -59,59 +59,37 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 691,
+  "linhas_vistas": 241,
   "categorias": {
-   "Informes Periódicos": 183,
-   "Relatórios": 106,
-   "Assembleia": 104,
-   "Regulamento": 66,
-   "Fato Relevante": 45,
-   "Atos de Deliberação do Administrador": 43,
-   "Comunicado ao Mercado": 37,
-   "Oferta Pública de Distribuição de Cotas": 36
+   "Informes Periódicos": 98,
+   "Relatórios": 50,
+   "Aviso aos Cotistas": 26,
+   "Oferta Pública de Distribuição de Cotas": 17,
+   "Aviso aos Cotistas - Estruturado": 16,
+   "Assembleia": 12,
+   "Fato Relevante": 10,
+   "Comunicado ao Mercado": 5
   },
-  "fatos_relevantes": 45,
-  "de_fiis_liquidos": 12
+  "fatos_relevantes": 10,
+  "de_fiis_liquidos": 3
  },
  "fatos_sem_ticker": [
+  "SPX REGRA LOGÍSTICO CAJAMAR FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
+  "FII V2 PRIME",
   "FII WTC SP",
   "FII AVUR",
   "FII CCVA",
   "FII RIONEGRO",
-  "FII TRCO",
-  "BLUECAP LAST MILE I FUNDO DE INVESTIMENTO IMOBILIÁRIO DE RESPONSABILIDADE LIMITADA",
-  "FII MULT REN",
-  "AZ QUEST PANORAMA CRÉDITO IMOBILIÁRIO FUNDO DE INVESTIMENTO IMOBILIÁRIO",
-  "FII INTER LG",
-  "FII PLTB",
-  "FII PANAMBY",
-  "SPX PORTFÓLIO ALFA FUNDO DE INVESTIMENTO IMOBILIÁRIO",
-  "BIOTIC FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
-  "ÔMEGA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
-  "FII WTXA",
-  "VT TOWER FUNDO DE INVESTIMENTO IMOBILIÁRIO - FII RESPONSABILIDADE LIMITA",
-  "TNU FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA",
-  "FLFC FUNDO DE INVESTIMENTO IMOBILIÁRIO - FII RESPONSABILIDADE LIMITADA",
-  "FL SQUARE FUNDO DE INVESTIMENTO IMOBILIÁRIO -RESPONSABILIDADE LIMITADA",
-  "FII SF",
-  "FUNDO DE INVESTIMENTO IMOBILIÁRIO JK B II - FII RESPONSABILIDADE LIMITADA",
-  "FUNDO DE INVESTIMENTO IMOBILIÁRIO JK B - FII RESPONSABILIDADE LIMITADA",
-  "FUNDO DE INVESTIMENTO IMOBILIÁRIO FL 3.500 1 - RESPONSABILIDADE LIMITADA",
-  "FII EBTA",
-  "CTN FUNDO DE INVESTIMENTO IMOBILIÁRIO - FII RESPONSABILIDADE LIMITADA",
-  "CASTELO FUNDO DE INVESTIMENTO IMOBILIÁRIO",
-  "BSB PA FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA",
-  "BPGB-001 FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA",
-  "FII AQPA"
+  "FII TRCO"
  ],
- "analisados": 0,
+ "analisados": 1,
  "sem_texto": 0,
  "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 0,
+ "materias_novas": 1,
  "telegram": {
-  "enviados": 0,
+  "enviados": 1,
   "erros": []
  }
 }
