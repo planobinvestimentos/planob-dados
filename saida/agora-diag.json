@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-09T21:00:17.736Z",
+ "gerado": "2026-11-09T21:15:16.042Z",
  "hora": 18,
  "fnet": {
-  "linhas": 830,
+  "linhas": 843,
   "avisos": 128,
-  "relatorios": 67
+  "relatorios": 71
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
@@ -35,10 +35,6 @@
   "FII HECT DES #1372415"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 0,
-  "acoes": "não consultadas"
- },
  "novos": [],
- "pdfs": 0
+ "pdfs": 2
 }
