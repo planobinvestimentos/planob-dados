@@ -1,17 +1,18 @@
 {
- "gerado": "2026-11-09T17:15:17.762Z",
+ "gerado": "2026-11-09T17:30:18.028Z",
  "hora": 14,
  "fnet": {
-  "linhas": 722,
-  "avisos": 76,
+  "linhas": 728,
+  "avisos": 77,
   "relatorios": 66
  },
  "avisos_novos": [
   "RECR11:1372090"
  ],
  "avisos_sem_ticker": [
+  "FII DEVA PRO #1372121",
+  "FII RMBS #1372111",
   "FII VVDI #1372068",
-  "FII RMBS #1372067",
   "FII RECM #1372066",
   "FII FL RECEB #1372064",
   "FII EMET #1372063",
