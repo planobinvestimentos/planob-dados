@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-09T19:00:20.252Z",
+ "gerado": "2026-11-09T19:07:57.467Z",
  "hora": 16,
  "fnet": {
-  "linhas": 744,
+  "linhas": 746,
   "avisos": 78,
   "relatorios": 66
  },
@@ -22,11 +22,7 @@
   "AZURITA FUNDO DE INVESTIMENTO IMOBILIÁRIO #1372009",
   "FII FYTO #1371811"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 0,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "pendentes": [
   "RECR11"
  ],
