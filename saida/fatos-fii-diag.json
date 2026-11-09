@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-09T21:38:47.649Z",
+ "gerado": "2026-11-09T22:34:04.178Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 455,
+  "linhas_vistas": 499,
   "categorias": {
-   "Informes Periódicos": 184,
-   "Relatórios": 58,
-   "Aviso aos Cotistas - Estruturado": 58,
+   "Informes Periódicos": 191,
+   "Relatórios": 74,
+   "Aviso aos Cotistas - Estruturado": 59,
    "Aviso aos Cotistas": 51,
-   "Assembleia": 29,
-   "Oferta Pública de Distribuição de Cotas": 25,
-   "Fato Relevante": 14,
-   "Atos de Deliberação do Administrador": 12
+   "Assembleia": 44,
+   "Oferta Pública de Distribuição de Cotas": 26,
+   "Fato Relevante": 16,
+   "Comunicado ao Mercado": 13
   },
-  "fatos_relevantes": 14,
-  "de_fiis_liquidos": 6
+  "fatos_relevantes": 16,
+  "de_fiis_liquidos": 7
  },
  "fatos_sem_ticker": [
+  "LOFT III FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
   "FII NMKS",
   "SPX REGRA LOGÍSTICO CAJAMAR FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
   "FII V2 PRIME",
@@ -85,17 +86,12 @@
  ],
  "analisados": 2,
  "sem_texto": 0,
- "fora_do_escopo": 1,
+ "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
- "reprovadas": [
-  {
-   "id": 1373122,
-   "erro": "resposta da IA sem JSON"
-  }
- ],
- "materias_novas": 1,
+ "reprovadas": [],
+ "materias_novas": 2,
  "telegram": {
-  "enviados": 1,
+  "enviados": 2,
   "erros": []
  }
 }
