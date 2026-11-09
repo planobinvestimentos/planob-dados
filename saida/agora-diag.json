@@ -1,14 +1,12 @@
 {
- "gerado": "2026-11-09T19:45:18.196Z",
+ "gerado": "2026-11-09T19:59:46.358Z",
  "hora": 16,
  "fnet": {
-  "linhas": 759,
+  "linhas": 763,
   "avisos": 88,
   "relatorios": 67
  },
  "avisos_novos": [
-  "BRCR11:1372355",
-  "BTHF11:1372350",
   "RECR11:1372090"
  ],
  "avisos_sem_ticker": [
@@ -33,16 +31,13 @@
   "FII FYTO #1371811"
  ],
  "acoes_nesta_rodada": false,
- "lido_do_aviso": [
-  "BRCR11",
-  "BTHF11"
- ],
+ "varredura": {
+  "fii": 0,
+  "acoes": "não consultadas"
+ },
  "pendentes": [
   "RECR11"
  ],
- "novos": [
-  "BRCR11 Rendimento",
-  "BTHF11 Rendimento"
- ],
- "pdfs": 1
+ "novos": [],
+ "pdfs": 0
 }
