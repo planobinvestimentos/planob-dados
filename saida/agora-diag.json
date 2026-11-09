@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-09T21:15:16.042Z",
+ "gerado": "2026-11-09T21:30:18.292Z",
  "hora": 18,
  "fnet": {
-  "linhas": 843,
-  "avisos": 128,
-  "relatorios": 71
+  "linhas": 855,
+  "avisos": 129,
+  "relatorios": 72
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII MGRI #1373098",
   "FII SPECIALE #1373059",
   "FII PMFO #1373057",
   "BRASIL TIMBERLAND PARANÁ FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1373044",
@@ -31,10 +32,9 @@
   "FII QTZD #1372424",
   "FII LSOP #1372423",
   "FII HCTB #1372419",
-  "FII TOUR V #1372417",
-  "FII HECT DES #1372415"
+  "FII TOUR V #1372417"
  ],
  "acoes_nesta_rodada": false,
  "novos": [],
- "pdfs": 2
+ "pdfs": 0
 }
