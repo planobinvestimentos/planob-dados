@@ -1,18 +1,31 @@
 {
- "gerado": "2026-11-09T16:15:16.435Z",
+ "gerado": "2026-11-09T16:30:15.522Z",
  "hora": 13,
  "fnet": {
-  "linhas": 704,
-  "avisos": 68,
+  "linhas": 713,
+  "avisos": 75,
   "relatorios": 66
  },
- "avisos_novos": [],
+ "avisos_novos": [
+  "RBRP11:1372065"
+ ],
  "avisos_sem_ticker": [
+  "FII VVDI #1372068",
+  "FII RMBS #1372067",
+  "FII RECM #1372066",
+  "FII FL RECEB #1372064",
+  "FII EMET #1372063",
+  "FII DEVA FOF #1372060",
   "PINHEIROS FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1372010",
   "AZURITA FUNDO DE INVESTIMENTO IMOBILIÁRIO #1372009",
   "FII FYTO #1371811"
  ],
  "acoes_nesta_rodada": false,
- "novos": [],
+ "lido_do_aviso": [
+  "RBRP11"
+ ],
+ "novos": [
+  "RBRP11 Rendimento"
+ ],
  "pdfs": 0
 }
