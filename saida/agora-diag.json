@@ -1,15 +1,16 @@
 {
- "gerado": "2026-11-09T18:00:21.479Z",
+ "gerado": "2026-11-09T18:30:19.105Z",
  "hora": 15,
  "fnet": {
-  "linhas": 735,
-  "avisos": 77,
+  "linhas": 739,
+  "avisos": 78,
   "relatorios": 66
  },
  "avisos_novos": [
   "RECR11:1372090"
  ],
  "avisos_sem_ticker": [
+  "FII ZAGH #1372226",
   "FII DEVA PRO #1372121",
   "FII RMBS #1372111",
   "FII VVDI #1372068",
@@ -22,10 +23,6 @@
   "FII FYTO #1371811"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 0,
-  "acoes": "não consultadas"
- },
  "pendentes": [
   "RECR11"
  ],
