@@ -1,17 +1,14 @@
 {
- "gerado": "2026-11-09T20:30:18.065Z",
+ "gerado": "2026-11-09T20:45:18.421Z",
  "hora": 17,
  "fnet": {
-  "linhas": 822,
-  "avisos": 124,
+  "linhas": 826,
+  "avisos": 125,
   "relatorios": 67
  },
- "avisos_novos": [
-  "BTCI11:1372463",
-  "RBRP11:1372445",
-  "RECR11:1372090"
- ],
+ "avisos_novos": [],
  "avisos_sem_ticker": [
+  "XP HABITAT RENDA IMOBILIÁRIA FEEDER FUNDO DE INVESTIMENTO IMOBILIÁRIO #1373001",
   "XP HEDGE FUND FUNDO DE INVESTIMENTO IMOBILIÁRIO - FII #1372999",
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO TG EUROGARDEN MASTER RESPONSABILIDADE LIMITADA #1372996",
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO WINGS RENDA IMOBILIÁRIA MASTER - RESPONSABILIDADE LIMITADA #1372829",
@@ -35,19 +32,9 @@
   "FII HECT DES #1372415",
   "FII NAUI #1372414",
   "FII IMMB #1372413",
-  "FII BMBRC LC #1372410",
-  "FII VERS CRI #1372409"
+  "FII BMBRC LC #1372410"
  ],
  "acoes_nesta_rodada": false,
- "lido_do_aviso": [
-  "BTCI11",
-  "RBRP11"
- ],
- "desistiu": [
-  "RECR11"
- ],
- "novos": [
-  "BTCI11 Rendimento"
- ],
+ "novos": [],
  "pdfs": 0
 }
