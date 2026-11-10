@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-10T00:27:41.430Z",
+ "gerado": "2026-11-10T12:03:32.998Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,19 +59,19 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 534,
+  "linhas_vistas": 301,
   "categorias": {
-   "Informes Periódicos": 190,
-   "Relatórios": 81,
-   "Assembleia": 68,
-   "Aviso aos Cotistas - Estruturado": 59,
-   "Aviso aos Cotistas": 51,
-   "Oferta Pública de Distribuição de Cotas": 26,
-   "Fato Relevante": 19,
-   "Comunicado ao Mercado": 14
+   "Informes Periódicos": 94,
+   "Assembleia": 56,
+   "Aviso aos Cotistas - Estruturado": 43,
+   "Relatórios": 32,
+   "Aviso aos Cotistas": 25,
+   "Fato Relevante": 14,
+   "Regulamento": 10,
+   "Comunicado ao Mercado": 9
   },
-  "fatos_relevantes": 19,
-  "de_fiis_liquidos": 7
+  "fatos_relevantes": 14,
+  "de_fiis_liquidos": 8
  },
  "fatos_sem_ticker": [
   "FII SUNOFOFI",
@@ -79,22 +79,24 @@
   "FII APXU",
   "LOFT III FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
   "FII NMKS",
-  "SPX REGRA LOGÍSTICO CAJAMAR FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
-  "FII V2 PRIME",
-  "FII WTC SP",
-  "FII AVUR",
-  "FII CCVA",
-  "FII RIONEGRO",
-  "FII TRCO"
+  "SPX REGRA LOGÍSTICO CAJAMAR FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA"
  ],
- "analisados": 0,
+ "analisados": 3,
  "sem_texto": 0,
  "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
- "reprovadas": [],
- "materias_novas": 0,
+ "reprovadas": [
+  {
+   "id": 1373560,
+   "fundo": "BTLG11",
+   "numeros_fora_do_documento": [
+    "68450241112"
+   ]
+  }
+ ],
+ "materias_novas": 2,
  "telegram": {
-  "enviados": 0,
+  "enviados": 2,
   "erros": []
  }
 }
