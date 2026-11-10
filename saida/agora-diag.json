@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-10T19:15:15.641Z",
+ "gerado": "2026-11-10T19:30:15.896Z",
  "hora": 16,
  "fnet": {
-  "linhas": 1021,
-  "avisos": 132,
+  "linhas": 1026,
+  "avisos": 133,
   "relatorios": 101
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII MAGM #1374563",
   "XP CDI 98 II FUNDO DE INVESTIMENTO IMOBILIÁRIO #1373998",
   "XP CDI 96 II FUNDO DE INVESTIMENTO IMOBILIÁRIO #1373996",
   "XP CDI 93 II FUNDO DE INVESTIMENTO IMOBILIÁRIO #1373995",
@@ -31,8 +32,7 @@
   "FII CF3 IMOB #1372435",
   "FII HIRE RES #1372431",
   "FII HYPI #1372428",
-  "FII GCDL #1372427",
-  "FII QTZD #1372424"
+  "FII GCDL #1372427"
  ],
  "acoes_nesta_rodada": false,
  "novos": [],
