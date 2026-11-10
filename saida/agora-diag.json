@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-10T22:00:16.043Z",
+ "gerado": "2026-11-10T22:06:43.877Z",
  "hora": 19,
  "fnet": {
-  "linhas": 1088,
+  "linhas": 1091,
   "avisos": 154,
   "relatorios": 104
  },
@@ -37,10 +37,6 @@
   "FII SPECIALE #1373059"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 9,
-  "acoes": "não consultadas"
- },
  "pendentes": [
   "PCIP11"
  ],
