@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-10T23:00:16.345Z",
+ "gerado": "2026-11-10T23:15:17.829Z",
  "hora": 20,
  "fnet": {
   "linhas": 1115,
@@ -36,11 +36,7 @@
   "FII MGRI #1373098",
   "FII SPECIALE #1373059"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 9,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "pendentes": [
   "PCIP11"
  ],
