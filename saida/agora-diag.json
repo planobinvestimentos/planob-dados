@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-10T20:45:17.886Z",
- "hora": 17,
+ "gerado": "2026-11-10T21:00:16.613Z",
+ "hora": 18,
  "fnet": {
-  "linhas": 1064,
+  "linhas": 1071,
   "avisos": 153,
   "relatorios": 101
  },
@@ -37,6 +37,10 @@
   "FII PMFO #1373057"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 9,
+  "acoes": "não consultadas"
+ },
  "pendentes": [
   "PCIP11"
  ],
