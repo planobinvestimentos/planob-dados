@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-10T00:00:20.039Z",
+ "gerado": "2026-11-10T00:06:44.178Z",
  "de": "2026-11-07",
  "ate": "2026-11-09",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 139,
   "amostra": {
-   "fundo": "FII ALIANZAC",
+   "fundo": "FII ADSH    ",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -19,14 +19,14 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRALZCCTF016",
-    "paymentDate": "23/10/2026",
-    "rate": "0,09000000000",
-    "relatedTo": "Setembro-2026/2026",
-    "approvedOn": "16/10/2026",
-    "isinCode": "BRALZCCTF016",
+    "assetIssued": "BRADSHCTF009",
+    "paymentDate": "30/10/2026",
+    "rate": "0,02000000000",
+    "relatedTo": "OUTUBRO/2026",
+    "approvedOn": "23/10/2026",
+    "isinCode": "BRADSHCTF009",
     "label": "RENDIMENTO",
-    "lastDatePrior": "16/10/2026",
+    "lastDatePrior": "23/10/2026",
     "remarks": ""
    }
   },
@@ -38,7 +38,7 @@
  "acoes": {
   "emissoras": 282,
   "amostra": {
-   "emissora": "ABCB",
+   "emissora": "ABEV",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -51,14 +51,14 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRABCBACNPR4",
-    "paymentDate": "12/08/2026",
-    "rate": "1,16800000000",
-    "relatedTo": "1º Semestre/2026",
-    "approvedOn": "24/06/2026",
-    "isinCode": "BRABCBACNPR4",
+    "assetIssued": "BRABEVACNOR1",
+    "paymentDate": "31/12/2026",
+    "rate": "0,07130000000",
+    "relatedTo": "Anual/2026",
+    "approvedOn": "29/07/2026",
+    "isinCode": "BRABEVACNOR1",
     "label": "JRS CAP PROPRIO",
-    "lastDatePrior": "29/06/2026",
+    "lastDatePrior": "21/09/2026",
     "remarks": ""
    }
   },
@@ -83,9 +83,9 @@
     "remarks": ""
    }
   },
-  "ok": 274,
-  "falhas": 8,
-  "semDividendos": 84,
+  "ok": 282,
+  "falhas": 0,
+  "semDividendos": 86,
   "itens": 0
  }
 }
