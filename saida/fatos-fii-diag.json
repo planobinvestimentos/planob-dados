@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-10T12:03:32.998Z",
+ "gerado": "2026-11-10T12:55:33.626Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,10 +59,10 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 301,
+  "linhas_vistas": 303,
   "categorias": {
    "Informes Periódicos": 94,
-   "Assembleia": 56,
+   "Assembleia": 58,
    "Aviso aos Cotistas - Estruturado": 43,
    "Relatórios": 32,
    "Aviso aos Cotistas": 25,
@@ -81,22 +81,14 @@
   "FII NMKS",
   "SPX REGRA LOGÍSTICO CAJAMAR FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA"
  ],
- "analisados": 3,
+ "analisados": 0,
  "sem_texto": 0,
  "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
- "reprovadas": [
-  {
-   "id": 1373560,
-   "fundo": "BTLG11",
-   "numeros_fora_do_documento": [
-    "68450241112"
-   ]
-  }
- ],
- "materias_novas": 2,
+ "reprovadas": [],
+ "materias_novas": 0,
  "telegram": {
-  "enviados": 2,
+  "enviados": 0,
   "erros": []
  }
 }
