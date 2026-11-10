@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-10T19:48:21.433Z",
- "hora": 16,
+ "gerado": "2026-11-10T20:00:17.254Z",
+ "hora": 17,
  "fnet": {
-  "linhas": 1034,
+  "linhas": 1038,
   "avisos": 141,
   "relatorios": 101
  },
@@ -35,6 +35,10 @@
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO TG RENDA URBANA MASTER - RESPONSABILIDADE LIMITADA #1372484"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 9,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
