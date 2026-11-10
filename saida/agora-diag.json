@@ -1,6 +1,6 @@
 {
- "gerado": "2026-11-09T23:45:16.403Z",
- "hora": 20,
+ "gerado": "2026-11-10T00:00:16.639Z",
+ "hora": 21,
  "fnet": {
   "linhas": 940,
   "avisos": 129,
@@ -34,7 +34,11 @@
   "FII HCTB #1372419",
   "FII TOUR V #1372417"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
+ "varredura": {
+  "fii": 0,
+  "acoes": 0
+ },
  "novos": [],
- "pdfs": 5
+ "pdfs": 0
 }
