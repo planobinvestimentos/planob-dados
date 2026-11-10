@@ -1,13 +1,13 @@
 {
- "gerado": "2026-11-10T22:15:17.215Z",
+ "gerado": "2026-11-10T22:30:16.422Z",
  "hora": 19,
  "fnet": {
-  "linhas": 1094,
+  "linhas": 1096,
   "avisos": 154,
   "relatorios": 107
  },
  "avisos_novos": [
-  "PCIP11:1374652"
+  "PCIP11:1375101"
  ],
  "avisos_sem_ticker": [
   "FII C TEXTIL #1374806",
