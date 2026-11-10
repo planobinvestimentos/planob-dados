@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-10T19:00:15.787Z",
+ "gerado": "2026-11-10T19:15:15.641Z",
  "hora": 16,
  "fnet": {
-  "linhas": 1016,
+  "linhas": 1021,
   "avisos": 132,
   "relatorios": 101
  },
@@ -34,11 +34,7 @@
   "FII GCDL #1372427",
   "FII QTZD #1372424"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 9,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
