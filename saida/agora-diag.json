@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-10T12:00:15.926Z",
+ "gerado": "2026-11-10T12:15:16.077Z",
  "hora": 9,
  "fnet": {
   "linhas": 946,
@@ -35,12 +35,6 @@
   "FII TOUR V #1372417"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 8,
-  "acoes": "não consultadas"
- },
- "novos": [
-  "RECR11 Rendimento"
- ],
- "pdfs": 1
+ "novos": [],
+ "pdfs": 0
 }
