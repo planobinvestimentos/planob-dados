@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-10T22:06:43.877Z",
+ "gerado": "2026-11-10T22:15:17.215Z",
  "hora": 19,
  "fnet": {
-  "linhas": 1091,
+  "linhas": 1094,
   "avisos": 154,
-  "relatorios": 104
+  "relatorios": 107
  },
  "avisos_novos": [
   "PCIP11:1374652"
