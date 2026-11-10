@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-10T14:53:13.809Z",
- "hora": 11,
+ "gerado": "2026-11-10T15:00:20.504Z",
+ "hora": 12,
  "fnet": {
-  "linhas": 962,
+  "linhas": 966,
   "avisos": 129,
-  "relatorios": 99
+  "relatorios": 101
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
@@ -34,10 +34,10 @@
   "FII HCTB #1372419",
   "FII TOUR V #1372417"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
  "varredura": {
   "fii": 9,
-  "acoes": "não consultadas"
+  "acoes": 0
  },
  "novos": [],
  "pdfs": 0
