@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-10T22:29:25.276Z",
+ "gerado": "2026-11-10T23:28:10.973Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 457,
+  "linhas_vistas": 481,
   "categorias": {
-   "Informes Periódicos": 172,
-   "Assembleia": 81,
+   "Informes Periódicos": 186,
+   "Assembleia": 83,
    "Aviso aos Cotistas - Estruturado": 62,
-   "Relatórios": 42,
+   "Relatórios": 44,
    "Aviso aos Cotistas": 34,
-   "Fato Relevante": 17,
-   "Oferta Pública de Distribuição de Cotas": 16,
-   "Comunicado ao Mercado": 12
+   "Oferta Pública de Distribuição de Cotas": 19,
+   "Fato Relevante": 19,
+   "Comunicado ao Mercado": 13
   },
-  "fatos_relevantes": 17,
-  "de_fiis_liquidos": 8
+  "fatos_relevantes": 19,
+  "de_fiis_liquidos": 9
  },
  "fatos_sem_ticker": [
+  "TISHMAN SPEYER JARDINS FII ORIZ XP RESPONSABILIDADE LIMITADA",
   "FII MGRI",
   "FII ZAVIT R",
   "FII VIDANOVA",
@@ -84,9 +85,9 @@
   "FII NMKS",
   "SPX REGRA LOGÍSTICO CAJAMAR FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA"
  ],
- "analisados": 0,
+ "analisados": 1,
  "sem_texto": 0,
- "fora_do_escopo": 0,
+ "fora_do_escopo": 1,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
  "materias_novas": 0,
