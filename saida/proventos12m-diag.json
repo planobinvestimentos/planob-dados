@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-07T11:09:23.956Z",
- "consultados": 985,
- "com_dados": 389,
- "sem_dados": 341,
+ "gerado": "2026-11-10T11:16:55.729Z",
+ "consultados": 978,
+ "com_dados": 387,
+ "sem_dados": 338,
  "erros": 0,
  "exemplos_erro": [],
  "exemplos_sem_dados": [
@@ -12,7 +12,6 @@
   "AGGX11",
   "AGRI11",
   "AGRX11",
-  "AHEB3",
   "ALUG11",
   "AMAR3",
   "AMER3",
@@ -35,12 +34,13 @@
   "AZUL98",
   "AZUL99",
   "BBOI11",
-  "BBOV11"
+  "BBOV11",
+  "BBSD11"
  ],
  "via_b3": 0,
  "b3": {
-  "consultadas": 318,
-  "ok": 318,
+  "consultadas": 317,
+  "ok": 317,
   "falhas": 0,
   "recuperados": 0,
   "erro": null,
