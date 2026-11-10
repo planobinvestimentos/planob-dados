@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-10T21:30:19.173Z",
+ "gerado": "2026-11-10T22:29:25.276Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,24 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 435,
+  "linhas_vistas": 457,
   "categorias": {
-   "Informes Periódicos": 169,
-   "Assembleia": 78,
-   "Aviso aos Cotistas - Estruturado": 61,
-   "Relatórios": 35,
+   "Informes Periódicos": 172,
+   "Assembleia": 81,
+   "Aviso aos Cotistas - Estruturado": 62,
+   "Relatórios": 42,
    "Aviso aos Cotistas": 34,
-   "Fato Relevante": 14,
-   "Oferta Pública de Distribuição de Cotas": 13,
-   "Regulamento": 11
+   "Fato Relevante": 17,
+   "Oferta Pública de Distribuição de Cotas": 16,
+   "Comunicado ao Mercado": 12
   },
-  "fatos_relevantes": 14,
+  "fatos_relevantes": 17,
   "de_fiis_liquidos": 8
  },
  "fatos_sem_ticker": [
+  "FII MGRI",
+  "FII ZAVIT R",
+  "FII VIDANOVA",
   "FII SUNOFOFI",
   "FII APXR",
   "FII APXU",
