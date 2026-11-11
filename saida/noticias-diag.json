@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-11T15:55:21.472Z",
+ "gerado": "2026-11-11T18:00:28.806Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -87,16 +87,16 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 2510,
-  "na_janela_e_categorias": 125,
+  "linhas": 2515,
+  "na_janela_e_categorias": 126,
   "sem_cnpj": 86,
-  "entrega_mais_recente": "20261111 11/11/2026 12:30",
+  "entrega_mais_recente": "20261111 11/11/2026 15:00",
   "tentativa": 1
  },
  "fontes": {
-  "enet": 125,
+  "enet": 126,
   "ipe": 25,
-  "apos_juntar": 127
+  "apos_juntar": 128
  },
  "itens": {
   "novos": 0,
@@ -110,10 +110,75 @@
  "gasto_ia": {
   "mes": "2026-11",
   "usd": 0.2852,
-  "chamadas": 258,
+  "chamadas": 259,
   "teto_usd": 5
  },
  "recentes": [
+  {
+   "h": "15:00",
+   "emp": "JALLES MACHADO S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Aprovação da contratação de financiamento junto ao BNDES e autorização à Diretoria Executi",
+   "d": "2026-11-11",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02549-6",
+   "c5": "20261105 05/11/2026 09:30",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "14:39",
+   "emp": "HMOBI PARTICIPAÇÕES S.A.",
+   "cat": "Valores Mobiliários Negociados e Detidos",
+   "tipo": "Posição Consolidada",
+   "ass": "",
+   "d": "2026-11-11",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02567-4",
+   "c5": "20261001 10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "14:28",
+   "emp": "BRADESPAR S.A.",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-11-11",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01872-4",
+   "c5": "20261110 11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "14:23",
+   "emp": "ALFA HOLDINGS S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Apreciar as Demonstrações Financeiras Individuais em IFRS referentes ao trimestre findo em",
+   "d": "2026-11-11",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00995-4",
+   "c5": "20261110 10/11/2026 18:25",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "13:02",
+   "emp": "CONSTRUTORA ADOLPHO LINDENBERG S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Aprovação dos resultados do 3ºTRI/2026; deliberação sobre os Contratos da Canário e Horto",
+   "d": "2026-11-11",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00472-3",
+   "c5": "20261103 03/11/2026 14:30",
+   "c8": "1",
+   "c9": "AP"
+  },
   {
    "h": "12:30",
    "emp": "INVESTIMENTOS E PARTICIP. EM INFRA S.A. - INVEPAR",
@@ -155,6 +220,45 @@
   },
   {
    "h": "11:35",
+   "emp": "TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD",
+   "cat": "Aviso aos Acionistas",
+   "tipo": "Outros avisos",
+   "ass": "Dividendo",
+   "d": "2026-11-11",
+   "st": "sem_cnpj",
+   "c0": "05253-1",
+   "c5": "20261111 11/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "11:35",
+   "emp": "LINCOLN NATIONAL CORP",
+   "cat": "Aviso aos Acionistas",
+   "tipo": "Outros avisos",
+   "ass": "Dividendo",
+   "d": "2026-11-11",
+   "st": "sem_cnpj",
+   "c0": "05484-4",
+   "c5": "20261111 11/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "11:35",
+   "emp": "LOEWS CORP",
+   "cat": "Aviso aos Acionistas",
+   "tipo": "Outros avisos",
+   "ass": "Dividendo",
+   "d": "2026-11-11",
+   "st": "sem_cnpj",
+   "c0": "05485-2",
+   "c5": "20261111 11/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "11:35",
    "emp": "QUEST DIAGNOSTICS INC",
    "cat": "Aviso aos Acionistas",
    "tipo": "Outros avisos",
@@ -181,13 +285,26 @@
   },
   {
    "h": "11:35",
-   "emp": "TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD",
+   "emp": "AGREE REALTY CORP",
+   "cat": "Aviso aos Acionistas",
+   "tipo": "Outros avisos",
+   "ass": "Dividendo",
+   "d": "2026-11-11",
+   "st": "sem_ticker_para_o_cnpj",
+   "c0": "05940-7",
+   "c5": "20261111 11/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "11:35",
+   "emp": "TERADYNE INC",
    "cat": "Aviso aos Acionistas",
    "tipo": "Outros avisos",
    "ass": "Dividendo",
    "d": "2026-11-11",
    "st": "sem_cnpj",
-   "c0": "05253-1",
+   "c0": "05882-3",
    "c5": "20261111 11/11/2026",
    "c8": "1",
    "c9": "AP"
@@ -240,58 +357,6 @@
    "d": "2026-11-11",
    "st": "sem_cnpj",
    "c0": "05507-7",
-   "c5": "20261111 11/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "11:35",
-   "emp": "LINCOLN NATIONAL CORP",
-   "cat": "Aviso aos Acionistas",
-   "tipo": "Outros avisos",
-   "ass": "Dividendo",
-   "d": "2026-11-11",
-   "st": "sem_cnpj",
-   "c0": "05484-4",
-   "c5": "20261111 11/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "11:35",
-   "emp": "LOEWS CORP",
-   "cat": "Aviso aos Acionistas",
-   "tipo": "Outros avisos",
-   "ass": "Dividendo",
-   "d": "2026-11-11",
-   "st": "sem_cnpj",
-   "c0": "05485-2",
-   "c5": "20261111 11/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "11:35",
-   "emp": "AGREE REALTY CORP",
-   "cat": "Aviso aos Acionistas",
-   "tipo": "Outros avisos",
-   "ass": "Dividendo",
-   "d": "2026-11-11",
-   "st": "sem_ticker_para_o_cnpj",
-   "c0": "05940-7",
-   "c5": "20261111 11/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "11:35",
-   "emp": "TERADYNE INC",
-   "cat": "Aviso aos Acionistas",
-   "tipo": "Outros avisos",
-   "ass": "Dividendo",
-   "d": "2026-11-11",
-   "st": "sem_cnpj",
-   "c0": "05882-3",
    "c5": "20261111 11/11/2026",
    "c8": "1",
    "c9": "AP"
@@ -714,19 +779,6 @@
   },
   {
    "h": "08:26",
-   "emp": "METLIFE INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Comunicado ao Mercado",
-   "d": "2026-11-11",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05088-1",
-   "c5": "20261111 11/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "08:26",
    "emp": "DUKE ENERGY CORPORATION",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -739,14 +791,14 @@
    "c9": "AP"
   },
   {
-   "h": "08:11",
-   "emp": "BIOMM S.A.",
+   "h": "08:26",
+   "emp": "METLIFE INC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Prévias Operacionais",
+   "ass": "Comunicado ao Mercado",
    "d": "2026-11-11",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "01930-5",
+   "c0": "05088-1",
    "c5": "20261111 11/11/2026",
    "c8": "1",
    "c9": "AP"
@@ -761,6 +813,19 @@
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "02546-1",
    "c5": "20261110 10/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:11",
+   "emp": "BIOMM S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Prévias Operacionais",
+   "d": "2026-11-11",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01930-5",
+   "c5": "20261111 11/11/2026",
    "c8": "1",
    "c9": "AP"
   },
