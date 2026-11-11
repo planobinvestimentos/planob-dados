@@ -1,10 +1,12 @@
 {
- "gerado": "2026-11-09T13:30:37.524Z",
- "baixados": 0,
+ "gerado": "2026-11-11T13:00:33.634Z",
+ "baixados": 2,
  "falhas": {
+  "2026-11-11": "tabela não encontrada/validada",
   "2026-11-02": "HTTP 500"
  },
- "lidos": 0,
- "dias_calculados": 34,
- "ultimo": "2026-11-05"
+ "lidos": 1,
+ "trecho": "meio de transferência para o investidor comprador, sendo esse processo de transferência\nINTERMEDIADORA .... GENIAL INSTITUCIONAL CCTVM S/A (120)\nINTERMEDIADORA .... GENIAL INSTITUCIONAL CCTVM S/A (120)\n                                      Investidores de Mercado de Capitais Não Residentes\n              “INR”                   e pelos Investidores Estrangeiros Diretos, em\n“Investidor de Mercado de Capitais    Tem o significado atribuído no item 5.2.(iii) deste\n  “Investidor Estrangeiro Direto”     Tem o significado atribuído no item 5.2.(iv) deste\ncom Investidores da Companhia, informando sobre a verificação de determinada Condição\ne ao Diretor de Relações com Investidores da Companhia que, por sua vez, divulgará,\n4.5. Divulgação: A Ofertante deverá comunicar ao Diretor de Relações com Investidores da\nDiretor de Negociação Eletrônica da B3 e ao Diretor de Relações com Investidores da\nacima. O Diretor de Relações com Investidores da Companhia deverá, também, confirmar a",
+ "dias_calculados": 35,
+ "ultimo": "2026-11-06"
 }
