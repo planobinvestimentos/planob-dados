@@ -1,13 +1,13 @@
 {
- "gerado": "2026-11-11T20:15:15.872Z",
- "hora": 17,
+ "gerado": "2026-11-11T21:00:20.586Z",
+ "hora": 18,
  "fnet": {
-  "linhas": 1370,
-  "avisos": 171,
+  "linhas": 1394,
+  "avisos": 172,
   "relatorios": 117
  },
  "avisos_novos": [
-  "IRIM11:1377020"
+  "RBRY11:1377116"
  ],
  "avisos_sem_ticker": [
   "FII PLUS #1377022",
@@ -37,11 +37,15 @@
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO - VBI CRÉDITO ALOCAÇÃO ESTRATÉGICA - RESPONSABILIDADE LIMITADA #1374645"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 12,
+  "acoes": "não consultadas"
+ },
  "lido_do_aviso": [
-  "IRIM11"
+  "RBRY11"
  ],
  "novos": [
-  "IRIM11 Rendimento"
+  "RBRY11 Rendimento"
  ],
  "pdfs": 0
 }
