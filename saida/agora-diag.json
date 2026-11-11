@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-11T23:15:14.483Z",
+ "gerado": "2026-11-11T23:30:17.421Z",
  "hora": 20,
  "fnet": {
-  "linhas": 1548,
+  "linhas": 1550,
   "avisos": 174,
   "relatorios": 123
  },
@@ -34,11 +34,7 @@
   "JHSF CAPITAL DESENVOLVIMENTO IMOBILIÁRIO FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1374676",
   "HEDGE CRÉDITO CDI RENDA MAIS FUNDO DE FUNDO DE INVESTIMENTO IMOBILIÁRIO #1374669"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 12,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
