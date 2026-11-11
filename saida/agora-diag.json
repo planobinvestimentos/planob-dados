@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-11T12:30:18.296Z",
+ "gerado": "2026-11-11T12:45:18.225Z",
  "hora": 9,
  "fnet": {
-  "linhas": 1139,
-  "avisos": 155,
-  "relatorios": 108
+  "linhas": 1149,
+  "avisos": 156,
+  "relatorios": 110
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII TRCO #1375404",
   "REC - FAMI FUNDO DE CRI COTAS AMORTIZÁVEIS - FII - RESPONSABILIDADE LIMITADA #1375371",
   "FII C TEXTIL #1374806",
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO VBI CRÉDITO MULTIESTRATÉGIA - RESPONSABILIDADE LIMITADA #1374785",
