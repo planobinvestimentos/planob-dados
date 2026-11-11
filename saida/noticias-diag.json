@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-11T18:00:28.806Z",
+ "gerado": "2026-11-11T18:41:24.534Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -87,16 +87,16 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 2515,
-  "na_janela_e_categorias": 126,
+  "linhas": 2517,
+  "na_janela_e_categorias": 125,
   "sem_cnpj": 86,
-  "entrega_mais_recente": "20261111 11/11/2026 15:00",
+  "entrega_mais_recente": "20261111 11/11/2026 15:16",
   "tentativa": 1
  },
  "fontes": {
-  "enet": 126,
+  "enet": 125,
   "ipe": 25,
-  "apos_juntar": 128
+  "apos_juntar": 127
  },
  "itens": {
   "novos": 0,
@@ -110,10 +110,36 @@
  "gasto_ia": {
   "mes": "2026-11",
   "usd": 0.2852,
-  "chamadas": 259,
+  "chamadas": 260,
   "teto_usd": 5
  },
  "recentes": [
+  {
+   "h": "15:16",
+   "emp": "J. MACEDO S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Deliberar sobre a análise, discussão e aprovação do Relatório da Administração e das Demon",
+   "d": "2026-11-11",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02115-6",
+   "c5": "20261110 10/11/2026 10:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:15",
+   "emp": "KILROY REALTY CORP",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-11-11",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05843-2",
+   "c5": "20261111 11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
   {
    "h": "15:00",
    "emp": "JALLES MACHADO S.A.",
@@ -220,13 +246,39 @@
   },
   {
    "h": "11:35",
-   "emp": "TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD",
+   "emp": "VODAFONE GROUP PUBLIC LTD COMPANY",
    "cat": "Aviso aos Acionistas",
    "tipo": "Outros avisos",
    "ass": "Dividendo",
    "d": "2026-11-11",
    "st": "sem_cnpj",
-   "c0": "05253-1",
+   "c0": "05711-8",
+   "c5": "20261111 11/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "11:35",
+   "emp": "BROADRIDGE FINANCIAL SOLUTIONS INC",
+   "cat": "Aviso aos Acionistas",
+   "tipo": "Outros avisos",
+   "ass": "Dividendo",
+   "d": "2026-11-11",
+   "st": "sem_cnpj",
+   "c0": "05535-2",
+   "c5": "20261111 11/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "11:35",
+   "emp": "REALTY INCOME CORP",
+   "cat": "Aviso aos Acionistas",
+   "tipo": "Outros avisos",
+   "ass": "Dividendo",
+   "d": "2026-11-11",
+   "st": "sem_cnpj",
+   "c0": "05507-7",
    "c5": "20261111 11/11/2026",
    "c8": "1",
    "c9": "AP"
@@ -285,6 +337,19 @@
   },
   {
    "h": "11:35",
+   "emp": "TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD",
+   "cat": "Aviso aos Acionistas",
+   "tipo": "Outros avisos",
+   "ass": "Dividendo",
+   "d": "2026-11-11",
+   "st": "sem_cnpj",
+   "c0": "05253-1",
+   "c5": "20261111 11/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "11:35",
    "emp": "AGREE REALTY CORP",
    "cat": "Aviso aos Acionistas",
    "tipo": "Outros avisos",
@@ -318,45 +383,6 @@
    "d": "2026-11-11",
    "st": "sem_cnpj",
    "c0": "05843-2",
-   "c5": "20261111 11/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "11:35",
-   "emp": "VODAFONE GROUP PUBLIC LTD COMPANY",
-   "cat": "Aviso aos Acionistas",
-   "tipo": "Outros avisos",
-   "ass": "Dividendo",
-   "d": "2026-11-11",
-   "st": "sem_cnpj",
-   "c0": "05711-8",
-   "c5": "20261111 11/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "11:35",
-   "emp": "BROADRIDGE FINANCIAL SOLUTIONS INC",
-   "cat": "Aviso aos Acionistas",
-   "tipo": "Outros avisos",
-   "ass": "Dividendo",
-   "d": "2026-11-11",
-   "st": "sem_cnpj",
-   "c0": "05535-2",
-   "c5": "20261111 11/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "11:35",
-   "emp": "REALTY INCOME CORP",
-   "cat": "Aviso aos Acionistas",
-   "tipo": "Outros avisos",
-   "ass": "Dividendo",
-   "d": "2026-11-11",
-   "st": "sem_cnpj",
-   "c0": "05507-7",
    "c5": "20261111 11/11/2026",
    "c8": "1",
    "c9": "AP"
@@ -779,19 +805,6 @@
   },
   {
    "h": "08:26",
-   "emp": "DUKE ENERGY CORPORATION",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Comunicado ao Mercado",
-   "d": "2026-11-11",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05147-0",
-   "c5": "20261111 11/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "08:26",
    "emp": "METLIFE INC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -799,6 +812,19 @@
    "d": "2026-11-11",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05088-1",
+   "c5": "20261111 11/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:26",
+   "emp": "DUKE ENERGY CORPORATION",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Comunicado ao Mercado",
+   "d": "2026-11-11",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05147-0",
    "c5": "20261111 11/11/2026",
    "c8": "1",
    "c9": "AP"
