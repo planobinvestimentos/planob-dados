@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-11T22:19:32.328Z",
+ "gerado": "2026-11-11T22:38:00.083Z",
  "hora": 19,
  "fnet": {
-  "linhas": 1464,
+  "linhas": 1468,
   "avisos": 174,
   "relatorios": 123
  },
@@ -35,10 +35,6 @@
   "HEDGE CRÉDITO CDI RENDA MAIS FUNDO DE FUNDO DE INVESTIMENTO IMOBILIÁRIO #1374669"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 12,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
