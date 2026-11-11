@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-10T23:30:17.691Z",
+ "gerado": "2026-11-11T00:00:19.373Z",
  "de": "2026-11-08",
  "ate": "2026-11-10",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 139,
   "amostra": {
-   "fundo": "FII AUTONOMY",
+   "fundo": "FII AFHI CRI",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -19,20 +19,20 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAIECCTF009",
-    "paymentDate": "09/11/2026",
-    "rate": "0,38000000000",
-    "relatedTo": "Outubro/2026",
-    "approvedOn": "30/10/2026",
-    "isinCode": "BRAIECCTF009",
+    "assetIssued": "BRAFHICTF005",
+    "paymentDate": "22/10/2026",
+    "rate": "1,00000000000",
+    "relatedTo": "Setembro-2026/2026",
+    "approvedOn": "15/10/2026",
+    "isinCode": "BRAFHICTF005",
     "label": "RENDIMENTO",
-    "lastDatePrior": "30/10/2026",
+    "lastDatePrior": "15/10/2026",
     "remarks": ""
    }
   },
-  "ok": 134,
-  "falhas": 5,
-  "semRendimentos": 6,
+  "ok": 138,
+  "falhas": 1,
+  "semRendimentos": 7,
   "itens": 9
  },
  "acoes": {
@@ -63,7 +63,7 @@
    }
   },
   "amostraBonificacao": {
-   "emissora": "AERI",
+   "emissora": "AGRO",
    "campos": [
     "assetIssued",
     "factor",
@@ -74,12 +74,12 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAERIACNOR4",
-    "factor": "0,05000000000",
-    "approvedOn": "11/04/2024",
-    "isinCode": "BRAERIACNOR4",
-    "label": "GRUPAMENTO",
-    "lastDatePrior": "13/05/2024",
+    "assetIssued": "BRAGROACNOR7",
+    "factor": "9.900,00000000000",
+    "approvedOn": "31/10/2007",
+    "isinCode": "BRAGROACNOR7",
+    "label": "DESDOBRAMENTO",
+    "lastDatePrior": "31/10/2007",
     "remarks": ""
    }
   },
