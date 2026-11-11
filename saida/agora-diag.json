@@ -1,14 +1,12 @@
 {
- "gerado": "2026-11-11T19:31:43.624Z",
+ "gerado": "2026-11-11T19:45:19.033Z",
  "hora": 16,
  "fnet": {
-  "linhas": 1328,
+  "linhas": 1349,
   "avisos": 162,
   "relatorios": 117
  },
- "avisos_novos": [
-  "RBRR11:1376825"
- ],
+ "avisos_novos": [],
  "avisos_sem_ticker": [
   "CLASSE ÚNICA DE COTAS DO AZ QUEST PANORAMA CRÉDITO VINTAGE I FI IMOBILIÁRIO RESP LIMITADA #1376826",
   "CIX MCMV FEEDER FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1376823",
@@ -37,11 +35,6 @@
   "FII V2EDCORP #1374579"
  ],
  "acoes_nesta_rodada": false,
- "lido_do_aviso": [
-  "RBRR11"
- ],
- "novos": [
-  "RBRR11 Rendimento"
- ],
+ "novos": [],
  "pdfs": 0
 }
