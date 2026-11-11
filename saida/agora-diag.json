@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-11T15:45:16.994Z",
- "hora": 12,
+ "gerado": "2026-11-11T16:00:17.541Z",
+ "hora": 13,
  "fnet": {
-  "linhas": 1236,
+  "linhas": 1241,
   "avisos": 156,
   "relatorios": 116
  },
@@ -34,6 +34,10 @@
   "XP CDI 93 II FUNDO DE INVESTIMENTO IMOBILIÁRIO #1373995"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 11,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
