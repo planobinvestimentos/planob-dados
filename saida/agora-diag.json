@@ -1,15 +1,14 @@
 {
- "gerado": "2026-11-11T12:00:18.655Z",
+ "gerado": "2026-11-11T12:15:17.609Z",
  "hora": 9,
  "fnet": {
-  "linhas": 1125,
-  "avisos": 154,
+  "linhas": 1131,
+  "avisos": 155,
   "relatorios": 108
  },
- "avisos_novos": [
-  "PCIP11:1375101"
- ],
+ "avisos_novos": [],
  "avisos_sem_ticker": [
+  "REC - FAMI FUNDO DE CRI COTAS AMORTIZÁVEIS - FII - RESPONSABILIDADE LIMITADA #1375371",
   "FII C TEXTIL #1374806",
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO VBI CRÉDITO MULTIESTRATÉGIA - RESPONSABILIDADE LIMITADA #1374785",
   "FII A BRANCA #1374688",
@@ -34,12 +33,6 @@
   "XP CDI 93 II FUNDO DE INVESTIMENTO IMOBILIÁRIO #1373995"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 12,
-  "acoes": "não consultadas"
- },
- "novos": [
-  "PCIP11 Rendimento"
- ],
+ "novos": [],
  "pdfs": 0
 }
