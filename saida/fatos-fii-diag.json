@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-11T18:41:33.251Z",
+ "gerado": "2026-11-11T22:42:01.176Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,26 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 653,
+  "linhas_vistas": 833,
   "categorias": {
-   "Informes Periódicos": 325,
-   "Assembleia": 92,
-   "Aviso aos Cotistas - Estruturado": 63,
-   "Relatórios": 53,
-   "Aviso aos Cotistas": 35,
-   "Oferta Pública de Distribuição de Cotas": 24,
-   "Fato Relevante": 22,
-   "Comunicado ao Mercado": 14
+   "Informes Periódicos": 457,
+   "Assembleia": 100,
+   "Aviso aos Cotistas - Estruturado": 76,
+   "Relatórios": 61,
+   "Aviso aos Cotistas": 40,
+   "Fato Relevante": 28,
+   "Oferta Pública de Distribuição de Cotas": 25,
+   "Comunicado ao Mercado": 17
   },
-  "fatos_relevantes": 22,
-  "de_fiis_liquidos": 9
+  "fatos_relevantes": 28,
+  "de_fiis_liquidos": 10
  },
  "fatos_sem_ticker": [
+  "FII LSOI",
+  "FII V2 RECE",
+  "FII BANRISUL",
+  "FII WTC SP",
+  "FII CPHG",
   "CMX REALTY III FUNDO DE INVESTIMENTO IMOBILIARIO",
   "LCP LOTES III FUNDO DE INVESTIMENTO IMOBILIÁRIO EXCLUSIVO RESPONSABILIDADE LIMITADA",
   "LCP LOTES II FUNDO DE INVESTIMENTO IMOBILIÁRIO EXCLUSIVO RESPONSABILIDADE LIMITADA",
@@ -88,14 +93,14 @@
   "FII NMKS",
   "SPX REGRA LOGÍSTICO CAJAMAR FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA"
  ],
- "analisados": 0,
+ "analisados": 1,
  "sem_texto": 0,
  "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 0,
+ "materias_novas": 1,
  "telegram": {
-  "enviados": 0,
+  "enviados": 1,
   "erros": []
  }
 }
