@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-11T12:00:25.392Z",
+ "gerado": "2026-11-11T12:55:50.025Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -10,22 +10,22 @@
    "text"
   ],
   "usado": {
-   "input_tokens": 10902,
+   "input_tokens": 1398,
    "cache_creation_input_tokens": 0,
    "cache_read_input_tokens": 0,
    "cache_creation": {
     "ephemeral_5m_input_tokens": 0,
     "ephemeral_1h_input_tokens": 0
    },
-   "output_tokens": 2526,
+   "output_tokens": 3179,
    "output_tokens_details": {
-    "thinking_tokens": 1891
+    "thinking_tokens": 2573
    },
    "service_tier": "standard",
    "inference_geo": "global",
    "speed": "standard"
   },
-  "texto": "{\"titulo\":\"Armac (ARML3) registra receita bruta de R$ 653,2 M no 3T26\",\"resumo\":\"ARML3 divulga resultados do 3T26 com receita bruta de R$ 653,2 M e EBITDA de R$ 260,3 M, alta de 22,1% e 31,2% sobre o 3T25.\",\"paragrafos\":[\"A Armac Locação, Logística e Serviços S.A. (B3: ARML3) divulgou em 10 de novem"
+  "texto": "{\"titulo\":\"Cury (CURY3) divulga resultados do 3T26 e 9M26 com vendas líquidas de R$ 1,8 BI\",\"resumo\":\"Cury divulga resultados do 3T26 com vendas líquidas de R$ 1,8 BI (+10,7% vs. 3T25) e lucro líquido de R$ 369,6 MI (+30,5%).\",\"paragrafos\":[\"A Cury Construtora e Incorporadora S.A. (CURY3) divulgou a"
  },
  "ia_teste": "ok: ok",
  "ipe": {
@@ -88,34 +88,186 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 2471,
-  "na_janela_e_categorias": 115,
+  "linhas": 2482,
+  "na_janela_e_categorias": 117,
   "sem_cnpj": 76,
-  "entrega_mais_recente": "20261111 11/11/2026 08:59",
+  "entrega_mais_recente": "20261111 11/11/2026 09:55",
   "tentativa": 1
  },
  "fontes": {
-  "enet": 115,
+  "enet": 117,
   "ipe": 25,
-  "apos_juntar": 117
+  "apos_juntar": 119
  },
  "itens": {
-  "novos": 6,
-  "enviados_agora": 6,
+  "novos": 2,
+  "enviados_agora": 2,
   "com_ia": 0,
   "ia_falhas": 0,
   "fora_do_filtro": 0,
   "rotina_escondida": 0,
-  "materias": 6
+  "materias": 1
  },
  "filtro": "sem filtro de lucro (todas as empresas)",
+ "materias_reprovadas": [
+  {
+   "prot": "1587714",
+   "empresa": "CURY CONSTRUTORA E INCORPORADORA S.A.",
+   "numeros_fora_do_documento": [
+    "11"
+   ]
+  }
+ ],
  "gasto_ia": {
   "mes": "2026-11",
-  "usd": 0.2822,
-  "chamadas": 253,
+  "usd": 0.2852,
+  "chamadas": 256,
   "teto_usd": 5
  },
  "recentes": [
+  {
+   "h": "09:55",
+   "emp": "COPEL DISTRIBUIÇÃO S A",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Eleição de Diretor(es); Distribuição de Dividendos/Juros sobre Capital Próprio",
+   "d": "2026-11-11",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02680-8",
+   "c5": "20251219 19/12/2025 07:00",
+   "c8": "3",
+   "c9": "RE"
+  },
+  {
+   "h": "09:45",
+   "emp": "CONCESSIONARIA ROTA DE SANTA MARIA S.A",
+   "cat": "Valores Mobiliários Negociados e Detidos",
+   "tipo": "Posição Consolidada",
+   "ass": "",
+   "d": "2026-11-11",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02729-4",
+   "c5": "20261001 10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:44",
+   "emp": "CONCESSIONARIA ROTA DE SANTA MARIA S.A",
+   "cat": "Valores Mobiliários Negociados e Detidos",
+   "tipo": "Posição Consolidada",
+   "ass": "",
+   "d": "2026-11-11",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02729-4",
+   "c5": "20260901 09/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:33",
+   "emp": "MULTIPLAN - EMPREEND IMOBILIARIOS S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Aquisição/Alienação de Participação Acionária Relevante",
+   "ass": "Declaração de Aquisição de Participação Acionária Relevante",
+   "d": "2026-11-11",
+   "st": "NOVO",
+   "c0": "02098-2",
+   "c5": "20261111 11/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:29",
+   "emp": "ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho Fiscal",
+   "ass": "Analisar e discutir sobre o Formulário de Informações Trimestrais – ITR, o balancete e dem",
+   "d": "2026-11-11",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01945-3",
+   "c5": "20261109 09/11/2026 14:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:27",
+   "emp": "ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Deliberar sobre a análise das Informações Financeiras do Trimestre encerrado em 30 de sete",
+   "d": "2026-11-11",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01945-3",
+   "c5": "20261109 09/11/2026 11:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:26",
+   "emp": "CPX DISTRIBUIDORA S.A.",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Incorporação e Justificação da CantuStore pela CPX Distribuidora",
+   "d": "2026-11-11",
+   "st": "sem_ticker_para_o_cnpj",
+   "c0": "02783-9",
+   "c5": "20260930 30/09/2026",
+   "c8": "2",
+   "c9": "RE"
+  },
+  {
+   "h": "09:25",
+   "emp": "CONCESSIONÁRIA PONTE RIO-NITERÓI S.A. - ECOPONTE",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Ratificação de celebração de Contrato de Prestação de Serviços e Aditivos",
+   "d": "2026-11-11",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02413-9",
+   "c5": "20261103 03/11/2026 12:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:24",
+   "emp": "CURY CONSTRUTORA E INCORPORADORA S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Apresentações a analistas/agentes do mercado",
+   "ass": "Apresentação do webcast de resultados do 3T26 e 9M26",
+   "d": "2026-11-11",
+   "st": "NOVO",
+   "c0": "02510-0",
+   "c5": "20261111 11/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:20",
+   "emp": "ONE INNOVATION EMPREENDIMENTOS E PARTICIPACOES S A",
+   "cat": "Documentos de Oferta de Distribuição Pública",
+   "tipo": "Anúncio de Encerramento de Distribuição Pública",
+   "ass": "Aviso de encerramento",
+   "d": "2026-11-11",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "90080-1",
+   "c5": "20261111 11/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:10",
+   "emp": "BIOMM S.A.",
+   "cat": "Assembleia",
+   "tipo": "AGE",
+   "ass": "Boletim de voto a distância",
+   "d": "2026-11-11",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01930-5",
+   "c5": "20261203 03/12/2026 14:00",
+   "c8": "1",
+   "c9": "AP"
+  },
   {
    "h": "08:59",
    "emp": "CM HOSPITALAR S.A.",
@@ -123,7 +275,7 @@
    "tipo": "Apresentações a analistas/agentes do mercado",
    "ass": "Apresentação de Resultados do 3T26",
    "d": "2026-11-11",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "02568-2",
    "c5": "20261111 11/11/2026",
    "c8": "1",
@@ -162,7 +314,7 @@
    "tipo": "-",
    "ass": "Divulgação de Informações Financeiras Gerenciais Mensais – Agosto de 2026",
    "d": "2026-11-11",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "00650-5",
    "c5": "20261111 11/11/2026",
    "c8": "1",
@@ -175,7 +327,7 @@
    "tipo": "Apresentações a analistas/agentes do mercado",
    "ass": "Apresentação de Resultados - 3T26",
    "d": "2026-11-11",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "02769-3",
    "c5": "20261111 11/11/2026",
    "c8": "1",
