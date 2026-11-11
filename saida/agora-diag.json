@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-11T15:03:29.673Z",
+ "gerado": "2026-11-11T15:17:41.241Z",
  "hora": 12,
  "fnet": {
-  "linhas": 1225,
+  "linhas": 1226,
   "avisos": 156,
   "relatorios": 116
  },
@@ -33,11 +33,7 @@
   "XP CDI 96 II FUNDO DE INVESTIMENTO IMOBILIÁRIO #1373996",
   "XP CDI 93 II FUNDO DE INVESTIMENTO IMOBILIÁRIO #1373995"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 12,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
