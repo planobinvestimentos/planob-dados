@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-11T15:19:41.602Z",
+ "gerado": "2026-11-11T15:55:29.295Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 588,
+  "linhas_vistas": 602,
   "categorias": {
-   "Informes Periódicos": 269,
+   "Informes Periódicos": 282,
    "Assembleia": 87,
    "Aviso aos Cotistas - Estruturado": 63,
    "Relatórios": 52,
    "Aviso aos Cotistas": 35,
    "Oferta Pública de Distribuição de Cotas": 24,
-   "Fato Relevante": 21,
+   "Fato Relevante": 22,
    "Comunicado ao Mercado": 14
   },
-  "fatos_relevantes": 21,
+  "fatos_relevantes": 22,
   "de_fiis_liquidos": 9
  },
  "fatos_sem_ticker": [
+  "CMX REALTY III FUNDO DE INVESTIMENTO IMOBILIARIO",
   "LCP LOTES III FUNDO DE INVESTIMENTO IMOBILIÁRIO EXCLUSIVO RESPONSABILIDADE LIMITADA",
   "LCP LOTES II FUNDO DE INVESTIMENTO IMOBILIÁRIO EXCLUSIVO RESPONSABILIDADE LIMITADA",
   "TISHMAN SPEYER JARDINS FII ORIZ XP RESPONSABILIDADE LIMITADA",
