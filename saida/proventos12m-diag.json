@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-10T11:16:55.729Z",
- "consultados": 978,
+ "gerado": "2026-11-11T11:23:12.741Z",
+ "consultados": 979,
  "com_dados": 387,
- "sem_dados": 338,
+ "sem_dados": 339,
  "erros": 0,
  "exemplos_erro": [],
  "exemplos_sem_dados": [
@@ -31,16 +31,16 @@
   "AZTE3",
   "AZUL3",
   "AZUL97",
-  "AZUL98",
   "AZUL99",
+  "AZUL98",
   "BBOI11",
   "BBOV11",
   "BBSD11"
  ],
  "via_b3": 0,
  "b3": {
-  "consultadas": 317,
-  "ok": 317,
+  "consultadas": 318,
+  "ok": 318,
   "falhas": 0,
   "recuperados": 0,
   "erro": null,
