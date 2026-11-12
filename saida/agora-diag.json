@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-12T17:30:17.026Z",
+ "gerado": "2026-11-12T17:45:16.303Z",
  "hora": 14,
  "fnet": {
-  "linhas": 1796,
-  "avisos": 168,
+  "linhas": 1803,
+  "avisos": 169,
   "relatorios": 116
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII DOVEL #1378850",
   "FII TVML #1377238",
   "FII GUARD MU #1377224",
   "FII PLUS #1377022",
