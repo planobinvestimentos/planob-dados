@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-12T18:40:36.098Z",
+ "gerado": "2026-11-12T21:38:01.145Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 1353,
+  "linhas_vistas": 1558,
   "categorias": {
-   "Informes Periódicos": 963,
-   "Assembleia": 102,
-   "Aviso aos Cotistas - Estruturado": 77,
-   "Relatórios": 65,
-   "Aviso aos Cotistas": 40,
+   "Informes Periódicos": 1126,
+   "Assembleia": 114,
+   "Aviso aos Cotistas - Estruturado": 87,
+   "Relatórios": 67,
+   "Aviso aos Cotistas": 47,
+   "Fato Relevante": 29,
    "Oferta Pública de Distribuição de Cotas": 29,
-   "Fato Relevante": 28,
-   "Comunicado ao Mercado": 17
+   "Comunicado ao Mercado": 19
   },
-  "fatos_relevantes": 28,
+  "fatos_relevantes": 29,
   "de_fiis_liquidos": 9
  },
  "fatos_sem_ticker": [
+  "BRASOL RENDA IMOBILIÁRIA SOLAR I FUNDO DE INVESTIMENTO IMOBILIÁRIO",
   "FII LAGO PDR",
   "SHOPPING TOTALBRAS & NEWMALL FUNDO DE INVESTIMENTO IMOBILIÁRIO",
   "FII LSOI",
