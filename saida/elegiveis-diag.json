@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-12T02:04:07.887Z",
+ "gerado": "2026-11-12T09:46:24.845Z",
  "anos": [
   2021,
   2022,
@@ -36,11 +36,11 @@
   "Emp. Adm. Part. - Energia Elétrica": 30,
   "Saneamento, Serv. Água e Gás": 36,
   "Energia Elétrica": 90,
-  "Bancos": 21,
+  "Bancos": 22,
   "Emp. Adm. Part. - Bancos": 1,
   "Emp. Adm. Part. - Saneamento, Serv. Água e Gás": 8
  },
- "empresas_por_setor": 165,
+ "empresas_por_setor": 166,
  "conferir": [
   {
    "nome": "ENGIE BRASIL ENERGIA S.A.",
