@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-12T23:00:16.018Z",
+ "gerado": "2026-11-12T23:10:00.288Z",
  "hora": 20,
  "fnet": {
   "linhas": 1937,
   "avisos": 181,
-  "relatorios": 94
+  "relatorios": 96
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
@@ -34,11 +34,7 @@
   "ALIANZA CRÉDITO RENDA MAIS FUNDO DE INVESTIMENTO IMOBILIÁRIO MASTER - RESPONSABILIDADE LIMITADA #1376935",
   "FII RZRM #1376931"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 6,
-  "acoes": 4
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
