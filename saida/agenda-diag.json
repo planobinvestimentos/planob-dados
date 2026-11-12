@@ -1,12 +1,14 @@
 {
- "gerado": "2026-11-11T11:24:58.172Z",
+ "gerado": "2026-11-12T09:30:18.650Z",
  "modo": "hoje",
- "hoje": "2026-11-11",
+ "hoje": "2026-11-12",
  "global_recebidos": 106,
- "global": "ok (0 de alto impacto)",
+ "global": "ok (1 de alto impacto)",
  "ibge": "falhou: fetch failed",
  "regras": "ok (0)",
  "manual": "ok (0)",
- "eventos": 0,
- "por_fonte": {}
+ "eventos": 1,
+ "por_fonte": {
+  "global": 1
+ }
 }
