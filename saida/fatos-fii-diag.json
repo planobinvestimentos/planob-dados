@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-12T13:00:30.197Z",
+ "gerado": "2026-11-12T15:00:52.090Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 1011,
+  "linhas_vistas": 1255,
   "categorias": {
-   "Informes Periódicos": 630,
+   "Informes Periódicos": 871,
    "Assembleia": 101,
    "Aviso aos Cotistas - Estruturado": 76,
    "Relatórios": 63,
    "Aviso aos Cotistas": 40,
-   "Oferta Pública de Distribuição de Cotas": 27,
-   "Fato Relevante": 27,
+   "Fato Relevante": 28,
+   "Oferta Pública de Distribuição de Cotas": 28,
    "Comunicado ao Mercado": 17
   },
-  "fatos_relevantes": 27,
+  "fatos_relevantes": 28,
   "de_fiis_liquidos": 9
  },
  "fatos_sem_ticker": [
+  "FII LAGO PDR",
   "SHOPPING TOTALBRAS & NEWMALL FUNDO DE INVESTIMENTO IMOBILIÁRIO",
   "FII LSOI",
   "FII V2 RECE",
