@@ -1,15 +1,12 @@
 {
- "gerado": "2026-11-12T20:30:15.530Z",
+ "gerado": "2026-11-12T20:32:32.686Z",
  "hora": 17,
  "fnet": {
   "linhas": 1938,
   "avisos": 180,
   "relatorios": 114
  },
- "avisos_novos": [
-  "MCCI11:1379871",
-  "VGIR11:1379870"
- ],
+ "avisos_novos": [],
  "avisos_sem_ticker": [
   "FII TELM #1379873",
   "INVITATO DIRETTO REAL ESTATE CRÉDITO FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1379868",
@@ -38,13 +35,6 @@
   "FII DRIM #1376816"
  ],
  "acoes_nesta_rodada": false,
- "lido_do_aviso": [
-  "MCCI11",
-  "VGIR11"
- ],
- "novos": [
-  "MCCI11 Rendimento",
-  "VGIR11 Rendimento"
- ],
+ "novos": [],
  "pdfs": 0
 }
