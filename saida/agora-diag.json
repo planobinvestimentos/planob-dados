@@ -1,6 +1,6 @@
 {
- "gerado": "2026-11-12T17:58:35.058Z",
- "hora": 14,
+ "gerado": "2026-11-12T18:00:18.477Z",
+ "hora": 15,
  "fnet": {
   "linhas": 1804,
   "avisos": 169,
@@ -28,10 +28,6 @@
   "REC - FAMI FUNDO DE CRI COTAS AMORTIZÁVEIS - FII - RESPONSABILIDADE LIMITADA #1375371"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 6,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
