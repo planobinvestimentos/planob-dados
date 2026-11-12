@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-12T18:02:12.805Z",
+ "gerado": "2026-11-12T18:40:36.098Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,9 +59,9 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 1330,
+  "linhas_vistas": 1353,
   "categorias": {
-   "Informes Periódicos": 940,
+   "Informes Periódicos": 963,
    "Assembleia": 102,
    "Aviso aos Cotistas - Estruturado": 77,
    "Relatórios": 65,
