@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-12T15:00:19.410Z",
+ "gerado": "2026-11-12T15:01:32.121Z",
  "hora": 12,
  "fnet": {
-  "linhas": 1729,
+  "linhas": 1730,
   "avisos": 168,
   "relatorios": 114
  },
@@ -26,16 +26,7 @@
   "FII TRCO #1375404",
   "REC - FAMI FUNDO DE CRI COTAS AMORTIZÁVEIS - FII - RESPONSABILIDADE LIMITADA #1375371"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 6,
-  "acoes": 4
- },
- "novos": [
-  "BRAP3 Dividendo",
-  "BRAP3 JCP",
-  "BRAP4 Dividendo",
-  "BRAP4 JCP"
- ],
+ "acoes_nesta_rodada": false,
+ "novos": [],
  "pdfs": 0
 }
