@@ -10,6 +10,16 @@
     "dolar"
    ],
    "falhas": []
+  },
+  "1430": {
+   "enviado": true,
+   "itens": [
+    "setores",
+    "cripto",
+    "commodities",
+    "dolar"
+   ],
+   "falhas": []
   }
  }
 }

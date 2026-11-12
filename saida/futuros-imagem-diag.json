@@ -1,41 +1,41 @@
 {
- "gerado": "2026-11-12T14:30:53.627Z",
+ "gerado": "2026-11-12T17:30:38.720Z",
  "hoje": "2026-11-12",
- "hora": "11:30",
+ "hora": "14:30",
  "modo": "lote",
  "pregao": {
   "comparaveis": 77,
-  "iguais": 3
+  "iguais": 2
  },
  "setores": {
   "achados": {
    "ICON": {
-    "v": -0.6177675649536868,
+    "v": -0.9817556144500652,
     "s": "BMFBOVESPA:ICON",
     "origem": "simbolo"
    },
    "IEEX": {
-    "v": -0.9457027170426106,
+    "v": -1.0090072150668195,
     "s": "BMFBOVESPA:IEEX",
     "origem": "simbolo"
    },
    "INDX": {
-    "v": -0.12186089649789571,
+    "v": -0.6943384154543055,
     "s": "BMFBOVESPA:INDX",
     "origem": "simbolo"
    },
    "IMOB": {
-    "v": -1.448903705603267,
+    "v": -2.528529298628023,
     "s": "BMFBOVESPA:IMOB",
     "origem": "simbolo"
    },
    "IFNC": {
-    "v": -2.323864860784745,
+    "v": -1.7155148273076424,
     "s": "BMFBOVESPA:IFNC",
     "origem": "simbolo"
    },
    "IMAT": {
-    "v": -0.0695865674255945,
+    "v": -0.2418961629556449,
     "s": "BMFBOVESPA:IMAT",
     "origem": "simbolo"
    }
@@ -79,5 +79,5 @@
   "dolar"
  ],
  "falhas": [],
- "resultado": "painel das 11h30 enviado (setores, cripto, commodities, dolar)"
+ "resultado": "painel das 14h30 enviado (setores, cripto, commodities, dolar)"
 }
