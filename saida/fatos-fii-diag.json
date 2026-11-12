@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-12T00:44:58.670Z",
+ "gerado": "2026-11-12T12:02:58.159Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 999,
+  "linhas_vistas": 1006,
   "categorias": {
-   "Informes Periódicos": 623,
-   "Assembleia": 100,
+   "Informes Periódicos": 627,
+   "Assembleia": 101,
    "Aviso aos Cotistas - Estruturado": 76,
-   "Relatórios": 61,
+   "Relatórios": 63,
    "Aviso aos Cotistas": 40,
-   "Fato Relevante": 28,
+   "Fato Relevante": 27,
    "Oferta Pública de Distribuição de Cotas": 25,
    "Comunicado ao Mercado": 17
   },
-  "fatos_relevantes": 28,
-  "de_fiis_liquidos": 10
+  "fatos_relevantes": 27,
+  "de_fiis_liquidos": 9
  },
  "fatos_sem_ticker": [
+  "SHOPPING TOTALBRAS & NEWMALL FUNDO DE INVESTIMENTO IMOBILIÁRIO",
   "FII LSOI",
   "FII V2 RECE",
   "FII BANRISUL",
@@ -90,8 +91,7 @@
   "FII APXR",
   "FII APXU",
   "LOFT III FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
-  "FII NMKS",
-  "SPX REGRA LOGÍSTICO CAJAMAR FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA"
+  "FII NMKS"
  ],
  "analisados": 0,
  "sem_texto": 0,
