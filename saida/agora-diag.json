@@ -1,14 +1,16 @@
 {
- "gerado": "2026-11-13T21:00:16.376Z",
+ "gerado": "2026-11-13T21:14:45.269Z",
  "hora": 18,
  "fnet": {
-  "linhas": 1978,
-  "avisos": 108,
-  "relatorios": 37
+  "linhas": 1973,
+  "avisos": 109,
+  "relatorios": 35
  },
- "avisos_novos": [],
+ "avisos_novos": [
+  "OUJP11:1384373"
+ ],
  "avisos_sem_ticker": [
-  "FII B VAREJO #1384370",
+  "FII B VAREJO #1384404",
   "FII RBR FEED #1384145",
   "FII BOAT #1384126",
   "FII RZZV #1384124",
@@ -35,10 +37,11 @@
   "GRAVSHOP FII #1383151"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 6,
-  "acoes": "não consultadas"
- },
- "novos": [],
+ "lido_do_aviso": [
+  "OUJP11"
+ ],
+ "novos": [
+  "OUJP11 Rendimento"
+ ],
  "pdfs": 0
 }
