@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-13T15:44:58.798Z",
+ "gerado": "2026-11-13T18:01:42.050Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -59,19 +59,19 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 1510,
+  "linhas_vistas": 1600,
   "categorias": {
-   "Informes Periódicos": 1228,
-   "Assembleia": 86,
-   "Aviso aos Cotistas - Estruturado": 47,
-   "Relatórios": 41,
-   "Aviso aos Cotistas": 33,
-   "Oferta Pública de Distribuição de Cotas": 21,
-   "Fato Relevante": 18,
+   "Informes Periódicos": 1346,
+   "Assembleia": 69,
+   "Aviso aos Cotistas - Estruturado": 46,
+   "Relatórios": 37,
+   "Aviso aos Cotistas": 31,
+   "Oferta Pública de Distribuição de Cotas": 18,
+   "Fato Relevante": 17,
    "Comunicado ao Mercado": 11
   },
-  "fatos_relevantes": 18,
-  "de_fiis_liquidos": 3
+  "fatos_relevantes": 17,
+  "de_fiis_liquidos": 2
  },
  "fatos_sem_ticker": [
   "BRASOL RENDA IMOBILIÁRIA SOLAR I FUNDO DE INVESTIMENTO IMOBILIÁRIO",
