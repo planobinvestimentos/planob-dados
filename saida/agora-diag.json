@@ -1,17 +1,17 @@
 {
- "gerado": "2026-11-13T19:45:15.482Z",
- "hora": 16,
+ "gerado": "2026-11-13T20:00:15.686Z",
+ "hora": 17,
  "fnet": {
-  "linhas": 1981,
-  "avisos": 101,
-  "relatorios": 67
+  "linhas": 1980,
+  "avisos": 96,
+  "relatorios": 64
  },
  "avisos_novos": [
-  "TOPP11:1383647",
-  "BTLG11:1383642",
-  "RINV11:1383639"
+  "RINV11:1383925",
+  "TOPP11:1383647"
  ],
  "avisos_sem_ticker": [
+  "ORIZ RE CRÉDITO ESTRUTURADO FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1383848",
   "FII VINCI TR #1383643",
   "MMORE CRÉDITO IMOBILIÁRIO FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1383641",
   "BTG PACTUAL REAL ESTATE HEDGE FUND MULTIESTRATÉGIA FII RESPONSABILIDADE LIMITADA #1383640",
@@ -35,19 +35,21 @@
   "FII SUNO LG #1381666",
   "FII SNME #1381583",
   "FII SUNOFOFI #1381578",
-  "FII ELDORADO #1380084",
-  "FII RZZR #1380015"
+  "FII ELDORADO #1380084"
  ],
  "acoes_nesta_rodada": false,
- "pendentes": [
-  "TOPP11",
+ "varredura": {
+  "fii": 6,
+  "acoes": "não consultadas"
+ },
+ "lido_do_aviso": [
   "RINV11"
  ],
- "lido_do_aviso": [
-  "BTLG11"
+ "pendentes": [
+  "TOPP11"
  ],
  "novos": [
-  "BTLG11 Rendimento"
+  "RINV11 Rendimento"
  ],
  "pdfs": 0
 }
