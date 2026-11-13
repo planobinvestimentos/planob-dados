@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-13T15:00:16.388Z",
+ "gerado": "2026-11-13T15:15:17.559Z",
  "hora": 12,
  "fnet": {
-  "linhas": 1969,
+  "linhas": 1970,
   "avisos": 183,
   "relatorios": 90
  },
@@ -36,11 +36,7 @@
   "FII PMRL #1379603",
   "FII CRIANCA #1379574"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 6,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "pendentes": [
   "KISU11"
  ],
