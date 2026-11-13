@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-13T20:45:16.813Z",
- "hora": 17,
+ "gerado": "2026-11-13T21:00:16.376Z",
+ "hora": 18,
  "fnet": {
   "linhas": 1978,
   "avisos": 108,
-  "relatorios": 43
+  "relatorios": 37
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII B VAREJO #1384370",
   "FII RBR FEED #1384145",
   "FII BOAT #1384126",
   "FII RZZV #1384124",
@@ -31,10 +32,13 @@
   "VALORA FUNDO DE FUNDOS FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1383170",
   "WHG SP REALTY II FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA #1383157",
   "BLUE SECURITIES FUNDO DE INVESTIMENTO IMOBILIÁRIO #1383152",
-  "GRAVSHOP FII #1383151",
-  "ARX FUNDO DE INVESTIMENTO IMOBILIÁRIO PORTFÓLIO RENDA CDI+ RESPONSABILIDADE LIMITADA #1383035"
+  "GRAVSHOP FII #1383151"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 6,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
