@@ -1,14 +1,12 @@
 {
- "gerado": "2026-11-13T12:02:19.373Z",
+ "gerado": "2026-11-13T12:17:39.259Z",
  "hora": 9,
  "fnet": {
   "linhas": 1939,
   "avisos": 172,
   "relatorios": 96
  },
- "avisos_novos": [
-  "SNEL11:1381565"
- ],
+ "avisos_novos": [],
  "avisos_sem_ticker": [
   "FII ELDORADO #1380084",
   "FII RZZR #1380015",
@@ -27,15 +25,6 @@
   "FII DOVEL #1378850"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 6,
-  "acoes": "não consultadas"
- },
- "lido_do_aviso": [
-  "SNEL11"
- ],
- "novos": [
-  "SNEL11 Rendimento"
- ],
+ "novos": [],
  "pdfs": 0
 }
