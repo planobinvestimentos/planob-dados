@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-13T00:16:19.744Z",
+ "gerado": "2026-11-13T00:55:20.723Z",
  "hora": 21,
  "fnet": {
   "linhas": 1936,
   "avisos": 181,
-  "relatorios": 95
+  "relatorios": 96
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
@@ -35,6 +35,10 @@
   "FII RZRM #1376931"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 6,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
