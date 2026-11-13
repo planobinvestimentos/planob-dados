@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-13T16:00:17.386Z",
+ "gerado": "2026-11-13T16:15:18.154Z",
  "hora": 13,
  "fnet": {
   "linhas": 1973,
@@ -35,10 +35,6 @@
   "FII CRIANCA #1379574"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 6,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
