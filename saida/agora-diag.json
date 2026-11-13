@@ -1,6 +1,6 @@
 {
- "gerado": "2026-11-13T21:59:09.661Z",
- "hora": 18,
+ "gerado": "2026-11-13T22:00:18.426Z",
+ "hora": 19,
  "fnet": {
   "linhas": 1974,
   "avisos": 82,
@@ -35,10 +35,6 @@
   "BLUE SECURITIES FUNDO DE INVESTIMENTO IMOBILIÁRIO #1383152"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 6,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
