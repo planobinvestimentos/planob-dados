@@ -1,15 +1,16 @@
 {
- "gerado": "2026-11-13T13:30:15.911Z",
+ "gerado": "2026-11-13T13:45:42.802Z",
  "hora": 10,
  "fnet": {
-  "linhas": 1938,
-  "avisos": 176,
+  "linhas": 1940,
+  "avisos": 177,
   "relatorios": 91
  },
  "avisos_novos": [
   "KISU11:1381575"
  ],
  "avisos_sem_ticker": [
+  "FII BLOG #1381671",
   "FII SUNO LG #1381666",
   "FII SNME #1381583",
   "FII SUNOFOFI #1381578",
@@ -34,5 +35,5 @@
   "KISU11"
  ],
  "novos": [],
- "pdfs": 1
+ "pdfs": 0
 }
