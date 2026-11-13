@@ -1,9 +1,9 @@
 {
- "gerado": "2026-11-13T15:15:17.559Z",
+ "gerado": "2026-11-13T15:30:15.923Z",
  "hora": 12,
  "fnet": {
-  "linhas": 1970,
-  "avisos": 183,
+  "linhas": 1971,
+  "avisos": 181,
   "relatorios": 90
  },
  "avisos_novos": [
@@ -37,7 +37,7 @@
   "FII CRIANCA #1379574"
  ],
  "acoes_nesta_rodada": false,
- "pendentes": [
+ "desistiu": [
   "KISU11"
  ],
  "novos": [],
