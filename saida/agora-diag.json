@@ -1,9 +1,9 @@
 {
- "gerado": "2026-11-13T12:49:46.868Z",
- "hora": 9,
+ "gerado": "2026-11-13T13:00:18.726Z",
+ "hora": 10,
  "fnet": {
   "linhas": 1938,
-  "avisos": 176,
+  "avisos": 175,
   "relatorios": 90
  },
  "avisos_novos": [
@@ -29,6 +29,10 @@
   "FII DOVEL #1378850"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 6,
+  "acoes": "não consultadas"
+ },
  "pendentes": [
   "KISU11"
  ],
