@@ -1,13 +1,18 @@
 {
- "gerado": "2026-11-13T12:17:39.259Z",
+ "gerado": "2026-11-13T12:30:17.211Z",
  "hora": 9,
  "fnet": {
   "linhas": 1939,
-  "avisos": 172,
-  "relatorios": 96
+  "avisos": 176,
+  "relatorios": 94
  },
- "avisos_novos": [],
+ "avisos_novos": [
+  "SNCI11:1381581",
+  "KISU11:1381575"
+ ],
  "avisos_sem_ticker": [
+  "FII SNME #1381583",
+  "FII SUNOFOFI #1381578",
   "FII ELDORADO #1380084",
   "FII RZZR #1380015",
   "CONTE BIANCAMANO FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1380013",
@@ -25,6 +30,14 @@
   "FII DOVEL #1378850"
  ],
  "acoes_nesta_rodada": false,
- "novos": [],
+ "lido_do_aviso": [
+  "SNCI11"
+ ],
+ "pendentes": [
+  "KISU11"
+ ],
+ "novos": [
+  "SNCI11 Rendimento"
+ ],
  "pdfs": 0
 }
