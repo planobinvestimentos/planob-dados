@@ -1,13 +1,12 @@
 {
- "gerado": "2026-11-13T12:30:17.211Z",
+ "gerado": "2026-11-13T12:47:16.582Z",
  "hora": 9,
  "fnet": {
-  "linhas": 1939,
+  "linhas": 1938,
   "avisos": 176,
-  "relatorios": 94
+  "relatorios": 90
  },
  "avisos_novos": [
-  "SNCI11:1381581",
   "KISU11:1381575"
  ],
  "avisos_sem_ticker": [
@@ -30,14 +29,9 @@
   "FII DOVEL #1378850"
  ],
  "acoes_nesta_rodada": false,
- "lido_do_aviso": [
-  "SNCI11"
- ],
  "pendentes": [
   "KISU11"
  ],
- "novos": [
-  "SNCI11 Rendimento"
- ],
+ "novos": [],
  "pdfs": 0
 }
