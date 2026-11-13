@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-13T18:39:33.040Z",
+ "gerado": "2026-11-13T21:38:31.710Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 132,
  "top": {
@@ -61,37 +61,26 @@
  "lista": {
   "linhas_vistas": 1600,
   "categorias": {
-   "Informes Periódicos": 1379,
-   "Assembleia": 63,
-   "Relatórios": 34,
-   "Aviso aos Cotistas": 30,
-   "Aviso aos Cotistas - Estruturado": 29,
-   "Fato Relevante": 16,
-   "Oferta Pública de Distribuição de Cotas": 14,
-   "Atos de Deliberação do Administrador": 10
+   "Informes Periódicos": 1422,
+   "Assembleia": 52,
+   "Aviso aos Cotistas - Estruturado": 40,
+   "Aviso aos Cotistas": 29,
+   "Relatórios": 14,
+   "Oferta Pública de Distribuição de Cotas": 9,
+   "Comunicado ao Mercado": 7,
+   "Regulamento": 7
   },
-  "fatos_relevantes": 16,
-  "de_fiis_liquidos": 2
+  "fatos_relevantes": 4,
+  "de_fiis_liquidos": 1
  },
  "fatos_sem_ticker": [
   "BRASOL RENDA IMOBILIÁRIA SOLAR I FUNDO DE INVESTIMENTO IMOBILIÁRIO",
   "FII LAGO PDR",
-  "SHOPPING TOTALBRAS & NEWMALL FUNDO DE INVESTIMENTO IMOBILIÁRIO",
-  "FII LSOI",
-  "FII V2 RECE",
-  "FII BANRISUL",
-  "FII WTC SP",
-  "FII CPHG",
-  "CMX REALTY III FUNDO DE INVESTIMENTO IMOBILIARIO",
-  "LCP LOTES III FUNDO DE INVESTIMENTO IMOBILIÁRIO EXCLUSIVO RESPONSABILIDADE LIMITADA",
-  "LCP LOTES II FUNDO DE INVESTIMENTO IMOBILIÁRIO EXCLUSIVO RESPONSABILIDADE LIMITADA",
-  "TISHMAN SPEYER JARDINS FII ORIZ XP RESPONSABILIDADE LIMITADA",
-  "FII MGRI",
-  "FII ZAVIT R"
+  "SHOPPING TOTALBRAS & NEWMALL FUNDO DE INVESTIMENTO IMOBILIÁRIO"
  ],
- "analisados": 0,
+ "analisados": 1,
  "sem_texto": 0,
- "fora_do_escopo": 0,
+ "fora_do_escopo": 1,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
  "materias_novas": 0,
