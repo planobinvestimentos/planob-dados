@@ -1,9 +1,9 @@
 {
- "gerado": "2026-11-13T18:45:15.626Z",
- "hora": 15,
+ "gerado": "2026-11-13T19:01:34.343Z",
+ "hora": 16,
  "fnet": {
-  "linhas": 1976,
-  "avisos": 145,
+  "linhas": 1979,
+  "avisos": 135,
   "relatorios": 68
  },
  "avisos_novos": [],
@@ -34,7 +34,11 @@
   "FII MOGNO HT #1379865",
   "MAUÁ CAPITAL CRÉDITO ESTRUTURADO FUNDO DE INVESTIMENTO IMOBILIÁRIO #1379852"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
+ "varredura": {
+  "fii": 6,
+  "acoes": 0
+ },
  "novos": [],
  "pdfs": 0
 }
