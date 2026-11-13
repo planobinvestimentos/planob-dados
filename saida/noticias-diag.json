@@ -1,31 +1,30 @@
 {
- "gerado": "2026-11-13T18:00:26.151Z",
+ "gerado": "2026-11-13T18:39:25.861Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
   "modelo": "claude-haiku-5-5",
   "parada": "end_turn",
   "blocos": [
-   "thinking",
    "text"
   ],
   "usado": {
-   "input_tokens": 4413,
+   "input_tokens": 17,
    "cache_creation_input_tokens": 0,
    "cache_read_input_tokens": 0,
    "cache_creation": {
     "ephemeral_5m_input_tokens": 0,
     "ephemeral_1h_input_tokens": 0
    },
-   "output_tokens": 3170,
+   "output_tokens": 4,
    "output_tokens_details": {
-    "thinking_tokens": 2284
+    "thinking_tokens": 0
    },
    "service_tier": "standard",
    "inference_geo": "global",
    "speed": "standard"
   },
-  "texto": "{\"titulo\":\"Unipar (UNIP3, UNIP6, UNIP5) tem EBITDA ajustado recorrente de R$ 180 milhões no 3T26\",\"resumo\":\"No 3T26, a Unipar teve Lucro/Prejuízo Líquido de R$ -16 milhões e EBITDA ajustado recorrente de R$ 180 milhões, queda de 55% sobre o 2T26.\",\"paragrafos\":[\"A UNIPAR CARBOCLORO S.A. divulgou em "
+  "texto": "ok"
  },
  "ia_teste": "ok: ok",
  "ipe": {
@@ -88,10 +87,10 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 3227,
+  "linhas": 3242,
   "na_janela_e_categorias": 226,
   "sem_cnpj": 48,
-  "entrega_mais_recente": "20261113 13/11/2026 14:54",
+  "entrega_mais_recente": "20261113 13/11/2026 15:35",
   "tentativa": 1
  },
  "fontes": {
@@ -100,39 +99,216 @@
   "apos_juntar": 226
  },
  "itens": {
-  "novos": 4,
-  "enviados_agora": 4,
+  "novos": 0,
+  "enviados_agora": 0,
   "com_ia": 0,
   "ia_falhas": 0,
   "fora_do_filtro": 0,
-  "rotina_escondida": 0,
-  "materias": 2
+  "rotina_escondida": 0
  },
  "filtro": "sem filtro de lucro (todas as empresas)",
- "materias_reprovadas": [
-  {
-   "prot": "1589125",
-   "empresa": "OUROFINO S.A.",
-   "numeros_fora_do_documento": [
-    "13",
-    "11"
-   ]
-  },
-  {
-   "prot": "1589117",
-   "empresa": "PROFARMA DISTRIB PROD FARMACEUTICOS S.A.",
-   "numeros_fora_do_documento": [
-    "13"
-   ]
-  }
- ],
  "gasto_ia": {
   "mes": "2026-11",
   "usd": 0.4386,
-  "chamadas": 371,
+  "chamadas": 372,
   "teto_usd": 5
  },
  "recentes": [
+  {
+   "h": "15:35",
+   "emp": "CRISPR THERAPEUTICS AG",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "SCHEDULE 13G/A",
+   "d": "2026-11-13",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05818-1",
+   "c5": "20261113 13/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:35",
+   "emp": "HSBC HOLDINGS PLC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-11-13",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05676-6",
+   "c5": "20261113 13/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:35",
+   "emp": "TE CONNECTIVITY PLC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-13",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05425-9",
+   "c5": "20261113 13/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:35",
+   "emp": "CINCINNATI FINANCIAL CORP",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-11-13",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05166-7",
+   "c5": "20261113 13/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:35",
+   "emp": "GOLDMAN SACHS GROUP INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-11-13",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05009-1",
+   "c5": "20261113 13/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:35",
+   "emp": "BANK OF AMERICA CORPORATION",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Documento Diversos",
+   "d": "2026-11-13",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05005-9",
+   "c5": "20261113 13/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:35",
+   "emp": "JPMORGAN CHASE & CO.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-11-13",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05057-1",
+   "c5": "20261113 13/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:34",
+   "emp": "WELLS FARGO & COMPANY",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-11-13",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05013-0",
+   "c5": "20261113 13/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:33",
+   "emp": "AUSTRAVIAS S.A.",
+   "cat": "Dados Econômico-Financeiros",
+   "tipo": "Demonstrações Financeiras Intermediárias",
+   "ass": "Demonstração Financeira Intermediaria",
+   "d": "2026-11-13",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02632-8",
+   "c5": "20260930 30/09/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:31",
+   "emp": "MONTE RODOVIAS NORDESTE I HOLDING PARTICIPACOES S.",
+   "cat": "Dados Econômico-Financeiros",
+   "tipo": "Demonstrações Financeiras Intermediárias",
+   "ass": "Demosntração Financeira Intermediaria",
+   "d": "2026-11-13",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "90037-1",
+   "c5": "20260930 30/09/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:25",
+   "emp": "ISA ENERGIA BRASIL S.A",
+   "cat": "Aviso aos Debenturistas",
+   "tipo": "-",
+   "ass": "Pagamento de juros da 9a Emissão de Debêntures",
+   "d": "2026-11-13",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01837-6",
+   "c5": "20261113 13/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:13",
+   "emp": "BORRACHAS VIPAL S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Apreciar as informações financeiras intermediárias da Companhia referentes ao período de 1",
+   "d": "2026-11-13",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02698-0",
+   "c5": "20261110 10/11/2026 10:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:08",
+   "emp": "CHINA THREE GORGES BRASIL ENERGIA S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Revisão, discussão e aprovação das Informações Trimestrais da Companhia (“ITR”) relativas ",
+   "d": "2026-11-13",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02710-3",
+   "c5": "20261112 12/11/2026 17:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:07",
+   "emp": "SOLVI ESSENCIS AMBIENTAL S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "ATA DA REUNIÃO EXTRAORDINÁRIA DO CONSELHO DE ADMINISTRAÇÃO",
+   "d": "2026-11-13",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02707-3",
+   "c5": "20261111 11/11/2026 14:30",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:02",
+   "emp": "SOLVI ESSENCIS AMBIENTAL S.A.",
+   "cat": "Dados Econômico-Financeiros",
+   "tipo": "Demonstrações Financeiras Intermediárias",
+   "ass": "Relatório da Dministração 3º trimestre 2026",
+   "d": "2026-11-13",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02707-3",
+   "c5": "20260930 30/09/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
   {
    "h": "14:54",
    "emp": "JALLES MACHADO S.A.",
@@ -140,7 +316,7 @@
    "tipo": "Apresentações a analistas/agentes do mercado",
    "ass": "Apresentação de resultados Safra 2026/2027 - 2T26/27 (Set/26)",
    "d": "2026-11-13",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "02549-6",
    "c5": "20261113 13/11/2026",
    "c8": "2",
@@ -699,7 +875,7 @@
    "tipo": "Apresentações a analistas/agentes do mercado",
    "ass": "Apresentação de resultados 3T26 - Português e Inglês",
    "d": "2026-11-13",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "02350-7",
    "c5": "20261113 13/11/2026",
    "c8": "1",
@@ -790,7 +966,7 @@
    "tipo": "Apresentações a analistas/agentes do mercado",
    "ass": "Apresentação do webcast de resultados do 3T26",
    "d": "2026-11-13",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "02034-6",
    "c5": "20261113 13/11/2026",
    "c8": "1",
@@ -1102,7 +1278,7 @@
    "tipo": "Apresentações a analistas/agentes do mercado",
    "ass": "Apresentação de Resultados 3T26",
    "d": "2026-11-13",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "01159-2",
    "c5": "20261113 13/11/2026",
    "c8": "1",
@@ -1494,201 +1670,6 @@
    "d": "2026-11-13",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05229-9",
-   "c5": "20261113 13/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "12:35",
-   "emp": "VF CORP",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "SCHEDULE 13G",
-   "d": "2026-11-13",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05221-3",
-   "c5": "20261113 13/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "12:33",
-   "emp": "COLGATE-PALMOLIVE COMPANY",
-   "cat": "Aviso aos Acionistas",
-   "tipo": "Outros avisos",
-   "ass": "Dividendos/Juros sobre Capital Próprio",
-   "d": "2026-11-13",
-   "st": "sem_cnpj",
-   "c0": "05024-5",
-   "c5": "20261113 13/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "12:33",
-   "emp": "MANAUS TRANSMISSORA DE ENERGIA S.A.",
-   "cat": "Reunião da Administração",
-   "tipo": "Conselho de Administração",
-   "ass": "Aprovação das Informações financeiras financeiras do 3º trimestre de 2026",
-   "d": "2026-11-13",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "02671-9",
-   "c5": "20261111 11/11/2026 12:00",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "12:26",
-   "emp": "NORTE BRASIL TRANSMISSORA DE ENERGIA S.A.",
-   "cat": "Dados Econômico-Financeiros",
-   "tipo": "Demonstrações Financeiras Intermediárias",
-   "ass": "Demonstrações financeiras intermediárias do 3º trimestre de 2026",
-   "d": "2026-11-13",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "02498-8",
-   "c5": "20260930 30/09/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "12:22",
-   "emp": "MANAUS TRANSMISSORA DE ENERGIA S.A.",
-   "cat": "Dados Econômico-Financeiros",
-   "tipo": "Demonstrações Financeiras Intermediárias",
-   "ass": "Demonstrações financeiras intermediárias do 3º trimestre de 2026",
-   "d": "2026-11-13",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "02671-9",
-   "c5": "20260930 30/09/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "12:11",
-   "emp": "BEMOL S.A.",
-   "cat": "Escrituras e aditamentos de debêntures",
-   "tipo": "-",
-   "ass": "4ª Emissão de Debentures Simples, Não Conversíveis, com Garantia Real e Adicional Fidejuss",
-   "d": "2026-11-13",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "91523-1",
-   "c5": "20261110 10/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "12:08",
-   "emp": "BEMOL S.A.",
-   "cat": "Documentos de Oferta de Distribuição Pública",
-   "tipo": "Aviso ao Mercado",
-   "ass": "Aviso ao Mercado da 4ª Emissão de Debêntures Simples, não conversíveis, em série única, co",
-   "d": "2026-11-13",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "91523-1",
-   "c5": "20261110 10/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "12:07",
-   "emp": "WESTWING COMERCIO VAREJISTA S.A.",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Apresentações a analistas/agentes do mercado",
-   "ass": "Westwing - Apresentação de Resultados 3T26 - 3Q26 Earnings Presentation (PT-EN)",
-   "d": "2026-11-13",
-   "st": "ja_enviado_antes",
-   "c0": "02551-8",
-   "c5": "20261113 13/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "12:00",
-   "emp": "SNB PARTICIPACOES S.A.",
-   "cat": "Dados Econômico-Financeiros",
-   "tipo": "Demonstrações Financeiras Intermediárias",
-   "ass": "Informações Trimestrais - 3T2026",
-   "d": "2026-11-13",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "01430-3",
-   "c5": "20260930 30/09/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "11:53",
-   "emp": "D1000 VAREJO FARMA PARTICIPAÇÕES S.A.",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Apresentações a analistas/agentes do mercado",
-   "ass": "Apresentação sobre resultados 3T26",
-   "d": "2026-11-13",
-   "st": "ja_enviado_antes",
-   "c0": "02504-6",
-   "c5": "20261113 13/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "11:46",
-   "emp": "SLC AGRICOLA S.A.",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Participação de Executivos em Mídias Digitais",
-   "d": "2026-11-13",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "02074-5",
-   "c5": "20261113 13/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "11:41",
-   "emp": "RENOVA ENERGIA S.A.",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Apresentações a analistas/agentes do mercado",
-   "ass": "Reunião Publica com analistas e divulgação 3T26",
-   "d": "2026-11-13",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "02163-6",
-   "c5": "20261113 13/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "11:36",
-   "emp": "CIA DISTRIB DE GAS DO RIO DE JANEIRO-CEG",
-   "cat": "Reunião da Administração",
-   "tipo": "Conselho Fiscal",
-   "ass": "Parecer acerca das Demonstrações Financeiras; Aprovação do Encaminhamento a Assembleia Ger",
-   "d": "2026-11-13",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "01661-6",
-   "c5": "20261113 13/11/2026 10:00",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "11:35",
-   "emp": "BANK OF AMERICA CORPORATION",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "424B2",
-   "d": "2026-11-13",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05005-9",
-   "c5": "20261113 13/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "11:35",
-   "emp": "JPMORGAN CHASE & CO.",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "424B2",
-   "d": "2026-11-13",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05057-1",
    "c5": "20261113 13/11/2026",
    "c8": "1",
    "c9": "AP"
