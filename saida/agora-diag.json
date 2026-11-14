@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-14T00:00:16.669Z",
+ "gerado": "2026-11-14T00:15:15.080Z",
  "hora": 21,
  "fnet": {
   "linhas": 1972,
   "avisos": 64,
-  "relatorios": 30
+  "relatorios": 29
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
@@ -34,11 +34,7 @@
   "WHG SP REALTY II FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA #1383157",
   "BLUE SECURITIES FUNDO DE INVESTIMENTO IMOBILIÁRIO #1383152"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 6,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
