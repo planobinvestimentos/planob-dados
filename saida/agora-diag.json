@@ -1,15 +1,23 @@
 {
- "gerado": "2026-11-16T20:00:16.290Z",
+ "gerado": "2026-11-16T20:15:18.054Z",
  "hora": 17,
  "fnet": {
   "linhas": 1969,
-  "avisos": 80,
+  "avisos": 88,
   "relatorios": 26
  },
  "avisos_novos": [
+  "HBCR11:1387001",
+  "CPLG11:1386985",
   "RBRK11:1386979"
  ],
  "avisos_sem_ticker": [
+  "FII IVBP #1387002",
+  "FII GSRF #1386994",
+  "FII GFDL #1386989",
+  "FII HOMS #1386988",
+  "FII VENUS #1386986",
+  "FII GLCR #1386984",
   "FII TRANSINC #1386978",
   "FII RDLI #1386965",
   "JGP DESENVOLVIMENTO I FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1386964",
@@ -22,13 +30,15 @@
   "FII AFHF #1386512"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 0,
-  "acoes": "não consultadas"
- },
+ "lido_do_aviso": [
+  "HBCR11"
+ ],
  "pendentes": [
+  "CPLG11",
   "RBRK11"
  ],
- "novos": [],
+ "novos": [
+  "HBCR11 Rendimento"
+ ],
  "pdfs": 0
 }
