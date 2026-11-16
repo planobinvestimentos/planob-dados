@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-16T22:00:20.301Z",
+ "gerado": "2026-11-16T22:15:15.961Z",
  "hora": 19,
  "fnet": {
-  "linhas": 1967,
+  "linhas": 1966,
   "avisos": 99,
-  "relatorios": 39
+  "relatorios": 43
  },
  "avisos_novos": [
   "ADSH11:1387087",
@@ -36,10 +36,6 @@
   "FII AFHF #1386512"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 0,
-  "acoes": "não consultadas"
- },
  "pendentes": [
   "ADSH11",
   "CPLG11",
