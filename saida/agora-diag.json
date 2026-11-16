@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-16T23:30:14.763Z",
+ "gerado": "2026-11-16T23:36:59.662Z",
  "hora": 20,
  "fnet": {
   "linhas": 1966,
@@ -38,7 +38,9 @@
  "acoes_nesta_rodada": false,
  "pendentes": [
   "ADSH11",
-  "CPLG11",
+  "CPLG11"
+ ],
+ "desistiu": [
   "RBRK11"
  ],
  "novos": [],
