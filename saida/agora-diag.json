@@ -1,13 +1,15 @@
 {
- "gerado": "2026-11-16T20:15:18.054Z",
+ "gerado": "2026-11-16T20:30:14.631Z",
  "hora": 17,
  "fnet": {
   "linhas": 1969,
-  "avisos": 88,
+  "avisos": 91,
   "relatorios": 26
  },
  "avisos_novos": [
-  "HBCR11:1387001",
+  "CPUR11:1387025",
+  "CPTS11:1387019",
+  "CPSH11:1387018",
   "CPLG11:1386985",
   "RBRK11:1386979"
  ],
@@ -31,14 +33,18 @@
  ],
  "acoes_nesta_rodada": false,
  "lido_do_aviso": [
-  "HBCR11"
+  "CPUR11",
+  "CPTS11",
+  "CPSH11"
  ],
  "pendentes": [
   "CPLG11",
   "RBRK11"
  ],
  "novos": [
-  "HBCR11 Rendimento"
+  "CPUR11 Rendimento",
+  "CPTS11 Rendimento",
+  "CPSH11 Rendimento"
  ],
  "pdfs": 0
 }
