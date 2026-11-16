@@ -1,17 +1,23 @@
 {
- "gerado": "2026-11-16T12:00:24.222Z",
+ "gerado": "2026-11-16T12:15:19.253Z",
  "hora": 9,
  "fnet": {
   "linhas": 1974,
-  "avisos": 64,
+  "avisos": 66,
   "relatorios": 24
  },
- "avisos_novos": [],
+ "avisos_novos": [
+  "WTSP11:1386502",
+  "AFHI11:1386501"
+ ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 0,
-  "acoes": "não consultadas"
- },
- "novos": [],
+ "lido_do_aviso": [
+  "WTSP11",
+  "AFHI11"
+ ],
+ "novos": [
+  "WTSP11 Rendimento",
+  "AFHI11 Rendimento"
+ ],
  "pdfs": 0
 }
