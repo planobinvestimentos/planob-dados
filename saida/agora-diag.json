@@ -1,17 +1,33 @@
 {
- "gerado": "2026-11-16T19:30:26.686Z",
+ "gerado": "2026-11-16T19:45:15.434Z",
  "hora": 16,
  "fnet": {
   "linhas": 1970,
-  "avisos": 68,
+  "avisos": 74,
   "relatorios": 26
  },
- "avisos_novos": [],
+ "avisos_novos": [
+  "RZAT11:1386940",
+  "RBRX11:1386935",
+  "RZAK11:1386934"
+ ],
  "avisos_sem_ticker": [
+  "FII CPHG #1386939",
+  "ARTON CAPITÂNIA FOF FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1386938",
+  "FII JASC REN #1386937",
   "FII AJ MALLS #1386770",
   "FII AFHF #1386512"
  ],
  "acoes_nesta_rodada": false,
- "novos": [],
+ "lido_do_aviso": [
+  "RZAT11",
+  "RBRX11",
+  "RZAK11"
+ ],
+ "novos": [
+  "RZAT11 Rendimento",
+  "RBRX11 Rendimento",
+  "RZAK11 Rendimento"
+ ],
  "pdfs": 0
 }
