@@ -1,6 +1,6 @@
 {
- "gerado": "2026-11-16T14:46:28.337Z",
- "hora": 11,
+ "gerado": "2026-11-16T15:00:27.478Z",
+ "hora": 12,
  "fnet": {
   "linhas": 1972,
   "avisos": 67,
@@ -10,7 +10,11 @@
  "avisos_sem_ticker": [
   "FII AFHF #1386512"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
+ "varredura": {
+  "fii": 0,
+  "acoes": 0
+ },
  "novos": [],
  "pdfs": 0
 }
