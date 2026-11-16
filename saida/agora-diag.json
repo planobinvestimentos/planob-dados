@@ -1,19 +1,19 @@
 {
- "gerado": "2026-11-16T21:00:19.506Z",
+ "gerado": "2026-11-16T21:15:16.714Z",
  "hora": 18,
  "fnet": {
-  "linhas": 1969,
-  "avisos": 97,
-  "relatorios": 26
+  "linhas": 1968,
+  "avisos": 98,
+  "relatorios": 32
  },
  "avisos_novos": [
-  "MIDW11:1387103",
   "ADSH11:1387087",
   "CPLG11:1386985",
   "RBRK11:1386979"
  ],
  "avisos_sem_ticker": [
-  "FII ONDA ME #1387088",
+  "FII ONDA ME #1387112",
+  "FII TRUEMULT #1387105",
   "FII DAYC REM #1387085",
   "IRIDIUM GERAÇÃO DISTRIBUÍDA IVI FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1387043",
   "FII SHPP #1387041",
@@ -35,20 +35,11 @@
   "FII AFHF #1386512"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 0,
-  "acoes": "não consultadas"
- },
- "lido_do_aviso": [
-  "MIDW11"
- ],
  "pendentes": [
   "ADSH11",
   "CPLG11",
   "RBRK11"
  ],
- "novos": [
-  "MIDW11 Rendimento"
- ],
+ "novos": [],
  "pdfs": 0
 }
