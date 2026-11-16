@@ -1,17 +1,20 @@
 {
- "gerado": "2026-11-16T19:45:15.434Z",
- "hora": 16,
+ "gerado": "2026-11-16T20:00:16.290Z",
+ "hora": 17,
  "fnet": {
-  "linhas": 1970,
-  "avisos": 74,
+  "linhas": 1969,
+  "avisos": 80,
   "relatorios": 26
  },
  "avisos_novos": [
-  "RZAT11:1386940",
-  "RBRX11:1386935",
-  "RZAK11:1386934"
+  "RBRK11:1386979"
  ],
  "avisos_sem_ticker": [
+  "FII TRANSINC #1386978",
+  "FII RDLI #1386965",
+  "JGP DESENVOLVIMENTO I FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1386964",
+  "FII MCMV #1386963",
+  "FII KONG #1386961",
   "FII CPHG #1386939",
   "ARTON CAPITÂNIA FOF FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1386938",
   "FII JASC REN #1386937",
@@ -19,15 +22,13 @@
   "FII AFHF #1386512"
  ],
  "acoes_nesta_rodada": false,
- "lido_do_aviso": [
-  "RZAT11",
-  "RBRX11",
-  "RZAK11"
+ "varredura": {
+  "fii": 0,
+  "acoes": "não consultadas"
+ },
+ "pendentes": [
+  "RBRK11"
  ],
- "novos": [
-  "RZAT11 Rendimento",
-  "RBRX11 Rendimento",
-  "RZAK11 Rendimento"
- ],
+ "novos": [],
  "pdfs": 0
 }
