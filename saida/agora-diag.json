@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-16T21:45:15.092Z",
- "hora": 18,
+ "gerado": "2026-11-16T22:00:20.301Z",
+ "hora": 19,
  "fnet": {
   "linhas": 1967,
-  "avisos": 98,
-  "relatorios": 36
+  "avisos": 99,
+  "relatorios": 39
  },
  "avisos_novos": [
   "ADSH11:1387087",
@@ -12,6 +12,7 @@
   "RBRK11:1386979"
  ],
  "avisos_sem_ticker": [
+  "FII RJDA #1387194",
   "FII ONDA ME #1387112",
   "FII TRUEMULT #1387105",
   "FII DAYC REM #1387085",
@@ -35,6 +36,10 @@
   "FII AFHF #1386512"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 0,
+  "acoes": "não consultadas"
+ },
  "pendentes": [
   "ADSH11",
   "CPLG11",
