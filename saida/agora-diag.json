@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-16T17:30:20.964Z",
+ "gerado": "2026-11-16T17:45:15.007Z",
  "hora": 14,
  "fnet": {
-  "linhas": 1971,
-  "avisos": 67,
+  "linhas": 1970,
+  "avisos": 68,
   "relatorios": 26
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII AJ MALLS #1386770",
   "FII AFHF #1386512"
  ],
  "acoes_nesta_rodada": false,
