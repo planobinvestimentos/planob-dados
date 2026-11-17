@@ -1,41 +1,41 @@
 {
- "gerado": "2026-11-16T19:30:29.722Z",
- "hoje": "2026-11-16",
- "hora": "16:30",
+ "gerado": "2026-11-17T14:30:48.675Z",
+ "hoje": "2026-11-17",
+ "hora": "11:30",
  "modo": "lote",
  "pregao": {
-  "comparaveis": 76,
-  "iguais": 2
+  "comparaveis": 78,
+  "iguais": 6
  },
  "setores": {
   "achados": {
    "ICON": {
-    "v": -1.55061121580057,
+    "v": 1.098743104478966,
     "s": "BMFBOVESPA:ICON",
     "origem": "simbolo"
    },
    "IEEX": {
-    "v": -1.6546836528691797,
+    "v": 0.5736616309412288,
     "s": "BMFBOVESPA:IEEX",
     "origem": "simbolo"
    },
    "INDX": {
-    "v": -1.4708013238903537,
+    "v": 0.9046490064556904,
     "s": "BMFBOVESPA:INDX",
     "origem": "simbolo"
    },
    "IMOB": {
-    "v": -2.8758226532732976,
+    "v": 0.6230694554761427,
     "s": "BMFBOVESPA:IMOB",
     "origem": "simbolo"
    },
    "IFNC": {
-    "v": -2.0753099141551457,
+    "v": 0.5001732715568857,
     "s": "BMFBOVESPA:IFNC",
     "origem": "simbolo"
    },
    "IMAT": {
-    "v": -0.7941002363049794,
+    "v": 0.49185600887053144,
     "s": "BMFBOVESPA:IMAT",
     "origem": "simbolo"
    }
@@ -47,7 +47,7 @@
   "yahoo": "0 ok",
   "stooq": "0 ok",
   "minerio": "sina",
-  "CCM": "CCMX26",
+  "CCM": "CCMF27",
   "BGI": "BGIX26",
   "itens_ok": [
    "wti:cnbc",
@@ -57,7 +57,7 @@
    "prata:cnbc",
    "minerio:sina",
    "cobre:cnbc",
-   "milho:b3 CCMX26",
+   "milho:b3 CCMF27",
    "boi:b3 BGIX26",
    "soja:cnbc",
    "trigo:cnbc"
@@ -79,5 +79,5 @@
   "dolar"
  ],
  "falhas": [],
- "resultado": "painel das 16h30 enviado (setores, cripto, commodities, dolar)"
+ "resultado": "painel das 11h30 enviado (setores, cripto, commodities, dolar)"
 }
