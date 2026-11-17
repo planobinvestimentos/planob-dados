@@ -1,16 +1,18 @@
 {
- "gerado": "2026-11-17T22:30:16.439Z",
+ "gerado": "2026-11-17T22:45:20.843Z",
  "hora": 19,
  "fnet": {
   "linhas": 1954,
-  "avisos": 118,
-  "relatorios": 55
+  "avisos": 120,
+  "relatorios": 57
  },
  "avisos_novos": [
   "XPML11:1387873",
   "MCRE11:1387856"
  ],
  "avisos_sem_ticker": [
+  "FII SUNOFOFI #1388079",
+  "FII KILIMA #1388077",
   "FII WTXA #1387883",
   "BTG PACTUAL PRIME HOSPITALIDADE FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1387847",
   "FII ESTOQ RJ #1387831",
@@ -33,9 +35,7 @@
   "IRIDIUM GERAÇÃO DISTRIBUÍDA IVI FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1387043",
   "FII SHPP #1387041",
   "FII IVBP #1387002",
-  "FII GSRF #1386994",
-  "FII GFDL #1386989",
-  "FII HOMS #1386988"
+  "FII GSRF #1386994"
  ],
  "acoes_nesta_rodada": false,
  "pendentes": [
