@@ -1,14 +1,12 @@
 {
- "gerado": "2026-11-17T00:54:25.085Z",
- "hora": 21,
+ "gerado": "2026-11-17T12:00:17.670Z",
+ "hora": 9,
  "fnet": {
-  "linhas": 1966,
+  "linhas": 1964,
   "avisos": 99,
   "relatorios": 47
  },
- "avisos_novos": [
-  "ADSH11:1387087"
- ],
+ "avisos_novos": [],
  "avisos_sem_ticker": [
   "FII RJDA #1387194",
   "FII ONDA ME #1387112",
@@ -35,12 +33,12 @@
  ],
  "acoes_nesta_rodada": false,
  "varredura": {
-  "fii": 0,
+  "fii": 12,
   "acoes": "não consultadas"
  },
- "desistiu": [
-  "ADSH11"
+ "novos": [
+  "ADSH11 Rendimento",
+  "CPLG11 Rendimento"
  ],
- "novos": [],
  "pdfs": 0
 }
