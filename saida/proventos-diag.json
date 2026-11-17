@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-17T11:01:53.869Z",
+ "gerado": "2026-11-17T23:00:23.970Z",
  "de": "2026-11-15",
  "ate": "2026-11-17",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 142,
   "amostra": {
-   "fundo": "FII ALIANZA ",
+   "fundo": "FII AFHI CRI",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -19,21 +19,21 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRALZRCTF006",
-    "paymentDate": "23/10/2026",
-    "rate": "0,08400000000",
-    "relatedTo": "Setembro-2026/2026",
-    "approvedOn": "16/10/2026",
-    "isinCode": "BRALZRCTF006",
+    "assetIssued": "BRAFHICTF005",
+    "paymentDate": "24/11/2026",
+    "rate": "0,97000000000",
+    "relatedTo": "Outubro-2026/2026",
+    "approvedOn": "16/11/2026",
+    "isinCode": "BRAFHICTF005",
     "label": "RENDIMENTO",
-    "lastDatePrior": "16/10/2026",
+    "lastDatePrior": "16/11/2026",
     "remarks": ""
    }
   },
-  "ok": 142,
-  "falhas": 0,
+  "ok": 138,
+  "falhas": 4,
   "semRendimentos": 9,
-  "itens": 0
+  "itens": 10
  },
  "acoes": {
   "emissoras": 282,
@@ -85,7 +85,7 @@
   },
   "ok": 282,
   "falhas": 0,
-  "semDividendos": 86,
+  "semDividendos": 87,
   "itens": 0
  }
 }
