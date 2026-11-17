@@ -1,6 +1,6 @@
 {
- "gerado": "2026-11-17T22:45:20.843Z",
- "hora": 19,
+ "gerado": "2026-11-17T23:00:15.315Z",
+ "hora": 20,
  "fnet": {
   "linhas": 1954,
   "avisos": 120,
@@ -37,7 +37,11 @@
   "FII IVBP #1387002",
   "FII GSRF #1386994"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
+ "varredura": {
+  "fii": 12,
+  "acoes": 0
+ },
  "pendentes": [
   "XPML11",
   "MCRE11"
