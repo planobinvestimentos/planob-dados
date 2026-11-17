@@ -1,16 +1,17 @@
 {
- "gerado": "2026-11-17T20:30:15.285Z",
+ "gerado": "2026-11-17T20:45:17.248Z",
  "hora": 17,
  "fnet": {
   "linhas": 1957,
-  "avisos": 116,
+  "avisos": 118,
   "relatorios": 50
  },
  "avisos_novos": [
-  "CPOF11:1387857",
+  "XPML11:1387873",
   "MCRE11:1387856"
  ],
  "avisos_sem_ticker": [
+  "FII WTXA #1387883",
   "BTG PACTUAL PRIME HOSPITALIDADE FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1387847",
   "FII ESTOQ RJ #1387831",
   "FII ICNE #1387828",
@@ -34,18 +35,13 @@
   "FII IVBP #1387002",
   "FII GSRF #1386994",
   "FII GFDL #1386989",
-  "FII HOMS #1386988",
-  "FII VENUS #1386986"
+  "FII HOMS #1386988"
  ],
  "acoes_nesta_rodada": false,
- "lido_do_aviso": [
-  "CPOF11"
- ],
  "pendentes": [
+  "XPML11",
   "MCRE11"
  ],
- "novos": [
-  "CPOF11 Rendimento"
- ],
- "pdfs": 1
+ "novos": [],
+ "pdfs": 0
 }
