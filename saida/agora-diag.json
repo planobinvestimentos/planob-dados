@@ -1,13 +1,17 @@
 {
- "gerado": "2026-11-17T20:00:15.884Z",
+ "gerado": "2026-11-17T20:15:15.699Z",
  "hora": 17,
  "fnet": {
   "linhas": 1956,
-  "avisos": 110,
-  "relatorios": 49
+  "avisos": 114,
+  "relatorios": 50
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "BTG PACTUAL PRIME HOSPITALIDADE FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1387847",
+  "FII ESTOQ RJ #1387831",
+  "FII ICNE #1387828",
+  "FII XP INDL #1387827",
   "BTG PACTUAL RENDA METROPOLITANA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1387812",
   "FII CYLD #1387796",
   "FII ALIANZAC #1387795",
@@ -28,17 +32,9 @@
   "FII GSRF #1386994",
   "FII GFDL #1386989",
   "FII HOMS #1386988",
-  "FII VENUS #1386986",
-  "FII GLCR #1386984",
-  "FII TRANSINC #1386978",
-  "FII RDLI #1386965",
-  "JGP DESENVOLVIMENTO I FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1386964"
+  "FII VENUS #1386986"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 12,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
