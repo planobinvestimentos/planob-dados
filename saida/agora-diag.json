@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-17T23:30:16.288Z",
+ "gerado": "2026-11-17T23:45:16.430Z",
  "hora": 20,
  "fnet": {
   "linhas": 1954,
   "avisos": 120,
-  "relatorios": 57
+  "relatorios": 58
  },
  "avisos_novos": [
   "XPML11:1387873",
