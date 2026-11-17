@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-17T15:00:28.028Z",
+ "gerado": "2026-11-17T15:15:16.318Z",
  "hora": 12,
  "fnet": {
   "linhas": 1962,
@@ -31,11 +31,7 @@
   "FII AJ MALLS #1386770",
   "FII AFHF #1386512"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 12,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
