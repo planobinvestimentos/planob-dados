@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-17T00:34:39.717Z",
+ "gerado": "2026-11-17T12:01:04.051Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 135,
  "top": {
@@ -59,19 +59,19 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 1600,
+  "linhas_vistas": 201,
   "categorias": {
-   "Informes Periódicos": 1336,
-   "Assembleia": 56,
-   "Aviso aos Cotistas - Estruturado": 53,
-   "Relatórios": 42,
-   "Aviso aos Cotistas": 34,
-   "Comunicado ao Mercado": 16,
-   "Oferta Pública de Distribuição de Cotas": 15,
-   "Outras Informações": 15
+   "Informes Periódicos": 75,
+   "Relatórios": 27,
+   "Aviso aos Cotistas - Estruturado": 24,
+   "Assembleia": 20,
+   "Comunicado ao Mercado": 13,
+   "Aviso aos Cotistas": 12,
+   "Oferta Pública de Distribuição de Cotas": 10,
+   "Regulamento": 7
   },
-  "fatos_relevantes": 8,
-  "de_fiis_liquidos": 5
+  "fatos_relevantes": 4,
+  "de_fiis_liquidos": 1
  },
  "fatos_sem_ticker": [
   "SPX PORTFÓLIO ALFA FUNDO DE INVESTIMENTO IMOBILIÁRIO",
