@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-17T23:00:23.970Z",
+ "gerado": "2026-11-17T23:30:19.400Z",
  "de": "2026-11-15",
  "ate": "2026-11-17",
  "fii": {
@@ -30,10 +30,10 @@
     "remarks": ""
    }
   },
-  "ok": 138,
-  "falhas": 4,
+  "ok": 142,
+  "falhas": 0,
   "semRendimentos": 9,
-  "itens": 10
+  "itens": 12
  },
  "acoes": {
   "emissoras": 282,
