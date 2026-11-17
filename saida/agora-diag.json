@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-17T16:00:19.992Z",
+ "gerado": "2026-11-17T16:15:17.500Z",
  "hora": 13,
  "fnet": {
   "linhas": 1960,
@@ -32,10 +32,6 @@
   "FII AFHF #1386512"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 12,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
