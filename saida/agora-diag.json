@@ -1,14 +1,13 @@
 {
- "gerado": "2026-11-16T23:45:15.128Z",
- "hora": 20,
+ "gerado": "2026-11-17T00:00:15.429Z",
+ "hora": 21,
  "fnet": {
   "linhas": 1966,
   "avisos": 99,
   "relatorios": 47
  },
  "avisos_novos": [
-  "ADSH11:1387087",
-  "CPLG11:1386985"
+  "ADSH11:1387087"
  ],
  "avisos_sem_ticker": [
   "FII RJDA #1387194",
@@ -34,12 +33,13 @@
   "FII AJ MALLS #1386770",
   "FII AFHF #1386512"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
+ "varredura": {
+  "fii": 0,
+  "acoes": 0
+ },
  "pendentes": [
   "ADSH11"
- ],
- "desistiu": [
-  "CPLG11"
  ],
  "novos": [],
  "pdfs": 0
