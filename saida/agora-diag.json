@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-17T18:45:15.355Z",
- "hora": 15,
+ "gerado": "2026-11-17T19:00:16.870Z",
+ "hora": 16,
  "fnet": {
-  "linhas": 1960,
-  "avisos": 99,
+  "linhas": 1958,
+  "avisos": 100,
   "relatorios": 49
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FUNDO DE INVESTIMENTO IMOBILIÁRIO RIZA MALLS FEEDER - RESPONSABILIDADE LIMITADA #1387762",
   "FII TJK REND #1387724",
   "FII RJDA #1387194",
   "FII ONDA ME #1387112",
@@ -32,7 +33,11 @@
   "FII AJ MALLS #1386770",
   "FII AFHF #1386512"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
+ "varredura": {
+  "fii": 12,
+  "acoes": 0
+ },
  "novos": [],
  "pdfs": 0
 }
