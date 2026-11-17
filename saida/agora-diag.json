@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-17T12:00:17.670Z",
+ "gerado": "2026-11-17T12:15:17.196Z",
  "hora": 9,
  "fnet": {
   "linhas": 1964,
@@ -32,13 +32,6 @@
   "FII AFHF #1386512"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 12,
-  "acoes": "não consultadas"
- },
- "novos": [
-  "ADSH11 Rendimento",
-  "CPLG11 Rendimento"
- ],
+ "novos": [],
  "pdfs": 0
 }
