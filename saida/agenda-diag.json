@@ -1,15 +1,18 @@
 {
- "gerado": "2026-11-16T10:15:30.490Z",
- "modo": "semana",
- "hoje": "2026-11-16",
- "global_recebidos": 120,
- "global": "ok (6 de alto impacto)",
- "ibge": "falhou: fetch failed",
- "regras": "ok (1)",
+ "gerado": "2026-11-17T09:30:20.457Z",
+ "modo": "hoje",
+ "hoje": "2026-11-17",
+ "global_recebidos": 125,
+ "global": "ok (2 de alto impacto)",
+ "ibge_recebidos": 0,
+ "ibge_chaves": [],
+ "ibge_amostra": [],
+ "ibge_datas": [],
+ "ibge": "ok (0 de interesse)",
+ "regras": "ok (0)",
  "manual": "ok (0)",
- "eventos": 6,
+ "eventos": 1,
  "por_fonte": {
-  "regra": 1,
-  "global": 5
+  "global": 1
  }
 }
