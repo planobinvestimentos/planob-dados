@@ -1,12 +1,15 @@
 {
- "gerado": "2026-11-17T20:22:24.138Z",
+ "gerado": "2026-11-17T20:30:15.285Z",
  "hora": 17,
  "fnet": {
-  "linhas": 1956,
-  "avisos": 114,
+  "linhas": 1957,
+  "avisos": 116,
   "relatorios": 50
  },
- "avisos_novos": [],
+ "avisos_novos": [
+  "CPOF11:1387857",
+  "MCRE11:1387856"
+ ],
  "avisos_sem_ticker": [
   "BTG PACTUAL PRIME HOSPITALIDADE FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1387847",
   "FII ESTOQ RJ #1387831",
@@ -35,6 +38,14 @@
   "FII VENUS #1386986"
  ],
  "acoes_nesta_rodada": false,
- "novos": [],
- "pdfs": 0
+ "lido_do_aviso": [
+  "CPOF11"
+ ],
+ "pendentes": [
+  "MCRE11"
+ ],
+ "novos": [
+  "CPOF11 Rendimento"
+ ],
+ "pdfs": 1
 }
