@@ -1,6 +1,6 @@
 {
- "gerado": "2026-11-17T21:45:15.614Z",
- "hora": 18,
+ "gerado": "2026-11-17T22:00:16.557Z",
+ "hora": 19,
  "fnet": {
   "linhas": 1958,
   "avisos": 118,
@@ -38,6 +38,10 @@
   "FII HOMS #1386988"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 12,
+  "acoes": "não consultadas"
+ },
  "pendentes": [
   "XPML11",
   "MCRE11"
