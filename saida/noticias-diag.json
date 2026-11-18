@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-18T03:13:14.923Z",
+ "gerado": "2026-11-18T04:01:42.406Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -83,13 +83,13 @@
  },
  "cvm_cnpj": {
   "total": 2592,
-  "novos": 1
+  "novos": 0
  },
  "enet": {
-  "linhas": 1945,
+  "linhas": 1946,
   "na_janela_e_categorias": 130,
   "sem_cnpj": 61,
-  "entrega_mais_recente": "20261118 18/11/2026 00:00",
+  "entrega_mais_recente": "20261118 18/11/2026 00:16",
   "tentativa": 1
  },
  "fontes": {
@@ -109,10 +109,23 @@
  "gasto_ia": {
   "mes": "2026-11",
   "usd": 0.5311,
-  "chamadas": 454,
+  "chamadas": 455,
   "teto_usd": 5
  },
  "recentes": [
+  {
+   "h": "00:16",
+   "emp": "CLOUDFLARE INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-18",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05814-9",
+   "c5": "20261118 18/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
   {
    "h": "00:00",
    "emp": "CONCESSIONARIA DA RODOVIA MG-050 S.A.",
