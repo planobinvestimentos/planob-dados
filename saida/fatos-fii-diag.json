@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-18T20:10:21.918Z",
+ "gerado": "2026-11-18T22:30:20.256Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 135,
  "top": {
@@ -59,21 +59,24 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 391,
+  "linhas_vistas": 443,
   "categorias": {
-   "Informes Periódicos": 161,
-   "Aviso aos Cotistas - Estruturado": 47,
-   "Relatórios": 41,
-   "Assembleia": 40,
-   "Oferta Pública de Distribuição de Cotas": 22,
-   "Aviso aos Cotistas": 20,
-   "Comunicado ao Mercado": 16,
-   "Regulamento": 14
+   "Informes Periódicos": 169,
+   "Relatórios": 61,
+   "Aviso aos Cotistas - Estruturado": 49,
+   "Assembleia": 43,
+   "Oferta Pública de Distribuição de Cotas": 24,
+   "Aviso aos Cotistas": 23,
+   "Fato Relevante": 17,
+   "Comunicado ao Mercado": 17
   },
-  "fatos_relevantes": 13,
-  "de_fiis_liquidos": 2
+  "fatos_relevantes": 17,
+  "de_fiis_liquidos": 3
  },
  "fatos_sem_ticker": [
+  "FII CCVA",
+  "FII HIRE LOG",
+  "FII RIONEGRO",
   "FII LOTUS TOWER FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
   "LOTUS TOWER II FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
   "FII KILIMA",
@@ -85,9 +88,9 @@
   "SPX PORTFÓLIO ALFA FUNDO DE INVESTIMENTO IMOBILIÁRIO",
   "POXIM FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA"
  ],
- "analisados": 0,
+ "analisados": 1,
  "sem_texto": 0,
- "fora_do_escopo": 0,
+ "fora_do_escopo": 1,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
  "materias_novas": 0,
