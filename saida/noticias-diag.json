@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-18T04:01:42.406Z",
+ "gerado": "2026-11-18T04:57:40.828Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -85,17 +85,11 @@
   "total": 2592,
   "novos": 0
  },
- "enet": {
-  "linhas": 1946,
-  "na_janela_e_categorias": 130,
-  "sem_cnpj": 61,
-  "entrega_mais_recente": "20261118 18/11/2026 00:16",
-  "tentativa": 1
- },
+ "enet_erro": "ENETWeb: The operation was aborted due to timeout",
  "fontes": {
-  "enet": 130,
+  "enet": 0,
   "ipe": 60,
-  "apos_juntar": 130
+  "apos_juntar": 60
  },
  "itens": {
   "novos": 0,
@@ -109,100 +103,8 @@
  "gasto_ia": {
   "mes": "2026-11",
   "usd": 0.5311,
-  "chamadas": 455,
+  "chamadas": 456,
   "teto_usd": 5
  },
- "recentes": [
-  {
-   "h": "00:16",
-   "emp": "CLOUDFLARE INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "4",
-   "d": "2026-11-18",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05814-9",
-   "c5": "20261118 18/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "00:00",
-   "emp": "CONCESSIONARIA DA RODOVIA MG-050 S.A.",
-   "cat": "Dados Econômico-Financeiros",
-   "tipo": "Press-release",
-   "ass": "Release de Resultados 3T26",
-   "d": "2026-11-18",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "02410-4",
-   "c5": "20260930 30/09/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "19:33",
-   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Relatório Fiscal 3T26",
-   "d": "2026-11-17",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "00951-2",
-   "c5": "20261117 17/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "20:46",
-   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Petrobras convida para seu webcast sobre o Plano de Negócios 2027-2031",
-   "d": "2026-11-16",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "00951-2",
-   "c5": "20261116 16/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "20:08",
-   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Petrobras recebe pagamento de novas parcelas do Programa de Subvenção Econômica do diesel",
-   "d": "2026-11-16",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "00951-2",
-   "c5": "20261116 16/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "19:40",
-   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Esclarecimentos sobre questionamentos da CVM/B3",
-   "ass": "Notícia divulgada na mídia",
-   "d": "2026-11-16",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "00951-2",
-   "c5": "20261116 16/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "19:31",
-   "emp": "VALE S.A.",
-   "cat": "Aviso aos Debenturistas",
-   "tipo": "-",
-   "ass": "Pagamento de juros/remuneração",
-   "d": "2026-11-13",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "00417-0",
-   "c5": "20261113 13/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  }
- ]
+ "recentes": []
 }
