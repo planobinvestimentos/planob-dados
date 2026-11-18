@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-18T20:30:15.661Z",
+ "gerado": "2026-11-18T20:45:15.512Z",
  "hora": 17,
  "fnet": {
   "linhas": 1944,
@@ -35,6 +35,10 @@
   "FII RBRDESIV #1387788"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 19,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
