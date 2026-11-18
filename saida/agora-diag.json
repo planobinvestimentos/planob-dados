@@ -1,13 +1,21 @@
 {
- "gerado": "2026-11-18T19:30:18.394Z",
+ "gerado": "2026-11-18T19:45:23.547Z",
  "hora": 16,
  "fnet": {
   "linhas": 1944,
-  "avisos": 118,
+  "avisos": 125,
   "relatorios": 60
  },
- "avisos_novos": [],
+ "avisos_novos": [
+  "BROF11:1388459"
+ ],
  "avisos_sem_ticker": [
+  "FII V2 RECE #1388460",
+  "REC ONE FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1388458",
+  "FII V2 RENDA #1388456",
+  "FII VCTH #1388455",
+  "FII ASA RET #1388454",
+  "FII DEV ONE #1388453",
   "FII SUNOFOFI #1388079",
   "FII KILIMA #1388077",
   "FII WTXA #1387883",
@@ -27,6 +35,11 @@
   "FII TJK REND #1387724"
  ],
  "acoes_nesta_rodada": false,
- "novos": [],
+ "lido_do_aviso": [
+  "BROF11"
+ ],
+ "novos": [
+  "BROF11 Rendimento"
+ ],
  "pdfs": 0
 }
