@@ -1,14 +1,13 @@
 {
- "gerado": "2026-11-18T00:15:17.266Z",
- "hora": 21,
+ "gerado": "2026-11-18T12:00:19.988Z",
+ "hora": 9,
  "fnet": {
   "linhas": 1954,
   "avisos": 120,
-  "relatorios": 59
+  "relatorios": 60
  },
  "avisos_novos": [
-  "XPML11:1387873",
-  "MCRE11:1387856"
+  "XPML11:1387873"
  ],
  "avisos_sem_ticker": [
   "FII SUNOFOFI #1388079",
@@ -27,23 +26,18 @@
   "FII RBR III #1387789",
   "FII RBRDESIV #1387788",
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO RIZA MALLS FEEDER - RESPONSABILIDADE LIMITADA #1387762",
-  "FII TJK REND #1387724",
-  "FII RJDA #1387194",
-  "FII ONDA ME #1387112",
-  "FII TRUEMULT #1387105",
-  "FII DAYC REM #1387085",
-  "IRIDIUM GERAÇÃO DISTRIBUÍDA IVI FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1387043",
-  "FII SHPP #1387041",
-  "FII IVBP #1387002",
-  "FII GSRF #1386994"
+  "FII TJK REND #1387724"
  ],
  "acoes_nesta_rodada": false,
- "pendentes": [
-  "XPML11"
+ "varredura": {
+  "fii": 19,
+  "acoes": "não consultadas"
+ },
+ "novos": [
+  "XPML11 Rendimento",
+  "COIN11 Rendimento",
+  "ETHY11 Rendimento",
+  "MCRE11 Rendimento"
  ],
- "desistiu": [
-  "MCRE11"
- ],
- "novos": [],
  "pdfs": 0
 }
