@@ -1,14 +1,12 @@
 {
- "gerado": "2026-11-18T19:45:23.547Z",
+ "gerado": "2026-11-18T19:52:06.044Z",
  "hora": 16,
  "fnet": {
   "linhas": 1944,
   "avisos": 125,
   "relatorios": 60
  },
- "avisos_novos": [
-  "BROF11:1388459"
- ],
+ "avisos_novos": [],
  "avisos_sem_ticker": [
   "FII V2 RECE #1388460",
   "REC ONE FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1388458",
@@ -35,11 +33,10 @@
   "FII TJK REND #1387724"
  ],
  "acoes_nesta_rodada": false,
- "lido_do_aviso": [
-  "BROF11"
- ],
- "novos": [
-  "BROF11 Rendimento"
- ],
+ "varredura": {
+  "fii": 19,
+  "acoes": "não consultadas"
+ },
+ "novos": [],
  "pdfs": 0
 }
