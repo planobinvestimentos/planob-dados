@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-18T21:15:14.846Z",
+ "gerado": "2026-11-18T21:30:16.964Z",
  "hora": 18,
  "fnet": {
   "linhas": 1942,
-  "avisos": 124,
-  "relatorios": 64
+  "avisos": 119,
+  "relatorios": 68
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
@@ -36,5 +36,5 @@
  ],
  "acoes_nesta_rodada": false,
  "novos": [],
- "pdfs": 0
+ "pdfs": 1
 }
