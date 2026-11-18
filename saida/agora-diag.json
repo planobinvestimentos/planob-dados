@@ -1,6 +1,6 @@
 {
- "gerado": "2026-11-18T12:45:15.098Z",
- "hora": 9,
+ "gerado": "2026-11-18T13:00:15.961Z",
+ "hora": 10,
  "fnet": {
   "linhas": 1953,
   "avisos": 120,
@@ -27,6 +27,10 @@
   "FII TJK REND #1387724"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 18,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
