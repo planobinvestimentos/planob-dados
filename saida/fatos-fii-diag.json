@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-18T22:30:20.256Z",
+ "gerado": "2026-11-18T23:47:39.996Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 135,
  "top": {
@@ -59,16 +59,16 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 443,
+  "linhas_vistas": 455,
   "categorias": {
    "Informes Periódicos": 169,
-   "Relatórios": 61,
+   "Relatórios": 63,
    "Aviso aos Cotistas - Estruturado": 49,
    "Assembleia": 43,
-   "Oferta Pública de Distribuição de Cotas": 24,
+   "Oferta Pública de Distribuição de Cotas": 26,
    "Aviso aos Cotistas": 23,
-   "Fato Relevante": 17,
-   "Comunicado ao Mercado": 17
+   "Regulamento": 20,
+   "Comunicado ao Mercado": 19
   },
   "fatos_relevantes": 17,
   "de_fiis_liquidos": 3
@@ -88,9 +88,9 @@
   "SPX PORTFÓLIO ALFA FUNDO DE INVESTIMENTO IMOBILIÁRIO",
   "POXIM FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA"
  ],
- "analisados": 1,
+ "analisados": 0,
  "sem_texto": 0,
- "fora_do_escopo": 1,
+ "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
  "materias_novas": 0,
