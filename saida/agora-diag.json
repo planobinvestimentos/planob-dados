@@ -1,14 +1,12 @@
 {
- "gerado": "2026-11-18T12:00:19.988Z",
+ "gerado": "2026-11-18T12:15:14.976Z",
  "hora": 9,
  "fnet": {
   "linhas": 1954,
   "avisos": 120,
   "relatorios": 60
  },
- "avisos_novos": [
-  "XPML11:1387873"
- ],
+ "avisos_novos": [],
  "avisos_sem_ticker": [
   "FII SUNOFOFI #1388079",
   "FII KILIMA #1388077",
@@ -29,15 +27,6 @@
   "FII TJK REND #1387724"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 19,
-  "acoes": "não consultadas"
- },
- "novos": [
-  "XPML11 Rendimento",
-  "COIN11 Rendimento",
-  "ETHY11 Rendimento",
-  "MCRE11 Rendimento"
- ],
+ "novos": [],
  "pdfs": 0
 }
