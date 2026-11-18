@@ -1,11 +1,10 @@
 {
- "gerado": "2026-11-17T21:30:39.615Z",
+ "gerado": "2026-11-18T21:06:13.489Z",
  "baixados": 1,
  "falhas": {
   "2026-11-02": "HTTP 500"
  },
  "lidos": 1,
- "dias_calculados": 40,
- "ultimo": "2026-11-13",
- "foto": "The operation was aborted due to timeout"
+ "dias_calculados": 41,
+ "ultimo": "2026-11-16"
 }
