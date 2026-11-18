@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-18T21:45:16.484Z",
- "hora": 18,
+ "gerado": "2026-11-18T22:00:14.895Z",
+ "hora": 19,
  "fnet": {
-  "linhas": 1941,
-  "avisos": 119,
-  "relatorios": 74
+  "linhas": 1940,
+  "avisos": 115,
+  "relatorios": 78
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
@@ -35,10 +35,6 @@
   "FII RBR III #1387789"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 19,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
