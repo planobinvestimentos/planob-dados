@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-18T00:30:37.870Z",
- "hoje": "2026-11-17",
- "hora": "21:30",
+ "gerado": "2026-11-18T11:02:11.875Z",
+ "hoje": "2026-11-18",
+ "hora": "08:02",
  "modo": "medo",
  "leitura": {
   "data": "2026-11-18",
   "valor": 11,
-  "proxima_atualizacao_em_segundos": "84562"
+  "proxima_atualizacao_em_segundos": "46669"
  },
- "resultado": "medo e ganância das 21h30 enviado (11, Medo extremo)"
+ "resultado": "medo e ganância das 8h00 enviado (11, Medo extremo)"
 }
