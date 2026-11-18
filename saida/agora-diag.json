@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-18T15:00:18.227Z",
+ "gerado": "2026-11-18T15:15:18.006Z",
  "hora": 12,
  "fnet": {
   "linhas": 1945,
@@ -26,11 +26,7 @@
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO RIZA MALLS FEEDER - RESPONSABILIDADE LIMITADA #1387762",
   "FII TJK REND #1387724"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 19,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
