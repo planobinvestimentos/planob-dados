@@ -1,18 +1,40 @@
 {
- "gerado": "2026-11-17T09:30:20.457Z",
+ "gerado": "2026-11-18T09:30:14.982Z",
  "modo": "hoje",
- "hoje": "2026-11-17",
+ "hoje": "2026-11-18",
  "global_recebidos": 125,
- "global": "ok (2 de alto impacto)",
- "ibge_recebidos": 0,
- "ibge_chaves": [],
- "ibge_amostra": [],
- "ibge_datas": [],
+ "global": "ok (3 de alto impacto)",
+ "ibge_recebidos": 2,
+ "ibge_chaves": [
+  "id",
+  "titulo",
+  "descricao",
+  "data_divulgacao",
+  "tipo_id",
+  "tipo",
+  "produto_id",
+  "nome_produto",
+  "alias_produto",
+  "descricao_produto",
+  "ano_referencia_inicio",
+  "mes_referencia_inicio",
+  "ano_referencia_fim",
+  "mes_referencia_fim",
+  "link"
+ ],
+ "ibge_amostra": [
+  "{\"id\":4576,\"titulo\":\"Desigualdades Sociais por Cor ou Raça - 3ª edição\",\"descricao\":\"\",\"data_divulgacao\":\"18/11/2026 13:00:00\",\"tipo_id\":5,\"tipo\":\"Estudos e Pesquisas Estruturais e Especiais\",\"produto_id\":25844,\"nome_produto\":\"Desigualdades Sociais por Cor ou Raça no Brasil\",\"alias_produto\":\"desigualdades-sociais-por-cor-ou-raca\",\"descricao_produto\":\"\",\"ano_referencia_inicio\":0,\"mes_referencia_ini",
+  "{\"id\":4327,\"titulo\":\"Pesquisa Nacional por Amostra de Domicílios Contínua Trimestral\",\"descricao\":\"\",\"data_divulgacao\":\"18/11/2026 12:00:00\",\"tipo_id\":1,\"tipo\":\"Divulgação de Indicadores\",\"produto_id\":9173,\"nome_produto\":\"Divulgação trimestral#pnadc2\",\"alias_produto\":\"pesquisa-nacional-por-amostra-de-domicilios-continua-trimestral\",\"descricao_produto\":\"<p align=\\\"justify\\\">Destina-se a produzir in"
+ ],
+ "ibge_datas": [
+  "18/11/2026 12:00:00",
+  "18/11/2026 13:00:00"
+ ],
  "ibge": "ok (0 de interesse)",
  "regras": "ok (0)",
  "manual": "ok (0)",
- "eventos": 1,
+ "eventos": 3,
  "por_fonte": {
-  "global": 1
+  "global": 3
  }
 }
