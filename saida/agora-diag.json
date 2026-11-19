@@ -1,15 +1,17 @@
 {
- "gerado": "2026-11-19T20:30:15.766Z",
+ "gerado": "2026-11-19T20:45:14.875Z",
  "hora": 17,
  "fnet": {
   "linhas": 1934,
-  "avisos": 129,
+  "avisos": 131,
   "relatorios": 89
  },
  "avisos_novos": [
+  "MCCI11:1389268",
   "CNES11:1389249"
  ],
  "avisos_sem_ticker": [
+  "ARX CHILLON RECEBÍVEIS FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1389269",
   "FII APXU #1389247",
   "FII APXR #1389246",
   "RIO BRAVO RENDA IMOBILÁRIA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1389239",
@@ -35,7 +37,12 @@
   "FII DEV ONE #1388453"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 8,
+  "acoes": "não consultadas"
+ },
  "pendentes": [
+  "MCCI11",
   "CNES11"
  ],
  "novos": [],
