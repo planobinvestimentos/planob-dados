@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-19T21:15:14.706Z",
+ "gerado": "2026-11-19T21:30:15.661Z",
  "hora": 18,
  "fnet": {
-  "linhas": 1935,
+  "linhas": 1934,
   "avisos": 132,
-  "relatorios": 95
+  "relatorios": 99
  },
  "avisos_novos": [
   "MCCI11:1389268",
@@ -43,5 +43,8 @@
   "CNES11"
  ],
  "novos": [],
+ "pdf_erro": [
+  "BROF11: The operation was aborted due to timeout"
+ ],
  "pdfs": 0
 }
