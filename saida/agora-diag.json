@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-19T21:30:15.661Z",
+ "gerado": "2026-11-19T21:45:16.478Z",
  "hora": 18,
  "fnet": {
-  "linhas": 1934,
+  "linhas": 1935,
   "avisos": 132,
-  "relatorios": 99
+  "relatorios": 104
  },
  "avisos_novos": [
   "MCCI11:1389268",
@@ -38,13 +38,14 @@
   "FII DEV ONE #1388453"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 8,
+  "acoes": "não consultadas"
+ },
  "pendentes": [
   "MCCI11",
   "CNES11"
  ],
  "novos": [],
- "pdf_erro": [
-  "BROF11: The operation was aborted due to timeout"
- ],
- "pdfs": 0
+ "pdfs": 1
 }
