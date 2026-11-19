@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-19T19:45:22.447Z",
+ "gerado": "2026-11-19T19:52:08.851Z",
  "hora": 16,
  "fnet": {
   "linhas": 1934,
@@ -23,6 +23,10 @@
   "FII DEV ONE #1388453"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 8,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
