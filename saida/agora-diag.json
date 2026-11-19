@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-19T00:15:15.616Z",
- "hora": 21,
+ "gerado": "2026-11-19T12:00:16.614Z",
+ "hora": 9,
  "fnet": {
   "linhas": 1940,
   "avisos": 115,
-  "relatorios": 78
+  "relatorios": 79
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
@@ -18,23 +18,13 @@
   "FII V2 RENDA #1388456",
   "FII VCTH #1388455",
   "FII ASA RET #1388454",
-  "FII DEV ONE #1388453",
-  "FII SUNOFOFI #1388079",
-  "FII KILIMA #1388077",
-  "FII WTXA #1387883",
-  "BTG PACTUAL PRIME HOSPITALIDADE FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1387847",
-  "FII ESTOQ RJ #1387831",
-  "FII ICNE #1387828",
-  "FII XP INDL #1387827",
-  "BTG PACTUAL RENDA METROPOLITANA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1387812",
-  "FII CYLD #1387796",
-  "FII ALIANZAC #1387795",
-  "FII BETW #1387792",
-  "FII CAMPUSFL #1387791",
-  "FUNDO DE INVESTIMENTO IMOBILIÁRIO PATRIA OPORTUNIDADES EM CRÉDITO IMOBILIÁRIO RL #1387790",
-  "FII RBR III #1387789"
+  "FII DEV ONE #1388453"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 8,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
