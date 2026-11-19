@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-19T10:42:00.941Z",
+ "gerado": "2026-11-19T23:00:19.374Z",
  "de": "2026-11-17",
  "ate": "2026-11-19",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 142,
   "amostra": {
-   "fundo": "FII AFHI CRI",
+   "fundo": "FII ADSH    ",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -19,21 +19,21 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAFHICTF005",
-    "paymentDate": "24/11/2026",
-    "rate": "0,97000000000",
-    "relatedTo": "Outubro-2026/2026",
+    "assetIssued": "BRADSHCTF009",
+    "paymentDate": "23/11/2026",
+    "rate": "0,03000000000",
+    "relatedTo": "OUTUBRO/2026",
     "approvedOn": "16/11/2026",
-    "isinCode": "BRAFHICTF005",
+    "isinCode": "BRADSHCTF009",
     "label": "RENDIMENTO",
     "lastDatePrior": "16/11/2026",
     "remarks": ""
    }
   },
-  "ok": 142,
-  "falhas": 0,
+  "ok": 141,
+  "falhas": 1,
   "semRendimentos": 9,
-  "itens": 7
+  "itens": 8
  },
  "acoes": {
   "emissoras": 282,
@@ -83,9 +83,9 @@
     "remarks": ""
    }
   },
-  "ok": 282,
-  "falhas": 0,
-  "semDividendos": 87,
+  "ok": 279,
+  "falhas": 3,
+  "semDividendos": 85,
   "itens": 0
  }
 }
