@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-18T18:59:08.621Z",
- "consultados": 974,
+ "gerado": "2026-11-19T19:07:34.570Z",
+ "consultados": 973,
  "com_dados": 385,
- "sem_dados": 335,
+ "sem_dados": 334,
  "erros": 0,
  "exemplos_erro": [],
  "exemplos_sem_dados": [
@@ -17,8 +17,8 @@
   "AMER3",
   "AMOB3",
   "APXR11",
-  "ARGE11",
   "APXU11",
+  "ARGE11",
   "ARND3",
   "ATED3",
   "AUMT11",
@@ -39,8 +39,8 @@
  ],
  "via_b3": 0,
  "b3": {
-  "consultadas": 314,
-  "ok": 314,
+  "consultadas": 313,
+  "ok": 313,
   "falhas": 0,
   "recuperados": 0,
   "erro": null,
