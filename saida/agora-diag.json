@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-19T00:00:22.684Z",
+ "gerado": "2026-11-19T00:15:15.616Z",
  "hora": 21,
  "fnet": {
   "linhas": 1940,
@@ -34,11 +34,7 @@
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO PATRIA OPORTUNIDADES EM CRÉDITO IMOBILIÁRIO RL #1387790",
   "FII RBR III #1387789"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 19,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
