@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-19T02:07:59.531Z",
+ "gerado": "2026-11-19T02:53:59.780Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -86,10 +86,10 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 2363,
+  "linhas": 2367,
   "na_janela_e_categorias": 139,
   "sem_cnpj": 73,
-  "entrega_mais_recente": "20261118 18/11/2026 22:55",
+  "entrega_mais_recente": "20261118 18/11/2026 23:16",
   "tentativa": 1
  },
  "fontes": {
@@ -109,10 +109,62 @@
  "gasto_ia": {
   "mes": "2026-11",
   "usd": 0.5412,
-  "chamadas": 472,
+  "chamadas": 473,
   "teto_usd": 5
  },
  "recentes": [
+  {
+   "h": "23:16",
+   "emp": "DUOLINGO INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-18",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05942-7",
+   "c5": "20261118 18/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "23:16",
+   "emp": "THE GAP, INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-18",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05121-7",
+   "c5": "20261118 18/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "23:16",
+   "emp": "ANTHROPIC PBC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "3",
+   "d": "2026-11-18",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05945-1",
+   "c5": "20261118 18/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "23:16",
+   "emp": "CEREBRAS SYSTEMS INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "144",
+   "d": "2026-11-18",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05944-9",
+   "c5": "20261118 18/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
   {
    "h": "22:55",
    "emp": "CONCESSIONÁRIA LINHA UNIVERSIDADE S.A",
@@ -1618,58 +1670,6 @@
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "02639-5",
    "c5": "20260930 30/09/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "19:07",
-   "emp": "GRUPO SALTA EDUCAÇÃO S.A.",
-   "cat": "Calendário de Eventos Corporativos",
-   "tipo": "-",
-   "ass": "",
-   "d": "2026-11-18",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "02782-0",
-   "c5": "20271231 31/12/2027",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:53",
-   "emp": "CIA SIDERURGICA NACIONAL",
-   "cat": "Reunião da Administração",
-   "tipo": "Conselho de Administração",
-   "ass": "Eleição de Diretor(es)",
-   "d": "2026-11-18",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "00403-0",
-   "c5": "20261109 09/11/2026 17:00",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:53",
-   "emp": "CIA SIDERURGICA NACIONAL",
-   "cat": "Reunião da Administração",
-   "tipo": "Conselho de Administração",
-   "ass": "Eleição de Diretor(es)",
-   "d": "2026-11-18",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "00403-0",
-   "c5": "20261117 17/11/2026 17:30",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:53",
-   "emp": "LIGHT S.A.",
-   "cat": "Regimento interno do Conselho Fiscal",
-   "tipo": "-",
-   "ass": "",
-   "d": "2026-11-18",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "01987-9",
-   "c5": "20250513 13/05/2025 14:00",
    "c8": "1",
    "c9": "AP"
   }
