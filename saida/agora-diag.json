@@ -1,6 +1,6 @@
 {
- "gerado": "2026-11-19T14:45:15.870Z",
- "hora": 11,
+ "gerado": "2026-11-19T15:00:17.164Z",
+ "hora": 12,
  "fnet": {
   "linhas": 1933,
   "avisos": 115,
@@ -20,7 +20,11 @@
   "FII ASA RET #1388454",
   "FII DEV ONE #1388453"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
+ "varredura": {
+  "fii": 8,
+  "acoes": 0
+ },
  "novos": [],
  "pdfs": 0
 }
