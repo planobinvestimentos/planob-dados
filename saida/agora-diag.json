@@ -1,13 +1,26 @@
 {
- "gerado": "2026-11-19T20:00:16.157Z",
+ "gerado": "2026-11-19T20:15:15.312Z",
  "hora": 17,
  "fnet": {
   "linhas": 1934,
-  "avisos": 117,
+  "avisos": 129,
   "relatorios": 89
  },
- "avisos_novos": [],
+ "avisos_novos": [
+  "CNES11:1389249",
+  "BTRU11:1389227"
+ ],
  "avisos_sem_ticker": [
+  "FII APXU #1389247",
+  "FII APXR #1389246",
+  "RIO BRAVO RENDA IMOBILÁRIA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1389239",
+  "HSI CRÉDITO ESTRUTURADO FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1389238",
+  "RIO BRAVO HEDGE FUND FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1389235",
+  "FII VIML VIN #1389234",
+  "FII LEBLON #1389233",
+  "FII EXES #1389231",
+  "FII EQI RECE #1389230",
+  "FII CVPAR #1389228",
   "FII TVOI #1389153",
   "FII NE LOG #1389045",
   "FII HIRE LOG #1388670",
@@ -23,6 +36,14 @@
   "FII DEV ONE #1388453"
  ],
  "acoes_nesta_rodada": false,
- "novos": [],
+ "pendentes": [
+  "CNES11"
+ ],
+ "lido_do_aviso": [
+  "BTRU11"
+ ],
+ "novos": [
+  "BTRU11 Rendimento"
+ ],
  "pdfs": 0
 }
