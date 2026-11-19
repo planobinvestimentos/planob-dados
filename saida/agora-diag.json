@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-19T19:00:17.149Z",
+ "gerado": "2026-11-19T19:15:16.482Z",
  "hora": 16,
  "fnet": {
-  "linhas": 1932,
-  "avisos": 116,
-  "relatorios": 85
+  "linhas": 1933,
+  "avisos": 117,
+  "relatorios": 86
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII TVOI #1389153",
   "FII NE LOG #1389045",
   "FII HIRE LOG #1388670",
   "FII SPXG #1388511",
@@ -21,11 +22,7 @@
   "FII ASA RET #1388454",
   "FII DEV ONE #1388453"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 8,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
