@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-19T15:15:16.398Z",
+ "gerado": "2026-11-19T15:30:17.613Z",
  "hora": 12,
  "fnet": {
   "linhas": 1933,
-  "avisos": 115,
+  "avisos": 116,
   "relatorios": 85
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII NE LOG #1389045",
   "FII HIRE LOG #1388670",
   "FII SPXG #1388511",
   "FII SPXM #1388510",
