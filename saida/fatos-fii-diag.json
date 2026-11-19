@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-19T04:51:05.126Z",
+ "gerado": "2026-11-19T12:01:15.486Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 135,
  "top": {
@@ -59,12 +59,12 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 456,
+  "linhas_vistas": 459,
   "categorias": {
    "Informes Periódicos": 169,
-   "Relatórios": 63,
+   "Relatórios": 64,
    "Aviso aos Cotistas - Estruturado": 49,
-   "Assembleia": 43,
+   "Assembleia": 45,
    "Oferta Pública de Distribuição de Cotas": 26,
    "Aviso aos Cotistas": 23,
    "Comunicado ao Mercado": 20,
