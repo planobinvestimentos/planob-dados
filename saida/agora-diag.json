@@ -1,6 +1,6 @@
 {
- "gerado": "2026-11-20T19:45:16.125Z",
- "hora": 16,
+ "gerado": "2026-11-20T20:00:15.205Z",
+ "hora": 17,
  "fnet": {
   "linhas": 1936,
   "avisos": 132,
@@ -24,6 +24,10 @@
   "FII NE LOG #1389045"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 1,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
