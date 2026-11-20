@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-20T03:52:21.809Z",
+ "gerado": "2026-11-20T04:41:07.830Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -108,7 +108,7 @@
  "gasto_ia": {
   "mes": "2026-11",
   "usd": 0.5629,
-  "chamadas": 501,
+  "chamadas": 502,
   "teto_usd": 5
  },
  "recentes": [
