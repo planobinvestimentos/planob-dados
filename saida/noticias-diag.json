@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-20T00:10:02.174Z",
+ "gerado": "2026-11-20T01:56:53.922Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -10,22 +10,22 @@
    "text"
   ],
   "usado": {
-   "input_tokens": 935,
+   "input_tokens": 926,
    "cache_creation_input_tokens": 0,
    "cache_read_input_tokens": 0,
    "cache_creation": {
     "ephemeral_5m_input_tokens": 0,
     "ephemeral_1h_input_tokens": 0
    },
-   "output_tokens": 1756,
+   "output_tokens": 1843,
    "output_tokens_details": {
-    "thinking_tokens": 1246
+    "thinking_tokens": 1252
    },
    "service_tier": "standard",
    "inference_geo": "global",
    "speed": "standard"
   },
-  "texto": "{\"titulo\":\"Fitch revisa rating nacional da Coelce de AA+ (bra) para AA (bra)\",\"resumo\":\"A Fitch Ratings revisou o rating nacional da Coelce e de suas debêntures de AA+ (bra) para AA (bra), com perspectiva negativa.\",\"paragrafos\":[\"A Companhia Energética do Ceará (Coelce) informou, em Fato Relevante,"
+  "texto": "{\"titulo\":\"Fitch revisa rating de crédito da Ampla Energia de AA+ (bra) para AA (bra)\",\"resumo\":\"A Fitch Ratings revisou o rating de crédito corporativo nacional da Ampla Energia de AA+ (bra) para AA (bra), com perspectiva negativa, segundo fato relevante de 19/11/2026.\",\"paragrafos\":[\"A Ampla Energ"
  },
  "ia_teste": "ok: ok",
  "ipe": {
@@ -87,10 +87,10 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 2387,
+  "linhas": 2398,
   "na_janela_e_categorias": 127,
   "sem_cnpj": 395,
-  "entrega_mais_recente": "20261119 19/11/2026 20:24",
+  "entrega_mais_recente": "20261119 19/11/2026 22:41",
   "tentativa": 1
  },
  "fontes": {
@@ -105,7 +105,7 @@
   "ia_falhas": 0,
   "fora_do_filtro": 0,
   "rotina_escondida": 0,
-  "materias": 1
+  "materias": 0
  },
  "filtro": "sem filtro de lucro (todas as empresas)",
  "materias_reprovadas": [
@@ -113,18 +113,161 @@
    "prot": "1592072",
    "empresa": "AMPLA ENERGIA E SERVICOS S.A.",
    "numeros_fora_do_documento": [
-    "3",
-    "11"
+    "11",
+    "3"
    ]
   }
  ],
  "gasto_ia": {
   "mes": "2026-11",
-  "usd": 0.5606,
-  "chamadas": 496,
+  "usd": 0.5616,
+  "chamadas": 498,
   "teto_usd": 5
  },
  "recentes": [
+  {
+   "h": "22:41",
+   "emp": "SOLVI ESSENCIS AMBIENTAL S.A.",
+   "cat": "Documentos de Oferta de Distribuição Pública",
+   "tipo": "Comunicação de Modificação de Oferta",
+   "ass": "COMUNICADO AO MERCADO DA OFERTA PÚBLICA DE DISTRIBUIÇÃO",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02707-3",
+   "c5": "20261119 19/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "22:34",
+   "emp": "SOLVI ESSENCIS AMBIENTAL S.A.",
+   "cat": "Documentos de Oferta de Distribuição Pública",
+   "tipo": "Anúncio de Início de Distribuição Pública",
+   "ass": "ANÚNCIO DE INÍCIO DA OFERTA PÚBLICA DE DISTRIBUIÇÃO",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02707-3",
+   "c5": "20261019 19/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "22:34",
+   "emp": "SOLVI ESSENCIS AMBIENTAL S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "ATA DE REUNIÃO DO CONSELHO DE ADMINISTRAÇÃO REALIZADA EM 19 DE NOVEMBRO DE 2026",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02707-3",
+   "c5": "20261119 19/11/2026 09:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "22:16",
+   "emp": "THE CHARLES SCHWAB CORPORATION",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05120-9",
+   "c5": "20261119 19/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "22:16",
+   "emp": "META PLATFORMS, INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05073-3",
+   "c5": "20261119 19/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "22:16",
+   "emp": "ENPHASE ENERGY INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05823-8",
+   "c5": "20261119 19/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "21:17",
+   "emp": "UNITED THERAPEUTICS CORP",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05003-0",
+   "c5": "20261119 19/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "21:16",
+   "emp": "APPLE INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05002-4",
+   "c5": "20261119 19/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "21:16",
+   "emp": "QUANTUMSCAPE CORP",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05867-0",
+   "c5": "20261119 19/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "21:16",
+   "emp": "ARISTA NETWORKS INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05446-1",
+   "c5": "20261119 19/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "21:16",
+   "emp": "UNION PACIFIC CORPORATION",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05092-0",
+   "c5": "20261119 19/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
   {
    "h": "20:24",
    "emp": "SANEAMENTO DE GOIAS SA",
@@ -309,19 +452,6 @@
   },
   {
    "h": "20:16",
-   "emp": "UDR INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "4",
-   "d": "2026-11-19",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05429-1",
-   "c5": "20261119 19/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "20:16",
    "emp": "LKQ CORP",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -342,6 +472,19 @@
    "d": "2026-11-19",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05276-0",
+   "c5": "20261119 19/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "20:16",
+   "emp": "UDR INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05429-1",
    "c5": "20261119 19/11/2026",
    "c8": "1",
    "c9": "AP"
@@ -440,9 +583,9 @@
   {
    "h": "19:49",
    "emp": "ALPHAVILLE S.A.",
-   "cat": "Acordo de Acionistas",
-   "tipo": "-",
-   "ass": "",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Aquisição/Alienação de Participação Acionária Relevante",
+   "ass": "Declaração de Alienação de Participação Acionária Relevante",
    "d": "2026-11-19",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "02527-5",
@@ -453,9 +596,9 @@
   {
    "h": "19:49",
    "emp": "ALPHAVILLE S.A.",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Aquisição/Alienação de Participação Acionária Relevante",
-   "ass": "Declaração de Alienação de Participação Acionária Relevante",
+   "cat": "Acordo de Acionistas",
+   "tipo": "-",
+   "ass": "",
    "d": "2026-11-19",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "02527-5",
@@ -790,6 +933,19 @@
   },
   {
    "h": "19:18",
+   "emp": "MEDICAL PROPERTIES TRUST INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05727-4",
+   "c5": "20261119 19/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:18",
    "emp": "BEONE MEDICINES LTD",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -862,19 +1018,6 @@
    "d": "2026-11-19",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05725-8",
-   "c5": "20261119 19/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "19:18",
-   "emp": "MEDICAL PROPERTIES TRUST INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "4",
-   "d": "2026-11-19",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05727-4",
    "c5": "20261119 19/11/2026",
    "c8": "1",
    "c9": "AP"
@@ -985,6 +1128,19 @@
   },
   {
    "h": "19:17",
+   "emp": "AUTOMATIC DATA PROCESSING INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05155-1",
+   "c5": "20261119 19/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:17",
    "emp": "GOLDMAN SACHS GROUP INC.",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -1008,6 +1164,19 @@
    "c5": "20261021 21/10/2026 18:30",
    "c8": "2",
    "c9": "RE"
+  },
+  {
+   "h": "19:17",
+   "emp": "INTUIT INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "10-Q",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05188-8",
+   "c5": "20261119 19/11/2026",
+   "c8": "1",
+   "c9": "AP"
   },
   {
    "h": "19:17",
@@ -1050,13 +1219,13 @@
   },
   {
    "h": "19:17",
-   "emp": "AUTOMATIC DATA PROCESSING INC",
+   "emp": "OREILLY AUTOMOTIVE INC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "8-K",
+   "ass": "4",
    "d": "2026-11-19",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05155-1",
+   "c0": "05203-5",
    "c5": "20261119 19/11/2026",
    "c8": "1",
    "c9": "AP"
@@ -1089,13 +1258,13 @@
   },
   {
    "h": "19:17",
-   "emp": "INTUIT INC",
+   "emp": "NOMURA HOLDINGS INC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "10-Q",
+   "ass": "424B2",
    "d": "2026-11-19",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05188-8",
+   "c0": "05240-0",
    "c5": "20261119 19/11/2026",
    "c8": "1",
    "c9": "AP"
@@ -1122,58 +1291,6 @@
    "d": "2026-11-19",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05204-3",
-   "c5": "20261119 19/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "19:17",
-   "emp": "OREILLY AUTOMOTIVE INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "4",
-   "d": "2026-11-19",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05203-5",
-   "c5": "20261119 19/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "19:17",
-   "emp": "ALIGN TECHNOLOGY INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Documento Diversos",
-   "d": "2026-11-19",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05356-2",
-   "c5": "20261119 19/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "19:17",
-   "emp": "AKAMAI TECHNOLOGIES INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "4",
-   "d": "2026-11-19",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05355-4",
-   "c5": "20261119 19/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "19:17",
-   "emp": "AGILENT TECHNOLOGIES INC",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "4",
-   "d": "2026-11-19",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05351-1",
    "c5": "20261119 19/11/2026",
    "c8": "1",
    "c9": "AP"
@@ -1219,13 +1336,39 @@
   },
   {
    "h": "19:17",
-   "emp": "NOMURA HOLDINGS INC",
+   "emp": "ALIGN TECHNOLOGY INC",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "424B2",
+   "ass": "Documento Diversos",
    "d": "2026-11-19",
    "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05240-0",
+   "c0": "05356-2",
+   "c5": "20261119 19/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:17",
+   "emp": "AKAMAI TECHNOLOGIES INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05355-4",
+   "c5": "20261119 19/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:17",
+   "emp": "AGILENT TECHNOLOGIES INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05351-1",
    "c5": "20261119 19/11/2026",
    "c8": "1",
    "c9": "AP"
@@ -1245,6 +1388,19 @@
   },
   {
    "h": "19:16",
+   "emp": "CITIGROUP INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Documento Diversos",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05010-5",
+   "c5": "20261119 19/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:16",
    "emp": "CISCO SYSTEMS, INC.",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -1258,6 +1414,19 @@
   },
   {
    "h": "19:16",
+   "emp": "WELLS FARGO & COMPANY",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-11-19",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05013-0",
+   "c5": "20261119 19/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:16",
    "emp": "QUALCOMM INC.",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -1265,19 +1434,6 @@
    "d": "2026-11-19",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05041-5",
-   "c5": "20261119 19/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "19:16",
-   "emp": "CITIGROUP INC.",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Documento Diversos",
-   "d": "2026-11-19",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05010-5",
    "c5": "20261119 19/11/2026",
    "c8": "1",
    "c9": "AP"
@@ -1317,19 +1473,6 @@
    "d": "2026-11-19",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05121-7",
-   "c5": "20261119 19/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "19:16",
-   "emp": "WELLS FARGO & COMPANY",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "424B2",
-   "d": "2026-11-19",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05013-0",
    "c5": "20261119 19/11/2026",
    "c8": "1",
    "c9": "AP"
@@ -1541,150 +1684,6 @@
    "c5": "20261110 10/11/2026 15:00",
    "c8": "1",
    "c9": "AP"
-  },
-  {
-   "h": "18:37",
-   "emp": "PORTO SEGURO ADMINISTRADORA DE CONSORCIOS LTDA",
-   "cat": "Documentos de Oferta de Distribuição Pública",
-   "tipo": "Anúncio de Encerramento de Distribuição Pública",
-   "ass": "ANÚNCIO DE ENCERRAMENTO DA OFERTA PÚBLICA DE DISTRIBUIÇÃO DA 3ª (TERCEIRA) EMISSÃO DE NOTA",
-   "d": "2026-11-19",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "91806-4",
-   "c5": "20261119 19/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:34",
-   "emp": "ORIGEM ENERGIA S.A.",
-   "cat": "Reunião da Administração",
-   "tipo": "Conselho de Administração",
-   "ass": "Aprovação ITR 3º Trimestre 2026",
-   "d": "2026-11-19",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "02722-7",
-   "c5": "20261112 12/11/2026 10:00",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:33",
-   "emp": "ARANDU INVESTIMENTOS S.A.",
-   "cat": "Fato Relevante",
-   "tipo": "-",
-   "ass": "FR Aprovação Squeeze Out",
-   "d": "2026-11-19",
-   "st": "ja_enviado_antes",
-   "c0": "02588-7",
-   "c5": "20261119 19/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:33",
-   "emp": "ALPHAVILLE S.A.",
-   "cat": "Reunião da Administração",
-   "tipo": "Conselho de Administração",
-   "ass": "Aprovação das informações intermediárias trimestrais, individuais e consolidadas da Compan",
-   "d": "2026-11-19",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "02527-5",
-   "c5": "20261111 11/11/2026 09:30",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:30",
-   "emp": "PORTO SEGURO S.A.",
-   "cat": "Aviso aos Acionistas",
-   "tipo": "Outros avisos",
-   "ass": "Dividendos/Juros sobre Capital Próprio",
-   "d": "2026-11-19",
-   "st": "ja_enviado_antes",
-   "c0": "01665-9",
-   "c5": "20261119 19/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:28",
-   "emp": "ARANDU INVESTIMENTOS S.A.",
-   "cat": "Assembleia",
-   "tipo": "AGE",
-   "ass": "Mapa final de votação detalhado",
-   "d": "2026-11-19",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "02588-7",
-   "c5": "20261119 19/11/2026 10:00",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:26",
-   "emp": "FASA S.A.",
-   "cat": "Informações de Companhias em Recuperação Judicial ou Extrajudicial",
-   "tipo": "Contas demonstrativas mensais",
-   "ass": "",
-   "d": "2026-11-19",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "01542-3",
-   "c5": "20261005 05/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:26",
-   "emp": "FASA S.A.",
-   "cat": "Informações de Companhias em Recuperação Judicial ou Extrajudicial",
-   "tipo": "Plano de Recuperação",
-   "ass": "Modificativo ao Plano de Recuperação Judicial",
-   "d": "2026-11-19",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "01542-3",
-   "c5": "20261118 18/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:26",
-   "emp": "FASA S.A.",
-   "cat": "Fato Relevante",
-   "tipo": "-",
-   "ass": "Apresentação de Modificativo ao Plano de Recuperação Judicial",
-   "d": "2026-11-19",
-   "st": "ja_enviado_antes",
-   "c0": "01542-3",
-   "c5": "20261119 19/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:25",
-   "emp": "FASA S.A.",
-   "cat": "Informações de Companhias em Recuperação Judicial ou Extrajudicial",
-   "tipo": "Contas demonstrativas mensais",
-   "ass": "",
-   "d": "2026-11-19",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "01542-3",
-   "c5": "20261026 26/10/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "18:24",
-   "emp": "CAGECE - CIA DE AGUA E ESGOTO DO CEARA",
-   "cat": "Aviso aos Acionistas",
-   "tipo": "Outros avisos",
-   "ass": "Prazo de Subscrição",
-   "d": "2026-11-19",
-   "st": "sem_ticker_para_o_cnpj",
-   "c0": "01854-6",
-   "c5": "20261119 19/11/2026",
-   "c8": "1",
-   "c9": "AP"
   }
- ],
- "erro": "fetch failed"
+ ]
 }
