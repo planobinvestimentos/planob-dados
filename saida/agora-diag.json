@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-20T19:00:18.341Z",
+ "gerado": "2026-11-20T19:15:17.050Z",
  "hora": 16,
  "fnet": {
   "linhas": 1936,
@@ -23,11 +23,7 @@
   "FII TVOI #1389153",
   "FII NE LOG #1389045"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 1,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
