@@ -1,33 +1,13 @@
 {
- "gerado": "2026-11-19T19:07:47.001Z",
+ "gerado": "2026-11-20T09:30:17.112Z",
  "modo": "hoje",
- "hoje": "2026-11-19",
- "global_recebidos": 125,
+ "hoje": "2026-11-20",
+ "global_recebidos": 124,
  "global": "ok (0 de alto impacto)",
- "ibge_recebidos": 1,
- "ibge_chaves": [
-  "id",
-  "titulo",
-  "descricao",
-  "data_divulgacao",
-  "tipo_id",
-  "tipo",
-  "produto_id",
-  "nome_produto",
-  "alias_produto",
-  "descricao_produto",
-  "ano_referencia_inicio",
-  "mes_referencia_inicio",
-  "ano_referencia_fim",
-  "mes_referencia_fim",
-  "link"
- ],
- "ibge_amostra": [
-  "{\"id\":4328,\"titulo\":\"Pesquisas Trimestrais do Abate de Animais, do Leite, do Couro e da Produção de Ovos de Galinha: Primeiros resultados\",\"descricao\":\"\",\"data_divulgacao\":\"19/11/2026 12:00:00\",\"tipo_id\":1,\"tipo\":\"Divulgação de Indicadores\",\"produto_id\":19120,\"nome_produto\":\"Pesquisas Trimestrais do Abate de Animais, do Leite, do Couro e da Produção de Ovos de Galinha: Primeiros Resultados\",\"alias"
- ],
- "ibge_datas": [
-  "19/11/2026 12:00:00"
- ],
+ "ibge_recebidos": 0,
+ "ibge_chaves": [],
+ "ibge_amostra": [],
+ "ibge_datas": [],
  "ibge": "ok (0 de interesse)",
  "regras": "ok (0)",
  "manual": "ok (0)",
