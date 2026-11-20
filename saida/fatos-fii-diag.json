@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-20T02:44:54.763Z",
+ "gerado": "2026-11-20T03:52:29.224Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 135,
  "top": {
@@ -59,19 +59,19 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 589,
+  "linhas_vistas": 403,
   "categorias": {
-   "Informes Periódicos": 182,
-   "Relatórios": 102,
-   "Assembleia": 80,
-   "Aviso aos Cotistas - Estruturado": 63,
-   "Oferta Pública de Distribuição de Cotas": 33,
-   "Regulamento": 27,
-   "Aviso aos Cotistas": 26,
-   "Atos de Deliberação do Administrador": 23
+   "Informes Periódicos": 119,
+   "Relatórios": 77,
+   "Assembleia": 61,
+   "Aviso aos Cotistas - Estruturado": 39,
+   "Oferta Pública de Distribuição de Cotas": 23,
+   "Regulamento": 20,
+   "Atos de Deliberação do Administrador": 17,
+   "Fato Relevante": 17
   },
-  "fatos_relevantes": 21,
-  "de_fiis_liquidos": 4
+  "fatos_relevantes": 17,
+  "de_fiis_liquidos": 3
  },
  "fatos_sem_ticker": [
   "FII XP INDL",
@@ -87,9 +87,7 @@
   "FII LOTS",
   "FII VIOL",
   "FII OXRL",
-  "FII AFHF",
-  "SPX PORTFÓLIO ALFA FUNDO DE INVESTIMENTO IMOBILIÁRIO",
-  "POXIM FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA"
+  "FII AFHF"
  ],
  "analisados": 0,
  "sem_texto": 0,
