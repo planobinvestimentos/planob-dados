@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-20T18:44:09.507Z",
+ "gerado": "2026-11-21T17:44:22.086Z",
  "consultados": 979,
  "com_dados": 385,
- "sem_dados": 339,
+ "sem_dados": 340,
  "erros": 0,
  "exemplos_erro": [],
  "exemplos_sem_dados": [
@@ -39,8 +39,8 @@
  ],
  "via_b3": 0,
  "b3": {
-  "consultadas": 317,
-  "ok": 317,
+  "consultadas": 318,
+  "ok": 318,
   "falhas": 0,
   "recuperados": 0,
   "erro": null,
