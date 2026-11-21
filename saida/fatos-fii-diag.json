@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-21T02:54:37.148Z",
+ "gerado": "2026-11-21T03:45:05.446Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 135,
  "top": {
@@ -59,19 +59,19 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 403,
+  "linhas_vistas": 249,
   "categorias": {
-   "Informes Periódicos": 119,
-   "Relatórios": 77,
-   "Assembleia": 61,
-   "Aviso aos Cotistas - Estruturado": 39,
-   "Oferta Pública de Distribuição de Cotas": 23,
-   "Regulamento": 20,
-   "Atos de Deliberação do Administrador": 17,
-   "Fato Relevante": 17
+   "Relatórios": 62,
+   "Informes Periódicos": 50,
+   "Assembleia": 42,
+   "Aviso aos Cotistas - Estruturado": 20,
+   "Atos de Deliberação do Administrador": 16,
+   "Regulamento": 15,
+   "Oferta Pública de Distribuição de Cotas": 14,
+   "Fato Relevante": 10
   },
-  "fatos_relevantes": 17,
-  "de_fiis_liquidos": 3
+  "fatos_relevantes": 10,
+  "de_fiis_liquidos": 2
  },
  "fatos_sem_ticker": [
   "FII XP INDL",
@@ -81,13 +81,7 @@
   "FII HIRE LOG",
   "FII RIONEGRO",
   "FII LOTUS TOWER FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
-  "LOTUS TOWER II FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
-  "FII KILIMA",
-  "FII SUNOFOFI",
-  "FII LOTS",
-  "FII VIOL",
-  "FII OXRL",
-  "FII AFHF"
+  "LOTUS TOWER II FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA"
  ],
  "analisados": 0,
  "sem_texto": 0,
