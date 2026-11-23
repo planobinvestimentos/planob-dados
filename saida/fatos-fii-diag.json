@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-21T04:36:26.055Z",
+ "gerado": "2026-11-23T12:00:54.476Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 135,
  "top": {
@@ -59,30 +59,13 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 249,
+  "linhas_vistas": 1,
   "categorias": {
-   "Relatórios": 62,
-   "Informes Periódicos": 50,
-   "Assembleia": 42,
-   "Aviso aos Cotistas - Estruturado": 20,
-   "Atos de Deliberação do Administrador": 16,
-   "Regulamento": 15,
-   "Oferta Pública de Distribuição de Cotas": 14,
-   "Fato Relevante": 10
+   "Relatórios": 1
   },
-  "fatos_relevantes": 10,
-  "de_fiis_liquidos": 2
+  "fatos_relevantes": 0,
+  "de_fiis_liquidos": 0
  },
- "fatos_sem_ticker": [
-  "FII XP INDL",
-  "FII EUROPAR",
-  "RIZA THERA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
-  "FII CCVA",
-  "FII HIRE LOG",
-  "FII RIONEGRO",
-  "FII LOTUS TOWER FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
-  "LOTUS TOWER II FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA"
- ],
  "analisados": 0,
  "sem_texto": 0,
  "fora_do_escopo": 0,
