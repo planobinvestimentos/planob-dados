@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-21T07:53:25.589Z",
+ "gerado": "2026-11-23T20:44:38.877Z",
  "anos": [
   2021,
   2022,
@@ -8,9 +8,9 @@
   2025
  ],
  "ano_2025": {
-  "empresas_com_lucro_lido": 671,
-  "empresas_com_dividendo_pago": 400,
-  "linhas_dre": 75049
+  "empresas_com_lucro_lido": 672,
+  "empresas_com_dividendo_pago": 401,
+  "linhas_dre": 75415
  },
  "ano_2021": {
   "empresas_com_lucro_lido": 765,
@@ -157,7 +157,7 @@
  "reprovadas": {
   "prejuizo": 287,
   "sem_dividendo": 82,
-  "historico_incompleto": 267
+  "historico_incompleto": 268
  },
- "total_analisadas": 855
+ "total_analisadas": 856
 }
