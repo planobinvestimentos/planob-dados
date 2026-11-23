@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-23T14:00:19.835Z",
+ "gerado": "2026-11-23T14:30:14.719Z",
  "hoje": "2026-11-23",
  "hora": 11,
  "contratos": 43,
@@ -11,6 +11,6 @@
   "semVariacao": false,
   "parado": false
  },
- "mensagem_chars": 669,
- "resultado": "fetch failed"
+ "mensagem_chars": 670,
+ "resultado": "edição das 11h enviada (9 vencimentos)"
 }
