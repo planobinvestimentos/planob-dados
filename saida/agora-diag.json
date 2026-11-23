@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-23T21:00:14.546Z",
+ "gerado": "2026-11-23T21:15:15.135Z",
  "hora": 18,
  "fnet": {
-  "linhas": 629,
-  "avisos": 106,
-  "relatorios": 96
+  "linhas": 638,
+  "avisos": 107,
+  "relatorios": 98
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII BTSP II #1390164",
   "RIZA FORTIX PRÉ-FIXADO FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1390094",
   "RIZA TRAKTOS FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1390071",
   "RIZA EQUITUS REAL ESTATE FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1390070",
@@ -29,10 +30,6 @@
   "BRASOL RENDA IMOBILIÁRIA SOLAR II FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA #1390013"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 0,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
