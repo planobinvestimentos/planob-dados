@@ -1,11 +1,11 @@
 {
- "gerado": "2026-11-20T13:00:31.203Z",
+ "gerado": "2026-11-23T13:00:27.527Z",
  "baixados": 1,
  "falhas": {
   "2026-11-20": "HTTP 500",
   "2026-11-02": "HTTP 500"
  },
  "lidos": 1,
- "dias_calculados": 42,
- "ultimo": "2026-11-17"
+ "dias_calculados": 43,
+ "ultimo": "2026-11-18"
 }
