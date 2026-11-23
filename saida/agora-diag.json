@@ -1,31 +1,15 @@
 {
- "gerado": "2026-11-21T00:57:07.021Z",
- "hora": 21,
+ "gerado": "2026-11-23T12:00:16.660Z",
+ "hora": 9,
  "fnet": {
-  "linhas": 1936,
-  "avisos": 132,
-  "relatorios": 107
+  "linhas": 571,
+  "avisos": 86,
+  "relatorios": 92
  },
  "avisos_novos": [],
- "avisos_sem_ticker": [
-  "FII TVMO #1389386",
-  "ARX CHILLON RECEBÍVEIS FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1389269",
-  "FII APXU #1389247",
-  "FII APXR #1389246",
-  "RIO BRAVO RENDA IMOBILÁRIA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1389239",
-  "HSI CRÉDITO ESTRUTURADO FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1389238",
-  "RIO BRAVO HEDGE FUND FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1389235",
-  "FII VIML VIN #1389234",
-  "FII LEBLON #1389233",
-  "FII EXES #1389231",
-  "FII EQI RECE #1389230",
-  "FII CVPAR #1389228",
-  "FII TVOI #1389153",
-  "FII NE LOG #1389045"
- ],
  "acoes_nesta_rodada": false,
  "varredura": {
-  "fii": 1,
+  "fii": 0,
   "acoes": "não consultadas"
  },
  "novos": [],
