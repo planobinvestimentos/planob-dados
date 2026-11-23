@@ -1,15 +1,15 @@
 {
- "gerado": "2026-11-23T19:45:15.709Z",
- "hora": 16,
+ "gerado": "2026-11-23T20:00:16.789Z",
+ "hora": 17,
  "fnet": {
-  "linhas": 613,
-  "avisos": 97,
+  "linhas": 618,
+  "avisos": 99,
   "relatorios": 96
  },
- "avisos_novos": [
-  "GZIT11:1390039"
- ],
+ "avisos_novos": [],
  "avisos_sem_ticker": [
+  "VALE DO CERRADO FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA #1390056",
+  "FII IDUA #1390053",
   "FARIA LIMA PLAZA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1390040",
   "FII GALERIA #1390038",
   "ENERGIA REAL FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1390037",
@@ -22,11 +22,10 @@
   "BRASOL RENDA IMOBILIÁRIA SOLAR II FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA #1390013"
  ],
  "acoes_nesta_rodada": false,
- "lido_do_aviso": [
-  "GZIT11"
- ],
- "novos": [
-  "GZIT11 Rendimento"
- ],
+ "varredura": {
+  "fii": 0,
+  "acoes": "não consultadas"
+ },
+ "novos": [],
  "pdfs": 0
 }
