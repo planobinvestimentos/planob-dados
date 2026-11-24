@@ -1,31 +1,30 @@
 {
- "gerado": "2026-11-24T03:42:14.402Z",
+ "gerado": "2026-11-24T05:03:52.426Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
   "modelo": "claude-haiku-5-5",
   "parada": "end_turn",
   "blocos": [
-   "thinking",
    "text"
   ],
   "usado": {
-   "input_tokens": 8023,
+   "input_tokens": 17,
    "cache_creation_input_tokens": 0,
    "cache_read_input_tokens": 0,
    "cache_creation": {
     "ephemeral_5m_input_tokens": 0,
     "ephemeral_1h_input_tokens": 0
    },
-   "output_tokens": 3128,
+   "output_tokens": 4,
    "output_tokens_details": {
-    "thinking_tokens": 2191
+    "thinking_tokens": 0
    },
    "service_tier": "standard",
    "inference_geo": "global",
    "speed": "standard"
   },
-  "texto": "{\"titulo\":\"Braskem comunica acordo principiológico em Recuperação Extrajudicial\",\"resumo\":\"Braskem informa acordo principiológico com credores na Recuperação Extrajudicial. Termos ainda não são vinculantes e seguem em negociação.\",\"paragrafos\":[\"A Braskem S.A. divulgou um Fato Relevante, comunicado "
+  "texto": "ok"
  },
  "ia_teste": "ok: ok",
  "ipe": {
@@ -84,30 +83,29 @@
  },
  "enet": {
   "linhas": 1507,
-  "na_janela_e_categorias": 84,
+  "na_janela_e_categorias": 83,
   "sem_cnpj": 367,
   "entrega_mais_recente": "20261124 24/11/2026 00:16",
   "tentativa": 1
  },
  "fontes": {
-  "enet": 84,
+  "enet": 83,
   "ipe": 29,
-  "apos_juntar": 87
+  "apos_juntar": 86
  },
  "itens": {
-  "novos": 1,
-  "enviados_agora": 1,
+  "novos": 0,
+  "enviados_agora": 0,
   "com_ia": 0,
   "ia_falhas": 0,
   "fora_do_filtro": 0,
-  "rotina_escondida": 0,
-  "materias": 1
+  "rotina_escondida": 0
  },
  "filtro": "sem filtro de lucro (todas as empresas)",
  "gasto_ia": {
   "mes": "2026-11",
   "usd": 0.5867,
-  "chamadas": 532,
+  "chamadas": 533,
   "teto_usd": 5
  },
  "recentes": [
@@ -131,7 +129,7 @@
    "tipo": "-",
    "ass": "Braskem comunica sobre acordo principiológico no âmbito da Recuperação Extrajudicial",
    "d": "2026-11-24",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "00482-0",
    "c5": "20261123 23/11/2026",
    "c8": "1",
@@ -182,19 +180,6 @@
    "cat": "Fato Relevante",
    "tipo": "-",
    "ass": "Petrobras retorna ao setor de etanol com aquisição de participação em produtora no Centro-",
-   "d": "2026-11-23",
-   "st": "ja_enviado_antes",
-   "c0": "00951-2",
-   "c5": "20261123 23/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "19:19",
-   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
-   "cat": "Fato Relevante",
-   "tipo": "-",
-   "ass": "Petrobras aprova Plano de Negócios 2027-2031",
    "d": "2026-11-23",
    "st": "ja_enviado_antes",
    "c0": "00951-2",
