@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-24T00:15:14.613Z",
- "hora": 21,
+ "gerado": "2026-11-24T12:00:16.577Z",
+ "hora": 9,
  "fnet": {
-  "linhas": 686,
+  "linhas": 692,
   "avisos": 107,
-  "relatorios": 120
+  "relatorios": 123
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
@@ -30,6 +30,10 @@
   "BRASOL RENDA IMOBILIÁRIA SOLAR II FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA #1390013"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 1,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
