@@ -1,44 +1,16 @@
 {
- "gerado": "2026-11-23T10:30:17.642Z",
- "modo": "semana",
- "hoje": "2026-11-23",
- "global_recebidos": 75,
- "global": "ok (2 de alto impacto)",
- "ibge_recebidos": 7,
- "ibge_chaves": [
-  "id",
-  "titulo",
-  "descricao",
-  "data_divulgacao",
-  "tipo_id",
-  "tipo",
-  "produto_id",
-  "nome_produto",
-  "alias_produto",
-  "descricao_produto",
-  "ano_referencia_inicio",
-  "mes_referencia_inicio",
-  "ano_referencia_fim",
-  "mes_referencia_fim",
-  "link"
- ],
- "ibge_amostra": [
-  "{\"id\":4579,\"titulo\":\"Pesquisa de Orçamentos Familiares - 2024-2025 - Primeiros resultados\",\"descricao\":\"\",\"data_divulgacao\":\"27/11/2026 13:00:00\",\"tipo_id\":5,\"tipo\":\"Estudos e Pesquisas Estruturais e Especiais\",\"produto_id\":0,\"nome_produto\":\"\",\"alias_produto\":\"\",\"descricao_produto\":\"\",\"ano_referencia_inicio\":0,\"mes_referencia_inicio\":0,\"ano_referencia_fim\":0,\"mes_referencia_fim\":0,\"link\":\"\"}",
-  "{\"id\":4591,\"titulo\":\"Tábuas Completas de Mortalidade para o Brasil\",\"descricao\":\"\",\"data_divulgacao\":\"27/11/2026 13:00:00\",\"tipo_id\":5,\"tipo\":\"Estudos e Pesquisas Estruturais e Especiais\",\"produto_id\":9126,\"nome_produto\":\"Tábuas Completas de Mortalidade\",\"alias_produto\":\"tabuas-completas-de-mortalidade\",\"descricao_produto\":\"\",\"ano_referencia_inicio\":2025,\"mes_referencia_inicio\":0,\"ano_referencia_f",
-  "{\"id\":4331,\"titulo\":\"Pesquisa Nacional por Amostra de Domicílios Contínua Mensal\",\"descricao\":\"\",\"data_divulgacao\":\"27/11/2026 12:00:00\",\"tipo_id\":1,\"tipo\":\"Divulgação de Indicadores\",\"produto_id\":9171,\"nome_produto\":\"Divulgação mensal#pnadc1\",\"alias_produto\":\"pesquisa-nacional-por-amostra-de-domicilios-continua-mensal\",\"descricao_produto\":\"<p align=\\\"justify\\\">Destina-se a produzir informações co",
-  "{\"id\":4574,\"titulo\":\"Estatísticas de Finanças Públicas e Conta Intermediária de Governo: Brasil\",\"descricao\":\"\",\"data_divulgacao\":\"26/11/2026 13:00:00\",\"tipo_id\":5,\"tipo\":\"Estudos e Pesquisas Estruturais e Especiais\",\"produto_id\":9083,\"nome_produto\":\"Edições#estatisticasdefinançaspublicas1\",\"alias_produto\":\"estatisticas-de-financas-publicas-e-conta-intermediaria-de-governo\",\"descricao_produto\":\"\","
- ],
- "ibge_datas": [
-  "25/11/2026 13:00:00",
-  "27/11/2026 13:00:00"
- ],
- "ibge": "ok (1 de interesse)",
- "regras": "ok (1)",
+ "gerado": "2026-11-24T09:30:17.876Z",
+ "modo": "hoje",
+ "hoje": "2026-11-24",
+ "global_recebidos": 74,
+ "global": "ok (0 de alto impacto)",
+ "ibge_recebidos": 0,
+ "ibge_chaves": [],
+ "ibge_amostra": [],
+ "ibge_datas": [],
+ "ibge": "ok (0 de interesse)",
+ "regras": "ok (0)",
  "manual": "ok (0)",
- "eventos": 4,
- "por_fonte": {
-  "regra": 1,
-  "ibge": 1,
-  "global": 2
- }
+ "eventos": 0,
+ "por_fonte": {}
 }
