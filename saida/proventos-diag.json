@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-24T11:49:16.917Z",
+ "gerado": "2026-11-24T12:51:50.700Z",
  "de": "2026-11-22",
  "ate": "2026-11-24",
  "fii": {
@@ -38,7 +38,7 @@
  "acoes": {
   "emissoras": 280,
   "amostra": {
-   "emissora": "AFLT",
+   "emissora": "ABCB",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -51,19 +51,19 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAFLTACNOR1",
-    "paymentDate": "31/12/2026",
-    "rate": "0,15851704140",
-    "relatedTo": "Complementar/2026",
-    "approvedOn": "21/07/2026",
-    "isinCode": "BRAFLTACNOR1",
-    "label": "DIVIDENDO",
-    "lastDatePrior": "24/07/2026",
+    "assetIssued": "BRABCBACNPR4",
+    "paymentDate": "12/08/2026",
+    "rate": "1,16800000000",
+    "relatedTo": "1º Semestre/2026",
+    "approvedOn": "24/06/2026",
+    "isinCode": "BRABCBACNPR4",
+    "label": "JRS CAP PROPRIO",
+    "lastDatePrior": "29/06/2026",
     "remarks": ""
    }
   },
   "amostraBonificacao": {
-   "emissora": "AGRO",
+   "emissora": "AERI",
    "campos": [
     "assetIssued",
     "factor",
@@ -74,12 +74,12 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAGROACNOR7",
-    "factor": "9.900,00000000000",
-    "approvedOn": "31/10/2007",
-    "isinCode": "BRAGROACNOR7",
-    "label": "DESDOBRAMENTO",
-    "lastDatePrior": "31/10/2007",
+    "assetIssued": "BRAERIACNOR4",
+    "factor": "0,05000000000",
+    "approvedOn": "11/04/2024",
+    "isinCode": "BRAERIACNOR4",
+    "label": "GRUPAMENTO",
+    "lastDatePrior": "13/05/2024",
     "remarks": ""
    }
   },
