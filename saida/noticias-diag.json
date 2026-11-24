@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-24T06:45:12.559Z",
+ "gerado": "2026-11-24T07:23:46.346Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -81,11 +81,17 @@
   "total": 2592,
   "novos": 0
  },
- "enet_erro": "ENETWeb: The operation was aborted due to timeout",
+ "enet": {
+  "linhas": 1507,
+  "na_janela_e_categorias": 83,
+  "sem_cnpj": 367,
+  "entrega_mais_recente": "20261124 24/11/2026 00:16",
+  "tentativa": 1
+ },
  "fontes": {
-  "enet": 0,
+  "enet": 83,
   "ipe": 29,
-  "apos_juntar": 29
+  "apos_juntar": 86
  },
  "itens": {
   "novos": 0,
@@ -99,8 +105,139 @@
  "gasto_ia": {
   "mes": "2026-11",
   "usd": 0.5867,
-  "chamadas": 535,
+  "chamadas": 536,
   "teto_usd": 5
  },
- "recentes": []
+ "recentes": [
+  {
+   "h": "00:16",
+   "emp": "BILL HOLDINGS, INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "SCHEDULE 13D/A",
+   "d": "2026-11-24",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05741-0",
+   "c5": "20261124 24/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "00:06",
+   "emp": "BRASKEM S.A.",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Braskem comunica sobre acordo principiológico no âmbito da Recuperação Extrajudicial",
+   "d": "2026-11-24",
+   "st": "ja_enviado_antes",
+   "c0": "00482-0",
+   "c5": "20261123 23/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "20:31",
+   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Apresentações a analistas/agentes do mercado",
+   "ass": "Plano de Negócios Petrobras 2027- 2031",
+   "d": "2026-11-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00951-2",
+   "c5": "20261124 24/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:53",
+   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+   "cat": "Informação Prestada às Bolsas Estrangeiras",
+   "tipo": "-",
+   "ass": "Desempenho Financeiro da Petrobras 3T26 - Informações incorporadas em prospectos de captaç",
+   "d": "2026-11-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00951-2",
+   "c5": "20261123 23/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:39",
+   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Petrobras aprova Plano de Negócios 2027-2031",
+   "d": "2026-11-23",
+   "st": "ja_enviado_antes",
+   "c0": "00951-2",
+   "c5": "20261123 23/11/2026",
+   "c8": "2",
+   "c9": "RE"
+  },
+  {
+   "h": "19:29",
+   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Petrobras retorna ao setor de etanol com aquisição de participação em produtora no Centro-",
+   "d": "2026-11-23",
+   "st": "ja_enviado_antes",
+   "c0": "00951-2",
+   "c5": "20261123 23/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:16",
+   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Petrobras informa sobre remuneração extraordinária aos acionistas",
+   "d": "2026-11-23",
+   "st": "ja_enviado_antes",
+   "c0": "00951-2",
+   "c5": "20261123 23/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:01",
+   "emp": "VALE S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Vale informa sobre retomada parcial de operações na mina de Viga",
+   "d": "2026-11-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00417-0",
+   "c5": "20261123 23/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:39",
+   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+   "cat": "Informação Prestada às Bolsas Estrangeiras",
+   "tipo": "-",
+   "ass": "Demonstrações Financeiras da Petrobras 3T26 - Informações incorporadas em prospectos de ca",
+   "d": "2026-11-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00951-2",
+   "c5": "20261123 23/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:28",
+   "emp": "ITAUSA S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Apresentação Institucional",
+   "d": "2026-11-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00761-7",
+   "c5": "20261123 23/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  }
+ ]
 }
