@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-23T23:36:13.162Z",
+ "gerado": "2026-11-24T02:02:56.892Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 137,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 122,
+  "linhas_vistas": 126,
   "categorias": {
-   "Relatórios": 31,
+   "Relatórios": 34,
    "Informes Periódicos": 19,
    "Oferta Pública de Distribuição de Cotas": 14,
    "Aviso aos Cotistas - Estruturado": 12,
-   "Fato Relevante": 10,
+   "Fato Relevante": 11,
    "Aviso aos Cotistas": 9,
    "Regulamento": 8,
    "Atos de Deliberação do Administrador": 8
   },
-  "fatos_relevantes": 10,
+  "fatos_relevantes": 11,
   "de_fiis_liquidos": 1
  },
  "fatos_sem_ticker": [
+  "FII BTYU",
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO TG RENDA URBANA MASTER - RESPONSABILIDADE LIMITADA",
   "LCP LOTES III FUNDO DE INVESTIMENTO IMOBILIÁRIO EXCLUSIVO RESPONSABILIDADE LIMITADA",
   "LCP LOTES II FUNDO DE INVESTIMENTO IMOBILIÁRIO EXCLUSIVO RESPONSABILIDADE LIMITADA",
@@ -84,14 +85,14 @@
   "FII INFRA RE",
   "FII DEL MONT"
  ],
- "analisados": 1,
+ "analisados": 0,
  "sem_texto": 0,
  "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 1,
+ "materias_novas": 0,
  "telegram": {
-  "enviados": 1,
+  "enviados": 0,
   "erros": []
  }
 }
