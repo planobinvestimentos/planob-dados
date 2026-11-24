@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-24T22:04:44.898Z",
+ "gerado": "2026-11-24T23:47:08.450Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 137,
  "top": {
@@ -59,19 +59,19 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 202,
+  "linhas_vistas": 219,
   "categorias": {
-   "Relatórios": 68,
-   "Informes Periódicos": 22,
-   "Fato Relevante": 21,
-   "Oferta Pública de Distribuição de Cotas": 18,
+   "Relatórios": 75,
+   "Informes Periódicos": 23,
+   "Fato Relevante": 22,
+   "Assembleia": 21,
+   "Oferta Pública de Distribuição de Cotas": 20,
    "Aviso aos Cotistas - Estruturado": 17,
-   "Assembleia": 16,
-   "Regulamento": 13,
+   "Regulamento": 14,
    "Aviso aos Cotistas": 10
   },
-  "fatos_relevantes": 21,
-  "de_fiis_liquidos": 3
+  "fatos_relevantes": 22,
+  "de_fiis_liquidos": 4
  },
  "fatos_sem_ticker": [
   "FII MULT REN",
@@ -93,14 +93,14 @@
   "FII INFRA RE",
   "FII DEL MONT"
  ],
- "analisados": 2,
+ "analisados": 1,
  "sem_texto": 0,
- "fora_do_escopo": 2,
+ "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 0,
+ "materias_novas": 1,
  "telegram": {
-  "enviados": 0,
+  "enviados": 1,
   "erros": []
  }
 }
