@@ -1,22 +1,12 @@
 {
- "gerado": "2026-11-24T23:00:18.726Z",
+ "gerado": "2026-11-24T23:30:25.879Z",
  "de": "2026-11-22",
  "ate": "2026-11-24",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 144,
-  "amostra": null,
-  "erro": "as primeiras consultas falharam (Unexpected end of JSON input): endereço bloqueado ou mudou",
-  "ok": 0,
-  "falhas": 11,
-  "semRendimentos": 0,
-  "itens": 0,
-  "aviso_regra": "FIIs não divulgados nesta rodada (sem lista de liquidez ou falha na B3)"
- },
- "acoes": {
-  "emissoras": 280,
   "amostra": {
-   "emissora": "ABEV",
+   "fundo": "FII AJ MALLS",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -29,14 +19,46 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRABEVACNOR1",
+    "assetIssued": "BRAJFICTF001",
+    "paymentDate": "24/11/2026",
+    "rate": "0,06200000000",
+    "relatedTo": "10/2026/2026",
+    "approvedOn": "16/11/2026",
+    "isinCode": "BRAJFICTF001",
+    "label": "RENDIMENTO",
+    "lastDatePrior": "16/11/2026",
+    "remarks": ""
+   }
+  },
+  "ok": 141,
+  "falhas": 3,
+  "semRendimentos": 9,
+  "itens": 1
+ },
+ "acoes": {
+  "emissoras": 280,
+  "amostra": {
+   "emissora": "AFLT",
+   "campos": [
+    "assetIssued",
+    "paymentDate",
+    "rate",
+    "relatedTo",
+    "approvedOn",
+    "isinCode",
+    "label",
+    "lastDatePrior",
+    "remarks"
+   ],
+   "primeiro": {
+    "assetIssued": "BRAFLTACNOR1",
     "paymentDate": "31/12/2026",
-    "rate": "0,07130000000",
-    "relatedTo": "Anual/2026",
-    "approvedOn": "29/07/2026",
-    "isinCode": "BRABEVACNOR1",
-    "label": "JRS CAP PROPRIO",
-    "lastDatePrior": "21/09/2026",
+    "rate": "0,15851704140",
+    "relatedTo": "Complementar/2026",
+    "approvedOn": "21/07/2026",
+    "isinCode": "BRAFLTACNOR1",
+    "label": "DIVIDENDO",
+    "lastDatePrior": "24/07/2026",
     "remarks": ""
    }
   },
@@ -61,9 +83,9 @@
     "remarks": ""
    }
   },
-  "ok": 266,
-  "falhas": 14,
-  "semDividendos": 81,
+  "ok": 280,
+  "falhas": 0,
+  "semDividendos": 86,
   "itens": 0
  }
 }
