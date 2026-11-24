@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-24T21:51:03.807Z",
- "hora": 18,
+ "gerado": "2026-11-24T22:00:21.638Z",
+ "hora": 19,
  "fnet": {
-  "linhas": 751,
+  "linhas": 755,
   "avisos": 113,
-  "relatorios": 148
+  "relatorios": 149
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
@@ -35,6 +35,10 @@
   "EXA RENDA HIGH GRADE FUNDO DE INVESTIMENTO IMOBILIÁRIO #1390016"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 1,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
