@@ -1,44 +1,22 @@
 {
- "gerado": "2026-11-24T12:51:50.700Z",
+ "gerado": "2026-11-24T23:00:18.726Z",
  "de": "2026-11-22",
  "ate": "2026-11-24",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 144,
-  "amostra": {
-   "fundo": "FII ADSH    ",
-   "campos": [
-    "assetIssued",
-    "paymentDate",
-    "rate",
-    "relatedTo",
-    "approvedOn",
-    "isinCode",
-    "label",
-    "lastDatePrior",
-    "remarks"
-   ],
-   "primeiro": {
-    "assetIssued": "BRADSHCTF009",
-    "paymentDate": "23/11/2026",
-    "rate": "0,03000000000",
-    "relatedTo": "OUTUBRO/2026",
-    "approvedOn": "16/11/2026",
-    "isinCode": "BRADSHCTF009",
-    "label": "RENDIMENTO",
-    "lastDatePrior": "16/11/2026",
-    "remarks": ""
-   }
-  },
-  "ok": 144,
-  "falhas": 0,
-  "semRendimentos": 9,
-  "itens": 1
+  "amostra": null,
+  "erro": "as primeiras consultas falharam (Unexpected end of JSON input): endereço bloqueado ou mudou",
+  "ok": 0,
+  "falhas": 11,
+  "semRendimentos": 0,
+  "itens": 0,
+  "aviso_regra": "FIIs não divulgados nesta rodada (sem lista de liquidez ou falha na B3)"
  },
  "acoes": {
   "emissoras": 280,
   "amostra": {
-   "emissora": "ABCB",
+   "emissora": "ABEV",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -51,14 +29,14 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRABCBACNPR4",
-    "paymentDate": "12/08/2026",
-    "rate": "1,16800000000",
-    "relatedTo": "1º Semestre/2026",
-    "approvedOn": "24/06/2026",
-    "isinCode": "BRABCBACNPR4",
+    "assetIssued": "BRABEVACNOR1",
+    "paymentDate": "31/12/2026",
+    "rate": "0,07130000000",
+    "relatedTo": "Anual/2026",
+    "approvedOn": "29/07/2026",
+    "isinCode": "BRABEVACNOR1",
     "label": "JRS CAP PROPRIO",
-    "lastDatePrior": "29/06/2026",
+    "lastDatePrior": "21/09/2026",
     "remarks": ""
    }
   },
@@ -83,9 +61,9 @@
     "remarks": ""
    }
   },
-  "ok": 280,
-  "falhas": 0,
-  "semDividendos": 86,
+  "ok": 266,
+  "falhas": 14,
+  "semDividendos": 81,
   "itens": 0
  }
 }
