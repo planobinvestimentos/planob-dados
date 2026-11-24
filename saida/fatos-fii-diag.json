@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-24T18:01:23.366Z",
+ "gerado": "2026-11-24T22:04:44.898Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 137,
  "top": {
@@ -59,21 +59,27 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 146,
+  "linhas_vistas": 202,
   "categorias": {
-   "Relatórios": 44,
-   "Informes Periódicos": 21,
-   "Oferta Pública de Distribuição de Cotas": 15,
-   "Fato Relevante": 13,
-   "Aviso aos Cotistas - Estruturado": 12,
-   "Regulamento": 10,
-   "Aviso aos Cotistas": 9,
-   "Assembleia": 8
+   "Relatórios": 68,
+   "Informes Periódicos": 22,
+   "Fato Relevante": 21,
+   "Oferta Pública de Distribuição de Cotas": 18,
+   "Aviso aos Cotistas - Estruturado": 17,
+   "Assembleia": 16,
+   "Regulamento": 13,
+   "Aviso aos Cotistas": 10
   },
-  "fatos_relevantes": 13,
-  "de_fiis_liquidos": 1
+  "fatos_relevantes": 21,
+  "de_fiis_liquidos": 3
  },
  "fatos_sem_ticker": [
+  "FII MULT REN",
+  "FII CAIXA AG",
+  "SÃO MIGUEL DOS MILAGRES FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA - FII",
+  "PRIVILEGE REAL ESTATE FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
+  "FUNDO DE INVESTIMENTO IMOBILIÁRIO EXCLUSIVO INFRA PATRIMONIAL II RESPONSABILIDADE LIMITADA",
+  "FII HUSI",
   "ENERGIA REAL FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
   "BRASIL ENERGIA FUNDO DE INVESTIMENTO IMOBILIÁRIO",
   "FII BTYU",
@@ -87,9 +93,9 @@
   "FII INFRA RE",
   "FII DEL MONT"
  ],
- "analisados": 0,
+ "analisados": 2,
  "sem_texto": 0,
- "fora_do_escopo": 0,
+ "fora_do_escopo": 2,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
  "materias_novas": 0,
