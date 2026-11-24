@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-24T20:00:22.989Z",
+ "gerado": "2026-11-24T20:15:16.364Z",
  "hora": 17,
  "fnet": {
-  "linhas": 718,
-  "avisos": 111,
-  "relatorios": 133
+  "linhas": 724,
+  "avisos": 112,
+  "relatorios": 138
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "BTG PACTUAL PRIME LOGÍSTICA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1390816",
   "LOTUS TOWER II FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1390778",
   "FII LOTUS TOWER FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1390777",
   "BTG LOG AAA CAJAMAR FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1390775",
@@ -34,10 +35,6 @@
   "BRASOL RENDA IMOBILIÁRIA SOLAR II FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA #1390013"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 1,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
