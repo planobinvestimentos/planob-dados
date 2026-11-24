@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-24T15:00:19.432Z",
+ "gerado": "2026-11-24T15:15:23.717Z",
  "hora": 12,
  "fnet": {
   "linhas": 703,
@@ -29,11 +29,7 @@
   "EXA RENDA HIGH GRADE FUNDO DE INVESTIMENTO IMOBILIÁRIO #1390016",
   "BRASOL RENDA IMOBILIÁRIA SOLAR II FUNDO DE INVESTIMENTO IMOBILIÁRIO - RESPONSABILIDADE LIMITADA #1390013"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 1,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
