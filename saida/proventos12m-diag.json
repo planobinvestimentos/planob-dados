@@ -1,8 +1,8 @@
 {
- "gerado": "2026-11-21T17:44:22.086Z",
- "consultados": 979,
- "com_dados": 385,
- "sem_dados": 340,
+ "gerado": "2026-11-24T20:47:23.358Z",
+ "consultados": 969,
+ "com_dados": 381,
+ "sem_dados": 336,
  "erros": 0,
  "exemplos_erro": [],
  "exemplos_sem_dados": [
@@ -39,8 +39,8 @@
  ],
  "via_b3": 0,
  "b3": {
-  "consultadas": 318,
-  "ok": 318,
+  "consultadas": 314,
+  "ok": 314,
   "falhas": 0,
   "recuperados": 0,
   "erro": null,
@@ -49,7 +49,7 @@
  "etfs_destaque": {
   "ETHY11": null,
   "COIN11": {
-   "dpa12": 13.789,
+   "dpa12": 13.8164,
    "pagamentos": 13,
    "ultimo": "2026-11-18",
    "fonte": "Yahoo"
