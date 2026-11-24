@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-24T23:00:20.244Z",
+ "gerado": "2026-11-24T23:15:15.206Z",
  "hora": 20,
  "fnet": {
-  "linhas": 773,
+  "linhas": 774,
   "avisos": 113,
-  "relatorios": 154
+  "relatorios": 155
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
@@ -34,11 +34,7 @@
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO JHSF CAPITAL MALLS FEEDER - RESPONSABILIDADE LIMITADA #1390017",
   "EXA RENDA HIGH GRADE FUNDO DE INVESTIMENTO IMOBILIÁRIO #1390016"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 1,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
