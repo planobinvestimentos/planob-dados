@@ -1,6 +1,6 @@
 {
- "gerado": "2026-11-25T22:45:14.338Z",
- "hora": 19,
+ "gerado": "2026-11-25T23:00:14.828Z",
+ "hora": 20,
  "fnet": {
   "linhas": 701,
   "avisos": 81,
@@ -17,7 +17,11 @@
   "BTG LOG AAA CAJAMAR FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1390775",
   "BTG PACTUAL LOGCP FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1390774"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
+ "varredura": {
+  "fii": 1,
+  "acoes": 0
+ },
  "novos": [],
  "pdfs": 0
 }
