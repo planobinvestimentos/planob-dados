@@ -1,30 +1,31 @@
 {
- "gerado": "2026-11-25T05:54:46.601Z",
+ "gerado": "2026-11-25T12:00:25.086Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
   "modelo": "claude-haiku-5-5",
   "parada": "end_turn",
   "blocos": [
+   "thinking",
    "text"
   ],
   "usado": {
-   "input_tokens": 17,
+   "input_tokens": 3436,
    "cache_creation_input_tokens": 0,
    "cache_read_input_tokens": 0,
    "cache_creation": {
     "ephemeral_5m_input_tokens": 0,
     "ephemeral_1h_input_tokens": 0
    },
-   "output_tokens": 4,
+   "output_tokens": 2518,
    "output_tokens_details": {
-    "thinking_tokens": 0
+    "thinking_tokens": 1878
    },
    "service_tier": "standard",
    "inference_geo": "global",
    "speed": "standard"
   },
-  "texto": "ok"
+  "texto": "{\"titulo\":\"KAR informa posição de 5.612.371 Units da BRBI BR Partners, com ressalva em anexo\",\"resumo\":\"Kayne Anderson Rudnick informa posição de 5.612.371 Units em 20 de novembro de 2026. Carta anexa cita outra companhia, o que pede checagem.\",\"paragrafos\":[\"A BRBI BR PARTNERS S.A. informou, em com"
  },
  "ia_teste": "ok: ok",
  "ipe": {
@@ -82,33 +83,268 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 1170,
-  "na_janela_e_categorias": 47,
+  "linhas": 1188,
+  "na_janela_e_categorias": 48,
   "sem_cnpj": 44,
-  "entrega_mais_recente": "20261125 25/11/2026 00:16",
+  "entrega_mais_recente": "20261125 25/11/2026 08:58",
   "tentativa": 1
  },
  "fontes": {
-  "enet": 47,
+  "enet": 48,
   "ipe": 3,
-  "apos_juntar": 47
+  "apos_juntar": 48
  },
  "itens": {
-  "novos": 0,
-  "enviados_agora": 0,
+  "novos": 1,
+  "enviados_agora": 1,
   "com_ia": 0,
   "ia_falhas": 0,
   "fora_do_filtro": 0,
-  "rotina_escondida": 0
+  "rotina_escondida": 0,
+  "materias": 1
  },
  "filtro": "sem filtro de lucro (todas as empresas)",
  "gasto_ia": {
   "mes": "2026-11",
-  "usd": 0.6036,
-  "chamadas": 559,
+  "usd": 0.6052,
+  "chamadas": 561,
   "teto_usd": 5
  },
  "recentes": [
+  {
+   "h": "08:58",
+   "emp": "LIVETECH DA BAHIA INDUSTRIA E COMERCIO S/A",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Apresentação Institucional 3T26",
+   "d": "2026-11-25",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02589-5",
+   "c5": "20261125 25/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:56",
+   "emp": "BRBI BR PARTNERS S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Aquisição/Alienação de Participação Acionária Relevante",
+   "ass": "Declaração de Aquisição de Participação Acionária Relevante",
+   "d": "2026-11-25",
+   "st": "NOVO",
+   "c0": "02586-0",
+   "c5": "20261125 25/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:55",
+   "emp": "ISHARES CORE S&P TOTAL US STOCK MARKET ETF",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-11-25",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "07907-3",
+   "c5": "20261119 11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:50",
+   "emp": "ISHARES RUSSELL 2000 ETF",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-11-25",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "07906-5",
+   "c5": "20261119 11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:49",
+   "emp": "ISHARES SELECT DIVIDEND ETF",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-11-25",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "07904-9",
+   "c5": "20261119 11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:41",
+   "emp": "ISHARES MSCI ALL COUNTRY ASIA EX JAPAN ETF",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-11-25",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "07903-0",
+   "c5": "20261119 11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:40",
+   "emp": "ISHARES MSCI EMERGING MARKETS ETF",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-11-25",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "07902-2",
+   "c5": "20261119 11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:38",
+   "emp": "ISHARES MSCI EAFE ETF",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-11-25",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "07901-4",
+   "c5": "20261119 11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:33",
+   "emp": "CATERPILLAR INC.",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-11-25",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05021-0",
+   "c5": "20261119 11/2026",
+   "c8": "2",
+   "c9": "AP"
+  },
+  {
+   "h": "08:30",
+   "emp": "RAIZEN S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Esclarecimentos sobre o Exercício do Direito de Preferência",
+   "d": "2026-11-25",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02591-7",
+   "c5": "20261125 25/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:21",
+   "emp": "MARCOPOLO S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Aquisição/Alienação de Participação Acionária Relevante",
+   "ass": "Declaração de Alienação de Participação Acionária Relevante",
+   "d": "2026-11-25",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00845-1",
+   "c5": "20261124 24/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:12",
+   "emp": "CAGECE - CIA DE AGUA E ESGOTO DO CEARA",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho Fiscal",
+   "ass": "Relatório das Demonstrações Contábeis e Financeiras do 3º trimestre de 2026 (3ITR/2026)",
+   "d": "2026-11-25",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01854-6",
+   "c5": "20261113 13/11/2026 14:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:08",
+   "emp": "CAGECE - CIA DE AGUA E ESGOTO DO CEARA",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "1) Relatório das Informações Trimestrais do 3° trimestre de 2026; 2 e 3) Informações class",
+   "d": "2026-11-25",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01854-6",
+   "c5": "20261113 13/11/2026 14:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "07:59",
+   "emp": "PORTO SEGURO S.A.",
+   "cat": "Dados Econômico-Financeiros",
+   "tipo": "Demonstrações Financeiras Adicionais",
+   "ass": "Demonstrações Financeiras Internacionais - Versão Inglês",
+   "d": "2026-11-25",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01665-9",
+   "c5": "20260930 30/09/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "07:58",
+   "emp": "AERIS IND. E COM. DE EQUIP. GERACAO DE ENERGIA S/A",
+   "cat": "Assembleia",
+   "tipo": "AGE",
+   "ass": "Mapa Sintetico Consolidado",
+   "d": "2026-11-25",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02528-3",
+   "c5": "20261126 26/11/2026 10:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "07:58",
+   "emp": "PAMPLONA ALIMENTOS S/A",
+   "cat": "Documentos de Oferta de Distribuição Pública",
+   "tipo": "Anúncio de Encerramento de Distribuição Pública",
+   "ass": "Anúncio de Encerramento",
+   "d": "2026-11-25",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "91807-1",
+   "c5": "20261125 25/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "07:51",
+   "emp": "RIO PARANAPANEMA ENERGIA S.A.",
+   "cat": "Assembleia",
+   "tipo": "AGE",
+   "ass": "(i) aprovar a antecipação da data de pagamento da 2ª (segunda) parcela dos dividendos;; (i",
+   "d": "2026-11-25",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01836-8",
+   "c5": "20261216 16/12/2026 10:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "07:48",
+   "emp": "RIO PARANAPANEMA ENERGIA S.A.",
+   "cat": "Assembleia",
+   "tipo": "AGE",
+   "ass": "(i) aprovar a antecipação da data de pagamento da 2ª (segunda) parcela dos dividendos; (ii",
+   "d": "2026-11-25",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01836-8",
+   "c5": "20261216 16/12/2026 10:00",
+   "c8": "1",
+   "c9": "AP"
+  },
   {
    "h": "00:16",
    "emp": "ARTHUR J GALLAGHER & CO",
