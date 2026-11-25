@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-25T00:30:15.733Z",
+ "gerado": "2026-11-25T01:00:20.016Z",
  "de": "2026-11-22",
  "ate": "2026-11-24",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 144,
   "amostra": {
-   "fundo": "FII AFHI CRI",
+   "fundo": "FII ADSH    ",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -19,19 +19,19 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAFHICTF005",
-    "paymentDate": "24/11/2026",
-    "rate": "0,97000000000",
-    "relatedTo": "Outubro-2026/2026",
+    "assetIssued": "BRADSHCTF009",
+    "paymentDate": "23/11/2026",
+    "rate": "0,03000000000",
+    "relatedTo": "OUTUBRO/2026",
     "approvedOn": "16/11/2026",
-    "isinCode": "BRAFHICTF005",
+    "isinCode": "BRADSHCTF009",
     "label": "RENDIMENTO",
     "lastDatePrior": "16/11/2026",
     "remarks": ""
    }
   },
-  "ok": 140,
-  "falhas": 4,
+  "ok": 130,
+  "falhas": 14,
   "semRendimentos": 9,
   "itens": 1
  },
@@ -63,7 +63,7 @@
    }
   },
   "amostraBonificacao": {
-   "emissora": "AERI",
+   "emissora": "AGRO",
    "campos": [
     "assetIssued",
     "factor",
@@ -74,18 +74,18 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAERIACNOR4",
-    "factor": "0,05000000000",
-    "approvedOn": "11/04/2024",
-    "isinCode": "BRAERIACNOR4",
-    "label": "GRUPAMENTO",
-    "lastDatePrior": "13/05/2024",
+    "assetIssued": "BRAGROACNOR7",
+    "factor": "9.900,00000000000",
+    "approvedOn": "31/10/2007",
+    "isinCode": "BRAGROACNOR7",
+    "label": "DESDOBRAMENTO",
+    "lastDatePrior": "31/10/2007",
     "remarks": ""
    }
   },
-  "ok": 278,
-  "falhas": 4,
-  "semDividendos": 86,
+  "ok": 263,
+  "falhas": 19,
+  "semDividendos": 80,
   "itens": 0
  }
 }
