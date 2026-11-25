@@ -1,10 +1,10 @@
 {
- "gerado": "2026-11-25T12:45:27.750Z",
- "hora": 9,
+ "gerado": "2026-11-25T13:00:17.575Z",
+ "hora": 10,
  "fnet": {
-  "linhas": 607,
+  "linhas": 611,
   "avisos": 78,
-  "relatorios": 137
+  "relatorios": 138
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
@@ -16,6 +16,10 @@
   "BTG PACTUAL LOGCP FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1390774"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 1,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
