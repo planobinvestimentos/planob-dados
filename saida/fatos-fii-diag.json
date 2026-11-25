@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-25T15:01:32.530Z",
+ "gerado": "2026-11-25T18:00:30.689Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 137,
  "top": {
@@ -59,21 +59,22 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 245,
+  "linhas_vistas": 267,
   "categorias": {
-   "Relatórios": 80,
-   "Informes Periódicos": 28,
-   "Assembleia": 26,
+   "Relatórios": 82,
+   "Informes Periódicos": 38,
+   "Assembleia": 32,
+   "Fato Relevante": 24,
    "Oferta Pública de Distribuição de Cotas": 23,
-   "Fato Relevante": 23,
-   "Regulamento": 17,
+   "Regulamento": 19,
    "Aviso aos Cotistas - Estruturado": 17,
-   "Atos de Deliberação do Administrador": 11
+   "Atos de Deliberação do Administrador": 12
   },
-  "fatos_relevantes": 23,
+  "fatos_relevantes": 24,
   "de_fiis_liquidos": 4
  },
  "fatos_sem_ticker": [
+  "Sicoob Agências Fundo de Investimento Imobiliário",
   "FII V2EDCORP",
   "FII MULT REN",
   "FII CAIXA AG",
