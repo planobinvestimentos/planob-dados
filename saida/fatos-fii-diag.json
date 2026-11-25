@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-25T18:00:30.689Z",
+ "gerado": "2026-11-25T21:20:11.284Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 137,
  "top": {
@@ -59,21 +59,23 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 267,
+  "linhas_vistas": 311,
   "categorias": {
-   "Relatórios": 82,
-   "Informes Periódicos": 38,
-   "Assembleia": 32,
-   "Fato Relevante": 24,
-   "Oferta Pública de Distribuição de Cotas": 23,
-   "Regulamento": 19,
-   "Aviso aos Cotistas - Estruturado": 17,
+   "Relatórios": 92,
+   "Assembleia": 52,
+   "Informes Periódicos": 42,
+   "Oferta Pública de Distribuição de Cotas": 27,
+   "Fato Relevante": 26,
+   "Regulamento": 20,
+   "Aviso aos Cotistas - Estruturado": 19,
    "Atos de Deliberação do Administrador": 12
   },
-  "fatos_relevantes": 24,
+  "fatos_relevantes": 26,
   "de_fiis_liquidos": 4
  },
  "fatos_sem_ticker": [
+  "FII ZION",
+  "MEIRINGEN FUNDO DE INVESTIMENTO IMOBILIÁRIO",
   "Sicoob Agências Fundo de Investimento Imobiliário",
   "FII V2EDCORP",
   "FII MULT REN",
