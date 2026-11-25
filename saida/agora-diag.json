@@ -1,12 +1,14 @@
 {
- "gerado": "2026-11-25T20:45:14.555Z",
+ "gerado": "2026-11-25T20:57:41.713Z",
  "hora": 17,
  "fnet": {
-  "linhas": 661,
-  "avisos": 78,
-  "relatorios": 141
+  "linhas": 665,
+  "avisos": 79,
+  "relatorios": 142
  },
- "avisos_novos": [],
+ "avisos_novos": [
+  "SMRE11:1391956"
+ ],
  "avisos_sem_ticker": [
   "SC JGP RENDA IMOBILIÁRIA FUNDO DE INVESTIMENTO IMOBILIÁRIO #1390973",
   "BTG PACTUAL PRIME LOGÍSTICA FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1390816",
@@ -16,6 +18,15 @@
   "BTG PACTUAL LOGCP FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1390774"
  ],
  "acoes_nesta_rodada": false,
- "novos": [],
- "pdfs": 0
+ "varredura": {
+  "fii": 1,
+  "acoes": "não consultadas"
+ },
+ "lido_do_aviso": [
+  "SMRE11"
+ ],
+ "novos": [
+  "SMRE11 Rendimento"
+ ],
+ "pdfs": 1
 }
