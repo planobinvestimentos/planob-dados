@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-25T01:49:28.349Z",
+ "gerado": "2026-11-25T03:52:41.256Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -29,20 +29,20 @@
  "ia_teste": "ok: ok",
  "ipe": {
   "linhas": 41625,
-  "janela_desde": "2026-11-19",
+  "janela_desde": "2026-11-20",
   "data_mais_recente": "2026-11-21",
   "categorias_ultimos_10_dias": {
    "Reunião da Administração": 133,
    "Comunicado ao Mercado": 96,
-   "Dados Econômico-Financeiros": 69,
+   "Dados Econômico-Financeiros": 66,
    "Documentos de Oferta de Distribuição Pública": 13,
    "Escrituras e aditamentos de debêntures": 4,
    "Regimento Interno do Comitê de Auditoria Estatutário": 1,
-   "Fato Relevante": 45,
+   "Fato Relevante": 44,
    "Informações de Companhias em Recuperação Judicial ou Extrajudicial": 5,
    "Aviso aos Acionistas": 30,
    "Aviso aos Debenturistas": 12,
-   "Assembleia": 73,
+   "Assembleia": 72,
    "Relatório Proventos": 7,
    "Valores Mobiliários negociados e detidos (art. 11 da Instr. CVM nº 358)": 42,
    "Comunicação sobre Transação entre Partes Relacionadas": 7,
@@ -60,7 +60,7 @@
    "Regimento interno de Comitês": 2,
    "Regimento Interno da Diretoria": 1
   },
-  "na_janela_e_categorias": 29,
+  "na_janela_e_categorias": 3,
   "colunas": [
    "CNPJ_COMPANHIA",
    "NOME_COMPANHIA",
@@ -81,11 +81,17 @@
   "total": 2592,
   "novos": 0
  },
- "enet_erro": "ENETWeb: The operation was aborted due to timeout",
+ "enet": {
+  "linhas": 1170,
+  "na_janela_e_categorias": 47,
+  "sem_cnpj": 44,
+  "entrega_mais_recente": "20261125 25/11/2026 00:16",
+  "tentativa": 1
+ },
  "fontes": {
-  "enet": 0,
-  "ipe": 29,
-  "apos_juntar": 29
+  "enet": 47,
+  "ipe": 3,
+  "apos_juntar": 47
  },
  "itens": {
   "novos": 0,
@@ -98,9 +104,153 @@
  "filtro": "sem filtro de lucro (todas as empresas)",
  "gasto_ia": {
   "mes": "2026-11",
-  "usd": 0.6035,
-  "chamadas": 555,
+  "usd": 0.6036,
+  "chamadas": 556,
   "teto_usd": 5
  },
- "recentes": []
+ "recentes": [
+  {
+   "h": "00:16",
+   "emp": "ARTHUR J GALLAGHER & CO",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-25",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05447-0",
+   "c5": "20261125 25/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "18:07",
+   "emp": "VALE S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Vale informa sobre o Vale Day 2026",
+   "d": "2026-11-24",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00417-0",
+   "c5": "20261124 24/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "17:43",
+   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+   "cat": "Relatório Proventos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-11-24",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00951-2",
+   "c5": "20261123 11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "20:31",
+   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Apresentações a analistas/agentes do mercado",
+   "ass": "Plano de Negócios Petrobras 2027- 2031",
+   "d": "2026-11-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00951-2",
+   "c5": "20261124 24/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:53",
+   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+   "cat": "Informação Prestada às Bolsas Estrangeiras",
+   "tipo": "-",
+   "ass": "Desempenho Financeiro da Petrobras 3T26 - Informações incorporadas em prospectos de captaç",
+   "d": "2026-11-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00951-2",
+   "c5": "20261123 23/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:39",
+   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Petrobras aprova Plano de Negócios 2027-2031",
+   "d": "2026-11-23",
+   "st": "ja_enviado_antes",
+   "c0": "00951-2",
+   "c5": "20261123 23/11/2026",
+   "c8": "2",
+   "c9": "RE"
+  },
+  {
+   "h": "19:29",
+   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Petrobras retorna ao setor de etanol com aquisição de participação em produtora no Centro-",
+   "d": "2026-11-23",
+   "st": "ja_enviado_antes",
+   "c0": "00951-2",
+   "c5": "20261123 23/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:16",
+   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Petrobras informa sobre remuneração extraordinária aos acionistas",
+   "d": "2026-11-23",
+   "st": "ja_enviado_antes",
+   "c0": "00951-2",
+   "c5": "20261123 23/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:01",
+   "emp": "VALE S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Vale informa sobre retomada parcial de operações na mina de Viga",
+   "d": "2026-11-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00417-0",
+   "c5": "20261123 23/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "15:39",
+   "emp": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+   "cat": "Informação Prestada às Bolsas Estrangeiras",
+   "tipo": "-",
+   "ass": "Demonstrações Financeiras da Petrobras 3T26 - Informações incorporadas em prospectos de ca",
+   "d": "2026-11-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00951-2",
+   "c5": "20261123 23/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "09:28",
+   "emp": "ITAUSA S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Apresentação Institucional",
+   "d": "2026-11-23",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00761-7",
+   "c5": "20261123 23/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  }
+ ]
 }
