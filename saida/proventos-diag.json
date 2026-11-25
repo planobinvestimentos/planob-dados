@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-25T11:38:51.718Z",
+ "gerado": "2026-11-25T23:00:22.542Z",
  "de": "2026-11-23",
  "ate": "2026-11-25",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 144,
   "amostra": {
-   "fundo": "FII AFHI CRI",
+   "fundo": "FII ADSH    ",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -19,26 +19,26 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAFHICTF005",
-    "paymentDate": "24/11/2026",
-    "rate": "0,97000000000",
-    "relatedTo": "Outubro-2026/2026",
+    "assetIssued": "BRADSHCTF009",
+    "paymentDate": "23/11/2026",
+    "rate": "0,03000000000",
+    "relatedTo": "OUTUBRO/2026",
     "approvedOn": "16/11/2026",
-    "isinCode": "BRAFHICTF005",
+    "isinCode": "BRADSHCTF009",
     "label": "RENDIMENTO",
     "lastDatePrior": "16/11/2026",
     "remarks": ""
    }
   },
-  "ok": 144,
-  "falhas": 0,
-  "semRendimentos": 9,
+  "ok": 141,
+  "falhas": 3,
+  "semRendimentos": 8,
   "itens": 1
  },
  "acoes": {
   "emissoras": 282,
   "amostra": {
-   "emissora": "AFLT",
+   "emissora": "ALLD",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -51,19 +51,19 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAFLTACNOR1",
-    "paymentDate": "31/12/2026",
-    "rate": "0,15851704140",
-    "relatedTo": "Complementar/2026",
-    "approvedOn": "21/07/2026",
-    "isinCode": "BRAFLTACNOR1",
-    "label": "DIVIDENDO",
-    "lastDatePrior": "24/07/2026",
+    "assetIssued": "BRALLDACNOR3",
+    "paymentDate": "12/11/2026",
+    "rate": "0,48124087968",
+    "relatedTo": "Complementar/2025",
+    "approvedOn": "29/09/2026",
+    "isinCode": "BRALLDACNOR3",
+    "label": "JRS CAP PROPRIO",
+    "lastDatePrior": "05/10/2026",
     "remarks": ""
    }
   },
   "amostraBonificacao": {
-   "emissora": "AERI",
+   "emissora": "ALUP",
    "campos": [
     "assetIssued",
     "factor",
@@ -74,18 +74,18 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAERIACNOR4",
-    "factor": "0,05000000000",
-    "approvedOn": "11/04/2024",
-    "isinCode": "BRAERIACNOR4",
-    "label": "GRUPAMENTO",
-    "lastDatePrior": "13/05/2024",
+    "assetIssued": "BRALUPACNOR8",
+    "factor": "4,00000000000",
+    "approvedOn": "16/04/2025",
+    "isinCode": "BRALUPACNOR8",
+    "label": "BONIFICACAO",
+    "lastDatePrior": "16/04/2025",
     "remarks": ""
    }
   },
-  "ok": 282,
-  "falhas": 0,
-  "semDividendos": 87,
+  "ok": 275,
+  "falhas": 7,
+  "semDividendos": 86,
   "itens": 0
  }
 }
