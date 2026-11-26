@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-26T03:17:43.661Z",
+ "gerado": "2026-11-26T03:51:07.935Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -104,8 +104,8 @@
  "filtro": "sem filtro de lucro (todas as empresas)",
  "gasto_ia": {
   "mes": "2026-11",
-  "usd": 0.619,
-  "chamadas": 576,
+  "usd": 0.6191,
+  "chamadas": 577,
   "teto_usd": 5
  },
  "recentes": [
