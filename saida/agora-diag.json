@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-26T14:00:17.396Z",
+ "gerado": "2026-11-26T14:15:17.173Z",
  "hora": 11,
  "fnet": {
   "linhas": 581,
@@ -12,10 +12,6 @@
   "FII INTER RD #1392067"
  ],
  "acoes_nesta_rodada": false,
- "varredura": {
-  "fii": 0,
-  "acoes": "não consultadas"
- },
  "novos": [],
  "pdfs": 0
 }
