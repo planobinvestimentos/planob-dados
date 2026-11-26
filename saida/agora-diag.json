@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-26T19:30:17.488Z",
+ "gerado": "2026-11-26T19:45:15.419Z",
  "hora": 16,
  "fnet": {
-  "linhas": 608,
-  "avisos": 60,
-  "relatorios": 154
+  "linhas": 610,
+  "avisos": 61,
+  "relatorios": 155
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FUNDO DE INVESTIMENTO IMOBILIÁRIO RIZA MALLS MASTER RESPONSABILIDADE  LIMITADA #1393071",
   "FII IMOB III #1392853",
   "LCP RENDA IMOBILIÁRIA PREFIXADA - FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1392082",
   "FII INTER RD #1392067"
