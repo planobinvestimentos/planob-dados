@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-26T12:00:32.617Z",
+ "gerado": "2026-11-26T15:00:43.335Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 137,
  "top": {
@@ -59,16 +59,16 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 350,
+  "linhas_vistas": 365,
   "categorias": {
-   "Relatórios": 109,
-   "Assembleia": 58,
-   "Informes Periódicos": 45,
+   "Relatórios": 115,
+   "Assembleia": 59,
+   "Informes Periódicos": 47,
+   "Oferta Pública de Distribuição de Cotas": 30,
    "Fato Relevante": 29,
-   "Oferta Pública de Distribuição de Cotas": 27,
+   "Regulamento": 22,
    "Aviso aos Cotistas - Estruturado": 21,
-   "Regulamento": 21,
-   "Comunicado ao Mercado": 14
+   "Comunicado ao Mercado": 16
   },
   "fatos_relevantes": 29,
   "de_fiis_liquidos": 5
@@ -99,14 +99,14 @@
   "FII INFRA RE",
   "FII DEL MONT"
  ],
- "analisados": 1,
+ "analisados": 0,
  "sem_texto": 0,
  "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 1,
+ "materias_novas": 0,
  "telegram": {
-  "enviados": 1,
+  "enviados": 0,
   "erros": []
  }
 }
