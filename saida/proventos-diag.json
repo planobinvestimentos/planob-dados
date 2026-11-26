@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-26T00:30:21.962Z",
+ "gerado": "2026-11-26T01:00:23.258Z",
  "de": "2026-11-23",
  "ate": "2026-11-25",
  "fii": {
@@ -30,8 +30,8 @@
     "remarks": ""
    }
   },
-  "ok": 144,
-  "falhas": 0,
+  "ok": 136,
+  "falhas": 8,
   "semRendimentos": 9,
   "itens": 1
  },
@@ -83,8 +83,8 @@
     "remarks": ""
    }
   },
-  "ok": 271,
-  "falhas": 10,
+  "ok": 259,
+  "falhas": 22,
   "semDividendos": 82,
   "itens": 0
  }
