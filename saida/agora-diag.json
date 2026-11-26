@@ -1,17 +1,21 @@
 {
- "gerado": "2026-11-26T14:45:14.089Z",
- "hora": 11,
+ "gerado": "2026-11-26T15:00:18.417Z",
+ "hora": 12,
  "fnet": {
-  "linhas": 585,
+  "linhas": 587,
   "avisos": 59,
-  "relatorios": 152
+  "relatorios": 153
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
   "LCP RENDA IMOBILIÁRIA PREFIXADA - FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1392082",
   "FII INTER RD #1392067"
  ],
- "acoes_nesta_rodada": false,
+ "acoes_nesta_rodada": true,
+ "varredura": {
+  "fii": 0,
+  "acoes": 0
+ },
  "novos": [],
  "pdfs": 0
 }
