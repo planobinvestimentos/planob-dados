@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-26T05:45:18.308Z",
+ "gerado": "2026-11-26T12:00:25.904Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -82,10 +82,10 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 1683,
+  "linhas": 1693,
   "na_janela_e_categorias": 62,
   "sem_cnpj": 56,
-  "entrega_mais_recente": "20261125 25/11/2026 23:16",
+  "entrega_mais_recente": "20261126 26/11/2026 08:55",
   "tentativa": 1
  },
  "fontes": {
@@ -105,10 +105,140 @@
  "gasto_ia": {
   "mes": "2026-11",
   "usd": 0.6191,
-  "chamadas": 579,
+  "chamadas": 580,
   "teto_usd": 5
  },
  "recentes": [
+  {
+   "h": "08:55",
+   "emp": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Apresentações a analistas/agentes do mercado",
+   "ass": "Apresentação Pública Anual 2026",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01432-0",
+   "c5": "20261126 26/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:44",
+   "emp": "CIA SANEAMENTO BASICO EST SAO PAULO",
+   "cat": "Política de Gerenciamento de Riscos",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01444-3",
+   "c5": "20260116 16/01/2026 10:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:44",
+   "emp": "CIA SANEAMENTO BASICO EST SAO PAULO",
+   "cat": "Política de Transações entre Partes Relacionadas",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01444-3",
+   "c5": "20260522 22/05/2026 10:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:43",
+   "emp": "CIA SANEAMENTO BASICO EST SAO PAULO",
+   "cat": "Regimento interno do Conselho de Administração",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01444-3",
+   "c5": "20260107 07/01/2026 10:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:43",
+   "emp": "CIA SANEAMENTO BASICO EST SAO PAULO",
+   "cat": "Regimento Interno do Comitê de Auditoria Estatutário",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01444-3",
+   "c5": "20260107 07/01/2026 10:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:43",
+   "emp": "CIA SANEAMENTO BASICO EST SAO PAULO",
+   "cat": "Regimento interno de Comitês",
+   "tipo": "-",
+   "ass": "Regimento interno de comitês de assessoramento",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01444-3",
+   "c5": "20260107 07/01/2026 10:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:43",
+   "emp": "CIA SANEAMENTO BASICO EST SAO PAULO",
+   "cat": "Regimento Interno da Diretoria",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01444-3",
+   "c5": "20260107 07/01/2026 10:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:41",
+   "emp": "IRANI PAPEL E EMBALAGEM S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Comunicado ao mercado referente participação do CFO André C. de Carvalho em entrevista gra",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00242-9",
+   "c5": "20261126 26/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:17",
+   "emp": "LONGDIS S.A.",
+   "cat": "Estatuto Social",
+   "tipo": "-",
+   "ass": "",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01743-4",
+   "c5": "20261020 20/10/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "07:17",
+   "emp": "KEPLER WEBER S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Apresentações a analistas/agentes do mercado",
+   "ass": "Apresentação Kepler Day 2026",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00787-0",
+   "c5": "20261126 26/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
   {
    "h": "18:07",
    "emp": "VALE S.A.",
