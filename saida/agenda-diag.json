@@ -1,7 +1,7 @@
 {
- "gerado": "2026-11-26T09:30:29.923Z",
+ "gerado": "2026-11-27T09:30:29.646Z",
  "modo": "hoje",
- "hoje": "2026-11-26",
+ "hoje": "2026-11-27",
  "global_recebidos": 77,
  "global": "ok (0 de alto impacto)",
  "ibge_recebidos": 3,
@@ -23,19 +23,17 @@
   "link"
  ],
  "ibge_amostra": [
-  "{\"id\":4574,\"titulo\":\"Estatísticas de Finanças Públicas e Conta Intermediária de Governo: Brasil\",\"descricao\":\"\",\"data_divulgacao\":\"26/11/2026 13:00:00\",\"tipo_id\":5,\"tipo\":\"Estudos e Pesquisas Estruturais e Especiais\",\"produto_id\":9083,\"nome_produto\":\"Edições#estatisticasdefinançaspublicas1\",\"alias_produto\":\"estatisticas-de-financas-publicas-e-conta-intermediaria-de-governo\",\"descricao_produto\":\"\",",
-  "{\"id\":4329,\"titulo\":\"Índice de Preços ao Produtor - Indústrias Extrativas e de Transformação\",\"descricao\":\"\",\"data_divulgacao\":\"26/11/2026 12:00:00\",\"tipo_id\":1,\"tipo\":\"Divulgação de Indicadores\",\"produto_id\":9282,\"nome_produto\":\"Índice de Preços ao Produtor - Indústrias Extrativas e de Transformação\",\"alias_produto\":\"indice-de-precos-ao-produtor-industrias-extrativas-e-de-transformacao\",\"descrica",
-  "{\"id\":4330,\"titulo\":\"Índice Nacional de Preços ao Consumidor Amplo 15\",\"descricao\":\"\",\"data_divulgacao\":\"26/11/2026 12:00:00\",\"tipo_id\":1,\"tipo\":\"Divulgação de Indicadores\",\"produto_id\":9260,\"nome_produto\":\"Índice Nacional de Preços ao Consumidor Amplo 15\",\"alias_produto\":\"indice-nacional-de-precos-ao-consumidor-amplo-15\",\"descricao_produto\":\"<p>Texto na categoria</p>\",\"ano_referencia_inicio\":2026"
+  "{\"id\":4579,\"titulo\":\"Pesquisa de Orçamentos Familiares - 2024-2025 - Primeiros resultados\",\"descricao\":\"\",\"data_divulgacao\":\"27/11/2026 13:00:00\",\"tipo_id\":5,\"tipo\":\"Estudos e Pesquisas Estruturais e Especiais\",\"produto_id\":0,\"nome_produto\":\"\",\"alias_produto\":\"\",\"descricao_produto\":\"\",\"ano_referencia_inicio\":0,\"mes_referencia_inicio\":0,\"ano_referencia_fim\":0,\"mes_referencia_fim\":0,\"link\":\"\"}",
+  "{\"id\":4591,\"titulo\":\"Tábuas Completas de Mortalidade para o Brasil\",\"descricao\":\"\",\"data_divulgacao\":\"27/11/2026 13:00:00\",\"tipo_id\":5,\"tipo\":\"Estudos e Pesquisas Estruturais e Especiais\",\"produto_id\":9126,\"nome_produto\":\"Tábuas Completas de Mortalidade\",\"alias_produto\":\"tabuas-completas-de-mortalidade\",\"descricao_produto\":\"\",\"ano_referencia_inicio\":2025,\"mes_referencia_inicio\":0,\"ano_referencia_f",
+  "{\"id\":4331,\"titulo\":\"Pesquisa Nacional por Amostra de Domicílios Contínua Mensal\",\"descricao\":\"\",\"data_divulgacao\":\"27/11/2026 12:00:00\",\"tipo_id\":1,\"tipo\":\"Divulgação de Indicadores\",\"produto_id\":9171,\"nome_produto\":\"Divulgação mensal#pnadc1\",\"alias_produto\":\"pesquisa-nacional-por-amostra-de-domicilios-continua-mensal\",\"descricao_produto\":\"<p align=\\\"justify\\\">Destina-se a produzir informações co"
  ],
  "ibge_datas": [
-  "26/11/2026 12:00:00",
-  "26/11/2026 13:00:00"
+  "27/11/2026 12:00:00",
+  "27/11/2026 13:00:00"
  ],
- "ibge": "ok (1 de interesse)",
+ "ibge": "ok (0 de interesse)",
  "regras": "ok (0)",
  "manual": "ok (0)",
- "eventos": 1,
- "por_fonte": {
-  "ibge": 1
- }
+ "eventos": 0,
+ "por_fonte": {}
 }
