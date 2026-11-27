@@ -1,13 +1,14 @@
 {
- "gerado": "2026-11-27T20:30:15.680Z",
+ "gerado": "2026-11-27T20:35:42.726Z",
  "hora": 17,
  "fnet": {
-  "linhas": 584,
-  "avisos": 50,
+  "linhas": 585,
+  "avisos": 51,
   "relatorios": 151
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
+  "FII SPG2 #1394741",
   "FII ELDORADO #1393257",
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO RIZA MALLS MASTER RESPONSABILIDADE  LIMITADA #1393071",
   "FII IMOB III #1392853"
