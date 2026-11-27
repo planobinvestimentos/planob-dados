@@ -1,30 +1,31 @@
 {
- "gerado": "2026-11-27T05:40:16.631Z",
+ "gerado": "2026-11-27T12:00:24.705Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
   "modelo": "claude-haiku-5-5",
   "parada": "end_turn",
   "blocos": [
+   "thinking",
    "text"
   ],
   "usado": {
-   "input_tokens": 17,
+   "input_tokens": 1911,
    "cache_creation_input_tokens": 0,
    "cache_read_input_tokens": 0,
    "cache_creation": {
     "ephemeral_5m_input_tokens": 0,
     "ephemeral_1h_input_tokens": 0
    },
-   "output_tokens": 4,
+   "output_tokens": 2158,
    "output_tokens_details": {
-    "thinking_tokens": 0
+    "thinking_tokens": 1269
    },
    "service_tier": "standard",
    "inference_geo": "global",
    "speed": "standard"
   },
-  "texto": "ok"
+  "texto": "```json\n{\"titulo\":\"BIOMM encerra prazo de sobras e subscreve R$88.300.002,00 em debêntures\",\"resumo\":\"Após o fim das sobras, 14.716.667 debêntures foram subscritas na 1ª emissão da BIOMM (BIOM3), totalizando R$88.300.002,00.\",\"paragrafos\":[\"Em 24 de novembro de 2026, encerrou-se o prazo para os acio"
  },
  "ia_teste": "ok: ok",
  "ipe": {
@@ -79,33 +80,468 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 1966,
-  "na_janela_e_categorias": 78,
+  "linhas": 1997,
+  "na_janela_e_categorias": 88,
   "sem_cnpj": 56,
-  "entrega_mais_recente": "20261126 26/11/2026 23:47",
+  "entrega_mais_recente": "20261127 27/11/2026 08:58",
   "tentativa": 1
  },
  "fontes": {
-  "enet": 78,
+  "enet": 88,
   "ipe": 0,
-  "apos_juntar": 78
+  "apos_juntar": 88
  },
  "itens": {
-  "novos": 0,
-  "enviados_agora": 0,
+  "novos": 7,
+  "enviados_agora": 7,
   "com_ia": 0,
   "ia_falhas": 0,
   "fora_do_filtro": 0,
-  "rotina_escondida": 0
+  "rotina_escondida": 0,
+  "materias": 3
  },
  "filtro": "sem filtro de lucro (todas as empresas)",
+ "materias_reprovadas": [
+  {
+   "prot": "1594316",
+   "empresa": "CIA BRASILEIRA DE DISTRIBUICAO",
+   "numeros_fora_do_documento": [
+    "3",
+    "11"
+   ]
+  },
+  {
+   "prot": "1594314",
+   "empresa": "BRADSAUDE S.A.",
+   "numeros_fora_do_documento": [
+    "3"
+   ]
+  },
+  {
+   "prot": "1594308",
+   "empresa": "ALUPAR INVESTIMENTO S/A",
+   "numeros_fora_do_documento": [
+    "11"
+   ]
+  },
+  {
+   "prot": "1594287",
+   "empresa": "JOAO FORTES ENGENHARIA S.A.",
+   "numeros_fora_do_documento": [
+    "3"
+   ]
+  }
+ ],
  "gasto_ia": {
   "mes": "2026-11",
-  "usd": 0.6449,
-  "chamadas": 608,
+  "usd": 0.653,
+  "chamadas": 616,
   "teto_usd": 5
  },
  "recentes": [
+  {
+   "h": "08:58",
+   "emp": "CIA BRASILEIRA DE DISTRIBUICAO",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Potencial Transação Federal",
+   "d": "2026-11-27",
+   "st": "NOVO",
+   "c0": "01482-6",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:56",
+   "emp": "UNICASA INDÚSTRIA DE MÓVEIS S.A.",
+   "cat": "Dados Econômico-Financeiros",
+   "tipo": "Demonstrações Financeiras Adicionais",
+   "ass": "Versão ITR3T26 em inglês",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02278-0",
+   "c5": "20260930 30/09/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:55",
+   "emp": "BRADSAUDE S.A.",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Indicação para o Cargo de Ministro de Estado da Fazenda",
+   "d": "2026-11-27",
+   "st": "NOVO",
+   "c0": "02012-5",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:55",
+   "emp": "LUPATECH S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Apresentações a analistas/agentes do mercado",
+   "ass": "Apresentação da videoconferência - 3T26",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02006-0",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:54",
+   "emp": "BRADESPAR S.A.",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "INDICAÇÃO PARA O CARGO DE MINISTRO DE ESTADO DA FAZENDA",
+   "d": "2026-11-27",
+   "st": "NOVO",
+   "c0": "01872-4",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:47",
+   "emp": "AXIA ENERGIA NORDESTE S.A.",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Descruzamento de Participações de Transmissão",
+   "d": "2026-11-27",
+   "st": "sem_ticker_para_o_cnpj",
+   "c0": "00332-8",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:46",
+   "emp": "CENTRAIS ELÉTRICAS DO NORTE DO BRASIL S.A",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Descruzamento de Participações de Transmissão",
+   "d": "2026-11-27",
+   "st": "sem_ticker_para_o_cnpj",
+   "c0": "02747-2",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:45",
+   "emp": "ALUPAR INVESTIMENTO S/A",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Descruzamento de Ativos (TNE e STN)",
+   "d": "2026-11-27",
+   "st": "NOVO",
+   "c0": "02149-0",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:45",
+   "emp": "AXIA ENERGIA S.A.",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Descruzamento de Participações de Transmissão",
+   "d": "2026-11-27",
+   "st": "NOVO",
+   "c0": "00243-7",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:44",
+   "emp": "ALUPAR INVESTIMENTO S/A",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Descruzamento de Ativos (TNE e STN)",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02149-0",
+   "c5": "20261126 26/11/2026 15:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:37",
+   "emp": "MARCOPOLO S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Apresentações a analistas/agentes do mercado",
+   "ass": "Apresentação Institucional",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00845-1",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:35",
+   "emp": "FRÍSIA COOPERATIVA AGROINDUSTRIAL",
+   "cat": "Documentos de Oferta de Distribuição Pública",
+   "tipo": "Anúncio de Início de Distribuição Pública",
+   "ass": "Anúncio de Início - site da cia: https://www.frisia.coop.br/portal-investidor.html#anuncio",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "91808-2",
+   "c5": "20261126 26/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:27",
+   "emp": "COMPANHIA DE GAS DE MINAS GERAIS GASMIG",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "1 - Aprovação da NO-PO-09 - Política de Comercialização de Gás, alt. 01; e,; 2 - Declaraçã",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02517-8",
+   "c5": "20261124 24/11/2026 10:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:17",
+   "emp": "HDFC BANK LTD",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05675-8",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:17",
+   "emp": "APPLIED DIGITAL CORP",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "8-K",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05940-9",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:17",
+   "emp": "SEA LTD",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "4",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05729-0",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:17",
+   "emp": "SUMITOMO MITSUI FINANCIAL GROUP INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05702-9",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:17",
+   "emp": "MELCO RESORTS & ENTERTAINMENT LTD",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05688-0",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:17",
+   "emp": "SK HYNIX INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05945-0",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:16",
+   "emp": "CITIGROUP INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "FWP",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05010-5",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:16",
+   "emp": "JPMORGAN CHASE & CO.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Documento Diversos",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05057-1",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:16",
+   "emp": "TOYOTA MOTOR CORP.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05251-5",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:16",
+   "emp": "GOLDMAN SACHS GROUP INC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05009-1",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:16",
+   "emp": "BANK OF AMERICA CORPORATION",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "424B2",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05005-9",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:16",
+   "emp": "GSK PLC.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "6-K",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05674-0",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:16",
+   "emp": "NOMURA HOLDINGS INC",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Documento Diversos",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05240-0",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:15",
+   "emp": "BIOMM S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Conclusão da liquidação da 1ª emissão de debêntures simples",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01930-5",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:15",
+   "emp": "BIOMM S.A.",
+   "cat": "Aviso aos Acionistas",
+   "tipo": "Outros avisos",
+   "ass": "Resultado das Sobras e Encerramento da Emissão",
+   "d": "2026-11-27",
+   "st": "NOVO",
+   "c0": "01930-5",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "08:10",
+   "emp": "AEGEA SANEAMENTO PARTICIPAÇÕES S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Aprovação de garantia ao pagamento de obrigações assumidas pela Manaus Ambiental S.A.",
+   "d": "2026-11-27",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02339-6",
+   "c5": "20261126 26/11/2026 16:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "07:40",
+   "emp": "JOAO FORTES ENGENHARIA S.A.",
+   "cat": "Fato Relevante",
+   "tipo": "-",
+   "ass": "Aumento de Capital",
+   "d": "2026-11-27",
+   "st": "NOVO",
+   "c0": "00781-1",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "07:37",
+   "emp": "JOAO FORTES ENGENHARIA S.A.",
+   "cat": "Aviso aos Acionistas",
+   "tipo": "Outros avisos",
+   "ass": "Aumento de Capital",
+   "d": "2026-11-27",
+   "st": "nao_e_fato_relevante_nem_destaque",
+   "c0": "00781-1",
+   "c5": "20261127 27/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
   {
    "h": "23:47",
    "emp": "BCO BRADESCO S.A.",
