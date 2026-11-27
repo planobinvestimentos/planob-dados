@@ -1,7 +1,9 @@
 {
- "gerado": "2026-11-27T10:30:14.909Z",
+ "gerado": "2026-11-27T19:07:25.756Z",
  "modo": "hoje",
  "hoje": "2026-11-27",
+ "global_recebidos": 77,
+ "global": "ok (0 de alto impacto)",
  "ibge_recebidos": 3,
  "ibge_chaves": [
   "id",
@@ -30,8 +32,6 @@
   "27/11/2026 13:00:00"
  ],
  "ibge": "ok (0 de interesse)",
- "global_recebidos": 77,
- "global": "ok (0 de alto impacto)",
  "regras": "ok (0)",
  "manual": "ok (0)",
  "eventos": 0,
