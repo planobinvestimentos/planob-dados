@@ -1,6 +1,6 @@
 {
- "gerado": "2026-11-27T15:45:14.759Z",
- "hora": 12,
+ "gerado": "2026-11-27T16:00:17.269Z",
+ "hora": 13,
  "fnet": {
   "linhas": 566,
   "avisos": 50,
@@ -13,6 +13,10 @@
   "FII IMOB III #1392853"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 0,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
