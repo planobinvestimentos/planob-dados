@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-27T00:00:17.153Z",
+ "gerado": "2026-11-27T00:30:41.687Z",
  "de": "2026-11-24",
  "ate": "2026-11-26",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 144,
   "amostra": {
-   "fundo": "FII AJ MALLS",
+   "fundo": "FII AFHI CRI",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -19,19 +19,19 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAJFICTF001",
+    "assetIssued": "BRAFHICTF005",
     "paymentDate": "24/11/2026",
-    "rate": "0,06200000000",
-    "relatedTo": "10/2026/2026",
+    "rate": "0,97000000000",
+    "relatedTo": "Outubro-2026/2026",
     "approvedOn": "16/11/2026",
-    "isinCode": "BRAJFICTF001",
+    "isinCode": "BRAFHICTF005",
     "label": "RENDIMENTO",
     "lastDatePrior": "16/11/2026",
     "remarks": ""
    }
   },
-  "ok": 144,
-  "falhas": 0,
+  "ok": 141,
+  "falhas": 3,
   "semRendimentos": 9,
   "itens": 0
  },
@@ -83,9 +83,9 @@
     "remarks": ""
    }
   },
-  "ok": 281,
-  "falhas": 0,
-  "semDividendos": 86,
+  "ok": 273,
+  "falhas": 8,
+  "semDividendos": 84,
   "itens": 0
  }
 }
