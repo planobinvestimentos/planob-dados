@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-27T01:00:21.035Z",
+ "gerado": "2026-11-27T01:30:17.834Z",
  "de": "2026-11-24",
  "ate": "2026-11-26",
  "fii": {
@@ -30,15 +30,15 @@
     "remarks": ""
    }
   },
-  "ok": 144,
-  "falhas": 0,
+  "ok": 141,
+  "falhas": 3,
   "semRendimentos": 9,
   "itens": 0
  },
  "acoes": {
   "emissoras": 281,
   "amostra": {
-   "emissora": "ABCB",
+   "emissora": "AFLT",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -51,19 +51,19 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRABCBACNPR4",
-    "paymentDate": "12/08/2026",
-    "rate": "1,16800000000",
-    "relatedTo": "1º Semestre/2026",
-    "approvedOn": "24/06/2026",
-    "isinCode": "BRABCBACNPR4",
-    "label": "JRS CAP PROPRIO",
-    "lastDatePrior": "29/06/2026",
+    "assetIssued": "BRAFLTACNOR1",
+    "paymentDate": "31/12/2026",
+    "rate": "0,15851704140",
+    "relatedTo": "Complementar/2026",
+    "approvedOn": "21/07/2026",
+    "isinCode": "BRAFLTACNOR1",
+    "label": "DIVIDENDO",
+    "lastDatePrior": "24/07/2026",
     "remarks": ""
    }
   },
   "amostraBonificacao": {
-   "emissora": "AGRO",
+   "emissora": "AERI",
    "campos": [
     "assetIssued",
     "factor",
@@ -74,18 +74,18 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAGROACNOR7",
-    "factor": "9.900,00000000000",
-    "approvedOn": "31/10/2007",
-    "isinCode": "BRAGROACNOR7",
-    "label": "DESDOBRAMENTO",
-    "lastDatePrior": "31/10/2007",
+    "assetIssued": "BRAERIACNOR4",
+    "factor": "0,05000000000",
+    "approvedOn": "11/04/2024",
+    "isinCode": "BRAERIACNOR4",
+    "label": "GRUPAMENTO",
+    "lastDatePrior": "13/05/2024",
     "remarks": ""
    }
   },
-  "ok": 265,
-  "falhas": 16,
-  "semDividendos": 80,
+  "ok": 281,
+  "falhas": 0,
+  "semDividendos": 86,
   "itens": 0
  }
 }
