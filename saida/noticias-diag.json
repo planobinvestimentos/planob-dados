@@ -1,31 +1,30 @@
 {
- "gerado": "2026-11-27T03:23:04.052Z",
+ "gerado": "2026-11-27T03:51:38.293Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
   "modelo": "claude-haiku-5-5",
   "parada": "end_turn",
   "blocos": [
-   "thinking",
    "text"
   ],
   "usado": {
-   "input_tokens": 761,
+   "input_tokens": 17,
    "cache_creation_input_tokens": 0,
    "cache_read_input_tokens": 0,
    "cache_creation": {
     "ephemeral_5m_input_tokens": 0,
     "ephemeral_1h_input_tokens": 0
    },
-   "output_tokens": 1102,
+   "output_tokens": 4,
    "output_tokens_details": {
-    "thinking_tokens": 984
+    "thinking_tokens": 0
    },
    "service_tier": "standard",
    "inference_geo": "global",
    "speed": "standard"
   },
-  "texto": "Banco Bradesco S.A. informou, em fato relevante de 26 de novembro de 2026, que o presidente do Conselho de Administração, Luiz Carlos Trabuco Cappi, aceitou o convite do presidente Luiz Inácio Lula da Silva para comandar o Ministério da Fazenda a partir de 2027."
+  "texto": "ok"
  },
  "ia_teste": "ok: ok",
  "ipe": {
@@ -92,30 +91,18 @@
   "apos_juntar": 78
  },
  "itens": {
-  "novos": 1,
-  "enviados_agora": 1,
-  "com_ia": 1,
+  "novos": 0,
+  "enviados_agora": 0,
+  "com_ia": 0,
   "ia_falhas": 0,
   "fora_do_filtro": 0,
-  "rotina_escondida": 0,
-  "materias": 0
+  "rotina_escondida": 0
  },
  "filtro": "sem filtro de lucro (todas as empresas)",
- "materias_reprovadas": [
-  {
-   "prot": "1594285",
-   "empresa": "BCO BRADESCO S.A.",
-   "numeros_fora_do_documento": [
-    "3",
-    "4",
-    "11"
-   ]
-  }
- ],
  "gasto_ia": {
   "mes": "2026-11",
   "usd": 0.6449,
-  "chamadas": 605,
+  "chamadas": 606,
   "teto_usd": 5
  },
  "recentes": [
@@ -126,7 +113,7 @@
    "tipo": "-",
    "ass": "INDICAÇÃO PARA O CARGO DE MINISTRO DE ESTADO DA FAZENDA",
    "d": "2026-11-26",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "00090-6",
    "c5": "20261126 26/11/2026",
    "c8": "1",
