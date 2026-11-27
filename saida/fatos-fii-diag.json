@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-27T20:51:34.363Z",
+ "gerado": "2026-11-27T23:15:54.166Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 137,
  "top": {
@@ -59,21 +59,24 @@
   ]
  },
  "lista": {
-  "linhas_vistas": 353,
+  "linhas_vistas": 387,
   "categorias": {
-   "Relatórios": 99,
-   "Assembleia": 76,
-   "Informes Periódicos": 36,
-   "Comunicado ao Mercado": 28,
-   "Regulamento": 27,
-   "Oferta Pública de Distribuição de Cotas": 26,
-   "Fato Relevante": 25,
-   "Atos de Deliberação do Administrador": 15
+   "Relatórios": 103,
+   "Assembleia": 82,
+   "Informes Periódicos": 38,
+   "Comunicado ao Mercado": 33,
+   "Regulamento": 30,
+   "Fato Relevante": 29,
+   "Oferta Pública de Distribuição de Cotas": 27,
+   "Atos de Deliberação do Administrador": 19
   },
-  "fatos_relevantes": 25,
-  "de_fiis_liquidos": 9
+  "fatos_relevantes": 29,
+  "de_fiis_liquidos": 10
  },
  "fatos_sem_ticker": [
+  "FII JCSC",
+  "EMPÍRICA RECEBÍVEIS IMOBILIÁRIOS FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA",
+  "AZ QUEST PANORAMA CRÉDITO IMOBILIÁRIO FUNDO DE INVESTIMENTO IMOBILIÁRIO",
   "FII KILIMA",
   "FII SUNOFOFI",
   "FII MAX RET",
@@ -95,7 +98,12 @@
  "sem_texto": 0,
  "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
- "reprovadas": [],
+ "reprovadas": [
+  {
+   "id": 1395004,
+   "erro": "resposta da IA sem JSON"
+  }
+ ],
  "materias_novas": 0,
  "telegram": {
   "enviados": 0,
