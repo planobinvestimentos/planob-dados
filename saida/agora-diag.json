@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-27T23:00:15.479Z",
+ "gerado": "2026-11-27T23:15:14.745Z",
  "hora": 20,
  "fnet": {
   "linhas": 617,
@@ -16,11 +16,7 @@
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO RIZA MALLS MASTER RESPONSABILIDADE  LIMITADA #1393071",
   "FII IMOB III #1392853"
  ],
- "acoes_nesta_rodada": true,
- "varredura": {
-  "fii": 0,
-  "acoes": 0
- },
+ "acoes_nesta_rodada": false,
  "novos": [],
  "pdfs": 0
 }
