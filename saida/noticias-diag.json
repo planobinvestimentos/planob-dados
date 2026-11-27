@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-26T23:31:57.731Z",
+ "gerado": "2026-11-27T01:23:46.148Z",
  "modo": "manha",
  "ia": true,
  "ia_ultima": {
@@ -10,22 +10,22 @@
    "text"
   ],
   "usado": {
-   "input_tokens": 4098,
+   "input_tokens": 1673,
    "cache_creation_input_tokens": 0,
    "cache_read_input_tokens": 0,
    "cache_creation": {
     "ephemeral_5m_input_tokens": 0,
     "ephemeral_1h_input_tokens": 0
    },
-   "output_tokens": 3085,
+   "output_tokens": 1396,
    "output_tokens_details": {
-    "thinking_tokens": 2324
+    "thinking_tokens": 829
    },
    "service_tier": "standard",
    "inference_geo": "global",
    "speed": "standard"
   },
-  "texto": "{\"titulo\":\"Rossi Residencial (RSID3) tem lucro de R$ 213,3 milhões no 3T26\",\"resumo\":\"Rossi Residencial teve lucro líquido de R$ 213,3 milhões no 3T26, revertendo prejuízo de R$ 72,7 milhões no 3T25.\",\"paragrafos\":[\"A Rossi Residencial (RSID3) divulgou, em 19 de novembro de 2026, os resultados do 3º"
+  "texto": "{\"titulo\":\"Grupo controlador da Tecnisa informa participação de 44,65% em ações ordinárias\",\"resumo\":\"Grupo Controlador da Tecnisa (TCSA3) informa que passou a deter 44,65% das ações ordinárias após compras em pregões da B3.\",\"paragrafos\":[\"A Tecnisa S.A. (B3: TCSA3) divulgou um comunicado ao mercad"
  },
  "ia_teste": "ok: ok",
  "ipe": {
@@ -83,44 +83,151 @@
   "novos": 0
  },
  "enet": {
-  "linhas": 1956,
-  "na_janela_e_categorias": 75,
+  "linhas": 1965,
+  "na_janela_e_categorias": 78,
   "sem_cnpj": 56,
-  "entrega_mais_recente": "20261126 26/11/2026 20:04",
+  "entrega_mais_recente": "20261126 26/11/2026 22:01",
   "tentativa": 1
  },
  "fontes": {
-  "enet": 75,
+  "enet": 78,
   "ipe": 1,
-  "apos_juntar": 75
+  "apos_juntar": 78
  },
  "itens": {
-  "novos": 6,
-  "enviados_agora": 6,
+  "novos": 1,
+  "enviados_agora": 1,
   "com_ia": 0,
-  "ia_falhas": 1,
+  "ia_falhas": 0,
   "fora_do_filtro": 0,
   "rotina_escondida": 1,
-  "materias": 4
+  "materias": 1
  },
  "filtro": "sem filtro de lucro (todas as empresas)",
- "ia_erro": "IA (claude-haiku-5-5) respondeu sem texto (parada: max_tokens, blocos: thinking)",
- "materias_reprovadas": [
-  {
-   "prot": "1594237",
-   "empresa": "DEXCO S.A.",
-   "numeros_fora_do_documento": [
-    "11"
-   ]
-  }
- ],
  "gasto_ia": {
   "mes": "2026-11",
-  "usd": 0.633,
-  "chamadas": 594,
+  "usd": 0.6397,
+  "chamadas": 600,
   "teto_usd": 5
  },
  "recentes": [
+  {
+   "h": "22:01",
+   "emp": "EMAE - EMPRESA METROP.AGUAS ENERGIA S.A.",
+   "cat": "Assembleia",
+   "tipo": "AGE",
+   "ass": "Cancelamento de Registro de Companhia Aberta",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "01699-3",
+   "c5": "20261123 23/11/2026 14:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "21:51",
+   "emp": "TECNISA S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Aquisição/Alienação de Participação Acionária Relevante",
+   "ass": "Declaração de Aquisição de Participação Acionária Relevante",
+   "d": "2026-11-26",
+   "st": "NOVO",
+   "c0": "02043-5",
+   "c5": "20261126 26/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "21:16",
+   "emp": "BIONEXO S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Autorização para a abertura de conta corrente.",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02592-5",
+   "c5": "20261125 25/11/2026 14:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "21:15",
+   "emp": "AZEVEDO & TRAVASSOS ENERGIA S.A.",
+   "cat": "Reunião da Administração",
+   "tipo": "Conselho de Administração",
+   "ass": "Homologação de aumento de capital decorrente do 3º período de conversão dos bônus de subsc",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "02762-6",
+   "c5": "20261126 26/11/2026 15:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "21:07",
+   "emp": "AZEVEDO & TRAVASSOS ENERGIA S.A.",
+   "cat": "Aviso aos Acionistas",
+   "tipo": "Aumento de capital por subscrição privada deliberado em RCA",
+   "ass": "",
+   "d": "2026-11-26",
+   "st": "nao_e_fato_relevante_nem_destaque",
+   "c0": "02762-6",
+   "c5": "20261126 26/11/2026 15:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "21:06",
+   "emp": "INVESTIMENTOS E PARTICIP. EM INFRA S.A. - INVEPAR",
+   "cat": "Aviso aos Acionistas",
+   "tipo": "Data prevista para a assembleia",
+   "ass": "Nova data de Assembleia",
+   "d": "2026-11-26",
+   "st": "rotina_escondida",
+   "c0": "01877-5",
+   "c5": "20261214 14/12/2026 11:00",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "21:04",
+   "emp": "BCO BRASIL S.A.",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Esclarecimentos sobre questionamentos da CVM/B3",
+   "ass": "Notícia divulgada na Mídia - Ofício 328/2026",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "00102-3",
+   "c5": "20261126 26/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "21:01",
+   "emp": "ADMINISTRADORA GERAL DE ESTACIONAMENTOS S.A",
+   "cat": "Documentos de Oferta de Distribuição Pública",
+   "tipo": "Anúncio de Início de Distribuição Pública",
+   "ass": "ANUNCIO DE INICIO DE NOTAS COMERCIAIS",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "91767-9",
+   "c5": "20261126 26/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "20:58",
+   "emp": "ADMINISTRADORA GERAL DE ESTACIONAMENTOS S.A",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "COMUNICADO A MERCADO",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "91767-9",
+   "c5": "20261126 26/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
   {
    "h": "20:04",
    "emp": "VALID SOLUÇÕES S.A.",
@@ -219,7 +326,7 @@
    "tipo": "-",
    "ass": "Início da Produção do Poço PPT-53 no Campo de Papa-Terra",
    "d": "2026-11-26",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "02529-1",
    "c5": "20261126 26/11/2026",
    "c8": "1",
@@ -232,7 +339,7 @@
    "tipo": "Outros avisos",
    "ass": "Resgate das Ações Preferenciais Classe C (PNC) – Tratamento tributário",
    "d": "2026-11-26",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "00243-7",
    "c5": "20261126 26/11/2026",
    "c8": "1",
@@ -245,9 +352,22 @@
    "tipo": "-",
    "ass": "7ª operação de resgate ou conversão das ações PNC",
    "d": "2026-11-26",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "00243-7",
    "c5": "20261126 26/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "19:15",
+   "emp": "REVITA ENGENHARIA S.A.",
+   "cat": "Escrituras e aditamentos de debêntures",
+   "tipo": "-",
+   "ass": "INSTRUMENTO PARTICULAR DE ESCRITURA DA 2ª (SEGUNDA) EMISSÃO DE DEBÊNTURES",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "90751-9",
+   "c5": "20261125 25/11/2026",
    "c8": "1",
    "c9": "AP"
   },
@@ -278,19 +398,6 @@
    "c9": "AP"
   },
   {
-   "h": "19:15",
-   "emp": "REVITA ENGENHARIA S.A.",
-   "cat": "Escrituras e aditamentos de debêntures",
-   "tipo": "-",
-   "ass": "INSTRUMENTO PARTICULAR DE ESCRITURA DA 2ª (SEGUNDA) EMISSÃO DE DEBÊNTURES",
-   "d": "2026-11-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "90751-9",
-   "c5": "20261125 25/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
    "h": "19:06",
    "emp": "TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.",
    "cat": "Assembleia",
@@ -310,7 +417,7 @@
    "tipo": "Apresentações a analistas/agentes do mercado",
    "ass": "Call de Resultados 3T26",
    "d": "2026-11-26",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "01630-6",
    "c5": "20261119 19/11/2026",
    "c8": "1",
@@ -323,7 +430,7 @@
    "tipo": "-",
    "ass": "Mandado de Busca e Apreensão",
    "d": "2026-11-26",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "01542-3",
    "c5": "20261126 26/11/2026",
    "c8": "2",
@@ -505,7 +612,7 @@
    "tipo": "Outros avisos",
    "ass": "AGE 09/12/2026 - Esclarecimento sobre o preenchimento do item 1.1 do boletim de voto a dis",
    "d": "2026-11-26",
-   "st": "rotina_escondida",
+   "st": "ja_enviado_antes",
    "c0": "00634-3",
    "c5": "20261126 26/11/2026",
    "c8": "1",
@@ -557,7 +664,7 @@
    "tipo": "-",
    "ass": "Celebração de Contrato de Venda de Ativos Florestais",
    "d": "2026-11-26",
-   "st": "NOVO",
+   "st": "ja_enviado_antes",
    "c0": "02109-1",
    "c5": "20261116 16/11/2026",
    "c8": "1",
@@ -916,32 +1023,6 @@
   },
   {
    "h": "17:17",
-   "emp": "ISHARES MSCI EMERGING MARKETS EX CHINA ETF",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Tracking Error",
-   "d": "2026-11-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05001-2",
-   "c5": "20261126 26/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "17:17",
-   "emp": "ISHARES MSCI SWEDEN ETF",
-   "cat": "Comunicado ao Mercado",
-   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
-   "ass": "Tracking Error",
-   "d": "2026-11-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05008-5",
-   "c5": "20261126 26/11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "17:17",
    "emp": "ISHARES MSCI SOUTH AFRICA ETF",
    "cat": "Comunicado ao Mercado",
    "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
@@ -962,6 +1043,32 @@
    "d": "2026-11-26",
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05083-8",
+   "c5": "20261126 26/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "17:17",
+   "emp": "ISHARES MSCI EMERGING MARKETS EX CHINA ETF",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Tracking Error",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05001-2",
+   "c5": "20261126 26/11/2026",
+   "c8": "1",
+   "c9": "AP"
+  },
+  {
+   "h": "17:17",
+   "emp": "ISHARES MSCI SWEDEN ETF",
+   "cat": "Comunicado ao Mercado",
+   "tipo": "Outros Comunicados Não Considerados Fatos Relevantes",
+   "ass": "Tracking Error",
+   "d": "2026-11-26",
+   "st": "categoria_ou_assunto_nao_passou",
+   "c0": "05008-5",
    "c5": "20261126 26/11/2026",
    "c8": "1",
    "c9": "AP"
@@ -1561,123 +1668,6 @@
    "st": "categoria_ou_assunto_nao_passou",
    "c0": "05007-1",
    "c5": "20261119 11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "16:17",
-   "emp": "ISHARES CORE DIVIDEND GROWTH ETF",
-   "cat": "Relatório Proventos",
-   "tipo": "-",
-   "ass": "",
-   "d": "2026-11-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "07958-8",
-   "c5": "20261119 11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "16:16",
-   "emp": "ISHARES U.S. INSURANCE ETF",
-   "cat": "Relatório Proventos",
-   "tipo": "-",
-   "ass": "",
-   "d": "2026-11-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05007-0",
-   "c5": "20261119 11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "16:16",
-   "emp": "ISHARES 7-10 YEAR TREASURY BOND ETF",
-   "cat": "Relatório Proventos",
-   "tipo": "-",
-   "ass": "",
-   "d": "2026-11-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05027-1",
-   "c5": "20261119 11/2026",
-   "c8": "2",
-   "c9": "AP"
-  },
-  {
-   "h": "16:15",
-   "emp": "ISHARES US BROKERDEALER & SECURITIES EXCHANGES ETF",
-   "cat": "Relatório Proventos",
-   "tipo": "-",
-   "ass": "",
-   "d": "2026-11-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05006-9",
-   "c5": "20261119 11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "16:14",
-   "emp": "ISHARES MSCI USA QUALITY GARP ETF",
-   "cat": "Relatório Proventos",
-   "tipo": "-",
-   "ass": "",
-   "d": "2026-11-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05006-6",
-   "c5": "20261119 11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "16:13",
-   "emp": "ISHARES MSCI GLOBAL MIN VOL FACTOR ETF",
-   "cat": "Relatório Proventos",
-   "tipo": "-",
-   "ass": "",
-   "d": "2026-11-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "07959-6",
-   "c5": "20261119 11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "16:12",
-   "emp": "ISHARES S&P SMALL-CAP 600 GROWTH ETF",
-   "cat": "Relatório Proventos",
-   "tipo": "-",
-   "ass": "",
-   "d": "2026-11-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "05006-5",
-   "c5": "20261119 11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "16:12",
-   "emp": "PARU PARTICIPACOES LTDA",
-   "cat": "Termo de Emissão de Nota Comercial",
-   "tipo": "-",
-   "ass": "Termo da 1a Emissão de Notas Comerciais Escriturais",
-   "d": "2026-11-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "91808-7",
-   "c5": "20261125 11/2026",
-   "c8": "1",
-   "c9": "AP"
-  },
-  {
-   "h": "16:11",
-   "emp": "PARU PARTICIPACOES LTDA",
-   "cat": "Assembleia",
-   "tipo": "AGE",
-   "ass": "Emissão de Valores Mobiliários",
-   "d": "2026-11-26",
-   "st": "categoria_ou_assunto_nao_passou",
-   "c0": "91808-7",
-   "c5": "20261125 25/11/2026 18:00",
    "c8": "1",
    "c9": "AP"
   }
