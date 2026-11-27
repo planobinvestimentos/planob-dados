@@ -1,20 +1,22 @@
 {
- "gerado": "2026-11-27T00:15:14.321Z",
- "hora": 21,
+ "gerado": "2026-11-27T12:00:16.380Z",
+ "hora": 9,
  "fnet": {
-  "linhas": 658,
-  "avisos": 62,
-  "relatorios": 165
+  "linhas": 551,
+  "avisos": 50,
+  "relatorios": 146
  },
  "avisos_novos": [],
  "avisos_sem_ticker": [
   "FII ELDORADO #1393257",
   "FUNDO DE INVESTIMENTO IMOBILIÁRIO RIZA MALLS MASTER RESPONSABILIDADE  LIMITADA #1393071",
-  "FII IMOB III #1392853",
-  "LCP RENDA IMOBILIÁRIA PREFIXADA - FUNDO DE INVESTIMENTO IMOBILIÁRIO RESPONSABILIDADE LIMITADA #1392082",
-  "FII INTER RD #1392067"
+  "FII IMOB III #1392853"
  ],
  "acoes_nesta_rodada": false,
+ "varredura": {
+  "fii": 0,
+  "acoes": "não consultadas"
+ },
  "novos": [],
  "pdfs": 0
 }
