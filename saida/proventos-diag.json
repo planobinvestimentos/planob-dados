@@ -1,12 +1,12 @@
 {
- "gerado": "2026-11-28T05:13:58.997Z",
+ "gerado": "2026-11-28T08:10:10.917Z",
  "de": "2026-11-26",
  "ate": "2026-11-28",
  "fii": {
   "fonte": "B3 (fundos listados)",
   "fundos": 144,
   "amostra": {
-   "fundo": "FII AJ MALLS",
+   "fundo": "FII ADSH    ",
    "campos": [
     "assetIssued",
     "paymentDate",
@@ -19,19 +19,19 @@
     "remarks"
    ],
    "primeiro": {
-    "assetIssued": "BRAJFICTF001",
-    "paymentDate": "24/11/2026",
-    "rate": "0,06200000000",
-    "relatedTo": "10/2026/2026",
+    "assetIssued": "BRADSHCTF009",
+    "paymentDate": "23/11/2026",
+    "rate": "0,03000000000",
+    "relatedTo": "OUTUBRO/2026",
     "approvedOn": "16/11/2026",
-    "isinCode": "BRAJFICTF001",
+    "isinCode": "BRADSHCTF009",
     "label": "RENDIMENTO",
     "lastDatePrior": "16/11/2026",
     "remarks": ""
    }
   },
-  "ok": 144,
-  "falhas": 0,
+  "ok": 139,
+  "falhas": 5,
   "semRendimentos": 9,
   "itens": 0
  },
