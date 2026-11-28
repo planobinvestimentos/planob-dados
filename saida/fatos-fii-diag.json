@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-28T03:00:14.650Z",
+ "gerado": "2026-11-28T03:38:04.278Z",
  "valor_min": 3000000,
  "fundos_liquidos_com_nome": 137,
  "top": {
@@ -85,14 +85,14 @@
   "MEIRINGEN FUNDO DE INVESTIMENTO IMOBILIÁRIO",
   "Sicoob Agências Fundo de Investimento Imobiliário"
  ],
- "analisados": 1,
+ "analisados": 0,
  "sem_texto": 0,
  "fora_do_escopo": 0,
  "abaixo_do_minimo": 0,
  "reprovadas": [],
- "materias_novas": 1,
+ "materias_novas": 0,
  "telegram": {
-  "enviados": 1,
+  "enviados": 0,
   "erros": []
  }
 }
